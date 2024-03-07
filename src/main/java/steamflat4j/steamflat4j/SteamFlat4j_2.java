@@ -12,360 +12,8152 @@ import java.util.stream.*;
 import static java.lang.foreign.ValueLayout.*;
 import static java.lang.foreign.MemoryLayout.PathElement.*;
 
-public class SteamFlat4j_2 {
+public class SteamFlat4j_2 extends SteamFlat4j_3 {
 
     SteamFlat4j_2() {
         // Should not be called directly
     }
+    private static final int k_EInputActionOrigin_PS5_Reserved19 = (int)331L;
+    /**
+     * {@snippet lang=c :
+     * enum EInputActionOrigin.k_EInputActionOrigin_PS5_Reserved19 = 331
+     * }
+     */
+    public static int k_EInputActionOrigin_PS5_Reserved19() {
+        return k_EInputActionOrigin_PS5_Reserved19;
+    }
+    private static final int k_EInputActionOrigin_PS5_Reserved20 = (int)332L;
+    /**
+     * {@snippet lang=c :
+     * enum EInputActionOrigin.k_EInputActionOrigin_PS5_Reserved20 = 332
+     * }
+     */
+    public static int k_EInputActionOrigin_PS5_Reserved20() {
+        return k_EInputActionOrigin_PS5_Reserved20;
+    }
+    private static final int k_EInputActionOrigin_SteamDeck_A = (int)333L;
+    /**
+     * {@snippet lang=c :
+     * enum EInputActionOrigin.k_EInputActionOrigin_SteamDeck_A = 333
+     * }
+     */
+    public static int k_EInputActionOrigin_SteamDeck_A() {
+        return k_EInputActionOrigin_SteamDeck_A;
+    }
+    private static final int k_EInputActionOrigin_SteamDeck_B = (int)334L;
+    /**
+     * {@snippet lang=c :
+     * enum EInputActionOrigin.k_EInputActionOrigin_SteamDeck_B = 334
+     * }
+     */
+    public static int k_EInputActionOrigin_SteamDeck_B() {
+        return k_EInputActionOrigin_SteamDeck_B;
+    }
+    private static final int k_EInputActionOrigin_SteamDeck_X = (int)335L;
+    /**
+     * {@snippet lang=c :
+     * enum EInputActionOrigin.k_EInputActionOrigin_SteamDeck_X = 335
+     * }
+     */
+    public static int k_EInputActionOrigin_SteamDeck_X() {
+        return k_EInputActionOrigin_SteamDeck_X;
+    }
+    private static final int k_EInputActionOrigin_SteamDeck_Y = (int)336L;
+    /**
+     * {@snippet lang=c :
+     * enum EInputActionOrigin.k_EInputActionOrigin_SteamDeck_Y = 336
+     * }
+     */
+    public static int k_EInputActionOrigin_SteamDeck_Y() {
+        return k_EInputActionOrigin_SteamDeck_Y;
+    }
+    private static final int k_EInputActionOrigin_SteamDeck_L1 = (int)337L;
+    /**
+     * {@snippet lang=c :
+     * enum EInputActionOrigin.k_EInputActionOrigin_SteamDeck_L1 = 337
+     * }
+     */
+    public static int k_EInputActionOrigin_SteamDeck_L1() {
+        return k_EInputActionOrigin_SteamDeck_L1;
+    }
+    private static final int k_EInputActionOrigin_SteamDeck_R1 = (int)338L;
+    /**
+     * {@snippet lang=c :
+     * enum EInputActionOrigin.k_EInputActionOrigin_SteamDeck_R1 = 338
+     * }
+     */
+    public static int k_EInputActionOrigin_SteamDeck_R1() {
+        return k_EInputActionOrigin_SteamDeck_R1;
+    }
+    private static final int k_EInputActionOrigin_SteamDeck_Menu = (int)339L;
+    /**
+     * {@snippet lang=c :
+     * enum EInputActionOrigin.k_EInputActionOrigin_SteamDeck_Menu = 339
+     * }
+     */
+    public static int k_EInputActionOrigin_SteamDeck_Menu() {
+        return k_EInputActionOrigin_SteamDeck_Menu;
+    }
+    private static final int k_EInputActionOrigin_SteamDeck_View = (int)340L;
+    /**
+     * {@snippet lang=c :
+     * enum EInputActionOrigin.k_EInputActionOrigin_SteamDeck_View = 340
+     * }
+     */
+    public static int k_EInputActionOrigin_SteamDeck_View() {
+        return k_EInputActionOrigin_SteamDeck_View;
+    }
+    private static final int k_EInputActionOrigin_SteamDeck_LeftPad_Touch = (int)341L;
+    /**
+     * {@snippet lang=c :
+     * enum EInputActionOrigin.k_EInputActionOrigin_SteamDeck_LeftPad_Touch = 341
+     * }
+     */
+    public static int k_EInputActionOrigin_SteamDeck_LeftPad_Touch() {
+        return k_EInputActionOrigin_SteamDeck_LeftPad_Touch;
+    }
+    private static final int k_EInputActionOrigin_SteamDeck_LeftPad_Swipe = (int)342L;
+    /**
+     * {@snippet lang=c :
+     * enum EInputActionOrigin.k_EInputActionOrigin_SteamDeck_LeftPad_Swipe = 342
+     * }
+     */
+    public static int k_EInputActionOrigin_SteamDeck_LeftPad_Swipe() {
+        return k_EInputActionOrigin_SteamDeck_LeftPad_Swipe;
+    }
+    private static final int k_EInputActionOrigin_SteamDeck_LeftPad_Click = (int)343L;
+    /**
+     * {@snippet lang=c :
+     * enum EInputActionOrigin.k_EInputActionOrigin_SteamDeck_LeftPad_Click = 343
+     * }
+     */
+    public static int k_EInputActionOrigin_SteamDeck_LeftPad_Click() {
+        return k_EInputActionOrigin_SteamDeck_LeftPad_Click;
+    }
+    private static final int k_EInputActionOrigin_SteamDeck_LeftPad_DPadNorth = (int)344L;
+    /**
+     * {@snippet lang=c :
+     * enum EInputActionOrigin.k_EInputActionOrigin_SteamDeck_LeftPad_DPadNorth = 344
+     * }
+     */
+    public static int k_EInputActionOrigin_SteamDeck_LeftPad_DPadNorth() {
+        return k_EInputActionOrigin_SteamDeck_LeftPad_DPadNorth;
+    }
+    private static final int k_EInputActionOrigin_SteamDeck_LeftPad_DPadSouth = (int)345L;
+    /**
+     * {@snippet lang=c :
+     * enum EInputActionOrigin.k_EInputActionOrigin_SteamDeck_LeftPad_DPadSouth = 345
+     * }
+     */
+    public static int k_EInputActionOrigin_SteamDeck_LeftPad_DPadSouth() {
+        return k_EInputActionOrigin_SteamDeck_LeftPad_DPadSouth;
+    }
+    private static final int k_EInputActionOrigin_SteamDeck_LeftPad_DPadWest = (int)346L;
+    /**
+     * {@snippet lang=c :
+     * enum EInputActionOrigin.k_EInputActionOrigin_SteamDeck_LeftPad_DPadWest = 346
+     * }
+     */
+    public static int k_EInputActionOrigin_SteamDeck_LeftPad_DPadWest() {
+        return k_EInputActionOrigin_SteamDeck_LeftPad_DPadWest;
+    }
+    private static final int k_EInputActionOrigin_SteamDeck_LeftPad_DPadEast = (int)347L;
+    /**
+     * {@snippet lang=c :
+     * enum EInputActionOrigin.k_EInputActionOrigin_SteamDeck_LeftPad_DPadEast = 347
+     * }
+     */
+    public static int k_EInputActionOrigin_SteamDeck_LeftPad_DPadEast() {
+        return k_EInputActionOrigin_SteamDeck_LeftPad_DPadEast;
+    }
+    private static final int k_EInputActionOrigin_SteamDeck_RightPad_Touch = (int)348L;
+    /**
+     * {@snippet lang=c :
+     * enum EInputActionOrigin.k_EInputActionOrigin_SteamDeck_RightPad_Touch = 348
+     * }
+     */
+    public static int k_EInputActionOrigin_SteamDeck_RightPad_Touch() {
+        return k_EInputActionOrigin_SteamDeck_RightPad_Touch;
+    }
+    private static final int k_EInputActionOrigin_SteamDeck_RightPad_Swipe = (int)349L;
+    /**
+     * {@snippet lang=c :
+     * enum EInputActionOrigin.k_EInputActionOrigin_SteamDeck_RightPad_Swipe = 349
+     * }
+     */
+    public static int k_EInputActionOrigin_SteamDeck_RightPad_Swipe() {
+        return k_EInputActionOrigin_SteamDeck_RightPad_Swipe;
+    }
+    private static final int k_EInputActionOrigin_SteamDeck_RightPad_Click = (int)350L;
+    /**
+     * {@snippet lang=c :
+     * enum EInputActionOrigin.k_EInputActionOrigin_SteamDeck_RightPad_Click = 350
+     * }
+     */
+    public static int k_EInputActionOrigin_SteamDeck_RightPad_Click() {
+        return k_EInputActionOrigin_SteamDeck_RightPad_Click;
+    }
+    private static final int k_EInputActionOrigin_SteamDeck_RightPad_DPadNorth = (int)351L;
+    /**
+     * {@snippet lang=c :
+     * enum EInputActionOrigin.k_EInputActionOrigin_SteamDeck_RightPad_DPadNorth = 351
+     * }
+     */
+    public static int k_EInputActionOrigin_SteamDeck_RightPad_DPadNorth() {
+        return k_EInputActionOrigin_SteamDeck_RightPad_DPadNorth;
+    }
+    private static final int k_EInputActionOrigin_SteamDeck_RightPad_DPadSouth = (int)352L;
+    /**
+     * {@snippet lang=c :
+     * enum EInputActionOrigin.k_EInputActionOrigin_SteamDeck_RightPad_DPadSouth = 352
+     * }
+     */
+    public static int k_EInputActionOrigin_SteamDeck_RightPad_DPadSouth() {
+        return k_EInputActionOrigin_SteamDeck_RightPad_DPadSouth;
+    }
+    private static final int k_EInputActionOrigin_SteamDeck_RightPad_DPadWest = (int)353L;
+    /**
+     * {@snippet lang=c :
+     * enum EInputActionOrigin.k_EInputActionOrigin_SteamDeck_RightPad_DPadWest = 353
+     * }
+     */
+    public static int k_EInputActionOrigin_SteamDeck_RightPad_DPadWest() {
+        return k_EInputActionOrigin_SteamDeck_RightPad_DPadWest;
+    }
+    private static final int k_EInputActionOrigin_SteamDeck_RightPad_DPadEast = (int)354L;
+    /**
+     * {@snippet lang=c :
+     * enum EInputActionOrigin.k_EInputActionOrigin_SteamDeck_RightPad_DPadEast = 354
+     * }
+     */
+    public static int k_EInputActionOrigin_SteamDeck_RightPad_DPadEast() {
+        return k_EInputActionOrigin_SteamDeck_RightPad_DPadEast;
+    }
+    private static final int k_EInputActionOrigin_SteamDeck_L2_SoftPull = (int)355L;
+    /**
+     * {@snippet lang=c :
+     * enum EInputActionOrigin.k_EInputActionOrigin_SteamDeck_L2_SoftPull = 355
+     * }
+     */
+    public static int k_EInputActionOrigin_SteamDeck_L2_SoftPull() {
+        return k_EInputActionOrigin_SteamDeck_L2_SoftPull;
+    }
+    private static final int k_EInputActionOrigin_SteamDeck_L2 = (int)356L;
+    /**
+     * {@snippet lang=c :
+     * enum EInputActionOrigin.k_EInputActionOrigin_SteamDeck_L2 = 356
+     * }
+     */
+    public static int k_EInputActionOrigin_SteamDeck_L2() {
+        return k_EInputActionOrigin_SteamDeck_L2;
+    }
+    private static final int k_EInputActionOrigin_SteamDeck_R2_SoftPull = (int)357L;
+    /**
+     * {@snippet lang=c :
+     * enum EInputActionOrigin.k_EInputActionOrigin_SteamDeck_R2_SoftPull = 357
+     * }
+     */
+    public static int k_EInputActionOrigin_SteamDeck_R2_SoftPull() {
+        return k_EInputActionOrigin_SteamDeck_R2_SoftPull;
+    }
+    private static final int k_EInputActionOrigin_SteamDeck_R2 = (int)358L;
+    /**
+     * {@snippet lang=c :
+     * enum EInputActionOrigin.k_EInputActionOrigin_SteamDeck_R2 = 358
+     * }
+     */
+    public static int k_EInputActionOrigin_SteamDeck_R2() {
+        return k_EInputActionOrigin_SteamDeck_R2;
+    }
+    private static final int k_EInputActionOrigin_SteamDeck_LeftStick_Move = (int)359L;
+    /**
+     * {@snippet lang=c :
+     * enum EInputActionOrigin.k_EInputActionOrigin_SteamDeck_LeftStick_Move = 359
+     * }
+     */
+    public static int k_EInputActionOrigin_SteamDeck_LeftStick_Move() {
+        return k_EInputActionOrigin_SteamDeck_LeftStick_Move;
+    }
+    private static final int k_EInputActionOrigin_SteamDeck_L3 = (int)360L;
+    /**
+     * {@snippet lang=c :
+     * enum EInputActionOrigin.k_EInputActionOrigin_SteamDeck_L3 = 360
+     * }
+     */
+    public static int k_EInputActionOrigin_SteamDeck_L3() {
+        return k_EInputActionOrigin_SteamDeck_L3;
+    }
+    private static final int k_EInputActionOrigin_SteamDeck_LeftStick_DPadNorth = (int)361L;
+    /**
+     * {@snippet lang=c :
+     * enum EInputActionOrigin.k_EInputActionOrigin_SteamDeck_LeftStick_DPadNorth = 361
+     * }
+     */
+    public static int k_EInputActionOrigin_SteamDeck_LeftStick_DPadNorth() {
+        return k_EInputActionOrigin_SteamDeck_LeftStick_DPadNorth;
+    }
+    private static final int k_EInputActionOrigin_SteamDeck_LeftStick_DPadSouth = (int)362L;
+    /**
+     * {@snippet lang=c :
+     * enum EInputActionOrigin.k_EInputActionOrigin_SteamDeck_LeftStick_DPadSouth = 362
+     * }
+     */
+    public static int k_EInputActionOrigin_SteamDeck_LeftStick_DPadSouth() {
+        return k_EInputActionOrigin_SteamDeck_LeftStick_DPadSouth;
+    }
+    private static final int k_EInputActionOrigin_SteamDeck_LeftStick_DPadWest = (int)363L;
+    /**
+     * {@snippet lang=c :
+     * enum EInputActionOrigin.k_EInputActionOrigin_SteamDeck_LeftStick_DPadWest = 363
+     * }
+     */
+    public static int k_EInputActionOrigin_SteamDeck_LeftStick_DPadWest() {
+        return k_EInputActionOrigin_SteamDeck_LeftStick_DPadWest;
+    }
+    private static final int k_EInputActionOrigin_SteamDeck_LeftStick_DPadEast = (int)364L;
+    /**
+     * {@snippet lang=c :
+     * enum EInputActionOrigin.k_EInputActionOrigin_SteamDeck_LeftStick_DPadEast = 364
+     * }
+     */
+    public static int k_EInputActionOrigin_SteamDeck_LeftStick_DPadEast() {
+        return k_EInputActionOrigin_SteamDeck_LeftStick_DPadEast;
+    }
+    private static final int k_EInputActionOrigin_SteamDeck_LeftStick_Touch = (int)365L;
+    /**
+     * {@snippet lang=c :
+     * enum EInputActionOrigin.k_EInputActionOrigin_SteamDeck_LeftStick_Touch = 365
+     * }
+     */
+    public static int k_EInputActionOrigin_SteamDeck_LeftStick_Touch() {
+        return k_EInputActionOrigin_SteamDeck_LeftStick_Touch;
+    }
+    private static final int k_EInputActionOrigin_SteamDeck_RightStick_Move = (int)366L;
+    /**
+     * {@snippet lang=c :
+     * enum EInputActionOrigin.k_EInputActionOrigin_SteamDeck_RightStick_Move = 366
+     * }
+     */
+    public static int k_EInputActionOrigin_SteamDeck_RightStick_Move() {
+        return k_EInputActionOrigin_SteamDeck_RightStick_Move;
+    }
+    private static final int k_EInputActionOrigin_SteamDeck_R3 = (int)367L;
+    /**
+     * {@snippet lang=c :
+     * enum EInputActionOrigin.k_EInputActionOrigin_SteamDeck_R3 = 367
+     * }
+     */
+    public static int k_EInputActionOrigin_SteamDeck_R3() {
+        return k_EInputActionOrigin_SteamDeck_R3;
+    }
+    private static final int k_EInputActionOrigin_SteamDeck_RightStick_DPadNorth = (int)368L;
+    /**
+     * {@snippet lang=c :
+     * enum EInputActionOrigin.k_EInputActionOrigin_SteamDeck_RightStick_DPadNorth = 368
+     * }
+     */
+    public static int k_EInputActionOrigin_SteamDeck_RightStick_DPadNorth() {
+        return k_EInputActionOrigin_SteamDeck_RightStick_DPadNorth;
+    }
+    private static final int k_EInputActionOrigin_SteamDeck_RightStick_DPadSouth = (int)369L;
+    /**
+     * {@snippet lang=c :
+     * enum EInputActionOrigin.k_EInputActionOrigin_SteamDeck_RightStick_DPadSouth = 369
+     * }
+     */
+    public static int k_EInputActionOrigin_SteamDeck_RightStick_DPadSouth() {
+        return k_EInputActionOrigin_SteamDeck_RightStick_DPadSouth;
+    }
+    private static final int k_EInputActionOrigin_SteamDeck_RightStick_DPadWest = (int)370L;
+    /**
+     * {@snippet lang=c :
+     * enum EInputActionOrigin.k_EInputActionOrigin_SteamDeck_RightStick_DPadWest = 370
+     * }
+     */
+    public static int k_EInputActionOrigin_SteamDeck_RightStick_DPadWest() {
+        return k_EInputActionOrigin_SteamDeck_RightStick_DPadWest;
+    }
+    private static final int k_EInputActionOrigin_SteamDeck_RightStick_DPadEast = (int)371L;
+    /**
+     * {@snippet lang=c :
+     * enum EInputActionOrigin.k_EInputActionOrigin_SteamDeck_RightStick_DPadEast = 371
+     * }
+     */
+    public static int k_EInputActionOrigin_SteamDeck_RightStick_DPadEast() {
+        return k_EInputActionOrigin_SteamDeck_RightStick_DPadEast;
+    }
+    private static final int k_EInputActionOrigin_SteamDeck_RightStick_Touch = (int)372L;
+    /**
+     * {@snippet lang=c :
+     * enum EInputActionOrigin.k_EInputActionOrigin_SteamDeck_RightStick_Touch = 372
+     * }
+     */
+    public static int k_EInputActionOrigin_SteamDeck_RightStick_Touch() {
+        return k_EInputActionOrigin_SteamDeck_RightStick_Touch;
+    }
+    private static final int k_EInputActionOrigin_SteamDeck_L4 = (int)373L;
+    /**
+     * {@snippet lang=c :
+     * enum EInputActionOrigin.k_EInputActionOrigin_SteamDeck_L4 = 373
+     * }
+     */
+    public static int k_EInputActionOrigin_SteamDeck_L4() {
+        return k_EInputActionOrigin_SteamDeck_L4;
+    }
+    private static final int k_EInputActionOrigin_SteamDeck_R4 = (int)374L;
+    /**
+     * {@snippet lang=c :
+     * enum EInputActionOrigin.k_EInputActionOrigin_SteamDeck_R4 = 374
+     * }
+     */
+    public static int k_EInputActionOrigin_SteamDeck_R4() {
+        return k_EInputActionOrigin_SteamDeck_R4;
+    }
+    private static final int k_EInputActionOrigin_SteamDeck_L5 = (int)375L;
+    /**
+     * {@snippet lang=c :
+     * enum EInputActionOrigin.k_EInputActionOrigin_SteamDeck_L5 = 375
+     * }
+     */
+    public static int k_EInputActionOrigin_SteamDeck_L5() {
+        return k_EInputActionOrigin_SteamDeck_L5;
+    }
+    private static final int k_EInputActionOrigin_SteamDeck_R5 = (int)376L;
+    /**
+     * {@snippet lang=c :
+     * enum EInputActionOrigin.k_EInputActionOrigin_SteamDeck_R5 = 376
+     * }
+     */
+    public static int k_EInputActionOrigin_SteamDeck_R5() {
+        return k_EInputActionOrigin_SteamDeck_R5;
+    }
+    private static final int k_EInputActionOrigin_SteamDeck_DPad_Move = (int)377L;
+    /**
+     * {@snippet lang=c :
+     * enum EInputActionOrigin.k_EInputActionOrigin_SteamDeck_DPad_Move = 377
+     * }
+     */
+    public static int k_EInputActionOrigin_SteamDeck_DPad_Move() {
+        return k_EInputActionOrigin_SteamDeck_DPad_Move;
+    }
+    private static final int k_EInputActionOrigin_SteamDeck_DPad_North = (int)378L;
+    /**
+     * {@snippet lang=c :
+     * enum EInputActionOrigin.k_EInputActionOrigin_SteamDeck_DPad_North = 378
+     * }
+     */
+    public static int k_EInputActionOrigin_SteamDeck_DPad_North() {
+        return k_EInputActionOrigin_SteamDeck_DPad_North;
+    }
+    private static final int k_EInputActionOrigin_SteamDeck_DPad_South = (int)379L;
+    /**
+     * {@snippet lang=c :
+     * enum EInputActionOrigin.k_EInputActionOrigin_SteamDeck_DPad_South = 379
+     * }
+     */
+    public static int k_EInputActionOrigin_SteamDeck_DPad_South() {
+        return k_EInputActionOrigin_SteamDeck_DPad_South;
+    }
+    private static final int k_EInputActionOrigin_SteamDeck_DPad_West = (int)380L;
+    /**
+     * {@snippet lang=c :
+     * enum EInputActionOrigin.k_EInputActionOrigin_SteamDeck_DPad_West = 380
+     * }
+     */
+    public static int k_EInputActionOrigin_SteamDeck_DPad_West() {
+        return k_EInputActionOrigin_SteamDeck_DPad_West;
+    }
+    private static final int k_EInputActionOrigin_SteamDeck_DPad_East = (int)381L;
+    /**
+     * {@snippet lang=c :
+     * enum EInputActionOrigin.k_EInputActionOrigin_SteamDeck_DPad_East = 381
+     * }
+     */
+    public static int k_EInputActionOrigin_SteamDeck_DPad_East() {
+        return k_EInputActionOrigin_SteamDeck_DPad_East;
+    }
+    private static final int k_EInputActionOrigin_SteamDeck_Gyro_Move = (int)382L;
+    /**
+     * {@snippet lang=c :
+     * enum EInputActionOrigin.k_EInputActionOrigin_SteamDeck_Gyro_Move = 382
+     * }
+     */
+    public static int k_EInputActionOrigin_SteamDeck_Gyro_Move() {
+        return k_EInputActionOrigin_SteamDeck_Gyro_Move;
+    }
+    private static final int k_EInputActionOrigin_SteamDeck_Gyro_Pitch = (int)383L;
+    /**
+     * {@snippet lang=c :
+     * enum EInputActionOrigin.k_EInputActionOrigin_SteamDeck_Gyro_Pitch = 383
+     * }
+     */
+    public static int k_EInputActionOrigin_SteamDeck_Gyro_Pitch() {
+        return k_EInputActionOrigin_SteamDeck_Gyro_Pitch;
+    }
+    private static final int k_EInputActionOrigin_SteamDeck_Gyro_Yaw = (int)384L;
+    /**
+     * {@snippet lang=c :
+     * enum EInputActionOrigin.k_EInputActionOrigin_SteamDeck_Gyro_Yaw = 384
+     * }
+     */
+    public static int k_EInputActionOrigin_SteamDeck_Gyro_Yaw() {
+        return k_EInputActionOrigin_SteamDeck_Gyro_Yaw;
+    }
+    private static final int k_EInputActionOrigin_SteamDeck_Gyro_Roll = (int)385L;
+    /**
+     * {@snippet lang=c :
+     * enum EInputActionOrigin.k_EInputActionOrigin_SteamDeck_Gyro_Roll = 385
+     * }
+     */
+    public static int k_EInputActionOrigin_SteamDeck_Gyro_Roll() {
+        return k_EInputActionOrigin_SteamDeck_Gyro_Roll;
+    }
+    private static final int k_EInputActionOrigin_SteamDeck_Reserved1 = (int)386L;
+    /**
+     * {@snippet lang=c :
+     * enum EInputActionOrigin.k_EInputActionOrigin_SteamDeck_Reserved1 = 386
+     * }
+     */
+    public static int k_EInputActionOrigin_SteamDeck_Reserved1() {
+        return k_EInputActionOrigin_SteamDeck_Reserved1;
+    }
+    private static final int k_EInputActionOrigin_SteamDeck_Reserved2 = (int)387L;
+    /**
+     * {@snippet lang=c :
+     * enum EInputActionOrigin.k_EInputActionOrigin_SteamDeck_Reserved2 = 387
+     * }
+     */
+    public static int k_EInputActionOrigin_SteamDeck_Reserved2() {
+        return k_EInputActionOrigin_SteamDeck_Reserved2;
+    }
+    private static final int k_EInputActionOrigin_SteamDeck_Reserved3 = (int)388L;
+    /**
+     * {@snippet lang=c :
+     * enum EInputActionOrigin.k_EInputActionOrigin_SteamDeck_Reserved3 = 388
+     * }
+     */
+    public static int k_EInputActionOrigin_SteamDeck_Reserved3() {
+        return k_EInputActionOrigin_SteamDeck_Reserved3;
+    }
+    private static final int k_EInputActionOrigin_SteamDeck_Reserved4 = (int)389L;
+    /**
+     * {@snippet lang=c :
+     * enum EInputActionOrigin.k_EInputActionOrigin_SteamDeck_Reserved4 = 389
+     * }
+     */
+    public static int k_EInputActionOrigin_SteamDeck_Reserved4() {
+        return k_EInputActionOrigin_SteamDeck_Reserved4;
+    }
+    private static final int k_EInputActionOrigin_SteamDeck_Reserved5 = (int)390L;
+    /**
+     * {@snippet lang=c :
+     * enum EInputActionOrigin.k_EInputActionOrigin_SteamDeck_Reserved5 = 390
+     * }
+     */
+    public static int k_EInputActionOrigin_SteamDeck_Reserved5() {
+        return k_EInputActionOrigin_SteamDeck_Reserved5;
+    }
+    private static final int k_EInputActionOrigin_SteamDeck_Reserved6 = (int)391L;
+    /**
+     * {@snippet lang=c :
+     * enum EInputActionOrigin.k_EInputActionOrigin_SteamDeck_Reserved6 = 391
+     * }
+     */
+    public static int k_EInputActionOrigin_SteamDeck_Reserved6() {
+        return k_EInputActionOrigin_SteamDeck_Reserved6;
+    }
+    private static final int k_EInputActionOrigin_SteamDeck_Reserved7 = (int)392L;
+    /**
+     * {@snippet lang=c :
+     * enum EInputActionOrigin.k_EInputActionOrigin_SteamDeck_Reserved7 = 392
+     * }
+     */
+    public static int k_EInputActionOrigin_SteamDeck_Reserved7() {
+        return k_EInputActionOrigin_SteamDeck_Reserved7;
+    }
+    private static final int k_EInputActionOrigin_SteamDeck_Reserved8 = (int)393L;
+    /**
+     * {@snippet lang=c :
+     * enum EInputActionOrigin.k_EInputActionOrigin_SteamDeck_Reserved8 = 393
+     * }
+     */
+    public static int k_EInputActionOrigin_SteamDeck_Reserved8() {
+        return k_EInputActionOrigin_SteamDeck_Reserved8;
+    }
+    private static final int k_EInputActionOrigin_SteamDeck_Reserved9 = (int)394L;
+    /**
+     * {@snippet lang=c :
+     * enum EInputActionOrigin.k_EInputActionOrigin_SteamDeck_Reserved9 = 394
+     * }
+     */
+    public static int k_EInputActionOrigin_SteamDeck_Reserved9() {
+        return k_EInputActionOrigin_SteamDeck_Reserved9;
+    }
+    private static final int k_EInputActionOrigin_SteamDeck_Reserved10 = (int)395L;
+    /**
+     * {@snippet lang=c :
+     * enum EInputActionOrigin.k_EInputActionOrigin_SteamDeck_Reserved10 = 395
+     * }
+     */
+    public static int k_EInputActionOrigin_SteamDeck_Reserved10() {
+        return k_EInputActionOrigin_SteamDeck_Reserved10;
+    }
+    private static final int k_EInputActionOrigin_SteamDeck_Reserved11 = (int)396L;
+    /**
+     * {@snippet lang=c :
+     * enum EInputActionOrigin.k_EInputActionOrigin_SteamDeck_Reserved11 = 396
+     * }
+     */
+    public static int k_EInputActionOrigin_SteamDeck_Reserved11() {
+        return k_EInputActionOrigin_SteamDeck_Reserved11;
+    }
+    private static final int k_EInputActionOrigin_SteamDeck_Reserved12 = (int)397L;
+    /**
+     * {@snippet lang=c :
+     * enum EInputActionOrigin.k_EInputActionOrigin_SteamDeck_Reserved12 = 397
+     * }
+     */
+    public static int k_EInputActionOrigin_SteamDeck_Reserved12() {
+        return k_EInputActionOrigin_SteamDeck_Reserved12;
+    }
+    private static final int k_EInputActionOrigin_SteamDeck_Reserved13 = (int)398L;
+    /**
+     * {@snippet lang=c :
+     * enum EInputActionOrigin.k_EInputActionOrigin_SteamDeck_Reserved13 = 398
+     * }
+     */
+    public static int k_EInputActionOrigin_SteamDeck_Reserved13() {
+        return k_EInputActionOrigin_SteamDeck_Reserved13;
+    }
+    private static final int k_EInputActionOrigin_SteamDeck_Reserved14 = (int)399L;
+    /**
+     * {@snippet lang=c :
+     * enum EInputActionOrigin.k_EInputActionOrigin_SteamDeck_Reserved14 = 399
+     * }
+     */
+    public static int k_EInputActionOrigin_SteamDeck_Reserved14() {
+        return k_EInputActionOrigin_SteamDeck_Reserved14;
+    }
+    private static final int k_EInputActionOrigin_SteamDeck_Reserved15 = (int)400L;
+    /**
+     * {@snippet lang=c :
+     * enum EInputActionOrigin.k_EInputActionOrigin_SteamDeck_Reserved15 = 400
+     * }
+     */
+    public static int k_EInputActionOrigin_SteamDeck_Reserved15() {
+        return k_EInputActionOrigin_SteamDeck_Reserved15;
+    }
+    private static final int k_EInputActionOrigin_SteamDeck_Reserved16 = (int)401L;
+    /**
+     * {@snippet lang=c :
+     * enum EInputActionOrigin.k_EInputActionOrigin_SteamDeck_Reserved16 = 401
+     * }
+     */
+    public static int k_EInputActionOrigin_SteamDeck_Reserved16() {
+        return k_EInputActionOrigin_SteamDeck_Reserved16;
+    }
+    private static final int k_EInputActionOrigin_SteamDeck_Reserved17 = (int)402L;
+    /**
+     * {@snippet lang=c :
+     * enum EInputActionOrigin.k_EInputActionOrigin_SteamDeck_Reserved17 = 402
+     * }
+     */
+    public static int k_EInputActionOrigin_SteamDeck_Reserved17() {
+        return k_EInputActionOrigin_SteamDeck_Reserved17;
+    }
+    private static final int k_EInputActionOrigin_SteamDeck_Reserved18 = (int)403L;
+    /**
+     * {@snippet lang=c :
+     * enum EInputActionOrigin.k_EInputActionOrigin_SteamDeck_Reserved18 = 403
+     * }
+     */
+    public static int k_EInputActionOrigin_SteamDeck_Reserved18() {
+        return k_EInputActionOrigin_SteamDeck_Reserved18;
+    }
+    private static final int k_EInputActionOrigin_SteamDeck_Reserved19 = (int)404L;
+    /**
+     * {@snippet lang=c :
+     * enum EInputActionOrigin.k_EInputActionOrigin_SteamDeck_Reserved19 = 404
+     * }
+     */
+    public static int k_EInputActionOrigin_SteamDeck_Reserved19() {
+        return k_EInputActionOrigin_SteamDeck_Reserved19;
+    }
+    private static final int k_EInputActionOrigin_SteamDeck_Reserved20 = (int)405L;
+    /**
+     * {@snippet lang=c :
+     * enum EInputActionOrigin.k_EInputActionOrigin_SteamDeck_Reserved20 = 405
+     * }
+     */
+    public static int k_EInputActionOrigin_SteamDeck_Reserved20() {
+        return k_EInputActionOrigin_SteamDeck_Reserved20;
+    }
+    private static final int k_EInputActionOrigin_Count = (int)406L;
+    /**
+     * {@snippet lang=c :
+     * enum EInputActionOrigin.k_EInputActionOrigin_Count = 406
+     * }
+     */
+    public static int k_EInputActionOrigin_Count() {
+        return k_EInputActionOrigin_Count;
+    }
+    private static final int k_EInputActionOrigin_MaximumPossibleValue = (int)32767L;
+    /**
+     * {@snippet lang=c :
+     * enum EInputActionOrigin.k_EInputActionOrigin_MaximumPossibleValue = 32767
+     * }
+     */
+    public static int k_EInputActionOrigin_MaximumPossibleValue() {
+        return k_EInputActionOrigin_MaximumPossibleValue;
+    }
+    private static final int k_EXboxOrigin_A = (int)0L;
+    /**
+     * {@snippet lang=c :
+     * enum EXboxOrigin.k_EXboxOrigin_A = 0
+     * }
+     */
+    public static int k_EXboxOrigin_A() {
+        return k_EXboxOrigin_A;
+    }
+    private static final int k_EXboxOrigin_B = (int)1L;
+    /**
+     * {@snippet lang=c :
+     * enum EXboxOrigin.k_EXboxOrigin_B = 1
+     * }
+     */
+    public static int k_EXboxOrigin_B() {
+        return k_EXboxOrigin_B;
+    }
+    private static final int k_EXboxOrigin_X = (int)2L;
+    /**
+     * {@snippet lang=c :
+     * enum EXboxOrigin.k_EXboxOrigin_X = 2
+     * }
+     */
+    public static int k_EXboxOrigin_X() {
+        return k_EXboxOrigin_X;
+    }
+    private static final int k_EXboxOrigin_Y = (int)3L;
+    /**
+     * {@snippet lang=c :
+     * enum EXboxOrigin.k_EXboxOrigin_Y = 3
+     * }
+     */
+    public static int k_EXboxOrigin_Y() {
+        return k_EXboxOrigin_Y;
+    }
+    private static final int k_EXboxOrigin_LeftBumper = (int)4L;
+    /**
+     * {@snippet lang=c :
+     * enum EXboxOrigin.k_EXboxOrigin_LeftBumper = 4
+     * }
+     */
+    public static int k_EXboxOrigin_LeftBumper() {
+        return k_EXboxOrigin_LeftBumper;
+    }
+    private static final int k_EXboxOrigin_RightBumper = (int)5L;
+    /**
+     * {@snippet lang=c :
+     * enum EXboxOrigin.k_EXboxOrigin_RightBumper = 5
+     * }
+     */
+    public static int k_EXboxOrigin_RightBumper() {
+        return k_EXboxOrigin_RightBumper;
+    }
+    private static final int k_EXboxOrigin_Menu = (int)6L;
+    /**
+     * {@snippet lang=c :
+     * enum EXboxOrigin.k_EXboxOrigin_Menu = 6
+     * }
+     */
+    public static int k_EXboxOrigin_Menu() {
+        return k_EXboxOrigin_Menu;
+    }
+    private static final int k_EXboxOrigin_View = (int)7L;
+    /**
+     * {@snippet lang=c :
+     * enum EXboxOrigin.k_EXboxOrigin_View = 7
+     * }
+     */
+    public static int k_EXboxOrigin_View() {
+        return k_EXboxOrigin_View;
+    }
+    private static final int k_EXboxOrigin_LeftTrigger_Pull = (int)8L;
+    /**
+     * {@snippet lang=c :
+     * enum EXboxOrigin.k_EXboxOrigin_LeftTrigger_Pull = 8
+     * }
+     */
+    public static int k_EXboxOrigin_LeftTrigger_Pull() {
+        return k_EXboxOrigin_LeftTrigger_Pull;
+    }
+    private static final int k_EXboxOrigin_LeftTrigger_Click = (int)9L;
+    /**
+     * {@snippet lang=c :
+     * enum EXboxOrigin.k_EXboxOrigin_LeftTrigger_Click = 9
+     * }
+     */
+    public static int k_EXboxOrigin_LeftTrigger_Click() {
+        return k_EXboxOrigin_LeftTrigger_Click;
+    }
+    private static final int k_EXboxOrigin_RightTrigger_Pull = (int)10L;
+    /**
+     * {@snippet lang=c :
+     * enum EXboxOrigin.k_EXboxOrigin_RightTrigger_Pull = 10
+     * }
+     */
+    public static int k_EXboxOrigin_RightTrigger_Pull() {
+        return k_EXboxOrigin_RightTrigger_Pull;
+    }
+    private static final int k_EXboxOrigin_RightTrigger_Click = (int)11L;
+    /**
+     * {@snippet lang=c :
+     * enum EXboxOrigin.k_EXboxOrigin_RightTrigger_Click = 11
+     * }
+     */
+    public static int k_EXboxOrigin_RightTrigger_Click() {
+        return k_EXboxOrigin_RightTrigger_Click;
+    }
+    private static final int k_EXboxOrigin_LeftStick_Move = (int)12L;
+    /**
+     * {@snippet lang=c :
+     * enum EXboxOrigin.k_EXboxOrigin_LeftStick_Move = 12
+     * }
+     */
+    public static int k_EXboxOrigin_LeftStick_Move() {
+        return k_EXboxOrigin_LeftStick_Move;
+    }
+    private static final int k_EXboxOrigin_LeftStick_Click = (int)13L;
+    /**
+     * {@snippet lang=c :
+     * enum EXboxOrigin.k_EXboxOrigin_LeftStick_Click = 13
+     * }
+     */
+    public static int k_EXboxOrigin_LeftStick_Click() {
+        return k_EXboxOrigin_LeftStick_Click;
+    }
+    private static final int k_EXboxOrigin_LeftStick_DPadNorth = (int)14L;
+    /**
+     * {@snippet lang=c :
+     * enum EXboxOrigin.k_EXboxOrigin_LeftStick_DPadNorth = 14
+     * }
+     */
+    public static int k_EXboxOrigin_LeftStick_DPadNorth() {
+        return k_EXboxOrigin_LeftStick_DPadNorth;
+    }
+    private static final int k_EXboxOrigin_LeftStick_DPadSouth = (int)15L;
+    /**
+     * {@snippet lang=c :
+     * enum EXboxOrigin.k_EXboxOrigin_LeftStick_DPadSouth = 15
+     * }
+     */
+    public static int k_EXboxOrigin_LeftStick_DPadSouth() {
+        return k_EXboxOrigin_LeftStick_DPadSouth;
+    }
+    private static final int k_EXboxOrigin_LeftStick_DPadWest = (int)16L;
+    /**
+     * {@snippet lang=c :
+     * enum EXboxOrigin.k_EXboxOrigin_LeftStick_DPadWest = 16
+     * }
+     */
+    public static int k_EXboxOrigin_LeftStick_DPadWest() {
+        return k_EXboxOrigin_LeftStick_DPadWest;
+    }
+    private static final int k_EXboxOrigin_LeftStick_DPadEast = (int)17L;
+    /**
+     * {@snippet lang=c :
+     * enum EXboxOrigin.k_EXboxOrigin_LeftStick_DPadEast = 17
+     * }
+     */
+    public static int k_EXboxOrigin_LeftStick_DPadEast() {
+        return k_EXboxOrigin_LeftStick_DPadEast;
+    }
+    private static final int k_EXboxOrigin_RightStick_Move = (int)18L;
+    /**
+     * {@snippet lang=c :
+     * enum EXboxOrigin.k_EXboxOrigin_RightStick_Move = 18
+     * }
+     */
+    public static int k_EXboxOrigin_RightStick_Move() {
+        return k_EXboxOrigin_RightStick_Move;
+    }
+    private static final int k_EXboxOrigin_RightStick_Click = (int)19L;
+    /**
+     * {@snippet lang=c :
+     * enum EXboxOrigin.k_EXboxOrigin_RightStick_Click = 19
+     * }
+     */
+    public static int k_EXboxOrigin_RightStick_Click() {
+        return k_EXboxOrigin_RightStick_Click;
+    }
+    private static final int k_EXboxOrigin_RightStick_DPadNorth = (int)20L;
+    /**
+     * {@snippet lang=c :
+     * enum EXboxOrigin.k_EXboxOrigin_RightStick_DPadNorth = 20
+     * }
+     */
+    public static int k_EXboxOrigin_RightStick_DPadNorth() {
+        return k_EXboxOrigin_RightStick_DPadNorth;
+    }
+    private static final int k_EXboxOrigin_RightStick_DPadSouth = (int)21L;
+    /**
+     * {@snippet lang=c :
+     * enum EXboxOrigin.k_EXboxOrigin_RightStick_DPadSouth = 21
+     * }
+     */
+    public static int k_EXboxOrigin_RightStick_DPadSouth() {
+        return k_EXboxOrigin_RightStick_DPadSouth;
+    }
+    private static final int k_EXboxOrigin_RightStick_DPadWest = (int)22L;
+    /**
+     * {@snippet lang=c :
+     * enum EXboxOrigin.k_EXboxOrigin_RightStick_DPadWest = 22
+     * }
+     */
+    public static int k_EXboxOrigin_RightStick_DPadWest() {
+        return k_EXboxOrigin_RightStick_DPadWest;
+    }
+    private static final int k_EXboxOrigin_RightStick_DPadEast = (int)23L;
+    /**
+     * {@snippet lang=c :
+     * enum EXboxOrigin.k_EXboxOrigin_RightStick_DPadEast = 23
+     * }
+     */
+    public static int k_EXboxOrigin_RightStick_DPadEast() {
+        return k_EXboxOrigin_RightStick_DPadEast;
+    }
+    private static final int k_EXboxOrigin_DPad_North = (int)24L;
+    /**
+     * {@snippet lang=c :
+     * enum EXboxOrigin.k_EXboxOrigin_DPad_North = 24
+     * }
+     */
+    public static int k_EXboxOrigin_DPad_North() {
+        return k_EXboxOrigin_DPad_North;
+    }
+    private static final int k_EXboxOrigin_DPad_South = (int)25L;
+    /**
+     * {@snippet lang=c :
+     * enum EXboxOrigin.k_EXboxOrigin_DPad_South = 25
+     * }
+     */
+    public static int k_EXboxOrigin_DPad_South() {
+        return k_EXboxOrigin_DPad_South;
+    }
+    private static final int k_EXboxOrigin_DPad_West = (int)26L;
+    /**
+     * {@snippet lang=c :
+     * enum EXboxOrigin.k_EXboxOrigin_DPad_West = 26
+     * }
+     */
+    public static int k_EXboxOrigin_DPad_West() {
+        return k_EXboxOrigin_DPad_West;
+    }
+    private static final int k_EXboxOrigin_DPad_East = (int)27L;
+    /**
+     * {@snippet lang=c :
+     * enum EXboxOrigin.k_EXboxOrigin_DPad_East = 27
+     * }
+     */
+    public static int k_EXboxOrigin_DPad_East() {
+        return k_EXboxOrigin_DPad_East;
+    }
+    private static final int k_EXboxOrigin_Count = (int)28L;
+    /**
+     * {@snippet lang=c :
+     * enum EXboxOrigin.k_EXboxOrigin_Count = 28
+     * }
+     */
+    public static int k_EXboxOrigin_Count() {
+        return k_EXboxOrigin_Count;
+    }
+    private static final int k_ESteamControllerPad_Left = (int)0L;
+    /**
+     * {@snippet lang=c :
+     * enum ESteamControllerPad.k_ESteamControllerPad_Left = 0
+     * }
+     */
+    public static int k_ESteamControllerPad_Left() {
+        return k_ESteamControllerPad_Left;
+    }
+    private static final int k_ESteamControllerPad_Right = (int)1L;
+    /**
+     * {@snippet lang=c :
+     * enum ESteamControllerPad.k_ESteamControllerPad_Right = 1
+     * }
+     */
+    public static int k_ESteamControllerPad_Right() {
+        return k_ESteamControllerPad_Right;
+    }
+    private static final int k_EControllerHapticLocation_Left = (int)1L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerHapticLocation.k_EControllerHapticLocation_Left = 1
+     * }
+     */
+    public static int k_EControllerHapticLocation_Left() {
+        return k_EControllerHapticLocation_Left;
+    }
+    private static final int k_EControllerHapticLocation_Right = (int)2L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerHapticLocation.k_EControllerHapticLocation_Right = 2
+     * }
+     */
+    public static int k_EControllerHapticLocation_Right() {
+        return k_EControllerHapticLocation_Right;
+    }
+    private static final int k_EControllerHapticLocation_Both = (int)3L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerHapticLocation.k_EControllerHapticLocation_Both = 3
+     * }
+     */
+    public static int k_EControllerHapticLocation_Both() {
+        return k_EControllerHapticLocation_Both;
+    }
+    private static final int k_EControllerHapticType_Off = (int)0L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerHapticType.k_EControllerHapticType_Off = 0
+     * }
+     */
+    public static int k_EControllerHapticType_Off() {
+        return k_EControllerHapticType_Off;
+    }
+    private static final int k_EControllerHapticType_Tick = (int)1L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerHapticType.k_EControllerHapticType_Tick = 1
+     * }
+     */
+    public static int k_EControllerHapticType_Tick() {
+        return k_EControllerHapticType_Tick;
+    }
+    private static final int k_EControllerHapticType_Click = (int)2L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerHapticType.k_EControllerHapticType_Click = 2
+     * }
+     */
+    public static int k_EControllerHapticType_Click() {
+        return k_EControllerHapticType_Click;
+    }
+    private static final int k_ESteamInputType_Unknown = (int)0L;
+    /**
+     * {@snippet lang=c :
+     * enum ESteamInputType.k_ESteamInputType_Unknown = 0
+     * }
+     */
+    public static int k_ESteamInputType_Unknown() {
+        return k_ESteamInputType_Unknown;
+    }
+    private static final int k_ESteamInputType_SteamController = (int)1L;
+    /**
+     * {@snippet lang=c :
+     * enum ESteamInputType.k_ESteamInputType_SteamController = 1
+     * }
+     */
+    public static int k_ESteamInputType_SteamController() {
+        return k_ESteamInputType_SteamController;
+    }
+    private static final int k_ESteamInputType_XBox360Controller = (int)2L;
+    /**
+     * {@snippet lang=c :
+     * enum ESteamInputType.k_ESteamInputType_XBox360Controller = 2
+     * }
+     */
+    public static int k_ESteamInputType_XBox360Controller() {
+        return k_ESteamInputType_XBox360Controller;
+    }
+    private static final int k_ESteamInputType_XBoxOneController = (int)3L;
+    /**
+     * {@snippet lang=c :
+     * enum ESteamInputType.k_ESteamInputType_XBoxOneController = 3
+     * }
+     */
+    public static int k_ESteamInputType_XBoxOneController() {
+        return k_ESteamInputType_XBoxOneController;
+    }
+    private static final int k_ESteamInputType_GenericGamepad = (int)4L;
+    /**
+     * {@snippet lang=c :
+     * enum ESteamInputType.k_ESteamInputType_GenericGamepad = 4
+     * }
+     */
+    public static int k_ESteamInputType_GenericGamepad() {
+        return k_ESteamInputType_GenericGamepad;
+    }
+    private static final int k_ESteamInputType_PS4Controller = (int)5L;
+    /**
+     * {@snippet lang=c :
+     * enum ESteamInputType.k_ESteamInputType_PS4Controller = 5
+     * }
+     */
+    public static int k_ESteamInputType_PS4Controller() {
+        return k_ESteamInputType_PS4Controller;
+    }
+    private static final int k_ESteamInputType_AppleMFiController = (int)6L;
+    /**
+     * {@snippet lang=c :
+     * enum ESteamInputType.k_ESteamInputType_AppleMFiController = 6
+     * }
+     */
+    public static int k_ESteamInputType_AppleMFiController() {
+        return k_ESteamInputType_AppleMFiController;
+    }
+    private static final int k_ESteamInputType_AndroidController = (int)7L;
+    /**
+     * {@snippet lang=c :
+     * enum ESteamInputType.k_ESteamInputType_AndroidController = 7
+     * }
+     */
+    public static int k_ESteamInputType_AndroidController() {
+        return k_ESteamInputType_AndroidController;
+    }
+    private static final int k_ESteamInputType_SwitchJoyConPair = (int)8L;
+    /**
+     * {@snippet lang=c :
+     * enum ESteamInputType.k_ESteamInputType_SwitchJoyConPair = 8
+     * }
+     */
+    public static int k_ESteamInputType_SwitchJoyConPair() {
+        return k_ESteamInputType_SwitchJoyConPair;
+    }
+    private static final int k_ESteamInputType_SwitchJoyConSingle = (int)9L;
+    /**
+     * {@snippet lang=c :
+     * enum ESteamInputType.k_ESteamInputType_SwitchJoyConSingle = 9
+     * }
+     */
+    public static int k_ESteamInputType_SwitchJoyConSingle() {
+        return k_ESteamInputType_SwitchJoyConSingle;
+    }
+    private static final int k_ESteamInputType_SwitchProController = (int)10L;
+    /**
+     * {@snippet lang=c :
+     * enum ESteamInputType.k_ESteamInputType_SwitchProController = 10
+     * }
+     */
+    public static int k_ESteamInputType_SwitchProController() {
+        return k_ESteamInputType_SwitchProController;
+    }
+    private static final int k_ESteamInputType_MobileTouch = (int)11L;
+    /**
+     * {@snippet lang=c :
+     * enum ESteamInputType.k_ESteamInputType_MobileTouch = 11
+     * }
+     */
+    public static int k_ESteamInputType_MobileTouch() {
+        return k_ESteamInputType_MobileTouch;
+    }
+    private static final int k_ESteamInputType_PS3Controller = (int)12L;
+    /**
+     * {@snippet lang=c :
+     * enum ESteamInputType.k_ESteamInputType_PS3Controller = 12
+     * }
+     */
+    public static int k_ESteamInputType_PS3Controller() {
+        return k_ESteamInputType_PS3Controller;
+    }
+    private static final int k_ESteamInputType_PS5Controller = (int)13L;
+    /**
+     * {@snippet lang=c :
+     * enum ESteamInputType.k_ESteamInputType_PS5Controller = 13
+     * }
+     */
+    public static int k_ESteamInputType_PS5Controller() {
+        return k_ESteamInputType_PS5Controller;
+    }
+    private static final int k_ESteamInputType_SteamDeckController = (int)14L;
+    /**
+     * {@snippet lang=c :
+     * enum ESteamInputType.k_ESteamInputType_SteamDeckController = 14
+     * }
+     */
+    public static int k_ESteamInputType_SteamDeckController() {
+        return k_ESteamInputType_SteamDeckController;
+    }
+    private static final int k_ESteamInputType_Count = (int)15L;
+    /**
+     * {@snippet lang=c :
+     * enum ESteamInputType.k_ESteamInputType_Count = 15
+     * }
+     */
+    public static int k_ESteamInputType_Count() {
+        return k_ESteamInputType_Count;
+    }
+    private static final int k_ESteamInputType_MaximumPossibleValue = (int)255L;
+    /**
+     * {@snippet lang=c :
+     * enum ESteamInputType.k_ESteamInputType_MaximumPossibleValue = 255
+     * }
+     */
+    public static int k_ESteamInputType_MaximumPossibleValue() {
+        return k_ESteamInputType_MaximumPossibleValue;
+    }
+    private static final int k_ESteamInputConfigurationEnableType_None = (int)0L;
+    /**
+     * {@snippet lang=c :
+     * enum ESteamInputConfigurationEnableType.k_ESteamInputConfigurationEnableType_None = 0
+     * }
+     */
+    public static int k_ESteamInputConfigurationEnableType_None() {
+        return k_ESteamInputConfigurationEnableType_None;
+    }
+    private static final int k_ESteamInputConfigurationEnableType_Playstation = (int)1L;
+    /**
+     * {@snippet lang=c :
+     * enum ESteamInputConfigurationEnableType.k_ESteamInputConfigurationEnableType_Playstation = 1
+     * }
+     */
+    public static int k_ESteamInputConfigurationEnableType_Playstation() {
+        return k_ESteamInputConfigurationEnableType_Playstation;
+    }
+    private static final int k_ESteamInputConfigurationEnableType_Xbox = (int)2L;
+    /**
+     * {@snippet lang=c :
+     * enum ESteamInputConfigurationEnableType.k_ESteamInputConfigurationEnableType_Xbox = 2
+     * }
+     */
+    public static int k_ESteamInputConfigurationEnableType_Xbox() {
+        return k_ESteamInputConfigurationEnableType_Xbox;
+    }
+    private static final int k_ESteamInputConfigurationEnableType_Generic = (int)4L;
+    /**
+     * {@snippet lang=c :
+     * enum ESteamInputConfigurationEnableType.k_ESteamInputConfigurationEnableType_Generic = 4
+     * }
+     */
+    public static int k_ESteamInputConfigurationEnableType_Generic() {
+        return k_ESteamInputConfigurationEnableType_Generic;
+    }
+    private static final int k_ESteamInputConfigurationEnableType_Switch = (int)8L;
+    /**
+     * {@snippet lang=c :
+     * enum ESteamInputConfigurationEnableType.k_ESteamInputConfigurationEnableType_Switch = 8
+     * }
+     */
+    public static int k_ESteamInputConfigurationEnableType_Switch() {
+        return k_ESteamInputConfigurationEnableType_Switch;
+    }
+    private static final int k_ESteamInputLEDFlag_SetColor = (int)0L;
+    /**
+     * {@snippet lang=c :
+     * enum ESteamInputLEDFlag.k_ESteamInputLEDFlag_SetColor = 0
+     * }
+     */
+    public static int k_ESteamInputLEDFlag_SetColor() {
+        return k_ESteamInputLEDFlag_SetColor;
+    }
+    private static final int k_ESteamInputLEDFlag_RestoreUserDefault = (int)1L;
+    /**
+     * {@snippet lang=c :
+     * enum ESteamInputLEDFlag.k_ESteamInputLEDFlag_RestoreUserDefault = 1
+     * }
+     */
+    public static int k_ESteamInputLEDFlag_RestoreUserDefault() {
+        return k_ESteamInputLEDFlag_RestoreUserDefault;
+    }
+    private static final int k_ESteamInputGlyphSize_Small = (int)0L;
+    /**
+     * {@snippet lang=c :
+     * enum ESteamInputGlyphSize.k_ESteamInputGlyphSize_Small = 0
+     * }
+     */
+    public static int k_ESteamInputGlyphSize_Small() {
+        return k_ESteamInputGlyphSize_Small;
+    }
+    private static final int k_ESteamInputGlyphSize_Medium = (int)1L;
+    /**
+     * {@snippet lang=c :
+     * enum ESteamInputGlyphSize.k_ESteamInputGlyphSize_Medium = 1
+     * }
+     */
+    public static int k_ESteamInputGlyphSize_Medium() {
+        return k_ESteamInputGlyphSize_Medium;
+    }
+    private static final int k_ESteamInputGlyphSize_Large = (int)2L;
+    /**
+     * {@snippet lang=c :
+     * enum ESteamInputGlyphSize.k_ESteamInputGlyphSize_Large = 2
+     * }
+     */
+    public static int k_ESteamInputGlyphSize_Large() {
+        return k_ESteamInputGlyphSize_Large;
+    }
+    private static final int k_ESteamInputGlyphSize_Count = (int)3L;
+    /**
+     * {@snippet lang=c :
+     * enum ESteamInputGlyphSize.k_ESteamInputGlyphSize_Count = 3
+     * }
+     */
+    public static int k_ESteamInputGlyphSize_Count() {
+        return k_ESteamInputGlyphSize_Count;
+    }
+    private static final int ESteamInputGlyphStyle_Knockout = (int)0L;
+    /**
+     * {@snippet lang=c :
+     * enum ESteamInputGlyphStyle.ESteamInputGlyphStyle_Knockout = 0
+     * }
+     */
+    public static int ESteamInputGlyphStyle_Knockout() {
+        return ESteamInputGlyphStyle_Knockout;
+    }
+    private static final int ESteamInputGlyphStyle_Light = (int)1L;
+    /**
+     * {@snippet lang=c :
+     * enum ESteamInputGlyphStyle.ESteamInputGlyphStyle_Light = 1
+     * }
+     */
+    public static int ESteamInputGlyphStyle_Light() {
+        return ESteamInputGlyphStyle_Light;
+    }
+    private static final int ESteamInputGlyphStyle_Dark = (int)2L;
+    /**
+     * {@snippet lang=c :
+     * enum ESteamInputGlyphStyle.ESteamInputGlyphStyle_Dark = 2
+     * }
+     */
+    public static int ESteamInputGlyphStyle_Dark() {
+        return ESteamInputGlyphStyle_Dark;
+    }
+    private static final int ESteamInputGlyphStyle_NeutralColorABXY = (int)16L;
+    /**
+     * {@snippet lang=c :
+     * enum ESteamInputGlyphStyle.ESteamInputGlyphStyle_NeutralColorABXY = 16
+     * }
+     */
+    public static int ESteamInputGlyphStyle_NeutralColorABXY() {
+        return ESteamInputGlyphStyle_NeutralColorABXY;
+    }
+    private static final int ESteamInputGlyphStyle_SolidABXY = (int)32L;
+    /**
+     * {@snippet lang=c :
+     * enum ESteamInputGlyphStyle.ESteamInputGlyphStyle_SolidABXY = 32
+     * }
+     */
+    public static int ESteamInputGlyphStyle_SolidABXY() {
+        return ESteamInputGlyphStyle_SolidABXY;
+    }
+    private static final int ESteamInputActionEventType_DigitalAction = (int)0L;
+    /**
+     * {@snippet lang=c :
+     * enum ESteamInputActionEventType.ESteamInputActionEventType_DigitalAction = 0
+     * }
+     */
+    public static int ESteamInputActionEventType_DigitalAction() {
+        return ESteamInputActionEventType_DigitalAction;
+    }
+    private static final int ESteamInputActionEventType_AnalogAction = (int)1L;
+    /**
+     * {@snippet lang=c :
+     * enum ESteamInputActionEventType.ESteamInputActionEventType_AnalogAction = 1
+     * }
+     */
+    public static int ESteamInputActionEventType_AnalogAction() {
+        return ESteamInputActionEventType_AnalogAction;
+    }
+    private static final int k_EControllerActionOrigin_None = (int)0L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_None = 0
+     * }
+     */
+    public static int k_EControllerActionOrigin_None() {
+        return k_EControllerActionOrigin_None;
+    }
+    private static final int k_EControllerActionOrigin_A = (int)1L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_A = 1
+     * }
+     */
+    public static int k_EControllerActionOrigin_A() {
+        return k_EControllerActionOrigin_A;
+    }
+    private static final int k_EControllerActionOrigin_B = (int)2L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_B = 2
+     * }
+     */
+    public static int k_EControllerActionOrigin_B() {
+        return k_EControllerActionOrigin_B;
+    }
+    private static final int k_EControllerActionOrigin_X = (int)3L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_X = 3
+     * }
+     */
+    public static int k_EControllerActionOrigin_X() {
+        return k_EControllerActionOrigin_X;
+    }
+    private static final int k_EControllerActionOrigin_Y = (int)4L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_Y = 4
+     * }
+     */
+    public static int k_EControllerActionOrigin_Y() {
+        return k_EControllerActionOrigin_Y;
+    }
+    private static final int k_EControllerActionOrigin_LeftBumper = (int)5L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_LeftBumper = 5
+     * }
+     */
+    public static int k_EControllerActionOrigin_LeftBumper() {
+        return k_EControllerActionOrigin_LeftBumper;
+    }
+    private static final int k_EControllerActionOrigin_RightBumper = (int)6L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_RightBumper = 6
+     * }
+     */
+    public static int k_EControllerActionOrigin_RightBumper() {
+        return k_EControllerActionOrigin_RightBumper;
+    }
+    private static final int k_EControllerActionOrigin_LeftGrip = (int)7L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_LeftGrip = 7
+     * }
+     */
+    public static int k_EControllerActionOrigin_LeftGrip() {
+        return k_EControllerActionOrigin_LeftGrip;
+    }
+    private static final int k_EControllerActionOrigin_RightGrip = (int)8L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_RightGrip = 8
+     * }
+     */
+    public static int k_EControllerActionOrigin_RightGrip() {
+        return k_EControllerActionOrigin_RightGrip;
+    }
+    private static final int k_EControllerActionOrigin_Start = (int)9L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_Start = 9
+     * }
+     */
+    public static int k_EControllerActionOrigin_Start() {
+        return k_EControllerActionOrigin_Start;
+    }
+    private static final int k_EControllerActionOrigin_Back = (int)10L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_Back = 10
+     * }
+     */
+    public static int k_EControllerActionOrigin_Back() {
+        return k_EControllerActionOrigin_Back;
+    }
+    private static final int k_EControllerActionOrigin_LeftPad_Touch = (int)11L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_LeftPad_Touch = 11
+     * }
+     */
+    public static int k_EControllerActionOrigin_LeftPad_Touch() {
+        return k_EControllerActionOrigin_LeftPad_Touch;
+    }
+    private static final int k_EControllerActionOrigin_LeftPad_Swipe = (int)12L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_LeftPad_Swipe = 12
+     * }
+     */
+    public static int k_EControllerActionOrigin_LeftPad_Swipe() {
+        return k_EControllerActionOrigin_LeftPad_Swipe;
+    }
+    private static final int k_EControllerActionOrigin_LeftPad_Click = (int)13L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_LeftPad_Click = 13
+     * }
+     */
+    public static int k_EControllerActionOrigin_LeftPad_Click() {
+        return k_EControllerActionOrigin_LeftPad_Click;
+    }
+    private static final int k_EControllerActionOrigin_LeftPad_DPadNorth = (int)14L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_LeftPad_DPadNorth = 14
+     * }
+     */
+    public static int k_EControllerActionOrigin_LeftPad_DPadNorth() {
+        return k_EControllerActionOrigin_LeftPad_DPadNorth;
+    }
+    private static final int k_EControllerActionOrigin_LeftPad_DPadSouth = (int)15L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_LeftPad_DPadSouth = 15
+     * }
+     */
+    public static int k_EControllerActionOrigin_LeftPad_DPadSouth() {
+        return k_EControllerActionOrigin_LeftPad_DPadSouth;
+    }
+    private static final int k_EControllerActionOrigin_LeftPad_DPadWest = (int)16L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_LeftPad_DPadWest = 16
+     * }
+     */
+    public static int k_EControllerActionOrigin_LeftPad_DPadWest() {
+        return k_EControllerActionOrigin_LeftPad_DPadWest;
+    }
+    private static final int k_EControllerActionOrigin_LeftPad_DPadEast = (int)17L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_LeftPad_DPadEast = 17
+     * }
+     */
+    public static int k_EControllerActionOrigin_LeftPad_DPadEast() {
+        return k_EControllerActionOrigin_LeftPad_DPadEast;
+    }
+    private static final int k_EControllerActionOrigin_RightPad_Touch = (int)18L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_RightPad_Touch = 18
+     * }
+     */
+    public static int k_EControllerActionOrigin_RightPad_Touch() {
+        return k_EControllerActionOrigin_RightPad_Touch;
+    }
+    private static final int k_EControllerActionOrigin_RightPad_Swipe = (int)19L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_RightPad_Swipe = 19
+     * }
+     */
+    public static int k_EControllerActionOrigin_RightPad_Swipe() {
+        return k_EControllerActionOrigin_RightPad_Swipe;
+    }
+    private static final int k_EControllerActionOrigin_RightPad_Click = (int)20L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_RightPad_Click = 20
+     * }
+     */
+    public static int k_EControllerActionOrigin_RightPad_Click() {
+        return k_EControllerActionOrigin_RightPad_Click;
+    }
+    private static final int k_EControllerActionOrigin_RightPad_DPadNorth = (int)21L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_RightPad_DPadNorth = 21
+     * }
+     */
+    public static int k_EControllerActionOrigin_RightPad_DPadNorth() {
+        return k_EControllerActionOrigin_RightPad_DPadNorth;
+    }
+    private static final int k_EControllerActionOrigin_RightPad_DPadSouth = (int)22L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_RightPad_DPadSouth = 22
+     * }
+     */
+    public static int k_EControllerActionOrigin_RightPad_DPadSouth() {
+        return k_EControllerActionOrigin_RightPad_DPadSouth;
+    }
+    private static final int k_EControllerActionOrigin_RightPad_DPadWest = (int)23L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_RightPad_DPadWest = 23
+     * }
+     */
+    public static int k_EControllerActionOrigin_RightPad_DPadWest() {
+        return k_EControllerActionOrigin_RightPad_DPadWest;
+    }
+    private static final int k_EControllerActionOrigin_RightPad_DPadEast = (int)24L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_RightPad_DPadEast = 24
+     * }
+     */
+    public static int k_EControllerActionOrigin_RightPad_DPadEast() {
+        return k_EControllerActionOrigin_RightPad_DPadEast;
+    }
+    private static final int k_EControllerActionOrigin_LeftTrigger_Pull = (int)25L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_LeftTrigger_Pull = 25
+     * }
+     */
+    public static int k_EControllerActionOrigin_LeftTrigger_Pull() {
+        return k_EControllerActionOrigin_LeftTrigger_Pull;
+    }
+    private static final int k_EControllerActionOrigin_LeftTrigger_Click = (int)26L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_LeftTrigger_Click = 26
+     * }
+     */
+    public static int k_EControllerActionOrigin_LeftTrigger_Click() {
+        return k_EControllerActionOrigin_LeftTrigger_Click;
+    }
+    private static final int k_EControllerActionOrigin_RightTrigger_Pull = (int)27L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_RightTrigger_Pull = 27
+     * }
+     */
+    public static int k_EControllerActionOrigin_RightTrigger_Pull() {
+        return k_EControllerActionOrigin_RightTrigger_Pull;
+    }
+    private static final int k_EControllerActionOrigin_RightTrigger_Click = (int)28L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_RightTrigger_Click = 28
+     * }
+     */
+    public static int k_EControllerActionOrigin_RightTrigger_Click() {
+        return k_EControllerActionOrigin_RightTrigger_Click;
+    }
+    private static final int k_EControllerActionOrigin_LeftStick_Move = (int)29L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_LeftStick_Move = 29
+     * }
+     */
+    public static int k_EControllerActionOrigin_LeftStick_Move() {
+        return k_EControllerActionOrigin_LeftStick_Move;
+    }
+    private static final int k_EControllerActionOrigin_LeftStick_Click = (int)30L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_LeftStick_Click = 30
+     * }
+     */
+    public static int k_EControllerActionOrigin_LeftStick_Click() {
+        return k_EControllerActionOrigin_LeftStick_Click;
+    }
+    private static final int k_EControllerActionOrigin_LeftStick_DPadNorth = (int)31L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_LeftStick_DPadNorth = 31
+     * }
+     */
+    public static int k_EControllerActionOrigin_LeftStick_DPadNorth() {
+        return k_EControllerActionOrigin_LeftStick_DPadNorth;
+    }
+    private static final int k_EControllerActionOrigin_LeftStick_DPadSouth = (int)32L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_LeftStick_DPadSouth = 32
+     * }
+     */
+    public static int k_EControllerActionOrigin_LeftStick_DPadSouth() {
+        return k_EControllerActionOrigin_LeftStick_DPadSouth;
+    }
+    private static final int k_EControllerActionOrigin_LeftStick_DPadWest = (int)33L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_LeftStick_DPadWest = 33
+     * }
+     */
+    public static int k_EControllerActionOrigin_LeftStick_DPadWest() {
+        return k_EControllerActionOrigin_LeftStick_DPadWest;
+    }
+    private static final int k_EControllerActionOrigin_LeftStick_DPadEast = (int)34L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_LeftStick_DPadEast = 34
+     * }
+     */
+    public static int k_EControllerActionOrigin_LeftStick_DPadEast() {
+        return k_EControllerActionOrigin_LeftStick_DPadEast;
+    }
+    private static final int k_EControllerActionOrigin_Gyro_Move = (int)35L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_Gyro_Move = 35
+     * }
+     */
+    public static int k_EControllerActionOrigin_Gyro_Move() {
+        return k_EControllerActionOrigin_Gyro_Move;
+    }
+    private static final int k_EControllerActionOrigin_Gyro_Pitch = (int)36L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_Gyro_Pitch = 36
+     * }
+     */
+    public static int k_EControllerActionOrigin_Gyro_Pitch() {
+        return k_EControllerActionOrigin_Gyro_Pitch;
+    }
+    private static final int k_EControllerActionOrigin_Gyro_Yaw = (int)37L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_Gyro_Yaw = 37
+     * }
+     */
+    public static int k_EControllerActionOrigin_Gyro_Yaw() {
+        return k_EControllerActionOrigin_Gyro_Yaw;
+    }
+    private static final int k_EControllerActionOrigin_Gyro_Roll = (int)38L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_Gyro_Roll = 38
+     * }
+     */
+    public static int k_EControllerActionOrigin_Gyro_Roll() {
+        return k_EControllerActionOrigin_Gyro_Roll;
+    }
+    private static final int k_EControllerActionOrigin_PS4_X = (int)39L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_PS4_X = 39
+     * }
+     */
+    public static int k_EControllerActionOrigin_PS4_X() {
+        return k_EControllerActionOrigin_PS4_X;
+    }
+    private static final int k_EControllerActionOrigin_PS4_Circle = (int)40L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_PS4_Circle = 40
+     * }
+     */
+    public static int k_EControllerActionOrigin_PS4_Circle() {
+        return k_EControllerActionOrigin_PS4_Circle;
+    }
+    private static final int k_EControllerActionOrigin_PS4_Triangle = (int)41L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_PS4_Triangle = 41
+     * }
+     */
+    public static int k_EControllerActionOrigin_PS4_Triangle() {
+        return k_EControllerActionOrigin_PS4_Triangle;
+    }
+    private static final int k_EControllerActionOrigin_PS4_Square = (int)42L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_PS4_Square = 42
+     * }
+     */
+    public static int k_EControllerActionOrigin_PS4_Square() {
+        return k_EControllerActionOrigin_PS4_Square;
+    }
+    private static final int k_EControllerActionOrigin_PS4_LeftBumper = (int)43L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_PS4_LeftBumper = 43
+     * }
+     */
+    public static int k_EControllerActionOrigin_PS4_LeftBumper() {
+        return k_EControllerActionOrigin_PS4_LeftBumper;
+    }
+    private static final int k_EControllerActionOrigin_PS4_RightBumper = (int)44L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_PS4_RightBumper = 44
+     * }
+     */
+    public static int k_EControllerActionOrigin_PS4_RightBumper() {
+        return k_EControllerActionOrigin_PS4_RightBumper;
+    }
+    private static final int k_EControllerActionOrigin_PS4_Options = (int)45L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_PS4_Options = 45
+     * }
+     */
+    public static int k_EControllerActionOrigin_PS4_Options() {
+        return k_EControllerActionOrigin_PS4_Options;
+    }
+    private static final int k_EControllerActionOrigin_PS4_Share = (int)46L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_PS4_Share = 46
+     * }
+     */
+    public static int k_EControllerActionOrigin_PS4_Share() {
+        return k_EControllerActionOrigin_PS4_Share;
+    }
+    private static final int k_EControllerActionOrigin_PS4_LeftPad_Touch = (int)47L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_PS4_LeftPad_Touch = 47
+     * }
+     */
+    public static int k_EControllerActionOrigin_PS4_LeftPad_Touch() {
+        return k_EControllerActionOrigin_PS4_LeftPad_Touch;
+    }
+    private static final int k_EControllerActionOrigin_PS4_LeftPad_Swipe = (int)48L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_PS4_LeftPad_Swipe = 48
+     * }
+     */
+    public static int k_EControllerActionOrigin_PS4_LeftPad_Swipe() {
+        return k_EControllerActionOrigin_PS4_LeftPad_Swipe;
+    }
+    private static final int k_EControllerActionOrigin_PS4_LeftPad_Click = (int)49L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_PS4_LeftPad_Click = 49
+     * }
+     */
+    public static int k_EControllerActionOrigin_PS4_LeftPad_Click() {
+        return k_EControllerActionOrigin_PS4_LeftPad_Click;
+    }
+    private static final int k_EControllerActionOrigin_PS4_LeftPad_DPadNorth = (int)50L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_PS4_LeftPad_DPadNorth = 50
+     * }
+     */
+    public static int k_EControllerActionOrigin_PS4_LeftPad_DPadNorth() {
+        return k_EControllerActionOrigin_PS4_LeftPad_DPadNorth;
+    }
+    private static final int k_EControllerActionOrigin_PS4_LeftPad_DPadSouth = (int)51L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_PS4_LeftPad_DPadSouth = 51
+     * }
+     */
+    public static int k_EControllerActionOrigin_PS4_LeftPad_DPadSouth() {
+        return k_EControllerActionOrigin_PS4_LeftPad_DPadSouth;
+    }
+    private static final int k_EControllerActionOrigin_PS4_LeftPad_DPadWest = (int)52L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_PS4_LeftPad_DPadWest = 52
+     * }
+     */
+    public static int k_EControllerActionOrigin_PS4_LeftPad_DPadWest() {
+        return k_EControllerActionOrigin_PS4_LeftPad_DPadWest;
+    }
+    private static final int k_EControllerActionOrigin_PS4_LeftPad_DPadEast = (int)53L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_PS4_LeftPad_DPadEast = 53
+     * }
+     */
+    public static int k_EControllerActionOrigin_PS4_LeftPad_DPadEast() {
+        return k_EControllerActionOrigin_PS4_LeftPad_DPadEast;
+    }
+    private static final int k_EControllerActionOrigin_PS4_RightPad_Touch = (int)54L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_PS4_RightPad_Touch = 54
+     * }
+     */
+    public static int k_EControllerActionOrigin_PS4_RightPad_Touch() {
+        return k_EControllerActionOrigin_PS4_RightPad_Touch;
+    }
+    private static final int k_EControllerActionOrigin_PS4_RightPad_Swipe = (int)55L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_PS4_RightPad_Swipe = 55
+     * }
+     */
+    public static int k_EControllerActionOrigin_PS4_RightPad_Swipe() {
+        return k_EControllerActionOrigin_PS4_RightPad_Swipe;
+    }
+    private static final int k_EControllerActionOrigin_PS4_RightPad_Click = (int)56L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_PS4_RightPad_Click = 56
+     * }
+     */
+    public static int k_EControllerActionOrigin_PS4_RightPad_Click() {
+        return k_EControllerActionOrigin_PS4_RightPad_Click;
+    }
+    private static final int k_EControllerActionOrigin_PS4_RightPad_DPadNorth = (int)57L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_PS4_RightPad_DPadNorth = 57
+     * }
+     */
+    public static int k_EControllerActionOrigin_PS4_RightPad_DPadNorth() {
+        return k_EControllerActionOrigin_PS4_RightPad_DPadNorth;
+    }
+    private static final int k_EControllerActionOrigin_PS4_RightPad_DPadSouth = (int)58L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_PS4_RightPad_DPadSouth = 58
+     * }
+     */
+    public static int k_EControllerActionOrigin_PS4_RightPad_DPadSouth() {
+        return k_EControllerActionOrigin_PS4_RightPad_DPadSouth;
+    }
+    private static final int k_EControllerActionOrigin_PS4_RightPad_DPadWest = (int)59L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_PS4_RightPad_DPadWest = 59
+     * }
+     */
+    public static int k_EControllerActionOrigin_PS4_RightPad_DPadWest() {
+        return k_EControllerActionOrigin_PS4_RightPad_DPadWest;
+    }
+    private static final int k_EControllerActionOrigin_PS4_RightPad_DPadEast = (int)60L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_PS4_RightPad_DPadEast = 60
+     * }
+     */
+    public static int k_EControllerActionOrigin_PS4_RightPad_DPadEast() {
+        return k_EControllerActionOrigin_PS4_RightPad_DPadEast;
+    }
+    private static final int k_EControllerActionOrigin_PS4_CenterPad_Touch = (int)61L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_PS4_CenterPad_Touch = 61
+     * }
+     */
+    public static int k_EControllerActionOrigin_PS4_CenterPad_Touch() {
+        return k_EControllerActionOrigin_PS4_CenterPad_Touch;
+    }
+    private static final int k_EControllerActionOrigin_PS4_CenterPad_Swipe = (int)62L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_PS4_CenterPad_Swipe = 62
+     * }
+     */
+    public static int k_EControllerActionOrigin_PS4_CenterPad_Swipe() {
+        return k_EControllerActionOrigin_PS4_CenterPad_Swipe;
+    }
+    private static final int k_EControllerActionOrigin_PS4_CenterPad_Click = (int)63L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_PS4_CenterPad_Click = 63
+     * }
+     */
+    public static int k_EControllerActionOrigin_PS4_CenterPad_Click() {
+        return k_EControllerActionOrigin_PS4_CenterPad_Click;
+    }
+    private static final int k_EControllerActionOrigin_PS4_CenterPad_DPadNorth = (int)64L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_PS4_CenterPad_DPadNorth = 64
+     * }
+     */
+    public static int k_EControllerActionOrigin_PS4_CenterPad_DPadNorth() {
+        return k_EControllerActionOrigin_PS4_CenterPad_DPadNorth;
+    }
+    private static final int k_EControllerActionOrigin_PS4_CenterPad_DPadSouth = (int)65L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_PS4_CenterPad_DPadSouth = 65
+     * }
+     */
+    public static int k_EControllerActionOrigin_PS4_CenterPad_DPadSouth() {
+        return k_EControllerActionOrigin_PS4_CenterPad_DPadSouth;
+    }
+    private static final int k_EControllerActionOrigin_PS4_CenterPad_DPadWest = (int)66L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_PS4_CenterPad_DPadWest = 66
+     * }
+     */
+    public static int k_EControllerActionOrigin_PS4_CenterPad_DPadWest() {
+        return k_EControllerActionOrigin_PS4_CenterPad_DPadWest;
+    }
+    private static final int k_EControllerActionOrigin_PS4_CenterPad_DPadEast = (int)67L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_PS4_CenterPad_DPadEast = 67
+     * }
+     */
+    public static int k_EControllerActionOrigin_PS4_CenterPad_DPadEast() {
+        return k_EControllerActionOrigin_PS4_CenterPad_DPadEast;
+    }
+    private static final int k_EControllerActionOrigin_PS4_LeftTrigger_Pull = (int)68L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_PS4_LeftTrigger_Pull = 68
+     * }
+     */
+    public static int k_EControllerActionOrigin_PS4_LeftTrigger_Pull() {
+        return k_EControllerActionOrigin_PS4_LeftTrigger_Pull;
+    }
+    private static final int k_EControllerActionOrigin_PS4_LeftTrigger_Click = (int)69L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_PS4_LeftTrigger_Click = 69
+     * }
+     */
+    public static int k_EControllerActionOrigin_PS4_LeftTrigger_Click() {
+        return k_EControllerActionOrigin_PS4_LeftTrigger_Click;
+    }
+    private static final int k_EControllerActionOrigin_PS4_RightTrigger_Pull = (int)70L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_PS4_RightTrigger_Pull = 70
+     * }
+     */
+    public static int k_EControllerActionOrigin_PS4_RightTrigger_Pull() {
+        return k_EControllerActionOrigin_PS4_RightTrigger_Pull;
+    }
+    private static final int k_EControllerActionOrigin_PS4_RightTrigger_Click = (int)71L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_PS4_RightTrigger_Click = 71
+     * }
+     */
+    public static int k_EControllerActionOrigin_PS4_RightTrigger_Click() {
+        return k_EControllerActionOrigin_PS4_RightTrigger_Click;
+    }
+    private static final int k_EControllerActionOrigin_PS4_LeftStick_Move = (int)72L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_PS4_LeftStick_Move = 72
+     * }
+     */
+    public static int k_EControllerActionOrigin_PS4_LeftStick_Move() {
+        return k_EControllerActionOrigin_PS4_LeftStick_Move;
+    }
+    private static final int k_EControllerActionOrigin_PS4_LeftStick_Click = (int)73L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_PS4_LeftStick_Click = 73
+     * }
+     */
+    public static int k_EControllerActionOrigin_PS4_LeftStick_Click() {
+        return k_EControllerActionOrigin_PS4_LeftStick_Click;
+    }
+    private static final int k_EControllerActionOrigin_PS4_LeftStick_DPadNorth = (int)74L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_PS4_LeftStick_DPadNorth = 74
+     * }
+     */
+    public static int k_EControllerActionOrigin_PS4_LeftStick_DPadNorth() {
+        return k_EControllerActionOrigin_PS4_LeftStick_DPadNorth;
+    }
+    private static final int k_EControllerActionOrigin_PS4_LeftStick_DPadSouth = (int)75L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_PS4_LeftStick_DPadSouth = 75
+     * }
+     */
+    public static int k_EControllerActionOrigin_PS4_LeftStick_DPadSouth() {
+        return k_EControllerActionOrigin_PS4_LeftStick_DPadSouth;
+    }
+    private static final int k_EControllerActionOrigin_PS4_LeftStick_DPadWest = (int)76L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_PS4_LeftStick_DPadWest = 76
+     * }
+     */
+    public static int k_EControllerActionOrigin_PS4_LeftStick_DPadWest() {
+        return k_EControllerActionOrigin_PS4_LeftStick_DPadWest;
+    }
+    private static final int k_EControllerActionOrigin_PS4_LeftStick_DPadEast = (int)77L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_PS4_LeftStick_DPadEast = 77
+     * }
+     */
+    public static int k_EControllerActionOrigin_PS4_LeftStick_DPadEast() {
+        return k_EControllerActionOrigin_PS4_LeftStick_DPadEast;
+    }
+    private static final int k_EControllerActionOrigin_PS4_RightStick_Move = (int)78L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_PS4_RightStick_Move = 78
+     * }
+     */
+    public static int k_EControllerActionOrigin_PS4_RightStick_Move() {
+        return k_EControllerActionOrigin_PS4_RightStick_Move;
+    }
+    private static final int k_EControllerActionOrigin_PS4_RightStick_Click = (int)79L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_PS4_RightStick_Click = 79
+     * }
+     */
+    public static int k_EControllerActionOrigin_PS4_RightStick_Click() {
+        return k_EControllerActionOrigin_PS4_RightStick_Click;
+    }
+    private static final int k_EControllerActionOrigin_PS4_RightStick_DPadNorth = (int)80L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_PS4_RightStick_DPadNorth = 80
+     * }
+     */
+    public static int k_EControllerActionOrigin_PS4_RightStick_DPadNorth() {
+        return k_EControllerActionOrigin_PS4_RightStick_DPadNorth;
+    }
+    private static final int k_EControllerActionOrigin_PS4_RightStick_DPadSouth = (int)81L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_PS4_RightStick_DPadSouth = 81
+     * }
+     */
+    public static int k_EControllerActionOrigin_PS4_RightStick_DPadSouth() {
+        return k_EControllerActionOrigin_PS4_RightStick_DPadSouth;
+    }
+    private static final int k_EControllerActionOrigin_PS4_RightStick_DPadWest = (int)82L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_PS4_RightStick_DPadWest = 82
+     * }
+     */
+    public static int k_EControllerActionOrigin_PS4_RightStick_DPadWest() {
+        return k_EControllerActionOrigin_PS4_RightStick_DPadWest;
+    }
+    private static final int k_EControllerActionOrigin_PS4_RightStick_DPadEast = (int)83L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_PS4_RightStick_DPadEast = 83
+     * }
+     */
+    public static int k_EControllerActionOrigin_PS4_RightStick_DPadEast() {
+        return k_EControllerActionOrigin_PS4_RightStick_DPadEast;
+    }
+    private static final int k_EControllerActionOrigin_PS4_DPad_North = (int)84L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_PS4_DPad_North = 84
+     * }
+     */
+    public static int k_EControllerActionOrigin_PS4_DPad_North() {
+        return k_EControllerActionOrigin_PS4_DPad_North;
+    }
+    private static final int k_EControllerActionOrigin_PS4_DPad_South = (int)85L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_PS4_DPad_South = 85
+     * }
+     */
+    public static int k_EControllerActionOrigin_PS4_DPad_South() {
+        return k_EControllerActionOrigin_PS4_DPad_South;
+    }
+    private static final int k_EControllerActionOrigin_PS4_DPad_West = (int)86L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_PS4_DPad_West = 86
+     * }
+     */
+    public static int k_EControllerActionOrigin_PS4_DPad_West() {
+        return k_EControllerActionOrigin_PS4_DPad_West;
+    }
+    private static final int k_EControllerActionOrigin_PS4_DPad_East = (int)87L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_PS4_DPad_East = 87
+     * }
+     */
+    public static int k_EControllerActionOrigin_PS4_DPad_East() {
+        return k_EControllerActionOrigin_PS4_DPad_East;
+    }
+    private static final int k_EControllerActionOrigin_PS4_Gyro_Move = (int)88L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_PS4_Gyro_Move = 88
+     * }
+     */
+    public static int k_EControllerActionOrigin_PS4_Gyro_Move() {
+        return k_EControllerActionOrigin_PS4_Gyro_Move;
+    }
+    private static final int k_EControllerActionOrigin_PS4_Gyro_Pitch = (int)89L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_PS4_Gyro_Pitch = 89
+     * }
+     */
+    public static int k_EControllerActionOrigin_PS4_Gyro_Pitch() {
+        return k_EControllerActionOrigin_PS4_Gyro_Pitch;
+    }
+    private static final int k_EControllerActionOrigin_PS4_Gyro_Yaw = (int)90L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_PS4_Gyro_Yaw = 90
+     * }
+     */
+    public static int k_EControllerActionOrigin_PS4_Gyro_Yaw() {
+        return k_EControllerActionOrigin_PS4_Gyro_Yaw;
+    }
+    private static final int k_EControllerActionOrigin_PS4_Gyro_Roll = (int)91L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_PS4_Gyro_Roll = 91
+     * }
+     */
+    public static int k_EControllerActionOrigin_PS4_Gyro_Roll() {
+        return k_EControllerActionOrigin_PS4_Gyro_Roll;
+    }
+    private static final int k_EControllerActionOrigin_XBoxOne_A = (int)92L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_XBoxOne_A = 92
+     * }
+     */
+    public static int k_EControllerActionOrigin_XBoxOne_A() {
+        return k_EControllerActionOrigin_XBoxOne_A;
+    }
+    private static final int k_EControllerActionOrigin_XBoxOne_B = (int)93L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_XBoxOne_B = 93
+     * }
+     */
+    public static int k_EControllerActionOrigin_XBoxOne_B() {
+        return k_EControllerActionOrigin_XBoxOne_B;
+    }
+    private static final int k_EControllerActionOrigin_XBoxOne_X = (int)94L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_XBoxOne_X = 94
+     * }
+     */
+    public static int k_EControllerActionOrigin_XBoxOne_X() {
+        return k_EControllerActionOrigin_XBoxOne_X;
+    }
+    private static final int k_EControllerActionOrigin_XBoxOne_Y = (int)95L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_XBoxOne_Y = 95
+     * }
+     */
+    public static int k_EControllerActionOrigin_XBoxOne_Y() {
+        return k_EControllerActionOrigin_XBoxOne_Y;
+    }
+    private static final int k_EControllerActionOrigin_XBoxOne_LeftBumper = (int)96L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_XBoxOne_LeftBumper = 96
+     * }
+     */
+    public static int k_EControllerActionOrigin_XBoxOne_LeftBumper() {
+        return k_EControllerActionOrigin_XBoxOne_LeftBumper;
+    }
+    private static final int k_EControllerActionOrigin_XBoxOne_RightBumper = (int)97L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_XBoxOne_RightBumper = 97
+     * }
+     */
+    public static int k_EControllerActionOrigin_XBoxOne_RightBumper() {
+        return k_EControllerActionOrigin_XBoxOne_RightBumper;
+    }
+    private static final int k_EControllerActionOrigin_XBoxOne_Menu = (int)98L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_XBoxOne_Menu = 98
+     * }
+     */
+    public static int k_EControllerActionOrigin_XBoxOne_Menu() {
+        return k_EControllerActionOrigin_XBoxOne_Menu;
+    }
+    private static final int k_EControllerActionOrigin_XBoxOne_View = (int)99L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_XBoxOne_View = 99
+     * }
+     */
+    public static int k_EControllerActionOrigin_XBoxOne_View() {
+        return k_EControllerActionOrigin_XBoxOne_View;
+    }
+    private static final int k_EControllerActionOrigin_XBoxOne_LeftTrigger_Pull = (int)100L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_XBoxOne_LeftTrigger_Pull = 100
+     * }
+     */
+    public static int k_EControllerActionOrigin_XBoxOne_LeftTrigger_Pull() {
+        return k_EControllerActionOrigin_XBoxOne_LeftTrigger_Pull;
+    }
+    private static final int k_EControllerActionOrigin_XBoxOne_LeftTrigger_Click = (int)101L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_XBoxOne_LeftTrigger_Click = 101
+     * }
+     */
+    public static int k_EControllerActionOrigin_XBoxOne_LeftTrigger_Click() {
+        return k_EControllerActionOrigin_XBoxOne_LeftTrigger_Click;
+    }
+    private static final int k_EControllerActionOrigin_XBoxOne_RightTrigger_Pull = (int)102L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_XBoxOne_RightTrigger_Pull = 102
+     * }
+     */
+    public static int k_EControllerActionOrigin_XBoxOne_RightTrigger_Pull() {
+        return k_EControllerActionOrigin_XBoxOne_RightTrigger_Pull;
+    }
+    private static final int k_EControllerActionOrigin_XBoxOne_RightTrigger_Click = (int)103L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_XBoxOne_RightTrigger_Click = 103
+     * }
+     */
+    public static int k_EControllerActionOrigin_XBoxOne_RightTrigger_Click() {
+        return k_EControllerActionOrigin_XBoxOne_RightTrigger_Click;
+    }
+    private static final int k_EControllerActionOrigin_XBoxOne_LeftStick_Move = (int)104L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_XBoxOne_LeftStick_Move = 104
+     * }
+     */
+    public static int k_EControllerActionOrigin_XBoxOne_LeftStick_Move() {
+        return k_EControllerActionOrigin_XBoxOne_LeftStick_Move;
+    }
+    private static final int k_EControllerActionOrigin_XBoxOne_LeftStick_Click = (int)105L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_XBoxOne_LeftStick_Click = 105
+     * }
+     */
+    public static int k_EControllerActionOrigin_XBoxOne_LeftStick_Click() {
+        return k_EControllerActionOrigin_XBoxOne_LeftStick_Click;
+    }
+    private static final int k_EControllerActionOrigin_XBoxOne_LeftStick_DPadNorth = (int)106L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_XBoxOne_LeftStick_DPadNorth = 106
+     * }
+     */
+    public static int k_EControllerActionOrigin_XBoxOne_LeftStick_DPadNorth() {
+        return k_EControllerActionOrigin_XBoxOne_LeftStick_DPadNorth;
+    }
+    private static final int k_EControllerActionOrigin_XBoxOne_LeftStick_DPadSouth = (int)107L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_XBoxOne_LeftStick_DPadSouth = 107
+     * }
+     */
+    public static int k_EControllerActionOrigin_XBoxOne_LeftStick_DPadSouth() {
+        return k_EControllerActionOrigin_XBoxOne_LeftStick_DPadSouth;
+    }
+    private static final int k_EControllerActionOrigin_XBoxOne_LeftStick_DPadWest = (int)108L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_XBoxOne_LeftStick_DPadWest = 108
+     * }
+     */
+    public static int k_EControllerActionOrigin_XBoxOne_LeftStick_DPadWest() {
+        return k_EControllerActionOrigin_XBoxOne_LeftStick_DPadWest;
+    }
+    private static final int k_EControllerActionOrigin_XBoxOne_LeftStick_DPadEast = (int)109L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_XBoxOne_LeftStick_DPadEast = 109
+     * }
+     */
+    public static int k_EControllerActionOrigin_XBoxOne_LeftStick_DPadEast() {
+        return k_EControllerActionOrigin_XBoxOne_LeftStick_DPadEast;
+    }
+    private static final int k_EControllerActionOrigin_XBoxOne_RightStick_Move = (int)110L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_XBoxOne_RightStick_Move = 110
+     * }
+     */
+    public static int k_EControllerActionOrigin_XBoxOne_RightStick_Move() {
+        return k_EControllerActionOrigin_XBoxOne_RightStick_Move;
+    }
+    private static final int k_EControllerActionOrigin_XBoxOne_RightStick_Click = (int)111L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_XBoxOne_RightStick_Click = 111
+     * }
+     */
+    public static int k_EControllerActionOrigin_XBoxOne_RightStick_Click() {
+        return k_EControllerActionOrigin_XBoxOne_RightStick_Click;
+    }
+    private static final int k_EControllerActionOrigin_XBoxOne_RightStick_DPadNorth = (int)112L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_XBoxOne_RightStick_DPadNorth = 112
+     * }
+     */
+    public static int k_EControllerActionOrigin_XBoxOne_RightStick_DPadNorth() {
+        return k_EControllerActionOrigin_XBoxOne_RightStick_DPadNorth;
+    }
+    private static final int k_EControllerActionOrigin_XBoxOne_RightStick_DPadSouth = (int)113L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_XBoxOne_RightStick_DPadSouth = 113
+     * }
+     */
+    public static int k_EControllerActionOrigin_XBoxOne_RightStick_DPadSouth() {
+        return k_EControllerActionOrigin_XBoxOne_RightStick_DPadSouth;
+    }
+    private static final int k_EControllerActionOrigin_XBoxOne_RightStick_DPadWest = (int)114L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_XBoxOne_RightStick_DPadWest = 114
+     * }
+     */
+    public static int k_EControllerActionOrigin_XBoxOne_RightStick_DPadWest() {
+        return k_EControllerActionOrigin_XBoxOne_RightStick_DPadWest;
+    }
+    private static final int k_EControllerActionOrigin_XBoxOne_RightStick_DPadEast = (int)115L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_XBoxOne_RightStick_DPadEast = 115
+     * }
+     */
+    public static int k_EControllerActionOrigin_XBoxOne_RightStick_DPadEast() {
+        return k_EControllerActionOrigin_XBoxOne_RightStick_DPadEast;
+    }
+    private static final int k_EControllerActionOrigin_XBoxOne_DPad_North = (int)116L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_XBoxOne_DPad_North = 116
+     * }
+     */
+    public static int k_EControllerActionOrigin_XBoxOne_DPad_North() {
+        return k_EControllerActionOrigin_XBoxOne_DPad_North;
+    }
+    private static final int k_EControllerActionOrigin_XBoxOne_DPad_South = (int)117L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_XBoxOne_DPad_South = 117
+     * }
+     */
+    public static int k_EControllerActionOrigin_XBoxOne_DPad_South() {
+        return k_EControllerActionOrigin_XBoxOne_DPad_South;
+    }
+    private static final int k_EControllerActionOrigin_XBoxOne_DPad_West = (int)118L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_XBoxOne_DPad_West = 118
+     * }
+     */
+    public static int k_EControllerActionOrigin_XBoxOne_DPad_West() {
+        return k_EControllerActionOrigin_XBoxOne_DPad_West;
+    }
+    private static final int k_EControllerActionOrigin_XBoxOne_DPad_East = (int)119L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_XBoxOne_DPad_East = 119
+     * }
+     */
+    public static int k_EControllerActionOrigin_XBoxOne_DPad_East() {
+        return k_EControllerActionOrigin_XBoxOne_DPad_East;
+    }
+    private static final int k_EControllerActionOrigin_XBox360_A = (int)120L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_XBox360_A = 120
+     * }
+     */
+    public static int k_EControllerActionOrigin_XBox360_A() {
+        return k_EControllerActionOrigin_XBox360_A;
+    }
+    private static final int k_EControllerActionOrigin_XBox360_B = (int)121L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_XBox360_B = 121
+     * }
+     */
+    public static int k_EControllerActionOrigin_XBox360_B() {
+        return k_EControllerActionOrigin_XBox360_B;
+    }
+    private static final int k_EControllerActionOrigin_XBox360_X = (int)122L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_XBox360_X = 122
+     * }
+     */
+    public static int k_EControllerActionOrigin_XBox360_X() {
+        return k_EControllerActionOrigin_XBox360_X;
+    }
+    private static final int k_EControllerActionOrigin_XBox360_Y = (int)123L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_XBox360_Y = 123
+     * }
+     */
+    public static int k_EControllerActionOrigin_XBox360_Y() {
+        return k_EControllerActionOrigin_XBox360_Y;
+    }
+    private static final int k_EControllerActionOrigin_XBox360_LeftBumper = (int)124L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_XBox360_LeftBumper = 124
+     * }
+     */
+    public static int k_EControllerActionOrigin_XBox360_LeftBumper() {
+        return k_EControllerActionOrigin_XBox360_LeftBumper;
+    }
+    private static final int k_EControllerActionOrigin_XBox360_RightBumper = (int)125L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_XBox360_RightBumper = 125
+     * }
+     */
+    public static int k_EControllerActionOrigin_XBox360_RightBumper() {
+        return k_EControllerActionOrigin_XBox360_RightBumper;
+    }
+    private static final int k_EControllerActionOrigin_XBox360_Start = (int)126L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_XBox360_Start = 126
+     * }
+     */
+    public static int k_EControllerActionOrigin_XBox360_Start() {
+        return k_EControllerActionOrigin_XBox360_Start;
+    }
+    private static final int k_EControllerActionOrigin_XBox360_Back = (int)127L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_XBox360_Back = 127
+     * }
+     */
+    public static int k_EControllerActionOrigin_XBox360_Back() {
+        return k_EControllerActionOrigin_XBox360_Back;
+    }
+    private static final int k_EControllerActionOrigin_XBox360_LeftTrigger_Pull = (int)128L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_XBox360_LeftTrigger_Pull = 128
+     * }
+     */
+    public static int k_EControllerActionOrigin_XBox360_LeftTrigger_Pull() {
+        return k_EControllerActionOrigin_XBox360_LeftTrigger_Pull;
+    }
+    private static final int k_EControllerActionOrigin_XBox360_LeftTrigger_Click = (int)129L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_XBox360_LeftTrigger_Click = 129
+     * }
+     */
+    public static int k_EControllerActionOrigin_XBox360_LeftTrigger_Click() {
+        return k_EControllerActionOrigin_XBox360_LeftTrigger_Click;
+    }
+    private static final int k_EControllerActionOrigin_XBox360_RightTrigger_Pull = (int)130L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_XBox360_RightTrigger_Pull = 130
+     * }
+     */
+    public static int k_EControllerActionOrigin_XBox360_RightTrigger_Pull() {
+        return k_EControllerActionOrigin_XBox360_RightTrigger_Pull;
+    }
+    private static final int k_EControllerActionOrigin_XBox360_RightTrigger_Click = (int)131L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_XBox360_RightTrigger_Click = 131
+     * }
+     */
+    public static int k_EControllerActionOrigin_XBox360_RightTrigger_Click() {
+        return k_EControllerActionOrigin_XBox360_RightTrigger_Click;
+    }
+    private static final int k_EControllerActionOrigin_XBox360_LeftStick_Move = (int)132L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_XBox360_LeftStick_Move = 132
+     * }
+     */
+    public static int k_EControllerActionOrigin_XBox360_LeftStick_Move() {
+        return k_EControllerActionOrigin_XBox360_LeftStick_Move;
+    }
+    private static final int k_EControllerActionOrigin_XBox360_LeftStick_Click = (int)133L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_XBox360_LeftStick_Click = 133
+     * }
+     */
+    public static int k_EControllerActionOrigin_XBox360_LeftStick_Click() {
+        return k_EControllerActionOrigin_XBox360_LeftStick_Click;
+    }
+    private static final int k_EControllerActionOrigin_XBox360_LeftStick_DPadNorth = (int)134L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_XBox360_LeftStick_DPadNorth = 134
+     * }
+     */
+    public static int k_EControllerActionOrigin_XBox360_LeftStick_DPadNorth() {
+        return k_EControllerActionOrigin_XBox360_LeftStick_DPadNorth;
+    }
+    private static final int k_EControllerActionOrigin_XBox360_LeftStick_DPadSouth = (int)135L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_XBox360_LeftStick_DPadSouth = 135
+     * }
+     */
+    public static int k_EControllerActionOrigin_XBox360_LeftStick_DPadSouth() {
+        return k_EControllerActionOrigin_XBox360_LeftStick_DPadSouth;
+    }
+    private static final int k_EControllerActionOrigin_XBox360_LeftStick_DPadWest = (int)136L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_XBox360_LeftStick_DPadWest = 136
+     * }
+     */
+    public static int k_EControllerActionOrigin_XBox360_LeftStick_DPadWest() {
+        return k_EControllerActionOrigin_XBox360_LeftStick_DPadWest;
+    }
+    private static final int k_EControllerActionOrigin_XBox360_LeftStick_DPadEast = (int)137L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_XBox360_LeftStick_DPadEast = 137
+     * }
+     */
+    public static int k_EControllerActionOrigin_XBox360_LeftStick_DPadEast() {
+        return k_EControllerActionOrigin_XBox360_LeftStick_DPadEast;
+    }
+    private static final int k_EControllerActionOrigin_XBox360_RightStick_Move = (int)138L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_XBox360_RightStick_Move = 138
+     * }
+     */
+    public static int k_EControllerActionOrigin_XBox360_RightStick_Move() {
+        return k_EControllerActionOrigin_XBox360_RightStick_Move;
+    }
+    private static final int k_EControllerActionOrigin_XBox360_RightStick_Click = (int)139L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_XBox360_RightStick_Click = 139
+     * }
+     */
+    public static int k_EControllerActionOrigin_XBox360_RightStick_Click() {
+        return k_EControllerActionOrigin_XBox360_RightStick_Click;
+    }
+    private static final int k_EControllerActionOrigin_XBox360_RightStick_DPadNorth = (int)140L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_XBox360_RightStick_DPadNorth = 140
+     * }
+     */
+    public static int k_EControllerActionOrigin_XBox360_RightStick_DPadNorth() {
+        return k_EControllerActionOrigin_XBox360_RightStick_DPadNorth;
+    }
+    private static final int k_EControllerActionOrigin_XBox360_RightStick_DPadSouth = (int)141L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_XBox360_RightStick_DPadSouth = 141
+     * }
+     */
+    public static int k_EControllerActionOrigin_XBox360_RightStick_DPadSouth() {
+        return k_EControllerActionOrigin_XBox360_RightStick_DPadSouth;
+    }
+    private static final int k_EControllerActionOrigin_XBox360_RightStick_DPadWest = (int)142L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_XBox360_RightStick_DPadWest = 142
+     * }
+     */
+    public static int k_EControllerActionOrigin_XBox360_RightStick_DPadWest() {
+        return k_EControllerActionOrigin_XBox360_RightStick_DPadWest;
+    }
+    private static final int k_EControllerActionOrigin_XBox360_RightStick_DPadEast = (int)143L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_XBox360_RightStick_DPadEast = 143
+     * }
+     */
+    public static int k_EControllerActionOrigin_XBox360_RightStick_DPadEast() {
+        return k_EControllerActionOrigin_XBox360_RightStick_DPadEast;
+    }
+    private static final int k_EControllerActionOrigin_XBox360_DPad_North = (int)144L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_XBox360_DPad_North = 144
+     * }
+     */
+    public static int k_EControllerActionOrigin_XBox360_DPad_North() {
+        return k_EControllerActionOrigin_XBox360_DPad_North;
+    }
+    private static final int k_EControllerActionOrigin_XBox360_DPad_South = (int)145L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_XBox360_DPad_South = 145
+     * }
+     */
+    public static int k_EControllerActionOrigin_XBox360_DPad_South() {
+        return k_EControllerActionOrigin_XBox360_DPad_South;
+    }
+    private static final int k_EControllerActionOrigin_XBox360_DPad_West = (int)146L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_XBox360_DPad_West = 146
+     * }
+     */
+    public static int k_EControllerActionOrigin_XBox360_DPad_West() {
+        return k_EControllerActionOrigin_XBox360_DPad_West;
+    }
+    private static final int k_EControllerActionOrigin_XBox360_DPad_East = (int)147L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_XBox360_DPad_East = 147
+     * }
+     */
+    public static int k_EControllerActionOrigin_XBox360_DPad_East() {
+        return k_EControllerActionOrigin_XBox360_DPad_East;
+    }
+    private static final int k_EControllerActionOrigin_SteamV2_A = (int)148L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_SteamV2_A = 148
+     * }
+     */
+    public static int k_EControllerActionOrigin_SteamV2_A() {
+        return k_EControllerActionOrigin_SteamV2_A;
+    }
+    private static final int k_EControllerActionOrigin_SteamV2_B = (int)149L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_SteamV2_B = 149
+     * }
+     */
+    public static int k_EControllerActionOrigin_SteamV2_B() {
+        return k_EControllerActionOrigin_SteamV2_B;
+    }
+    private static final int k_EControllerActionOrigin_SteamV2_X = (int)150L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_SteamV2_X = 150
+     * }
+     */
+    public static int k_EControllerActionOrigin_SteamV2_X() {
+        return k_EControllerActionOrigin_SteamV2_X;
+    }
+    private static final int k_EControllerActionOrigin_SteamV2_Y = (int)151L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_SteamV2_Y = 151
+     * }
+     */
+    public static int k_EControllerActionOrigin_SteamV2_Y() {
+        return k_EControllerActionOrigin_SteamV2_Y;
+    }
+    private static final int k_EControllerActionOrigin_SteamV2_LeftBumper = (int)152L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_SteamV2_LeftBumper = 152
+     * }
+     */
+    public static int k_EControllerActionOrigin_SteamV2_LeftBumper() {
+        return k_EControllerActionOrigin_SteamV2_LeftBumper;
+    }
+    private static final int k_EControllerActionOrigin_SteamV2_RightBumper = (int)153L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_SteamV2_RightBumper = 153
+     * }
+     */
+    public static int k_EControllerActionOrigin_SteamV2_RightBumper() {
+        return k_EControllerActionOrigin_SteamV2_RightBumper;
+    }
+    private static final int k_EControllerActionOrigin_SteamV2_LeftGrip_Lower = (int)154L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_SteamV2_LeftGrip_Lower = 154
+     * }
+     */
+    public static int k_EControllerActionOrigin_SteamV2_LeftGrip_Lower() {
+        return k_EControllerActionOrigin_SteamV2_LeftGrip_Lower;
+    }
+    private static final int k_EControllerActionOrigin_SteamV2_LeftGrip_Upper = (int)155L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_SteamV2_LeftGrip_Upper = 155
+     * }
+     */
+    public static int k_EControllerActionOrigin_SteamV2_LeftGrip_Upper() {
+        return k_EControllerActionOrigin_SteamV2_LeftGrip_Upper;
+    }
+    private static final int k_EControllerActionOrigin_SteamV2_RightGrip_Lower = (int)156L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_SteamV2_RightGrip_Lower = 156
+     * }
+     */
+    public static int k_EControllerActionOrigin_SteamV2_RightGrip_Lower() {
+        return k_EControllerActionOrigin_SteamV2_RightGrip_Lower;
+    }
+    private static final int k_EControllerActionOrigin_SteamV2_RightGrip_Upper = (int)157L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_SteamV2_RightGrip_Upper = 157
+     * }
+     */
+    public static int k_EControllerActionOrigin_SteamV2_RightGrip_Upper() {
+        return k_EControllerActionOrigin_SteamV2_RightGrip_Upper;
+    }
+    private static final int k_EControllerActionOrigin_SteamV2_LeftBumper_Pressure = (int)158L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_SteamV2_LeftBumper_Pressure = 158
+     * }
+     */
+    public static int k_EControllerActionOrigin_SteamV2_LeftBumper_Pressure() {
+        return k_EControllerActionOrigin_SteamV2_LeftBumper_Pressure;
+    }
+    private static final int k_EControllerActionOrigin_SteamV2_RightBumper_Pressure = (int)159L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_SteamV2_RightBumper_Pressure = 159
+     * }
+     */
+    public static int k_EControllerActionOrigin_SteamV2_RightBumper_Pressure() {
+        return k_EControllerActionOrigin_SteamV2_RightBumper_Pressure;
+    }
+    private static final int k_EControllerActionOrigin_SteamV2_LeftGrip_Pressure = (int)160L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_SteamV2_LeftGrip_Pressure = 160
+     * }
+     */
+    public static int k_EControllerActionOrigin_SteamV2_LeftGrip_Pressure() {
+        return k_EControllerActionOrigin_SteamV2_LeftGrip_Pressure;
+    }
+    private static final int k_EControllerActionOrigin_SteamV2_RightGrip_Pressure = (int)161L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_SteamV2_RightGrip_Pressure = 161
+     * }
+     */
+    public static int k_EControllerActionOrigin_SteamV2_RightGrip_Pressure() {
+        return k_EControllerActionOrigin_SteamV2_RightGrip_Pressure;
+    }
+    private static final int k_EControllerActionOrigin_SteamV2_LeftGrip_Upper_Pressure = (int)162L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_SteamV2_LeftGrip_Upper_Pressure = 162
+     * }
+     */
+    public static int k_EControllerActionOrigin_SteamV2_LeftGrip_Upper_Pressure() {
+        return k_EControllerActionOrigin_SteamV2_LeftGrip_Upper_Pressure;
+    }
+    private static final int k_EControllerActionOrigin_SteamV2_RightGrip_Upper_Pressure = (int)163L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_SteamV2_RightGrip_Upper_Pressure = 163
+     * }
+     */
+    public static int k_EControllerActionOrigin_SteamV2_RightGrip_Upper_Pressure() {
+        return k_EControllerActionOrigin_SteamV2_RightGrip_Upper_Pressure;
+    }
+    private static final int k_EControllerActionOrigin_SteamV2_Start = (int)164L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_SteamV2_Start = 164
+     * }
+     */
+    public static int k_EControllerActionOrigin_SteamV2_Start() {
+        return k_EControllerActionOrigin_SteamV2_Start;
+    }
+    private static final int k_EControllerActionOrigin_SteamV2_Back = (int)165L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_SteamV2_Back = 165
+     * }
+     */
+    public static int k_EControllerActionOrigin_SteamV2_Back() {
+        return k_EControllerActionOrigin_SteamV2_Back;
+    }
+    private static final int k_EControllerActionOrigin_SteamV2_LeftPad_Touch = (int)166L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_SteamV2_LeftPad_Touch = 166
+     * }
+     */
+    public static int k_EControllerActionOrigin_SteamV2_LeftPad_Touch() {
+        return k_EControllerActionOrigin_SteamV2_LeftPad_Touch;
+    }
+    private static final int k_EControllerActionOrigin_SteamV2_LeftPad_Swipe = (int)167L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_SteamV2_LeftPad_Swipe = 167
+     * }
+     */
+    public static int k_EControllerActionOrigin_SteamV2_LeftPad_Swipe() {
+        return k_EControllerActionOrigin_SteamV2_LeftPad_Swipe;
+    }
+    private static final int k_EControllerActionOrigin_SteamV2_LeftPad_Click = (int)168L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_SteamV2_LeftPad_Click = 168
+     * }
+     */
+    public static int k_EControllerActionOrigin_SteamV2_LeftPad_Click() {
+        return k_EControllerActionOrigin_SteamV2_LeftPad_Click;
+    }
+    private static final int k_EControllerActionOrigin_SteamV2_LeftPad_Pressure = (int)169L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_SteamV2_LeftPad_Pressure = 169
+     * }
+     */
+    public static int k_EControllerActionOrigin_SteamV2_LeftPad_Pressure() {
+        return k_EControllerActionOrigin_SteamV2_LeftPad_Pressure;
+    }
+    private static final int k_EControllerActionOrigin_SteamV2_LeftPad_DPadNorth = (int)170L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_SteamV2_LeftPad_DPadNorth = 170
+     * }
+     */
+    public static int k_EControllerActionOrigin_SteamV2_LeftPad_DPadNorth() {
+        return k_EControllerActionOrigin_SteamV2_LeftPad_DPadNorth;
+    }
+    private static final int k_EControllerActionOrigin_SteamV2_LeftPad_DPadSouth = (int)171L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_SteamV2_LeftPad_DPadSouth = 171
+     * }
+     */
+    public static int k_EControllerActionOrigin_SteamV2_LeftPad_DPadSouth() {
+        return k_EControllerActionOrigin_SteamV2_LeftPad_DPadSouth;
+    }
+    private static final int k_EControllerActionOrigin_SteamV2_LeftPad_DPadWest = (int)172L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_SteamV2_LeftPad_DPadWest = 172
+     * }
+     */
+    public static int k_EControllerActionOrigin_SteamV2_LeftPad_DPadWest() {
+        return k_EControllerActionOrigin_SteamV2_LeftPad_DPadWest;
+    }
+    private static final int k_EControllerActionOrigin_SteamV2_LeftPad_DPadEast = (int)173L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_SteamV2_LeftPad_DPadEast = 173
+     * }
+     */
+    public static int k_EControllerActionOrigin_SteamV2_LeftPad_DPadEast() {
+        return k_EControllerActionOrigin_SteamV2_LeftPad_DPadEast;
+    }
+    private static final int k_EControllerActionOrigin_SteamV2_RightPad_Touch = (int)174L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_SteamV2_RightPad_Touch = 174
+     * }
+     */
+    public static int k_EControllerActionOrigin_SteamV2_RightPad_Touch() {
+        return k_EControllerActionOrigin_SteamV2_RightPad_Touch;
+    }
+    private static final int k_EControllerActionOrigin_SteamV2_RightPad_Swipe = (int)175L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_SteamV2_RightPad_Swipe = 175
+     * }
+     */
+    public static int k_EControllerActionOrigin_SteamV2_RightPad_Swipe() {
+        return k_EControllerActionOrigin_SteamV2_RightPad_Swipe;
+    }
+    private static final int k_EControllerActionOrigin_SteamV2_RightPad_Click = (int)176L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_SteamV2_RightPad_Click = 176
+     * }
+     */
+    public static int k_EControllerActionOrigin_SteamV2_RightPad_Click() {
+        return k_EControllerActionOrigin_SteamV2_RightPad_Click;
+    }
+    private static final int k_EControllerActionOrigin_SteamV2_RightPad_Pressure = (int)177L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_SteamV2_RightPad_Pressure = 177
+     * }
+     */
+    public static int k_EControllerActionOrigin_SteamV2_RightPad_Pressure() {
+        return k_EControllerActionOrigin_SteamV2_RightPad_Pressure;
+    }
+    private static final int k_EControllerActionOrigin_SteamV2_RightPad_DPadNorth = (int)178L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_SteamV2_RightPad_DPadNorth = 178
+     * }
+     */
+    public static int k_EControllerActionOrigin_SteamV2_RightPad_DPadNorth() {
+        return k_EControllerActionOrigin_SteamV2_RightPad_DPadNorth;
+    }
+    private static final int k_EControllerActionOrigin_SteamV2_RightPad_DPadSouth = (int)179L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_SteamV2_RightPad_DPadSouth = 179
+     * }
+     */
+    public static int k_EControllerActionOrigin_SteamV2_RightPad_DPadSouth() {
+        return k_EControllerActionOrigin_SteamV2_RightPad_DPadSouth;
+    }
+    private static final int k_EControllerActionOrigin_SteamV2_RightPad_DPadWest = (int)180L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_SteamV2_RightPad_DPadWest = 180
+     * }
+     */
+    public static int k_EControllerActionOrigin_SteamV2_RightPad_DPadWest() {
+        return k_EControllerActionOrigin_SteamV2_RightPad_DPadWest;
+    }
+    private static final int k_EControllerActionOrigin_SteamV2_RightPad_DPadEast = (int)181L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_SteamV2_RightPad_DPadEast = 181
+     * }
+     */
+    public static int k_EControllerActionOrigin_SteamV2_RightPad_DPadEast() {
+        return k_EControllerActionOrigin_SteamV2_RightPad_DPadEast;
+    }
+    private static final int k_EControllerActionOrigin_SteamV2_LeftTrigger_Pull = (int)182L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_SteamV2_LeftTrigger_Pull = 182
+     * }
+     */
+    public static int k_EControllerActionOrigin_SteamV2_LeftTrigger_Pull() {
+        return k_EControllerActionOrigin_SteamV2_LeftTrigger_Pull;
+    }
+    private static final int k_EControllerActionOrigin_SteamV2_LeftTrigger_Click = (int)183L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_SteamV2_LeftTrigger_Click = 183
+     * }
+     */
+    public static int k_EControllerActionOrigin_SteamV2_LeftTrigger_Click() {
+        return k_EControllerActionOrigin_SteamV2_LeftTrigger_Click;
+    }
+    private static final int k_EControllerActionOrigin_SteamV2_RightTrigger_Pull = (int)184L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_SteamV2_RightTrigger_Pull = 184
+     * }
+     */
+    public static int k_EControllerActionOrigin_SteamV2_RightTrigger_Pull() {
+        return k_EControllerActionOrigin_SteamV2_RightTrigger_Pull;
+    }
+    private static final int k_EControllerActionOrigin_SteamV2_RightTrigger_Click = (int)185L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_SteamV2_RightTrigger_Click = 185
+     * }
+     */
+    public static int k_EControllerActionOrigin_SteamV2_RightTrigger_Click() {
+        return k_EControllerActionOrigin_SteamV2_RightTrigger_Click;
+    }
+    private static final int k_EControllerActionOrigin_SteamV2_LeftStick_Move = (int)186L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_SteamV2_LeftStick_Move = 186
+     * }
+     */
+    public static int k_EControllerActionOrigin_SteamV2_LeftStick_Move() {
+        return k_EControllerActionOrigin_SteamV2_LeftStick_Move;
+    }
+    private static final int k_EControllerActionOrigin_SteamV2_LeftStick_Click = (int)187L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_SteamV2_LeftStick_Click = 187
+     * }
+     */
+    public static int k_EControllerActionOrigin_SteamV2_LeftStick_Click() {
+        return k_EControllerActionOrigin_SteamV2_LeftStick_Click;
+    }
+    private static final int k_EControllerActionOrigin_SteamV2_LeftStick_DPadNorth = (int)188L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_SteamV2_LeftStick_DPadNorth = 188
+     * }
+     */
+    public static int k_EControllerActionOrigin_SteamV2_LeftStick_DPadNorth() {
+        return k_EControllerActionOrigin_SteamV2_LeftStick_DPadNorth;
+    }
+    private static final int k_EControllerActionOrigin_SteamV2_LeftStick_DPadSouth = (int)189L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_SteamV2_LeftStick_DPadSouth = 189
+     * }
+     */
+    public static int k_EControllerActionOrigin_SteamV2_LeftStick_DPadSouth() {
+        return k_EControllerActionOrigin_SteamV2_LeftStick_DPadSouth;
+    }
+    private static final int k_EControllerActionOrigin_SteamV2_LeftStick_DPadWest = (int)190L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_SteamV2_LeftStick_DPadWest = 190
+     * }
+     */
+    public static int k_EControllerActionOrigin_SteamV2_LeftStick_DPadWest() {
+        return k_EControllerActionOrigin_SteamV2_LeftStick_DPadWest;
+    }
+    private static final int k_EControllerActionOrigin_SteamV2_LeftStick_DPadEast = (int)191L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_SteamV2_LeftStick_DPadEast = 191
+     * }
+     */
+    public static int k_EControllerActionOrigin_SteamV2_LeftStick_DPadEast() {
+        return k_EControllerActionOrigin_SteamV2_LeftStick_DPadEast;
+    }
+    private static final int k_EControllerActionOrigin_SteamV2_Gyro_Move = (int)192L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_SteamV2_Gyro_Move = 192
+     * }
+     */
+    public static int k_EControllerActionOrigin_SteamV2_Gyro_Move() {
+        return k_EControllerActionOrigin_SteamV2_Gyro_Move;
+    }
+    private static final int k_EControllerActionOrigin_SteamV2_Gyro_Pitch = (int)193L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_SteamV2_Gyro_Pitch = 193
+     * }
+     */
+    public static int k_EControllerActionOrigin_SteamV2_Gyro_Pitch() {
+        return k_EControllerActionOrigin_SteamV2_Gyro_Pitch;
+    }
+    private static final int k_EControllerActionOrigin_SteamV2_Gyro_Yaw = (int)194L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_SteamV2_Gyro_Yaw = 194
+     * }
+     */
+    public static int k_EControllerActionOrigin_SteamV2_Gyro_Yaw() {
+        return k_EControllerActionOrigin_SteamV2_Gyro_Yaw;
+    }
+    private static final int k_EControllerActionOrigin_SteamV2_Gyro_Roll = (int)195L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_SteamV2_Gyro_Roll = 195
+     * }
+     */
+    public static int k_EControllerActionOrigin_SteamV2_Gyro_Roll() {
+        return k_EControllerActionOrigin_SteamV2_Gyro_Roll;
+    }
+    private static final int k_EControllerActionOrigin_Switch_A = (int)196L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_Switch_A = 196
+     * }
+     */
+    public static int k_EControllerActionOrigin_Switch_A() {
+        return k_EControllerActionOrigin_Switch_A;
+    }
+    private static final int k_EControllerActionOrigin_Switch_B = (int)197L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_Switch_B = 197
+     * }
+     */
+    public static int k_EControllerActionOrigin_Switch_B() {
+        return k_EControllerActionOrigin_Switch_B;
+    }
+    private static final int k_EControllerActionOrigin_Switch_X = (int)198L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_Switch_X = 198
+     * }
+     */
+    public static int k_EControllerActionOrigin_Switch_X() {
+        return k_EControllerActionOrigin_Switch_X;
+    }
+    private static final int k_EControllerActionOrigin_Switch_Y = (int)199L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_Switch_Y = 199
+     * }
+     */
+    public static int k_EControllerActionOrigin_Switch_Y() {
+        return k_EControllerActionOrigin_Switch_Y;
+    }
+    private static final int k_EControllerActionOrigin_Switch_LeftBumper = (int)200L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_Switch_LeftBumper = 200
+     * }
+     */
+    public static int k_EControllerActionOrigin_Switch_LeftBumper() {
+        return k_EControllerActionOrigin_Switch_LeftBumper;
+    }
+    private static final int k_EControllerActionOrigin_Switch_RightBumper = (int)201L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_Switch_RightBumper = 201
+     * }
+     */
+    public static int k_EControllerActionOrigin_Switch_RightBumper() {
+        return k_EControllerActionOrigin_Switch_RightBumper;
+    }
+    private static final int k_EControllerActionOrigin_Switch_Plus = (int)202L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_Switch_Plus = 202
+     * }
+     */
+    public static int k_EControllerActionOrigin_Switch_Plus() {
+        return k_EControllerActionOrigin_Switch_Plus;
+    }
+    private static final int k_EControllerActionOrigin_Switch_Minus = (int)203L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_Switch_Minus = 203
+     * }
+     */
+    public static int k_EControllerActionOrigin_Switch_Minus() {
+        return k_EControllerActionOrigin_Switch_Minus;
+    }
+    private static final int k_EControllerActionOrigin_Switch_Capture = (int)204L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_Switch_Capture = 204
+     * }
+     */
+    public static int k_EControllerActionOrigin_Switch_Capture() {
+        return k_EControllerActionOrigin_Switch_Capture;
+    }
+    private static final int k_EControllerActionOrigin_Switch_LeftTrigger_Pull = (int)205L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_Switch_LeftTrigger_Pull = 205
+     * }
+     */
+    public static int k_EControllerActionOrigin_Switch_LeftTrigger_Pull() {
+        return k_EControllerActionOrigin_Switch_LeftTrigger_Pull;
+    }
+    private static final int k_EControllerActionOrigin_Switch_LeftTrigger_Click = (int)206L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_Switch_LeftTrigger_Click = 206
+     * }
+     */
+    public static int k_EControllerActionOrigin_Switch_LeftTrigger_Click() {
+        return k_EControllerActionOrigin_Switch_LeftTrigger_Click;
+    }
+    private static final int k_EControllerActionOrigin_Switch_RightTrigger_Pull = (int)207L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_Switch_RightTrigger_Pull = 207
+     * }
+     */
+    public static int k_EControllerActionOrigin_Switch_RightTrigger_Pull() {
+        return k_EControllerActionOrigin_Switch_RightTrigger_Pull;
+    }
+    private static final int k_EControllerActionOrigin_Switch_RightTrigger_Click = (int)208L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_Switch_RightTrigger_Click = 208
+     * }
+     */
+    public static int k_EControllerActionOrigin_Switch_RightTrigger_Click() {
+        return k_EControllerActionOrigin_Switch_RightTrigger_Click;
+    }
+    private static final int k_EControllerActionOrigin_Switch_LeftStick_Move = (int)209L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_Switch_LeftStick_Move = 209
+     * }
+     */
+    public static int k_EControllerActionOrigin_Switch_LeftStick_Move() {
+        return k_EControllerActionOrigin_Switch_LeftStick_Move;
+    }
+    private static final int k_EControllerActionOrigin_Switch_LeftStick_Click = (int)210L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_Switch_LeftStick_Click = 210
+     * }
+     */
+    public static int k_EControllerActionOrigin_Switch_LeftStick_Click() {
+        return k_EControllerActionOrigin_Switch_LeftStick_Click;
+    }
+    private static final int k_EControllerActionOrigin_Switch_LeftStick_DPadNorth = (int)211L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_Switch_LeftStick_DPadNorth = 211
+     * }
+     */
+    public static int k_EControllerActionOrigin_Switch_LeftStick_DPadNorth() {
+        return k_EControllerActionOrigin_Switch_LeftStick_DPadNorth;
+    }
+    private static final int k_EControllerActionOrigin_Switch_LeftStick_DPadSouth = (int)212L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_Switch_LeftStick_DPadSouth = 212
+     * }
+     */
+    public static int k_EControllerActionOrigin_Switch_LeftStick_DPadSouth() {
+        return k_EControllerActionOrigin_Switch_LeftStick_DPadSouth;
+    }
+    private static final int k_EControllerActionOrigin_Switch_LeftStick_DPadWest = (int)213L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_Switch_LeftStick_DPadWest = 213
+     * }
+     */
+    public static int k_EControllerActionOrigin_Switch_LeftStick_DPadWest() {
+        return k_EControllerActionOrigin_Switch_LeftStick_DPadWest;
+    }
+    private static final int k_EControllerActionOrigin_Switch_LeftStick_DPadEast = (int)214L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_Switch_LeftStick_DPadEast = 214
+     * }
+     */
+    public static int k_EControllerActionOrigin_Switch_LeftStick_DPadEast() {
+        return k_EControllerActionOrigin_Switch_LeftStick_DPadEast;
+    }
+    private static final int k_EControllerActionOrigin_Switch_RightStick_Move = (int)215L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_Switch_RightStick_Move = 215
+     * }
+     */
+    public static int k_EControllerActionOrigin_Switch_RightStick_Move() {
+        return k_EControllerActionOrigin_Switch_RightStick_Move;
+    }
+    private static final int k_EControllerActionOrigin_Switch_RightStick_Click = (int)216L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_Switch_RightStick_Click = 216
+     * }
+     */
+    public static int k_EControllerActionOrigin_Switch_RightStick_Click() {
+        return k_EControllerActionOrigin_Switch_RightStick_Click;
+    }
+    private static final int k_EControllerActionOrigin_Switch_RightStick_DPadNorth = (int)217L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_Switch_RightStick_DPadNorth = 217
+     * }
+     */
+    public static int k_EControllerActionOrigin_Switch_RightStick_DPadNorth() {
+        return k_EControllerActionOrigin_Switch_RightStick_DPadNorth;
+    }
+    private static final int k_EControllerActionOrigin_Switch_RightStick_DPadSouth = (int)218L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_Switch_RightStick_DPadSouth = 218
+     * }
+     */
+    public static int k_EControllerActionOrigin_Switch_RightStick_DPadSouth() {
+        return k_EControllerActionOrigin_Switch_RightStick_DPadSouth;
+    }
+    private static final int k_EControllerActionOrigin_Switch_RightStick_DPadWest = (int)219L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_Switch_RightStick_DPadWest = 219
+     * }
+     */
+    public static int k_EControllerActionOrigin_Switch_RightStick_DPadWest() {
+        return k_EControllerActionOrigin_Switch_RightStick_DPadWest;
+    }
+    private static final int k_EControllerActionOrigin_Switch_RightStick_DPadEast = (int)220L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_Switch_RightStick_DPadEast = 220
+     * }
+     */
+    public static int k_EControllerActionOrigin_Switch_RightStick_DPadEast() {
+        return k_EControllerActionOrigin_Switch_RightStick_DPadEast;
+    }
+    private static final int k_EControllerActionOrigin_Switch_DPad_North = (int)221L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_Switch_DPad_North = 221
+     * }
+     */
+    public static int k_EControllerActionOrigin_Switch_DPad_North() {
+        return k_EControllerActionOrigin_Switch_DPad_North;
+    }
+    private static final int k_EControllerActionOrigin_Switch_DPad_South = (int)222L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_Switch_DPad_South = 222
+     * }
+     */
+    public static int k_EControllerActionOrigin_Switch_DPad_South() {
+        return k_EControllerActionOrigin_Switch_DPad_South;
+    }
+    private static final int k_EControllerActionOrigin_Switch_DPad_West = (int)223L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_Switch_DPad_West = 223
+     * }
+     */
+    public static int k_EControllerActionOrigin_Switch_DPad_West() {
+        return k_EControllerActionOrigin_Switch_DPad_West;
+    }
+    private static final int k_EControllerActionOrigin_Switch_DPad_East = (int)224L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_Switch_DPad_East = 224
+     * }
+     */
+    public static int k_EControllerActionOrigin_Switch_DPad_East() {
+        return k_EControllerActionOrigin_Switch_DPad_East;
+    }
+    private static final int k_EControllerActionOrigin_Switch_ProGyro_Move = (int)225L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_Switch_ProGyro_Move = 225
+     * }
+     */
+    public static int k_EControllerActionOrigin_Switch_ProGyro_Move() {
+        return k_EControllerActionOrigin_Switch_ProGyro_Move;
+    }
+    private static final int k_EControllerActionOrigin_Switch_ProGyro_Pitch = (int)226L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_Switch_ProGyro_Pitch = 226
+     * }
+     */
+    public static int k_EControllerActionOrigin_Switch_ProGyro_Pitch() {
+        return k_EControllerActionOrigin_Switch_ProGyro_Pitch;
+    }
+    private static final int k_EControllerActionOrigin_Switch_ProGyro_Yaw = (int)227L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_Switch_ProGyro_Yaw = 227
+     * }
+     */
+    public static int k_EControllerActionOrigin_Switch_ProGyro_Yaw() {
+        return k_EControllerActionOrigin_Switch_ProGyro_Yaw;
+    }
+    private static final int k_EControllerActionOrigin_Switch_ProGyro_Roll = (int)228L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_Switch_ProGyro_Roll = 228
+     * }
+     */
+    public static int k_EControllerActionOrigin_Switch_ProGyro_Roll() {
+        return k_EControllerActionOrigin_Switch_ProGyro_Roll;
+    }
+    private static final int k_EControllerActionOrigin_Switch_RightGyro_Move = (int)229L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_Switch_RightGyro_Move = 229
+     * }
+     */
+    public static int k_EControllerActionOrigin_Switch_RightGyro_Move() {
+        return k_EControllerActionOrigin_Switch_RightGyro_Move;
+    }
+    private static final int k_EControllerActionOrigin_Switch_RightGyro_Pitch = (int)230L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_Switch_RightGyro_Pitch = 230
+     * }
+     */
+    public static int k_EControllerActionOrigin_Switch_RightGyro_Pitch() {
+        return k_EControllerActionOrigin_Switch_RightGyro_Pitch;
+    }
+    private static final int k_EControllerActionOrigin_Switch_RightGyro_Yaw = (int)231L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_Switch_RightGyro_Yaw = 231
+     * }
+     */
+    public static int k_EControllerActionOrigin_Switch_RightGyro_Yaw() {
+        return k_EControllerActionOrigin_Switch_RightGyro_Yaw;
+    }
+    private static final int k_EControllerActionOrigin_Switch_RightGyro_Roll = (int)232L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_Switch_RightGyro_Roll = 232
+     * }
+     */
+    public static int k_EControllerActionOrigin_Switch_RightGyro_Roll() {
+        return k_EControllerActionOrigin_Switch_RightGyro_Roll;
+    }
+    private static final int k_EControllerActionOrigin_Switch_LeftGyro_Move = (int)233L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_Switch_LeftGyro_Move = 233
+     * }
+     */
+    public static int k_EControllerActionOrigin_Switch_LeftGyro_Move() {
+        return k_EControllerActionOrigin_Switch_LeftGyro_Move;
+    }
+    private static final int k_EControllerActionOrigin_Switch_LeftGyro_Pitch = (int)234L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_Switch_LeftGyro_Pitch = 234
+     * }
+     */
+    public static int k_EControllerActionOrigin_Switch_LeftGyro_Pitch() {
+        return k_EControllerActionOrigin_Switch_LeftGyro_Pitch;
+    }
+    private static final int k_EControllerActionOrigin_Switch_LeftGyro_Yaw = (int)235L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_Switch_LeftGyro_Yaw = 235
+     * }
+     */
+    public static int k_EControllerActionOrigin_Switch_LeftGyro_Yaw() {
+        return k_EControllerActionOrigin_Switch_LeftGyro_Yaw;
+    }
+    private static final int k_EControllerActionOrigin_Switch_LeftGyro_Roll = (int)236L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_Switch_LeftGyro_Roll = 236
+     * }
+     */
+    public static int k_EControllerActionOrigin_Switch_LeftGyro_Roll() {
+        return k_EControllerActionOrigin_Switch_LeftGyro_Roll;
+    }
+    private static final int k_EControllerActionOrigin_Switch_LeftGrip_Lower = (int)237L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_Switch_LeftGrip_Lower = 237
+     * }
+     */
+    public static int k_EControllerActionOrigin_Switch_LeftGrip_Lower() {
+        return k_EControllerActionOrigin_Switch_LeftGrip_Lower;
+    }
+    private static final int k_EControllerActionOrigin_Switch_LeftGrip_Upper = (int)238L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_Switch_LeftGrip_Upper = 238
+     * }
+     */
+    public static int k_EControllerActionOrigin_Switch_LeftGrip_Upper() {
+        return k_EControllerActionOrigin_Switch_LeftGrip_Upper;
+    }
+    private static final int k_EControllerActionOrigin_Switch_RightGrip_Lower = (int)239L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_Switch_RightGrip_Lower = 239
+     * }
+     */
+    public static int k_EControllerActionOrigin_Switch_RightGrip_Lower() {
+        return k_EControllerActionOrigin_Switch_RightGrip_Lower;
+    }
+    private static final int k_EControllerActionOrigin_Switch_RightGrip_Upper = (int)240L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_Switch_RightGrip_Upper = 240
+     * }
+     */
+    public static int k_EControllerActionOrigin_Switch_RightGrip_Upper() {
+        return k_EControllerActionOrigin_Switch_RightGrip_Upper;
+    }
+    private static final int k_EControllerActionOrigin_PS4_DPad_Move = (int)241L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_PS4_DPad_Move = 241
+     * }
+     */
+    public static int k_EControllerActionOrigin_PS4_DPad_Move() {
+        return k_EControllerActionOrigin_PS4_DPad_Move;
+    }
+    private static final int k_EControllerActionOrigin_XBoxOne_DPad_Move = (int)242L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_XBoxOne_DPad_Move = 242
+     * }
+     */
+    public static int k_EControllerActionOrigin_XBoxOne_DPad_Move() {
+        return k_EControllerActionOrigin_XBoxOne_DPad_Move;
+    }
+    private static final int k_EControllerActionOrigin_XBox360_DPad_Move = (int)243L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_XBox360_DPad_Move = 243
+     * }
+     */
+    public static int k_EControllerActionOrigin_XBox360_DPad_Move() {
+        return k_EControllerActionOrigin_XBox360_DPad_Move;
+    }
+    private static final int k_EControllerActionOrigin_Switch_DPad_Move = (int)244L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_Switch_DPad_Move = 244
+     * }
+     */
+    public static int k_EControllerActionOrigin_Switch_DPad_Move() {
+        return k_EControllerActionOrigin_Switch_DPad_Move;
+    }
+    private static final int k_EControllerActionOrigin_PS5_X = (int)245L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_PS5_X = 245
+     * }
+     */
+    public static int k_EControllerActionOrigin_PS5_X() {
+        return k_EControllerActionOrigin_PS5_X;
+    }
+    private static final int k_EControllerActionOrigin_PS5_Circle = (int)246L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_PS5_Circle = 246
+     * }
+     */
+    public static int k_EControllerActionOrigin_PS5_Circle() {
+        return k_EControllerActionOrigin_PS5_Circle;
+    }
+    private static final int k_EControllerActionOrigin_PS5_Triangle = (int)247L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_PS5_Triangle = 247
+     * }
+     */
+    public static int k_EControllerActionOrigin_PS5_Triangle() {
+        return k_EControllerActionOrigin_PS5_Triangle;
+    }
+    private static final int k_EControllerActionOrigin_PS5_Square = (int)248L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_PS5_Square = 248
+     * }
+     */
+    public static int k_EControllerActionOrigin_PS5_Square() {
+        return k_EControllerActionOrigin_PS5_Square;
+    }
+    private static final int k_EControllerActionOrigin_PS5_LeftBumper = (int)249L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_PS5_LeftBumper = 249
+     * }
+     */
+    public static int k_EControllerActionOrigin_PS5_LeftBumper() {
+        return k_EControllerActionOrigin_PS5_LeftBumper;
+    }
+    private static final int k_EControllerActionOrigin_PS5_RightBumper = (int)250L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_PS5_RightBumper = 250
+     * }
+     */
+    public static int k_EControllerActionOrigin_PS5_RightBumper() {
+        return k_EControllerActionOrigin_PS5_RightBumper;
+    }
+    private static final int k_EControllerActionOrigin_PS5_Option = (int)251L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_PS5_Option = 251
+     * }
+     */
+    public static int k_EControllerActionOrigin_PS5_Option() {
+        return k_EControllerActionOrigin_PS5_Option;
+    }
+    private static final int k_EControllerActionOrigin_PS5_Create = (int)252L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_PS5_Create = 252
+     * }
+     */
+    public static int k_EControllerActionOrigin_PS5_Create() {
+        return k_EControllerActionOrigin_PS5_Create;
+    }
+    private static final int k_EControllerActionOrigin_PS5_Mute = (int)253L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_PS5_Mute = 253
+     * }
+     */
+    public static int k_EControllerActionOrigin_PS5_Mute() {
+        return k_EControllerActionOrigin_PS5_Mute;
+    }
+    private static final int k_EControllerActionOrigin_PS5_LeftPad_Touch = (int)254L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_PS5_LeftPad_Touch = 254
+     * }
+     */
+    public static int k_EControllerActionOrigin_PS5_LeftPad_Touch() {
+        return k_EControllerActionOrigin_PS5_LeftPad_Touch;
+    }
+    private static final int k_EControllerActionOrigin_PS5_LeftPad_Swipe = (int)255L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_PS5_LeftPad_Swipe = 255
+     * }
+     */
+    public static int k_EControllerActionOrigin_PS5_LeftPad_Swipe() {
+        return k_EControllerActionOrigin_PS5_LeftPad_Swipe;
+    }
+    private static final int k_EControllerActionOrigin_PS5_LeftPad_Click = (int)256L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_PS5_LeftPad_Click = 256
+     * }
+     */
+    public static int k_EControllerActionOrigin_PS5_LeftPad_Click() {
+        return k_EControllerActionOrigin_PS5_LeftPad_Click;
+    }
+    private static final int k_EControllerActionOrigin_PS5_LeftPad_DPadNorth = (int)257L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_PS5_LeftPad_DPadNorth = 257
+     * }
+     */
+    public static int k_EControllerActionOrigin_PS5_LeftPad_DPadNorth() {
+        return k_EControllerActionOrigin_PS5_LeftPad_DPadNorth;
+    }
+    private static final int k_EControllerActionOrigin_PS5_LeftPad_DPadSouth = (int)258L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_PS5_LeftPad_DPadSouth = 258
+     * }
+     */
+    public static int k_EControllerActionOrigin_PS5_LeftPad_DPadSouth() {
+        return k_EControllerActionOrigin_PS5_LeftPad_DPadSouth;
+    }
+    private static final int k_EControllerActionOrigin_PS5_LeftPad_DPadWest = (int)259L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_PS5_LeftPad_DPadWest = 259
+     * }
+     */
+    public static int k_EControllerActionOrigin_PS5_LeftPad_DPadWest() {
+        return k_EControllerActionOrigin_PS5_LeftPad_DPadWest;
+    }
+    private static final int k_EControllerActionOrigin_PS5_LeftPad_DPadEast = (int)260L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_PS5_LeftPad_DPadEast = 260
+     * }
+     */
+    public static int k_EControllerActionOrigin_PS5_LeftPad_DPadEast() {
+        return k_EControllerActionOrigin_PS5_LeftPad_DPadEast;
+    }
+    private static final int k_EControllerActionOrigin_PS5_RightPad_Touch = (int)261L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_PS5_RightPad_Touch = 261
+     * }
+     */
+    public static int k_EControllerActionOrigin_PS5_RightPad_Touch() {
+        return k_EControllerActionOrigin_PS5_RightPad_Touch;
+    }
+    private static final int k_EControllerActionOrigin_PS5_RightPad_Swipe = (int)262L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_PS5_RightPad_Swipe = 262
+     * }
+     */
+    public static int k_EControllerActionOrigin_PS5_RightPad_Swipe() {
+        return k_EControllerActionOrigin_PS5_RightPad_Swipe;
+    }
+    private static final int k_EControllerActionOrigin_PS5_RightPad_Click = (int)263L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_PS5_RightPad_Click = 263
+     * }
+     */
+    public static int k_EControllerActionOrigin_PS5_RightPad_Click() {
+        return k_EControllerActionOrigin_PS5_RightPad_Click;
+    }
+    private static final int k_EControllerActionOrigin_PS5_RightPad_DPadNorth = (int)264L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_PS5_RightPad_DPadNorth = 264
+     * }
+     */
+    public static int k_EControllerActionOrigin_PS5_RightPad_DPadNorth() {
+        return k_EControllerActionOrigin_PS5_RightPad_DPadNorth;
+    }
+    private static final int k_EControllerActionOrigin_PS5_RightPad_DPadSouth = (int)265L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_PS5_RightPad_DPadSouth = 265
+     * }
+     */
+    public static int k_EControllerActionOrigin_PS5_RightPad_DPadSouth() {
+        return k_EControllerActionOrigin_PS5_RightPad_DPadSouth;
+    }
+    private static final int k_EControllerActionOrigin_PS5_RightPad_DPadWest = (int)266L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_PS5_RightPad_DPadWest = 266
+     * }
+     */
+    public static int k_EControllerActionOrigin_PS5_RightPad_DPadWest() {
+        return k_EControllerActionOrigin_PS5_RightPad_DPadWest;
+    }
+    private static final int k_EControllerActionOrigin_PS5_RightPad_DPadEast = (int)267L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_PS5_RightPad_DPadEast = 267
+     * }
+     */
+    public static int k_EControllerActionOrigin_PS5_RightPad_DPadEast() {
+        return k_EControllerActionOrigin_PS5_RightPad_DPadEast;
+    }
+    private static final int k_EControllerActionOrigin_PS5_CenterPad_Touch = (int)268L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_PS5_CenterPad_Touch = 268
+     * }
+     */
+    public static int k_EControllerActionOrigin_PS5_CenterPad_Touch() {
+        return k_EControllerActionOrigin_PS5_CenterPad_Touch;
+    }
+    private static final int k_EControllerActionOrigin_PS5_CenterPad_Swipe = (int)269L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_PS5_CenterPad_Swipe = 269
+     * }
+     */
+    public static int k_EControllerActionOrigin_PS5_CenterPad_Swipe() {
+        return k_EControllerActionOrigin_PS5_CenterPad_Swipe;
+    }
+    private static final int k_EControllerActionOrigin_PS5_CenterPad_Click = (int)270L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_PS5_CenterPad_Click = 270
+     * }
+     */
+    public static int k_EControllerActionOrigin_PS5_CenterPad_Click() {
+        return k_EControllerActionOrigin_PS5_CenterPad_Click;
+    }
+    private static final int k_EControllerActionOrigin_PS5_CenterPad_DPadNorth = (int)271L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_PS5_CenterPad_DPadNorth = 271
+     * }
+     */
+    public static int k_EControllerActionOrigin_PS5_CenterPad_DPadNorth() {
+        return k_EControllerActionOrigin_PS5_CenterPad_DPadNorth;
+    }
+    private static final int k_EControllerActionOrigin_PS5_CenterPad_DPadSouth = (int)272L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_PS5_CenterPad_DPadSouth = 272
+     * }
+     */
+    public static int k_EControllerActionOrigin_PS5_CenterPad_DPadSouth() {
+        return k_EControllerActionOrigin_PS5_CenterPad_DPadSouth;
+    }
+    private static final int k_EControllerActionOrigin_PS5_CenterPad_DPadWest = (int)273L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_PS5_CenterPad_DPadWest = 273
+     * }
+     */
+    public static int k_EControllerActionOrigin_PS5_CenterPad_DPadWest() {
+        return k_EControllerActionOrigin_PS5_CenterPad_DPadWest;
+    }
+    private static final int k_EControllerActionOrigin_PS5_CenterPad_DPadEast = (int)274L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_PS5_CenterPad_DPadEast = 274
+     * }
+     */
+    public static int k_EControllerActionOrigin_PS5_CenterPad_DPadEast() {
+        return k_EControllerActionOrigin_PS5_CenterPad_DPadEast;
+    }
+    private static final int k_EControllerActionOrigin_PS5_LeftTrigger_Pull = (int)275L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_PS5_LeftTrigger_Pull = 275
+     * }
+     */
+    public static int k_EControllerActionOrigin_PS5_LeftTrigger_Pull() {
+        return k_EControllerActionOrigin_PS5_LeftTrigger_Pull;
+    }
+    private static final int k_EControllerActionOrigin_PS5_LeftTrigger_Click = (int)276L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_PS5_LeftTrigger_Click = 276
+     * }
+     */
+    public static int k_EControllerActionOrigin_PS5_LeftTrigger_Click() {
+        return k_EControllerActionOrigin_PS5_LeftTrigger_Click;
+    }
+    private static final int k_EControllerActionOrigin_PS5_RightTrigger_Pull = (int)277L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_PS5_RightTrigger_Pull = 277
+     * }
+     */
+    public static int k_EControllerActionOrigin_PS5_RightTrigger_Pull() {
+        return k_EControllerActionOrigin_PS5_RightTrigger_Pull;
+    }
+    private static final int k_EControllerActionOrigin_PS5_RightTrigger_Click = (int)278L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_PS5_RightTrigger_Click = 278
+     * }
+     */
+    public static int k_EControllerActionOrigin_PS5_RightTrigger_Click() {
+        return k_EControllerActionOrigin_PS5_RightTrigger_Click;
+    }
+    private static final int k_EControllerActionOrigin_PS5_LeftStick_Move = (int)279L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_PS5_LeftStick_Move = 279
+     * }
+     */
+    public static int k_EControllerActionOrigin_PS5_LeftStick_Move() {
+        return k_EControllerActionOrigin_PS5_LeftStick_Move;
+    }
+    private static final int k_EControllerActionOrigin_PS5_LeftStick_Click = (int)280L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_PS5_LeftStick_Click = 280
+     * }
+     */
+    public static int k_EControllerActionOrigin_PS5_LeftStick_Click() {
+        return k_EControllerActionOrigin_PS5_LeftStick_Click;
+    }
+    private static final int k_EControllerActionOrigin_PS5_LeftStick_DPadNorth = (int)281L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_PS5_LeftStick_DPadNorth = 281
+     * }
+     */
+    public static int k_EControllerActionOrigin_PS5_LeftStick_DPadNorth() {
+        return k_EControllerActionOrigin_PS5_LeftStick_DPadNorth;
+    }
+    private static final int k_EControllerActionOrigin_PS5_LeftStick_DPadSouth = (int)282L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_PS5_LeftStick_DPadSouth = 282
+     * }
+     */
+    public static int k_EControllerActionOrigin_PS5_LeftStick_DPadSouth() {
+        return k_EControllerActionOrigin_PS5_LeftStick_DPadSouth;
+    }
+    private static final int k_EControllerActionOrigin_PS5_LeftStick_DPadWest = (int)283L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_PS5_LeftStick_DPadWest = 283
+     * }
+     */
+    public static int k_EControllerActionOrigin_PS5_LeftStick_DPadWest() {
+        return k_EControllerActionOrigin_PS5_LeftStick_DPadWest;
+    }
+    private static final int k_EControllerActionOrigin_PS5_LeftStick_DPadEast = (int)284L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_PS5_LeftStick_DPadEast = 284
+     * }
+     */
+    public static int k_EControllerActionOrigin_PS5_LeftStick_DPadEast() {
+        return k_EControllerActionOrigin_PS5_LeftStick_DPadEast;
+    }
+    private static final int k_EControllerActionOrigin_PS5_RightStick_Move = (int)285L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_PS5_RightStick_Move = 285
+     * }
+     */
+    public static int k_EControllerActionOrigin_PS5_RightStick_Move() {
+        return k_EControllerActionOrigin_PS5_RightStick_Move;
+    }
+    private static final int k_EControllerActionOrigin_PS5_RightStick_Click = (int)286L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_PS5_RightStick_Click = 286
+     * }
+     */
+    public static int k_EControllerActionOrigin_PS5_RightStick_Click() {
+        return k_EControllerActionOrigin_PS5_RightStick_Click;
+    }
+    private static final int k_EControllerActionOrigin_PS5_RightStick_DPadNorth = (int)287L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_PS5_RightStick_DPadNorth = 287
+     * }
+     */
+    public static int k_EControllerActionOrigin_PS5_RightStick_DPadNorth() {
+        return k_EControllerActionOrigin_PS5_RightStick_DPadNorth;
+    }
+    private static final int k_EControllerActionOrigin_PS5_RightStick_DPadSouth = (int)288L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_PS5_RightStick_DPadSouth = 288
+     * }
+     */
+    public static int k_EControllerActionOrigin_PS5_RightStick_DPadSouth() {
+        return k_EControllerActionOrigin_PS5_RightStick_DPadSouth;
+    }
+    private static final int k_EControllerActionOrigin_PS5_RightStick_DPadWest = (int)289L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_PS5_RightStick_DPadWest = 289
+     * }
+     */
+    public static int k_EControllerActionOrigin_PS5_RightStick_DPadWest() {
+        return k_EControllerActionOrigin_PS5_RightStick_DPadWest;
+    }
+    private static final int k_EControllerActionOrigin_PS5_RightStick_DPadEast = (int)290L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_PS5_RightStick_DPadEast = 290
+     * }
+     */
+    public static int k_EControllerActionOrigin_PS5_RightStick_DPadEast() {
+        return k_EControllerActionOrigin_PS5_RightStick_DPadEast;
+    }
+    private static final int k_EControllerActionOrigin_PS5_DPad_Move = (int)291L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_PS5_DPad_Move = 291
+     * }
+     */
+    public static int k_EControllerActionOrigin_PS5_DPad_Move() {
+        return k_EControllerActionOrigin_PS5_DPad_Move;
+    }
+    private static final int k_EControllerActionOrigin_PS5_DPad_North = (int)292L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_PS5_DPad_North = 292
+     * }
+     */
+    public static int k_EControllerActionOrigin_PS5_DPad_North() {
+        return k_EControllerActionOrigin_PS5_DPad_North;
+    }
+    private static final int k_EControllerActionOrigin_PS5_DPad_South = (int)293L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_PS5_DPad_South = 293
+     * }
+     */
+    public static int k_EControllerActionOrigin_PS5_DPad_South() {
+        return k_EControllerActionOrigin_PS5_DPad_South;
+    }
+    private static final int k_EControllerActionOrigin_PS5_DPad_West = (int)294L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_PS5_DPad_West = 294
+     * }
+     */
+    public static int k_EControllerActionOrigin_PS5_DPad_West() {
+        return k_EControllerActionOrigin_PS5_DPad_West;
+    }
+    private static final int k_EControllerActionOrigin_PS5_DPad_East = (int)295L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_PS5_DPad_East = 295
+     * }
+     */
+    public static int k_EControllerActionOrigin_PS5_DPad_East() {
+        return k_EControllerActionOrigin_PS5_DPad_East;
+    }
+    private static final int k_EControllerActionOrigin_PS5_Gyro_Move = (int)296L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_PS5_Gyro_Move = 296
+     * }
+     */
+    public static int k_EControllerActionOrigin_PS5_Gyro_Move() {
+        return k_EControllerActionOrigin_PS5_Gyro_Move;
+    }
+    private static final int k_EControllerActionOrigin_PS5_Gyro_Pitch = (int)297L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_PS5_Gyro_Pitch = 297
+     * }
+     */
+    public static int k_EControllerActionOrigin_PS5_Gyro_Pitch() {
+        return k_EControllerActionOrigin_PS5_Gyro_Pitch;
+    }
+    private static final int k_EControllerActionOrigin_PS5_Gyro_Yaw = (int)298L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_PS5_Gyro_Yaw = 298
+     * }
+     */
+    public static int k_EControllerActionOrigin_PS5_Gyro_Yaw() {
+        return k_EControllerActionOrigin_PS5_Gyro_Yaw;
+    }
+    private static final int k_EControllerActionOrigin_PS5_Gyro_Roll = (int)299L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_PS5_Gyro_Roll = 299
+     * }
+     */
+    public static int k_EControllerActionOrigin_PS5_Gyro_Roll() {
+        return k_EControllerActionOrigin_PS5_Gyro_Roll;
+    }
+    private static final int k_EControllerActionOrigin_XBoxOne_LeftGrip_Lower = (int)300L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_XBoxOne_LeftGrip_Lower = 300
+     * }
+     */
+    public static int k_EControllerActionOrigin_XBoxOne_LeftGrip_Lower() {
+        return k_EControllerActionOrigin_XBoxOne_LeftGrip_Lower;
+    }
+    private static final int k_EControllerActionOrigin_XBoxOne_LeftGrip_Upper = (int)301L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_XBoxOne_LeftGrip_Upper = 301
+     * }
+     */
+    public static int k_EControllerActionOrigin_XBoxOne_LeftGrip_Upper() {
+        return k_EControllerActionOrigin_XBoxOne_LeftGrip_Upper;
+    }
+    private static final int k_EControllerActionOrigin_XBoxOne_RightGrip_Lower = (int)302L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_XBoxOne_RightGrip_Lower = 302
+     * }
+     */
+    public static int k_EControllerActionOrigin_XBoxOne_RightGrip_Lower() {
+        return k_EControllerActionOrigin_XBoxOne_RightGrip_Lower;
+    }
+    private static final int k_EControllerActionOrigin_XBoxOne_RightGrip_Upper = (int)303L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_XBoxOne_RightGrip_Upper = 303
+     * }
+     */
+    public static int k_EControllerActionOrigin_XBoxOne_RightGrip_Upper() {
+        return k_EControllerActionOrigin_XBoxOne_RightGrip_Upper;
+    }
+    private static final int k_EControllerActionOrigin_XBoxOne_Share = (int)304L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_XBoxOne_Share = 304
+     * }
+     */
+    public static int k_EControllerActionOrigin_XBoxOne_Share() {
+        return k_EControllerActionOrigin_XBoxOne_Share;
+    }
+    private static final int k_EControllerActionOrigin_SteamDeck_A = (int)305L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_SteamDeck_A = 305
+     * }
+     */
+    public static int k_EControllerActionOrigin_SteamDeck_A() {
+        return k_EControllerActionOrigin_SteamDeck_A;
+    }
+    private static final int k_EControllerActionOrigin_SteamDeck_B = (int)306L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_SteamDeck_B = 306
+     * }
+     */
+    public static int k_EControllerActionOrigin_SteamDeck_B() {
+        return k_EControllerActionOrigin_SteamDeck_B;
+    }
+    private static final int k_EControllerActionOrigin_SteamDeck_X = (int)307L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_SteamDeck_X = 307
+     * }
+     */
+    public static int k_EControllerActionOrigin_SteamDeck_X() {
+        return k_EControllerActionOrigin_SteamDeck_X;
+    }
+    private static final int k_EControllerActionOrigin_SteamDeck_Y = (int)308L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_SteamDeck_Y = 308
+     * }
+     */
+    public static int k_EControllerActionOrigin_SteamDeck_Y() {
+        return k_EControllerActionOrigin_SteamDeck_Y;
+    }
+    private static final int k_EControllerActionOrigin_SteamDeck_L1 = (int)309L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_SteamDeck_L1 = 309
+     * }
+     */
+    public static int k_EControllerActionOrigin_SteamDeck_L1() {
+        return k_EControllerActionOrigin_SteamDeck_L1;
+    }
+    private static final int k_EControllerActionOrigin_SteamDeck_R1 = (int)310L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_SteamDeck_R1 = 310
+     * }
+     */
+    public static int k_EControllerActionOrigin_SteamDeck_R1() {
+        return k_EControllerActionOrigin_SteamDeck_R1;
+    }
+    private static final int k_EControllerActionOrigin_SteamDeck_Menu = (int)311L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_SteamDeck_Menu = 311
+     * }
+     */
+    public static int k_EControllerActionOrigin_SteamDeck_Menu() {
+        return k_EControllerActionOrigin_SteamDeck_Menu;
+    }
+    private static final int k_EControllerActionOrigin_SteamDeck_View = (int)312L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_SteamDeck_View = 312
+     * }
+     */
+    public static int k_EControllerActionOrigin_SteamDeck_View() {
+        return k_EControllerActionOrigin_SteamDeck_View;
+    }
+    private static final int k_EControllerActionOrigin_SteamDeck_LeftPad_Touch = (int)313L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_SteamDeck_LeftPad_Touch = 313
+     * }
+     */
+    public static int k_EControllerActionOrigin_SteamDeck_LeftPad_Touch() {
+        return k_EControllerActionOrigin_SteamDeck_LeftPad_Touch;
+    }
+    private static final int k_EControllerActionOrigin_SteamDeck_LeftPad_Swipe = (int)314L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_SteamDeck_LeftPad_Swipe = 314
+     * }
+     */
+    public static int k_EControllerActionOrigin_SteamDeck_LeftPad_Swipe() {
+        return k_EControllerActionOrigin_SteamDeck_LeftPad_Swipe;
+    }
+    private static final int k_EControllerActionOrigin_SteamDeck_LeftPad_Click = (int)315L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_SteamDeck_LeftPad_Click = 315
+     * }
+     */
+    public static int k_EControllerActionOrigin_SteamDeck_LeftPad_Click() {
+        return k_EControllerActionOrigin_SteamDeck_LeftPad_Click;
+    }
+    private static final int k_EControllerActionOrigin_SteamDeck_LeftPad_DPadNorth = (int)316L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_SteamDeck_LeftPad_DPadNorth = 316
+     * }
+     */
+    public static int k_EControllerActionOrigin_SteamDeck_LeftPad_DPadNorth() {
+        return k_EControllerActionOrigin_SteamDeck_LeftPad_DPadNorth;
+    }
+    private static final int k_EControllerActionOrigin_SteamDeck_LeftPad_DPadSouth = (int)317L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_SteamDeck_LeftPad_DPadSouth = 317
+     * }
+     */
+    public static int k_EControllerActionOrigin_SteamDeck_LeftPad_DPadSouth() {
+        return k_EControllerActionOrigin_SteamDeck_LeftPad_DPadSouth;
+    }
+    private static final int k_EControllerActionOrigin_SteamDeck_LeftPad_DPadWest = (int)318L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_SteamDeck_LeftPad_DPadWest = 318
+     * }
+     */
+    public static int k_EControllerActionOrigin_SteamDeck_LeftPad_DPadWest() {
+        return k_EControllerActionOrigin_SteamDeck_LeftPad_DPadWest;
+    }
+    private static final int k_EControllerActionOrigin_SteamDeck_LeftPad_DPadEast = (int)319L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_SteamDeck_LeftPad_DPadEast = 319
+     * }
+     */
+    public static int k_EControllerActionOrigin_SteamDeck_LeftPad_DPadEast() {
+        return k_EControllerActionOrigin_SteamDeck_LeftPad_DPadEast;
+    }
+    private static final int k_EControllerActionOrigin_SteamDeck_RightPad_Touch = (int)320L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_SteamDeck_RightPad_Touch = 320
+     * }
+     */
+    public static int k_EControllerActionOrigin_SteamDeck_RightPad_Touch() {
+        return k_EControllerActionOrigin_SteamDeck_RightPad_Touch;
+    }
+    private static final int k_EControllerActionOrigin_SteamDeck_RightPad_Swipe = (int)321L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_SteamDeck_RightPad_Swipe = 321
+     * }
+     */
+    public static int k_EControllerActionOrigin_SteamDeck_RightPad_Swipe() {
+        return k_EControllerActionOrigin_SteamDeck_RightPad_Swipe;
+    }
+    private static final int k_EControllerActionOrigin_SteamDeck_RightPad_Click = (int)322L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_SteamDeck_RightPad_Click = 322
+     * }
+     */
+    public static int k_EControllerActionOrigin_SteamDeck_RightPad_Click() {
+        return k_EControllerActionOrigin_SteamDeck_RightPad_Click;
+    }
+    private static final int k_EControllerActionOrigin_SteamDeck_RightPad_DPadNorth = (int)323L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_SteamDeck_RightPad_DPadNorth = 323
+     * }
+     */
+    public static int k_EControllerActionOrigin_SteamDeck_RightPad_DPadNorth() {
+        return k_EControllerActionOrigin_SteamDeck_RightPad_DPadNorth;
+    }
+    private static final int k_EControllerActionOrigin_SteamDeck_RightPad_DPadSouth = (int)324L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_SteamDeck_RightPad_DPadSouth = 324
+     * }
+     */
+    public static int k_EControllerActionOrigin_SteamDeck_RightPad_DPadSouth() {
+        return k_EControllerActionOrigin_SteamDeck_RightPad_DPadSouth;
+    }
+    private static final int k_EControllerActionOrigin_SteamDeck_RightPad_DPadWest = (int)325L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_SteamDeck_RightPad_DPadWest = 325
+     * }
+     */
+    public static int k_EControllerActionOrigin_SteamDeck_RightPad_DPadWest() {
+        return k_EControllerActionOrigin_SteamDeck_RightPad_DPadWest;
+    }
+    private static final int k_EControllerActionOrigin_SteamDeck_RightPad_DPadEast = (int)326L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_SteamDeck_RightPad_DPadEast = 326
+     * }
+     */
+    public static int k_EControllerActionOrigin_SteamDeck_RightPad_DPadEast() {
+        return k_EControllerActionOrigin_SteamDeck_RightPad_DPadEast;
+    }
+    private static final int k_EControllerActionOrigin_SteamDeck_L2_SoftPull = (int)327L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_SteamDeck_L2_SoftPull = 327
+     * }
+     */
+    public static int k_EControllerActionOrigin_SteamDeck_L2_SoftPull() {
+        return k_EControllerActionOrigin_SteamDeck_L2_SoftPull;
+    }
+    private static final int k_EControllerActionOrigin_SteamDeck_L2 = (int)328L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_SteamDeck_L2 = 328
+     * }
+     */
+    public static int k_EControllerActionOrigin_SteamDeck_L2() {
+        return k_EControllerActionOrigin_SteamDeck_L2;
+    }
+    private static final int k_EControllerActionOrigin_SteamDeck_R2_SoftPull = (int)329L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_SteamDeck_R2_SoftPull = 329
+     * }
+     */
+    public static int k_EControllerActionOrigin_SteamDeck_R2_SoftPull() {
+        return k_EControllerActionOrigin_SteamDeck_R2_SoftPull;
+    }
+    private static final int k_EControllerActionOrigin_SteamDeck_R2 = (int)330L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_SteamDeck_R2 = 330
+     * }
+     */
+    public static int k_EControllerActionOrigin_SteamDeck_R2() {
+        return k_EControllerActionOrigin_SteamDeck_R2;
+    }
+    private static final int k_EControllerActionOrigin_SteamDeck_LeftStick_Move = (int)331L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_SteamDeck_LeftStick_Move = 331
+     * }
+     */
+    public static int k_EControllerActionOrigin_SteamDeck_LeftStick_Move() {
+        return k_EControllerActionOrigin_SteamDeck_LeftStick_Move;
+    }
+    private static final int k_EControllerActionOrigin_SteamDeck_L3 = (int)332L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_SteamDeck_L3 = 332
+     * }
+     */
+    public static int k_EControllerActionOrigin_SteamDeck_L3() {
+        return k_EControllerActionOrigin_SteamDeck_L3;
+    }
+    private static final int k_EControllerActionOrigin_SteamDeck_LeftStick_DPadNorth = (int)333L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_SteamDeck_LeftStick_DPadNorth = 333
+     * }
+     */
+    public static int k_EControllerActionOrigin_SteamDeck_LeftStick_DPadNorth() {
+        return k_EControllerActionOrigin_SteamDeck_LeftStick_DPadNorth;
+    }
+    private static final int k_EControllerActionOrigin_SteamDeck_LeftStick_DPadSouth = (int)334L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_SteamDeck_LeftStick_DPadSouth = 334
+     * }
+     */
+    public static int k_EControllerActionOrigin_SteamDeck_LeftStick_DPadSouth() {
+        return k_EControllerActionOrigin_SteamDeck_LeftStick_DPadSouth;
+    }
+    private static final int k_EControllerActionOrigin_SteamDeck_LeftStick_DPadWest = (int)335L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_SteamDeck_LeftStick_DPadWest = 335
+     * }
+     */
+    public static int k_EControllerActionOrigin_SteamDeck_LeftStick_DPadWest() {
+        return k_EControllerActionOrigin_SteamDeck_LeftStick_DPadWest;
+    }
+    private static final int k_EControllerActionOrigin_SteamDeck_LeftStick_DPadEast = (int)336L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_SteamDeck_LeftStick_DPadEast = 336
+     * }
+     */
+    public static int k_EControllerActionOrigin_SteamDeck_LeftStick_DPadEast() {
+        return k_EControllerActionOrigin_SteamDeck_LeftStick_DPadEast;
+    }
+    private static final int k_EControllerActionOrigin_SteamDeck_LeftStick_Touch = (int)337L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_SteamDeck_LeftStick_Touch = 337
+     * }
+     */
+    public static int k_EControllerActionOrigin_SteamDeck_LeftStick_Touch() {
+        return k_EControllerActionOrigin_SteamDeck_LeftStick_Touch;
+    }
+    private static final int k_EControllerActionOrigin_SteamDeck_RightStick_Move = (int)338L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_SteamDeck_RightStick_Move = 338
+     * }
+     */
+    public static int k_EControllerActionOrigin_SteamDeck_RightStick_Move() {
+        return k_EControllerActionOrigin_SteamDeck_RightStick_Move;
+    }
+    private static final int k_EControllerActionOrigin_SteamDeck_R3 = (int)339L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_SteamDeck_R3 = 339
+     * }
+     */
+    public static int k_EControllerActionOrigin_SteamDeck_R3() {
+        return k_EControllerActionOrigin_SteamDeck_R3;
+    }
+    private static final int k_EControllerActionOrigin_SteamDeck_RightStick_DPadNorth = (int)340L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_SteamDeck_RightStick_DPadNorth = 340
+     * }
+     */
+    public static int k_EControllerActionOrigin_SteamDeck_RightStick_DPadNorth() {
+        return k_EControllerActionOrigin_SteamDeck_RightStick_DPadNorth;
+    }
+    private static final int k_EControllerActionOrigin_SteamDeck_RightStick_DPadSouth = (int)341L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_SteamDeck_RightStick_DPadSouth = 341
+     * }
+     */
+    public static int k_EControllerActionOrigin_SteamDeck_RightStick_DPadSouth() {
+        return k_EControllerActionOrigin_SteamDeck_RightStick_DPadSouth;
+    }
+    private static final int k_EControllerActionOrigin_SteamDeck_RightStick_DPadWest = (int)342L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_SteamDeck_RightStick_DPadWest = 342
+     * }
+     */
+    public static int k_EControllerActionOrigin_SteamDeck_RightStick_DPadWest() {
+        return k_EControllerActionOrigin_SteamDeck_RightStick_DPadWest;
+    }
+    private static final int k_EControllerActionOrigin_SteamDeck_RightStick_DPadEast = (int)343L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_SteamDeck_RightStick_DPadEast = 343
+     * }
+     */
+    public static int k_EControllerActionOrigin_SteamDeck_RightStick_DPadEast() {
+        return k_EControllerActionOrigin_SteamDeck_RightStick_DPadEast;
+    }
+    private static final int k_EControllerActionOrigin_SteamDeck_RightStick_Touch = (int)344L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_SteamDeck_RightStick_Touch = 344
+     * }
+     */
+    public static int k_EControllerActionOrigin_SteamDeck_RightStick_Touch() {
+        return k_EControllerActionOrigin_SteamDeck_RightStick_Touch;
+    }
+    private static final int k_EControllerActionOrigin_SteamDeck_L4 = (int)345L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_SteamDeck_L4 = 345
+     * }
+     */
+    public static int k_EControllerActionOrigin_SteamDeck_L4() {
+        return k_EControllerActionOrigin_SteamDeck_L4;
+    }
+    private static final int k_EControllerActionOrigin_SteamDeck_R4 = (int)346L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_SteamDeck_R4 = 346
+     * }
+     */
+    public static int k_EControllerActionOrigin_SteamDeck_R4() {
+        return k_EControllerActionOrigin_SteamDeck_R4;
+    }
+    private static final int k_EControllerActionOrigin_SteamDeck_L5 = (int)347L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_SteamDeck_L5 = 347
+     * }
+     */
+    public static int k_EControllerActionOrigin_SteamDeck_L5() {
+        return k_EControllerActionOrigin_SteamDeck_L5;
+    }
+    private static final int k_EControllerActionOrigin_SteamDeck_R5 = (int)348L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_SteamDeck_R5 = 348
+     * }
+     */
+    public static int k_EControllerActionOrigin_SteamDeck_R5() {
+        return k_EControllerActionOrigin_SteamDeck_R5;
+    }
+    private static final int k_EControllerActionOrigin_SteamDeck_DPad_Move = (int)349L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_SteamDeck_DPad_Move = 349
+     * }
+     */
+    public static int k_EControllerActionOrigin_SteamDeck_DPad_Move() {
+        return k_EControllerActionOrigin_SteamDeck_DPad_Move;
+    }
+    private static final int k_EControllerActionOrigin_SteamDeck_DPad_North = (int)350L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_SteamDeck_DPad_North = 350
+     * }
+     */
+    public static int k_EControllerActionOrigin_SteamDeck_DPad_North() {
+        return k_EControllerActionOrigin_SteamDeck_DPad_North;
+    }
+    private static final int k_EControllerActionOrigin_SteamDeck_DPad_South = (int)351L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_SteamDeck_DPad_South = 351
+     * }
+     */
+    public static int k_EControllerActionOrigin_SteamDeck_DPad_South() {
+        return k_EControllerActionOrigin_SteamDeck_DPad_South;
+    }
+    private static final int k_EControllerActionOrigin_SteamDeck_DPad_West = (int)352L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_SteamDeck_DPad_West = 352
+     * }
+     */
+    public static int k_EControllerActionOrigin_SteamDeck_DPad_West() {
+        return k_EControllerActionOrigin_SteamDeck_DPad_West;
+    }
+    private static final int k_EControllerActionOrigin_SteamDeck_DPad_East = (int)353L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_SteamDeck_DPad_East = 353
+     * }
+     */
+    public static int k_EControllerActionOrigin_SteamDeck_DPad_East() {
+        return k_EControllerActionOrigin_SteamDeck_DPad_East;
+    }
+    private static final int k_EControllerActionOrigin_SteamDeck_Gyro_Move = (int)354L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_SteamDeck_Gyro_Move = 354
+     * }
+     */
+    public static int k_EControllerActionOrigin_SteamDeck_Gyro_Move() {
+        return k_EControllerActionOrigin_SteamDeck_Gyro_Move;
+    }
+    private static final int k_EControllerActionOrigin_SteamDeck_Gyro_Pitch = (int)355L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_SteamDeck_Gyro_Pitch = 355
+     * }
+     */
+    public static int k_EControllerActionOrigin_SteamDeck_Gyro_Pitch() {
+        return k_EControllerActionOrigin_SteamDeck_Gyro_Pitch;
+    }
+    private static final int k_EControllerActionOrigin_SteamDeck_Gyro_Yaw = (int)356L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_SteamDeck_Gyro_Yaw = 356
+     * }
+     */
+    public static int k_EControllerActionOrigin_SteamDeck_Gyro_Yaw() {
+        return k_EControllerActionOrigin_SteamDeck_Gyro_Yaw;
+    }
+    private static final int k_EControllerActionOrigin_SteamDeck_Gyro_Roll = (int)357L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_SteamDeck_Gyro_Roll = 357
+     * }
+     */
+    public static int k_EControllerActionOrigin_SteamDeck_Gyro_Roll() {
+        return k_EControllerActionOrigin_SteamDeck_Gyro_Roll;
+    }
+    private static final int k_EControllerActionOrigin_SteamDeck_Reserved1 = (int)358L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_SteamDeck_Reserved1 = 358
+     * }
+     */
+    public static int k_EControllerActionOrigin_SteamDeck_Reserved1() {
+        return k_EControllerActionOrigin_SteamDeck_Reserved1;
+    }
+    private static final int k_EControllerActionOrigin_SteamDeck_Reserved2 = (int)359L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_SteamDeck_Reserved2 = 359
+     * }
+     */
+    public static int k_EControllerActionOrigin_SteamDeck_Reserved2() {
+        return k_EControllerActionOrigin_SteamDeck_Reserved2;
+    }
+    private static final int k_EControllerActionOrigin_SteamDeck_Reserved3 = (int)360L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_SteamDeck_Reserved3 = 360
+     * }
+     */
+    public static int k_EControllerActionOrigin_SteamDeck_Reserved3() {
+        return k_EControllerActionOrigin_SteamDeck_Reserved3;
+    }
+    private static final int k_EControllerActionOrigin_SteamDeck_Reserved4 = (int)361L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_SteamDeck_Reserved4 = 361
+     * }
+     */
+    public static int k_EControllerActionOrigin_SteamDeck_Reserved4() {
+        return k_EControllerActionOrigin_SteamDeck_Reserved4;
+    }
+    private static final int k_EControllerActionOrigin_SteamDeck_Reserved5 = (int)362L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_SteamDeck_Reserved5 = 362
+     * }
+     */
+    public static int k_EControllerActionOrigin_SteamDeck_Reserved5() {
+        return k_EControllerActionOrigin_SteamDeck_Reserved5;
+    }
+    private static final int k_EControllerActionOrigin_SteamDeck_Reserved6 = (int)363L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_SteamDeck_Reserved6 = 363
+     * }
+     */
+    public static int k_EControllerActionOrigin_SteamDeck_Reserved6() {
+        return k_EControllerActionOrigin_SteamDeck_Reserved6;
+    }
+    private static final int k_EControllerActionOrigin_SteamDeck_Reserved7 = (int)364L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_SteamDeck_Reserved7 = 364
+     * }
+     */
+    public static int k_EControllerActionOrigin_SteamDeck_Reserved7() {
+        return k_EControllerActionOrigin_SteamDeck_Reserved7;
+    }
+    private static final int k_EControllerActionOrigin_SteamDeck_Reserved8 = (int)365L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_SteamDeck_Reserved8 = 365
+     * }
+     */
+    public static int k_EControllerActionOrigin_SteamDeck_Reserved8() {
+        return k_EControllerActionOrigin_SteamDeck_Reserved8;
+    }
+    private static final int k_EControllerActionOrigin_SteamDeck_Reserved9 = (int)366L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_SteamDeck_Reserved9 = 366
+     * }
+     */
+    public static int k_EControllerActionOrigin_SteamDeck_Reserved9() {
+        return k_EControllerActionOrigin_SteamDeck_Reserved9;
+    }
+    private static final int k_EControllerActionOrigin_SteamDeck_Reserved10 = (int)367L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_SteamDeck_Reserved10 = 367
+     * }
+     */
+    public static int k_EControllerActionOrigin_SteamDeck_Reserved10() {
+        return k_EControllerActionOrigin_SteamDeck_Reserved10;
+    }
+    private static final int k_EControllerActionOrigin_SteamDeck_Reserved11 = (int)368L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_SteamDeck_Reserved11 = 368
+     * }
+     */
+    public static int k_EControllerActionOrigin_SteamDeck_Reserved11() {
+        return k_EControllerActionOrigin_SteamDeck_Reserved11;
+    }
+    private static final int k_EControllerActionOrigin_SteamDeck_Reserved12 = (int)369L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_SteamDeck_Reserved12 = 369
+     * }
+     */
+    public static int k_EControllerActionOrigin_SteamDeck_Reserved12() {
+        return k_EControllerActionOrigin_SteamDeck_Reserved12;
+    }
+    private static final int k_EControllerActionOrigin_SteamDeck_Reserved13 = (int)370L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_SteamDeck_Reserved13 = 370
+     * }
+     */
+    public static int k_EControllerActionOrigin_SteamDeck_Reserved13() {
+        return k_EControllerActionOrigin_SteamDeck_Reserved13;
+    }
+    private static final int k_EControllerActionOrigin_SteamDeck_Reserved14 = (int)371L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_SteamDeck_Reserved14 = 371
+     * }
+     */
+    public static int k_EControllerActionOrigin_SteamDeck_Reserved14() {
+        return k_EControllerActionOrigin_SteamDeck_Reserved14;
+    }
+    private static final int k_EControllerActionOrigin_SteamDeck_Reserved15 = (int)372L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_SteamDeck_Reserved15 = 372
+     * }
+     */
+    public static int k_EControllerActionOrigin_SteamDeck_Reserved15() {
+        return k_EControllerActionOrigin_SteamDeck_Reserved15;
+    }
+    private static final int k_EControllerActionOrigin_SteamDeck_Reserved16 = (int)373L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_SteamDeck_Reserved16 = 373
+     * }
+     */
+    public static int k_EControllerActionOrigin_SteamDeck_Reserved16() {
+        return k_EControllerActionOrigin_SteamDeck_Reserved16;
+    }
+    private static final int k_EControllerActionOrigin_SteamDeck_Reserved17 = (int)374L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_SteamDeck_Reserved17 = 374
+     * }
+     */
+    public static int k_EControllerActionOrigin_SteamDeck_Reserved17() {
+        return k_EControllerActionOrigin_SteamDeck_Reserved17;
+    }
+    private static final int k_EControllerActionOrigin_SteamDeck_Reserved18 = (int)375L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_SteamDeck_Reserved18 = 375
+     * }
+     */
+    public static int k_EControllerActionOrigin_SteamDeck_Reserved18() {
+        return k_EControllerActionOrigin_SteamDeck_Reserved18;
+    }
+    private static final int k_EControllerActionOrigin_SteamDeck_Reserved19 = (int)376L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_SteamDeck_Reserved19 = 376
+     * }
+     */
+    public static int k_EControllerActionOrigin_SteamDeck_Reserved19() {
+        return k_EControllerActionOrigin_SteamDeck_Reserved19;
+    }
+    private static final int k_EControllerActionOrigin_SteamDeck_Reserved20 = (int)377L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_SteamDeck_Reserved20 = 377
+     * }
+     */
+    public static int k_EControllerActionOrigin_SteamDeck_Reserved20() {
+        return k_EControllerActionOrigin_SteamDeck_Reserved20;
+    }
+    private static final int k_EControllerActionOrigin_Switch_JoyConButton_N = (int)378L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_Switch_JoyConButton_N = 378
+     * }
+     */
+    public static int k_EControllerActionOrigin_Switch_JoyConButton_N() {
+        return k_EControllerActionOrigin_Switch_JoyConButton_N;
+    }
+    private static final int k_EControllerActionOrigin_Switch_JoyConButton_E = (int)379L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_Switch_JoyConButton_E = 379
+     * }
+     */
+    public static int k_EControllerActionOrigin_Switch_JoyConButton_E() {
+        return k_EControllerActionOrigin_Switch_JoyConButton_E;
+    }
+    private static final int k_EControllerActionOrigin_Switch_JoyConButton_S = (int)380L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_Switch_JoyConButton_S = 380
+     * }
+     */
+    public static int k_EControllerActionOrigin_Switch_JoyConButton_S() {
+        return k_EControllerActionOrigin_Switch_JoyConButton_S;
+    }
+    private static final int k_EControllerActionOrigin_Switch_JoyConButton_W = (int)381L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_Switch_JoyConButton_W = 381
+     * }
+     */
+    public static int k_EControllerActionOrigin_Switch_JoyConButton_W() {
+        return k_EControllerActionOrigin_Switch_JoyConButton_W;
+    }
+    private static final int k_EControllerActionOrigin_PS5_LeftGrip = (int)382L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_PS5_LeftGrip = 382
+     * }
+     */
+    public static int k_EControllerActionOrigin_PS5_LeftGrip() {
+        return k_EControllerActionOrigin_PS5_LeftGrip;
+    }
+    private static final int k_EControllerActionOrigin_PS5_RightGrip = (int)383L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_PS5_RightGrip = 383
+     * }
+     */
+    public static int k_EControllerActionOrigin_PS5_RightGrip() {
+        return k_EControllerActionOrigin_PS5_RightGrip;
+    }
+    private static final int k_EControllerActionOrigin_PS5_LeftFn = (int)384L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_PS5_LeftFn = 384
+     * }
+     */
+    public static int k_EControllerActionOrigin_PS5_LeftFn() {
+        return k_EControllerActionOrigin_PS5_LeftFn;
+    }
+    private static final int k_EControllerActionOrigin_PS5_RightFn = (int)385L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_PS5_RightFn = 385
+     * }
+     */
+    public static int k_EControllerActionOrigin_PS5_RightFn() {
+        return k_EControllerActionOrigin_PS5_RightFn;
+    }
+    private static final int k_EControllerActionOrigin_Count = (int)386L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_Count = 386
+     * }
+     */
+    public static int k_EControllerActionOrigin_Count() {
+        return k_EControllerActionOrigin_Count;
+    }
+    private static final int k_EControllerActionOrigin_MaximumPossibleValue = (int)32767L;
+    /**
+     * {@snippet lang=c :
+     * enum EControllerActionOrigin.k_EControllerActionOrigin_MaximumPossibleValue = 32767
+     * }
+     */
+    public static int k_EControllerActionOrigin_MaximumPossibleValue() {
+        return k_EControllerActionOrigin_MaximumPossibleValue;
+    }
+    private static final int k_ESteamControllerLEDFlag_SetColor = (int)0L;
+    /**
+     * {@snippet lang=c :
+     * enum ESteamControllerLEDFlag.k_ESteamControllerLEDFlag_SetColor = 0
+     * }
+     */
+    public static int k_ESteamControllerLEDFlag_SetColor() {
+        return k_ESteamControllerLEDFlag_SetColor;
+    }
+    private static final int k_ESteamControllerLEDFlag_RestoreUserDefault = (int)1L;
+    /**
+     * {@snippet lang=c :
+     * enum ESteamControllerLEDFlag.k_ESteamControllerLEDFlag_RestoreUserDefault = 1
+     * }
+     */
+    public static int k_ESteamControllerLEDFlag_RestoreUserDefault() {
+        return k_ESteamControllerLEDFlag_RestoreUserDefault;
+    }
+    private static final int k_EUGCMatchingUGCType_Items = (int)0L;
+    /**
+     * {@snippet lang=c :
+     * enum EUGCMatchingUGCType.k_EUGCMatchingUGCType_Items = 0
+     * }
+     */
+    public static int k_EUGCMatchingUGCType_Items() {
+        return k_EUGCMatchingUGCType_Items;
+    }
+    private static final int k_EUGCMatchingUGCType_Items_Mtx = (int)1L;
+    /**
+     * {@snippet lang=c :
+     * enum EUGCMatchingUGCType.k_EUGCMatchingUGCType_Items_Mtx = 1
+     * }
+     */
+    public static int k_EUGCMatchingUGCType_Items_Mtx() {
+        return k_EUGCMatchingUGCType_Items_Mtx;
+    }
+    private static final int k_EUGCMatchingUGCType_Items_ReadyToUse = (int)2L;
+    /**
+     * {@snippet lang=c :
+     * enum EUGCMatchingUGCType.k_EUGCMatchingUGCType_Items_ReadyToUse = 2
+     * }
+     */
+    public static int k_EUGCMatchingUGCType_Items_ReadyToUse() {
+        return k_EUGCMatchingUGCType_Items_ReadyToUse;
+    }
+    private static final int k_EUGCMatchingUGCType_Collections = (int)3L;
+    /**
+     * {@snippet lang=c :
+     * enum EUGCMatchingUGCType.k_EUGCMatchingUGCType_Collections = 3
+     * }
+     */
+    public static int k_EUGCMatchingUGCType_Collections() {
+        return k_EUGCMatchingUGCType_Collections;
+    }
+    private static final int k_EUGCMatchingUGCType_Artwork = (int)4L;
+    /**
+     * {@snippet lang=c :
+     * enum EUGCMatchingUGCType.k_EUGCMatchingUGCType_Artwork = 4
+     * }
+     */
+    public static int k_EUGCMatchingUGCType_Artwork() {
+        return k_EUGCMatchingUGCType_Artwork;
+    }
+    private static final int k_EUGCMatchingUGCType_Videos = (int)5L;
+    /**
+     * {@snippet lang=c :
+     * enum EUGCMatchingUGCType.k_EUGCMatchingUGCType_Videos = 5
+     * }
+     */
+    public static int k_EUGCMatchingUGCType_Videos() {
+        return k_EUGCMatchingUGCType_Videos;
+    }
+    private static final int k_EUGCMatchingUGCType_Screenshots = (int)6L;
+    /**
+     * {@snippet lang=c :
+     * enum EUGCMatchingUGCType.k_EUGCMatchingUGCType_Screenshots = 6
+     * }
+     */
+    public static int k_EUGCMatchingUGCType_Screenshots() {
+        return k_EUGCMatchingUGCType_Screenshots;
+    }
+    private static final int k_EUGCMatchingUGCType_AllGuides = (int)7L;
+    /**
+     * {@snippet lang=c :
+     * enum EUGCMatchingUGCType.k_EUGCMatchingUGCType_AllGuides = 7
+     * }
+     */
+    public static int k_EUGCMatchingUGCType_AllGuides() {
+        return k_EUGCMatchingUGCType_AllGuides;
+    }
+    private static final int k_EUGCMatchingUGCType_WebGuides = (int)8L;
+    /**
+     * {@snippet lang=c :
+     * enum EUGCMatchingUGCType.k_EUGCMatchingUGCType_WebGuides = 8
+     * }
+     */
+    public static int k_EUGCMatchingUGCType_WebGuides() {
+        return k_EUGCMatchingUGCType_WebGuides;
+    }
+    private static final int k_EUGCMatchingUGCType_IntegratedGuides = (int)9L;
+    /**
+     * {@snippet lang=c :
+     * enum EUGCMatchingUGCType.k_EUGCMatchingUGCType_IntegratedGuides = 9
+     * }
+     */
+    public static int k_EUGCMatchingUGCType_IntegratedGuides() {
+        return k_EUGCMatchingUGCType_IntegratedGuides;
+    }
+    private static final int k_EUGCMatchingUGCType_UsableInGame = (int)10L;
+    /**
+     * {@snippet lang=c :
+     * enum EUGCMatchingUGCType.k_EUGCMatchingUGCType_UsableInGame = 10
+     * }
+     */
+    public static int k_EUGCMatchingUGCType_UsableInGame() {
+        return k_EUGCMatchingUGCType_UsableInGame;
+    }
+    private static final int k_EUGCMatchingUGCType_ControllerBindings = (int)11L;
+    /**
+     * {@snippet lang=c :
+     * enum EUGCMatchingUGCType.k_EUGCMatchingUGCType_ControllerBindings = 11
+     * }
+     */
+    public static int k_EUGCMatchingUGCType_ControllerBindings() {
+        return k_EUGCMatchingUGCType_ControllerBindings;
+    }
+    private static final int k_EUGCMatchingUGCType_GameManagedItems = (int)12L;
+    /**
+     * {@snippet lang=c :
+     * enum EUGCMatchingUGCType.k_EUGCMatchingUGCType_GameManagedItems = 12
+     * }
+     */
+    public static int k_EUGCMatchingUGCType_GameManagedItems() {
+        return k_EUGCMatchingUGCType_GameManagedItems;
+    }
+    private static final int k_EUGCMatchingUGCType_All = (int)-1L;
+    /**
+     * {@snippet lang=c :
+     * enum EUGCMatchingUGCType.k_EUGCMatchingUGCType_All = -1
+     * }
+     */
+    public static int k_EUGCMatchingUGCType_All() {
+        return k_EUGCMatchingUGCType_All;
+    }
+    private static final int k_EUserUGCList_Published = (int)0L;
+    /**
+     * {@snippet lang=c :
+     * enum EUserUGCList.k_EUserUGCList_Published = 0
+     * }
+     */
+    public static int k_EUserUGCList_Published() {
+        return k_EUserUGCList_Published;
+    }
+    private static final int k_EUserUGCList_VotedOn = (int)1L;
+    /**
+     * {@snippet lang=c :
+     * enum EUserUGCList.k_EUserUGCList_VotedOn = 1
+     * }
+     */
+    public static int k_EUserUGCList_VotedOn() {
+        return k_EUserUGCList_VotedOn;
+    }
+    private static final int k_EUserUGCList_VotedUp = (int)2L;
+    /**
+     * {@snippet lang=c :
+     * enum EUserUGCList.k_EUserUGCList_VotedUp = 2
+     * }
+     */
+    public static int k_EUserUGCList_VotedUp() {
+        return k_EUserUGCList_VotedUp;
+    }
+    private static final int k_EUserUGCList_VotedDown = (int)3L;
+    /**
+     * {@snippet lang=c :
+     * enum EUserUGCList.k_EUserUGCList_VotedDown = 3
+     * }
+     */
+    public static int k_EUserUGCList_VotedDown() {
+        return k_EUserUGCList_VotedDown;
+    }
+    private static final int k_EUserUGCList_WillVoteLater = (int)4L;
+    /**
+     * {@snippet lang=c :
+     * enum EUserUGCList.k_EUserUGCList_WillVoteLater = 4
+     * }
+     */
+    public static int k_EUserUGCList_WillVoteLater() {
+        return k_EUserUGCList_WillVoteLater;
+    }
+    private static final int k_EUserUGCList_Favorited = (int)5L;
+    /**
+     * {@snippet lang=c :
+     * enum EUserUGCList.k_EUserUGCList_Favorited = 5
+     * }
+     */
+    public static int k_EUserUGCList_Favorited() {
+        return k_EUserUGCList_Favorited;
+    }
+    private static final int k_EUserUGCList_Subscribed = (int)6L;
+    /**
+     * {@snippet lang=c :
+     * enum EUserUGCList.k_EUserUGCList_Subscribed = 6
+     * }
+     */
+    public static int k_EUserUGCList_Subscribed() {
+        return k_EUserUGCList_Subscribed;
+    }
+    private static final int k_EUserUGCList_UsedOrPlayed = (int)7L;
+    /**
+     * {@snippet lang=c :
+     * enum EUserUGCList.k_EUserUGCList_UsedOrPlayed = 7
+     * }
+     */
+    public static int k_EUserUGCList_UsedOrPlayed() {
+        return k_EUserUGCList_UsedOrPlayed;
+    }
+    private static final int k_EUserUGCList_Followed = (int)8L;
+    /**
+     * {@snippet lang=c :
+     * enum EUserUGCList.k_EUserUGCList_Followed = 8
+     * }
+     */
+    public static int k_EUserUGCList_Followed() {
+        return k_EUserUGCList_Followed;
+    }
+    private static final int k_EUserUGCListSortOrder_CreationOrderDesc = (int)0L;
+    /**
+     * {@snippet lang=c :
+     * enum EUserUGCListSortOrder.k_EUserUGCListSortOrder_CreationOrderDesc = 0
+     * }
+     */
+    public static int k_EUserUGCListSortOrder_CreationOrderDesc() {
+        return k_EUserUGCListSortOrder_CreationOrderDesc;
+    }
+    private static final int k_EUserUGCListSortOrder_CreationOrderAsc = (int)1L;
+    /**
+     * {@snippet lang=c :
+     * enum EUserUGCListSortOrder.k_EUserUGCListSortOrder_CreationOrderAsc = 1
+     * }
+     */
+    public static int k_EUserUGCListSortOrder_CreationOrderAsc() {
+        return k_EUserUGCListSortOrder_CreationOrderAsc;
+    }
+    private static final int k_EUserUGCListSortOrder_TitleAsc = (int)2L;
+    /**
+     * {@snippet lang=c :
+     * enum EUserUGCListSortOrder.k_EUserUGCListSortOrder_TitleAsc = 2
+     * }
+     */
+    public static int k_EUserUGCListSortOrder_TitleAsc() {
+        return k_EUserUGCListSortOrder_TitleAsc;
+    }
+    private static final int k_EUserUGCListSortOrder_LastUpdatedDesc = (int)3L;
+    /**
+     * {@snippet lang=c :
+     * enum EUserUGCListSortOrder.k_EUserUGCListSortOrder_LastUpdatedDesc = 3
+     * }
+     */
+    public static int k_EUserUGCListSortOrder_LastUpdatedDesc() {
+        return k_EUserUGCListSortOrder_LastUpdatedDesc;
+    }
+    private static final int k_EUserUGCListSortOrder_SubscriptionDateDesc = (int)4L;
+    /**
+     * {@snippet lang=c :
+     * enum EUserUGCListSortOrder.k_EUserUGCListSortOrder_SubscriptionDateDesc = 4
+     * }
+     */
+    public static int k_EUserUGCListSortOrder_SubscriptionDateDesc() {
+        return k_EUserUGCListSortOrder_SubscriptionDateDesc;
+    }
+    private static final int k_EUserUGCListSortOrder_VoteScoreDesc = (int)5L;
+    /**
+     * {@snippet lang=c :
+     * enum EUserUGCListSortOrder.k_EUserUGCListSortOrder_VoteScoreDesc = 5
+     * }
+     */
+    public static int k_EUserUGCListSortOrder_VoteScoreDesc() {
+        return k_EUserUGCListSortOrder_VoteScoreDesc;
+    }
+    private static final int k_EUserUGCListSortOrder_ForModeration = (int)6L;
+    /**
+     * {@snippet lang=c :
+     * enum EUserUGCListSortOrder.k_EUserUGCListSortOrder_ForModeration = 6
+     * }
+     */
+    public static int k_EUserUGCListSortOrder_ForModeration() {
+        return k_EUserUGCListSortOrder_ForModeration;
+    }
+    private static final int k_EUGCQuery_RankedByVote = (int)0L;
+    /**
+     * {@snippet lang=c :
+     * enum EUGCQuery.k_EUGCQuery_RankedByVote = 0
+     * }
+     */
+    public static int k_EUGCQuery_RankedByVote() {
+        return k_EUGCQuery_RankedByVote;
+    }
+    private static final int k_EUGCQuery_RankedByPublicationDate = (int)1L;
+    /**
+     * {@snippet lang=c :
+     * enum EUGCQuery.k_EUGCQuery_RankedByPublicationDate = 1
+     * }
+     */
+    public static int k_EUGCQuery_RankedByPublicationDate() {
+        return k_EUGCQuery_RankedByPublicationDate;
+    }
+    private static final int k_EUGCQuery_AcceptedForGameRankedByAcceptanceDate = (int)2L;
+    /**
+     * {@snippet lang=c :
+     * enum EUGCQuery.k_EUGCQuery_AcceptedForGameRankedByAcceptanceDate = 2
+     * }
+     */
+    public static int k_EUGCQuery_AcceptedForGameRankedByAcceptanceDate() {
+        return k_EUGCQuery_AcceptedForGameRankedByAcceptanceDate;
+    }
+    private static final int k_EUGCQuery_RankedByTrend = (int)3L;
+    /**
+     * {@snippet lang=c :
+     * enum EUGCQuery.k_EUGCQuery_RankedByTrend = 3
+     * }
+     */
+    public static int k_EUGCQuery_RankedByTrend() {
+        return k_EUGCQuery_RankedByTrend;
+    }
+    private static final int k_EUGCQuery_FavoritedByFriendsRankedByPublicationDate = (int)4L;
+    /**
+     * {@snippet lang=c :
+     * enum EUGCQuery.k_EUGCQuery_FavoritedByFriendsRankedByPublicationDate = 4
+     * }
+     */
+    public static int k_EUGCQuery_FavoritedByFriendsRankedByPublicationDate() {
+        return k_EUGCQuery_FavoritedByFriendsRankedByPublicationDate;
+    }
+    private static final int k_EUGCQuery_CreatedByFriendsRankedByPublicationDate = (int)5L;
+    /**
+     * {@snippet lang=c :
+     * enum EUGCQuery.k_EUGCQuery_CreatedByFriendsRankedByPublicationDate = 5
+     * }
+     */
+    public static int k_EUGCQuery_CreatedByFriendsRankedByPublicationDate() {
+        return k_EUGCQuery_CreatedByFriendsRankedByPublicationDate;
+    }
+    private static final int k_EUGCQuery_RankedByNumTimesReported = (int)6L;
+    /**
+     * {@snippet lang=c :
+     * enum EUGCQuery.k_EUGCQuery_RankedByNumTimesReported = 6
+     * }
+     */
+    public static int k_EUGCQuery_RankedByNumTimesReported() {
+        return k_EUGCQuery_RankedByNumTimesReported;
+    }
+    private static final int k_EUGCQuery_CreatedByFollowedUsersRankedByPublicationDate = (int)7L;
+    /**
+     * {@snippet lang=c :
+     * enum EUGCQuery.k_EUGCQuery_CreatedByFollowedUsersRankedByPublicationDate = 7
+     * }
+     */
+    public static int k_EUGCQuery_CreatedByFollowedUsersRankedByPublicationDate() {
+        return k_EUGCQuery_CreatedByFollowedUsersRankedByPublicationDate;
+    }
+    private static final int k_EUGCQuery_NotYetRated = (int)8L;
+    /**
+     * {@snippet lang=c :
+     * enum EUGCQuery.k_EUGCQuery_NotYetRated = 8
+     * }
+     */
+    public static int k_EUGCQuery_NotYetRated() {
+        return k_EUGCQuery_NotYetRated;
+    }
+    private static final int k_EUGCQuery_RankedByTotalVotesAsc = (int)9L;
+    /**
+     * {@snippet lang=c :
+     * enum EUGCQuery.k_EUGCQuery_RankedByTotalVotesAsc = 9
+     * }
+     */
+    public static int k_EUGCQuery_RankedByTotalVotesAsc() {
+        return k_EUGCQuery_RankedByTotalVotesAsc;
+    }
+    private static final int k_EUGCQuery_RankedByVotesUp = (int)10L;
+    /**
+     * {@snippet lang=c :
+     * enum EUGCQuery.k_EUGCQuery_RankedByVotesUp = 10
+     * }
+     */
+    public static int k_EUGCQuery_RankedByVotesUp() {
+        return k_EUGCQuery_RankedByVotesUp;
+    }
+    private static final int k_EUGCQuery_RankedByTextSearch = (int)11L;
+    /**
+     * {@snippet lang=c :
+     * enum EUGCQuery.k_EUGCQuery_RankedByTextSearch = 11
+     * }
+     */
+    public static int k_EUGCQuery_RankedByTextSearch() {
+        return k_EUGCQuery_RankedByTextSearch;
+    }
+    private static final int k_EUGCQuery_RankedByTotalUniqueSubscriptions = (int)12L;
+    /**
+     * {@snippet lang=c :
+     * enum EUGCQuery.k_EUGCQuery_RankedByTotalUniqueSubscriptions = 12
+     * }
+     */
+    public static int k_EUGCQuery_RankedByTotalUniqueSubscriptions() {
+        return k_EUGCQuery_RankedByTotalUniqueSubscriptions;
+    }
+    private static final int k_EUGCQuery_RankedByPlaytimeTrend = (int)13L;
+    /**
+     * {@snippet lang=c :
+     * enum EUGCQuery.k_EUGCQuery_RankedByPlaytimeTrend = 13
+     * }
+     */
+    public static int k_EUGCQuery_RankedByPlaytimeTrend() {
+        return k_EUGCQuery_RankedByPlaytimeTrend;
+    }
+    private static final int k_EUGCQuery_RankedByTotalPlaytime = (int)14L;
+    /**
+     * {@snippet lang=c :
+     * enum EUGCQuery.k_EUGCQuery_RankedByTotalPlaytime = 14
+     * }
+     */
+    public static int k_EUGCQuery_RankedByTotalPlaytime() {
+        return k_EUGCQuery_RankedByTotalPlaytime;
+    }
+    private static final int k_EUGCQuery_RankedByAveragePlaytimeTrend = (int)15L;
+    /**
+     * {@snippet lang=c :
+     * enum EUGCQuery.k_EUGCQuery_RankedByAveragePlaytimeTrend = 15
+     * }
+     */
+    public static int k_EUGCQuery_RankedByAveragePlaytimeTrend() {
+        return k_EUGCQuery_RankedByAveragePlaytimeTrend;
+    }
+    private static final int k_EUGCQuery_RankedByLifetimeAveragePlaytime = (int)16L;
+    /**
+     * {@snippet lang=c :
+     * enum EUGCQuery.k_EUGCQuery_RankedByLifetimeAveragePlaytime = 16
+     * }
+     */
+    public static int k_EUGCQuery_RankedByLifetimeAveragePlaytime() {
+        return k_EUGCQuery_RankedByLifetimeAveragePlaytime;
+    }
+    private static final int k_EUGCQuery_RankedByPlaytimeSessionsTrend = (int)17L;
+    /**
+     * {@snippet lang=c :
+     * enum EUGCQuery.k_EUGCQuery_RankedByPlaytimeSessionsTrend = 17
+     * }
+     */
+    public static int k_EUGCQuery_RankedByPlaytimeSessionsTrend() {
+        return k_EUGCQuery_RankedByPlaytimeSessionsTrend;
+    }
+    private static final int k_EUGCQuery_RankedByLifetimePlaytimeSessions = (int)18L;
+    /**
+     * {@snippet lang=c :
+     * enum EUGCQuery.k_EUGCQuery_RankedByLifetimePlaytimeSessions = 18
+     * }
+     */
+    public static int k_EUGCQuery_RankedByLifetimePlaytimeSessions() {
+        return k_EUGCQuery_RankedByLifetimePlaytimeSessions;
+    }
+    private static final int k_EUGCQuery_RankedByLastUpdatedDate = (int)19L;
+    /**
+     * {@snippet lang=c :
+     * enum EUGCQuery.k_EUGCQuery_RankedByLastUpdatedDate = 19
+     * }
+     */
+    public static int k_EUGCQuery_RankedByLastUpdatedDate() {
+        return k_EUGCQuery_RankedByLastUpdatedDate;
+    }
+    private static final int k_EItemUpdateStatusInvalid = (int)0L;
+    /**
+     * {@snippet lang=c :
+     * enum EItemUpdateStatus.k_EItemUpdateStatusInvalid = 0
+     * }
+     */
+    public static int k_EItemUpdateStatusInvalid() {
+        return k_EItemUpdateStatusInvalid;
+    }
+    private static final int k_EItemUpdateStatusPreparingConfig = (int)1L;
+    /**
+     * {@snippet lang=c :
+     * enum EItemUpdateStatus.k_EItemUpdateStatusPreparingConfig = 1
+     * }
+     */
+    public static int k_EItemUpdateStatusPreparingConfig() {
+        return k_EItemUpdateStatusPreparingConfig;
+    }
+    private static final int k_EItemUpdateStatusPreparingContent = (int)2L;
+    /**
+     * {@snippet lang=c :
+     * enum EItemUpdateStatus.k_EItemUpdateStatusPreparingContent = 2
+     * }
+     */
+    public static int k_EItemUpdateStatusPreparingContent() {
+        return k_EItemUpdateStatusPreparingContent;
+    }
+    private static final int k_EItemUpdateStatusUploadingContent = (int)3L;
+    /**
+     * {@snippet lang=c :
+     * enum EItemUpdateStatus.k_EItemUpdateStatusUploadingContent = 3
+     * }
+     */
+    public static int k_EItemUpdateStatusUploadingContent() {
+        return k_EItemUpdateStatusUploadingContent;
+    }
+    private static final int k_EItemUpdateStatusUploadingPreviewFile = (int)4L;
+    /**
+     * {@snippet lang=c :
+     * enum EItemUpdateStatus.k_EItemUpdateStatusUploadingPreviewFile = 4
+     * }
+     */
+    public static int k_EItemUpdateStatusUploadingPreviewFile() {
+        return k_EItemUpdateStatusUploadingPreviewFile;
+    }
+    private static final int k_EItemUpdateStatusCommittingChanges = (int)5L;
+    /**
+     * {@snippet lang=c :
+     * enum EItemUpdateStatus.k_EItemUpdateStatusCommittingChanges = 5
+     * }
+     */
+    public static int k_EItemUpdateStatusCommittingChanges() {
+        return k_EItemUpdateStatusCommittingChanges;
+    }
+    private static final int k_EItemStateNone = (int)0L;
+    /**
+     * {@snippet lang=c :
+     * enum EItemState.k_EItemStateNone = 0
+     * }
+     */
+    public static int k_EItemStateNone() {
+        return k_EItemStateNone;
+    }
+    private static final int k_EItemStateSubscribed = (int)1L;
+    /**
+     * {@snippet lang=c :
+     * enum EItemState.k_EItemStateSubscribed = 1
+     * }
+     */
+    public static int k_EItemStateSubscribed() {
+        return k_EItemStateSubscribed;
+    }
+    private static final int k_EItemStateLegacyItem = (int)2L;
+    /**
+     * {@snippet lang=c :
+     * enum EItemState.k_EItemStateLegacyItem = 2
+     * }
+     */
+    public static int k_EItemStateLegacyItem() {
+        return k_EItemStateLegacyItem;
+    }
+    private static final int k_EItemStateInstalled = (int)4L;
+    /**
+     * {@snippet lang=c :
+     * enum EItemState.k_EItemStateInstalled = 4
+     * }
+     */
+    public static int k_EItemStateInstalled() {
+        return k_EItemStateInstalled;
+    }
+    private static final int k_EItemStateNeedsUpdate = (int)8L;
+    /**
+     * {@snippet lang=c :
+     * enum EItemState.k_EItemStateNeedsUpdate = 8
+     * }
+     */
+    public static int k_EItemStateNeedsUpdate() {
+        return k_EItemStateNeedsUpdate;
+    }
+    private static final int k_EItemStateDownloading = (int)16L;
+    /**
+     * {@snippet lang=c :
+     * enum EItemState.k_EItemStateDownloading = 16
+     * }
+     */
+    public static int k_EItemStateDownloading() {
+        return k_EItemStateDownloading;
+    }
+    private static final int k_EItemStateDownloadPending = (int)32L;
+    /**
+     * {@snippet lang=c :
+     * enum EItemState.k_EItemStateDownloadPending = 32
+     * }
+     */
+    public static int k_EItemStateDownloadPending() {
+        return k_EItemStateDownloadPending;
+    }
+    private static final int k_EItemStateDisabledLocally = (int)64L;
+    /**
+     * {@snippet lang=c :
+     * enum EItemState.k_EItemStateDisabledLocally = 64
+     * }
+     */
+    public static int k_EItemStateDisabledLocally() {
+        return k_EItemStateDisabledLocally;
+    }
+    private static final int k_EItemStatistic_NumSubscriptions = (int)0L;
+    /**
+     * {@snippet lang=c :
+     * enum EItemStatistic.k_EItemStatistic_NumSubscriptions = 0
+     * }
+     */
+    public static int k_EItemStatistic_NumSubscriptions() {
+        return k_EItemStatistic_NumSubscriptions;
+    }
+    private static final int k_EItemStatistic_NumFavorites = (int)1L;
+    /**
+     * {@snippet lang=c :
+     * enum EItemStatistic.k_EItemStatistic_NumFavorites = 1
+     * }
+     */
+    public static int k_EItemStatistic_NumFavorites() {
+        return k_EItemStatistic_NumFavorites;
+    }
+    private static final int k_EItemStatistic_NumFollowers = (int)2L;
+    /**
+     * {@snippet lang=c :
+     * enum EItemStatistic.k_EItemStatistic_NumFollowers = 2
+     * }
+     */
+    public static int k_EItemStatistic_NumFollowers() {
+        return k_EItemStatistic_NumFollowers;
+    }
+    private static final int k_EItemStatistic_NumUniqueSubscriptions = (int)3L;
+    /**
+     * {@snippet lang=c :
+     * enum EItemStatistic.k_EItemStatistic_NumUniqueSubscriptions = 3
+     * }
+     */
+    public static int k_EItemStatistic_NumUniqueSubscriptions() {
+        return k_EItemStatistic_NumUniqueSubscriptions;
+    }
+    private static final int k_EItemStatistic_NumUniqueFavorites = (int)4L;
+    /**
+     * {@snippet lang=c :
+     * enum EItemStatistic.k_EItemStatistic_NumUniqueFavorites = 4
+     * }
+     */
+    public static int k_EItemStatistic_NumUniqueFavorites() {
+        return k_EItemStatistic_NumUniqueFavorites;
+    }
+    private static final int k_EItemStatistic_NumUniqueFollowers = (int)5L;
+    /**
+     * {@snippet lang=c :
+     * enum EItemStatistic.k_EItemStatistic_NumUniqueFollowers = 5
+     * }
+     */
+    public static int k_EItemStatistic_NumUniqueFollowers() {
+        return k_EItemStatistic_NumUniqueFollowers;
+    }
+    private static final int k_EItemStatistic_NumUniqueWebsiteViews = (int)6L;
+    /**
+     * {@snippet lang=c :
+     * enum EItemStatistic.k_EItemStatistic_NumUniqueWebsiteViews = 6
+     * }
+     */
+    public static int k_EItemStatistic_NumUniqueWebsiteViews() {
+        return k_EItemStatistic_NumUniqueWebsiteViews;
+    }
+    private static final int k_EItemStatistic_ReportScore = (int)7L;
+    /**
+     * {@snippet lang=c :
+     * enum EItemStatistic.k_EItemStatistic_ReportScore = 7
+     * }
+     */
+    public static int k_EItemStatistic_ReportScore() {
+        return k_EItemStatistic_ReportScore;
+    }
+    private static final int k_EItemStatistic_NumSecondsPlayed = (int)8L;
+    /**
+     * {@snippet lang=c :
+     * enum EItemStatistic.k_EItemStatistic_NumSecondsPlayed = 8
+     * }
+     */
+    public static int k_EItemStatistic_NumSecondsPlayed() {
+        return k_EItemStatistic_NumSecondsPlayed;
+    }
+    private static final int k_EItemStatistic_NumPlaytimeSessions = (int)9L;
+    /**
+     * {@snippet lang=c :
+     * enum EItemStatistic.k_EItemStatistic_NumPlaytimeSessions = 9
+     * }
+     */
+    public static int k_EItemStatistic_NumPlaytimeSessions() {
+        return k_EItemStatistic_NumPlaytimeSessions;
+    }
+    private static final int k_EItemStatistic_NumComments = (int)10L;
+    /**
+     * {@snippet lang=c :
+     * enum EItemStatistic.k_EItemStatistic_NumComments = 10
+     * }
+     */
+    public static int k_EItemStatistic_NumComments() {
+        return k_EItemStatistic_NumComments;
+    }
+    private static final int k_EItemStatistic_NumSecondsPlayedDuringTimePeriod = (int)11L;
+    /**
+     * {@snippet lang=c :
+     * enum EItemStatistic.k_EItemStatistic_NumSecondsPlayedDuringTimePeriod = 11
+     * }
+     */
+    public static int k_EItemStatistic_NumSecondsPlayedDuringTimePeriod() {
+        return k_EItemStatistic_NumSecondsPlayedDuringTimePeriod;
+    }
+    private static final int k_EItemStatistic_NumPlaytimeSessionsDuringTimePeriod = (int)12L;
+    /**
+     * {@snippet lang=c :
+     * enum EItemStatistic.k_EItemStatistic_NumPlaytimeSessionsDuringTimePeriod = 12
+     * }
+     */
+    public static int k_EItemStatistic_NumPlaytimeSessionsDuringTimePeriod() {
+        return k_EItemStatistic_NumPlaytimeSessionsDuringTimePeriod;
+    }
+    private static final int k_EItemPreviewType_Image = (int)0L;
+    /**
+     * {@snippet lang=c :
+     * enum EItemPreviewType.k_EItemPreviewType_Image = 0
+     * }
+     */
+    public static int k_EItemPreviewType_Image() {
+        return k_EItemPreviewType_Image;
+    }
+    private static final int k_EItemPreviewType_YouTubeVideo = (int)1L;
+    /**
+     * {@snippet lang=c :
+     * enum EItemPreviewType.k_EItemPreviewType_YouTubeVideo = 1
+     * }
+     */
+    public static int k_EItemPreviewType_YouTubeVideo() {
+        return k_EItemPreviewType_YouTubeVideo;
+    }
+    private static final int k_EItemPreviewType_Sketchfab = (int)2L;
+    /**
+     * {@snippet lang=c :
+     * enum EItemPreviewType.k_EItemPreviewType_Sketchfab = 2
+     * }
+     */
+    public static int k_EItemPreviewType_Sketchfab() {
+        return k_EItemPreviewType_Sketchfab;
+    }
+    private static final int k_EItemPreviewType_EnvironmentMap_HorizontalCross = (int)3L;
+    /**
+     * {@snippet lang=c :
+     * enum EItemPreviewType.k_EItemPreviewType_EnvironmentMap_HorizontalCross = 3
+     * }
+     */
+    public static int k_EItemPreviewType_EnvironmentMap_HorizontalCross() {
+        return k_EItemPreviewType_EnvironmentMap_HorizontalCross;
+    }
+    private static final int k_EItemPreviewType_EnvironmentMap_LatLong = (int)4L;
+    /**
+     * {@snippet lang=c :
+     * enum EItemPreviewType.k_EItemPreviewType_EnvironmentMap_LatLong = 4
+     * }
+     */
+    public static int k_EItemPreviewType_EnvironmentMap_LatLong() {
+        return k_EItemPreviewType_EnvironmentMap_LatLong;
+    }
+    private static final int k_EItemPreviewType_Clip = (int)5L;
+    /**
+     * {@snippet lang=c :
+     * enum EItemPreviewType.k_EItemPreviewType_Clip = 5
+     * }
+     */
+    public static int k_EItemPreviewType_Clip() {
+        return k_EItemPreviewType_Clip;
+    }
+    private static final int k_EItemPreviewType_ReservedMax = (int)255L;
+    /**
+     * {@snippet lang=c :
+     * enum EItemPreviewType.k_EItemPreviewType_ReservedMax = 255
+     * }
+     */
+    public static int k_EItemPreviewType_ReservedMax() {
+        return k_EItemPreviewType_ReservedMax;
+    }
+    private static final int k_EUGCContentDescriptor_NudityOrSexualContent = (int)1L;
+    /**
+     * {@snippet lang=c :
+     * enum EUGCContentDescriptorID.k_EUGCContentDescriptor_NudityOrSexualContent = 1
+     * }
+     */
+    public static int k_EUGCContentDescriptor_NudityOrSexualContent() {
+        return k_EUGCContentDescriptor_NudityOrSexualContent;
+    }
+    private static final int k_EUGCContentDescriptor_FrequentViolenceOrGore = (int)2L;
+    /**
+     * {@snippet lang=c :
+     * enum EUGCContentDescriptorID.k_EUGCContentDescriptor_FrequentViolenceOrGore = 2
+     * }
+     */
+    public static int k_EUGCContentDescriptor_FrequentViolenceOrGore() {
+        return k_EUGCContentDescriptor_FrequentViolenceOrGore;
+    }
+    private static final int k_EUGCContentDescriptor_AdultOnlySexualContent = (int)3L;
+    /**
+     * {@snippet lang=c :
+     * enum EUGCContentDescriptorID.k_EUGCContentDescriptor_AdultOnlySexualContent = 3
+     * }
+     */
+    public static int k_EUGCContentDescriptor_AdultOnlySexualContent() {
+        return k_EUGCContentDescriptor_AdultOnlySexualContent;
+    }
+    private static final int k_EUGCContentDescriptor_GratuitousSexualContent = (int)4L;
+    /**
+     * {@snippet lang=c :
+     * enum EUGCContentDescriptorID.k_EUGCContentDescriptor_GratuitousSexualContent = 4
+     * }
+     */
+    public static int k_EUGCContentDescriptor_GratuitousSexualContent() {
+        return k_EUGCContentDescriptor_GratuitousSexualContent;
+    }
+    private static final int k_EUGCContentDescriptor_AnyMatureContent = (int)5L;
+    /**
+     * {@snippet lang=c :
+     * enum EUGCContentDescriptorID.k_EUGCContentDescriptor_AnyMatureContent = 5
+     * }
+     */
+    public static int k_EUGCContentDescriptor_AnyMatureContent() {
+        return k_EUGCContentDescriptor_AnyMatureContent;
+    }
+    private static final int k_ESteamItemNoTrade = (int)1L;
+    /**
+     * {@snippet lang=c :
+     * enum ESteamItemFlags.k_ESteamItemNoTrade = 1
+     * }
+     */
+    public static int k_ESteamItemNoTrade() {
+        return k_ESteamItemNoTrade;
+    }
+    private static final int k_ESteamItemRemoved = (int)256L;
+    /**
+     * {@snippet lang=c :
+     * enum ESteamItemFlags.k_ESteamItemRemoved = 256
+     * }
+     */
+    public static int k_ESteamItemRemoved() {
+        return k_ESteamItemRemoved;
+    }
+    private static final int k_ESteamItemConsumed = (int)512L;
+    /**
+     * {@snippet lang=c :
+     * enum ESteamItemFlags.k_ESteamItemConsumed = 512
+     * }
+     */
+    public static int k_ESteamItemConsumed() {
+        return k_ESteamItemConsumed;
+    }
+    private static final int k_ETimelineGameMode_Invalid = (int)0L;
+    /**
+     * {@snippet lang=c :
+     * enum ETimelineGameMode.k_ETimelineGameMode_Invalid = 0
+     * }
+     */
+    public static int k_ETimelineGameMode_Invalid() {
+        return k_ETimelineGameMode_Invalid;
+    }
+    private static final int k_ETimelineGameMode_Playing = (int)1L;
+    /**
+     * {@snippet lang=c :
+     * enum ETimelineGameMode.k_ETimelineGameMode_Playing = 1
+     * }
+     */
+    public static int k_ETimelineGameMode_Playing() {
+        return k_ETimelineGameMode_Playing;
+    }
+    private static final int k_ETimelineGameMode_Staging = (int)2L;
+    /**
+     * {@snippet lang=c :
+     * enum ETimelineGameMode.k_ETimelineGameMode_Staging = 2
+     * }
+     */
+    public static int k_ETimelineGameMode_Staging() {
+        return k_ETimelineGameMode_Staging;
+    }
+    private static final int k_ETimelineGameMode_Menus = (int)3L;
+    /**
+     * {@snippet lang=c :
+     * enum ETimelineGameMode.k_ETimelineGameMode_Menus = 3
+     * }
+     */
+    public static int k_ETimelineGameMode_Menus() {
+        return k_ETimelineGameMode_Menus;
+    }
+    private static final int k_ETimelineGameMode_LoadingScreen = (int)4L;
+    /**
+     * {@snippet lang=c :
+     * enum ETimelineGameMode.k_ETimelineGameMode_LoadingScreen = 4
+     * }
+     */
+    public static int k_ETimelineGameMode_LoadingScreen() {
+        return k_ETimelineGameMode_LoadingScreen;
+    }
+    private static final int k_ETimelineGameMode_Max = (int)5L;
+    /**
+     * {@snippet lang=c :
+     * enum ETimelineGameMode.k_ETimelineGameMode_Max = 5
+     * }
+     */
+    public static int k_ETimelineGameMode_Max() {
+        return k_ETimelineGameMode_Max;
+    }
+    private static final int k_EFeatureInvalid = (int)0L;
+    /**
+     * {@snippet lang=c :
+     * enum EParentalFeature.k_EFeatureInvalid = 0
+     * }
+     */
+    public static int k_EFeatureInvalid() {
+        return k_EFeatureInvalid;
+    }
+    private static final int k_EFeatureStore = (int)1L;
+    /**
+     * {@snippet lang=c :
+     * enum EParentalFeature.k_EFeatureStore = 1
+     * }
+     */
+    public static int k_EFeatureStore() {
+        return k_EFeatureStore;
+    }
+    private static final int k_EFeatureCommunity = (int)2L;
+    /**
+     * {@snippet lang=c :
+     * enum EParentalFeature.k_EFeatureCommunity = 2
+     * }
+     */
+    public static int k_EFeatureCommunity() {
+        return k_EFeatureCommunity;
+    }
+    private static final int k_EFeatureProfile = (int)3L;
+    /**
+     * {@snippet lang=c :
+     * enum EParentalFeature.k_EFeatureProfile = 3
+     * }
+     */
+    public static int k_EFeatureProfile() {
+        return k_EFeatureProfile;
+    }
+    private static final int k_EFeatureFriends = (int)4L;
+    /**
+     * {@snippet lang=c :
+     * enum EParentalFeature.k_EFeatureFriends = 4
+     * }
+     */
+    public static int k_EFeatureFriends() {
+        return k_EFeatureFriends;
+    }
+    private static final int k_EFeatureNews = (int)5L;
+    /**
+     * {@snippet lang=c :
+     * enum EParentalFeature.k_EFeatureNews = 5
+     * }
+     */
+    public static int k_EFeatureNews() {
+        return k_EFeatureNews;
+    }
+    private static final int k_EFeatureTrading = (int)6L;
+    /**
+     * {@snippet lang=c :
+     * enum EParentalFeature.k_EFeatureTrading = 6
+     * }
+     */
+    public static int k_EFeatureTrading() {
+        return k_EFeatureTrading;
+    }
+    private static final int k_EFeatureSettings = (int)7L;
+    /**
+     * {@snippet lang=c :
+     * enum EParentalFeature.k_EFeatureSettings = 7
+     * }
+     */
+    public static int k_EFeatureSettings() {
+        return k_EFeatureSettings;
+    }
+    private static final int k_EFeatureConsole = (int)8L;
+    /**
+     * {@snippet lang=c :
+     * enum EParentalFeature.k_EFeatureConsole = 8
+     * }
+     */
+    public static int k_EFeatureConsole() {
+        return k_EFeatureConsole;
+    }
+    private static final int k_EFeatureBrowser = (int)9L;
+    /**
+     * {@snippet lang=c :
+     * enum EParentalFeature.k_EFeatureBrowser = 9
+     * }
+     */
+    public static int k_EFeatureBrowser() {
+        return k_EFeatureBrowser;
+    }
+    private static final int k_EFeatureParentalSetup = (int)10L;
+    /**
+     * {@snippet lang=c :
+     * enum EParentalFeature.k_EFeatureParentalSetup = 10
+     * }
+     */
+    public static int k_EFeatureParentalSetup() {
+        return k_EFeatureParentalSetup;
+    }
+    private static final int k_EFeatureLibrary = (int)11L;
+    /**
+     * {@snippet lang=c :
+     * enum EParentalFeature.k_EFeatureLibrary = 11
+     * }
+     */
+    public static int k_EFeatureLibrary() {
+        return k_EFeatureLibrary;
+    }
+    private static final int k_EFeatureTest = (int)12L;
+    /**
+     * {@snippet lang=c :
+     * enum EParentalFeature.k_EFeatureTest = 12
+     * }
+     */
+    public static int k_EFeatureTest() {
+        return k_EFeatureTest;
+    }
+    private static final int k_EFeatureSiteLicense = (int)13L;
+    /**
+     * {@snippet lang=c :
+     * enum EParentalFeature.k_EFeatureSiteLicense = 13
+     * }
+     */
+    public static int k_EFeatureSiteLicense() {
+        return k_EFeatureSiteLicense;
+    }
+    private static final int k_EFeatureKioskMode_Deprecated = (int)14L;
+    /**
+     * {@snippet lang=c :
+     * enum EParentalFeature.k_EFeatureKioskMode_Deprecated = 14
+     * }
+     */
+    public static int k_EFeatureKioskMode_Deprecated() {
+        return k_EFeatureKioskMode_Deprecated;
+    }
+    private static final int k_EFeatureMax = (int)15L;
+    /**
+     * {@snippet lang=c :
+     * enum EParentalFeature.k_EFeatureMax = 15
+     * }
+     */
+    public static int k_EFeatureMax() {
+        return k_EFeatureMax;
+    }
+    private static final int k_ESteamDeviceFormFactorUnknown = (int)0L;
+    /**
+     * {@snippet lang=c :
+     * enum ESteamDeviceFormFactor.k_ESteamDeviceFormFactorUnknown = 0
+     * }
+     */
+    public static int k_ESteamDeviceFormFactorUnknown() {
+        return k_ESteamDeviceFormFactorUnknown;
+    }
+    private static final int k_ESteamDeviceFormFactorPhone = (int)1L;
+    /**
+     * {@snippet lang=c :
+     * enum ESteamDeviceFormFactor.k_ESteamDeviceFormFactorPhone = 1
+     * }
+     */
+    public static int k_ESteamDeviceFormFactorPhone() {
+        return k_ESteamDeviceFormFactorPhone;
+    }
+    private static final int k_ESteamDeviceFormFactorTablet = (int)2L;
+    /**
+     * {@snippet lang=c :
+     * enum ESteamDeviceFormFactor.k_ESteamDeviceFormFactorTablet = 2
+     * }
+     */
+    public static int k_ESteamDeviceFormFactorTablet() {
+        return k_ESteamDeviceFormFactorTablet;
+    }
+    private static final int k_ESteamDeviceFormFactorComputer = (int)3L;
+    /**
+     * {@snippet lang=c :
+     * enum ESteamDeviceFormFactor.k_ESteamDeviceFormFactorComputer = 3
+     * }
+     */
+    public static int k_ESteamDeviceFormFactorComputer() {
+        return k_ESteamDeviceFormFactorComputer;
+    }
+    private static final int k_ESteamDeviceFormFactorTV = (int)4L;
+    /**
+     * {@snippet lang=c :
+     * enum ESteamDeviceFormFactor.k_ESteamDeviceFormFactorTV = 4
+     * }
+     */
+    public static int k_ESteamDeviceFormFactorTV() {
+        return k_ESteamDeviceFormFactorTV;
+    }
+    private static final int k_ESteamDeviceFormFactorVRHeadset = (int)5L;
+    /**
+     * {@snippet lang=c :
+     * enum ESteamDeviceFormFactor.k_ESteamDeviceFormFactorVRHeadset = 5
+     * }
+     */
+    public static int k_ESteamDeviceFormFactorVRHeadset() {
+        return k_ESteamDeviceFormFactorVRHeadset;
+    }
+    private static final int k_ESteamNetworkingAvailability_CannotTry = (int)-102L;
+    /**
+     * {@snippet lang=c :
+     * enum ESteamNetworkingAvailability.k_ESteamNetworkingAvailability_CannotTry = -102
+     * }
+     */
+    public static int k_ESteamNetworkingAvailability_CannotTry() {
+        return k_ESteamNetworkingAvailability_CannotTry;
+    }
+    private static final int k_ESteamNetworkingAvailability_Failed = (int)-101L;
+    /**
+     * {@snippet lang=c :
+     * enum ESteamNetworkingAvailability.k_ESteamNetworkingAvailability_Failed = -101
+     * }
+     */
+    public static int k_ESteamNetworkingAvailability_Failed() {
+        return k_ESteamNetworkingAvailability_Failed;
+    }
+    private static final int k_ESteamNetworkingAvailability_Previously = (int)-100L;
+    /**
+     * {@snippet lang=c :
+     * enum ESteamNetworkingAvailability.k_ESteamNetworkingAvailability_Previously = -100
+     * }
+     */
+    public static int k_ESteamNetworkingAvailability_Previously() {
+        return k_ESteamNetworkingAvailability_Previously;
+    }
+    private static final int k_ESteamNetworkingAvailability_Retrying = (int)-10L;
+    /**
+     * {@snippet lang=c :
+     * enum ESteamNetworkingAvailability.k_ESteamNetworkingAvailability_Retrying = -10
+     * }
+     */
+    public static int k_ESteamNetworkingAvailability_Retrying() {
+        return k_ESteamNetworkingAvailability_Retrying;
+    }
+    private static final int k_ESteamNetworkingAvailability_NeverTried = (int)1L;
+    /**
+     * {@snippet lang=c :
+     * enum ESteamNetworkingAvailability.k_ESteamNetworkingAvailability_NeverTried = 1
+     * }
+     */
+    public static int k_ESteamNetworkingAvailability_NeverTried() {
+        return k_ESteamNetworkingAvailability_NeverTried;
+    }
+    private static final int k_ESteamNetworkingAvailability_Waiting = (int)2L;
+    /**
+     * {@snippet lang=c :
+     * enum ESteamNetworkingAvailability.k_ESteamNetworkingAvailability_Waiting = 2
+     * }
+     */
+    public static int k_ESteamNetworkingAvailability_Waiting() {
+        return k_ESteamNetworkingAvailability_Waiting;
+    }
+    private static final int k_ESteamNetworkingAvailability_Attempting = (int)3L;
+    /**
+     * {@snippet lang=c :
+     * enum ESteamNetworkingAvailability.k_ESteamNetworkingAvailability_Attempting = 3
+     * }
+     */
+    public static int k_ESteamNetworkingAvailability_Attempting() {
+        return k_ESteamNetworkingAvailability_Attempting;
+    }
+    private static final int k_ESteamNetworkingAvailability_Current = (int)100L;
+    /**
+     * {@snippet lang=c :
+     * enum ESteamNetworkingAvailability.k_ESteamNetworkingAvailability_Current = 100
+     * }
+     */
+    public static int k_ESteamNetworkingAvailability_Current() {
+        return k_ESteamNetworkingAvailability_Current;
+    }
+    private static final int k_ESteamNetworkingAvailability_Unknown = (int)0L;
+    /**
+     * {@snippet lang=c :
+     * enum ESteamNetworkingAvailability.k_ESteamNetworkingAvailability_Unknown = 0
+     * }
+     */
+    public static int k_ESteamNetworkingAvailability_Unknown() {
+        return k_ESteamNetworkingAvailability_Unknown;
+    }
+    private static final int k_ESteamNetworkingAvailability__Force32bit = (int)2147483647L;
+    /**
+     * {@snippet lang=c :
+     * enum ESteamNetworkingAvailability.k_ESteamNetworkingAvailability__Force32bit = 2147483647
+     * }
+     */
+    public static int k_ESteamNetworkingAvailability__Force32bit() {
+        return k_ESteamNetworkingAvailability__Force32bit;
+    }
+    private static final int k_ESteamNetworkingIdentityType_Invalid = (int)0L;
+    /**
+     * {@snippet lang=c :
+     * enum ESteamNetworkingIdentityType.k_ESteamNetworkingIdentityType_Invalid = 0
+     * }
+     */
+    public static int k_ESteamNetworkingIdentityType_Invalid() {
+        return k_ESteamNetworkingIdentityType_Invalid;
+    }
+    private static final int k_ESteamNetworkingIdentityType_SteamID = (int)16L;
+    /**
+     * {@snippet lang=c :
+     * enum ESteamNetworkingIdentityType.k_ESteamNetworkingIdentityType_SteamID = 16
+     * }
+     */
+    public static int k_ESteamNetworkingIdentityType_SteamID() {
+        return k_ESteamNetworkingIdentityType_SteamID;
+    }
+    private static final int k_ESteamNetworkingIdentityType_XboxPairwiseID = (int)17L;
+    /**
+     * {@snippet lang=c :
+     * enum ESteamNetworkingIdentityType.k_ESteamNetworkingIdentityType_XboxPairwiseID = 17
+     * }
+     */
+    public static int k_ESteamNetworkingIdentityType_XboxPairwiseID() {
+        return k_ESteamNetworkingIdentityType_XboxPairwiseID;
+    }
+    private static final int k_ESteamNetworkingIdentityType_SonyPSN = (int)18L;
+    /**
+     * {@snippet lang=c :
+     * enum ESteamNetworkingIdentityType.k_ESteamNetworkingIdentityType_SonyPSN = 18
+     * }
+     */
+    public static int k_ESteamNetworkingIdentityType_SonyPSN() {
+        return k_ESteamNetworkingIdentityType_SonyPSN;
+    }
+    private static final int k_ESteamNetworkingIdentityType_GoogleStadia = (int)19L;
+    /**
+     * {@snippet lang=c :
+     * enum ESteamNetworkingIdentityType.k_ESteamNetworkingIdentityType_GoogleStadia = 19
+     * }
+     */
+    public static int k_ESteamNetworkingIdentityType_GoogleStadia() {
+        return k_ESteamNetworkingIdentityType_GoogleStadia;
+    }
+    private static final int k_ESteamNetworkingIdentityType_IPAddress = (int)1L;
+    /**
+     * {@snippet lang=c :
+     * enum ESteamNetworkingIdentityType.k_ESteamNetworkingIdentityType_IPAddress = 1
+     * }
+     */
+    public static int k_ESteamNetworkingIdentityType_IPAddress() {
+        return k_ESteamNetworkingIdentityType_IPAddress;
+    }
+    private static final int k_ESteamNetworkingIdentityType_GenericString = (int)2L;
+    /**
+     * {@snippet lang=c :
+     * enum ESteamNetworkingIdentityType.k_ESteamNetworkingIdentityType_GenericString = 2
+     * }
+     */
+    public static int k_ESteamNetworkingIdentityType_GenericString() {
+        return k_ESteamNetworkingIdentityType_GenericString;
+    }
+    private static final int k_ESteamNetworkingIdentityType_GenericBytes = (int)3L;
+    /**
+     * {@snippet lang=c :
+     * enum ESteamNetworkingIdentityType.k_ESteamNetworkingIdentityType_GenericBytes = 3
+     * }
+     */
+    public static int k_ESteamNetworkingIdentityType_GenericBytes() {
+        return k_ESteamNetworkingIdentityType_GenericBytes;
+    }
+    private static final int k_ESteamNetworkingIdentityType_UnknownType = (int)4L;
+    /**
+     * {@snippet lang=c :
+     * enum ESteamNetworkingIdentityType.k_ESteamNetworkingIdentityType_UnknownType = 4
+     * }
+     */
+    public static int k_ESteamNetworkingIdentityType_UnknownType() {
+        return k_ESteamNetworkingIdentityType_UnknownType;
+    }
+    private static final int k_ESteamNetworkingIdentityType__Force32bit = (int)2147483647L;
+    /**
+     * {@snippet lang=c :
+     * enum ESteamNetworkingIdentityType.k_ESteamNetworkingIdentityType__Force32bit = 2147483647
+     * }
+     */
+    public static int k_ESteamNetworkingIdentityType__Force32bit() {
+        return k_ESteamNetworkingIdentityType__Force32bit;
+    }
+    private static final int k_ESteamNetworkingFakeIPType_Invalid = (int)0L;
+    /**
+     * {@snippet lang=c :
+     * enum ESteamNetworkingFakeIPType.k_ESteamNetworkingFakeIPType_Invalid = 0
+     * }
+     */
+    public static int k_ESteamNetworkingFakeIPType_Invalid() {
+        return k_ESteamNetworkingFakeIPType_Invalid;
+    }
+    private static final int k_ESteamNetworkingFakeIPType_NotFake = (int)1L;
+    /**
+     * {@snippet lang=c :
+     * enum ESteamNetworkingFakeIPType.k_ESteamNetworkingFakeIPType_NotFake = 1
+     * }
+     */
+    public static int k_ESteamNetworkingFakeIPType_NotFake() {
+        return k_ESteamNetworkingFakeIPType_NotFake;
+    }
+    private static final int k_ESteamNetworkingFakeIPType_GlobalIPv4 = (int)2L;
+    /**
+     * {@snippet lang=c :
+     * enum ESteamNetworkingFakeIPType.k_ESteamNetworkingFakeIPType_GlobalIPv4 = 2
+     * }
+     */
+    public static int k_ESteamNetworkingFakeIPType_GlobalIPv4() {
+        return k_ESteamNetworkingFakeIPType_GlobalIPv4;
+    }
+    private static final int k_ESteamNetworkingFakeIPType_LocalIPv4 = (int)3L;
+    /**
+     * {@snippet lang=c :
+     * enum ESteamNetworkingFakeIPType.k_ESteamNetworkingFakeIPType_LocalIPv4 = 3
+     * }
+     */
+    public static int k_ESteamNetworkingFakeIPType_LocalIPv4() {
+        return k_ESteamNetworkingFakeIPType_LocalIPv4;
+    }
+    private static final int k_ESteamNetworkingFakeIPType__Force32Bit = (int)2147483647L;
+    /**
+     * {@snippet lang=c :
+     * enum ESteamNetworkingFakeIPType.k_ESteamNetworkingFakeIPType__Force32Bit = 2147483647
+     * }
+     */
+    public static int k_ESteamNetworkingFakeIPType__Force32Bit() {
+        return k_ESteamNetworkingFakeIPType__Force32Bit;
+    }
+    private static final int k_ESteamNetworkingConnectionState_None = (int)0L;
+    /**
+     * {@snippet lang=c :
+     * enum ESteamNetworkingConnectionState.k_ESteamNetworkingConnectionState_None = 0
+     * }
+     */
+    public static int k_ESteamNetworkingConnectionState_None() {
+        return k_ESteamNetworkingConnectionState_None;
+    }
+    private static final int k_ESteamNetworkingConnectionState_Connecting = (int)1L;
+    /**
+     * {@snippet lang=c :
+     * enum ESteamNetworkingConnectionState.k_ESteamNetworkingConnectionState_Connecting = 1
+     * }
+     */
+    public static int k_ESteamNetworkingConnectionState_Connecting() {
+        return k_ESteamNetworkingConnectionState_Connecting;
+    }
+    private static final int k_ESteamNetworkingConnectionState_FindingRoute = (int)2L;
+    /**
+     * {@snippet lang=c :
+     * enum ESteamNetworkingConnectionState.k_ESteamNetworkingConnectionState_FindingRoute = 2
+     * }
+     */
+    public static int k_ESteamNetworkingConnectionState_FindingRoute() {
+        return k_ESteamNetworkingConnectionState_FindingRoute;
+    }
+    private static final int k_ESteamNetworkingConnectionState_Connected = (int)3L;
+    /**
+     * {@snippet lang=c :
+     * enum ESteamNetworkingConnectionState.k_ESteamNetworkingConnectionState_Connected = 3
+     * }
+     */
+    public static int k_ESteamNetworkingConnectionState_Connected() {
+        return k_ESteamNetworkingConnectionState_Connected;
+    }
+    private static final int k_ESteamNetworkingConnectionState_ClosedByPeer = (int)4L;
+    /**
+     * {@snippet lang=c :
+     * enum ESteamNetworkingConnectionState.k_ESteamNetworkingConnectionState_ClosedByPeer = 4
+     * }
+     */
+    public static int k_ESteamNetworkingConnectionState_ClosedByPeer() {
+        return k_ESteamNetworkingConnectionState_ClosedByPeer;
+    }
+    private static final int k_ESteamNetworkingConnectionState_ProblemDetectedLocally = (int)5L;
+    /**
+     * {@snippet lang=c :
+     * enum ESteamNetworkingConnectionState.k_ESteamNetworkingConnectionState_ProblemDetectedLocally = 5
+     * }
+     */
+    public static int k_ESteamNetworkingConnectionState_ProblemDetectedLocally() {
+        return k_ESteamNetworkingConnectionState_ProblemDetectedLocally;
+    }
+    private static final int k_ESteamNetworkingConnectionState_FinWait = (int)-1L;
+    /**
+     * {@snippet lang=c :
+     * enum ESteamNetworkingConnectionState.k_ESteamNetworkingConnectionState_FinWait = -1
+     * }
+     */
+    public static int k_ESteamNetworkingConnectionState_FinWait() {
+        return k_ESteamNetworkingConnectionState_FinWait;
+    }
+    private static final int k_ESteamNetworkingConnectionState_Linger = (int)-2L;
+    /**
+     * {@snippet lang=c :
+     * enum ESteamNetworkingConnectionState.k_ESteamNetworkingConnectionState_Linger = -2
+     * }
+     */
+    public static int k_ESteamNetworkingConnectionState_Linger() {
+        return k_ESteamNetworkingConnectionState_Linger;
+    }
+    private static final int k_ESteamNetworkingConnectionState_Dead = (int)-3L;
+    /**
+     * {@snippet lang=c :
+     * enum ESteamNetworkingConnectionState.k_ESteamNetworkingConnectionState_Dead = -3
+     * }
+     */
+    public static int k_ESteamNetworkingConnectionState_Dead() {
+        return k_ESteamNetworkingConnectionState_Dead;
+    }
+    private static final int k_ESteamNetworkingConnectionState__Force32Bit = (int)2147483647L;
+    /**
+     * {@snippet lang=c :
+     * enum ESteamNetworkingConnectionState.k_ESteamNetworkingConnectionState__Force32Bit = 2147483647
+     * }
+     */
+    public static int k_ESteamNetworkingConnectionState__Force32Bit() {
+        return k_ESteamNetworkingConnectionState__Force32Bit;
+    }
+    private static final int k_ESteamNetConnectionEnd_Invalid = (int)0L;
+    /**
+     * {@snippet lang=c :
+     * enum ESteamNetConnectionEnd.k_ESteamNetConnectionEnd_Invalid = 0
+     * }
+     */
+    public static int k_ESteamNetConnectionEnd_Invalid() {
+        return k_ESteamNetConnectionEnd_Invalid;
+    }
+    private static final int k_ESteamNetConnectionEnd_App_Min = (int)1000L;
+    /**
+     * {@snippet lang=c :
+     * enum ESteamNetConnectionEnd.k_ESteamNetConnectionEnd_App_Min = 1000
+     * }
+     */
+    public static int k_ESteamNetConnectionEnd_App_Min() {
+        return k_ESteamNetConnectionEnd_App_Min;
+    }
+    private static final int k_ESteamNetConnectionEnd_App_Generic = (int)1000L;
+    /**
+     * {@snippet lang=c :
+     * enum ESteamNetConnectionEnd.k_ESteamNetConnectionEnd_App_Generic = 1000
+     * }
+     */
+    public static int k_ESteamNetConnectionEnd_App_Generic() {
+        return k_ESteamNetConnectionEnd_App_Generic;
+    }
+    private static final int k_ESteamNetConnectionEnd_App_Max = (int)1999L;
+    /**
+     * {@snippet lang=c :
+     * enum ESteamNetConnectionEnd.k_ESteamNetConnectionEnd_App_Max = 1999
+     * }
+     */
+    public static int k_ESteamNetConnectionEnd_App_Max() {
+        return k_ESteamNetConnectionEnd_App_Max;
+    }
+    private static final int k_ESteamNetConnectionEnd_AppException_Min = (int)2000L;
+    /**
+     * {@snippet lang=c :
+     * enum ESteamNetConnectionEnd.k_ESteamNetConnectionEnd_AppException_Min = 2000
+     * }
+     */
+    public static int k_ESteamNetConnectionEnd_AppException_Min() {
+        return k_ESteamNetConnectionEnd_AppException_Min;
+    }
+    private static final int k_ESteamNetConnectionEnd_AppException_Generic = (int)2000L;
+    /**
+     * {@snippet lang=c :
+     * enum ESteamNetConnectionEnd.k_ESteamNetConnectionEnd_AppException_Generic = 2000
+     * }
+     */
+    public static int k_ESteamNetConnectionEnd_AppException_Generic() {
+        return k_ESteamNetConnectionEnd_AppException_Generic;
+    }
+    private static final int k_ESteamNetConnectionEnd_AppException_Max = (int)2999L;
+    /**
+     * {@snippet lang=c :
+     * enum ESteamNetConnectionEnd.k_ESteamNetConnectionEnd_AppException_Max = 2999
+     * }
+     */
+    public static int k_ESteamNetConnectionEnd_AppException_Max() {
+        return k_ESteamNetConnectionEnd_AppException_Max;
+    }
+    private static final int k_ESteamNetConnectionEnd_Local_Min = (int)3000L;
+    /**
+     * {@snippet lang=c :
+     * enum ESteamNetConnectionEnd.k_ESteamNetConnectionEnd_Local_Min = 3000
+     * }
+     */
+    public static int k_ESteamNetConnectionEnd_Local_Min() {
+        return k_ESteamNetConnectionEnd_Local_Min;
+    }
+    private static final int k_ESteamNetConnectionEnd_Local_OfflineMode = (int)3001L;
+    /**
+     * {@snippet lang=c :
+     * enum ESteamNetConnectionEnd.k_ESteamNetConnectionEnd_Local_OfflineMode = 3001
+     * }
+     */
+    public static int k_ESteamNetConnectionEnd_Local_OfflineMode() {
+        return k_ESteamNetConnectionEnd_Local_OfflineMode;
+    }
+    private static final int k_ESteamNetConnectionEnd_Local_ManyRelayConnectivity = (int)3002L;
+    /**
+     * {@snippet lang=c :
+     * enum ESteamNetConnectionEnd.k_ESteamNetConnectionEnd_Local_ManyRelayConnectivity = 3002
+     * }
+     */
+    public static int k_ESteamNetConnectionEnd_Local_ManyRelayConnectivity() {
+        return k_ESteamNetConnectionEnd_Local_ManyRelayConnectivity;
+    }
+    private static final int k_ESteamNetConnectionEnd_Local_HostedServerPrimaryRelay = (int)3003L;
+    /**
+     * {@snippet lang=c :
+     * enum ESteamNetConnectionEnd.k_ESteamNetConnectionEnd_Local_HostedServerPrimaryRelay = 3003
+     * }
+     */
+    public static int k_ESteamNetConnectionEnd_Local_HostedServerPrimaryRelay() {
+        return k_ESteamNetConnectionEnd_Local_HostedServerPrimaryRelay;
+    }
+    private static final int k_ESteamNetConnectionEnd_Local_NetworkConfig = (int)3004L;
+    /**
+     * {@snippet lang=c :
+     * enum ESteamNetConnectionEnd.k_ESteamNetConnectionEnd_Local_NetworkConfig = 3004
+     * }
+     */
+    public static int k_ESteamNetConnectionEnd_Local_NetworkConfig() {
+        return k_ESteamNetConnectionEnd_Local_NetworkConfig;
+    }
+    private static final int k_ESteamNetConnectionEnd_Local_Rights = (int)3005L;
+    /**
+     * {@snippet lang=c :
+     * enum ESteamNetConnectionEnd.k_ESteamNetConnectionEnd_Local_Rights = 3005
+     * }
+     */
+    public static int k_ESteamNetConnectionEnd_Local_Rights() {
+        return k_ESteamNetConnectionEnd_Local_Rights;
+    }
+    private static final int k_ESteamNetConnectionEnd_Local_P2P_ICE_NoPublicAddresses = (int)3006L;
+    /**
+     * {@snippet lang=c :
+     * enum ESteamNetConnectionEnd.k_ESteamNetConnectionEnd_Local_P2P_ICE_NoPublicAddresses = 3006
+     * }
+     */
+    public static int k_ESteamNetConnectionEnd_Local_P2P_ICE_NoPublicAddresses() {
+        return k_ESteamNetConnectionEnd_Local_P2P_ICE_NoPublicAddresses;
+    }
+    private static final int k_ESteamNetConnectionEnd_Local_Max = (int)3999L;
+    /**
+     * {@snippet lang=c :
+     * enum ESteamNetConnectionEnd.k_ESteamNetConnectionEnd_Local_Max = 3999
+     * }
+     */
+    public static int k_ESteamNetConnectionEnd_Local_Max() {
+        return k_ESteamNetConnectionEnd_Local_Max;
+    }
+    private static final int k_ESteamNetConnectionEnd_Remote_Min = (int)4000L;
+    /**
+     * {@snippet lang=c :
+     * enum ESteamNetConnectionEnd.k_ESteamNetConnectionEnd_Remote_Min = 4000
+     * }
+     */
+    public static int k_ESteamNetConnectionEnd_Remote_Min() {
+        return k_ESteamNetConnectionEnd_Remote_Min;
+    }
+    private static final int k_ESteamNetConnectionEnd_Remote_Timeout = (int)4001L;
+    /**
+     * {@snippet lang=c :
+     * enum ESteamNetConnectionEnd.k_ESteamNetConnectionEnd_Remote_Timeout = 4001
+     * }
+     */
+    public static int k_ESteamNetConnectionEnd_Remote_Timeout() {
+        return k_ESteamNetConnectionEnd_Remote_Timeout;
+    }
+    private static final int k_ESteamNetConnectionEnd_Remote_BadCrypt = (int)4002L;
+    /**
+     * {@snippet lang=c :
+     * enum ESteamNetConnectionEnd.k_ESteamNetConnectionEnd_Remote_BadCrypt = 4002
+     * }
+     */
+    public static int k_ESteamNetConnectionEnd_Remote_BadCrypt() {
+        return k_ESteamNetConnectionEnd_Remote_BadCrypt;
+    }
+    private static final int k_ESteamNetConnectionEnd_Remote_BadCert = (int)4003L;
+    /**
+     * {@snippet lang=c :
+     * enum ESteamNetConnectionEnd.k_ESteamNetConnectionEnd_Remote_BadCert = 4003
+     * }
+     */
+    public static int k_ESteamNetConnectionEnd_Remote_BadCert() {
+        return k_ESteamNetConnectionEnd_Remote_BadCert;
+    }
+    private static final int k_ESteamNetConnectionEnd_Remote_BadProtocolVersion = (int)4006L;
+    /**
+     * {@snippet lang=c :
+     * enum ESteamNetConnectionEnd.k_ESteamNetConnectionEnd_Remote_BadProtocolVersion = 4006
+     * }
+     */
+    public static int k_ESteamNetConnectionEnd_Remote_BadProtocolVersion() {
+        return k_ESteamNetConnectionEnd_Remote_BadProtocolVersion;
+    }
+    private static final int k_ESteamNetConnectionEnd_Remote_P2P_ICE_NoPublicAddresses = (int)4007L;
+    /**
+     * {@snippet lang=c :
+     * enum ESteamNetConnectionEnd.k_ESteamNetConnectionEnd_Remote_P2P_ICE_NoPublicAddresses = 4007
+     * }
+     */
+    public static int k_ESteamNetConnectionEnd_Remote_P2P_ICE_NoPublicAddresses() {
+        return k_ESteamNetConnectionEnd_Remote_P2P_ICE_NoPublicAddresses;
+    }
+    private static final int k_ESteamNetConnectionEnd_Remote_Max = (int)4999L;
+    /**
+     * {@snippet lang=c :
+     * enum ESteamNetConnectionEnd.k_ESteamNetConnectionEnd_Remote_Max = 4999
+     * }
+     */
+    public static int k_ESteamNetConnectionEnd_Remote_Max() {
+        return k_ESteamNetConnectionEnd_Remote_Max;
+    }
+    private static final int k_ESteamNetConnectionEnd_Misc_Min = (int)5000L;
+    /**
+     * {@snippet lang=c :
+     * enum ESteamNetConnectionEnd.k_ESteamNetConnectionEnd_Misc_Min = 5000
+     * }
+     */
+    public static int k_ESteamNetConnectionEnd_Misc_Min() {
+        return k_ESteamNetConnectionEnd_Misc_Min;
+    }
+    private static final int k_ESteamNetConnectionEnd_Misc_Generic = (int)5001L;
+    /**
+     * {@snippet lang=c :
+     * enum ESteamNetConnectionEnd.k_ESteamNetConnectionEnd_Misc_Generic = 5001
+     * }
+     */
+    public static int k_ESteamNetConnectionEnd_Misc_Generic() {
+        return k_ESteamNetConnectionEnd_Misc_Generic;
+    }
+    private static final int k_ESteamNetConnectionEnd_Misc_InternalError = (int)5002L;
+    /**
+     * {@snippet lang=c :
+     * enum ESteamNetConnectionEnd.k_ESteamNetConnectionEnd_Misc_InternalError = 5002
+     * }
+     */
+    public static int k_ESteamNetConnectionEnd_Misc_InternalError() {
+        return k_ESteamNetConnectionEnd_Misc_InternalError;
+    }
+    private static final int k_ESteamNetConnectionEnd_Misc_Timeout = (int)5003L;
+    /**
+     * {@snippet lang=c :
+     * enum ESteamNetConnectionEnd.k_ESteamNetConnectionEnd_Misc_Timeout = 5003
+     * }
+     */
+    public static int k_ESteamNetConnectionEnd_Misc_Timeout() {
+        return k_ESteamNetConnectionEnd_Misc_Timeout;
+    }
+    private static final int k_ESteamNetConnectionEnd_Misc_SteamConnectivity = (int)5005L;
+    /**
+     * {@snippet lang=c :
+     * enum ESteamNetConnectionEnd.k_ESteamNetConnectionEnd_Misc_SteamConnectivity = 5005
+     * }
+     */
+    public static int k_ESteamNetConnectionEnd_Misc_SteamConnectivity() {
+        return k_ESteamNetConnectionEnd_Misc_SteamConnectivity;
+    }
+    private static final int k_ESteamNetConnectionEnd_Misc_NoRelaySessionsToClient = (int)5006L;
+    /**
+     * {@snippet lang=c :
+     * enum ESteamNetConnectionEnd.k_ESteamNetConnectionEnd_Misc_NoRelaySessionsToClient = 5006
+     * }
+     */
+    public static int k_ESteamNetConnectionEnd_Misc_NoRelaySessionsToClient() {
+        return k_ESteamNetConnectionEnd_Misc_NoRelaySessionsToClient;
+    }
+    private static final int k_ESteamNetConnectionEnd_Misc_P2P_Rendezvous = (int)5008L;
+    /**
+     * {@snippet lang=c :
+     * enum ESteamNetConnectionEnd.k_ESteamNetConnectionEnd_Misc_P2P_Rendezvous = 5008
+     * }
+     */
+    public static int k_ESteamNetConnectionEnd_Misc_P2P_Rendezvous() {
+        return k_ESteamNetConnectionEnd_Misc_P2P_Rendezvous;
+    }
+    private static final int k_ESteamNetConnectionEnd_Misc_P2P_NAT_Firewall = (int)5009L;
+    /**
+     * {@snippet lang=c :
+     * enum ESteamNetConnectionEnd.k_ESteamNetConnectionEnd_Misc_P2P_NAT_Firewall = 5009
+     * }
+     */
+    public static int k_ESteamNetConnectionEnd_Misc_P2P_NAT_Firewall() {
+        return k_ESteamNetConnectionEnd_Misc_P2P_NAT_Firewall;
+    }
+    private static final int k_ESteamNetConnectionEnd_Misc_PeerSentNoConnection = (int)5010L;
+    /**
+     * {@snippet lang=c :
+     * enum ESteamNetConnectionEnd.k_ESteamNetConnectionEnd_Misc_PeerSentNoConnection = 5010
+     * }
+     */
+    public static int k_ESteamNetConnectionEnd_Misc_PeerSentNoConnection() {
+        return k_ESteamNetConnectionEnd_Misc_PeerSentNoConnection;
+    }
+    private static final int k_ESteamNetConnectionEnd_Misc_Max = (int)5999L;
+    /**
+     * {@snippet lang=c :
+     * enum ESteamNetConnectionEnd.k_ESteamNetConnectionEnd_Misc_Max = 5999
+     * }
+     */
+    public static int k_ESteamNetConnectionEnd_Misc_Max() {
+        return k_ESteamNetConnectionEnd_Misc_Max;
+    }
+    private static final int k_ESteamNetConnectionEnd__Force32Bit = (int)2147483647L;
+    /**
+     * {@snippet lang=c :
+     * enum ESteamNetConnectionEnd.k_ESteamNetConnectionEnd__Force32Bit = 2147483647
+     * }
+     */
+    public static int k_ESteamNetConnectionEnd__Force32Bit() {
+        return k_ESteamNetConnectionEnd__Force32Bit;
+    }
+    private static final int k_ESteamNetworkingConfig_Global = (int)1L;
+    /**
+     * {@snippet lang=c :
+     * enum ESteamNetworkingConfigScope.k_ESteamNetworkingConfig_Global = 1
+     * }
+     */
+    public static int k_ESteamNetworkingConfig_Global() {
+        return k_ESteamNetworkingConfig_Global;
+    }
+    private static final int k_ESteamNetworkingConfig_SocketsInterface = (int)2L;
+    /**
+     * {@snippet lang=c :
+     * enum ESteamNetworkingConfigScope.k_ESteamNetworkingConfig_SocketsInterface = 2
+     * }
+     */
+    public static int k_ESteamNetworkingConfig_SocketsInterface() {
+        return k_ESteamNetworkingConfig_SocketsInterface;
+    }
+    private static final int k_ESteamNetworkingConfig_ListenSocket = (int)3L;
+    /**
+     * {@snippet lang=c :
+     * enum ESteamNetworkingConfigScope.k_ESteamNetworkingConfig_ListenSocket = 3
+     * }
+     */
+    public static int k_ESteamNetworkingConfig_ListenSocket() {
+        return k_ESteamNetworkingConfig_ListenSocket;
+    }
+    private static final int k_ESteamNetworkingConfig_Connection = (int)4L;
+    /**
+     * {@snippet lang=c :
+     * enum ESteamNetworkingConfigScope.k_ESteamNetworkingConfig_Connection = 4
+     * }
+     */
+    public static int k_ESteamNetworkingConfig_Connection() {
+        return k_ESteamNetworkingConfig_Connection;
+    }
+    private static final int k_ESteamNetworkingConfigScope__Force32Bit = (int)2147483647L;
+    /**
+     * {@snippet lang=c :
+     * enum ESteamNetworkingConfigScope.k_ESteamNetworkingConfigScope__Force32Bit = 2147483647
+     * }
+     */
+    public static int k_ESteamNetworkingConfigScope__Force32Bit() {
+        return k_ESteamNetworkingConfigScope__Force32Bit;
+    }
+    private static final int k_ESteamNetworkingConfig_Int32 = (int)1L;
+    /**
+     * {@snippet lang=c :
+     * enum ESteamNetworkingConfigDataType.k_ESteamNetworkingConfig_Int32 = 1
+     * }
+     */
+    public static int k_ESteamNetworkingConfig_Int32() {
+        return k_ESteamNetworkingConfig_Int32;
+    }
+    private static final int k_ESteamNetworkingConfig_Int64 = (int)2L;
+    /**
+     * {@snippet lang=c :
+     * enum ESteamNetworkingConfigDataType.k_ESteamNetworkingConfig_Int64 = 2
+     * }
+     */
+    public static int k_ESteamNetworkingConfig_Int64() {
+        return k_ESteamNetworkingConfig_Int64;
+    }
+    private static final int k_ESteamNetworkingConfig_Float = (int)3L;
+    /**
+     * {@snippet lang=c :
+     * enum ESteamNetworkingConfigDataType.k_ESteamNetworkingConfig_Float = 3
+     * }
+     */
+    public static int k_ESteamNetworkingConfig_Float() {
+        return k_ESteamNetworkingConfig_Float;
+    }
+    private static final int k_ESteamNetworkingConfig_String = (int)4L;
+    /**
+     * {@snippet lang=c :
+     * enum ESteamNetworkingConfigDataType.k_ESteamNetworkingConfig_String = 4
+     * }
+     */
+    public static int k_ESteamNetworkingConfig_String() {
+        return k_ESteamNetworkingConfig_String;
+    }
+    private static final int k_ESteamNetworkingConfig_Ptr = (int)5L;
+    /**
+     * {@snippet lang=c :
+     * enum ESteamNetworkingConfigDataType.k_ESteamNetworkingConfig_Ptr = 5
+     * }
+     */
+    public static int k_ESteamNetworkingConfig_Ptr() {
+        return k_ESteamNetworkingConfig_Ptr;
+    }
+    private static final int k_ESteamNetworkingConfigDataType__Force32Bit = (int)2147483647L;
+    /**
+     * {@snippet lang=c :
+     * enum ESteamNetworkingConfigDataType.k_ESteamNetworkingConfigDataType__Force32Bit = 2147483647
+     * }
+     */
+    public static int k_ESteamNetworkingConfigDataType__Force32Bit() {
+        return k_ESteamNetworkingConfigDataType__Force32Bit;
+    }
+    private static final int k_ESteamNetworkingConfig_Invalid = (int)0L;
+    /**
+     * {@snippet lang=c :
+     * enum ESteamNetworkingConfigValue.k_ESteamNetworkingConfig_Invalid = 0
+     * }
+     */
+    public static int k_ESteamNetworkingConfig_Invalid() {
+        return k_ESteamNetworkingConfig_Invalid;
+    }
+    private static final int k_ESteamNetworkingConfig_TimeoutInitial = (int)24L;
+    /**
+     * {@snippet lang=c :
+     * enum ESteamNetworkingConfigValue.k_ESteamNetworkingConfig_TimeoutInitial = 24
+     * }
+     */
+    public static int k_ESteamNetworkingConfig_TimeoutInitial() {
+        return k_ESteamNetworkingConfig_TimeoutInitial;
+    }
+    private static final int k_ESteamNetworkingConfig_TimeoutConnected = (int)25L;
+    /**
+     * {@snippet lang=c :
+     * enum ESteamNetworkingConfigValue.k_ESteamNetworkingConfig_TimeoutConnected = 25
+     * }
+     */
+    public static int k_ESteamNetworkingConfig_TimeoutConnected() {
+        return k_ESteamNetworkingConfig_TimeoutConnected;
+    }
+    private static final int k_ESteamNetworkingConfig_SendBufferSize = (int)9L;
+    /**
+     * {@snippet lang=c :
+     * enum ESteamNetworkingConfigValue.k_ESteamNetworkingConfig_SendBufferSize = 9
+     * }
+     */
+    public static int k_ESteamNetworkingConfig_SendBufferSize() {
+        return k_ESteamNetworkingConfig_SendBufferSize;
+    }
+    private static final int k_ESteamNetworkingConfig_RecvBufferSize = (int)47L;
+    /**
+     * {@snippet lang=c :
+     * enum ESteamNetworkingConfigValue.k_ESteamNetworkingConfig_RecvBufferSize = 47
+     * }
+     */
+    public static int k_ESteamNetworkingConfig_RecvBufferSize() {
+        return k_ESteamNetworkingConfig_RecvBufferSize;
+    }
+    private static final int k_ESteamNetworkingConfig_RecvBufferMessages = (int)48L;
+    /**
+     * {@snippet lang=c :
+     * enum ESteamNetworkingConfigValue.k_ESteamNetworkingConfig_RecvBufferMessages = 48
+     * }
+     */
+    public static int k_ESteamNetworkingConfig_RecvBufferMessages() {
+        return k_ESteamNetworkingConfig_RecvBufferMessages;
+    }
+    private static final int k_ESteamNetworkingConfig_RecvMaxMessageSize = (int)49L;
+    /**
+     * {@snippet lang=c :
+     * enum ESteamNetworkingConfigValue.k_ESteamNetworkingConfig_RecvMaxMessageSize = 49
+     * }
+     */
+    public static int k_ESteamNetworkingConfig_RecvMaxMessageSize() {
+        return k_ESteamNetworkingConfig_RecvMaxMessageSize;
+    }
+    private static final int k_ESteamNetworkingConfig_RecvMaxSegmentsPerPacket = (int)50L;
+    /**
+     * {@snippet lang=c :
+     * enum ESteamNetworkingConfigValue.k_ESteamNetworkingConfig_RecvMaxSegmentsPerPacket = 50
+     * }
+     */
+    public static int k_ESteamNetworkingConfig_RecvMaxSegmentsPerPacket() {
+        return k_ESteamNetworkingConfig_RecvMaxSegmentsPerPacket;
+    }
+    private static final int k_ESteamNetworkingConfig_ConnectionUserData = (int)40L;
+    /**
+     * {@snippet lang=c :
+     * enum ESteamNetworkingConfigValue.k_ESteamNetworkingConfig_ConnectionUserData = 40
+     * }
+     */
+    public static int k_ESteamNetworkingConfig_ConnectionUserData() {
+        return k_ESteamNetworkingConfig_ConnectionUserData;
+    }
+    private static final int k_ESteamNetworkingConfig_SendRateMin = (int)10L;
+    /**
+     * {@snippet lang=c :
+     * enum ESteamNetworkingConfigValue.k_ESteamNetworkingConfig_SendRateMin = 10
+     * }
+     */
+    public static int k_ESteamNetworkingConfig_SendRateMin() {
+        return k_ESteamNetworkingConfig_SendRateMin;
+    }
+    private static final int k_ESteamNetworkingConfig_SendRateMax = (int)11L;
+    /**
+     * {@snippet lang=c :
+     * enum ESteamNetworkingConfigValue.k_ESteamNetworkingConfig_SendRateMax = 11
+     * }
+     */
+    public static int k_ESteamNetworkingConfig_SendRateMax() {
+        return k_ESteamNetworkingConfig_SendRateMax;
+    }
+    private static final int k_ESteamNetworkingConfig_NagleTime = (int)12L;
+    /**
+     * {@snippet lang=c :
+     * enum ESteamNetworkingConfigValue.k_ESteamNetworkingConfig_NagleTime = 12
+     * }
+     */
+    public static int k_ESteamNetworkingConfig_NagleTime() {
+        return k_ESteamNetworkingConfig_NagleTime;
+    }
+    private static final int k_ESteamNetworkingConfig_IP_AllowWithoutAuth = (int)23L;
+    /**
+     * {@snippet lang=c :
+     * enum ESteamNetworkingConfigValue.k_ESteamNetworkingConfig_IP_AllowWithoutAuth = 23
+     * }
+     */
+    public static int k_ESteamNetworkingConfig_IP_AllowWithoutAuth() {
+        return k_ESteamNetworkingConfig_IP_AllowWithoutAuth;
+    }
+    private static final int k_ESteamNetworkingConfig_MTU_PacketSize = (int)32L;
+    /**
+     * {@snippet lang=c :
+     * enum ESteamNetworkingConfigValue.k_ESteamNetworkingConfig_MTU_PacketSize = 32
+     * }
+     */
+    public static int k_ESteamNetworkingConfig_MTU_PacketSize() {
+        return k_ESteamNetworkingConfig_MTU_PacketSize;
+    }
+    private static final int k_ESteamNetworkingConfig_MTU_DataSize = (int)33L;
+    /**
+     * {@snippet lang=c :
+     * enum ESteamNetworkingConfigValue.k_ESteamNetworkingConfig_MTU_DataSize = 33
+     * }
+     */
+    public static int k_ESteamNetworkingConfig_MTU_DataSize() {
+        return k_ESteamNetworkingConfig_MTU_DataSize;
+    }
+    private static final int k_ESteamNetworkingConfig_Unencrypted = (int)34L;
+    /**
+     * {@snippet lang=c :
+     * enum ESteamNetworkingConfigValue.k_ESteamNetworkingConfig_Unencrypted = 34
+     * }
+     */
+    public static int k_ESteamNetworkingConfig_Unencrypted() {
+        return k_ESteamNetworkingConfig_Unencrypted;
+    }
+    private static final int k_ESteamNetworkingConfig_SymmetricConnect = (int)37L;
+    /**
+     * {@snippet lang=c :
+     * enum ESteamNetworkingConfigValue.k_ESteamNetworkingConfig_SymmetricConnect = 37
+     * }
+     */
+    public static int k_ESteamNetworkingConfig_SymmetricConnect() {
+        return k_ESteamNetworkingConfig_SymmetricConnect;
+    }
+    private static final int k_ESteamNetworkingConfig_LocalVirtualPort = (int)38L;
+    /**
+     * {@snippet lang=c :
+     * enum ESteamNetworkingConfigValue.k_ESteamNetworkingConfig_LocalVirtualPort = 38
+     * }
+     */
+    public static int k_ESteamNetworkingConfig_LocalVirtualPort() {
+        return k_ESteamNetworkingConfig_LocalVirtualPort;
+    }
+    private static final int k_ESteamNetworkingConfig_DualWifi_Enable = (int)39L;
+    /**
+     * {@snippet lang=c :
+     * enum ESteamNetworkingConfigValue.k_ESteamNetworkingConfig_DualWifi_Enable = 39
+     * }
+     */
+    public static int k_ESteamNetworkingConfig_DualWifi_Enable() {
+        return k_ESteamNetworkingConfig_DualWifi_Enable;
+    }
+    private static final int k_ESteamNetworkingConfig_EnableDiagnosticsUI = (int)46L;
+    /**
+     * {@snippet lang=c :
+     * enum ESteamNetworkingConfigValue.k_ESteamNetworkingConfig_EnableDiagnosticsUI = 46
+     * }
+     */
+    public static int k_ESteamNetworkingConfig_EnableDiagnosticsUI() {
+        return k_ESteamNetworkingConfig_EnableDiagnosticsUI;
+    }
+    private static final int k_ESteamNetworkingConfig_FakePacketLoss_Send = (int)2L;
+    /**
+     * {@snippet lang=c :
+     * enum ESteamNetworkingConfigValue.k_ESteamNetworkingConfig_FakePacketLoss_Send = 2
+     * }
+     */
+    public static int k_ESteamNetworkingConfig_FakePacketLoss_Send() {
+        return k_ESteamNetworkingConfig_FakePacketLoss_Send;
+    }
+    private static final int k_ESteamNetworkingConfig_FakePacketLoss_Recv = (int)3L;
+    /**
+     * {@snippet lang=c :
+     * enum ESteamNetworkingConfigValue.k_ESteamNetworkingConfig_FakePacketLoss_Recv = 3
+     * }
+     */
+    public static int k_ESteamNetworkingConfig_FakePacketLoss_Recv() {
+        return k_ESteamNetworkingConfig_FakePacketLoss_Recv;
+    }
+    private static final int k_ESteamNetworkingConfig_FakePacketLag_Send = (int)4L;
+    /**
+     * {@snippet lang=c :
+     * enum ESteamNetworkingConfigValue.k_ESteamNetworkingConfig_FakePacketLag_Send = 4
+     * }
+     */
+    public static int k_ESteamNetworkingConfig_FakePacketLag_Send() {
+        return k_ESteamNetworkingConfig_FakePacketLag_Send;
+    }
+    private static final int k_ESteamNetworkingConfig_FakePacketLag_Recv = (int)5L;
+    /**
+     * {@snippet lang=c :
+     * enum ESteamNetworkingConfigValue.k_ESteamNetworkingConfig_FakePacketLag_Recv = 5
+     * }
+     */
+    public static int k_ESteamNetworkingConfig_FakePacketLag_Recv() {
+        return k_ESteamNetworkingConfig_FakePacketLag_Recv;
+    }
+    private static final int k_ESteamNetworkingConfig_FakePacketReorder_Send = (int)6L;
+    /**
+     * {@snippet lang=c :
+     * enum ESteamNetworkingConfigValue.k_ESteamNetworkingConfig_FakePacketReorder_Send = 6
+     * }
+     */
+    public static int k_ESteamNetworkingConfig_FakePacketReorder_Send() {
+        return k_ESteamNetworkingConfig_FakePacketReorder_Send;
+    }
+    private static final int k_ESteamNetworkingConfig_FakePacketReorder_Recv = (int)7L;
+    /**
+     * {@snippet lang=c :
+     * enum ESteamNetworkingConfigValue.k_ESteamNetworkingConfig_FakePacketReorder_Recv = 7
+     * }
+     */
+    public static int k_ESteamNetworkingConfig_FakePacketReorder_Recv() {
+        return k_ESteamNetworkingConfig_FakePacketReorder_Recv;
+    }
+    private static final int k_ESteamNetworkingConfig_FakePacketReorder_Time = (int)8L;
+    /**
+     * {@snippet lang=c :
+     * enum ESteamNetworkingConfigValue.k_ESteamNetworkingConfig_FakePacketReorder_Time = 8
+     * }
+     */
+    public static int k_ESteamNetworkingConfig_FakePacketReorder_Time() {
+        return k_ESteamNetworkingConfig_FakePacketReorder_Time;
+    }
+    private static final int k_ESteamNetworkingConfig_FakePacketDup_Send = (int)26L;
+    /**
+     * {@snippet lang=c :
+     * enum ESteamNetworkingConfigValue.k_ESteamNetworkingConfig_FakePacketDup_Send = 26
+     * }
+     */
+    public static int k_ESteamNetworkingConfig_FakePacketDup_Send() {
+        return k_ESteamNetworkingConfig_FakePacketDup_Send;
+    }
+    private static final int k_ESteamNetworkingConfig_FakePacketDup_Recv = (int)27L;
+    /**
+     * {@snippet lang=c :
+     * enum ESteamNetworkingConfigValue.k_ESteamNetworkingConfig_FakePacketDup_Recv = 27
+     * }
+     */
+    public static int k_ESteamNetworkingConfig_FakePacketDup_Recv() {
+        return k_ESteamNetworkingConfig_FakePacketDup_Recv;
+    }
+    private static final int k_ESteamNetworkingConfig_FakePacketDup_TimeMax = (int)28L;
+    /**
+     * {@snippet lang=c :
+     * enum ESteamNetworkingConfigValue.k_ESteamNetworkingConfig_FakePacketDup_TimeMax = 28
+     * }
+     */
+    public static int k_ESteamNetworkingConfig_FakePacketDup_TimeMax() {
+        return k_ESteamNetworkingConfig_FakePacketDup_TimeMax;
+    }
+    private static final int k_ESteamNetworkingConfig_PacketTraceMaxBytes = (int)41L;
+    /**
+     * {@snippet lang=c :
+     * enum ESteamNetworkingConfigValue.k_ESteamNetworkingConfig_PacketTraceMaxBytes = 41
+     * }
+     */
+    public static int k_ESteamNetworkingConfig_PacketTraceMaxBytes() {
+        return k_ESteamNetworkingConfig_PacketTraceMaxBytes;
+    }
+    private static final int k_ESteamNetworkingConfig_FakeRateLimit_Send_Rate = (int)42L;
+    /**
+     * {@snippet lang=c :
+     * enum ESteamNetworkingConfigValue.k_ESteamNetworkingConfig_FakeRateLimit_Send_Rate = 42
+     * }
+     */
+    public static int k_ESteamNetworkingConfig_FakeRateLimit_Send_Rate() {
+        return k_ESteamNetworkingConfig_FakeRateLimit_Send_Rate;
+    }
+    private static final int k_ESteamNetworkingConfig_FakeRateLimit_Send_Burst = (int)43L;
+    /**
+     * {@snippet lang=c :
+     * enum ESteamNetworkingConfigValue.k_ESteamNetworkingConfig_FakeRateLimit_Send_Burst = 43
+     * }
+     */
+    public static int k_ESteamNetworkingConfig_FakeRateLimit_Send_Burst() {
+        return k_ESteamNetworkingConfig_FakeRateLimit_Send_Burst;
+    }
+    private static final int k_ESteamNetworkingConfig_FakeRateLimit_Recv_Rate = (int)44L;
+    /**
+     * {@snippet lang=c :
+     * enum ESteamNetworkingConfigValue.k_ESteamNetworkingConfig_FakeRateLimit_Recv_Rate = 44
+     * }
+     */
+    public static int k_ESteamNetworkingConfig_FakeRateLimit_Recv_Rate() {
+        return k_ESteamNetworkingConfig_FakeRateLimit_Recv_Rate;
+    }
+    private static final int k_ESteamNetworkingConfig_FakeRateLimit_Recv_Burst = (int)45L;
+    /**
+     * {@snippet lang=c :
+     * enum ESteamNetworkingConfigValue.k_ESteamNetworkingConfig_FakeRateLimit_Recv_Burst = 45
+     * }
+     */
+    public static int k_ESteamNetworkingConfig_FakeRateLimit_Recv_Burst() {
+        return k_ESteamNetworkingConfig_FakeRateLimit_Recv_Burst;
+    }
+    private static final int k_ESteamNetworkingConfig_OutOfOrderCorrectionWindowMicroseconds = (int)51L;
+    /**
+     * {@snippet lang=c :
+     * enum ESteamNetworkingConfigValue.k_ESteamNetworkingConfig_OutOfOrderCorrectionWindowMicroseconds = 51
+     * }
+     */
+    public static int k_ESteamNetworkingConfig_OutOfOrderCorrectionWindowMicroseconds() {
+        return k_ESteamNetworkingConfig_OutOfOrderCorrectionWindowMicroseconds;
+    }
+    private static final int k_ESteamNetworkingConfig_Callback_ConnectionStatusChanged = (int)201L;
+    /**
+     * {@snippet lang=c :
+     * enum ESteamNetworkingConfigValue.k_ESteamNetworkingConfig_Callback_ConnectionStatusChanged = 201
+     * }
+     */
+    public static int k_ESteamNetworkingConfig_Callback_ConnectionStatusChanged() {
+        return k_ESteamNetworkingConfig_Callback_ConnectionStatusChanged;
+    }
+    private static final int k_ESteamNetworkingConfig_Callback_AuthStatusChanged = (int)202L;
+    /**
+     * {@snippet lang=c :
+     * enum ESteamNetworkingConfigValue.k_ESteamNetworkingConfig_Callback_AuthStatusChanged = 202
+     * }
+     */
+    public static int k_ESteamNetworkingConfig_Callback_AuthStatusChanged() {
+        return k_ESteamNetworkingConfig_Callback_AuthStatusChanged;
+    }
+    private static final int k_ESteamNetworkingConfig_Callback_RelayNetworkStatusChanged = (int)203L;
+    /**
+     * {@snippet lang=c :
+     * enum ESteamNetworkingConfigValue.k_ESteamNetworkingConfig_Callback_RelayNetworkStatusChanged = 203
+     * }
+     */
+    public static int k_ESteamNetworkingConfig_Callback_RelayNetworkStatusChanged() {
+        return k_ESteamNetworkingConfig_Callback_RelayNetworkStatusChanged;
+    }
+    private static final int k_ESteamNetworkingConfig_Callback_MessagesSessionRequest = (int)204L;
+    /**
+     * {@snippet lang=c :
+     * enum ESteamNetworkingConfigValue.k_ESteamNetworkingConfig_Callback_MessagesSessionRequest = 204
+     * }
+     */
+    public static int k_ESteamNetworkingConfig_Callback_MessagesSessionRequest() {
+        return k_ESteamNetworkingConfig_Callback_MessagesSessionRequest;
+    }
+    private static final int k_ESteamNetworkingConfig_Callback_MessagesSessionFailed = (int)205L;
+    /**
+     * {@snippet lang=c :
+     * enum ESteamNetworkingConfigValue.k_ESteamNetworkingConfig_Callback_MessagesSessionFailed = 205
+     * }
+     */
+    public static int k_ESteamNetworkingConfig_Callback_MessagesSessionFailed() {
+        return k_ESteamNetworkingConfig_Callback_MessagesSessionFailed;
+    }
+    private static final int k_ESteamNetworkingConfig_Callback_CreateConnectionSignaling = (int)206L;
+    /**
+     * {@snippet lang=c :
+     * enum ESteamNetworkingConfigValue.k_ESteamNetworkingConfig_Callback_CreateConnectionSignaling = 206
+     * }
+     */
+    public static int k_ESteamNetworkingConfig_Callback_CreateConnectionSignaling() {
+        return k_ESteamNetworkingConfig_Callback_CreateConnectionSignaling;
+    }
+    private static final int k_ESteamNetworkingConfig_Callback_FakeIPResult = (int)207L;
+    /**
+     * {@snippet lang=c :
+     * enum ESteamNetworkingConfigValue.k_ESteamNetworkingConfig_Callback_FakeIPResult = 207
+     * }
+     */
+    public static int k_ESteamNetworkingConfig_Callback_FakeIPResult() {
+        return k_ESteamNetworkingConfig_Callback_FakeIPResult;
+    }
+    private static final int k_ESteamNetworkingConfig_P2P_STUN_ServerList = (int)103L;
+    /**
+     * {@snippet lang=c :
+     * enum ESteamNetworkingConfigValue.k_ESteamNetworkingConfig_P2P_STUN_ServerList = 103
+     * }
+     */
+    public static int k_ESteamNetworkingConfig_P2P_STUN_ServerList() {
+        return k_ESteamNetworkingConfig_P2P_STUN_ServerList;
+    }
+    private static final int k_ESteamNetworkingConfig_P2P_Transport_ICE_Enable = (int)104L;
+    /**
+     * {@snippet lang=c :
+     * enum ESteamNetworkingConfigValue.k_ESteamNetworkingConfig_P2P_Transport_ICE_Enable = 104
+     * }
+     */
+    public static int k_ESteamNetworkingConfig_P2P_Transport_ICE_Enable() {
+        return k_ESteamNetworkingConfig_P2P_Transport_ICE_Enable;
+    }
+    private static final int k_ESteamNetworkingConfig_P2P_Transport_ICE_Penalty = (int)105L;
+    /**
+     * {@snippet lang=c :
+     * enum ESteamNetworkingConfigValue.k_ESteamNetworkingConfig_P2P_Transport_ICE_Penalty = 105
+     * }
+     */
+    public static int k_ESteamNetworkingConfig_P2P_Transport_ICE_Penalty() {
+        return k_ESteamNetworkingConfig_P2P_Transport_ICE_Penalty;
+    }
+    private static final int k_ESteamNetworkingConfig_P2P_Transport_SDR_Penalty = (int)106L;
+    /**
+     * {@snippet lang=c :
+     * enum ESteamNetworkingConfigValue.k_ESteamNetworkingConfig_P2P_Transport_SDR_Penalty = 106
+     * }
+     */
+    public static int k_ESteamNetworkingConfig_P2P_Transport_SDR_Penalty() {
+        return k_ESteamNetworkingConfig_P2P_Transport_SDR_Penalty;
+    }
+    private static final int k_ESteamNetworkingConfig_P2P_TURN_ServerList = (int)107L;
+    /**
+     * {@snippet lang=c :
+     * enum ESteamNetworkingConfigValue.k_ESteamNetworkingConfig_P2P_TURN_ServerList = 107
+     * }
+     */
+    public static int k_ESteamNetworkingConfig_P2P_TURN_ServerList() {
+        return k_ESteamNetworkingConfig_P2P_TURN_ServerList;
+    }
+    private static final int k_ESteamNetworkingConfig_P2P_TURN_UserList = (int)108L;
+    /**
+     * {@snippet lang=c :
+     * enum ESteamNetworkingConfigValue.k_ESteamNetworkingConfig_P2P_TURN_UserList = 108
+     * }
+     */
+    public static int k_ESteamNetworkingConfig_P2P_TURN_UserList() {
+        return k_ESteamNetworkingConfig_P2P_TURN_UserList;
+    }
+    private static final int k_ESteamNetworkingConfig_P2P_TURN_PassList = (int)109L;
+    /**
+     * {@snippet lang=c :
+     * enum ESteamNetworkingConfigValue.k_ESteamNetworkingConfig_P2P_TURN_PassList = 109
+     * }
+     */
+    public static int k_ESteamNetworkingConfig_P2P_TURN_PassList() {
+        return k_ESteamNetworkingConfig_P2P_TURN_PassList;
+    }
+    private static final int k_ESteamNetworkingConfig_P2P_Transport_ICE_Implementation = (int)110L;
+    /**
+     * {@snippet lang=c :
+     * enum ESteamNetworkingConfigValue.k_ESteamNetworkingConfig_P2P_Transport_ICE_Implementation = 110
+     * }
+     */
+    public static int k_ESteamNetworkingConfig_P2P_Transport_ICE_Implementation() {
+        return k_ESteamNetworkingConfig_P2P_Transport_ICE_Implementation;
+    }
+    private static final int k_ESteamNetworkingConfig_SDRClient_ConsecutitivePingTimeoutsFailInitial = (int)19L;
+    /**
+     * {@snippet lang=c :
+     * enum ESteamNetworkingConfigValue.k_ESteamNetworkingConfig_SDRClient_ConsecutitivePingTimeoutsFailInitial = 19
+     * }
+     */
+    public static int k_ESteamNetworkingConfig_SDRClient_ConsecutitivePingTimeoutsFailInitial() {
+        return k_ESteamNetworkingConfig_SDRClient_ConsecutitivePingTimeoutsFailInitial;
+    }
+    private static final int k_ESteamNetworkingConfig_SDRClient_ConsecutitivePingTimeoutsFail = (int)20L;
+    /**
+     * {@snippet lang=c :
+     * enum ESteamNetworkingConfigValue.k_ESteamNetworkingConfig_SDRClient_ConsecutitivePingTimeoutsFail = 20
+     * }
+     */
+    public static int k_ESteamNetworkingConfig_SDRClient_ConsecutitivePingTimeoutsFail() {
+        return k_ESteamNetworkingConfig_SDRClient_ConsecutitivePingTimeoutsFail;
+    }
+    private static final int k_ESteamNetworkingConfig_SDRClient_MinPingsBeforePingAccurate = (int)21L;
+    /**
+     * {@snippet lang=c :
+     * enum ESteamNetworkingConfigValue.k_ESteamNetworkingConfig_SDRClient_MinPingsBeforePingAccurate = 21
+     * }
+     */
+    public static int k_ESteamNetworkingConfig_SDRClient_MinPingsBeforePingAccurate() {
+        return k_ESteamNetworkingConfig_SDRClient_MinPingsBeforePingAccurate;
+    }
+    private static final int k_ESteamNetworkingConfig_SDRClient_SingleSocket = (int)22L;
+    /**
+     * {@snippet lang=c :
+     * enum ESteamNetworkingConfigValue.k_ESteamNetworkingConfig_SDRClient_SingleSocket = 22
+     * }
+     */
+    public static int k_ESteamNetworkingConfig_SDRClient_SingleSocket() {
+        return k_ESteamNetworkingConfig_SDRClient_SingleSocket;
+    }
+    private static final int k_ESteamNetworkingConfig_SDRClient_ForceRelayCluster = (int)29L;
+    /**
+     * {@snippet lang=c :
+     * enum ESteamNetworkingConfigValue.k_ESteamNetworkingConfig_SDRClient_ForceRelayCluster = 29
+     * }
+     */
+    public static int k_ESteamNetworkingConfig_SDRClient_ForceRelayCluster() {
+        return k_ESteamNetworkingConfig_SDRClient_ForceRelayCluster;
+    }
+    private static final int k_ESteamNetworkingConfig_SDRClient_DevTicket = (int)30L;
+    /**
+     * {@snippet lang=c :
+     * enum ESteamNetworkingConfigValue.k_ESteamNetworkingConfig_SDRClient_DevTicket = 30
+     * }
+     */
+    public static int k_ESteamNetworkingConfig_SDRClient_DevTicket() {
+        return k_ESteamNetworkingConfig_SDRClient_DevTicket;
+    }
+    private static final int k_ESteamNetworkingConfig_SDRClient_ForceProxyAddr = (int)31L;
+    /**
+     * {@snippet lang=c :
+     * enum ESteamNetworkingConfigValue.k_ESteamNetworkingConfig_SDRClient_ForceProxyAddr = 31
+     * }
+     */
+    public static int k_ESteamNetworkingConfig_SDRClient_ForceProxyAddr() {
+        return k_ESteamNetworkingConfig_SDRClient_ForceProxyAddr;
+    }
+    private static final int k_ESteamNetworkingConfig_SDRClient_FakeClusterPing = (int)36L;
+    /**
+     * {@snippet lang=c :
+     * enum ESteamNetworkingConfigValue.k_ESteamNetworkingConfig_SDRClient_FakeClusterPing = 36
+     * }
+     */
+    public static int k_ESteamNetworkingConfig_SDRClient_FakeClusterPing() {
+        return k_ESteamNetworkingConfig_SDRClient_FakeClusterPing;
+    }
+    private static final int k_ESteamNetworkingConfig_SDRClient_LimitPingProbesToNearestN = (int)60L;
+    /**
+     * {@snippet lang=c :
+     * enum ESteamNetworkingConfigValue.k_ESteamNetworkingConfig_SDRClient_LimitPingProbesToNearestN = 60
+     * }
+     */
+    public static int k_ESteamNetworkingConfig_SDRClient_LimitPingProbesToNearestN() {
+        return k_ESteamNetworkingConfig_SDRClient_LimitPingProbesToNearestN;
+    }
+    private static final int k_ESteamNetworkingConfig_LogLevel_AckRTT = (int)13L;
+    /**
+     * {@snippet lang=c :
+     * enum ESteamNetworkingConfigValue.k_ESteamNetworkingConfig_LogLevel_AckRTT = 13
+     * }
+     */
+    public static int k_ESteamNetworkingConfig_LogLevel_AckRTT() {
+        return k_ESteamNetworkingConfig_LogLevel_AckRTT;
+    }
+    private static final int k_ESteamNetworkingConfig_LogLevel_PacketDecode = (int)14L;
+    /**
+     * {@snippet lang=c :
+     * enum ESteamNetworkingConfigValue.k_ESteamNetworkingConfig_LogLevel_PacketDecode = 14
+     * }
+     */
+    public static int k_ESteamNetworkingConfig_LogLevel_PacketDecode() {
+        return k_ESteamNetworkingConfig_LogLevel_PacketDecode;
+    }
+    private static final int k_ESteamNetworkingConfig_LogLevel_Message = (int)15L;
+    /**
+     * {@snippet lang=c :
+     * enum ESteamNetworkingConfigValue.k_ESteamNetworkingConfig_LogLevel_Message = 15
+     * }
+     */
+    public static int k_ESteamNetworkingConfig_LogLevel_Message() {
+        return k_ESteamNetworkingConfig_LogLevel_Message;
+    }
+    private static final int k_ESteamNetworkingConfig_LogLevel_PacketGaps = (int)16L;
+    /**
+     * {@snippet lang=c :
+     * enum ESteamNetworkingConfigValue.k_ESteamNetworkingConfig_LogLevel_PacketGaps = 16
+     * }
+     */
+    public static int k_ESteamNetworkingConfig_LogLevel_PacketGaps() {
+        return k_ESteamNetworkingConfig_LogLevel_PacketGaps;
+    }
+    private static final int k_ESteamNetworkingConfig_LogLevel_P2PRendezvous = (int)17L;
+    /**
+     * {@snippet lang=c :
+     * enum ESteamNetworkingConfigValue.k_ESteamNetworkingConfig_LogLevel_P2PRendezvous = 17
+     * }
+     */
+    public static int k_ESteamNetworkingConfig_LogLevel_P2PRendezvous() {
+        return k_ESteamNetworkingConfig_LogLevel_P2PRendezvous;
+    }
+    private static final int k_ESteamNetworkingConfig_LogLevel_SDRRelayPings = (int)18L;
+    /**
+     * {@snippet lang=c :
+     * enum ESteamNetworkingConfigValue.k_ESteamNetworkingConfig_LogLevel_SDRRelayPings = 18
+     * }
+     */
+    public static int k_ESteamNetworkingConfig_LogLevel_SDRRelayPings() {
+        return k_ESteamNetworkingConfig_LogLevel_SDRRelayPings;
+    }
+    private static final int k_ESteamNetworkingConfig_ECN = (int)999L;
+    /**
+     * {@snippet lang=c :
+     * enum ESteamNetworkingConfigValue.k_ESteamNetworkingConfig_ECN = 999
+     * }
+     */
+    public static int k_ESteamNetworkingConfig_ECN() {
+        return k_ESteamNetworkingConfig_ECN;
+    }
+    private static final int k_ESteamNetworkingConfig_DELETED_EnumerateDevVars = (int)35L;
+    /**
+     * {@snippet lang=c :
+     * enum ESteamNetworkingConfigValue.k_ESteamNetworkingConfig_DELETED_EnumerateDevVars = 35
+     * }
+     */
+    public static int k_ESteamNetworkingConfig_DELETED_EnumerateDevVars() {
+        return k_ESteamNetworkingConfig_DELETED_EnumerateDevVars;
+    }
+    private static final int k_ESteamNetworkingConfigValue__Force32Bit = (int)2147483647L;
+    /**
+     * {@snippet lang=c :
+     * enum ESteamNetworkingConfigValue.k_ESteamNetworkingConfigValue__Force32Bit = 2147483647
+     * }
+     */
+    public static int k_ESteamNetworkingConfigValue__Force32Bit() {
+        return k_ESteamNetworkingConfigValue__Force32Bit;
+    }
+    private static final int k_ESteamNetworkingGetConfigValue_BadValue = (int)-1L;
+    /**
+     * {@snippet lang=c :
+     * enum ESteamNetworkingGetConfigValueResult.k_ESteamNetworkingGetConfigValue_BadValue = -1
+     * }
+     */
+    public static int k_ESteamNetworkingGetConfigValue_BadValue() {
+        return k_ESteamNetworkingGetConfigValue_BadValue;
+    }
+    private static final int k_ESteamNetworkingGetConfigValue_BadScopeObj = (int)-2L;
+    /**
+     * {@snippet lang=c :
+     * enum ESteamNetworkingGetConfigValueResult.k_ESteamNetworkingGetConfigValue_BadScopeObj = -2
+     * }
+     */
+    public static int k_ESteamNetworkingGetConfigValue_BadScopeObj() {
+        return k_ESteamNetworkingGetConfigValue_BadScopeObj;
+    }
+    private static final int k_ESteamNetworkingGetConfigValue_BufferTooSmall = (int)-3L;
+    /**
+     * {@snippet lang=c :
+     * enum ESteamNetworkingGetConfigValueResult.k_ESteamNetworkingGetConfigValue_BufferTooSmall = -3
+     * }
+     */
+    public static int k_ESteamNetworkingGetConfigValue_BufferTooSmall() {
+        return k_ESteamNetworkingGetConfigValue_BufferTooSmall;
+    }
+    private static final int k_ESteamNetworkingGetConfigValue_OK = (int)1L;
+    /**
+     * {@snippet lang=c :
+     * enum ESteamNetworkingGetConfigValueResult.k_ESteamNetworkingGetConfigValue_OK = 1
+     * }
+     */
+    public static int k_ESteamNetworkingGetConfigValue_OK() {
+        return k_ESteamNetworkingGetConfigValue_OK;
+    }
+    private static final int k_ESteamNetworkingGetConfigValue_OKInherited = (int)2L;
+    /**
+     * {@snippet lang=c :
+     * enum ESteamNetworkingGetConfigValueResult.k_ESteamNetworkingGetConfigValue_OKInherited = 2
+     * }
+     */
+    public static int k_ESteamNetworkingGetConfigValue_OKInherited() {
+        return k_ESteamNetworkingGetConfigValue_OKInherited;
+    }
+    private static final int k_ESteamNetworkingGetConfigValueResult__Force32Bit = (int)2147483647L;
+    /**
+     * {@snippet lang=c :
+     * enum ESteamNetworkingGetConfigValueResult.k_ESteamNetworkingGetConfigValueResult__Force32Bit = 2147483647
+     * }
+     */
+    public static int k_ESteamNetworkingGetConfigValueResult__Force32Bit() {
+        return k_ESteamNetworkingGetConfigValueResult__Force32Bit;
+    }
+    private static final int k_ESteamNetworkingSocketsDebugOutputType_None = (int)0L;
+    /**
+     * {@snippet lang=c :
+     * enum ESteamNetworkingSocketsDebugOutputType.k_ESteamNetworkingSocketsDebugOutputType_None = 0
+     * }
+     */
+    public static int k_ESteamNetworkingSocketsDebugOutputType_None() {
+        return k_ESteamNetworkingSocketsDebugOutputType_None;
+    }
+    private static final int k_ESteamNetworkingSocketsDebugOutputType_Bug = (int)1L;
+    /**
+     * {@snippet lang=c :
+     * enum ESteamNetworkingSocketsDebugOutputType.k_ESteamNetworkingSocketsDebugOutputType_Bug = 1
+     * }
+     */
+    public static int k_ESteamNetworkingSocketsDebugOutputType_Bug() {
+        return k_ESteamNetworkingSocketsDebugOutputType_Bug;
+    }
+    private static final int k_ESteamNetworkingSocketsDebugOutputType_Error = (int)2L;
+    /**
+     * {@snippet lang=c :
+     * enum ESteamNetworkingSocketsDebugOutputType.k_ESteamNetworkingSocketsDebugOutputType_Error = 2
+     * }
+     */
+    public static int k_ESteamNetworkingSocketsDebugOutputType_Error() {
+        return k_ESteamNetworkingSocketsDebugOutputType_Error;
+    }
+    private static final int k_ESteamNetworkingSocketsDebugOutputType_Important = (int)3L;
+    /**
+     * {@snippet lang=c :
+     * enum ESteamNetworkingSocketsDebugOutputType.k_ESteamNetworkingSocketsDebugOutputType_Important = 3
+     * }
+     */
+    public static int k_ESteamNetworkingSocketsDebugOutputType_Important() {
+        return k_ESteamNetworkingSocketsDebugOutputType_Important;
+    }
+    private static final int k_ESteamNetworkingSocketsDebugOutputType_Warning = (int)4L;
+    /**
+     * {@snippet lang=c :
+     * enum ESteamNetworkingSocketsDebugOutputType.k_ESteamNetworkingSocketsDebugOutputType_Warning = 4
+     * }
+     */
+    public static int k_ESteamNetworkingSocketsDebugOutputType_Warning() {
+        return k_ESteamNetworkingSocketsDebugOutputType_Warning;
+    }
+    private static final int k_ESteamNetworkingSocketsDebugOutputType_Msg = (int)5L;
+    /**
+     * {@snippet lang=c :
+     * enum ESteamNetworkingSocketsDebugOutputType.k_ESteamNetworkingSocketsDebugOutputType_Msg = 5
+     * }
+     */
+    public static int k_ESteamNetworkingSocketsDebugOutputType_Msg() {
+        return k_ESteamNetworkingSocketsDebugOutputType_Msg;
+    }
+    private static final int k_ESteamNetworkingSocketsDebugOutputType_Verbose = (int)6L;
+    /**
+     * {@snippet lang=c :
+     * enum ESteamNetworkingSocketsDebugOutputType.k_ESteamNetworkingSocketsDebugOutputType_Verbose = 6
+     * }
+     */
+    public static int k_ESteamNetworkingSocketsDebugOutputType_Verbose() {
+        return k_ESteamNetworkingSocketsDebugOutputType_Verbose;
+    }
+    private static final int k_ESteamNetworkingSocketsDebugOutputType_Debug = (int)7L;
+    /**
+     * {@snippet lang=c :
+     * enum ESteamNetworkingSocketsDebugOutputType.k_ESteamNetworkingSocketsDebugOutputType_Debug = 7
+     * }
+     */
+    public static int k_ESteamNetworkingSocketsDebugOutputType_Debug() {
+        return k_ESteamNetworkingSocketsDebugOutputType_Debug;
+    }
+    private static final int k_ESteamNetworkingSocketsDebugOutputType_Everything = (int)8L;
+    /**
+     * {@snippet lang=c :
+     * enum ESteamNetworkingSocketsDebugOutputType.k_ESteamNetworkingSocketsDebugOutputType_Everything = 8
+     * }
+     */
+    public static int k_ESteamNetworkingSocketsDebugOutputType_Everything() {
+        return k_ESteamNetworkingSocketsDebugOutputType_Everything;
+    }
+    private static final int k_ESteamNetworkingSocketsDebugOutputType__Force32Bit = (int)2147483647L;
+    /**
+     * {@snippet lang=c :
+     * enum ESteamNetworkingSocketsDebugOutputType.k_ESteamNetworkingSocketsDebugOutputType__Force32Bit = 2147483647
+     * }
+     */
+    public static int k_ESteamNetworkingSocketsDebugOutputType__Force32Bit() {
+        return k_ESteamNetworkingSocketsDebugOutputType__Force32Bit;
+    }
+    private static final int k_ESteamAPIInitResult_OK = (int)0L;
+    /**
+     * {@snippet lang=c :
+     * enum ESteamAPIInitResult.k_ESteamAPIInitResult_OK = 0
+     * }
+     */
+    public static int k_ESteamAPIInitResult_OK() {
+        return k_ESteamAPIInitResult_OK;
+    }
+    private static final int k_ESteamAPIInitResult_FailedGeneric = (int)1L;
+    /**
+     * {@snippet lang=c :
+     * enum ESteamAPIInitResult.k_ESteamAPIInitResult_FailedGeneric = 1
+     * }
+     */
+    public static int k_ESteamAPIInitResult_FailedGeneric() {
+        return k_ESteamAPIInitResult_FailedGeneric;
+    }
+    private static final int k_ESteamAPIInitResult_NoSteamClient = (int)2L;
+    /**
+     * {@snippet lang=c :
+     * enum ESteamAPIInitResult.k_ESteamAPIInitResult_NoSteamClient = 2
+     * }
+     */
+    public static int k_ESteamAPIInitResult_NoSteamClient() {
+        return k_ESteamAPIInitResult_NoSteamClient;
+    }
+    private static final int k_ESteamAPIInitResult_VersionMismatch = (int)3L;
+    /**
+     * {@snippet lang=c :
+     * enum ESteamAPIInitResult.k_ESteamAPIInitResult_VersionMismatch = 3
+     * }
+     */
+    public static int k_ESteamAPIInitResult_VersionMismatch() {
+        return k_ESteamAPIInitResult_VersionMismatch;
+    }
+    private static final int eServerModeInvalid = (int)0L;
+    /**
+     * {@snippet lang=c :
+     * enum EServerMode.eServerModeInvalid = 0
+     * }
+     */
+    public static int eServerModeInvalid() {
+        return eServerModeInvalid;
+    }
+    private static final int eServerModeNoAuthentication = (int)1L;
+    /**
+     * {@snippet lang=c :
+     * enum EServerMode.eServerModeNoAuthentication = 1
+     * }
+     */
+    public static int eServerModeNoAuthentication() {
+        return eServerModeNoAuthentication;
+    }
+    private static final int eServerModeAuthentication = (int)2L;
+    /**
+     * {@snippet lang=c :
+     * enum EServerMode.eServerModeAuthentication = 2
+     * }
+     */
+    public static int eServerModeAuthentication() {
+        return eServerModeAuthentication;
+    }
+    private static final int eServerModeAuthenticationAndSecure = (int)3L;
+    /**
+     * {@snippet lang=c :
+     * enum EServerMode.eServerModeAuthenticationAndSecure = 3
+     * }
+     */
+    public static int eServerModeAuthenticationAndSecure() {
+        return eServerModeAuthenticationAndSecure;
+    }
+    /**
+     * {@snippet lang=c :
+     * typedef unsigned char uint8
+     * }
+     */
+    public static final OfByte uint8 = SteamFlat4j.C_CHAR;
+    /**
+     * {@snippet lang=c :
+     * typedef signed char int8
+     * }
+     */
+    public static final OfByte int8 = SteamFlat4j.C_CHAR;
+    /**
+     * {@snippet lang=c :
+     * typedef short int16
+     * }
+     */
+    public static final OfShort int16 = SteamFlat4j.C_SHORT;
+    /**
+     * {@snippet lang=c :
+     * typedef unsigned short uint16
+     * }
+     */
+    public static final OfShort uint16 = SteamFlat4j.C_SHORT;
+    /**
+     * {@snippet lang=c :
+     * typedef int int32
+     * }
+     */
+    public static final OfInt int32 = SteamFlat4j.C_INT;
+    /**
+     * {@snippet lang=c :
+     * typedef unsigned int uint32
+     * }
+     */
+    public static final OfInt uint32 = SteamFlat4j.C_INT;
+    /**
+     * {@snippet lang=c :
+     * typedef long long int64
+     * }
+     */
+    public static final OfLong int64 = SteamFlat4j.C_LONG_LONG;
+    /**
+     * {@snippet lang=c :
+     * typedef unsigned long long uint64
+     * }
+     */
+    public static final OfLong uint64 = SteamFlat4j.C_LONG_LONG;
+    /**
+     * {@snippet lang=c :
+     * typedef long long lint64
+     * }
+     */
+    public static final OfLong lint64 = SteamFlat4j.C_LONG_LONG;
+    /**
+     * {@snippet lang=c :
+     * typedef unsigned long long ulint64
+     * }
+     */
+    public static final OfLong ulint64 = SteamFlat4j.C_LONG_LONG;
+    /**
+     * {@snippet lang=c :
+     * typedef long long intp
+     * }
+     */
+    public static final OfLong intp = SteamFlat4j.C_LONG_LONG;
+    /**
+     * {@snippet lang=c :
+     * typedef unsigned long long uintp
+     * }
+     */
+    public static final OfLong uintp = SteamFlat4j.C_LONG_LONG;
+    /**
+     * {@snippet lang=c :
+     * typedef unsigned int AppId_t
+     * }
+     */
+    public static final OfInt AppId_t = SteamFlat4j.C_INT;
+    /**
+     * {@snippet lang=c :
+     * typedef unsigned int DepotId_t
+     * }
+     */
+    public static final OfInt DepotId_t = SteamFlat4j.C_INT;
+    /**
+     * {@snippet lang=c :
+     * typedef unsigned int RTime32
+     * }
+     */
+    public static final OfInt RTime32 = SteamFlat4j.C_INT;
+    /**
+     * {@snippet lang=c :
+     * typedef unsigned long long SteamAPICall_t
+     * }
+     */
+    public static final OfLong SteamAPICall_t = SteamFlat4j.C_LONG_LONG;
+    /**
+     * {@snippet lang=c :
+     * typedef unsigned int AccountID_t
+     * }
+     */
+    public static final OfInt AccountID_t = SteamFlat4j.C_INT;
+    /**
+     * {@snippet lang=c :
+     * typedef unsigned long long PartyBeaconID_t
+     * }
+     */
+    public static final OfLong PartyBeaconID_t = SteamFlat4j.C_LONG_LONG;
+    /**
+     * {@snippet lang=c :
+     * typedef unsigned int HAuthTicket
+     * }
+     */
+    public static final OfInt HAuthTicket = SteamFlat4j.C_INT;
+    /**
+     * {@snippet lang=c :
+     * typedef int HSteamPipe
+     * }
+     */
+    public static final OfInt HSteamPipe = SteamFlat4j.C_INT;
+    /**
+     * {@snippet lang=c :
+     * typedef int HSteamUser
+     * }
+     */
+    public static final OfInt HSteamUser = SteamFlat4j.C_INT;
+    /**
+     * {@snippet lang=c :
+     * typedef short FriendsGroupID_t
+     * }
+     */
+    public static final OfShort FriendsGroupID_t = SteamFlat4j.C_SHORT;
+    /**
+     * {@snippet lang=c :
+     * typedef void *HServerListRequest
+     * }
+     */
+    public static final AddressLayout HServerListRequest = SteamFlat4j.C_POINTER;
+    /**
+     * {@snippet lang=c :
+     * typedef int HServerQuery
+     * }
+     */
+    public static final OfInt HServerQuery = SteamFlat4j.C_INT;
+    /**
+     * {@snippet lang=c :
+     * typedef unsigned long long UGCHandle_t
+     * }
+     */
+    public static final OfLong UGCHandle_t = SteamFlat4j.C_LONG_LONG;
+    /**
+     * {@snippet lang=c :
+     * typedef unsigned long long PublishedFileUpdateHandle_t
+     * }
+     */
+    public static final OfLong PublishedFileUpdateHandle_t = SteamFlat4j.C_LONG_LONG;
+    /**
+     * {@snippet lang=c :
+     * typedef unsigned long long PublishedFileId_t
+     * }
+     */
+    public static final OfLong PublishedFileId_t = SteamFlat4j.C_LONG_LONG;
+    /**
+     * {@snippet lang=c :
+     * typedef unsigned long long UGCFileWriteStreamHandle_t
+     * }
+     */
+    public static final OfLong UGCFileWriteStreamHandle_t = SteamFlat4j.C_LONG_LONG;
+    /**
+     * {@snippet lang=c :
+     * typedef unsigned long long SteamLeaderboard_t
+     * }
+     */
+    public static final OfLong SteamLeaderboard_t = SteamFlat4j.C_LONG_LONG;
+    /**
+     * {@snippet lang=c :
+     * typedef unsigned long long SteamLeaderboardEntries_t
+     * }
+     */
+    public static final OfLong SteamLeaderboardEntries_t = SteamFlat4j.C_LONG_LONG;
+    /**
+     * {@snippet lang=c :
+     * typedef unsigned int SNetSocket_t
+     * }
+     */
+    public static final OfInt SNetSocket_t = SteamFlat4j.C_INT;
+    /**
+     * {@snippet lang=c :
+     * typedef unsigned int SNetListenSocket_t
+     * }
+     */
+    public static final OfInt SNetListenSocket_t = SteamFlat4j.C_INT;
+    /**
+     * {@snippet lang=c :
+     * typedef unsigned int ScreenshotHandle
+     * }
+     */
+    public static final OfInt ScreenshotHandle = SteamFlat4j.C_INT;
+    /**
+     * {@snippet lang=c :
+     * typedef unsigned int HTTPRequestHandle
+     * }
+     */
+    public static final OfInt HTTPRequestHandle = SteamFlat4j.C_INT;
+    /**
+     * {@snippet lang=c :
+     * typedef unsigned int HTTPCookieContainerHandle
+     * }
+     */
+    public static final OfInt HTTPCookieContainerHandle = SteamFlat4j.C_INT;
+    /**
+     * {@snippet lang=c :
+     * typedef unsigned long long InputHandle_t
+     * }
+     */
+    public static final OfLong InputHandle_t = SteamFlat4j.C_LONG_LONG;
+    /**
+     * {@snippet lang=c :
+     * typedef unsigned long long InputActionSetHandle_t
+     * }
+     */
+    public static final OfLong InputActionSetHandle_t = SteamFlat4j.C_LONG_LONG;
+    /**
+     * {@snippet lang=c :
+     * typedef unsigned long long InputDigitalActionHandle_t
+     * }
+     */
+    public static final OfLong InputDigitalActionHandle_t = SteamFlat4j.C_LONG_LONG;
+    /**
+     * {@snippet lang=c :
+     * typedef unsigned long long InputAnalogActionHandle_t
+     * }
+     */
+    public static final OfLong InputAnalogActionHandle_t = SteamFlat4j.C_LONG_LONG;
+    /**
+     * {@snippet lang=c :
+     * typedef unsigned long long ControllerHandle_t
+     * }
+     */
+    public static final OfLong ControllerHandle_t = SteamFlat4j.C_LONG_LONG;
+    /**
+     * {@snippet lang=c :
+     * typedef unsigned long long ControllerActionSetHandle_t
+     * }
+     */
+    public static final OfLong ControllerActionSetHandle_t = SteamFlat4j.C_LONG_LONG;
+    /**
+     * {@snippet lang=c :
+     * typedef unsigned long long ControllerDigitalActionHandle_t
+     * }
+     */
+    public static final OfLong ControllerDigitalActionHandle_t = SteamFlat4j.C_LONG_LONG;
+    /**
+     * {@snippet lang=c :
+     * typedef unsigned long long ControllerAnalogActionHandle_t
+     * }
+     */
+    public static final OfLong ControllerAnalogActionHandle_t = SteamFlat4j.C_LONG_LONG;
+    /**
+     * {@snippet lang=c :
+     * typedef unsigned long long UGCQueryHandle_t
+     * }
+     */
+    public static final OfLong UGCQueryHandle_t = SteamFlat4j.C_LONG_LONG;
+    /**
+     * {@snippet lang=c :
+     * typedef unsigned long long UGCUpdateHandle_t
+     * }
+     */
+    public static final OfLong UGCUpdateHandle_t = SteamFlat4j.C_LONG_LONG;
+    /**
+     * {@snippet lang=c :
+     * typedef unsigned int HHTMLBrowser
+     * }
+     */
+    public static final OfInt HHTMLBrowser = SteamFlat4j.C_INT;
+    /**
+     * {@snippet lang=c :
+     * typedef unsigned long long SteamItemInstanceID_t
+     * }
+     */
+    public static final OfLong SteamItemInstanceID_t = SteamFlat4j.C_LONG_LONG;
+    /**
+     * {@snippet lang=c :
+     * typedef int SteamItemDef_t
+     * }
+     */
+    public static final OfInt SteamItemDef_t = SteamFlat4j.C_INT;
+    /**
+     * {@snippet lang=c :
+     * typedef int SteamInventoryResult_t
+     * }
+     */
+    public static final OfInt SteamInventoryResult_t = SteamFlat4j.C_INT;
+    /**
+     * {@snippet lang=c :
+     * typedef unsigned long long SteamInventoryUpdateHandle_t
+     * }
+     */
+    public static final OfLong SteamInventoryUpdateHandle_t = SteamFlat4j.C_LONG_LONG;
+    /**
+     * {@snippet lang=c :
+     * typedef unsigned int RemotePlaySessionID_t
+     * }
+     */
+    public static final OfInt RemotePlaySessionID_t = SteamFlat4j.C_INT;
+    /**
+     * {@snippet lang=c :
+     * typedef unsigned int HSteamNetConnection
+     * }
+     */
+    public static final OfInt HSteamNetConnection = SteamFlat4j.C_INT;
+    /**
+     * {@snippet lang=c :
+     * typedef unsigned int HSteamListenSocket
+     * }
+     */
+    public static final OfInt HSteamListenSocket = SteamFlat4j.C_INT;
+    /**
+     * {@snippet lang=c :
+     * typedef unsigned int HSteamNetPollGroup
+     * }
+     */
+    public static final OfInt HSteamNetPollGroup = SteamFlat4j.C_INT;
+    /**
+     * {@snippet lang=c :
+     * typedef unsigned int SteamNetworkingPOPID
+     * }
+     */
+    public static final OfInt SteamNetworkingPOPID = SteamFlat4j.C_INT;
+    /**
+     * {@snippet lang=c :
+     * typedef long long SteamNetworkingMicroseconds
+     * }
+     */
+    public static final OfLong SteamNetworkingMicroseconds = SteamFlat4j.C_LONG_LONG;
+    private static final int k_EFailureFlushedCallbackQueue = (int)0L;
+    /**
+     * {@snippet lang=c :
+     * enum EFailureType.k_EFailureFlushedCallbackQueue = 0
+     * }
+     */
+    public static int k_EFailureFlushedCallbackQueue() {
+        return k_EFailureFlushedCallbackQueue;
+    }
+    private static final int k_EFailurePipeFail = (int)1L;
+    /**
+     * {@snippet lang=c :
+     * enum EFailureType.k_EFailurePipeFail = 1
+     * }
+     */
+    public static int k_EFailurePipeFail() {
+        return k_EFailurePipeFail;
+    }
+    private static final int k_EStateUnknown = (int)0L;
+    /**
+     * {@snippet lang=c :
+     * enum PlayerAcceptState_t.k_EStateUnknown = 0
+     * }
+     */
+    public static int k_EStateUnknown() {
+        return k_EStateUnknown;
+    }
+    private static final int k_EStatePlayerAccepted = (int)1L;
+    /**
+     * {@snippet lang=c :
+     * enum PlayerAcceptState_t.k_EStatePlayerAccepted = 1
+     * }
+     */
+    public static int k_EStatePlayerAccepted() {
+        return k_EStatePlayerAccepted;
+    }
+    private static final int k_EStatePlayerDeclined = (int)2L;
+    /**
+     * {@snippet lang=c :
+     * enum PlayerAcceptState_t.k_EStatePlayerDeclined = 2
+     * }
+     */
+    public static int k_EStatePlayerDeclined() {
+        return k_EStatePlayerDeclined;
+    }
+    /**
+     * {@snippet lang=c :
+     * typedef void *ISteamClient
+     * }
+     */
+    public static final AddressLayout ISteamClient = SteamFlat4j.C_POINTER;
+    /**
+     * {@snippet lang=c :
+     * typedef void *ISteamUser
+     * }
+     */
+    public static final AddressLayout ISteamUser = SteamFlat4j.C_POINTER;
+    /**
+     * {@snippet lang=c :
+     * typedef void *ISteamFriends
+     * }
+     */
+    public static final AddressLayout ISteamFriends = SteamFlat4j.C_POINTER;
+    /**
+     * {@snippet lang=c :
+     * typedef void *ISteamUtils
+     * }
+     */
+    public static final AddressLayout ISteamUtils = SteamFlat4j.C_POINTER;
+    /**
+     * {@snippet lang=c :
+     * typedef void *ISteamMatchmaking
+     * }
+     */
+    public static final AddressLayout ISteamMatchmaking = SteamFlat4j.C_POINTER;
+    /**
+     * {@snippet lang=c :
+     * typedef void *ISteamMatchmakingServerListResponse
+     * }
+     */
+    public static final AddressLayout ISteamMatchmakingServerListResponse = SteamFlat4j.C_POINTER;
+    /**
+     * {@snippet lang=c :
+     * typedef void *ISteamMatchmakingPingResponse
+     * }
+     */
+    public static final AddressLayout ISteamMatchmakingPingResponse = SteamFlat4j.C_POINTER;
+    /**
+     * {@snippet lang=c :
+     * typedef void *ISteamMatchmakingPlayersResponse
+     * }
+     */
+    public static final AddressLayout ISteamMatchmakingPlayersResponse = SteamFlat4j.C_POINTER;
+    /**
+     * {@snippet lang=c :
+     * typedef void *ISteamMatchmakingRulesResponse
+     * }
+     */
+    public static final AddressLayout ISteamMatchmakingRulesResponse = SteamFlat4j.C_POINTER;
+    /**
+     * {@snippet lang=c :
+     * typedef void *ISteamMatchmakingServers
+     * }
+     */
+    public static final AddressLayout ISteamMatchmakingServers = SteamFlat4j.C_POINTER;
+    /**
+     * {@snippet lang=c :
+     * typedef void *ISteamGameSearch
+     * }
+     */
+    public static final AddressLayout ISteamGameSearch = SteamFlat4j.C_POINTER;
+    /**
+     * {@snippet lang=c :
+     * typedef void *ISteamParties
+     * }
+     */
+    public static final AddressLayout ISteamParties = SteamFlat4j.C_POINTER;
+    /**
+     * {@snippet lang=c :
+     * typedef void *ISteamRemoteStorage
+     * }
+     */
+    public static final AddressLayout ISteamRemoteStorage = SteamFlat4j.C_POINTER;
+    /**
+     * {@snippet lang=c :
+     * typedef void *ISteamUserStats
+     * }
+     */
+    public static final AddressLayout ISteamUserStats = SteamFlat4j.C_POINTER;
+    /**
+     * {@snippet lang=c :
+     * typedef void *ISteamApps
+     * }
+     */
+    public static final AddressLayout ISteamApps = SteamFlat4j.C_POINTER;
+    /**
+     * {@snippet lang=c :
+     * typedef void *ISteamNetworking
+     * }
+     */
+    public static final AddressLayout ISteamNetworking = SteamFlat4j.C_POINTER;
+    /**
+     * {@snippet lang=c :
+     * typedef void *ISteamScreenshots
+     * }
+     */
+    public static final AddressLayout ISteamScreenshots = SteamFlat4j.C_POINTER;
+    /**
+     * {@snippet lang=c :
+     * typedef void *ISteamMusic
+     * }
+     */
+    public static final AddressLayout ISteamMusic = SteamFlat4j.C_POINTER;
+    /**
+     * {@snippet lang=c :
+     * typedef void *ISteamMusicRemote
+     * }
+     */
+    public static final AddressLayout ISteamMusicRemote = SteamFlat4j.C_POINTER;
+    /**
+     * {@snippet lang=c :
+     * typedef void *ISteamHTTP
+     * }
+     */
+    public static final AddressLayout ISteamHTTP = SteamFlat4j.C_POINTER;
+    /**
+     * {@snippet lang=c :
+     * typedef void *ISteamInput
+     * }
+     */
+    public static final AddressLayout ISteamInput = SteamFlat4j.C_POINTER;
+    /**
+     * {@snippet lang=c :
+     * typedef void *ISteamController
+     * }
+     */
+    public static final AddressLayout ISteamController = SteamFlat4j.C_POINTER;
+    /**
+     * {@snippet lang=c :
+     * typedef void *ISteamUGC
+     * }
+     */
+    public static final AddressLayout ISteamUGC = SteamFlat4j.C_POINTER;
+    /**
+     * {@snippet lang=c :
+     * typedef void *ISteamHTMLSurface
+     * }
+     */
+    public static final AddressLayout ISteamHTMLSurface = SteamFlat4j.C_POINTER;
+    /**
+     * {@snippet lang=c :
+     * typedef void *ISteamInventory
+     * }
+     */
+    public static final AddressLayout ISteamInventory = SteamFlat4j.C_POINTER;
+    /**
+     * {@snippet lang=c :
+     * typedef void *ISteamParentalSettings
+     * }
+     */
+    public static final AddressLayout ISteamParentalSettings = SteamFlat4j.C_POINTER;
+    /**
+     * {@snippet lang=c :
+     * typedef void *ISteamRemotePlay
+     * }
+     */
+    public static final AddressLayout ISteamRemotePlay = SteamFlat4j.C_POINTER;
+    /**
+     * {@snippet lang=c :
+     * typedef void *ISteamNetworkingMessages
+     * }
+     */
+    public static final AddressLayout ISteamNetworkingMessages = SteamFlat4j.C_POINTER;
+    /**
+     * {@snippet lang=c :
+     * typedef void *ISteamNetworkingSockets
+     * }
+     */
+    public static final AddressLayout ISteamNetworkingSockets = SteamFlat4j.C_POINTER;
+    /**
+     * {@snippet lang=c :
+     * typedef void *ISteamNetworkingUtils
+     * }
+     */
+    public static final AddressLayout ISteamNetworkingUtils = SteamFlat4j.C_POINTER;
+    /**
+     * {@snippet lang=c :
+     * typedef void *ISteamGameServer
+     * }
+     */
+    public static final AddressLayout ISteamGameServer = SteamFlat4j.C_POINTER;
+    /**
+     * {@snippet lang=c :
+     * typedef void *ISteamGameServerStats
+     * }
+     */
+    public static final AddressLayout ISteamGameServerStats = SteamFlat4j.C_POINTER;
+    /**
+     * {@snippet lang=c :
+     * typedef void *ISteamNetworkingFakeUDPPort
+     * }
+     */
+    public static final AddressLayout ISteamNetworkingFakeUDPPort = SteamFlat4j.C_POINTER;
 
-    static final Arena LIBRARY_ARENA = Arena.ofAuto();
-    static final boolean TRACE_DOWNCALLS = Boolean.getBoolean("jextract.trace.downcalls");
-
-    static void traceDowncall(String name, Object... args) {
-         String traceArgs = Arrays.stream(args)
-                       .map(Object::toString)
-                       .collect(Collectors.joining(", "));
-         System.out.printf("%s(%s)\n", name, traceArgs);
-    }
-
-    static MemorySegment findOrThrow(String symbol) {
-        return SYMBOL_LOOKUP.find(symbol)
-            .orElseThrow(() -> new UnsatisfiedLinkError("unresolved symbol: " + symbol));
-    }
-
-    static MethodHandle upcallHandle(Class<?> fi, String name, FunctionDescriptor fdesc) {
-        try {
-            return MethodHandles.lookup().findVirtual(fi, name, fdesc.toMethodType());
-        } catch (ReflectiveOperationException ex) {
-            throw new AssertionError(ex);
-        }
-    }
-
-    static MemoryLayout align(MemoryLayout layout, long align) {
-        return switch (layout) {
-            case PaddingLayout p -> p;
-            case ValueLayout v -> v.withByteAlignment(align);
-            case GroupLayout g -> {
-                MemoryLayout[] alignedMembers = g.memberLayouts().stream()
-                        .map(m -> align(m, align)).toArray(MemoryLayout[]::new);
-                yield g instanceof StructLayout ?
-                        MemoryLayout.structLayout(alignedMembers) : MemoryLayout.unionLayout(alignedMembers);
-            }
-            case SequenceLayout s -> MemoryLayout.sequenceLayout(s.elementCount(), align(s.elementLayout(), align));
-        };
-    }
-
-    static final SymbolLookup SYMBOL_LOOKUP = SymbolLookup.loaderLookup()
-            .or(Linker.nativeLinker().defaultLookup());
-
-    public static final ValueLayout.OfBoolean C_BOOL = ValueLayout.JAVA_BOOLEAN;
-    public static final ValueLayout.OfByte C_CHAR = ValueLayout.JAVA_BYTE;
-    public static final ValueLayout.OfShort C_SHORT = ValueLayout.JAVA_SHORT;
-    public static final ValueLayout.OfInt C_INT = ValueLayout.JAVA_INT;
-    public static final ValueLayout.OfLong C_LONG_LONG = ValueLayout.JAVA_LONG;
-    public static final ValueLayout.OfFloat C_FLOAT = ValueLayout.JAVA_FLOAT;
-    public static final ValueLayout.OfDouble C_DOUBLE = ValueLayout.JAVA_DOUBLE;
-    public static final AddressLayout C_POINTER = ValueLayout.ADDRESS
-            .withTargetLayout(MemoryLayout.sequenceLayout(java.lang.Long.MAX_VALUE, JAVA_BYTE));
-    public static final ValueLayout.OfInt C_LONG = ValueLayout.JAVA_INT;
-    public static final ValueLayout.OfDouble C_LONG_DOUBLE = ValueLayout.JAVA_DOUBLE;
-    private static final int _VCRT_COMPILER_PREPROCESSOR = (int)1L;
-    /**
-     * {@snippet lang=c :
-     * #define _VCRT_COMPILER_PREPROCESSOR 1
-     * }
-     */
-    public static int _VCRT_COMPILER_PREPROCESSOR() {
-        return _VCRT_COMPILER_PREPROCESSOR;
-    }
-    private static final int _SAL_VERSION = (int)20L;
-    /**
-     * {@snippet lang=c :
-     * #define _SAL_VERSION 20
-     * }
-     */
-    public static int _SAL_VERSION() {
-        return _SAL_VERSION;
-    }
-    private static final int __SAL_H_VERSION = (int)180000000L;
-    /**
-     * {@snippet lang=c :
-     * #define __SAL_H_VERSION 180000000
-     * }
-     */
-    public static int __SAL_H_VERSION() {
-        return __SAL_H_VERSION;
-    }
-    private static final int _USE_DECLSPECS_FOR_SAL = (int)0L;
-    /**
-     * {@snippet lang=c :
-     * #define _USE_DECLSPECS_FOR_SAL 0
-     * }
-     */
-    public static int _USE_DECLSPECS_FOR_SAL() {
-        return _USE_DECLSPECS_FOR_SAL;
-    }
-    private static final int _USE_ATTRIBUTES_FOR_SAL = (int)0L;
-    /**
-     * {@snippet lang=c :
-     * #define _USE_ATTRIBUTES_FOR_SAL 0
-     * }
-     */
-    public static int _USE_ATTRIBUTES_FOR_SAL() {
-        return _USE_ATTRIBUTES_FOR_SAL;
-    }
-    private static final int _CRT_PACKING = (int)8L;
-    /**
-     * {@snippet lang=c :
-     * #define _CRT_PACKING 8
-     * }
-     */
-    public static int _CRT_PACKING() {
-        return _CRT_PACKING;
-    }
-    private static final int _HAS_EXCEPTIONS = (int)1L;
-    /**
-     * {@snippet lang=c :
-     * #define _HAS_EXCEPTIONS 1
-     * }
-     */
-    public static int _HAS_EXCEPTIONS() {
-        return _HAS_EXCEPTIONS;
-    }
-    private static final int _HAS_CXX17 = (int)0L;
-    /**
-     * {@snippet lang=c :
-     * #define _HAS_CXX17 0
-     * }
-     */
-    public static int _HAS_CXX17() {
-        return _HAS_CXX17;
-    }
-    private static final int _HAS_CXX20 = (int)0L;
-    /**
-     * {@snippet lang=c :
-     * #define _HAS_CXX20 0
-     * }
-     */
-    public static int _HAS_CXX20() {
-        return _HAS_CXX20;
-    }
-    private static final int _HAS_NODISCARD = (int)0L;
-    /**
-     * {@snippet lang=c :
-     * #define _HAS_NODISCARD 0
-     * }
-     */
-    public static int _HAS_NODISCARD() {
-        return _HAS_NODISCARD;
-    }
-    private static final int WCHAR_MIN = (int)0L;
-    /**
-     * {@snippet lang=c :
-     * #define WCHAR_MIN 0
-     * }
-     */
-    public static int WCHAR_MIN() {
-        return WCHAR_MIN;
-    }
-    private static final int WCHAR_MAX = (int)65535L;
-    /**
-     * {@snippet lang=c :
-     * #define WCHAR_MAX 65535
-     * }
-     */
-    public static int WCHAR_MAX() {
-        return WCHAR_MAX;
-    }
-    private static final int WINT_MIN = (int)0L;
-    /**
-     * {@snippet lang=c :
-     * #define WINT_MIN 0
-     * }
-     */
-    public static int WINT_MIN() {
-        return WINT_MIN;
-    }
-    private static final int WINT_MAX = (int)65535L;
-    /**
-     * {@snippet lang=c :
-     * #define WINT_MAX 65535
-     * }
-     */
-    public static int WINT_MAX() {
-        return WINT_MAX;
-    }
-    private static final int true_ = (int)1L;
-    /**
-     * {@snippet lang=c :
-     * #define true 1
-     * }
-     */
-    public static int true_() {
-        return true_;
-    }
-    private static final int false_ = (int)0L;
-    /**
-     * {@snippet lang=c :
-     * #define false 0
-     * }
-     */
-    public static int false_() {
-        return false_;
-    }
-    private static final int __bool_true_false_are_defined = (int)1L;
-    /**
-     * {@snippet lang=c :
-     * #define __bool_true_false_are_defined 1
-     * }
-     */
-    public static int __bool_true_false_are_defined() {
-        return __bool_true_false_are_defined;
-    }
-    /**
-     * {@snippet lang=c :
-     * typedef unsigned long long uintptr_t
-     * }
-     */
-    public static final OfLong uintptr_t = SteamFlat4j.C_LONG_LONG;
-    /**
-     * {@snippet lang=c :
-     * typedef char *va_list
-     * }
-     */
-    public static final AddressLayout va_list = SteamFlat4j.C_POINTER;
-
-    /**
-     * Variadic invoker class for:
-     * {@snippet lang=c :
-     * void __va_start(va_list *, ...)
-     * }
-     */
-    public static class __va_start {
-        private static final FunctionDescriptor BASE_DESC = FunctionDescriptor.ofVoid(
-                SteamFlat4j.C_POINTER
-            );
-        private static final MemorySegment ADDR = SteamFlat4j.findOrThrow("__va_start");
-
-        private final MethodHandle handle;
-        private final FunctionDescriptor descriptor;
-        private final MethodHandle spreader;
-
-        private __va_start(MethodHandle handle, FunctionDescriptor descriptor, MethodHandle spreader) {
-            this.handle = handle;
-            this.descriptor = descriptor;
-            this.spreader = spreader;
-        }
-
-        /**
-         * Variadic invoker factory for:
-         * {@snippet lang=c :
-         * void __va_start(va_list *, ...)
-         * }
-         */
-        public static __va_start makeInvoker(MemoryLayout... layouts) {
-            FunctionDescriptor desc$ = BASE_DESC.appendArgumentLayouts(layouts);
-            Linker.Option fva$ = Linker.Option.firstVariadicArg(BASE_DESC.argumentLayouts().size());
-            var mh$ = Linker.nativeLinker().downcallHandle(ADDR, desc$, fva$);
-            var spreader$ = mh$.asSpreader(Object[].class, layouts.length);
-            return new __va_start(mh$, desc$, spreader$);
-        }
-
-        /**
-         * {@return the specialized method handle}
-         */
-        public MethodHandle handle() {
-            return handle;
-        }
-
-        /**
-         * {@return the specialized descriptor}
-         */
-        public FunctionDescriptor descriptor() {
-            return descriptor;
-        }
-
-        public void apply(MemorySegment x0, Object... x1) {
-            try {
-                if (TRACE_DOWNCALLS) {
-                    traceDowncall("__va_start", x0, x1);
-                }
-                spreader.invokeExact(x0, x1);
-            } catch(IllegalArgumentException | ClassCastException ex$)  {
-                throw ex$; // rethrow IAE from passing wrong number/type of args
-            } catch (Throwable ex$) {
-               throw new AssertionError("should not reach here", ex$);
-            }
-        }
-    }
-    /**
-     * {@snippet lang=c :
-     * typedef unsigned long long size_t
-     * }
-     */
-    public static final OfLong size_t = SteamFlat4j.C_LONG_LONG;
-    /**
-     * {@snippet lang=c :
-     * typedef long long ptrdiff_t
-     * }
-     */
-    public static final OfLong ptrdiff_t = SteamFlat4j.C_LONG_LONG;
-    /**
-     * {@snippet lang=c :
-     * typedef long long intptr_t
-     * }
-     */
-    public static final OfLong intptr_t = SteamFlat4j.C_LONG_LONG;
-    /**
-     * {@snippet lang=c :
-     * typedef bool __vcrt_bool
-     * }
-     */
-    public static final OfBoolean __vcrt_bool = SteamFlat4j.C_BOOL;
-    /**
-     * {@snippet lang=c :
-     * typedef unsigned short wchar_t
-     * }
-     */
-    public static final OfShort wchar_t = SteamFlat4j.C_SHORT;
-
-    private static class __security_init_cookie {
-        public static final FunctionDescriptor DESC = FunctionDescriptor.ofVoid(    );
+    private static class SteamAPI_SteamIPAddress_t_IsSet {
+        public static final FunctionDescriptor DESC = FunctionDescriptor.of(
+            SteamFlat4j.C_BOOL    );
 
         public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(
-                    SteamFlat4j.findOrThrow("__security_init_cookie"),
+                    SteamFlat4j.findOrThrow("SteamAPI_SteamIPAddress_t_IsSet"),
                     DESC);
     }
 
     /**
      * Function descriptor for:
      * {@snippet lang=c :
-     * void __security_init_cookie()
+     * bool SteamAPI_SteamIPAddress_t_IsSet()
      * }
      */
-    public static FunctionDescriptor __security_init_cookie$descriptor() {
-        return __security_init_cookie.DESC;
+    public static FunctionDescriptor SteamAPI_SteamIPAddress_t_IsSet$descriptor() {
+        return SteamAPI_SteamIPAddress_t_IsSet.DESC;
     }
 
     /**
      * Downcall method handle for:
      * {@snippet lang=c :
-     * void __security_init_cookie()
+     * bool SteamAPI_SteamIPAddress_t_IsSet()
      * }
      */
-    public static MethodHandle __security_init_cookie$handle() {
-        return __security_init_cookie.HANDLE;
+    public static MethodHandle SteamAPI_SteamIPAddress_t_IsSet$handle() {
+        return SteamAPI_SteamIPAddress_t_IsSet.HANDLE;
     }
     /**
      * {@snippet lang=c :
-     * void __security_init_cookie()
+     * bool SteamAPI_SteamIPAddress_t_IsSet()
      * }
      */
-    public static void __security_init_cookie() {
-        var mh$ = __security_init_cookie.HANDLE;
+    public static boolean SteamAPI_SteamIPAddress_t_IsSet() {
+        var mh$ = SteamAPI_SteamIPAddress_t_IsSet.HANDLE;
         try {
             if (TRACE_DOWNCALLS) {
-                traceDowncall("__security_init_cookie");
+                traceDowncall("SteamAPI_SteamIPAddress_t_IsSet");
+            }
+            return (boolean)mh$.invokeExact();
+        } catch (Throwable ex$) {
+           throw new AssertionError("should not reach here", ex$);
+        }
+    }
+
+    private static class SteamAPI_MatchMakingKeyValuePair_t_Construct {
+        public static final FunctionDescriptor DESC = FunctionDescriptor.ofVoid(    );
+
+        public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(
+                    SteamFlat4j.findOrThrow("SteamAPI_MatchMakingKeyValuePair_t_Construct"),
+                    DESC);
+    }
+
+    /**
+     * Function descriptor for:
+     * {@snippet lang=c :
+     * void SteamAPI_MatchMakingKeyValuePair_t_Construct()
+     * }
+     */
+    public static FunctionDescriptor SteamAPI_MatchMakingKeyValuePair_t_Construct$descriptor() {
+        return SteamAPI_MatchMakingKeyValuePair_t_Construct.DESC;
+    }
+
+    /**
+     * Downcall method handle for:
+     * {@snippet lang=c :
+     * void SteamAPI_MatchMakingKeyValuePair_t_Construct()
+     * }
+     */
+    public static MethodHandle SteamAPI_MatchMakingKeyValuePair_t_Construct$handle() {
+        return SteamAPI_MatchMakingKeyValuePair_t_Construct.HANDLE;
+    }
+    /**
+     * {@snippet lang=c :
+     * void SteamAPI_MatchMakingKeyValuePair_t_Construct()
+     * }
+     */
+    public static void SteamAPI_MatchMakingKeyValuePair_t_Construct() {
+        var mh$ = SteamAPI_MatchMakingKeyValuePair_t_Construct.HANDLE;
+        try {
+            if (TRACE_DOWNCALLS) {
+                traceDowncall("SteamAPI_MatchMakingKeyValuePair_t_Construct");
             }
             mh$.invokeExact();
         } catch (Throwable ex$) {
@@ -373,8790 +8165,3015 @@ public class SteamFlat4j_2 {
         }
     }
 
-    private static class __security_check_cookie {
-        public static final FunctionDescriptor DESC = FunctionDescriptor.ofVoid(
-            SteamFlat4j.C_LONG_LONG
-        );
+    private static class SteamAPI_servernetadr_t_Construct {
+        public static final FunctionDescriptor DESC = FunctionDescriptor.ofVoid(    );
 
         public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(
-                    SteamFlat4j.findOrThrow("__security_check_cookie"),
+                    SteamFlat4j.findOrThrow("SteamAPI_servernetadr_t_Construct"),
                     DESC);
     }
 
     /**
      * Function descriptor for:
      * {@snippet lang=c :
-     * void __security_check_cookie(uintptr_t _StackCookie)
+     * void SteamAPI_servernetadr_t_Construct()
      * }
      */
-    public static FunctionDescriptor __security_check_cookie$descriptor() {
-        return __security_check_cookie.DESC;
+    public static FunctionDescriptor SteamAPI_servernetadr_t_Construct$descriptor() {
+        return SteamAPI_servernetadr_t_Construct.DESC;
     }
 
     /**
      * Downcall method handle for:
      * {@snippet lang=c :
-     * void __security_check_cookie(uintptr_t _StackCookie)
+     * void SteamAPI_servernetadr_t_Construct()
      * }
      */
-    public static MethodHandle __security_check_cookie$handle() {
-        return __security_check_cookie.HANDLE;
+    public static MethodHandle SteamAPI_servernetadr_t_Construct$handle() {
+        return SteamAPI_servernetadr_t_Construct.HANDLE;
     }
     /**
      * {@snippet lang=c :
-     * void __security_check_cookie(uintptr_t _StackCookie)
+     * void SteamAPI_servernetadr_t_Construct()
      * }
      */
-    public static void __security_check_cookie(long _StackCookie) {
-        var mh$ = __security_check_cookie.HANDLE;
+    public static void SteamAPI_servernetadr_t_Construct() {
+        var mh$ = SteamAPI_servernetadr_t_Construct.HANDLE;
         try {
             if (TRACE_DOWNCALLS) {
-                traceDowncall("__security_check_cookie", _StackCookie);
+                traceDowncall("SteamAPI_servernetadr_t_Construct");
             }
-            mh$.invokeExact(_StackCookie);
+            mh$.invokeExact();
         } catch (Throwable ex$) {
            throw new AssertionError("should not reach here", ex$);
         }
     }
 
-    private static class __report_gsfailure {
+    private static class SteamAPI_servernetadr_t_Init {
         public static final FunctionDescriptor DESC = FunctionDescriptor.ofVoid(
-            SteamFlat4j.C_LONG_LONG
+            SteamFlat4j.C_INT,
+            SteamFlat4j.C_SHORT,
+            SteamFlat4j.C_SHORT
         );
 
         public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(
-                    SteamFlat4j.findOrThrow("__report_gsfailure"),
+                    SteamFlat4j.findOrThrow("SteamAPI_servernetadr_t_Init"),
                     DESC);
     }
 
     /**
      * Function descriptor for:
      * {@snippet lang=c :
-     * void __report_gsfailure(uintptr_t _StackCookie)
+     * void SteamAPI_servernetadr_t_Init(unsigned int ip, uint16 usQueryPort, uint16 usConnectionPort)
      * }
      */
-    public static FunctionDescriptor __report_gsfailure$descriptor() {
-        return __report_gsfailure.DESC;
+    public static FunctionDescriptor SteamAPI_servernetadr_t_Init$descriptor() {
+        return SteamAPI_servernetadr_t_Init.DESC;
     }
 
     /**
      * Downcall method handle for:
      * {@snippet lang=c :
-     * void __report_gsfailure(uintptr_t _StackCookie)
+     * void SteamAPI_servernetadr_t_Init(unsigned int ip, uint16 usQueryPort, uint16 usConnectionPort)
      * }
      */
-    public static MethodHandle __report_gsfailure$handle() {
-        return __report_gsfailure.HANDLE;
+    public static MethodHandle SteamAPI_servernetadr_t_Init$handle() {
+        return SteamAPI_servernetadr_t_Init.HANDLE;
     }
     /**
      * {@snippet lang=c :
-     * void __report_gsfailure(uintptr_t _StackCookie)
+     * void SteamAPI_servernetadr_t_Init(unsigned int ip, uint16 usQueryPort, uint16 usConnectionPort)
      * }
      */
-    public static void __report_gsfailure(long _StackCookie) {
-        var mh$ = __report_gsfailure.HANDLE;
+    public static void SteamAPI_servernetadr_t_Init(int ip, short usQueryPort, short usConnectionPort) {
+        var mh$ = SteamAPI_servernetadr_t_Init.HANDLE;
         try {
             if (TRACE_DOWNCALLS) {
-                traceDowncall("__report_gsfailure", _StackCookie);
+                traceDowncall("SteamAPI_servernetadr_t_Init", ip, usQueryPort, usConnectionPort);
             }
-            mh$.invokeExact(_StackCookie);
+            mh$.invokeExact(ip, usQueryPort, usConnectionPort);
         } catch (Throwable ex$) {
            throw new AssertionError("should not reach here", ex$);
         }
     }
 
-    private static class __security_cookie$constants {
-        public static final OfLong LAYOUT = SteamFlat4j.C_LONG_LONG;
-        public static final MemorySegment SEGMENT = SteamFlat4j.findOrThrow("__security_cookie").reinterpret(LAYOUT.byteSize());
+    private static class SteamAPI_servernetadr_t_GetQueryPort {
+        public static final FunctionDescriptor DESC = FunctionDescriptor.of(
+            SteamFlat4j.C_SHORT    );
+
+        public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(
+                    SteamFlat4j.findOrThrow("SteamAPI_servernetadr_t_GetQueryPort"),
+                    DESC);
     }
 
     /**
-     * Layout for variable:
+     * Function descriptor for:
      * {@snippet lang=c :
-     * extern uintptr_t __security_cookie
+     * uint16 SteamAPI_servernetadr_t_GetQueryPort()
      * }
      */
-    public static OfLong __security_cookie$layout() {
-        return __security_cookie$constants.LAYOUT;
+    public static FunctionDescriptor SteamAPI_servernetadr_t_GetQueryPort$descriptor() {
+        return SteamAPI_servernetadr_t_GetQueryPort.DESC;
     }
 
     /**
-     * Segment for variable:
+     * Downcall method handle for:
      * {@snippet lang=c :
-     * extern uintptr_t __security_cookie
+     * uint16 SteamAPI_servernetadr_t_GetQueryPort()
      * }
      */
-    public static MemorySegment __security_cookie$segment() {
-        return __security_cookie$constants.SEGMENT;
+    public static MethodHandle SteamAPI_servernetadr_t_GetQueryPort$handle() {
+        return SteamAPI_servernetadr_t_GetQueryPort.HANDLE;
+    }
+    /**
+     * {@snippet lang=c :
+     * uint16 SteamAPI_servernetadr_t_GetQueryPort()
+     * }
+     */
+    public static short SteamAPI_servernetadr_t_GetQueryPort() {
+        var mh$ = SteamAPI_servernetadr_t_GetQueryPort.HANDLE;
+        try {
+            if (TRACE_DOWNCALLS) {
+                traceDowncall("SteamAPI_servernetadr_t_GetQueryPort");
+            }
+            return (short)mh$.invokeExact();
+        } catch (Throwable ex$) {
+           throw new AssertionError("should not reach here", ex$);
+        }
+    }
+
+    private static class SteamAPI_servernetadr_t_SetQueryPort {
+        public static final FunctionDescriptor DESC = FunctionDescriptor.ofVoid(
+            SteamFlat4j.C_SHORT
+        );
+
+        public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(
+                    SteamFlat4j.findOrThrow("SteamAPI_servernetadr_t_SetQueryPort"),
+                    DESC);
     }
 
     /**
-     * Getter for variable:
+     * Function descriptor for:
      * {@snippet lang=c :
-     * extern uintptr_t __security_cookie
+     * void SteamAPI_servernetadr_t_SetQueryPort(uint16 usPort)
      * }
      */
-    public static long __security_cookie() {
-        return __security_cookie$constants.SEGMENT.get(__security_cookie$constants.LAYOUT, 0L);
+    public static FunctionDescriptor SteamAPI_servernetadr_t_SetQueryPort$descriptor() {
+        return SteamAPI_servernetadr_t_SetQueryPort.DESC;
     }
 
     /**
-     * Setter for variable:
+     * Downcall method handle for:
      * {@snippet lang=c :
-     * extern uintptr_t __security_cookie
+     * void SteamAPI_servernetadr_t_SetQueryPort(uint16 usPort)
      * }
      */
-    public static void __security_cookie(long varValue) {
-        __security_cookie$constants.SEGMENT.set(__security_cookie$constants.LAYOUT, 0L, varValue);
+    public static MethodHandle SteamAPI_servernetadr_t_SetQueryPort$handle() {
+        return SteamAPI_servernetadr_t_SetQueryPort.HANDLE;
     }
     /**
      * {@snippet lang=c :
-     * typedef signed char int8_t
+     * void SteamAPI_servernetadr_t_SetQueryPort(uint16 usPort)
      * }
      */
-    public static final OfByte int8_t = SteamFlat4j.C_CHAR;
-    /**
-     * {@snippet lang=c :
-     * typedef short int16_t
-     * }
-     */
-    public static final OfShort int16_t = SteamFlat4j.C_SHORT;
-    /**
-     * {@snippet lang=c :
-     * typedef int int32_t
-     * }
-     */
-    public static final OfInt int32_t = SteamFlat4j.C_INT;
-    /**
-     * {@snippet lang=c :
-     * typedef long long int64_t
-     * }
-     */
-    public static final OfLong int64_t = SteamFlat4j.C_LONG_LONG;
-    /**
-     * {@snippet lang=c :
-     * typedef unsigned char uint8_t
-     * }
-     */
-    public static final OfByte uint8_t = SteamFlat4j.C_CHAR;
-    /**
-     * {@snippet lang=c :
-     * typedef unsigned short uint16_t
-     * }
-     */
-    public static final OfShort uint16_t = SteamFlat4j.C_SHORT;
-    /**
-     * {@snippet lang=c :
-     * typedef unsigned int uint32_t
-     * }
-     */
-    public static final OfInt uint32_t = SteamFlat4j.C_INT;
-    /**
-     * {@snippet lang=c :
-     * typedef unsigned long long uint64_t
-     * }
-     */
-    public static final OfLong uint64_t = SteamFlat4j.C_LONG_LONG;
-    /**
-     * {@snippet lang=c :
-     * typedef signed char int_least8_t
-     * }
-     */
-    public static final OfByte int_least8_t = SteamFlat4j.C_CHAR;
-    /**
-     * {@snippet lang=c :
-     * typedef short int_least16_t
-     * }
-     */
-    public static final OfShort int_least16_t = SteamFlat4j.C_SHORT;
-    /**
-     * {@snippet lang=c :
-     * typedef int int_least32_t
-     * }
-     */
-    public static final OfInt int_least32_t = SteamFlat4j.C_INT;
-    /**
-     * {@snippet lang=c :
-     * typedef long long int_least64_t
-     * }
-     */
-    public static final OfLong int_least64_t = SteamFlat4j.C_LONG_LONG;
-    /**
-     * {@snippet lang=c :
-     * typedef unsigned char uint_least8_t
-     * }
-     */
-    public static final OfByte uint_least8_t = SteamFlat4j.C_CHAR;
-    /**
-     * {@snippet lang=c :
-     * typedef unsigned short uint_least16_t
-     * }
-     */
-    public static final OfShort uint_least16_t = SteamFlat4j.C_SHORT;
-    /**
-     * {@snippet lang=c :
-     * typedef unsigned int uint_least32_t
-     * }
-     */
-    public static final OfInt uint_least32_t = SteamFlat4j.C_INT;
-    /**
-     * {@snippet lang=c :
-     * typedef unsigned long long uint_least64_t
-     * }
-     */
-    public static final OfLong uint_least64_t = SteamFlat4j.C_LONG_LONG;
-    /**
-     * {@snippet lang=c :
-     * typedef signed char int_fast8_t
-     * }
-     */
-    public static final OfByte int_fast8_t = SteamFlat4j.C_CHAR;
-    /**
-     * {@snippet lang=c :
-     * typedef int int_fast16_t
-     * }
-     */
-    public static final OfInt int_fast16_t = SteamFlat4j.C_INT;
-    /**
-     * {@snippet lang=c :
-     * typedef int int_fast32_t
-     * }
-     */
-    public static final OfInt int_fast32_t = SteamFlat4j.C_INT;
-    /**
-     * {@snippet lang=c :
-     * typedef long long int_fast64_t
-     * }
-     */
-    public static final OfLong int_fast64_t = SteamFlat4j.C_LONG_LONG;
-    /**
-     * {@snippet lang=c :
-     * typedef unsigned char uint_fast8_t
-     * }
-     */
-    public static final OfByte uint_fast8_t = SteamFlat4j.C_CHAR;
-    /**
-     * {@snippet lang=c :
-     * typedef unsigned int uint_fast16_t
-     * }
-     */
-    public static final OfInt uint_fast16_t = SteamFlat4j.C_INT;
-    /**
-     * {@snippet lang=c :
-     * typedef unsigned int uint_fast32_t
-     * }
-     */
-    public static final OfInt uint_fast32_t = SteamFlat4j.C_INT;
-    /**
-     * {@snippet lang=c :
-     * typedef unsigned long long uint_fast64_t
-     * }
-     */
-    public static final OfLong uint_fast64_t = SteamFlat4j.C_LONG_LONG;
-    /**
-     * {@snippet lang=c :
-     * typedef long long intmax_t
-     * }
-     */
-    public static final OfLong intmax_t = SteamFlat4j.C_LONG_LONG;
-    /**
-     * {@snippet lang=c :
-     * typedef unsigned long long uintmax_t
-     * }
-     */
-    public static final OfLong uintmax_t = SteamFlat4j.C_LONG_LONG;
-    /**
-     * {@snippet lang=c :
-     * typedef uint64_t uint64_gameid
-     * }
-     */
-    public static final OfLong uint64_gameid = SteamFlat4j.C_LONG_LONG;
-    /**
-     * {@snippet lang=c :
-     * typedef uint64_t CGameID
-     * }
-     */
-    public static final OfLong CGameID = SteamFlat4j.C_LONG_LONG;
-    /**
-     * {@snippet lang=c :
-     * typedef uint64_t uint64_steamid
-     * }
-     */
-    public static final OfLong uint64_steamid = SteamFlat4j.C_LONG_LONG;
-    /**
-     * {@snippet lang=c :
-     * typedef uint64_t CSteamID
-     * }
-     */
-    public static final OfLong CSteamID = SteamFlat4j.C_LONG_LONG;
-    private static final int k_ESteamIPTypeIPv4 = (int)0L;
-    /**
-     * {@snippet lang=c :
-     * enum ESteamIPType.k_ESteamIPTypeIPv4 = 0
-     * }
-     */
-    public static int k_ESteamIPTypeIPv4() {
-        return k_ESteamIPTypeIPv4;
-    }
-    private static final int k_ESteamIPTypeIPv6 = (int)1L;
-    /**
-     * {@snippet lang=c :
-     * enum ESteamIPType.k_ESteamIPTypeIPv6 = 1
-     * }
-     */
-    public static int k_ESteamIPTypeIPv6() {
-        return k_ESteamIPTypeIPv6;
-    }
-    private static final int k_EUniverseInvalid = (int)0L;
-    /**
-     * {@snippet lang=c :
-     * enum EUniverse.k_EUniverseInvalid = 0
-     * }
-     */
-    public static int k_EUniverseInvalid() {
-        return k_EUniverseInvalid;
-    }
-    private static final int k_EUniversePublic = (int)1L;
-    /**
-     * {@snippet lang=c :
-     * enum EUniverse.k_EUniversePublic = 1
-     * }
-     */
-    public static int k_EUniversePublic() {
-        return k_EUniversePublic;
-    }
-    private static final int k_EUniverseBeta = (int)2L;
-    /**
-     * {@snippet lang=c :
-     * enum EUniverse.k_EUniverseBeta = 2
-     * }
-     */
-    public static int k_EUniverseBeta() {
-        return k_EUniverseBeta;
-    }
-    private static final int k_EUniverseInternal = (int)3L;
-    /**
-     * {@snippet lang=c :
-     * enum EUniverse.k_EUniverseInternal = 3
-     * }
-     */
-    public static int k_EUniverseInternal() {
-        return k_EUniverseInternal;
-    }
-    private static final int k_EUniverseDev = (int)4L;
-    /**
-     * {@snippet lang=c :
-     * enum EUniverse.k_EUniverseDev = 4
-     * }
-     */
-    public static int k_EUniverseDev() {
-        return k_EUniverseDev;
-    }
-    private static final int k_EUniverseMax = (int)5L;
-    /**
-     * {@snippet lang=c :
-     * enum EUniverse.k_EUniverseMax = 5
-     * }
-     */
-    public static int k_EUniverseMax() {
-        return k_EUniverseMax;
-    }
-    private static final int k_EResultNone = (int)0L;
-    /**
-     * {@snippet lang=c :
-     * enum EResult.k_EResultNone = 0
-     * }
-     */
-    public static int k_EResultNone() {
-        return k_EResultNone;
-    }
-    private static final int k_EResultOK = (int)1L;
-    /**
-     * {@snippet lang=c :
-     * enum EResult.k_EResultOK = 1
-     * }
-     */
-    public static int k_EResultOK() {
-        return k_EResultOK;
-    }
-    private static final int k_EResultFail = (int)2L;
-    /**
-     * {@snippet lang=c :
-     * enum EResult.k_EResultFail = 2
-     * }
-     */
-    public static int k_EResultFail() {
-        return k_EResultFail;
-    }
-    private static final int k_EResultNoConnection = (int)3L;
-    /**
-     * {@snippet lang=c :
-     * enum EResult.k_EResultNoConnection = 3
-     * }
-     */
-    public static int k_EResultNoConnection() {
-        return k_EResultNoConnection;
-    }
-    private static final int k_EResultInvalidPassword = (int)5L;
-    /**
-     * {@snippet lang=c :
-     * enum EResult.k_EResultInvalidPassword = 5
-     * }
-     */
-    public static int k_EResultInvalidPassword() {
-        return k_EResultInvalidPassword;
-    }
-    private static final int k_EResultLoggedInElsewhere = (int)6L;
-    /**
-     * {@snippet lang=c :
-     * enum EResult.k_EResultLoggedInElsewhere = 6
-     * }
-     */
-    public static int k_EResultLoggedInElsewhere() {
-        return k_EResultLoggedInElsewhere;
-    }
-    private static final int k_EResultInvalidProtocolVer = (int)7L;
-    /**
-     * {@snippet lang=c :
-     * enum EResult.k_EResultInvalidProtocolVer = 7
-     * }
-     */
-    public static int k_EResultInvalidProtocolVer() {
-        return k_EResultInvalidProtocolVer;
-    }
-    private static final int k_EResultInvalidParam = (int)8L;
-    /**
-     * {@snippet lang=c :
-     * enum EResult.k_EResultInvalidParam = 8
-     * }
-     */
-    public static int k_EResultInvalidParam() {
-        return k_EResultInvalidParam;
-    }
-    private static final int k_EResultFileNotFound = (int)9L;
-    /**
-     * {@snippet lang=c :
-     * enum EResult.k_EResultFileNotFound = 9
-     * }
-     */
-    public static int k_EResultFileNotFound() {
-        return k_EResultFileNotFound;
-    }
-    private static final int k_EResultBusy = (int)10L;
-    /**
-     * {@snippet lang=c :
-     * enum EResult.k_EResultBusy = 10
-     * }
-     */
-    public static int k_EResultBusy() {
-        return k_EResultBusy;
-    }
-    private static final int k_EResultInvalidState = (int)11L;
-    /**
-     * {@snippet lang=c :
-     * enum EResult.k_EResultInvalidState = 11
-     * }
-     */
-    public static int k_EResultInvalidState() {
-        return k_EResultInvalidState;
-    }
-    private static final int k_EResultInvalidName = (int)12L;
-    /**
-     * {@snippet lang=c :
-     * enum EResult.k_EResultInvalidName = 12
-     * }
-     */
-    public static int k_EResultInvalidName() {
-        return k_EResultInvalidName;
-    }
-    private static final int k_EResultInvalidEmail = (int)13L;
-    /**
-     * {@snippet lang=c :
-     * enum EResult.k_EResultInvalidEmail = 13
-     * }
-     */
-    public static int k_EResultInvalidEmail() {
-        return k_EResultInvalidEmail;
-    }
-    private static final int k_EResultDuplicateName = (int)14L;
-    /**
-     * {@snippet lang=c :
-     * enum EResult.k_EResultDuplicateName = 14
-     * }
-     */
-    public static int k_EResultDuplicateName() {
-        return k_EResultDuplicateName;
-    }
-    private static final int k_EResultAccessDenied = (int)15L;
-    /**
-     * {@snippet lang=c :
-     * enum EResult.k_EResultAccessDenied = 15
-     * }
-     */
-    public static int k_EResultAccessDenied() {
-        return k_EResultAccessDenied;
-    }
-    private static final int k_EResultTimeout = (int)16L;
-    /**
-     * {@snippet lang=c :
-     * enum EResult.k_EResultTimeout = 16
-     * }
-     */
-    public static int k_EResultTimeout() {
-        return k_EResultTimeout;
-    }
-    private static final int k_EResultBanned = (int)17L;
-    /**
-     * {@snippet lang=c :
-     * enum EResult.k_EResultBanned = 17
-     * }
-     */
-    public static int k_EResultBanned() {
-        return k_EResultBanned;
-    }
-    private static final int k_EResultAccountNotFound = (int)18L;
-    /**
-     * {@snippet lang=c :
-     * enum EResult.k_EResultAccountNotFound = 18
-     * }
-     */
-    public static int k_EResultAccountNotFound() {
-        return k_EResultAccountNotFound;
-    }
-    private static final int k_EResultInvalidSteamID = (int)19L;
-    /**
-     * {@snippet lang=c :
-     * enum EResult.k_EResultInvalidSteamID = 19
-     * }
-     */
-    public static int k_EResultInvalidSteamID() {
-        return k_EResultInvalidSteamID;
-    }
-    private static final int k_EResultServiceUnavailable = (int)20L;
-    /**
-     * {@snippet lang=c :
-     * enum EResult.k_EResultServiceUnavailable = 20
-     * }
-     */
-    public static int k_EResultServiceUnavailable() {
-        return k_EResultServiceUnavailable;
-    }
-    private static final int k_EResultNotLoggedOn = (int)21L;
-    /**
-     * {@snippet lang=c :
-     * enum EResult.k_EResultNotLoggedOn = 21
-     * }
-     */
-    public static int k_EResultNotLoggedOn() {
-        return k_EResultNotLoggedOn;
-    }
-    private static final int k_EResultPending = (int)22L;
-    /**
-     * {@snippet lang=c :
-     * enum EResult.k_EResultPending = 22
-     * }
-     */
-    public static int k_EResultPending() {
-        return k_EResultPending;
-    }
-    private static final int k_EResultEncryptionFailure = (int)23L;
-    /**
-     * {@snippet lang=c :
-     * enum EResult.k_EResultEncryptionFailure = 23
-     * }
-     */
-    public static int k_EResultEncryptionFailure() {
-        return k_EResultEncryptionFailure;
-    }
-    private static final int k_EResultInsufficientPrivilege = (int)24L;
-    /**
-     * {@snippet lang=c :
-     * enum EResult.k_EResultInsufficientPrivilege = 24
-     * }
-     */
-    public static int k_EResultInsufficientPrivilege() {
-        return k_EResultInsufficientPrivilege;
-    }
-    private static final int k_EResultLimitExceeded = (int)25L;
-    /**
-     * {@snippet lang=c :
-     * enum EResult.k_EResultLimitExceeded = 25
-     * }
-     */
-    public static int k_EResultLimitExceeded() {
-        return k_EResultLimitExceeded;
-    }
-    private static final int k_EResultRevoked = (int)26L;
-    /**
-     * {@snippet lang=c :
-     * enum EResult.k_EResultRevoked = 26
-     * }
-     */
-    public static int k_EResultRevoked() {
-        return k_EResultRevoked;
-    }
-    private static final int k_EResultExpired = (int)27L;
-    /**
-     * {@snippet lang=c :
-     * enum EResult.k_EResultExpired = 27
-     * }
-     */
-    public static int k_EResultExpired() {
-        return k_EResultExpired;
-    }
-    private static final int k_EResultAlreadyRedeemed = (int)28L;
-    /**
-     * {@snippet lang=c :
-     * enum EResult.k_EResultAlreadyRedeemed = 28
-     * }
-     */
-    public static int k_EResultAlreadyRedeemed() {
-        return k_EResultAlreadyRedeemed;
-    }
-    private static final int k_EResultDuplicateRequest = (int)29L;
-    /**
-     * {@snippet lang=c :
-     * enum EResult.k_EResultDuplicateRequest = 29
-     * }
-     */
-    public static int k_EResultDuplicateRequest() {
-        return k_EResultDuplicateRequest;
-    }
-    private static final int k_EResultAlreadyOwned = (int)30L;
-    /**
-     * {@snippet lang=c :
-     * enum EResult.k_EResultAlreadyOwned = 30
-     * }
-     */
-    public static int k_EResultAlreadyOwned() {
-        return k_EResultAlreadyOwned;
-    }
-    private static final int k_EResultIPNotFound = (int)31L;
-    /**
-     * {@snippet lang=c :
-     * enum EResult.k_EResultIPNotFound = 31
-     * }
-     */
-    public static int k_EResultIPNotFound() {
-        return k_EResultIPNotFound;
-    }
-    private static final int k_EResultPersistFailed = (int)32L;
-    /**
-     * {@snippet lang=c :
-     * enum EResult.k_EResultPersistFailed = 32
-     * }
-     */
-    public static int k_EResultPersistFailed() {
-        return k_EResultPersistFailed;
-    }
-    private static final int k_EResultLockingFailed = (int)33L;
-    /**
-     * {@snippet lang=c :
-     * enum EResult.k_EResultLockingFailed = 33
-     * }
-     */
-    public static int k_EResultLockingFailed() {
-        return k_EResultLockingFailed;
-    }
-    private static final int k_EResultLogonSessionReplaced = (int)34L;
-    /**
-     * {@snippet lang=c :
-     * enum EResult.k_EResultLogonSessionReplaced = 34
-     * }
-     */
-    public static int k_EResultLogonSessionReplaced() {
-        return k_EResultLogonSessionReplaced;
-    }
-    private static final int k_EResultConnectFailed = (int)35L;
-    /**
-     * {@snippet lang=c :
-     * enum EResult.k_EResultConnectFailed = 35
-     * }
-     */
-    public static int k_EResultConnectFailed() {
-        return k_EResultConnectFailed;
-    }
-    private static final int k_EResultHandshakeFailed = (int)36L;
-    /**
-     * {@snippet lang=c :
-     * enum EResult.k_EResultHandshakeFailed = 36
-     * }
-     */
-    public static int k_EResultHandshakeFailed() {
-        return k_EResultHandshakeFailed;
-    }
-    private static final int k_EResultIOFailure = (int)37L;
-    /**
-     * {@snippet lang=c :
-     * enum EResult.k_EResultIOFailure = 37
-     * }
-     */
-    public static int k_EResultIOFailure() {
-        return k_EResultIOFailure;
-    }
-    private static final int k_EResultRemoteDisconnect = (int)38L;
-    /**
-     * {@snippet lang=c :
-     * enum EResult.k_EResultRemoteDisconnect = 38
-     * }
-     */
-    public static int k_EResultRemoteDisconnect() {
-        return k_EResultRemoteDisconnect;
-    }
-    private static final int k_EResultShoppingCartNotFound = (int)39L;
-    /**
-     * {@snippet lang=c :
-     * enum EResult.k_EResultShoppingCartNotFound = 39
-     * }
-     */
-    public static int k_EResultShoppingCartNotFound() {
-        return k_EResultShoppingCartNotFound;
-    }
-    private static final int k_EResultBlocked = (int)40L;
-    /**
-     * {@snippet lang=c :
-     * enum EResult.k_EResultBlocked = 40
-     * }
-     */
-    public static int k_EResultBlocked() {
-        return k_EResultBlocked;
-    }
-    private static final int k_EResultIgnored = (int)41L;
-    /**
-     * {@snippet lang=c :
-     * enum EResult.k_EResultIgnored = 41
-     * }
-     */
-    public static int k_EResultIgnored() {
-        return k_EResultIgnored;
-    }
-    private static final int k_EResultNoMatch = (int)42L;
-    /**
-     * {@snippet lang=c :
-     * enum EResult.k_EResultNoMatch = 42
-     * }
-     */
-    public static int k_EResultNoMatch() {
-        return k_EResultNoMatch;
-    }
-    private static final int k_EResultAccountDisabled = (int)43L;
-    /**
-     * {@snippet lang=c :
-     * enum EResult.k_EResultAccountDisabled = 43
-     * }
-     */
-    public static int k_EResultAccountDisabled() {
-        return k_EResultAccountDisabled;
-    }
-    private static final int k_EResultServiceReadOnly = (int)44L;
-    /**
-     * {@snippet lang=c :
-     * enum EResult.k_EResultServiceReadOnly = 44
-     * }
-     */
-    public static int k_EResultServiceReadOnly() {
-        return k_EResultServiceReadOnly;
-    }
-    private static final int k_EResultAccountNotFeatured = (int)45L;
-    /**
-     * {@snippet lang=c :
-     * enum EResult.k_EResultAccountNotFeatured = 45
-     * }
-     */
-    public static int k_EResultAccountNotFeatured() {
-        return k_EResultAccountNotFeatured;
-    }
-    private static final int k_EResultAdministratorOK = (int)46L;
-    /**
-     * {@snippet lang=c :
-     * enum EResult.k_EResultAdministratorOK = 46
-     * }
-     */
-    public static int k_EResultAdministratorOK() {
-        return k_EResultAdministratorOK;
-    }
-    private static final int k_EResultContentVersion = (int)47L;
-    /**
-     * {@snippet lang=c :
-     * enum EResult.k_EResultContentVersion = 47
-     * }
-     */
-    public static int k_EResultContentVersion() {
-        return k_EResultContentVersion;
-    }
-    private static final int k_EResultTryAnotherCM = (int)48L;
-    /**
-     * {@snippet lang=c :
-     * enum EResult.k_EResultTryAnotherCM = 48
-     * }
-     */
-    public static int k_EResultTryAnotherCM() {
-        return k_EResultTryAnotherCM;
-    }
-    private static final int k_EResultPasswordRequiredToKickSession = (int)49L;
-    /**
-     * {@snippet lang=c :
-     * enum EResult.k_EResultPasswordRequiredToKickSession = 49
-     * }
-     */
-    public static int k_EResultPasswordRequiredToKickSession() {
-        return k_EResultPasswordRequiredToKickSession;
-    }
-    private static final int k_EResultAlreadyLoggedInElsewhere = (int)50L;
-    /**
-     * {@snippet lang=c :
-     * enum EResult.k_EResultAlreadyLoggedInElsewhere = 50
-     * }
-     */
-    public static int k_EResultAlreadyLoggedInElsewhere() {
-        return k_EResultAlreadyLoggedInElsewhere;
-    }
-    private static final int k_EResultSuspended = (int)51L;
-    /**
-     * {@snippet lang=c :
-     * enum EResult.k_EResultSuspended = 51
-     * }
-     */
-    public static int k_EResultSuspended() {
-        return k_EResultSuspended;
-    }
-    private static final int k_EResultCancelled = (int)52L;
-    /**
-     * {@snippet lang=c :
-     * enum EResult.k_EResultCancelled = 52
-     * }
-     */
-    public static int k_EResultCancelled() {
-        return k_EResultCancelled;
-    }
-    private static final int k_EResultDataCorruption = (int)53L;
-    /**
-     * {@snippet lang=c :
-     * enum EResult.k_EResultDataCorruption = 53
-     * }
-     */
-    public static int k_EResultDataCorruption() {
-        return k_EResultDataCorruption;
-    }
-    private static final int k_EResultDiskFull = (int)54L;
-    /**
-     * {@snippet lang=c :
-     * enum EResult.k_EResultDiskFull = 54
-     * }
-     */
-    public static int k_EResultDiskFull() {
-        return k_EResultDiskFull;
-    }
-    private static final int k_EResultRemoteCallFailed = (int)55L;
-    /**
-     * {@snippet lang=c :
-     * enum EResult.k_EResultRemoteCallFailed = 55
-     * }
-     */
-    public static int k_EResultRemoteCallFailed() {
-        return k_EResultRemoteCallFailed;
-    }
-    private static final int k_EResultPasswordUnset = (int)56L;
-    /**
-     * {@snippet lang=c :
-     * enum EResult.k_EResultPasswordUnset = 56
-     * }
-     */
-    public static int k_EResultPasswordUnset() {
-        return k_EResultPasswordUnset;
-    }
-    private static final int k_EResultExternalAccountUnlinked = (int)57L;
-    /**
-     * {@snippet lang=c :
-     * enum EResult.k_EResultExternalAccountUnlinked = 57
-     * }
-     */
-    public static int k_EResultExternalAccountUnlinked() {
-        return k_EResultExternalAccountUnlinked;
-    }
-    private static final int k_EResultPSNTicketInvalid = (int)58L;
-    /**
-     * {@snippet lang=c :
-     * enum EResult.k_EResultPSNTicketInvalid = 58
-     * }
-     */
-    public static int k_EResultPSNTicketInvalid() {
-        return k_EResultPSNTicketInvalid;
-    }
-    private static final int k_EResultExternalAccountAlreadyLinked = (int)59L;
-    /**
-     * {@snippet lang=c :
-     * enum EResult.k_EResultExternalAccountAlreadyLinked = 59
-     * }
-     */
-    public static int k_EResultExternalAccountAlreadyLinked() {
-        return k_EResultExternalAccountAlreadyLinked;
-    }
-    private static final int k_EResultRemoteFileConflict = (int)60L;
-    /**
-     * {@snippet lang=c :
-     * enum EResult.k_EResultRemoteFileConflict = 60
-     * }
-     */
-    public static int k_EResultRemoteFileConflict() {
-        return k_EResultRemoteFileConflict;
-    }
-    private static final int k_EResultIllegalPassword = (int)61L;
-    /**
-     * {@snippet lang=c :
-     * enum EResult.k_EResultIllegalPassword = 61
-     * }
-     */
-    public static int k_EResultIllegalPassword() {
-        return k_EResultIllegalPassword;
-    }
-    private static final int k_EResultSameAsPreviousValue = (int)62L;
-    /**
-     * {@snippet lang=c :
-     * enum EResult.k_EResultSameAsPreviousValue = 62
-     * }
-     */
-    public static int k_EResultSameAsPreviousValue() {
-        return k_EResultSameAsPreviousValue;
-    }
-    private static final int k_EResultAccountLogonDenied = (int)63L;
-    /**
-     * {@snippet lang=c :
-     * enum EResult.k_EResultAccountLogonDenied = 63
-     * }
-     */
-    public static int k_EResultAccountLogonDenied() {
-        return k_EResultAccountLogonDenied;
-    }
-    private static final int k_EResultCannotUseOldPassword = (int)64L;
-    /**
-     * {@snippet lang=c :
-     * enum EResult.k_EResultCannotUseOldPassword = 64
-     * }
-     */
-    public static int k_EResultCannotUseOldPassword() {
-        return k_EResultCannotUseOldPassword;
-    }
-    private static final int k_EResultInvalidLoginAuthCode = (int)65L;
-    /**
-     * {@snippet lang=c :
-     * enum EResult.k_EResultInvalidLoginAuthCode = 65
-     * }
-     */
-    public static int k_EResultInvalidLoginAuthCode() {
-        return k_EResultInvalidLoginAuthCode;
-    }
-    private static final int k_EResultAccountLogonDeniedNoMail = (int)66L;
-    /**
-     * {@snippet lang=c :
-     * enum EResult.k_EResultAccountLogonDeniedNoMail = 66
-     * }
-     */
-    public static int k_EResultAccountLogonDeniedNoMail() {
-        return k_EResultAccountLogonDeniedNoMail;
-    }
-    private static final int k_EResultHardwareNotCapableOfIPT = (int)67L;
-    /**
-     * {@snippet lang=c :
-     * enum EResult.k_EResultHardwareNotCapableOfIPT = 67
-     * }
-     */
-    public static int k_EResultHardwareNotCapableOfIPT() {
-        return k_EResultHardwareNotCapableOfIPT;
-    }
-    private static final int k_EResultIPTInitError = (int)68L;
-    /**
-     * {@snippet lang=c :
-     * enum EResult.k_EResultIPTInitError = 68
-     * }
-     */
-    public static int k_EResultIPTInitError() {
-        return k_EResultIPTInitError;
-    }
-    private static final int k_EResultParentalControlRestricted = (int)69L;
-    /**
-     * {@snippet lang=c :
-     * enum EResult.k_EResultParentalControlRestricted = 69
-     * }
-     */
-    public static int k_EResultParentalControlRestricted() {
-        return k_EResultParentalControlRestricted;
-    }
-    private static final int k_EResultFacebookQueryError = (int)70L;
-    /**
-     * {@snippet lang=c :
-     * enum EResult.k_EResultFacebookQueryError = 70
-     * }
-     */
-    public static int k_EResultFacebookQueryError() {
-        return k_EResultFacebookQueryError;
-    }
-    private static final int k_EResultExpiredLoginAuthCode = (int)71L;
-    /**
-     * {@snippet lang=c :
-     * enum EResult.k_EResultExpiredLoginAuthCode = 71
-     * }
-     */
-    public static int k_EResultExpiredLoginAuthCode() {
-        return k_EResultExpiredLoginAuthCode;
-    }
-    private static final int k_EResultIPLoginRestrictionFailed = (int)72L;
-    /**
-     * {@snippet lang=c :
-     * enum EResult.k_EResultIPLoginRestrictionFailed = 72
-     * }
-     */
-    public static int k_EResultIPLoginRestrictionFailed() {
-        return k_EResultIPLoginRestrictionFailed;
-    }
-    private static final int k_EResultAccountLockedDown = (int)73L;
-    /**
-     * {@snippet lang=c :
-     * enum EResult.k_EResultAccountLockedDown = 73
-     * }
-     */
-    public static int k_EResultAccountLockedDown() {
-        return k_EResultAccountLockedDown;
-    }
-    private static final int k_EResultAccountLogonDeniedVerifiedEmailRequired = (int)74L;
-    /**
-     * {@snippet lang=c :
-     * enum EResult.k_EResultAccountLogonDeniedVerifiedEmailRequired = 74
-     * }
-     */
-    public static int k_EResultAccountLogonDeniedVerifiedEmailRequired() {
-        return k_EResultAccountLogonDeniedVerifiedEmailRequired;
-    }
-    private static final int k_EResultNoMatchingURL = (int)75L;
-    /**
-     * {@snippet lang=c :
-     * enum EResult.k_EResultNoMatchingURL = 75
-     * }
-     */
-    public static int k_EResultNoMatchingURL() {
-        return k_EResultNoMatchingURL;
-    }
-    private static final int k_EResultBadResponse = (int)76L;
-    /**
-     * {@snippet lang=c :
-     * enum EResult.k_EResultBadResponse = 76
-     * }
-     */
-    public static int k_EResultBadResponse() {
-        return k_EResultBadResponse;
-    }
-    private static final int k_EResultRequirePasswordReEntry = (int)77L;
-    /**
-     * {@snippet lang=c :
-     * enum EResult.k_EResultRequirePasswordReEntry = 77
-     * }
-     */
-    public static int k_EResultRequirePasswordReEntry() {
-        return k_EResultRequirePasswordReEntry;
-    }
-    private static final int k_EResultValueOutOfRange = (int)78L;
-    /**
-     * {@snippet lang=c :
-     * enum EResult.k_EResultValueOutOfRange = 78
-     * }
-     */
-    public static int k_EResultValueOutOfRange() {
-        return k_EResultValueOutOfRange;
-    }
-    private static final int k_EResultUnexpectedError = (int)79L;
-    /**
-     * {@snippet lang=c :
-     * enum EResult.k_EResultUnexpectedError = 79
-     * }
-     */
-    public static int k_EResultUnexpectedError() {
-        return k_EResultUnexpectedError;
-    }
-    private static final int k_EResultDisabled = (int)80L;
-    /**
-     * {@snippet lang=c :
-     * enum EResult.k_EResultDisabled = 80
-     * }
-     */
-    public static int k_EResultDisabled() {
-        return k_EResultDisabled;
-    }
-    private static final int k_EResultInvalidCEGSubmission = (int)81L;
-    /**
-     * {@snippet lang=c :
-     * enum EResult.k_EResultInvalidCEGSubmission = 81
-     * }
-     */
-    public static int k_EResultInvalidCEGSubmission() {
-        return k_EResultInvalidCEGSubmission;
-    }
-    private static final int k_EResultRestrictedDevice = (int)82L;
-    /**
-     * {@snippet lang=c :
-     * enum EResult.k_EResultRestrictedDevice = 82
-     * }
-     */
-    public static int k_EResultRestrictedDevice() {
-        return k_EResultRestrictedDevice;
-    }
-    private static final int k_EResultRegionLocked = (int)83L;
-    /**
-     * {@snippet lang=c :
-     * enum EResult.k_EResultRegionLocked = 83
-     * }
-     */
-    public static int k_EResultRegionLocked() {
-        return k_EResultRegionLocked;
-    }
-    private static final int k_EResultRateLimitExceeded = (int)84L;
-    /**
-     * {@snippet lang=c :
-     * enum EResult.k_EResultRateLimitExceeded = 84
-     * }
-     */
-    public static int k_EResultRateLimitExceeded() {
-        return k_EResultRateLimitExceeded;
-    }
-    private static final int k_EResultAccountLoginDeniedNeedTwoFactor = (int)85L;
-    /**
-     * {@snippet lang=c :
-     * enum EResult.k_EResultAccountLoginDeniedNeedTwoFactor = 85
-     * }
-     */
-    public static int k_EResultAccountLoginDeniedNeedTwoFactor() {
-        return k_EResultAccountLoginDeniedNeedTwoFactor;
-    }
-    private static final int k_EResultItemDeleted = (int)86L;
-    /**
-     * {@snippet lang=c :
-     * enum EResult.k_EResultItemDeleted = 86
-     * }
-     */
-    public static int k_EResultItemDeleted() {
-        return k_EResultItemDeleted;
-    }
-    private static final int k_EResultAccountLoginDeniedThrottle = (int)87L;
-    /**
-     * {@snippet lang=c :
-     * enum EResult.k_EResultAccountLoginDeniedThrottle = 87
-     * }
-     */
-    public static int k_EResultAccountLoginDeniedThrottle() {
-        return k_EResultAccountLoginDeniedThrottle;
-    }
-    private static final int k_EResultTwoFactorCodeMismatch = (int)88L;
-    /**
-     * {@snippet lang=c :
-     * enum EResult.k_EResultTwoFactorCodeMismatch = 88
-     * }
-     */
-    public static int k_EResultTwoFactorCodeMismatch() {
-        return k_EResultTwoFactorCodeMismatch;
-    }
-    private static final int k_EResultTwoFactorActivationCodeMismatch = (int)89L;
-    /**
-     * {@snippet lang=c :
-     * enum EResult.k_EResultTwoFactorActivationCodeMismatch = 89
-     * }
-     */
-    public static int k_EResultTwoFactorActivationCodeMismatch() {
-        return k_EResultTwoFactorActivationCodeMismatch;
-    }
-    private static final int k_EResultAccountAssociatedToMultiplePartners = (int)90L;
-    /**
-     * {@snippet lang=c :
-     * enum EResult.k_EResultAccountAssociatedToMultiplePartners = 90
-     * }
-     */
-    public static int k_EResultAccountAssociatedToMultiplePartners() {
-        return k_EResultAccountAssociatedToMultiplePartners;
-    }
-    private static final int k_EResultNotModified = (int)91L;
-    /**
-     * {@snippet lang=c :
-     * enum EResult.k_EResultNotModified = 91
-     * }
-     */
-    public static int k_EResultNotModified() {
-        return k_EResultNotModified;
-    }
-    private static final int k_EResultNoMobileDevice = (int)92L;
-    /**
-     * {@snippet lang=c :
-     * enum EResult.k_EResultNoMobileDevice = 92
-     * }
-     */
-    public static int k_EResultNoMobileDevice() {
-        return k_EResultNoMobileDevice;
-    }
-    private static final int k_EResultTimeNotSynced = (int)93L;
-    /**
-     * {@snippet lang=c :
-     * enum EResult.k_EResultTimeNotSynced = 93
-     * }
-     */
-    public static int k_EResultTimeNotSynced() {
-        return k_EResultTimeNotSynced;
-    }
-    private static final int k_EResultSmsCodeFailed = (int)94L;
-    /**
-     * {@snippet lang=c :
-     * enum EResult.k_EResultSmsCodeFailed = 94
-     * }
-     */
-    public static int k_EResultSmsCodeFailed() {
-        return k_EResultSmsCodeFailed;
-    }
-    private static final int k_EResultAccountLimitExceeded = (int)95L;
-    /**
-     * {@snippet lang=c :
-     * enum EResult.k_EResultAccountLimitExceeded = 95
-     * }
-     */
-    public static int k_EResultAccountLimitExceeded() {
-        return k_EResultAccountLimitExceeded;
-    }
-    private static final int k_EResultAccountActivityLimitExceeded = (int)96L;
-    /**
-     * {@snippet lang=c :
-     * enum EResult.k_EResultAccountActivityLimitExceeded = 96
-     * }
-     */
-    public static int k_EResultAccountActivityLimitExceeded() {
-        return k_EResultAccountActivityLimitExceeded;
-    }
-    private static final int k_EResultPhoneActivityLimitExceeded = (int)97L;
-    /**
-     * {@snippet lang=c :
-     * enum EResult.k_EResultPhoneActivityLimitExceeded = 97
-     * }
-     */
-    public static int k_EResultPhoneActivityLimitExceeded() {
-        return k_EResultPhoneActivityLimitExceeded;
-    }
-    private static final int k_EResultRefundToWallet = (int)98L;
-    /**
-     * {@snippet lang=c :
-     * enum EResult.k_EResultRefundToWallet = 98
-     * }
-     */
-    public static int k_EResultRefundToWallet() {
-        return k_EResultRefundToWallet;
-    }
-    private static final int k_EResultEmailSendFailure = (int)99L;
-    /**
-     * {@snippet lang=c :
-     * enum EResult.k_EResultEmailSendFailure = 99
-     * }
-     */
-    public static int k_EResultEmailSendFailure() {
-        return k_EResultEmailSendFailure;
-    }
-    private static final int k_EResultNotSettled = (int)100L;
-    /**
-     * {@snippet lang=c :
-     * enum EResult.k_EResultNotSettled = 100
-     * }
-     */
-    public static int k_EResultNotSettled() {
-        return k_EResultNotSettled;
-    }
-    private static final int k_EResultNeedCaptcha = (int)101L;
-    /**
-     * {@snippet lang=c :
-     * enum EResult.k_EResultNeedCaptcha = 101
-     * }
-     */
-    public static int k_EResultNeedCaptcha() {
-        return k_EResultNeedCaptcha;
-    }
-    private static final int k_EResultGSLTDenied = (int)102L;
-    /**
-     * {@snippet lang=c :
-     * enum EResult.k_EResultGSLTDenied = 102
-     * }
-     */
-    public static int k_EResultGSLTDenied() {
-        return k_EResultGSLTDenied;
-    }
-    private static final int k_EResultGSOwnerDenied = (int)103L;
-    /**
-     * {@snippet lang=c :
-     * enum EResult.k_EResultGSOwnerDenied = 103
-     * }
-     */
-    public static int k_EResultGSOwnerDenied() {
-        return k_EResultGSOwnerDenied;
-    }
-    private static final int k_EResultInvalidItemType = (int)104L;
-    /**
-     * {@snippet lang=c :
-     * enum EResult.k_EResultInvalidItemType = 104
-     * }
-     */
-    public static int k_EResultInvalidItemType() {
-        return k_EResultInvalidItemType;
-    }
-    private static final int k_EResultIPBanned = (int)105L;
-    /**
-     * {@snippet lang=c :
-     * enum EResult.k_EResultIPBanned = 105
-     * }
-     */
-    public static int k_EResultIPBanned() {
-        return k_EResultIPBanned;
-    }
-    private static final int k_EResultGSLTExpired = (int)106L;
-    /**
-     * {@snippet lang=c :
-     * enum EResult.k_EResultGSLTExpired = 106
-     * }
-     */
-    public static int k_EResultGSLTExpired() {
-        return k_EResultGSLTExpired;
-    }
-    private static final int k_EResultInsufficientFunds = (int)107L;
-    /**
-     * {@snippet lang=c :
-     * enum EResult.k_EResultInsufficientFunds = 107
-     * }
-     */
-    public static int k_EResultInsufficientFunds() {
-        return k_EResultInsufficientFunds;
-    }
-    private static final int k_EResultTooManyPending = (int)108L;
-    /**
-     * {@snippet lang=c :
-     * enum EResult.k_EResultTooManyPending = 108
-     * }
-     */
-    public static int k_EResultTooManyPending() {
-        return k_EResultTooManyPending;
-    }
-    private static final int k_EResultNoSiteLicensesFound = (int)109L;
-    /**
-     * {@snippet lang=c :
-     * enum EResult.k_EResultNoSiteLicensesFound = 109
-     * }
-     */
-    public static int k_EResultNoSiteLicensesFound() {
-        return k_EResultNoSiteLicensesFound;
-    }
-    private static final int k_EResultWGNetworkSendExceeded = (int)110L;
-    /**
-     * {@snippet lang=c :
-     * enum EResult.k_EResultWGNetworkSendExceeded = 110
-     * }
-     */
-    public static int k_EResultWGNetworkSendExceeded() {
-        return k_EResultWGNetworkSendExceeded;
-    }
-    private static final int k_EResultAccountNotFriends = (int)111L;
-    /**
-     * {@snippet lang=c :
-     * enum EResult.k_EResultAccountNotFriends = 111
-     * }
-     */
-    public static int k_EResultAccountNotFriends() {
-        return k_EResultAccountNotFriends;
-    }
-    private static final int k_EResultLimitedUserAccount = (int)112L;
-    /**
-     * {@snippet lang=c :
-     * enum EResult.k_EResultLimitedUserAccount = 112
-     * }
-     */
-    public static int k_EResultLimitedUserAccount() {
-        return k_EResultLimitedUserAccount;
-    }
-    private static final int k_EResultCantRemoveItem = (int)113L;
-    /**
-     * {@snippet lang=c :
-     * enum EResult.k_EResultCantRemoveItem = 113
-     * }
-     */
-    public static int k_EResultCantRemoveItem() {
-        return k_EResultCantRemoveItem;
-    }
-    private static final int k_EResultAccountDeleted = (int)114L;
-    /**
-     * {@snippet lang=c :
-     * enum EResult.k_EResultAccountDeleted = 114
-     * }
-     */
-    public static int k_EResultAccountDeleted() {
-        return k_EResultAccountDeleted;
-    }
-    private static final int k_EResultExistingUserCancelledLicense = (int)115L;
-    /**
-     * {@snippet lang=c :
-     * enum EResult.k_EResultExistingUserCancelledLicense = 115
-     * }
-     */
-    public static int k_EResultExistingUserCancelledLicense() {
-        return k_EResultExistingUserCancelledLicense;
-    }
-    private static final int k_EResultCommunityCooldown = (int)116L;
-    /**
-     * {@snippet lang=c :
-     * enum EResult.k_EResultCommunityCooldown = 116
-     * }
-     */
-    public static int k_EResultCommunityCooldown() {
-        return k_EResultCommunityCooldown;
-    }
-    private static final int k_EResultNoLauncherSpecified = (int)117L;
-    /**
-     * {@snippet lang=c :
-     * enum EResult.k_EResultNoLauncherSpecified = 117
-     * }
-     */
-    public static int k_EResultNoLauncherSpecified() {
-        return k_EResultNoLauncherSpecified;
-    }
-    private static final int k_EResultMustAgreeToSSA = (int)118L;
-    /**
-     * {@snippet lang=c :
-     * enum EResult.k_EResultMustAgreeToSSA = 118
-     * }
-     */
-    public static int k_EResultMustAgreeToSSA() {
-        return k_EResultMustAgreeToSSA;
-    }
-    private static final int k_EResultLauncherMigrated = (int)119L;
-    /**
-     * {@snippet lang=c :
-     * enum EResult.k_EResultLauncherMigrated = 119
-     * }
-     */
-    public static int k_EResultLauncherMigrated() {
-        return k_EResultLauncherMigrated;
-    }
-    private static final int k_EResultSteamRealmMismatch = (int)120L;
-    /**
-     * {@snippet lang=c :
-     * enum EResult.k_EResultSteamRealmMismatch = 120
-     * }
-     */
-    public static int k_EResultSteamRealmMismatch() {
-        return k_EResultSteamRealmMismatch;
-    }
-    private static final int k_EResultInvalidSignature = (int)121L;
-    /**
-     * {@snippet lang=c :
-     * enum EResult.k_EResultInvalidSignature = 121
-     * }
-     */
-    public static int k_EResultInvalidSignature() {
-        return k_EResultInvalidSignature;
-    }
-    private static final int k_EResultParseFailure = (int)122L;
-    /**
-     * {@snippet lang=c :
-     * enum EResult.k_EResultParseFailure = 122
-     * }
-     */
-    public static int k_EResultParseFailure() {
-        return k_EResultParseFailure;
-    }
-    private static final int k_EResultNoVerifiedPhone = (int)123L;
-    /**
-     * {@snippet lang=c :
-     * enum EResult.k_EResultNoVerifiedPhone = 123
-     * }
-     */
-    public static int k_EResultNoVerifiedPhone() {
-        return k_EResultNoVerifiedPhone;
-    }
-    private static final int k_EResultInsufficientBattery = (int)124L;
-    /**
-     * {@snippet lang=c :
-     * enum EResult.k_EResultInsufficientBattery = 124
-     * }
-     */
-    public static int k_EResultInsufficientBattery() {
-        return k_EResultInsufficientBattery;
-    }
-    private static final int k_EResultChargerRequired = (int)125L;
-    /**
-     * {@snippet lang=c :
-     * enum EResult.k_EResultChargerRequired = 125
-     * }
-     */
-    public static int k_EResultChargerRequired() {
-        return k_EResultChargerRequired;
-    }
-    private static final int k_EResultCachedCredentialInvalid = (int)126L;
-    /**
-     * {@snippet lang=c :
-     * enum EResult.k_EResultCachedCredentialInvalid = 126
-     * }
-     */
-    public static int k_EResultCachedCredentialInvalid() {
-        return k_EResultCachedCredentialInvalid;
-    }
-    private static final int K_EResultPhoneNumberIsVOIP = (int)127L;
-    /**
-     * {@snippet lang=c :
-     * enum EResult.K_EResultPhoneNumberIsVOIP = 127
-     * }
-     */
-    public static int K_EResultPhoneNumberIsVOIP() {
-        return K_EResultPhoneNumberIsVOIP;
-    }
-    private static final int k_EResultNotSupported = (int)128L;
-    /**
-     * {@snippet lang=c :
-     * enum EResult.k_EResultNotSupported = 128
-     * }
-     */
-    public static int k_EResultNotSupported() {
-        return k_EResultNotSupported;
-    }
-    private static final int k_EResultFamilySizeLimitExceeded = (int)129L;
-    /**
-     * {@snippet lang=c :
-     * enum EResult.k_EResultFamilySizeLimitExceeded = 129
-     * }
-     */
-    public static int k_EResultFamilySizeLimitExceeded() {
-        return k_EResultFamilySizeLimitExceeded;
-    }
-    private static final int k_EVoiceResultOK = (int)0L;
-    /**
-     * {@snippet lang=c :
-     * enum EVoiceResult.k_EVoiceResultOK = 0
-     * }
-     */
-    public static int k_EVoiceResultOK() {
-        return k_EVoiceResultOK;
-    }
-    private static final int k_EVoiceResultNotInitialized = (int)1L;
-    /**
-     * {@snippet lang=c :
-     * enum EVoiceResult.k_EVoiceResultNotInitialized = 1
-     * }
-     */
-    public static int k_EVoiceResultNotInitialized() {
-        return k_EVoiceResultNotInitialized;
-    }
-    private static final int k_EVoiceResultNotRecording = (int)2L;
-    /**
-     * {@snippet lang=c :
-     * enum EVoiceResult.k_EVoiceResultNotRecording = 2
-     * }
-     */
-    public static int k_EVoiceResultNotRecording() {
-        return k_EVoiceResultNotRecording;
-    }
-    private static final int k_EVoiceResultNoData = (int)3L;
-    /**
-     * {@snippet lang=c :
-     * enum EVoiceResult.k_EVoiceResultNoData = 3
-     * }
-     */
-    public static int k_EVoiceResultNoData() {
-        return k_EVoiceResultNoData;
-    }
-    private static final int k_EVoiceResultBufferTooSmall = (int)4L;
-    /**
-     * {@snippet lang=c :
-     * enum EVoiceResult.k_EVoiceResultBufferTooSmall = 4
-     * }
-     */
-    public static int k_EVoiceResultBufferTooSmall() {
-        return k_EVoiceResultBufferTooSmall;
-    }
-    private static final int k_EVoiceResultDataCorrupted = (int)5L;
-    /**
-     * {@snippet lang=c :
-     * enum EVoiceResult.k_EVoiceResultDataCorrupted = 5
-     * }
-     */
-    public static int k_EVoiceResultDataCorrupted() {
-        return k_EVoiceResultDataCorrupted;
-    }
-    private static final int k_EVoiceResultRestricted = (int)6L;
-    /**
-     * {@snippet lang=c :
-     * enum EVoiceResult.k_EVoiceResultRestricted = 6
-     * }
-     */
-    public static int k_EVoiceResultRestricted() {
-        return k_EVoiceResultRestricted;
-    }
-    private static final int k_EVoiceResultUnsupportedCodec = (int)7L;
-    /**
-     * {@snippet lang=c :
-     * enum EVoiceResult.k_EVoiceResultUnsupportedCodec = 7
-     * }
-     */
-    public static int k_EVoiceResultUnsupportedCodec() {
-        return k_EVoiceResultUnsupportedCodec;
-    }
-    private static final int k_EVoiceResultReceiverOutOfDate = (int)8L;
-    /**
-     * {@snippet lang=c :
-     * enum EVoiceResult.k_EVoiceResultReceiverOutOfDate = 8
-     * }
-     */
-    public static int k_EVoiceResultReceiverOutOfDate() {
-        return k_EVoiceResultReceiverOutOfDate;
-    }
-    private static final int k_EVoiceResultReceiverDidNotAnswer = (int)9L;
-    /**
-     * {@snippet lang=c :
-     * enum EVoiceResult.k_EVoiceResultReceiverDidNotAnswer = 9
-     * }
-     */
-    public static int k_EVoiceResultReceiverDidNotAnswer() {
-        return k_EVoiceResultReceiverDidNotAnswer;
-    }
-    private static final int k_EDenyInvalid = (int)0L;
-    /**
-     * {@snippet lang=c :
-     * enum EDenyReason.k_EDenyInvalid = 0
-     * }
-     */
-    public static int k_EDenyInvalid() {
-        return k_EDenyInvalid;
-    }
-    private static final int k_EDenyInvalidVersion = (int)1L;
-    /**
-     * {@snippet lang=c :
-     * enum EDenyReason.k_EDenyInvalidVersion = 1
-     * }
-     */
-    public static int k_EDenyInvalidVersion() {
-        return k_EDenyInvalidVersion;
-    }
-    private static final int k_EDenyGeneric = (int)2L;
-    /**
-     * {@snippet lang=c :
-     * enum EDenyReason.k_EDenyGeneric = 2
-     * }
-     */
-    public static int k_EDenyGeneric() {
-        return k_EDenyGeneric;
-    }
-    private static final int k_EDenyNotLoggedOn = (int)3L;
-    /**
-     * {@snippet lang=c :
-     * enum EDenyReason.k_EDenyNotLoggedOn = 3
-     * }
-     */
-    public static int k_EDenyNotLoggedOn() {
-        return k_EDenyNotLoggedOn;
-    }
-    private static final int k_EDenyNoLicense = (int)4L;
-    /**
-     * {@snippet lang=c :
-     * enum EDenyReason.k_EDenyNoLicense = 4
-     * }
-     */
-    public static int k_EDenyNoLicense() {
-        return k_EDenyNoLicense;
-    }
-    private static final int k_EDenyCheater = (int)5L;
-    /**
-     * {@snippet lang=c :
-     * enum EDenyReason.k_EDenyCheater = 5
-     * }
-     */
-    public static int k_EDenyCheater() {
-        return k_EDenyCheater;
-    }
-    private static final int k_EDenyLoggedInElseWhere = (int)6L;
-    /**
-     * {@snippet lang=c :
-     * enum EDenyReason.k_EDenyLoggedInElseWhere = 6
-     * }
-     */
-    public static int k_EDenyLoggedInElseWhere() {
-        return k_EDenyLoggedInElseWhere;
-    }
-    private static final int k_EDenyUnknownText = (int)7L;
-    /**
-     * {@snippet lang=c :
-     * enum EDenyReason.k_EDenyUnknownText = 7
-     * }
-     */
-    public static int k_EDenyUnknownText() {
-        return k_EDenyUnknownText;
-    }
-    private static final int k_EDenyIncompatibleAnticheat = (int)8L;
-    /**
-     * {@snippet lang=c :
-     * enum EDenyReason.k_EDenyIncompatibleAnticheat = 8
-     * }
-     */
-    public static int k_EDenyIncompatibleAnticheat() {
-        return k_EDenyIncompatibleAnticheat;
-    }
-    private static final int k_EDenyMemoryCorruption = (int)9L;
-    /**
-     * {@snippet lang=c :
-     * enum EDenyReason.k_EDenyMemoryCorruption = 9
-     * }
-     */
-    public static int k_EDenyMemoryCorruption() {
-        return k_EDenyMemoryCorruption;
-    }
-    private static final int k_EDenyIncompatibleSoftware = (int)10L;
-    /**
-     * {@snippet lang=c :
-     * enum EDenyReason.k_EDenyIncompatibleSoftware = 10
-     * }
-     */
-    public static int k_EDenyIncompatibleSoftware() {
-        return k_EDenyIncompatibleSoftware;
-    }
-    private static final int k_EDenySteamConnectionLost = (int)11L;
-    /**
-     * {@snippet lang=c :
-     * enum EDenyReason.k_EDenySteamConnectionLost = 11
-     * }
-     */
-    public static int k_EDenySteamConnectionLost() {
-        return k_EDenySteamConnectionLost;
-    }
-    private static final int k_EDenySteamConnectionError = (int)12L;
-    /**
-     * {@snippet lang=c :
-     * enum EDenyReason.k_EDenySteamConnectionError = 12
-     * }
-     */
-    public static int k_EDenySteamConnectionError() {
-        return k_EDenySteamConnectionError;
-    }
-    private static final int k_EDenySteamResponseTimedOut = (int)13L;
-    /**
-     * {@snippet lang=c :
-     * enum EDenyReason.k_EDenySteamResponseTimedOut = 13
-     * }
-     */
-    public static int k_EDenySteamResponseTimedOut() {
-        return k_EDenySteamResponseTimedOut;
-    }
-    private static final int k_EDenySteamValidationStalled = (int)14L;
-    /**
-     * {@snippet lang=c :
-     * enum EDenyReason.k_EDenySteamValidationStalled = 14
-     * }
-     */
-    public static int k_EDenySteamValidationStalled() {
-        return k_EDenySteamValidationStalled;
-    }
-    private static final int k_EDenySteamOwnerLeftGuestUser = (int)15L;
-    /**
-     * {@snippet lang=c :
-     * enum EDenyReason.k_EDenySteamOwnerLeftGuestUser = 15
-     * }
-     */
-    public static int k_EDenySteamOwnerLeftGuestUser() {
-        return k_EDenySteamOwnerLeftGuestUser;
-    }
-    private static final int k_EBeginAuthSessionResultOK = (int)0L;
-    /**
-     * {@snippet lang=c :
-     * enum EBeginAuthSessionResult.k_EBeginAuthSessionResultOK = 0
-     * }
-     */
-    public static int k_EBeginAuthSessionResultOK() {
-        return k_EBeginAuthSessionResultOK;
-    }
-    private static final int k_EBeginAuthSessionResultInvalidTicket = (int)1L;
-    /**
-     * {@snippet lang=c :
-     * enum EBeginAuthSessionResult.k_EBeginAuthSessionResultInvalidTicket = 1
-     * }
-     */
-    public static int k_EBeginAuthSessionResultInvalidTicket() {
-        return k_EBeginAuthSessionResultInvalidTicket;
-    }
-    private static final int k_EBeginAuthSessionResultDuplicateRequest = (int)2L;
-    /**
-     * {@snippet lang=c :
-     * enum EBeginAuthSessionResult.k_EBeginAuthSessionResultDuplicateRequest = 2
-     * }
-     */
-    public static int k_EBeginAuthSessionResultDuplicateRequest() {
-        return k_EBeginAuthSessionResultDuplicateRequest;
-    }
-    private static final int k_EBeginAuthSessionResultInvalidVersion = (int)3L;
-    /**
-     * {@snippet lang=c :
-     * enum EBeginAuthSessionResult.k_EBeginAuthSessionResultInvalidVersion = 3
-     * }
-     */
-    public static int k_EBeginAuthSessionResultInvalidVersion() {
-        return k_EBeginAuthSessionResultInvalidVersion;
-    }
-    private static final int k_EBeginAuthSessionResultGameMismatch = (int)4L;
-    /**
-     * {@snippet lang=c :
-     * enum EBeginAuthSessionResult.k_EBeginAuthSessionResultGameMismatch = 4
-     * }
-     */
-    public static int k_EBeginAuthSessionResultGameMismatch() {
-        return k_EBeginAuthSessionResultGameMismatch;
-    }
-    private static final int k_EBeginAuthSessionResultExpiredTicket = (int)5L;
-    /**
-     * {@snippet lang=c :
-     * enum EBeginAuthSessionResult.k_EBeginAuthSessionResultExpiredTicket = 5
-     * }
-     */
-    public static int k_EBeginAuthSessionResultExpiredTicket() {
-        return k_EBeginAuthSessionResultExpiredTicket;
-    }
-    private static final int k_EAuthSessionResponseOK = (int)0L;
-    /**
-     * {@snippet lang=c :
-     * enum EAuthSessionResponse.k_EAuthSessionResponseOK = 0
-     * }
-     */
-    public static int k_EAuthSessionResponseOK() {
-        return k_EAuthSessionResponseOK;
-    }
-    private static final int k_EAuthSessionResponseUserNotConnectedToSteam = (int)1L;
-    /**
-     * {@snippet lang=c :
-     * enum EAuthSessionResponse.k_EAuthSessionResponseUserNotConnectedToSteam = 1
-     * }
-     */
-    public static int k_EAuthSessionResponseUserNotConnectedToSteam() {
-        return k_EAuthSessionResponseUserNotConnectedToSteam;
-    }
-    private static final int k_EAuthSessionResponseNoLicenseOrExpired = (int)2L;
-    /**
-     * {@snippet lang=c :
-     * enum EAuthSessionResponse.k_EAuthSessionResponseNoLicenseOrExpired = 2
-     * }
-     */
-    public static int k_EAuthSessionResponseNoLicenseOrExpired() {
-        return k_EAuthSessionResponseNoLicenseOrExpired;
-    }
-    private static final int k_EAuthSessionResponseVACBanned = (int)3L;
-    /**
-     * {@snippet lang=c :
-     * enum EAuthSessionResponse.k_EAuthSessionResponseVACBanned = 3
-     * }
-     */
-    public static int k_EAuthSessionResponseVACBanned() {
-        return k_EAuthSessionResponseVACBanned;
-    }
-    private static final int k_EAuthSessionResponseLoggedInElseWhere = (int)4L;
-    /**
-     * {@snippet lang=c :
-     * enum EAuthSessionResponse.k_EAuthSessionResponseLoggedInElseWhere = 4
-     * }
-     */
-    public static int k_EAuthSessionResponseLoggedInElseWhere() {
-        return k_EAuthSessionResponseLoggedInElseWhere;
-    }
-    private static final int k_EAuthSessionResponseVACCheckTimedOut = (int)5L;
-    /**
-     * {@snippet lang=c :
-     * enum EAuthSessionResponse.k_EAuthSessionResponseVACCheckTimedOut = 5
-     * }
-     */
-    public static int k_EAuthSessionResponseVACCheckTimedOut() {
-        return k_EAuthSessionResponseVACCheckTimedOut;
-    }
-    private static final int k_EAuthSessionResponseAuthTicketCanceled = (int)6L;
-    /**
-     * {@snippet lang=c :
-     * enum EAuthSessionResponse.k_EAuthSessionResponseAuthTicketCanceled = 6
-     * }
-     */
-    public static int k_EAuthSessionResponseAuthTicketCanceled() {
-        return k_EAuthSessionResponseAuthTicketCanceled;
-    }
-    private static final int k_EAuthSessionResponseAuthTicketInvalidAlreadyUsed = (int)7L;
-    /**
-     * {@snippet lang=c :
-     * enum EAuthSessionResponse.k_EAuthSessionResponseAuthTicketInvalidAlreadyUsed = 7
-     * }
-     */
-    public static int k_EAuthSessionResponseAuthTicketInvalidAlreadyUsed() {
-        return k_EAuthSessionResponseAuthTicketInvalidAlreadyUsed;
-    }
-    private static final int k_EAuthSessionResponseAuthTicketInvalid = (int)8L;
-    /**
-     * {@snippet lang=c :
-     * enum EAuthSessionResponse.k_EAuthSessionResponseAuthTicketInvalid = 8
-     * }
-     */
-    public static int k_EAuthSessionResponseAuthTicketInvalid() {
-        return k_EAuthSessionResponseAuthTicketInvalid;
-    }
-    private static final int k_EAuthSessionResponsePublisherIssuedBan = (int)9L;
-    /**
-     * {@snippet lang=c :
-     * enum EAuthSessionResponse.k_EAuthSessionResponsePublisherIssuedBan = 9
-     * }
-     */
-    public static int k_EAuthSessionResponsePublisherIssuedBan() {
-        return k_EAuthSessionResponsePublisherIssuedBan;
-    }
-    private static final int k_EAuthSessionResponseAuthTicketNetworkIdentityFailure = (int)10L;
-    /**
-     * {@snippet lang=c :
-     * enum EAuthSessionResponse.k_EAuthSessionResponseAuthTicketNetworkIdentityFailure = 10
-     * }
-     */
-    public static int k_EAuthSessionResponseAuthTicketNetworkIdentityFailure() {
-        return k_EAuthSessionResponseAuthTicketNetworkIdentityFailure;
-    }
-    private static final int k_EUserHasLicenseResultHasLicense = (int)0L;
-    /**
-     * {@snippet lang=c :
-     * enum EUserHasLicenseForAppResult.k_EUserHasLicenseResultHasLicense = 0
-     * }
-     */
-    public static int k_EUserHasLicenseResultHasLicense() {
-        return k_EUserHasLicenseResultHasLicense;
-    }
-    private static final int k_EUserHasLicenseResultDoesNotHaveLicense = (int)1L;
-    /**
-     * {@snippet lang=c :
-     * enum EUserHasLicenseForAppResult.k_EUserHasLicenseResultDoesNotHaveLicense = 1
-     * }
-     */
-    public static int k_EUserHasLicenseResultDoesNotHaveLicense() {
-        return k_EUserHasLicenseResultDoesNotHaveLicense;
-    }
-    private static final int k_EUserHasLicenseResultNoAuth = (int)2L;
-    /**
-     * {@snippet lang=c :
-     * enum EUserHasLicenseForAppResult.k_EUserHasLicenseResultNoAuth = 2
-     * }
-     */
-    public static int k_EUserHasLicenseResultNoAuth() {
-        return k_EUserHasLicenseResultNoAuth;
-    }
-    private static final int k_EAccountTypeInvalid = (int)0L;
-    /**
-     * {@snippet lang=c :
-     * enum EAccountType.k_EAccountTypeInvalid = 0
-     * }
-     */
-    public static int k_EAccountTypeInvalid() {
-        return k_EAccountTypeInvalid;
-    }
-    private static final int k_EAccountTypeIndividual = (int)1L;
-    /**
-     * {@snippet lang=c :
-     * enum EAccountType.k_EAccountTypeIndividual = 1
-     * }
-     */
-    public static int k_EAccountTypeIndividual() {
-        return k_EAccountTypeIndividual;
-    }
-    private static final int k_EAccountTypeMultiseat = (int)2L;
-    /**
-     * {@snippet lang=c :
-     * enum EAccountType.k_EAccountTypeMultiseat = 2
-     * }
-     */
-    public static int k_EAccountTypeMultiseat() {
-        return k_EAccountTypeMultiseat;
-    }
-    private static final int k_EAccountTypeGameServer = (int)3L;
-    /**
-     * {@snippet lang=c :
-     * enum EAccountType.k_EAccountTypeGameServer = 3
-     * }
-     */
-    public static int k_EAccountTypeGameServer() {
-        return k_EAccountTypeGameServer;
-    }
-    private static final int k_EAccountTypeAnonGameServer = (int)4L;
-    /**
-     * {@snippet lang=c :
-     * enum EAccountType.k_EAccountTypeAnonGameServer = 4
-     * }
-     */
-    public static int k_EAccountTypeAnonGameServer() {
-        return k_EAccountTypeAnonGameServer;
-    }
-    private static final int k_EAccountTypePending = (int)5L;
-    /**
-     * {@snippet lang=c :
-     * enum EAccountType.k_EAccountTypePending = 5
-     * }
-     */
-    public static int k_EAccountTypePending() {
-        return k_EAccountTypePending;
-    }
-    private static final int k_EAccountTypeContentServer = (int)6L;
-    /**
-     * {@snippet lang=c :
-     * enum EAccountType.k_EAccountTypeContentServer = 6
-     * }
-     */
-    public static int k_EAccountTypeContentServer() {
-        return k_EAccountTypeContentServer;
-    }
-    private static final int k_EAccountTypeClan = (int)7L;
-    /**
-     * {@snippet lang=c :
-     * enum EAccountType.k_EAccountTypeClan = 7
-     * }
-     */
-    public static int k_EAccountTypeClan() {
-        return k_EAccountTypeClan;
-    }
-    private static final int k_EAccountTypeChat = (int)8L;
-    /**
-     * {@snippet lang=c :
-     * enum EAccountType.k_EAccountTypeChat = 8
-     * }
-     */
-    public static int k_EAccountTypeChat() {
-        return k_EAccountTypeChat;
-    }
-    private static final int k_EAccountTypeConsoleUser = (int)9L;
-    /**
-     * {@snippet lang=c :
-     * enum EAccountType.k_EAccountTypeConsoleUser = 9
-     * }
-     */
-    public static int k_EAccountTypeConsoleUser() {
-        return k_EAccountTypeConsoleUser;
-    }
-    private static final int k_EAccountTypeAnonUser = (int)10L;
-    /**
-     * {@snippet lang=c :
-     * enum EAccountType.k_EAccountTypeAnonUser = 10
-     * }
-     */
-    public static int k_EAccountTypeAnonUser() {
-        return k_EAccountTypeAnonUser;
-    }
-    private static final int k_EAccountTypeMax = (int)11L;
-    /**
-     * {@snippet lang=c :
-     * enum EAccountType.k_EAccountTypeMax = 11
-     * }
-     */
-    public static int k_EAccountTypeMax() {
-        return k_EAccountTypeMax;
-    }
-    private static final int k_EChatEntryTypeInvalid = (int)0L;
-    /**
-     * {@snippet lang=c :
-     * enum EChatEntryType.k_EChatEntryTypeInvalid = 0
-     * }
-     */
-    public static int k_EChatEntryTypeInvalid() {
-        return k_EChatEntryTypeInvalid;
-    }
-    private static final int k_EChatEntryTypeChatMsg = (int)1L;
-    /**
-     * {@snippet lang=c :
-     * enum EChatEntryType.k_EChatEntryTypeChatMsg = 1
-     * }
-     */
-    public static int k_EChatEntryTypeChatMsg() {
-        return k_EChatEntryTypeChatMsg;
-    }
-    private static final int k_EChatEntryTypeTyping = (int)2L;
-    /**
-     * {@snippet lang=c :
-     * enum EChatEntryType.k_EChatEntryTypeTyping = 2
-     * }
-     */
-    public static int k_EChatEntryTypeTyping() {
-        return k_EChatEntryTypeTyping;
-    }
-    private static final int k_EChatEntryTypeInviteGame = (int)3L;
-    /**
-     * {@snippet lang=c :
-     * enum EChatEntryType.k_EChatEntryTypeInviteGame = 3
-     * }
-     */
-    public static int k_EChatEntryTypeInviteGame() {
-        return k_EChatEntryTypeInviteGame;
-    }
-    private static final int k_EChatEntryTypeEmote = (int)4L;
-    /**
-     * {@snippet lang=c :
-     * enum EChatEntryType.k_EChatEntryTypeEmote = 4
-     * }
-     */
-    public static int k_EChatEntryTypeEmote() {
-        return k_EChatEntryTypeEmote;
-    }
-    private static final int k_EChatEntryTypeLeftConversation = (int)6L;
-    /**
-     * {@snippet lang=c :
-     * enum EChatEntryType.k_EChatEntryTypeLeftConversation = 6
-     * }
-     */
-    public static int k_EChatEntryTypeLeftConversation() {
-        return k_EChatEntryTypeLeftConversation;
-    }
-    private static final int k_EChatEntryTypeEntered = (int)7L;
-    /**
-     * {@snippet lang=c :
-     * enum EChatEntryType.k_EChatEntryTypeEntered = 7
-     * }
-     */
-    public static int k_EChatEntryTypeEntered() {
-        return k_EChatEntryTypeEntered;
-    }
-    private static final int k_EChatEntryTypeWasKicked = (int)8L;
-    /**
-     * {@snippet lang=c :
-     * enum EChatEntryType.k_EChatEntryTypeWasKicked = 8
-     * }
-     */
-    public static int k_EChatEntryTypeWasKicked() {
-        return k_EChatEntryTypeWasKicked;
-    }
-    private static final int k_EChatEntryTypeWasBanned = (int)9L;
-    /**
-     * {@snippet lang=c :
-     * enum EChatEntryType.k_EChatEntryTypeWasBanned = 9
-     * }
-     */
-    public static int k_EChatEntryTypeWasBanned() {
-        return k_EChatEntryTypeWasBanned;
-    }
-    private static final int k_EChatEntryTypeDisconnected = (int)10L;
-    /**
-     * {@snippet lang=c :
-     * enum EChatEntryType.k_EChatEntryTypeDisconnected = 10
-     * }
-     */
-    public static int k_EChatEntryTypeDisconnected() {
-        return k_EChatEntryTypeDisconnected;
-    }
-    private static final int k_EChatEntryTypeHistoricalChat = (int)11L;
-    /**
-     * {@snippet lang=c :
-     * enum EChatEntryType.k_EChatEntryTypeHistoricalChat = 11
-     * }
-     */
-    public static int k_EChatEntryTypeHistoricalChat() {
-        return k_EChatEntryTypeHistoricalChat;
-    }
-    private static final int k_EChatEntryTypeLinkBlocked = (int)14L;
-    /**
-     * {@snippet lang=c :
-     * enum EChatEntryType.k_EChatEntryTypeLinkBlocked = 14
-     * }
-     */
-    public static int k_EChatEntryTypeLinkBlocked() {
-        return k_EChatEntryTypeLinkBlocked;
-    }
-    private static final int k_EChatRoomEnterResponseSuccess = (int)1L;
-    /**
-     * {@snippet lang=c :
-     * enum EChatRoomEnterResponse.k_EChatRoomEnterResponseSuccess = 1
-     * }
-     */
-    public static int k_EChatRoomEnterResponseSuccess() {
-        return k_EChatRoomEnterResponseSuccess;
-    }
-    private static final int k_EChatRoomEnterResponseDoesntExist = (int)2L;
-    /**
-     * {@snippet lang=c :
-     * enum EChatRoomEnterResponse.k_EChatRoomEnterResponseDoesntExist = 2
-     * }
-     */
-    public static int k_EChatRoomEnterResponseDoesntExist() {
-        return k_EChatRoomEnterResponseDoesntExist;
-    }
-    private static final int k_EChatRoomEnterResponseNotAllowed = (int)3L;
-    /**
-     * {@snippet lang=c :
-     * enum EChatRoomEnterResponse.k_EChatRoomEnterResponseNotAllowed = 3
-     * }
-     */
-    public static int k_EChatRoomEnterResponseNotAllowed() {
-        return k_EChatRoomEnterResponseNotAllowed;
-    }
-    private static final int k_EChatRoomEnterResponseFull = (int)4L;
-    /**
-     * {@snippet lang=c :
-     * enum EChatRoomEnterResponse.k_EChatRoomEnterResponseFull = 4
-     * }
-     */
-    public static int k_EChatRoomEnterResponseFull() {
-        return k_EChatRoomEnterResponseFull;
-    }
-    private static final int k_EChatRoomEnterResponseError = (int)5L;
-    /**
-     * {@snippet lang=c :
-     * enum EChatRoomEnterResponse.k_EChatRoomEnterResponseError = 5
-     * }
-     */
-    public static int k_EChatRoomEnterResponseError() {
-        return k_EChatRoomEnterResponseError;
-    }
-    private static final int k_EChatRoomEnterResponseBanned = (int)6L;
-    /**
-     * {@snippet lang=c :
-     * enum EChatRoomEnterResponse.k_EChatRoomEnterResponseBanned = 6
-     * }
-     */
-    public static int k_EChatRoomEnterResponseBanned() {
-        return k_EChatRoomEnterResponseBanned;
-    }
-    private static final int k_EChatRoomEnterResponseLimited = (int)7L;
-    /**
-     * {@snippet lang=c :
-     * enum EChatRoomEnterResponse.k_EChatRoomEnterResponseLimited = 7
-     * }
-     */
-    public static int k_EChatRoomEnterResponseLimited() {
-        return k_EChatRoomEnterResponseLimited;
-    }
-    private static final int k_EChatRoomEnterResponseClanDisabled = (int)8L;
-    /**
-     * {@snippet lang=c :
-     * enum EChatRoomEnterResponse.k_EChatRoomEnterResponseClanDisabled = 8
-     * }
-     */
-    public static int k_EChatRoomEnterResponseClanDisabled() {
-        return k_EChatRoomEnterResponseClanDisabled;
-    }
-    private static final int k_EChatRoomEnterResponseCommunityBan = (int)9L;
-    /**
-     * {@snippet lang=c :
-     * enum EChatRoomEnterResponse.k_EChatRoomEnterResponseCommunityBan = 9
-     * }
-     */
-    public static int k_EChatRoomEnterResponseCommunityBan() {
-        return k_EChatRoomEnterResponseCommunityBan;
-    }
-    private static final int k_EChatRoomEnterResponseMemberBlockedYou = (int)10L;
-    /**
-     * {@snippet lang=c :
-     * enum EChatRoomEnterResponse.k_EChatRoomEnterResponseMemberBlockedYou = 10
-     * }
-     */
-    public static int k_EChatRoomEnterResponseMemberBlockedYou() {
-        return k_EChatRoomEnterResponseMemberBlockedYou;
-    }
-    private static final int k_EChatRoomEnterResponseYouBlockedMember = (int)11L;
-    /**
-     * {@snippet lang=c :
-     * enum EChatRoomEnterResponse.k_EChatRoomEnterResponseYouBlockedMember = 11
-     * }
-     */
-    public static int k_EChatRoomEnterResponseYouBlockedMember() {
-        return k_EChatRoomEnterResponseYouBlockedMember;
-    }
-    private static final int k_EChatRoomEnterResponseRatelimitExceeded = (int)15L;
-    /**
-     * {@snippet lang=c :
-     * enum EChatRoomEnterResponse.k_EChatRoomEnterResponseRatelimitExceeded = 15
-     * }
-     */
-    public static int k_EChatRoomEnterResponseRatelimitExceeded() {
-        return k_EChatRoomEnterResponseRatelimitExceeded;
-    }
-    private static final int k_EChatAccountInstanceMask = (int)4095L;
-    /**
-     * {@snippet lang=c :
-     * enum EChatSteamIDInstanceFlags.k_EChatAccountInstanceMask = 4095
-     * }
-     */
-    public static int k_EChatAccountInstanceMask() {
-        return k_EChatAccountInstanceMask;
-    }
-    private static final int k_EChatInstanceFlagClan = (int)524288L;
-    /**
-     * {@snippet lang=c :
-     * enum EChatSteamIDInstanceFlags.k_EChatInstanceFlagClan = 524288
-     * }
-     */
-    public static int k_EChatInstanceFlagClan() {
-        return k_EChatInstanceFlagClan;
-    }
-    private static final int k_EChatInstanceFlagLobby = (int)262144L;
-    /**
-     * {@snippet lang=c :
-     * enum EChatSteamIDInstanceFlags.k_EChatInstanceFlagLobby = 262144
-     * }
-     */
-    public static int k_EChatInstanceFlagLobby() {
-        return k_EChatInstanceFlagLobby;
-    }
-    private static final int k_EChatInstanceFlagMMSLobby = (int)131072L;
-    /**
-     * {@snippet lang=c :
-     * enum EChatSteamIDInstanceFlags.k_EChatInstanceFlagMMSLobby = 131072
-     * }
-     */
-    public static int k_EChatInstanceFlagMMSLobby() {
-        return k_EChatInstanceFlagMMSLobby;
-    }
-    private static final int k_EPositionInvalid = (int)-1L;
-    /**
-     * {@snippet lang=c :
-     * enum ENotificationPosition.k_EPositionInvalid = -1
-     * }
-     */
-    public static int k_EPositionInvalid() {
-        return k_EPositionInvalid;
-    }
-    private static final int k_EPositionTopLeft = (int)0L;
-    /**
-     * {@snippet lang=c :
-     * enum ENotificationPosition.k_EPositionTopLeft = 0
-     * }
-     */
-    public static int k_EPositionTopLeft() {
-        return k_EPositionTopLeft;
-    }
-    private static final int k_EPositionTopRight = (int)1L;
-    /**
-     * {@snippet lang=c :
-     * enum ENotificationPosition.k_EPositionTopRight = 1
-     * }
-     */
-    public static int k_EPositionTopRight() {
-        return k_EPositionTopRight;
-    }
-    private static final int k_EPositionBottomLeft = (int)2L;
-    /**
-     * {@snippet lang=c :
-     * enum ENotificationPosition.k_EPositionBottomLeft = 2
-     * }
-     */
-    public static int k_EPositionBottomLeft() {
-        return k_EPositionBottomLeft;
-    }
-    private static final int k_EPositionBottomRight = (int)3L;
-    /**
-     * {@snippet lang=c :
-     * enum ENotificationPosition.k_EPositionBottomRight = 3
-     * }
-     */
-    public static int k_EPositionBottomRight() {
-        return k_EPositionBottomRight;
-    }
-    private static final int k_EBroadcastUploadResultNone = (int)0L;
-    /**
-     * {@snippet lang=c :
-     * enum EBroadcastUploadResult.k_EBroadcastUploadResultNone = 0
-     * }
-     */
-    public static int k_EBroadcastUploadResultNone() {
-        return k_EBroadcastUploadResultNone;
-    }
-    private static final int k_EBroadcastUploadResultOK = (int)1L;
-    /**
-     * {@snippet lang=c :
-     * enum EBroadcastUploadResult.k_EBroadcastUploadResultOK = 1
-     * }
-     */
-    public static int k_EBroadcastUploadResultOK() {
-        return k_EBroadcastUploadResultOK;
-    }
-    private static final int k_EBroadcastUploadResultInitFailed = (int)2L;
-    /**
-     * {@snippet lang=c :
-     * enum EBroadcastUploadResult.k_EBroadcastUploadResultInitFailed = 2
-     * }
-     */
-    public static int k_EBroadcastUploadResultInitFailed() {
-        return k_EBroadcastUploadResultInitFailed;
-    }
-    private static final int k_EBroadcastUploadResultFrameFailed = (int)3L;
-    /**
-     * {@snippet lang=c :
-     * enum EBroadcastUploadResult.k_EBroadcastUploadResultFrameFailed = 3
-     * }
-     */
-    public static int k_EBroadcastUploadResultFrameFailed() {
-        return k_EBroadcastUploadResultFrameFailed;
-    }
-    private static final int k_EBroadcastUploadResultTimeout = (int)4L;
-    /**
-     * {@snippet lang=c :
-     * enum EBroadcastUploadResult.k_EBroadcastUploadResultTimeout = 4
-     * }
-     */
-    public static int k_EBroadcastUploadResultTimeout() {
-        return k_EBroadcastUploadResultTimeout;
-    }
-    private static final int k_EBroadcastUploadResultBandwidthExceeded = (int)5L;
-    /**
-     * {@snippet lang=c :
-     * enum EBroadcastUploadResult.k_EBroadcastUploadResultBandwidthExceeded = 5
-     * }
-     */
-    public static int k_EBroadcastUploadResultBandwidthExceeded() {
-        return k_EBroadcastUploadResultBandwidthExceeded;
-    }
-    private static final int k_EBroadcastUploadResultLowFPS = (int)6L;
-    /**
-     * {@snippet lang=c :
-     * enum EBroadcastUploadResult.k_EBroadcastUploadResultLowFPS = 6
-     * }
-     */
-    public static int k_EBroadcastUploadResultLowFPS() {
-        return k_EBroadcastUploadResultLowFPS;
-    }
-    private static final int k_EBroadcastUploadResultMissingKeyFrames = (int)7L;
-    /**
-     * {@snippet lang=c :
-     * enum EBroadcastUploadResult.k_EBroadcastUploadResultMissingKeyFrames = 7
-     * }
-     */
-    public static int k_EBroadcastUploadResultMissingKeyFrames() {
-        return k_EBroadcastUploadResultMissingKeyFrames;
-    }
-    private static final int k_EBroadcastUploadResultNoConnection = (int)8L;
-    /**
-     * {@snippet lang=c :
-     * enum EBroadcastUploadResult.k_EBroadcastUploadResultNoConnection = 8
-     * }
-     */
-    public static int k_EBroadcastUploadResultNoConnection() {
-        return k_EBroadcastUploadResultNoConnection;
-    }
-    private static final int k_EBroadcastUploadResultRelayFailed = (int)9L;
-    /**
-     * {@snippet lang=c :
-     * enum EBroadcastUploadResult.k_EBroadcastUploadResultRelayFailed = 9
-     * }
-     */
-    public static int k_EBroadcastUploadResultRelayFailed() {
-        return k_EBroadcastUploadResultRelayFailed;
-    }
-    private static final int k_EBroadcastUploadResultSettingsChanged = (int)10L;
-    /**
-     * {@snippet lang=c :
-     * enum EBroadcastUploadResult.k_EBroadcastUploadResultSettingsChanged = 10
-     * }
-     */
-    public static int k_EBroadcastUploadResultSettingsChanged() {
-        return k_EBroadcastUploadResultSettingsChanged;
-    }
-    private static final int k_EBroadcastUploadResultMissingAudio = (int)11L;
-    /**
-     * {@snippet lang=c :
-     * enum EBroadcastUploadResult.k_EBroadcastUploadResultMissingAudio = 11
-     * }
-     */
-    public static int k_EBroadcastUploadResultMissingAudio() {
-        return k_EBroadcastUploadResultMissingAudio;
-    }
-    private static final int k_EBroadcastUploadResultTooFarBehind = (int)12L;
-    /**
-     * {@snippet lang=c :
-     * enum EBroadcastUploadResult.k_EBroadcastUploadResultTooFarBehind = 12
-     * }
-     */
-    public static int k_EBroadcastUploadResultTooFarBehind() {
-        return k_EBroadcastUploadResultTooFarBehind;
-    }
-    private static final int k_EBroadcastUploadResultTranscodeBehind = (int)13L;
-    /**
-     * {@snippet lang=c :
-     * enum EBroadcastUploadResult.k_EBroadcastUploadResultTranscodeBehind = 13
-     * }
-     */
-    public static int k_EBroadcastUploadResultTranscodeBehind() {
-        return k_EBroadcastUploadResultTranscodeBehind;
-    }
-    private static final int k_EBroadcastUploadResultNotAllowedToPlay = (int)14L;
-    /**
-     * {@snippet lang=c :
-     * enum EBroadcastUploadResult.k_EBroadcastUploadResultNotAllowedToPlay = 14
-     * }
-     */
-    public static int k_EBroadcastUploadResultNotAllowedToPlay() {
-        return k_EBroadcastUploadResultNotAllowedToPlay;
-    }
-    private static final int k_EBroadcastUploadResultBusy = (int)15L;
-    /**
-     * {@snippet lang=c :
-     * enum EBroadcastUploadResult.k_EBroadcastUploadResultBusy = 15
-     * }
-     */
-    public static int k_EBroadcastUploadResultBusy() {
-        return k_EBroadcastUploadResultBusy;
-    }
-    private static final int k_EBroadcastUploadResultBanned = (int)16L;
-    /**
-     * {@snippet lang=c :
-     * enum EBroadcastUploadResult.k_EBroadcastUploadResultBanned = 16
-     * }
-     */
-    public static int k_EBroadcastUploadResultBanned() {
-        return k_EBroadcastUploadResultBanned;
-    }
-    private static final int k_EBroadcastUploadResultAlreadyActive = (int)17L;
-    /**
-     * {@snippet lang=c :
-     * enum EBroadcastUploadResult.k_EBroadcastUploadResultAlreadyActive = 17
-     * }
-     */
-    public static int k_EBroadcastUploadResultAlreadyActive() {
-        return k_EBroadcastUploadResultAlreadyActive;
-    }
-    private static final int k_EBroadcastUploadResultForcedOff = (int)18L;
-    /**
-     * {@snippet lang=c :
-     * enum EBroadcastUploadResult.k_EBroadcastUploadResultForcedOff = 18
-     * }
-     */
-    public static int k_EBroadcastUploadResultForcedOff() {
-        return k_EBroadcastUploadResultForcedOff;
-    }
-    private static final int k_EBroadcastUploadResultAudioBehind = (int)19L;
-    /**
-     * {@snippet lang=c :
-     * enum EBroadcastUploadResult.k_EBroadcastUploadResultAudioBehind = 19
-     * }
-     */
-    public static int k_EBroadcastUploadResultAudioBehind() {
-        return k_EBroadcastUploadResultAudioBehind;
-    }
-    private static final int k_EBroadcastUploadResultShutdown = (int)20L;
-    /**
-     * {@snippet lang=c :
-     * enum EBroadcastUploadResult.k_EBroadcastUploadResultShutdown = 20
-     * }
-     */
-    public static int k_EBroadcastUploadResultShutdown() {
-        return k_EBroadcastUploadResultShutdown;
-    }
-    private static final int k_EBroadcastUploadResultDisconnect = (int)21L;
-    /**
-     * {@snippet lang=c :
-     * enum EBroadcastUploadResult.k_EBroadcastUploadResultDisconnect = 21
-     * }
-     */
-    public static int k_EBroadcastUploadResultDisconnect() {
-        return k_EBroadcastUploadResultDisconnect;
-    }
-    private static final int k_EBroadcastUploadResultVideoInitFailed = (int)22L;
-    /**
-     * {@snippet lang=c :
-     * enum EBroadcastUploadResult.k_EBroadcastUploadResultVideoInitFailed = 22
-     * }
-     */
-    public static int k_EBroadcastUploadResultVideoInitFailed() {
-        return k_EBroadcastUploadResultVideoInitFailed;
-    }
-    private static final int k_EBroadcastUploadResultAudioInitFailed = (int)23L;
-    /**
-     * {@snippet lang=c :
-     * enum EBroadcastUploadResult.k_EBroadcastUploadResultAudioInitFailed = 23
-     * }
-     */
-    public static int k_EBroadcastUploadResultAudioInitFailed() {
-        return k_EBroadcastUploadResultAudioInitFailed;
-    }
-    private static final int k_EMarketNotAllowedReason_None = (int)0L;
-    /**
-     * {@snippet lang=c :
-     * enum EMarketNotAllowedReasonFlags.k_EMarketNotAllowedReason_None = 0
-     * }
-     */
-    public static int k_EMarketNotAllowedReason_None() {
-        return k_EMarketNotAllowedReason_None;
-    }
-    private static final int k_EMarketNotAllowedReason_TemporaryFailure = (int)1L;
-    /**
-     * {@snippet lang=c :
-     * enum EMarketNotAllowedReasonFlags.k_EMarketNotAllowedReason_TemporaryFailure = 1
-     * }
-     */
-    public static int k_EMarketNotAllowedReason_TemporaryFailure() {
-        return k_EMarketNotAllowedReason_TemporaryFailure;
-    }
-    private static final int k_EMarketNotAllowedReason_AccountDisabled = (int)2L;
-    /**
-     * {@snippet lang=c :
-     * enum EMarketNotAllowedReasonFlags.k_EMarketNotAllowedReason_AccountDisabled = 2
-     * }
-     */
-    public static int k_EMarketNotAllowedReason_AccountDisabled() {
-        return k_EMarketNotAllowedReason_AccountDisabled;
-    }
-    private static final int k_EMarketNotAllowedReason_AccountLockedDown = (int)4L;
-    /**
-     * {@snippet lang=c :
-     * enum EMarketNotAllowedReasonFlags.k_EMarketNotAllowedReason_AccountLockedDown = 4
-     * }
-     */
-    public static int k_EMarketNotAllowedReason_AccountLockedDown() {
-        return k_EMarketNotAllowedReason_AccountLockedDown;
-    }
-    private static final int k_EMarketNotAllowedReason_AccountLimited = (int)8L;
-    /**
-     * {@snippet lang=c :
-     * enum EMarketNotAllowedReasonFlags.k_EMarketNotAllowedReason_AccountLimited = 8
-     * }
-     */
-    public static int k_EMarketNotAllowedReason_AccountLimited() {
-        return k_EMarketNotAllowedReason_AccountLimited;
-    }
-    private static final int k_EMarketNotAllowedReason_TradeBanned = (int)16L;
-    /**
-     * {@snippet lang=c :
-     * enum EMarketNotAllowedReasonFlags.k_EMarketNotAllowedReason_TradeBanned = 16
-     * }
-     */
-    public static int k_EMarketNotAllowedReason_TradeBanned() {
-        return k_EMarketNotAllowedReason_TradeBanned;
-    }
-    private static final int k_EMarketNotAllowedReason_AccountNotTrusted = (int)32L;
-    /**
-     * {@snippet lang=c :
-     * enum EMarketNotAllowedReasonFlags.k_EMarketNotAllowedReason_AccountNotTrusted = 32
-     * }
-     */
-    public static int k_EMarketNotAllowedReason_AccountNotTrusted() {
-        return k_EMarketNotAllowedReason_AccountNotTrusted;
-    }
-    private static final int k_EMarketNotAllowedReason_SteamGuardNotEnabled = (int)64L;
-    /**
-     * {@snippet lang=c :
-     * enum EMarketNotAllowedReasonFlags.k_EMarketNotAllowedReason_SteamGuardNotEnabled = 64
-     * }
-     */
-    public static int k_EMarketNotAllowedReason_SteamGuardNotEnabled() {
-        return k_EMarketNotAllowedReason_SteamGuardNotEnabled;
-    }
-    private static final int k_EMarketNotAllowedReason_SteamGuardOnlyRecentlyEnabled = (int)128L;
-    /**
-     * {@snippet lang=c :
-     * enum EMarketNotAllowedReasonFlags.k_EMarketNotAllowedReason_SteamGuardOnlyRecentlyEnabled = 128
-     * }
-     */
-    public static int k_EMarketNotAllowedReason_SteamGuardOnlyRecentlyEnabled() {
-        return k_EMarketNotAllowedReason_SteamGuardOnlyRecentlyEnabled;
-    }
-    private static final int k_EMarketNotAllowedReason_RecentPasswordReset = (int)256L;
-    /**
-     * {@snippet lang=c :
-     * enum EMarketNotAllowedReasonFlags.k_EMarketNotAllowedReason_RecentPasswordReset = 256
-     * }
-     */
-    public static int k_EMarketNotAllowedReason_RecentPasswordReset() {
-        return k_EMarketNotAllowedReason_RecentPasswordReset;
-    }
-    private static final int k_EMarketNotAllowedReason_NewPaymentMethod = (int)512L;
-    /**
-     * {@snippet lang=c :
-     * enum EMarketNotAllowedReasonFlags.k_EMarketNotAllowedReason_NewPaymentMethod = 512
-     * }
-     */
-    public static int k_EMarketNotAllowedReason_NewPaymentMethod() {
-        return k_EMarketNotAllowedReason_NewPaymentMethod;
-    }
-    private static final int k_EMarketNotAllowedReason_InvalidCookie = (int)1024L;
-    /**
-     * {@snippet lang=c :
-     * enum EMarketNotAllowedReasonFlags.k_EMarketNotAllowedReason_InvalidCookie = 1024
-     * }
-     */
-    public static int k_EMarketNotAllowedReason_InvalidCookie() {
-        return k_EMarketNotAllowedReason_InvalidCookie;
-    }
-    private static final int k_EMarketNotAllowedReason_UsingNewDevice = (int)2048L;
-    /**
-     * {@snippet lang=c :
-     * enum EMarketNotAllowedReasonFlags.k_EMarketNotAllowedReason_UsingNewDevice = 2048
-     * }
-     */
-    public static int k_EMarketNotAllowedReason_UsingNewDevice() {
-        return k_EMarketNotAllowedReason_UsingNewDevice;
-    }
-    private static final int k_EMarketNotAllowedReason_RecentSelfRefund = (int)4096L;
-    /**
-     * {@snippet lang=c :
-     * enum EMarketNotAllowedReasonFlags.k_EMarketNotAllowedReason_RecentSelfRefund = 4096
-     * }
-     */
-    public static int k_EMarketNotAllowedReason_RecentSelfRefund() {
-        return k_EMarketNotAllowedReason_RecentSelfRefund;
-    }
-    private static final int k_EMarketNotAllowedReason_NewPaymentMethodCannotBeVerified = (int)8192L;
-    /**
-     * {@snippet lang=c :
-     * enum EMarketNotAllowedReasonFlags.k_EMarketNotAllowedReason_NewPaymentMethodCannotBeVerified = 8192
-     * }
-     */
-    public static int k_EMarketNotAllowedReason_NewPaymentMethodCannotBeVerified() {
-        return k_EMarketNotAllowedReason_NewPaymentMethodCannotBeVerified;
-    }
-    private static final int k_EMarketNotAllowedReason_NoRecentPurchases = (int)16384L;
-    /**
-     * {@snippet lang=c :
-     * enum EMarketNotAllowedReasonFlags.k_EMarketNotAllowedReason_NoRecentPurchases = 16384
-     * }
-     */
-    public static int k_EMarketNotAllowedReason_NoRecentPurchases() {
-        return k_EMarketNotAllowedReason_NoRecentPurchases;
-    }
-    private static final int k_EMarketNotAllowedReason_AcceptedWalletGift = (int)32768L;
-    /**
-     * {@snippet lang=c :
-     * enum EMarketNotAllowedReasonFlags.k_EMarketNotAllowedReason_AcceptedWalletGift = 32768
-     * }
-     */
-    public static int k_EMarketNotAllowedReason_AcceptedWalletGift() {
-        return k_EMarketNotAllowedReason_AcceptedWalletGift;
-    }
-    private static final int k_EDurationControlProgress_Full = (int)0L;
-    /**
-     * {@snippet lang=c :
-     * enum EDurationControlProgress.k_EDurationControlProgress_Full = 0
-     * }
-     */
-    public static int k_EDurationControlProgress_Full() {
-        return k_EDurationControlProgress_Full;
-    }
-    private static final int k_EDurationControlProgress_Half = (int)1L;
-    /**
-     * {@snippet lang=c :
-     * enum EDurationControlProgress.k_EDurationControlProgress_Half = 1
-     * }
-     */
-    public static int k_EDurationControlProgress_Half() {
-        return k_EDurationControlProgress_Half;
-    }
-    private static final int k_EDurationControlProgress_None = (int)2L;
-    /**
-     * {@snippet lang=c :
-     * enum EDurationControlProgress.k_EDurationControlProgress_None = 2
-     * }
-     */
-    public static int k_EDurationControlProgress_None() {
-        return k_EDurationControlProgress_None;
-    }
-    private static final int k_EDurationControl_ExitSoon_3h = (int)3L;
-    /**
-     * {@snippet lang=c :
-     * enum EDurationControlProgress.k_EDurationControl_ExitSoon_3h = 3
-     * }
-     */
-    public static int k_EDurationControl_ExitSoon_3h() {
-        return k_EDurationControl_ExitSoon_3h;
-    }
-    private static final int k_EDurationControl_ExitSoon_5h = (int)4L;
-    /**
-     * {@snippet lang=c :
-     * enum EDurationControlProgress.k_EDurationControl_ExitSoon_5h = 4
-     * }
-     */
-    public static int k_EDurationControl_ExitSoon_5h() {
-        return k_EDurationControl_ExitSoon_5h;
-    }
-    private static final int k_EDurationControl_ExitSoon_Night = (int)5L;
-    /**
-     * {@snippet lang=c :
-     * enum EDurationControlProgress.k_EDurationControl_ExitSoon_Night = 5
-     * }
-     */
-    public static int k_EDurationControl_ExitSoon_Night() {
-        return k_EDurationControl_ExitSoon_Night;
-    }
-    private static final int k_EDurationControlNotification_None = (int)0L;
-    /**
-     * {@snippet lang=c :
-     * enum EDurationControlNotification.k_EDurationControlNotification_None = 0
-     * }
-     */
-    public static int k_EDurationControlNotification_None() {
-        return k_EDurationControlNotification_None;
-    }
-    private static final int k_EDurationControlNotification_1Hour = (int)1L;
-    /**
-     * {@snippet lang=c :
-     * enum EDurationControlNotification.k_EDurationControlNotification_1Hour = 1
-     * }
-     */
-    public static int k_EDurationControlNotification_1Hour() {
-        return k_EDurationControlNotification_1Hour;
-    }
-    private static final int k_EDurationControlNotification_3Hours = (int)2L;
-    /**
-     * {@snippet lang=c :
-     * enum EDurationControlNotification.k_EDurationControlNotification_3Hours = 2
-     * }
-     */
-    public static int k_EDurationControlNotification_3Hours() {
-        return k_EDurationControlNotification_3Hours;
-    }
-    private static final int k_EDurationControlNotification_HalfProgress = (int)3L;
-    /**
-     * {@snippet lang=c :
-     * enum EDurationControlNotification.k_EDurationControlNotification_HalfProgress = 3
-     * }
-     */
-    public static int k_EDurationControlNotification_HalfProgress() {
-        return k_EDurationControlNotification_HalfProgress;
-    }
-    private static final int k_EDurationControlNotification_NoProgress = (int)4L;
-    /**
-     * {@snippet lang=c :
-     * enum EDurationControlNotification.k_EDurationControlNotification_NoProgress = 4
-     * }
-     */
-    public static int k_EDurationControlNotification_NoProgress() {
-        return k_EDurationControlNotification_NoProgress;
-    }
-    private static final int k_EDurationControlNotification_ExitSoon_3h = (int)5L;
-    /**
-     * {@snippet lang=c :
-     * enum EDurationControlNotification.k_EDurationControlNotification_ExitSoon_3h = 5
-     * }
-     */
-    public static int k_EDurationControlNotification_ExitSoon_3h() {
-        return k_EDurationControlNotification_ExitSoon_3h;
-    }
-    private static final int k_EDurationControlNotification_ExitSoon_5h = (int)6L;
-    /**
-     * {@snippet lang=c :
-     * enum EDurationControlNotification.k_EDurationControlNotification_ExitSoon_5h = 6
-     * }
-     */
-    public static int k_EDurationControlNotification_ExitSoon_5h() {
-        return k_EDurationControlNotification_ExitSoon_5h;
-    }
-    private static final int k_EDurationControlNotification_ExitSoon_Night = (int)7L;
-    /**
-     * {@snippet lang=c :
-     * enum EDurationControlNotification.k_EDurationControlNotification_ExitSoon_Night = 7
-     * }
-     */
-    public static int k_EDurationControlNotification_ExitSoon_Night() {
-        return k_EDurationControlNotification_ExitSoon_Night;
-    }
-    private static final int k_EDurationControlOnlineState_Invalid = (int)0L;
-    /**
-     * {@snippet lang=c :
-     * enum EDurationControlOnlineState.k_EDurationControlOnlineState_Invalid = 0
-     * }
-     */
-    public static int k_EDurationControlOnlineState_Invalid() {
-        return k_EDurationControlOnlineState_Invalid;
-    }
-    private static final int k_EDurationControlOnlineState_Offline = (int)1L;
-    /**
-     * {@snippet lang=c :
-     * enum EDurationControlOnlineState.k_EDurationControlOnlineState_Offline = 1
-     * }
-     */
-    public static int k_EDurationControlOnlineState_Offline() {
-        return k_EDurationControlOnlineState_Offline;
-    }
-    private static final int k_EDurationControlOnlineState_Online = (int)2L;
-    /**
-     * {@snippet lang=c :
-     * enum EDurationControlOnlineState.k_EDurationControlOnlineState_Online = 2
-     * }
-     */
-    public static int k_EDurationControlOnlineState_Online() {
-        return k_EDurationControlOnlineState_Online;
-    }
-    private static final int k_EDurationControlOnlineState_OnlineHighPri = (int)3L;
-    /**
-     * {@snippet lang=c :
-     * enum EDurationControlOnlineState.k_EDurationControlOnlineState_OnlineHighPri = 3
-     * }
-     */
-    public static int k_EDurationControlOnlineState_OnlineHighPri() {
-        return k_EDurationControlOnlineState_OnlineHighPri;
-    }
-    private static final int k_EGameSearchErrorCode_OK = (int)1L;
-    /**
-     * {@snippet lang=c :
-     * enum EGameSearchErrorCode_t.k_EGameSearchErrorCode_OK = 1
-     * }
-     */
-    public static int k_EGameSearchErrorCode_OK() {
-        return k_EGameSearchErrorCode_OK;
-    }
-    private static final int k_EGameSearchErrorCode_Failed_Search_Already_In_Progress = (int)2L;
-    /**
-     * {@snippet lang=c :
-     * enum EGameSearchErrorCode_t.k_EGameSearchErrorCode_Failed_Search_Already_In_Progress = 2
-     * }
-     */
-    public static int k_EGameSearchErrorCode_Failed_Search_Already_In_Progress() {
-        return k_EGameSearchErrorCode_Failed_Search_Already_In_Progress;
-    }
-    private static final int k_EGameSearchErrorCode_Failed_No_Search_In_Progress = (int)3L;
-    /**
-     * {@snippet lang=c :
-     * enum EGameSearchErrorCode_t.k_EGameSearchErrorCode_Failed_No_Search_In_Progress = 3
-     * }
-     */
-    public static int k_EGameSearchErrorCode_Failed_No_Search_In_Progress() {
-        return k_EGameSearchErrorCode_Failed_No_Search_In_Progress;
-    }
-    private static final int k_EGameSearchErrorCode_Failed_Not_Lobby_Leader = (int)4L;
-    /**
-     * {@snippet lang=c :
-     * enum EGameSearchErrorCode_t.k_EGameSearchErrorCode_Failed_Not_Lobby_Leader = 4
-     * }
-     */
-    public static int k_EGameSearchErrorCode_Failed_Not_Lobby_Leader() {
-        return k_EGameSearchErrorCode_Failed_Not_Lobby_Leader;
-    }
-    private static final int k_EGameSearchErrorCode_Failed_No_Host_Available = (int)5L;
-    /**
-     * {@snippet lang=c :
-     * enum EGameSearchErrorCode_t.k_EGameSearchErrorCode_Failed_No_Host_Available = 5
-     * }
-     */
-    public static int k_EGameSearchErrorCode_Failed_No_Host_Available() {
-        return k_EGameSearchErrorCode_Failed_No_Host_Available;
-    }
-    private static final int k_EGameSearchErrorCode_Failed_Search_Params_Invalid = (int)6L;
-    /**
-     * {@snippet lang=c :
-     * enum EGameSearchErrorCode_t.k_EGameSearchErrorCode_Failed_Search_Params_Invalid = 6
-     * }
-     */
-    public static int k_EGameSearchErrorCode_Failed_Search_Params_Invalid() {
-        return k_EGameSearchErrorCode_Failed_Search_Params_Invalid;
-    }
-    private static final int k_EGameSearchErrorCode_Failed_Offline = (int)7L;
-    /**
-     * {@snippet lang=c :
-     * enum EGameSearchErrorCode_t.k_EGameSearchErrorCode_Failed_Offline = 7
-     * }
-     */
-    public static int k_EGameSearchErrorCode_Failed_Offline() {
-        return k_EGameSearchErrorCode_Failed_Offline;
-    }
-    private static final int k_EGameSearchErrorCode_Failed_NotAuthorized = (int)8L;
-    /**
-     * {@snippet lang=c :
-     * enum EGameSearchErrorCode_t.k_EGameSearchErrorCode_Failed_NotAuthorized = 8
-     * }
-     */
-    public static int k_EGameSearchErrorCode_Failed_NotAuthorized() {
-        return k_EGameSearchErrorCode_Failed_NotAuthorized;
-    }
-    private static final int k_EGameSearchErrorCode_Failed_Unknown_Error = (int)9L;
-    /**
-     * {@snippet lang=c :
-     * enum EGameSearchErrorCode_t.k_EGameSearchErrorCode_Failed_Unknown_Error = 9
-     * }
-     */
-    public static int k_EGameSearchErrorCode_Failed_Unknown_Error() {
-        return k_EGameSearchErrorCode_Failed_Unknown_Error;
-    }
-    private static final int k_EPlayerResultFailedToConnect = (int)1L;
-    /**
-     * {@snippet lang=c :
-     * enum EPlayerResult_t.k_EPlayerResultFailedToConnect = 1
-     * }
-     */
-    public static int k_EPlayerResultFailedToConnect() {
-        return k_EPlayerResultFailedToConnect;
-    }
-    private static final int k_EPlayerResultAbandoned = (int)2L;
-    /**
-     * {@snippet lang=c :
-     * enum EPlayerResult_t.k_EPlayerResultAbandoned = 2
-     * }
-     */
-    public static int k_EPlayerResultAbandoned() {
-        return k_EPlayerResultAbandoned;
-    }
-    private static final int k_EPlayerResultKicked = (int)3L;
-    /**
-     * {@snippet lang=c :
-     * enum EPlayerResult_t.k_EPlayerResultKicked = 3
-     * }
-     */
-    public static int k_EPlayerResultKicked() {
-        return k_EPlayerResultKicked;
-    }
-    private static final int k_EPlayerResultIncomplete = (int)4L;
-    /**
-     * {@snippet lang=c :
-     * enum EPlayerResult_t.k_EPlayerResultIncomplete = 4
-     * }
-     */
-    public static int k_EPlayerResultIncomplete() {
-        return k_EPlayerResultIncomplete;
-    }
-    private static final int k_EPlayerResultCompleted = (int)5L;
-    /**
-     * {@snippet lang=c :
-     * enum EPlayerResult_t.k_EPlayerResultCompleted = 5
-     * }
-     */
-    public static int k_EPlayerResultCompleted() {
-        return k_EPlayerResultCompleted;
-    }
-    private static final int k_ESteamIPv6ConnectivityProtocol_Invalid = (int)0L;
-    /**
-     * {@snippet lang=c :
-     * enum ESteamIPv6ConnectivityProtocol.k_ESteamIPv6ConnectivityProtocol_Invalid = 0
-     * }
-     */
-    public static int k_ESteamIPv6ConnectivityProtocol_Invalid() {
-        return k_ESteamIPv6ConnectivityProtocol_Invalid;
-    }
-    private static final int k_ESteamIPv6ConnectivityProtocol_HTTP = (int)1L;
-    /**
-     * {@snippet lang=c :
-     * enum ESteamIPv6ConnectivityProtocol.k_ESteamIPv6ConnectivityProtocol_HTTP = 1
-     * }
-     */
-    public static int k_ESteamIPv6ConnectivityProtocol_HTTP() {
-        return k_ESteamIPv6ConnectivityProtocol_HTTP;
-    }
-    private static final int k_ESteamIPv6ConnectivityProtocol_UDP = (int)2L;
-    /**
-     * {@snippet lang=c :
-     * enum ESteamIPv6ConnectivityProtocol.k_ESteamIPv6ConnectivityProtocol_UDP = 2
-     * }
-     */
-    public static int k_ESteamIPv6ConnectivityProtocol_UDP() {
-        return k_ESteamIPv6ConnectivityProtocol_UDP;
-    }
-    private static final int k_ESteamIPv6ConnectivityState_Unknown = (int)0L;
-    /**
-     * {@snippet lang=c :
-     * enum ESteamIPv6ConnectivityState.k_ESteamIPv6ConnectivityState_Unknown = 0
-     * }
-     */
-    public static int k_ESteamIPv6ConnectivityState_Unknown() {
-        return k_ESteamIPv6ConnectivityState_Unknown;
-    }
-    private static final int k_ESteamIPv6ConnectivityState_Good = (int)1L;
-    /**
-     * {@snippet lang=c :
-     * enum ESteamIPv6ConnectivityState.k_ESteamIPv6ConnectivityState_Good = 1
-     * }
-     */
-    public static int k_ESteamIPv6ConnectivityState_Good() {
-        return k_ESteamIPv6ConnectivityState_Good;
-    }
-    private static final int k_ESteamIPv6ConnectivityState_Bad = (int)2L;
-    /**
-     * {@snippet lang=c :
-     * enum ESteamIPv6ConnectivityState.k_ESteamIPv6ConnectivityState_Bad = 2
-     * }
-     */
-    public static int k_ESteamIPv6ConnectivityState_Bad() {
-        return k_ESteamIPv6ConnectivityState_Bad;
-    }
-    private static final int k_EFriendRelationshipNone = (int)0L;
-    /**
-     * {@snippet lang=c :
-     * enum EFriendRelationship.k_EFriendRelationshipNone = 0
-     * }
-     */
-    public static int k_EFriendRelationshipNone() {
-        return k_EFriendRelationshipNone;
-    }
-    private static final int k_EFriendRelationshipBlocked = (int)1L;
-    /**
-     * {@snippet lang=c :
-     * enum EFriendRelationship.k_EFriendRelationshipBlocked = 1
-     * }
-     */
-    public static int k_EFriendRelationshipBlocked() {
-        return k_EFriendRelationshipBlocked;
-    }
-    private static final int k_EFriendRelationshipRequestRecipient = (int)2L;
-    /**
-     * {@snippet lang=c :
-     * enum EFriendRelationship.k_EFriendRelationshipRequestRecipient = 2
-     * }
-     */
-    public static int k_EFriendRelationshipRequestRecipient() {
-        return k_EFriendRelationshipRequestRecipient;
-    }
-    private static final int k_EFriendRelationshipFriend = (int)3L;
-    /**
-     * {@snippet lang=c :
-     * enum EFriendRelationship.k_EFriendRelationshipFriend = 3
-     * }
-     */
-    public static int k_EFriendRelationshipFriend() {
-        return k_EFriendRelationshipFriend;
-    }
-    private static final int k_EFriendRelationshipRequestInitiator = (int)4L;
-    /**
-     * {@snippet lang=c :
-     * enum EFriendRelationship.k_EFriendRelationshipRequestInitiator = 4
-     * }
-     */
-    public static int k_EFriendRelationshipRequestInitiator() {
-        return k_EFriendRelationshipRequestInitiator;
-    }
-    private static final int k_EFriendRelationshipIgnored = (int)5L;
-    /**
-     * {@snippet lang=c :
-     * enum EFriendRelationship.k_EFriendRelationshipIgnored = 5
-     * }
-     */
-    public static int k_EFriendRelationshipIgnored() {
-        return k_EFriendRelationshipIgnored;
-    }
-    private static final int k_EFriendRelationshipIgnoredFriend = (int)6L;
-    /**
-     * {@snippet lang=c :
-     * enum EFriendRelationship.k_EFriendRelationshipIgnoredFriend = 6
-     * }
-     */
-    public static int k_EFriendRelationshipIgnoredFriend() {
-        return k_EFriendRelationshipIgnoredFriend;
-    }
-    private static final int k_EFriendRelationshipSuggested_DEPRECATED = (int)7L;
-    /**
-     * {@snippet lang=c :
-     * enum EFriendRelationship.k_EFriendRelationshipSuggested_DEPRECATED = 7
-     * }
-     */
-    public static int k_EFriendRelationshipSuggested_DEPRECATED() {
-        return k_EFriendRelationshipSuggested_DEPRECATED;
-    }
-    private static final int k_EFriendRelationshipMax = (int)8L;
-    /**
-     * {@snippet lang=c :
-     * enum EFriendRelationship.k_EFriendRelationshipMax = 8
-     * }
-     */
-    public static int k_EFriendRelationshipMax() {
-        return k_EFriendRelationshipMax;
-    }
-    private static final int k_EPersonaStateOffline = (int)0L;
-    /**
-     * {@snippet lang=c :
-     * enum EPersonaState.k_EPersonaStateOffline = 0
-     * }
-     */
-    public static int k_EPersonaStateOffline() {
-        return k_EPersonaStateOffline;
-    }
-    private static final int k_EPersonaStateOnline = (int)1L;
-    /**
-     * {@snippet lang=c :
-     * enum EPersonaState.k_EPersonaStateOnline = 1
-     * }
-     */
-    public static int k_EPersonaStateOnline() {
-        return k_EPersonaStateOnline;
-    }
-    private static final int k_EPersonaStateBusy = (int)2L;
-    /**
-     * {@snippet lang=c :
-     * enum EPersonaState.k_EPersonaStateBusy = 2
-     * }
-     */
-    public static int k_EPersonaStateBusy() {
-        return k_EPersonaStateBusy;
-    }
-    private static final int k_EPersonaStateAway = (int)3L;
-    /**
-     * {@snippet lang=c :
-     * enum EPersonaState.k_EPersonaStateAway = 3
-     * }
-     */
-    public static int k_EPersonaStateAway() {
-        return k_EPersonaStateAway;
-    }
-    private static final int k_EPersonaStateSnooze = (int)4L;
-    /**
-     * {@snippet lang=c :
-     * enum EPersonaState.k_EPersonaStateSnooze = 4
-     * }
-     */
-    public static int k_EPersonaStateSnooze() {
-        return k_EPersonaStateSnooze;
-    }
-    private static final int k_EPersonaStateLookingToTrade = (int)5L;
-    /**
-     * {@snippet lang=c :
-     * enum EPersonaState.k_EPersonaStateLookingToTrade = 5
-     * }
-     */
-    public static int k_EPersonaStateLookingToTrade() {
-        return k_EPersonaStateLookingToTrade;
-    }
-    private static final int k_EPersonaStateLookingToPlay = (int)6L;
-    /**
-     * {@snippet lang=c :
-     * enum EPersonaState.k_EPersonaStateLookingToPlay = 6
-     * }
-     */
-    public static int k_EPersonaStateLookingToPlay() {
-        return k_EPersonaStateLookingToPlay;
-    }
-    private static final int k_EPersonaStateInvisible = (int)7L;
-    /**
-     * {@snippet lang=c :
-     * enum EPersonaState.k_EPersonaStateInvisible = 7
-     * }
-     */
-    public static int k_EPersonaStateInvisible() {
-        return k_EPersonaStateInvisible;
-    }
-    private static final int k_EPersonaStateMax = (int)8L;
-    /**
-     * {@snippet lang=c :
-     * enum EPersonaState.k_EPersonaStateMax = 8
-     * }
-     */
-    public static int k_EPersonaStateMax() {
-        return k_EPersonaStateMax;
-    }
-    private static final int k_EFriendFlagNone = (int)0L;
-    /**
-     * {@snippet lang=c :
-     * enum EFriendFlags.k_EFriendFlagNone = 0
-     * }
-     */
-    public static int k_EFriendFlagNone() {
-        return k_EFriendFlagNone;
-    }
-    private static final int k_EFriendFlagBlocked = (int)1L;
-    /**
-     * {@snippet lang=c :
-     * enum EFriendFlags.k_EFriendFlagBlocked = 1
-     * }
-     */
-    public static int k_EFriendFlagBlocked() {
-        return k_EFriendFlagBlocked;
-    }
-    private static final int k_EFriendFlagFriendshipRequested = (int)2L;
-    /**
-     * {@snippet lang=c :
-     * enum EFriendFlags.k_EFriendFlagFriendshipRequested = 2
-     * }
-     */
-    public static int k_EFriendFlagFriendshipRequested() {
-        return k_EFriendFlagFriendshipRequested;
-    }
-    private static final int k_EFriendFlagImmediate = (int)4L;
-    /**
-     * {@snippet lang=c :
-     * enum EFriendFlags.k_EFriendFlagImmediate = 4
-     * }
-     */
-    public static int k_EFriendFlagImmediate() {
-        return k_EFriendFlagImmediate;
-    }
-    private static final int k_EFriendFlagClanMember = (int)8L;
-    /**
-     * {@snippet lang=c :
-     * enum EFriendFlags.k_EFriendFlagClanMember = 8
-     * }
-     */
-    public static int k_EFriendFlagClanMember() {
-        return k_EFriendFlagClanMember;
-    }
-    private static final int k_EFriendFlagOnGameServer = (int)16L;
-    /**
-     * {@snippet lang=c :
-     * enum EFriendFlags.k_EFriendFlagOnGameServer = 16
-     * }
-     */
-    public static int k_EFriendFlagOnGameServer() {
-        return k_EFriendFlagOnGameServer;
-    }
-    private static final int k_EFriendFlagRequestingFriendship = (int)128L;
-    /**
-     * {@snippet lang=c :
-     * enum EFriendFlags.k_EFriendFlagRequestingFriendship = 128
-     * }
-     */
-    public static int k_EFriendFlagRequestingFriendship() {
-        return k_EFriendFlagRequestingFriendship;
-    }
-    private static final int k_EFriendFlagRequestingInfo = (int)256L;
-    /**
-     * {@snippet lang=c :
-     * enum EFriendFlags.k_EFriendFlagRequestingInfo = 256
-     * }
-     */
-    public static int k_EFriendFlagRequestingInfo() {
-        return k_EFriendFlagRequestingInfo;
-    }
-    private static final int k_EFriendFlagIgnored = (int)512L;
-    /**
-     * {@snippet lang=c :
-     * enum EFriendFlags.k_EFriendFlagIgnored = 512
-     * }
-     */
-    public static int k_EFriendFlagIgnored() {
-        return k_EFriendFlagIgnored;
-    }
-    private static final int k_EFriendFlagIgnoredFriend = (int)1024L;
-    /**
-     * {@snippet lang=c :
-     * enum EFriendFlags.k_EFriendFlagIgnoredFriend = 1024
-     * }
-     */
-    public static int k_EFriendFlagIgnoredFriend() {
-        return k_EFriendFlagIgnoredFriend;
-    }
-    private static final int k_EFriendFlagChatMember = (int)4096L;
-    /**
-     * {@snippet lang=c :
-     * enum EFriendFlags.k_EFriendFlagChatMember = 4096
-     * }
-     */
-    public static int k_EFriendFlagChatMember() {
-        return k_EFriendFlagChatMember;
-    }
-    private static final int k_EFriendFlagAll = (int)65535L;
-    /**
-     * {@snippet lang=c :
-     * enum EFriendFlags.k_EFriendFlagAll = 65535
-     * }
-     */
-    public static int k_EFriendFlagAll() {
-        return k_EFriendFlagAll;
-    }
-    private static final int k_nUserRestrictionNone = (int)0L;
-    /**
-     * {@snippet lang=c :
-     * enum EUserRestriction.k_nUserRestrictionNone = 0
-     * }
-     */
-    public static int k_nUserRestrictionNone() {
-        return k_nUserRestrictionNone;
-    }
-    private static final int k_nUserRestrictionUnknown = (int)1L;
-    /**
-     * {@snippet lang=c :
-     * enum EUserRestriction.k_nUserRestrictionUnknown = 1
-     * }
-     */
-    public static int k_nUserRestrictionUnknown() {
-        return k_nUserRestrictionUnknown;
-    }
-    private static final int k_nUserRestrictionAnyChat = (int)2L;
-    /**
-     * {@snippet lang=c :
-     * enum EUserRestriction.k_nUserRestrictionAnyChat = 2
-     * }
-     */
-    public static int k_nUserRestrictionAnyChat() {
-        return k_nUserRestrictionAnyChat;
-    }
-    private static final int k_nUserRestrictionVoiceChat = (int)4L;
-    /**
-     * {@snippet lang=c :
-     * enum EUserRestriction.k_nUserRestrictionVoiceChat = 4
-     * }
-     */
-    public static int k_nUserRestrictionVoiceChat() {
-        return k_nUserRestrictionVoiceChat;
-    }
-    private static final int k_nUserRestrictionGroupChat = (int)8L;
-    /**
-     * {@snippet lang=c :
-     * enum EUserRestriction.k_nUserRestrictionGroupChat = 8
-     * }
-     */
-    public static int k_nUserRestrictionGroupChat() {
-        return k_nUserRestrictionGroupChat;
-    }
-    private static final int k_nUserRestrictionRating = (int)16L;
-    /**
-     * {@snippet lang=c :
-     * enum EUserRestriction.k_nUserRestrictionRating = 16
-     * }
-     */
-    public static int k_nUserRestrictionRating() {
-        return k_nUserRestrictionRating;
-    }
-    private static final int k_nUserRestrictionGameInvites = (int)32L;
-    /**
-     * {@snippet lang=c :
-     * enum EUserRestriction.k_nUserRestrictionGameInvites = 32
-     * }
-     */
-    public static int k_nUserRestrictionGameInvites() {
-        return k_nUserRestrictionGameInvites;
-    }
-    private static final int k_nUserRestrictionTrading = (int)64L;
-    /**
-     * {@snippet lang=c :
-     * enum EUserRestriction.k_nUserRestrictionTrading = 64
-     * }
-     */
-    public static int k_nUserRestrictionTrading() {
-        return k_nUserRestrictionTrading;
-    }
-    private static final int k_EOverlayToStoreFlag_None = (int)0L;
-    /**
-     * {@snippet lang=c :
-     * enum EOverlayToStoreFlag.k_EOverlayToStoreFlag_None = 0
-     * }
-     */
-    public static int k_EOverlayToStoreFlag_None() {
-        return k_EOverlayToStoreFlag_None;
-    }
-    private static final int k_EOverlayToStoreFlag_AddToCart = (int)1L;
-    /**
-     * {@snippet lang=c :
-     * enum EOverlayToStoreFlag.k_EOverlayToStoreFlag_AddToCart = 1
-     * }
-     */
-    public static int k_EOverlayToStoreFlag_AddToCart() {
-        return k_EOverlayToStoreFlag_AddToCart;
-    }
-    private static final int k_EOverlayToStoreFlag_AddToCartAndShow = (int)2L;
-    /**
-     * {@snippet lang=c :
-     * enum EOverlayToStoreFlag.k_EOverlayToStoreFlag_AddToCartAndShow = 2
-     * }
-     */
-    public static int k_EOverlayToStoreFlag_AddToCartAndShow() {
-        return k_EOverlayToStoreFlag_AddToCartAndShow;
-    }
-    private static final int k_EActivateGameOverlayToWebPageMode_Default = (int)0L;
-    /**
-     * {@snippet lang=c :
-     * enum EActivateGameOverlayToWebPageMode.k_EActivateGameOverlayToWebPageMode_Default = 0
-     * }
-     */
-    public static int k_EActivateGameOverlayToWebPageMode_Default() {
-        return k_EActivateGameOverlayToWebPageMode_Default;
-    }
-    private static final int k_EActivateGameOverlayToWebPageMode_Modal = (int)1L;
-    /**
-     * {@snippet lang=c :
-     * enum EActivateGameOverlayToWebPageMode.k_EActivateGameOverlayToWebPageMode_Modal = 1
-     * }
-     */
-    public static int k_EActivateGameOverlayToWebPageMode_Modal() {
-        return k_EActivateGameOverlayToWebPageMode_Modal;
-    }
-    private static final int k_ECommunityProfileItemType_AnimatedAvatar = (int)0L;
-    /**
-     * {@snippet lang=c :
-     * enum ECommunityProfileItemType.k_ECommunityProfileItemType_AnimatedAvatar = 0
-     * }
-     */
-    public static int k_ECommunityProfileItemType_AnimatedAvatar() {
-        return k_ECommunityProfileItemType_AnimatedAvatar;
-    }
-    private static final int k_ECommunityProfileItemType_AvatarFrame = (int)1L;
-    /**
-     * {@snippet lang=c :
-     * enum ECommunityProfileItemType.k_ECommunityProfileItemType_AvatarFrame = 1
-     * }
-     */
-    public static int k_ECommunityProfileItemType_AvatarFrame() {
-        return k_ECommunityProfileItemType_AvatarFrame;
-    }
-    private static final int k_ECommunityProfileItemType_ProfileModifier = (int)2L;
-    /**
-     * {@snippet lang=c :
-     * enum ECommunityProfileItemType.k_ECommunityProfileItemType_ProfileModifier = 2
-     * }
-     */
-    public static int k_ECommunityProfileItemType_ProfileModifier() {
-        return k_ECommunityProfileItemType_ProfileModifier;
-    }
-    private static final int k_ECommunityProfileItemType_ProfileBackground = (int)3L;
-    /**
-     * {@snippet lang=c :
-     * enum ECommunityProfileItemType.k_ECommunityProfileItemType_ProfileBackground = 3
-     * }
-     */
-    public static int k_ECommunityProfileItemType_ProfileBackground() {
-        return k_ECommunityProfileItemType_ProfileBackground;
-    }
-    private static final int k_ECommunityProfileItemType_MiniProfileBackground = (int)4L;
-    /**
-     * {@snippet lang=c :
-     * enum ECommunityProfileItemType.k_ECommunityProfileItemType_MiniProfileBackground = 4
-     * }
-     */
-    public static int k_ECommunityProfileItemType_MiniProfileBackground() {
-        return k_ECommunityProfileItemType_MiniProfileBackground;
-    }
-    private static final int k_ECommunityProfileItemProperty_ImageSmall = (int)0L;
-    /**
-     * {@snippet lang=c :
-     * enum ECommunityProfileItemProperty.k_ECommunityProfileItemProperty_ImageSmall = 0
-     * }
-     */
-    public static int k_ECommunityProfileItemProperty_ImageSmall() {
-        return k_ECommunityProfileItemProperty_ImageSmall;
-    }
-    private static final int k_ECommunityProfileItemProperty_ImageLarge = (int)1L;
-    /**
-     * {@snippet lang=c :
-     * enum ECommunityProfileItemProperty.k_ECommunityProfileItemProperty_ImageLarge = 1
-     * }
-     */
-    public static int k_ECommunityProfileItemProperty_ImageLarge() {
-        return k_ECommunityProfileItemProperty_ImageLarge;
-    }
-    private static final int k_ECommunityProfileItemProperty_InternalName = (int)2L;
-    /**
-     * {@snippet lang=c :
-     * enum ECommunityProfileItemProperty.k_ECommunityProfileItemProperty_InternalName = 2
-     * }
-     */
-    public static int k_ECommunityProfileItemProperty_InternalName() {
-        return k_ECommunityProfileItemProperty_InternalName;
-    }
-    private static final int k_ECommunityProfileItemProperty_Title = (int)3L;
-    /**
-     * {@snippet lang=c :
-     * enum ECommunityProfileItemProperty.k_ECommunityProfileItemProperty_Title = 3
-     * }
-     */
-    public static int k_ECommunityProfileItemProperty_Title() {
-        return k_ECommunityProfileItemProperty_Title;
-    }
-    private static final int k_ECommunityProfileItemProperty_Description = (int)4L;
-    /**
-     * {@snippet lang=c :
-     * enum ECommunityProfileItemProperty.k_ECommunityProfileItemProperty_Description = 4
-     * }
-     */
-    public static int k_ECommunityProfileItemProperty_Description() {
-        return k_ECommunityProfileItemProperty_Description;
-    }
-    private static final int k_ECommunityProfileItemProperty_AppID = (int)5L;
-    /**
-     * {@snippet lang=c :
-     * enum ECommunityProfileItemProperty.k_ECommunityProfileItemProperty_AppID = 5
-     * }
-     */
-    public static int k_ECommunityProfileItemProperty_AppID() {
-        return k_ECommunityProfileItemProperty_AppID;
-    }
-    private static final int k_ECommunityProfileItemProperty_TypeID = (int)6L;
-    /**
-     * {@snippet lang=c :
-     * enum ECommunityProfileItemProperty.k_ECommunityProfileItemProperty_TypeID = 6
-     * }
-     */
-    public static int k_ECommunityProfileItemProperty_TypeID() {
-        return k_ECommunityProfileItemProperty_TypeID;
-    }
-    private static final int k_ECommunityProfileItemProperty_Class = (int)7L;
-    /**
-     * {@snippet lang=c :
-     * enum ECommunityProfileItemProperty.k_ECommunityProfileItemProperty_Class = 7
-     * }
-     */
-    public static int k_ECommunityProfileItemProperty_Class() {
-        return k_ECommunityProfileItemProperty_Class;
-    }
-    private static final int k_ECommunityProfileItemProperty_MovieWebM = (int)8L;
-    /**
-     * {@snippet lang=c :
-     * enum ECommunityProfileItemProperty.k_ECommunityProfileItemProperty_MovieWebM = 8
-     * }
-     */
-    public static int k_ECommunityProfileItemProperty_MovieWebM() {
-        return k_ECommunityProfileItemProperty_MovieWebM;
-    }
-    private static final int k_ECommunityProfileItemProperty_MovieMP4 = (int)9L;
-    /**
-     * {@snippet lang=c :
-     * enum ECommunityProfileItemProperty.k_ECommunityProfileItemProperty_MovieMP4 = 9
-     * }
-     */
-    public static int k_ECommunityProfileItemProperty_MovieMP4() {
-        return k_ECommunityProfileItemProperty_MovieMP4;
-    }
-    private static final int k_ECommunityProfileItemProperty_MovieWebMSmall = (int)10L;
-    /**
-     * {@snippet lang=c :
-     * enum ECommunityProfileItemProperty.k_ECommunityProfileItemProperty_MovieWebMSmall = 10
-     * }
-     */
-    public static int k_ECommunityProfileItemProperty_MovieWebMSmall() {
-        return k_ECommunityProfileItemProperty_MovieWebMSmall;
-    }
-    private static final int k_ECommunityProfileItemProperty_MovieMP4Small = (int)11L;
-    /**
-     * {@snippet lang=c :
-     * enum ECommunityProfileItemProperty.k_ECommunityProfileItemProperty_MovieMP4Small = 11
-     * }
-     */
-    public static int k_ECommunityProfileItemProperty_MovieMP4Small() {
-        return k_ECommunityProfileItemProperty_MovieMP4Small;
-    }
-    private static final int k_EPersonaChangeName = (int)1L;
-    /**
-     * {@snippet lang=c :
-     * enum EPersonaChange.k_EPersonaChangeName = 1
-     * }
-     */
-    public static int k_EPersonaChangeName() {
-        return k_EPersonaChangeName;
-    }
-    private static final int k_EPersonaChangeStatus = (int)2L;
-    /**
-     * {@snippet lang=c :
-     * enum EPersonaChange.k_EPersonaChangeStatus = 2
-     * }
-     */
-    public static int k_EPersonaChangeStatus() {
-        return k_EPersonaChangeStatus;
-    }
-    private static final int k_EPersonaChangeComeOnline = (int)4L;
-    /**
-     * {@snippet lang=c :
-     * enum EPersonaChange.k_EPersonaChangeComeOnline = 4
-     * }
-     */
-    public static int k_EPersonaChangeComeOnline() {
-        return k_EPersonaChangeComeOnline;
-    }
-    private static final int k_EPersonaChangeGoneOffline = (int)8L;
-    /**
-     * {@snippet lang=c :
-     * enum EPersonaChange.k_EPersonaChangeGoneOffline = 8
-     * }
-     */
-    public static int k_EPersonaChangeGoneOffline() {
-        return k_EPersonaChangeGoneOffline;
-    }
-    private static final int k_EPersonaChangeGamePlayed = (int)16L;
-    /**
-     * {@snippet lang=c :
-     * enum EPersonaChange.k_EPersonaChangeGamePlayed = 16
-     * }
-     */
-    public static int k_EPersonaChangeGamePlayed() {
-        return k_EPersonaChangeGamePlayed;
-    }
-    private static final int k_EPersonaChangeGameServer = (int)32L;
-    /**
-     * {@snippet lang=c :
-     * enum EPersonaChange.k_EPersonaChangeGameServer = 32
-     * }
-     */
-    public static int k_EPersonaChangeGameServer() {
-        return k_EPersonaChangeGameServer;
-    }
-    private static final int k_EPersonaChangeAvatar = (int)64L;
-    /**
-     * {@snippet lang=c :
-     * enum EPersonaChange.k_EPersonaChangeAvatar = 64
-     * }
-     */
-    public static int k_EPersonaChangeAvatar() {
-        return k_EPersonaChangeAvatar;
-    }
-    private static final int k_EPersonaChangeJoinedSource = (int)128L;
-    /**
-     * {@snippet lang=c :
-     * enum EPersonaChange.k_EPersonaChangeJoinedSource = 128
-     * }
-     */
-    public static int k_EPersonaChangeJoinedSource() {
-        return k_EPersonaChangeJoinedSource;
-    }
-    private static final int k_EPersonaChangeLeftSource = (int)256L;
-    /**
-     * {@snippet lang=c :
-     * enum EPersonaChange.k_EPersonaChangeLeftSource = 256
-     * }
-     */
-    public static int k_EPersonaChangeLeftSource() {
-        return k_EPersonaChangeLeftSource;
-    }
-    private static final int k_EPersonaChangeRelationshipChanged = (int)512L;
-    /**
-     * {@snippet lang=c :
-     * enum EPersonaChange.k_EPersonaChangeRelationshipChanged = 512
-     * }
-     */
-    public static int k_EPersonaChangeRelationshipChanged() {
-        return k_EPersonaChangeRelationshipChanged;
-    }
-    private static final int k_EPersonaChangeNameFirstSet = (int)1024L;
-    /**
-     * {@snippet lang=c :
-     * enum EPersonaChange.k_EPersonaChangeNameFirstSet = 1024
-     * }
-     */
-    public static int k_EPersonaChangeNameFirstSet() {
-        return k_EPersonaChangeNameFirstSet;
-    }
-    private static final int k_EPersonaChangeBroadcast = (int)2048L;
-    /**
-     * {@snippet lang=c :
-     * enum EPersonaChange.k_EPersonaChangeBroadcast = 2048
-     * }
-     */
-    public static int k_EPersonaChangeBroadcast() {
-        return k_EPersonaChangeBroadcast;
-    }
-    private static final int k_EPersonaChangeNickname = (int)4096L;
-    /**
-     * {@snippet lang=c :
-     * enum EPersonaChange.k_EPersonaChangeNickname = 4096
-     * }
-     */
-    public static int k_EPersonaChangeNickname() {
-        return k_EPersonaChangeNickname;
-    }
-    private static final int k_EPersonaChangeSteamLevel = (int)8192L;
-    /**
-     * {@snippet lang=c :
-     * enum EPersonaChange.k_EPersonaChangeSteamLevel = 8192
-     * }
-     */
-    public static int k_EPersonaChangeSteamLevel() {
-        return k_EPersonaChangeSteamLevel;
-    }
-    private static final int k_EPersonaChangeRichPresence = (int)16384L;
-    /**
-     * {@snippet lang=c :
-     * enum EPersonaChange.k_EPersonaChangeRichPresence = 16384
-     * }
-     */
-    public static int k_EPersonaChangeRichPresence() {
-        return k_EPersonaChangeRichPresence;
-    }
-    private static final int k_ESteamAPICallFailureNone = (int)-1L;
-    /**
-     * {@snippet lang=c :
-     * enum ESteamAPICallFailure.k_ESteamAPICallFailureNone = -1
-     * }
-     */
-    public static int k_ESteamAPICallFailureNone() {
-        return k_ESteamAPICallFailureNone;
-    }
-    private static final int k_ESteamAPICallFailureSteamGone = (int)0L;
-    /**
-     * {@snippet lang=c :
-     * enum ESteamAPICallFailure.k_ESteamAPICallFailureSteamGone = 0
-     * }
-     */
-    public static int k_ESteamAPICallFailureSteamGone() {
-        return k_ESteamAPICallFailureSteamGone;
-    }
-    private static final int k_ESteamAPICallFailureNetworkFailure = (int)1L;
-    /**
-     * {@snippet lang=c :
-     * enum ESteamAPICallFailure.k_ESteamAPICallFailureNetworkFailure = 1
-     * }
-     */
-    public static int k_ESteamAPICallFailureNetworkFailure() {
-        return k_ESteamAPICallFailureNetworkFailure;
-    }
-    private static final int k_ESteamAPICallFailureInvalidHandle = (int)2L;
-    /**
-     * {@snippet lang=c :
-     * enum ESteamAPICallFailure.k_ESteamAPICallFailureInvalidHandle = 2
-     * }
-     */
-    public static int k_ESteamAPICallFailureInvalidHandle() {
-        return k_ESteamAPICallFailureInvalidHandle;
-    }
-    private static final int k_ESteamAPICallFailureMismatchedCallback = (int)3L;
-    /**
-     * {@snippet lang=c :
-     * enum ESteamAPICallFailure.k_ESteamAPICallFailureMismatchedCallback = 3
-     * }
-     */
-    public static int k_ESteamAPICallFailureMismatchedCallback() {
-        return k_ESteamAPICallFailureMismatchedCallback;
-    }
-    private static final int k_EGamepadTextInputModeNormal = (int)0L;
-    /**
-     * {@snippet lang=c :
-     * enum EGamepadTextInputMode.k_EGamepadTextInputModeNormal = 0
-     * }
-     */
-    public static int k_EGamepadTextInputModeNormal() {
-        return k_EGamepadTextInputModeNormal;
-    }
-    private static final int k_EGamepadTextInputModePassword = (int)1L;
-    /**
-     * {@snippet lang=c :
-     * enum EGamepadTextInputMode.k_EGamepadTextInputModePassword = 1
-     * }
-     */
-    public static int k_EGamepadTextInputModePassword() {
-        return k_EGamepadTextInputModePassword;
-    }
-    private static final int k_EGamepadTextInputLineModeSingleLine = (int)0L;
-    /**
-     * {@snippet lang=c :
-     * enum EGamepadTextInputLineMode.k_EGamepadTextInputLineModeSingleLine = 0
-     * }
-     */
-    public static int k_EGamepadTextInputLineModeSingleLine() {
-        return k_EGamepadTextInputLineModeSingleLine;
-    }
-    private static final int k_EGamepadTextInputLineModeMultipleLines = (int)1L;
-    /**
-     * {@snippet lang=c :
-     * enum EGamepadTextInputLineMode.k_EGamepadTextInputLineModeMultipleLines = 1
-     * }
-     */
-    public static int k_EGamepadTextInputLineModeMultipleLines() {
-        return k_EGamepadTextInputLineModeMultipleLines;
-    }
-    private static final int k_EFloatingGamepadTextInputModeModeSingleLine = (int)0L;
-    /**
-     * {@snippet lang=c :
-     * enum EFloatingGamepadTextInputMode.k_EFloatingGamepadTextInputModeModeSingleLine = 0
-     * }
-     */
-    public static int k_EFloatingGamepadTextInputModeModeSingleLine() {
-        return k_EFloatingGamepadTextInputModeModeSingleLine;
-    }
-    private static final int k_EFloatingGamepadTextInputModeModeMultipleLines = (int)1L;
-    /**
-     * {@snippet lang=c :
-     * enum EFloatingGamepadTextInputMode.k_EFloatingGamepadTextInputModeModeMultipleLines = 1
-     * }
-     */
-    public static int k_EFloatingGamepadTextInputModeModeMultipleLines() {
-        return k_EFloatingGamepadTextInputModeModeMultipleLines;
-    }
-    private static final int k_EFloatingGamepadTextInputModeModeEmail = (int)2L;
-    /**
-     * {@snippet lang=c :
-     * enum EFloatingGamepadTextInputMode.k_EFloatingGamepadTextInputModeModeEmail = 2
-     * }
-     */
-    public static int k_EFloatingGamepadTextInputModeModeEmail() {
-        return k_EFloatingGamepadTextInputModeModeEmail;
-    }
-    private static final int k_EFloatingGamepadTextInputModeModeNumeric = (int)3L;
-    /**
-     * {@snippet lang=c :
-     * enum EFloatingGamepadTextInputMode.k_EFloatingGamepadTextInputModeModeNumeric = 3
-     * }
-     */
-    public static int k_EFloatingGamepadTextInputModeModeNumeric() {
-        return k_EFloatingGamepadTextInputModeModeNumeric;
-    }
-    private static final int k_ETextFilteringContextUnknown = (int)0L;
-    /**
-     * {@snippet lang=c :
-     * enum ETextFilteringContext.k_ETextFilteringContextUnknown = 0
-     * }
-     */
-    public static int k_ETextFilteringContextUnknown() {
-        return k_ETextFilteringContextUnknown;
-    }
-    private static final int k_ETextFilteringContextGameContent = (int)1L;
-    /**
-     * {@snippet lang=c :
-     * enum ETextFilteringContext.k_ETextFilteringContextGameContent = 1
-     * }
-     */
-    public static int k_ETextFilteringContextGameContent() {
-        return k_ETextFilteringContextGameContent;
-    }
-    private static final int k_ETextFilteringContextChat = (int)2L;
-    /**
-     * {@snippet lang=c :
-     * enum ETextFilteringContext.k_ETextFilteringContextChat = 2
-     * }
-     */
-    public static int k_ETextFilteringContextChat() {
-        return k_ETextFilteringContextChat;
-    }
-    private static final int k_ETextFilteringContextName = (int)3L;
-    /**
-     * {@snippet lang=c :
-     * enum ETextFilteringContext.k_ETextFilteringContextName = 3
-     * }
-     */
-    public static int k_ETextFilteringContextName() {
-        return k_ETextFilteringContextName;
-    }
-    private static final int k_ECheckFileSignatureInvalidSignature = (int)0L;
-    /**
-     * {@snippet lang=c :
-     * enum ECheckFileSignature.k_ECheckFileSignatureInvalidSignature = 0
-     * }
-     */
-    public static int k_ECheckFileSignatureInvalidSignature() {
-        return k_ECheckFileSignatureInvalidSignature;
-    }
-    private static final int k_ECheckFileSignatureValidSignature = (int)1L;
-    /**
-     * {@snippet lang=c :
-     * enum ECheckFileSignature.k_ECheckFileSignatureValidSignature = 1
-     * }
-     */
-    public static int k_ECheckFileSignatureValidSignature() {
-        return k_ECheckFileSignatureValidSignature;
-    }
-    private static final int k_ECheckFileSignatureFileNotFound = (int)2L;
-    /**
-     * {@snippet lang=c :
-     * enum ECheckFileSignature.k_ECheckFileSignatureFileNotFound = 2
-     * }
-     */
-    public static int k_ECheckFileSignatureFileNotFound() {
-        return k_ECheckFileSignatureFileNotFound;
-    }
-    private static final int k_ECheckFileSignatureNoSignaturesFoundForThisApp = (int)3L;
-    /**
-     * {@snippet lang=c :
-     * enum ECheckFileSignature.k_ECheckFileSignatureNoSignaturesFoundForThisApp = 3
-     * }
-     */
-    public static int k_ECheckFileSignatureNoSignaturesFoundForThisApp() {
-        return k_ECheckFileSignatureNoSignaturesFoundForThisApp;
-    }
-    private static final int k_ECheckFileSignatureNoSignaturesFoundForThisFile = (int)4L;
-    /**
-     * {@snippet lang=c :
-     * enum ECheckFileSignature.k_ECheckFileSignatureNoSignaturesFoundForThisFile = 4
-     * }
-     */
-    public static int k_ECheckFileSignatureNoSignaturesFoundForThisFile() {
-        return k_ECheckFileSignatureNoSignaturesFoundForThisFile;
-    }
-    private static final int eServerResponded = (int)0L;
-    /**
-     * {@snippet lang=c :
-     * enum EMatchMakingServerResponse.eServerResponded = 0
-     * }
-     */
-    public static int eServerResponded() {
-        return eServerResponded;
-    }
-    private static final int eServerFailedToRespond = (int)1L;
-    /**
-     * {@snippet lang=c :
-     * enum EMatchMakingServerResponse.eServerFailedToRespond = 1
-     * }
-     */
-    public static int eServerFailedToRespond() {
-        return eServerFailedToRespond;
-    }
-    private static final int eNoServersListedOnMasterServer = (int)2L;
-    /**
-     * {@snippet lang=c :
-     * enum EMatchMakingServerResponse.eNoServersListedOnMasterServer = 2
-     * }
-     */
-    public static int eNoServersListedOnMasterServer() {
-        return eNoServersListedOnMasterServer;
-    }
-    private static final int k_ELobbyTypePrivate = (int)0L;
-    /**
-     * {@snippet lang=c :
-     * enum ELobbyType.k_ELobbyTypePrivate = 0
-     * }
-     */
-    public static int k_ELobbyTypePrivate() {
-        return k_ELobbyTypePrivate;
-    }
-    private static final int k_ELobbyTypeFriendsOnly = (int)1L;
-    /**
-     * {@snippet lang=c :
-     * enum ELobbyType.k_ELobbyTypeFriendsOnly = 1
-     * }
-     */
-    public static int k_ELobbyTypeFriendsOnly() {
-        return k_ELobbyTypeFriendsOnly;
-    }
-    private static final int k_ELobbyTypePublic = (int)2L;
-    /**
-     * {@snippet lang=c :
-     * enum ELobbyType.k_ELobbyTypePublic = 2
-     * }
-     */
-    public static int k_ELobbyTypePublic() {
-        return k_ELobbyTypePublic;
-    }
-    private static final int k_ELobbyTypeInvisible = (int)3L;
-    /**
-     * {@snippet lang=c :
-     * enum ELobbyType.k_ELobbyTypeInvisible = 3
-     * }
-     */
-    public static int k_ELobbyTypeInvisible() {
-        return k_ELobbyTypeInvisible;
-    }
-    private static final int k_ELobbyTypePrivateUnique = (int)4L;
-    /**
-     * {@snippet lang=c :
-     * enum ELobbyType.k_ELobbyTypePrivateUnique = 4
-     * }
-     */
-    public static int k_ELobbyTypePrivateUnique() {
-        return k_ELobbyTypePrivateUnique;
-    }
-    private static final int k_ELobbyComparisonEqualToOrLessThan = (int)-2L;
-    /**
-     * {@snippet lang=c :
-     * enum ELobbyComparison.k_ELobbyComparisonEqualToOrLessThan = -2
-     * }
-     */
-    public static int k_ELobbyComparisonEqualToOrLessThan() {
-        return k_ELobbyComparisonEqualToOrLessThan;
-    }
-    private static final int k_ELobbyComparisonLessThan = (int)-1L;
-    /**
-     * {@snippet lang=c :
-     * enum ELobbyComparison.k_ELobbyComparisonLessThan = -1
-     * }
-     */
-    public static int k_ELobbyComparisonLessThan() {
-        return k_ELobbyComparisonLessThan;
-    }
-    private static final int k_ELobbyComparisonEqual = (int)0L;
-    /**
-     * {@snippet lang=c :
-     * enum ELobbyComparison.k_ELobbyComparisonEqual = 0
-     * }
-     */
-    public static int k_ELobbyComparisonEqual() {
-        return k_ELobbyComparisonEqual;
-    }
-    private static final int k_ELobbyComparisonGreaterThan = (int)1L;
-    /**
-     * {@snippet lang=c :
-     * enum ELobbyComparison.k_ELobbyComparisonGreaterThan = 1
-     * }
-     */
-    public static int k_ELobbyComparisonGreaterThan() {
-        return k_ELobbyComparisonGreaterThan;
-    }
-    private static final int k_ELobbyComparisonEqualToOrGreaterThan = (int)2L;
-    /**
-     * {@snippet lang=c :
-     * enum ELobbyComparison.k_ELobbyComparisonEqualToOrGreaterThan = 2
-     * }
-     */
-    public static int k_ELobbyComparisonEqualToOrGreaterThan() {
-        return k_ELobbyComparisonEqualToOrGreaterThan;
-    }
-    private static final int k_ELobbyComparisonNotEqual = (int)3L;
-    /**
-     * {@snippet lang=c :
-     * enum ELobbyComparison.k_ELobbyComparisonNotEqual = 3
-     * }
-     */
-    public static int k_ELobbyComparisonNotEqual() {
-        return k_ELobbyComparisonNotEqual;
-    }
-    private static final int k_ELobbyDistanceFilterClose = (int)0L;
-    /**
-     * {@snippet lang=c :
-     * enum ELobbyDistanceFilter.k_ELobbyDistanceFilterClose = 0
-     * }
-     */
-    public static int k_ELobbyDistanceFilterClose() {
-        return k_ELobbyDistanceFilterClose;
-    }
-    private static final int k_ELobbyDistanceFilterDefault = (int)1L;
-    /**
-     * {@snippet lang=c :
-     * enum ELobbyDistanceFilter.k_ELobbyDistanceFilterDefault = 1
-     * }
-     */
-    public static int k_ELobbyDistanceFilterDefault() {
-        return k_ELobbyDistanceFilterDefault;
-    }
-    private static final int k_ELobbyDistanceFilterFar = (int)2L;
-    /**
-     * {@snippet lang=c :
-     * enum ELobbyDistanceFilter.k_ELobbyDistanceFilterFar = 2
-     * }
-     */
-    public static int k_ELobbyDistanceFilterFar() {
-        return k_ELobbyDistanceFilterFar;
-    }
-    private static final int k_ELobbyDistanceFilterWorldwide = (int)3L;
-    /**
-     * {@snippet lang=c :
-     * enum ELobbyDistanceFilter.k_ELobbyDistanceFilterWorldwide = 3
-     * }
-     */
-    public static int k_ELobbyDistanceFilterWorldwide() {
-        return k_ELobbyDistanceFilterWorldwide;
-    }
-    private static final int k_EChatMemberStateChangeEntered = (int)1L;
-    /**
-     * {@snippet lang=c :
-     * enum EChatMemberStateChange.k_EChatMemberStateChangeEntered = 1
-     * }
-     */
-    public static int k_EChatMemberStateChangeEntered() {
-        return k_EChatMemberStateChangeEntered;
-    }
-    private static final int k_EChatMemberStateChangeLeft = (int)2L;
-    /**
-     * {@snippet lang=c :
-     * enum EChatMemberStateChange.k_EChatMemberStateChangeLeft = 2
-     * }
-     */
-    public static int k_EChatMemberStateChangeLeft() {
-        return k_EChatMemberStateChangeLeft;
-    }
-    private static final int k_EChatMemberStateChangeDisconnected = (int)4L;
-    /**
-     * {@snippet lang=c :
-     * enum EChatMemberStateChange.k_EChatMemberStateChangeDisconnected = 4
-     * }
-     */
-    public static int k_EChatMemberStateChangeDisconnected() {
-        return k_EChatMemberStateChangeDisconnected;
-    }
-    private static final int k_EChatMemberStateChangeKicked = (int)8L;
-    /**
-     * {@snippet lang=c :
-     * enum EChatMemberStateChange.k_EChatMemberStateChangeKicked = 8
-     * }
-     */
-    public static int k_EChatMemberStateChangeKicked() {
-        return k_EChatMemberStateChangeKicked;
-    }
-    private static final int k_EChatMemberStateChangeBanned = (int)16L;
-    /**
-     * {@snippet lang=c :
-     * enum EChatMemberStateChange.k_EChatMemberStateChangeBanned = 16
-     * }
-     */
-    public static int k_EChatMemberStateChangeBanned() {
-        return k_EChatMemberStateChangeBanned;
-    }
-    private static final int k_ESteamPartyBeaconLocationType_Invalid = (int)0L;
-    /**
-     * {@snippet lang=c :
-     * enum ESteamPartyBeaconLocationType.k_ESteamPartyBeaconLocationType_Invalid = 0
-     * }
-     */
-    public static int k_ESteamPartyBeaconLocationType_Invalid() {
-        return k_ESteamPartyBeaconLocationType_Invalid;
-    }
-    private static final int k_ESteamPartyBeaconLocationType_ChatGroup = (int)1L;
-    /**
-     * {@snippet lang=c :
-     * enum ESteamPartyBeaconLocationType.k_ESteamPartyBeaconLocationType_ChatGroup = 1
-     * }
-     */
-    public static int k_ESteamPartyBeaconLocationType_ChatGroup() {
-        return k_ESteamPartyBeaconLocationType_ChatGroup;
-    }
-    private static final int k_ESteamPartyBeaconLocationType_Max = (int)2L;
-    /**
-     * {@snippet lang=c :
-     * enum ESteamPartyBeaconLocationType.k_ESteamPartyBeaconLocationType_Max = 2
-     * }
-     */
-    public static int k_ESteamPartyBeaconLocationType_Max() {
-        return k_ESteamPartyBeaconLocationType_Max;
-    }
-    private static final int k_ESteamPartyBeaconLocationDataInvalid = (int)0L;
-    /**
-     * {@snippet lang=c :
-     * enum ESteamPartyBeaconLocationData.k_ESteamPartyBeaconLocationDataInvalid = 0
-     * }
-     */
-    public static int k_ESteamPartyBeaconLocationDataInvalid() {
-        return k_ESteamPartyBeaconLocationDataInvalid;
-    }
-    private static final int k_ESteamPartyBeaconLocationDataName = (int)1L;
-    /**
-     * {@snippet lang=c :
-     * enum ESteamPartyBeaconLocationData.k_ESteamPartyBeaconLocationDataName = 1
-     * }
-     */
-    public static int k_ESteamPartyBeaconLocationDataName() {
-        return k_ESteamPartyBeaconLocationDataName;
-    }
-    private static final int k_ESteamPartyBeaconLocationDataIconURLSmall = (int)2L;
-    /**
-     * {@snippet lang=c :
-     * enum ESteamPartyBeaconLocationData.k_ESteamPartyBeaconLocationDataIconURLSmall = 2
-     * }
-     */
-    public static int k_ESteamPartyBeaconLocationDataIconURLSmall() {
-        return k_ESteamPartyBeaconLocationDataIconURLSmall;
-    }
-    private static final int k_ESteamPartyBeaconLocationDataIconURLMedium = (int)3L;
-    /**
-     * {@snippet lang=c :
-     * enum ESteamPartyBeaconLocationData.k_ESteamPartyBeaconLocationDataIconURLMedium = 3
-     * }
-     */
-    public static int k_ESteamPartyBeaconLocationDataIconURLMedium() {
-        return k_ESteamPartyBeaconLocationDataIconURLMedium;
-    }
-    private static final int k_ESteamPartyBeaconLocationDataIconURLLarge = (int)4L;
-    /**
-     * {@snippet lang=c :
-     * enum ESteamPartyBeaconLocationData.k_ESteamPartyBeaconLocationDataIconURLLarge = 4
-     * }
-     */
-    public static int k_ESteamPartyBeaconLocationDataIconURLLarge() {
-        return k_ESteamPartyBeaconLocationDataIconURLLarge;
-    }
-    private static final int k_ERemoteStoragePlatformNone = (int)0L;
-    /**
-     * {@snippet lang=c :
-     * enum ERemoteStoragePlatform.k_ERemoteStoragePlatformNone = 0
-     * }
-     */
-    public static int k_ERemoteStoragePlatformNone() {
-        return k_ERemoteStoragePlatformNone;
-    }
-    private static final int k_ERemoteStoragePlatformWindows = (int)1L;
-    /**
-     * {@snippet lang=c :
-     * enum ERemoteStoragePlatform.k_ERemoteStoragePlatformWindows = 1
-     * }
-     */
-    public static int k_ERemoteStoragePlatformWindows() {
-        return k_ERemoteStoragePlatformWindows;
-    }
-    private static final int k_ERemoteStoragePlatformOSX = (int)2L;
-    /**
-     * {@snippet lang=c :
-     * enum ERemoteStoragePlatform.k_ERemoteStoragePlatformOSX = 2
-     * }
-     */
-    public static int k_ERemoteStoragePlatformOSX() {
-        return k_ERemoteStoragePlatformOSX;
-    }
-    private static final int k_ERemoteStoragePlatformPS3 = (int)4L;
-    /**
-     * {@snippet lang=c :
-     * enum ERemoteStoragePlatform.k_ERemoteStoragePlatformPS3 = 4
-     * }
-     */
-    public static int k_ERemoteStoragePlatformPS3() {
-        return k_ERemoteStoragePlatformPS3;
-    }
-    private static final int k_ERemoteStoragePlatformLinux = (int)8L;
-    /**
-     * {@snippet lang=c :
-     * enum ERemoteStoragePlatform.k_ERemoteStoragePlatformLinux = 8
-     * }
-     */
-    public static int k_ERemoteStoragePlatformLinux() {
-        return k_ERemoteStoragePlatformLinux;
-    }
-    private static final int k_ERemoteStoragePlatformSwitch = (int)16L;
-    /**
-     * {@snippet lang=c :
-     * enum ERemoteStoragePlatform.k_ERemoteStoragePlatformSwitch = 16
-     * }
-     */
-    public static int k_ERemoteStoragePlatformSwitch() {
-        return k_ERemoteStoragePlatformSwitch;
-    }
-    private static final int k_ERemoteStoragePlatformAndroid = (int)32L;
-    /**
-     * {@snippet lang=c :
-     * enum ERemoteStoragePlatform.k_ERemoteStoragePlatformAndroid = 32
-     * }
-     */
-    public static int k_ERemoteStoragePlatformAndroid() {
-        return k_ERemoteStoragePlatformAndroid;
-    }
-    private static final int k_ERemoteStoragePlatformIOS = (int)64L;
-    /**
-     * {@snippet lang=c :
-     * enum ERemoteStoragePlatform.k_ERemoteStoragePlatformIOS = 64
-     * }
-     */
-    public static int k_ERemoteStoragePlatformIOS() {
-        return k_ERemoteStoragePlatformIOS;
-    }
-    private static final int k_ERemoteStoragePlatformAll = (int)-1L;
-    /**
-     * {@snippet lang=c :
-     * enum ERemoteStoragePlatform.k_ERemoteStoragePlatformAll = -1
-     * }
-     */
-    public static int k_ERemoteStoragePlatformAll() {
-        return k_ERemoteStoragePlatformAll;
-    }
-    private static final int k_ERemoteStoragePublishedFileVisibilityPublic = (int)0L;
-    /**
-     * {@snippet lang=c :
-     * enum ERemoteStoragePublishedFileVisibility.k_ERemoteStoragePublishedFileVisibilityPublic = 0
-     * }
-     */
-    public static int k_ERemoteStoragePublishedFileVisibilityPublic() {
-        return k_ERemoteStoragePublishedFileVisibilityPublic;
-    }
-    private static final int k_ERemoteStoragePublishedFileVisibilityFriendsOnly = (int)1L;
-    /**
-     * {@snippet lang=c :
-     * enum ERemoteStoragePublishedFileVisibility.k_ERemoteStoragePublishedFileVisibilityFriendsOnly = 1
-     * }
-     */
-    public static int k_ERemoteStoragePublishedFileVisibilityFriendsOnly() {
-        return k_ERemoteStoragePublishedFileVisibilityFriendsOnly;
-    }
-    private static final int k_ERemoteStoragePublishedFileVisibilityPrivate = (int)2L;
-    /**
-     * {@snippet lang=c :
-     * enum ERemoteStoragePublishedFileVisibility.k_ERemoteStoragePublishedFileVisibilityPrivate = 2
-     * }
-     */
-    public static int k_ERemoteStoragePublishedFileVisibilityPrivate() {
-        return k_ERemoteStoragePublishedFileVisibilityPrivate;
-    }
-    private static final int k_ERemoteStoragePublishedFileVisibilityUnlisted = (int)3L;
-    /**
-     * {@snippet lang=c :
-     * enum ERemoteStoragePublishedFileVisibility.k_ERemoteStoragePublishedFileVisibilityUnlisted = 3
-     * }
-     */
-    public static int k_ERemoteStoragePublishedFileVisibilityUnlisted() {
-        return k_ERemoteStoragePublishedFileVisibilityUnlisted;
-    }
-    private static final int k_EWorkshopFileTypeFirst = (int)0L;
-    /**
-     * {@snippet lang=c :
-     * enum EWorkshopFileType.k_EWorkshopFileTypeFirst = 0
-     * }
-     */
-    public static int k_EWorkshopFileTypeFirst() {
-        return k_EWorkshopFileTypeFirst;
-    }
-    private static final int k_EWorkshopFileTypeCommunity = (int)0L;
-    /**
-     * {@snippet lang=c :
-     * enum EWorkshopFileType.k_EWorkshopFileTypeCommunity = 0
-     * }
-     */
-    public static int k_EWorkshopFileTypeCommunity() {
-        return k_EWorkshopFileTypeCommunity;
-    }
-    private static final int k_EWorkshopFileTypeMicrotransaction = (int)1L;
-    /**
-     * {@snippet lang=c :
-     * enum EWorkshopFileType.k_EWorkshopFileTypeMicrotransaction = 1
-     * }
-     */
-    public static int k_EWorkshopFileTypeMicrotransaction() {
-        return k_EWorkshopFileTypeMicrotransaction;
-    }
-    private static final int k_EWorkshopFileTypeCollection = (int)2L;
-    /**
-     * {@snippet lang=c :
-     * enum EWorkshopFileType.k_EWorkshopFileTypeCollection = 2
-     * }
-     */
-    public static int k_EWorkshopFileTypeCollection() {
-        return k_EWorkshopFileTypeCollection;
-    }
-    private static final int k_EWorkshopFileTypeArt = (int)3L;
-    /**
-     * {@snippet lang=c :
-     * enum EWorkshopFileType.k_EWorkshopFileTypeArt = 3
-     * }
-     */
-    public static int k_EWorkshopFileTypeArt() {
-        return k_EWorkshopFileTypeArt;
-    }
-    private static final int k_EWorkshopFileTypeVideo = (int)4L;
-    /**
-     * {@snippet lang=c :
-     * enum EWorkshopFileType.k_EWorkshopFileTypeVideo = 4
-     * }
-     */
-    public static int k_EWorkshopFileTypeVideo() {
-        return k_EWorkshopFileTypeVideo;
-    }
-    private static final int k_EWorkshopFileTypeScreenshot = (int)5L;
-    /**
-     * {@snippet lang=c :
-     * enum EWorkshopFileType.k_EWorkshopFileTypeScreenshot = 5
-     * }
-     */
-    public static int k_EWorkshopFileTypeScreenshot() {
-        return k_EWorkshopFileTypeScreenshot;
-    }
-    private static final int k_EWorkshopFileTypeGame = (int)6L;
-    /**
-     * {@snippet lang=c :
-     * enum EWorkshopFileType.k_EWorkshopFileTypeGame = 6
-     * }
-     */
-    public static int k_EWorkshopFileTypeGame() {
-        return k_EWorkshopFileTypeGame;
-    }
-    private static final int k_EWorkshopFileTypeSoftware = (int)7L;
-    /**
-     * {@snippet lang=c :
-     * enum EWorkshopFileType.k_EWorkshopFileTypeSoftware = 7
-     * }
-     */
-    public static int k_EWorkshopFileTypeSoftware() {
-        return k_EWorkshopFileTypeSoftware;
-    }
-    private static final int k_EWorkshopFileTypeConcept = (int)8L;
-    /**
-     * {@snippet lang=c :
-     * enum EWorkshopFileType.k_EWorkshopFileTypeConcept = 8
-     * }
-     */
-    public static int k_EWorkshopFileTypeConcept() {
-        return k_EWorkshopFileTypeConcept;
-    }
-    private static final int k_EWorkshopFileTypeWebGuide = (int)9L;
-    /**
-     * {@snippet lang=c :
-     * enum EWorkshopFileType.k_EWorkshopFileTypeWebGuide = 9
-     * }
-     */
-    public static int k_EWorkshopFileTypeWebGuide() {
-        return k_EWorkshopFileTypeWebGuide;
-    }
-    private static final int k_EWorkshopFileTypeIntegratedGuide = (int)10L;
-    /**
-     * {@snippet lang=c :
-     * enum EWorkshopFileType.k_EWorkshopFileTypeIntegratedGuide = 10
-     * }
-     */
-    public static int k_EWorkshopFileTypeIntegratedGuide() {
-        return k_EWorkshopFileTypeIntegratedGuide;
-    }
-    private static final int k_EWorkshopFileTypeMerch = (int)11L;
-    /**
-     * {@snippet lang=c :
-     * enum EWorkshopFileType.k_EWorkshopFileTypeMerch = 11
-     * }
-     */
-    public static int k_EWorkshopFileTypeMerch() {
-        return k_EWorkshopFileTypeMerch;
-    }
-    private static final int k_EWorkshopFileTypeControllerBinding = (int)12L;
-    /**
-     * {@snippet lang=c :
-     * enum EWorkshopFileType.k_EWorkshopFileTypeControllerBinding = 12
-     * }
-     */
-    public static int k_EWorkshopFileTypeControllerBinding() {
-        return k_EWorkshopFileTypeControllerBinding;
-    }
-    private static final int k_EWorkshopFileTypeSteamworksAccessInvite = (int)13L;
-    /**
-     * {@snippet lang=c :
-     * enum EWorkshopFileType.k_EWorkshopFileTypeSteamworksAccessInvite = 13
-     * }
-     */
-    public static int k_EWorkshopFileTypeSteamworksAccessInvite() {
-        return k_EWorkshopFileTypeSteamworksAccessInvite;
-    }
-    private static final int k_EWorkshopFileTypeSteamVideo = (int)14L;
-    /**
-     * {@snippet lang=c :
-     * enum EWorkshopFileType.k_EWorkshopFileTypeSteamVideo = 14
-     * }
-     */
-    public static int k_EWorkshopFileTypeSteamVideo() {
-        return k_EWorkshopFileTypeSteamVideo;
-    }
-    private static final int k_EWorkshopFileTypeGameManagedItem = (int)15L;
-    /**
-     * {@snippet lang=c :
-     * enum EWorkshopFileType.k_EWorkshopFileTypeGameManagedItem = 15
-     * }
-     */
-    public static int k_EWorkshopFileTypeGameManagedItem() {
-        return k_EWorkshopFileTypeGameManagedItem;
-    }
-    private static final int k_EWorkshopFileTypeClip = (int)16L;
-    /**
-     * {@snippet lang=c :
-     * enum EWorkshopFileType.k_EWorkshopFileTypeClip = 16
-     * }
-     */
-    public static int k_EWorkshopFileTypeClip() {
-        return k_EWorkshopFileTypeClip;
-    }
-    private static final int k_EWorkshopFileTypeMax = (int)17L;
-    /**
-     * {@snippet lang=c :
-     * enum EWorkshopFileType.k_EWorkshopFileTypeMax = 17
-     * }
-     */
-    public static int k_EWorkshopFileTypeMax() {
-        return k_EWorkshopFileTypeMax;
-    }
-    private static final int k_EWorkshopVoteUnvoted = (int)0L;
-    /**
-     * {@snippet lang=c :
-     * enum EWorkshopVote.k_EWorkshopVoteUnvoted = 0
-     * }
-     */
-    public static int k_EWorkshopVoteUnvoted() {
-        return k_EWorkshopVoteUnvoted;
-    }
-    private static final int k_EWorkshopVoteFor = (int)1L;
-    /**
-     * {@snippet lang=c :
-     * enum EWorkshopVote.k_EWorkshopVoteFor = 1
-     * }
-     */
-    public static int k_EWorkshopVoteFor() {
-        return k_EWorkshopVoteFor;
-    }
-    private static final int k_EWorkshopVoteAgainst = (int)2L;
-    /**
-     * {@snippet lang=c :
-     * enum EWorkshopVote.k_EWorkshopVoteAgainst = 2
-     * }
-     */
-    public static int k_EWorkshopVoteAgainst() {
-        return k_EWorkshopVoteAgainst;
-    }
-    private static final int k_EWorkshopVoteLater = (int)3L;
-    /**
-     * {@snippet lang=c :
-     * enum EWorkshopVote.k_EWorkshopVoteLater = 3
-     * }
-     */
-    public static int k_EWorkshopVoteLater() {
-        return k_EWorkshopVoteLater;
-    }
-    private static final int k_EWorkshopFileActionPlayed = (int)0L;
-    /**
-     * {@snippet lang=c :
-     * enum EWorkshopFileAction.k_EWorkshopFileActionPlayed = 0
-     * }
-     */
-    public static int k_EWorkshopFileActionPlayed() {
-        return k_EWorkshopFileActionPlayed;
-    }
-    private static final int k_EWorkshopFileActionCompleted = (int)1L;
-    /**
-     * {@snippet lang=c :
-     * enum EWorkshopFileAction.k_EWorkshopFileActionCompleted = 1
-     * }
-     */
-    public static int k_EWorkshopFileActionCompleted() {
-        return k_EWorkshopFileActionCompleted;
-    }
-    private static final int k_EWorkshopEnumerationTypeRankedByVote = (int)0L;
-    /**
-     * {@snippet lang=c :
-     * enum EWorkshopEnumerationType.k_EWorkshopEnumerationTypeRankedByVote = 0
-     * }
-     */
-    public static int k_EWorkshopEnumerationTypeRankedByVote() {
-        return k_EWorkshopEnumerationTypeRankedByVote;
-    }
-    private static final int k_EWorkshopEnumerationTypeRecent = (int)1L;
-    /**
-     * {@snippet lang=c :
-     * enum EWorkshopEnumerationType.k_EWorkshopEnumerationTypeRecent = 1
-     * }
-     */
-    public static int k_EWorkshopEnumerationTypeRecent() {
-        return k_EWorkshopEnumerationTypeRecent;
-    }
-    private static final int k_EWorkshopEnumerationTypeTrending = (int)2L;
-    /**
-     * {@snippet lang=c :
-     * enum EWorkshopEnumerationType.k_EWorkshopEnumerationTypeTrending = 2
-     * }
-     */
-    public static int k_EWorkshopEnumerationTypeTrending() {
-        return k_EWorkshopEnumerationTypeTrending;
-    }
-    private static final int k_EWorkshopEnumerationTypeFavoritesOfFriends = (int)3L;
-    /**
-     * {@snippet lang=c :
-     * enum EWorkshopEnumerationType.k_EWorkshopEnumerationTypeFavoritesOfFriends = 3
-     * }
-     */
-    public static int k_EWorkshopEnumerationTypeFavoritesOfFriends() {
-        return k_EWorkshopEnumerationTypeFavoritesOfFriends;
-    }
-    private static final int k_EWorkshopEnumerationTypeVotedByFriends = (int)4L;
-    /**
-     * {@snippet lang=c :
-     * enum EWorkshopEnumerationType.k_EWorkshopEnumerationTypeVotedByFriends = 4
-     * }
-     */
-    public static int k_EWorkshopEnumerationTypeVotedByFriends() {
-        return k_EWorkshopEnumerationTypeVotedByFriends;
-    }
-    private static final int k_EWorkshopEnumerationTypeContentByFriends = (int)5L;
-    /**
-     * {@snippet lang=c :
-     * enum EWorkshopEnumerationType.k_EWorkshopEnumerationTypeContentByFriends = 5
-     * }
-     */
-    public static int k_EWorkshopEnumerationTypeContentByFriends() {
-        return k_EWorkshopEnumerationTypeContentByFriends;
-    }
-    private static final int k_EWorkshopEnumerationTypeRecentFromFollowedUsers = (int)6L;
-    /**
-     * {@snippet lang=c :
-     * enum EWorkshopEnumerationType.k_EWorkshopEnumerationTypeRecentFromFollowedUsers = 6
-     * }
-     */
-    public static int k_EWorkshopEnumerationTypeRecentFromFollowedUsers() {
-        return k_EWorkshopEnumerationTypeRecentFromFollowedUsers;
-    }
-    private static final int k_EWorkshopVideoProviderNone = (int)0L;
-    /**
-     * {@snippet lang=c :
-     * enum EWorkshopVideoProvider.k_EWorkshopVideoProviderNone = 0
-     * }
-     */
-    public static int k_EWorkshopVideoProviderNone() {
-        return k_EWorkshopVideoProviderNone;
-    }
-    private static final int k_EWorkshopVideoProviderYoutube = (int)1L;
-    /**
-     * {@snippet lang=c :
-     * enum EWorkshopVideoProvider.k_EWorkshopVideoProviderYoutube = 1
-     * }
-     */
-    public static int k_EWorkshopVideoProviderYoutube() {
-        return k_EWorkshopVideoProviderYoutube;
-    }
-    private static final int k_EUGCRead_ContinueReadingUntilFinished = (int)0L;
-    /**
-     * {@snippet lang=c :
-     * enum EUGCReadAction.k_EUGCRead_ContinueReadingUntilFinished = 0
-     * }
-     */
-    public static int k_EUGCRead_ContinueReadingUntilFinished() {
-        return k_EUGCRead_ContinueReadingUntilFinished;
-    }
-    private static final int k_EUGCRead_ContinueReading = (int)1L;
-    /**
-     * {@snippet lang=c :
-     * enum EUGCReadAction.k_EUGCRead_ContinueReading = 1
-     * }
-     */
-    public static int k_EUGCRead_ContinueReading() {
-        return k_EUGCRead_ContinueReading;
-    }
-    private static final int k_EUGCRead_Close = (int)2L;
-    /**
-     * {@snippet lang=c :
-     * enum EUGCReadAction.k_EUGCRead_Close = 2
-     * }
-     */
-    public static int k_EUGCRead_Close() {
-        return k_EUGCRead_Close;
-    }
-    private static final int k_ERemoteStorageLocalFileChange_Invalid = (int)0L;
-    /**
-     * {@snippet lang=c :
-     * enum ERemoteStorageLocalFileChange.k_ERemoteStorageLocalFileChange_Invalid = 0
-     * }
-     */
-    public static int k_ERemoteStorageLocalFileChange_Invalid() {
-        return k_ERemoteStorageLocalFileChange_Invalid;
-    }
-    private static final int k_ERemoteStorageLocalFileChange_FileUpdated = (int)1L;
-    /**
-     * {@snippet lang=c :
-     * enum ERemoteStorageLocalFileChange.k_ERemoteStorageLocalFileChange_FileUpdated = 1
-     * }
-     */
-    public static int k_ERemoteStorageLocalFileChange_FileUpdated() {
-        return k_ERemoteStorageLocalFileChange_FileUpdated;
-    }
-    private static final int k_ERemoteStorageLocalFileChange_FileDeleted = (int)2L;
-    /**
-     * {@snippet lang=c :
-     * enum ERemoteStorageLocalFileChange.k_ERemoteStorageLocalFileChange_FileDeleted = 2
-     * }
-     */
-    public static int k_ERemoteStorageLocalFileChange_FileDeleted() {
-        return k_ERemoteStorageLocalFileChange_FileDeleted;
-    }
-    private static final int k_ERemoteStorageFilePathType_Invalid = (int)0L;
-    /**
-     * {@snippet lang=c :
-     * enum ERemoteStorageFilePathType.k_ERemoteStorageFilePathType_Invalid = 0
-     * }
-     */
-    public static int k_ERemoteStorageFilePathType_Invalid() {
-        return k_ERemoteStorageFilePathType_Invalid;
-    }
-    private static final int k_ERemoteStorageFilePathType_Absolute = (int)1L;
-    /**
-     * {@snippet lang=c :
-     * enum ERemoteStorageFilePathType.k_ERemoteStorageFilePathType_Absolute = 1
-     * }
-     */
-    public static int k_ERemoteStorageFilePathType_Absolute() {
-        return k_ERemoteStorageFilePathType_Absolute;
-    }
-    private static final int k_ERemoteStorageFilePathType_APIFilename = (int)2L;
-    /**
-     * {@snippet lang=c :
-     * enum ERemoteStorageFilePathType.k_ERemoteStorageFilePathType_APIFilename = 2
-     * }
-     */
-    public static int k_ERemoteStorageFilePathType_APIFilename() {
-        return k_ERemoteStorageFilePathType_APIFilename;
-    }
-    private static final int k_ELeaderboardDataRequestGlobal = (int)0L;
-    /**
-     * {@snippet lang=c :
-     * enum ELeaderboardDataRequest.k_ELeaderboardDataRequestGlobal = 0
-     * }
-     */
-    public static int k_ELeaderboardDataRequestGlobal() {
-        return k_ELeaderboardDataRequestGlobal;
-    }
-    private static final int k_ELeaderboardDataRequestGlobalAroundUser = (int)1L;
-    /**
-     * {@snippet lang=c :
-     * enum ELeaderboardDataRequest.k_ELeaderboardDataRequestGlobalAroundUser = 1
-     * }
-     */
-    public static int k_ELeaderboardDataRequestGlobalAroundUser() {
-        return k_ELeaderboardDataRequestGlobalAroundUser;
-    }
-    private static final int k_ELeaderboardDataRequestFriends = (int)2L;
-    /**
-     * {@snippet lang=c :
-     * enum ELeaderboardDataRequest.k_ELeaderboardDataRequestFriends = 2
-     * }
-     */
-    public static int k_ELeaderboardDataRequestFriends() {
-        return k_ELeaderboardDataRequestFriends;
-    }
-    private static final int k_ELeaderboardDataRequestUsers = (int)3L;
-    /**
-     * {@snippet lang=c :
-     * enum ELeaderboardDataRequest.k_ELeaderboardDataRequestUsers = 3
-     * }
-     */
-    public static int k_ELeaderboardDataRequestUsers() {
-        return k_ELeaderboardDataRequestUsers;
-    }
-    private static final int k_ELeaderboardSortMethodNone = (int)0L;
-    /**
-     * {@snippet lang=c :
-     * enum ELeaderboardSortMethod.k_ELeaderboardSortMethodNone = 0
-     * }
-     */
-    public static int k_ELeaderboardSortMethodNone() {
-        return k_ELeaderboardSortMethodNone;
-    }
-    private static final int k_ELeaderboardSortMethodAscending = (int)1L;
-    /**
-     * {@snippet lang=c :
-     * enum ELeaderboardSortMethod.k_ELeaderboardSortMethodAscending = 1
-     * }
-     */
-    public static int k_ELeaderboardSortMethodAscending() {
-        return k_ELeaderboardSortMethodAscending;
-    }
-    private static final int k_ELeaderboardSortMethodDescending = (int)2L;
-    /**
-     * {@snippet lang=c :
-     * enum ELeaderboardSortMethod.k_ELeaderboardSortMethodDescending = 2
-     * }
-     */
-    public static int k_ELeaderboardSortMethodDescending() {
-        return k_ELeaderboardSortMethodDescending;
-    }
-    private static final int k_ELeaderboardDisplayTypeNone = (int)0L;
-    /**
-     * {@snippet lang=c :
-     * enum ELeaderboardDisplayType.k_ELeaderboardDisplayTypeNone = 0
-     * }
-     */
-    public static int k_ELeaderboardDisplayTypeNone() {
-        return k_ELeaderboardDisplayTypeNone;
-    }
-    private static final int k_ELeaderboardDisplayTypeNumeric = (int)1L;
-    /**
-     * {@snippet lang=c :
-     * enum ELeaderboardDisplayType.k_ELeaderboardDisplayTypeNumeric = 1
-     * }
-     */
-    public static int k_ELeaderboardDisplayTypeNumeric() {
-        return k_ELeaderboardDisplayTypeNumeric;
-    }
-    private static final int k_ELeaderboardDisplayTypeTimeSeconds = (int)2L;
-    /**
-     * {@snippet lang=c :
-     * enum ELeaderboardDisplayType.k_ELeaderboardDisplayTypeTimeSeconds = 2
-     * }
-     */
-    public static int k_ELeaderboardDisplayTypeTimeSeconds() {
-        return k_ELeaderboardDisplayTypeTimeSeconds;
-    }
-    private static final int k_ELeaderboardDisplayTypeTimeMilliSeconds = (int)3L;
-    /**
-     * {@snippet lang=c :
-     * enum ELeaderboardDisplayType.k_ELeaderboardDisplayTypeTimeMilliSeconds = 3
-     * }
-     */
-    public static int k_ELeaderboardDisplayTypeTimeMilliSeconds() {
-        return k_ELeaderboardDisplayTypeTimeMilliSeconds;
-    }
-    private static final int k_ELeaderboardUploadScoreMethodNone = (int)0L;
-    /**
-     * {@snippet lang=c :
-     * enum ELeaderboardUploadScoreMethod.k_ELeaderboardUploadScoreMethodNone = 0
-     * }
-     */
-    public static int k_ELeaderboardUploadScoreMethodNone() {
-        return k_ELeaderboardUploadScoreMethodNone;
-    }
-    private static final int k_ELeaderboardUploadScoreMethodKeepBest = (int)1L;
-    /**
-     * {@snippet lang=c :
-     * enum ELeaderboardUploadScoreMethod.k_ELeaderboardUploadScoreMethodKeepBest = 1
-     * }
-     */
-    public static int k_ELeaderboardUploadScoreMethodKeepBest() {
-        return k_ELeaderboardUploadScoreMethodKeepBest;
-    }
-    private static final int k_ELeaderboardUploadScoreMethodForceUpdate = (int)2L;
-    /**
-     * {@snippet lang=c :
-     * enum ELeaderboardUploadScoreMethod.k_ELeaderboardUploadScoreMethodForceUpdate = 2
-     * }
-     */
-    public static int k_ELeaderboardUploadScoreMethodForceUpdate() {
-        return k_ELeaderboardUploadScoreMethodForceUpdate;
-    }
-    private static final int k_EP2PSessionErrorNone = (int)0L;
-    /**
-     * {@snippet lang=c :
-     * enum EP2PSessionError.k_EP2PSessionErrorNone = 0
-     * }
-     */
-    public static int k_EP2PSessionErrorNone() {
-        return k_EP2PSessionErrorNone;
-    }
-    private static final int k_EP2PSessionErrorNoRightsToApp = (int)2L;
-    /**
-     * {@snippet lang=c :
-     * enum EP2PSessionError.k_EP2PSessionErrorNoRightsToApp = 2
-     * }
-     */
-    public static int k_EP2PSessionErrorNoRightsToApp() {
-        return k_EP2PSessionErrorNoRightsToApp;
-    }
-    private static final int k_EP2PSessionErrorTimeout = (int)4L;
-    /**
-     * {@snippet lang=c :
-     * enum EP2PSessionError.k_EP2PSessionErrorTimeout = 4
-     * }
-     */
-    public static int k_EP2PSessionErrorTimeout() {
-        return k_EP2PSessionErrorTimeout;
-    }
-    private static final int k_EP2PSessionErrorNotRunningApp_DELETED = (int)1L;
-    /**
-     * {@snippet lang=c :
-     * enum EP2PSessionError.k_EP2PSessionErrorNotRunningApp_DELETED = 1
-     * }
-     */
-    public static int k_EP2PSessionErrorNotRunningApp_DELETED() {
-        return k_EP2PSessionErrorNotRunningApp_DELETED;
-    }
-    private static final int k_EP2PSessionErrorDestinationNotLoggedIn_DELETED = (int)3L;
-    /**
-     * {@snippet lang=c :
-     * enum EP2PSessionError.k_EP2PSessionErrorDestinationNotLoggedIn_DELETED = 3
-     * }
-     */
-    public static int k_EP2PSessionErrorDestinationNotLoggedIn_DELETED() {
-        return k_EP2PSessionErrorDestinationNotLoggedIn_DELETED;
-    }
-    private static final int k_EP2PSessionErrorMax = (int)5L;
-    /**
-     * {@snippet lang=c :
-     * enum EP2PSessionError.k_EP2PSessionErrorMax = 5
-     * }
-     */
-    public static int k_EP2PSessionErrorMax() {
-        return k_EP2PSessionErrorMax;
-    }
-    private static final int k_EP2PSendUnreliable = (int)0L;
-    /**
-     * {@snippet lang=c :
-     * enum EP2PSend.k_EP2PSendUnreliable = 0
-     * }
-     */
-    public static int k_EP2PSendUnreliable() {
-        return k_EP2PSendUnreliable;
-    }
-    private static final int k_EP2PSendUnreliableNoDelay = (int)1L;
-    /**
-     * {@snippet lang=c :
-     * enum EP2PSend.k_EP2PSendUnreliableNoDelay = 1
-     * }
-     */
-    public static int k_EP2PSendUnreliableNoDelay() {
-        return k_EP2PSendUnreliableNoDelay;
-    }
-    private static final int k_EP2PSendReliable = (int)2L;
-    /**
-     * {@snippet lang=c :
-     * enum EP2PSend.k_EP2PSendReliable = 2
-     * }
-     */
-    public static int k_EP2PSendReliable() {
-        return k_EP2PSendReliable;
-    }
-    private static final int k_EP2PSendReliableWithBuffering = (int)3L;
-    /**
-     * {@snippet lang=c :
-     * enum EP2PSend.k_EP2PSendReliableWithBuffering = 3
-     * }
-     */
-    public static int k_EP2PSendReliableWithBuffering() {
-        return k_EP2PSendReliableWithBuffering;
-    }
-    private static final int k_ESNetSocketStateInvalid = (int)0L;
-    /**
-     * {@snippet lang=c :
-     * enum ESNetSocketState.k_ESNetSocketStateInvalid = 0
-     * }
-     */
-    public static int k_ESNetSocketStateInvalid() {
-        return k_ESNetSocketStateInvalid;
-    }
-    private static final int k_ESNetSocketStateConnected = (int)1L;
-    /**
-     * {@snippet lang=c :
-     * enum ESNetSocketState.k_ESNetSocketStateConnected = 1
-     * }
-     */
-    public static int k_ESNetSocketStateConnected() {
-        return k_ESNetSocketStateConnected;
-    }
-    private static final int k_ESNetSocketStateInitiated = (int)10L;
-    /**
-     * {@snippet lang=c :
-     * enum ESNetSocketState.k_ESNetSocketStateInitiated = 10
-     * }
-     */
-    public static int k_ESNetSocketStateInitiated() {
-        return k_ESNetSocketStateInitiated;
-    }
-    private static final int k_ESNetSocketStateLocalCandidatesFound = (int)11L;
-    /**
-     * {@snippet lang=c :
-     * enum ESNetSocketState.k_ESNetSocketStateLocalCandidatesFound = 11
-     * }
-     */
-    public static int k_ESNetSocketStateLocalCandidatesFound() {
-        return k_ESNetSocketStateLocalCandidatesFound;
-    }
-    private static final int k_ESNetSocketStateReceivedRemoteCandidates = (int)12L;
-    /**
-     * {@snippet lang=c :
-     * enum ESNetSocketState.k_ESNetSocketStateReceivedRemoteCandidates = 12
-     * }
-     */
-    public static int k_ESNetSocketStateReceivedRemoteCandidates() {
-        return k_ESNetSocketStateReceivedRemoteCandidates;
-    }
-    private static final int k_ESNetSocketStateChallengeHandshake = (int)15L;
-    /**
-     * {@snippet lang=c :
-     * enum ESNetSocketState.k_ESNetSocketStateChallengeHandshake = 15
-     * }
-     */
-    public static int k_ESNetSocketStateChallengeHandshake() {
-        return k_ESNetSocketStateChallengeHandshake;
-    }
-    private static final int k_ESNetSocketStateDisconnecting = (int)21L;
-    /**
-     * {@snippet lang=c :
-     * enum ESNetSocketState.k_ESNetSocketStateDisconnecting = 21
-     * }
-     */
-    public static int k_ESNetSocketStateDisconnecting() {
-        return k_ESNetSocketStateDisconnecting;
-    }
-    private static final int k_ESNetSocketStateLocalDisconnect = (int)22L;
-    /**
-     * {@snippet lang=c :
-     * enum ESNetSocketState.k_ESNetSocketStateLocalDisconnect = 22
-     * }
-     */
-    public static int k_ESNetSocketStateLocalDisconnect() {
-        return k_ESNetSocketStateLocalDisconnect;
-    }
-    private static final int k_ESNetSocketStateTimeoutDuringConnect = (int)23L;
-    /**
-     * {@snippet lang=c :
-     * enum ESNetSocketState.k_ESNetSocketStateTimeoutDuringConnect = 23
-     * }
-     */
-    public static int k_ESNetSocketStateTimeoutDuringConnect() {
-        return k_ESNetSocketStateTimeoutDuringConnect;
-    }
-    private static final int k_ESNetSocketStateRemoteEndDisconnected = (int)24L;
-    /**
-     * {@snippet lang=c :
-     * enum ESNetSocketState.k_ESNetSocketStateRemoteEndDisconnected = 24
-     * }
-     */
-    public static int k_ESNetSocketStateRemoteEndDisconnected() {
-        return k_ESNetSocketStateRemoteEndDisconnected;
-    }
-    private static final int k_ESNetSocketStateConnectionBroken = (int)25L;
-    /**
-     * {@snippet lang=c :
-     * enum ESNetSocketState.k_ESNetSocketStateConnectionBroken = 25
-     * }
-     */
-    public static int k_ESNetSocketStateConnectionBroken() {
-        return k_ESNetSocketStateConnectionBroken;
-    }
-    private static final int k_ESNetSocketConnectionTypeNotConnected = (int)0L;
-    /**
-     * {@snippet lang=c :
-     * enum ESNetSocketConnectionType.k_ESNetSocketConnectionTypeNotConnected = 0
-     * }
-     */
-    public static int k_ESNetSocketConnectionTypeNotConnected() {
-        return k_ESNetSocketConnectionTypeNotConnected;
-    }
-    private static final int k_ESNetSocketConnectionTypeUDP = (int)1L;
-    /**
-     * {@snippet lang=c :
-     * enum ESNetSocketConnectionType.k_ESNetSocketConnectionTypeUDP = 1
-     * }
-     */
-    public static int k_ESNetSocketConnectionTypeUDP() {
-        return k_ESNetSocketConnectionTypeUDP;
-    }
-    private static final int k_ESNetSocketConnectionTypeUDPRelay = (int)2L;
-    /**
-     * {@snippet lang=c :
-     * enum ESNetSocketConnectionType.k_ESNetSocketConnectionTypeUDPRelay = 2
-     * }
-     */
-    public static int k_ESNetSocketConnectionTypeUDPRelay() {
-        return k_ESNetSocketConnectionTypeUDPRelay;
-    }
-    private static final int k_EVRScreenshotType_None = (int)0L;
-    /**
-     * {@snippet lang=c :
-     * enum EVRScreenshotType.k_EVRScreenshotType_None = 0
-     * }
-     */
-    public static int k_EVRScreenshotType_None() {
-        return k_EVRScreenshotType_None;
-    }
-    private static final int k_EVRScreenshotType_Mono = (int)1L;
-    /**
-     * {@snippet lang=c :
-     * enum EVRScreenshotType.k_EVRScreenshotType_Mono = 1
-     * }
-     */
-    public static int k_EVRScreenshotType_Mono() {
-        return k_EVRScreenshotType_Mono;
-    }
-    private static final int k_EVRScreenshotType_Stereo = (int)2L;
-    /**
-     * {@snippet lang=c :
-     * enum EVRScreenshotType.k_EVRScreenshotType_Stereo = 2
-     * }
-     */
-    public static int k_EVRScreenshotType_Stereo() {
-        return k_EVRScreenshotType_Stereo;
-    }
-    private static final int k_EVRScreenshotType_MonoCubemap = (int)3L;
-    /**
-     * {@snippet lang=c :
-     * enum EVRScreenshotType.k_EVRScreenshotType_MonoCubemap = 3
-     * }
-     */
-    public static int k_EVRScreenshotType_MonoCubemap() {
-        return k_EVRScreenshotType_MonoCubemap;
-    }
-    private static final int k_EVRScreenshotType_MonoPanorama = (int)4L;
-    /**
-     * {@snippet lang=c :
-     * enum EVRScreenshotType.k_EVRScreenshotType_MonoPanorama = 4
-     * }
-     */
-    public static int k_EVRScreenshotType_MonoPanorama() {
-        return k_EVRScreenshotType_MonoPanorama;
-    }
-    private static final int k_EVRScreenshotType_StereoPanorama = (int)5L;
-    /**
-     * {@snippet lang=c :
-     * enum EVRScreenshotType.k_EVRScreenshotType_StereoPanorama = 5
-     * }
-     */
-    public static int k_EVRScreenshotType_StereoPanorama() {
-        return k_EVRScreenshotType_StereoPanorama;
-    }
-    private static final int AudioPlayback_Undefined = (int)0L;
-    /**
-     * {@snippet lang=c :
-     * enum AudioPlayback_Status.AudioPlayback_Undefined = 0
-     * }
-     */
-    public static int AudioPlayback_Undefined() {
-        return AudioPlayback_Undefined;
-    }
-    private static final int AudioPlayback_Playing = (int)1L;
-    /**
-     * {@snippet lang=c :
-     * enum AudioPlayback_Status.AudioPlayback_Playing = 1
-     * }
-     */
-    public static int AudioPlayback_Playing() {
-        return AudioPlayback_Playing;
-    }
-    private static final int AudioPlayback_Paused = (int)2L;
-    /**
-     * {@snippet lang=c :
-     * enum AudioPlayback_Status.AudioPlayback_Paused = 2
-     * }
-     */
-    public static int AudioPlayback_Paused() {
-        return AudioPlayback_Paused;
-    }
-    private static final int AudioPlayback_Idle = (int)3L;
-    /**
-     * {@snippet lang=c :
-     * enum AudioPlayback_Status.AudioPlayback_Idle = 3
-     * }
-     */
-    public static int AudioPlayback_Idle() {
-        return AudioPlayback_Idle;
-    }
-    private static final int k_EHTTPMethodInvalid = (int)0L;
-    /**
-     * {@snippet lang=c :
-     * enum EHTTPMethod.k_EHTTPMethodInvalid = 0
-     * }
-     */
-    public static int k_EHTTPMethodInvalid() {
-        return k_EHTTPMethodInvalid;
-    }
-    private static final int k_EHTTPMethodGET = (int)1L;
-    /**
-     * {@snippet lang=c :
-     * enum EHTTPMethod.k_EHTTPMethodGET = 1
-     * }
-     */
-    public static int k_EHTTPMethodGET() {
-        return k_EHTTPMethodGET;
-    }
-    private static final int k_EHTTPMethodHEAD = (int)2L;
-    /**
-     * {@snippet lang=c :
-     * enum EHTTPMethod.k_EHTTPMethodHEAD = 2
-     * }
-     */
-    public static int k_EHTTPMethodHEAD() {
-        return k_EHTTPMethodHEAD;
-    }
-    private static final int k_EHTTPMethodPOST = (int)3L;
-    /**
-     * {@snippet lang=c :
-     * enum EHTTPMethod.k_EHTTPMethodPOST = 3
-     * }
-     */
-    public static int k_EHTTPMethodPOST() {
-        return k_EHTTPMethodPOST;
-    }
-    private static final int k_EHTTPMethodPUT = (int)4L;
-    /**
-     * {@snippet lang=c :
-     * enum EHTTPMethod.k_EHTTPMethodPUT = 4
-     * }
-     */
-    public static int k_EHTTPMethodPUT() {
-        return k_EHTTPMethodPUT;
-    }
-    private static final int k_EHTTPMethodDELETE = (int)5L;
-    /**
-     * {@snippet lang=c :
-     * enum EHTTPMethod.k_EHTTPMethodDELETE = 5
-     * }
-     */
-    public static int k_EHTTPMethodDELETE() {
-        return k_EHTTPMethodDELETE;
-    }
-    private static final int k_EHTTPMethodOPTIONS = (int)6L;
-    /**
-     * {@snippet lang=c :
-     * enum EHTTPMethod.k_EHTTPMethodOPTIONS = 6
-     * }
-     */
-    public static int k_EHTTPMethodOPTIONS() {
-        return k_EHTTPMethodOPTIONS;
-    }
-    private static final int k_EHTTPMethodPATCH = (int)7L;
-    /**
-     * {@snippet lang=c :
-     * enum EHTTPMethod.k_EHTTPMethodPATCH = 7
-     * }
-     */
-    public static int k_EHTTPMethodPATCH() {
-        return k_EHTTPMethodPATCH;
-    }
-    private static final int k_EHTTPStatusCodeInvalid = (int)0L;
-    /**
-     * {@snippet lang=c :
-     * enum EHTTPStatusCode.k_EHTTPStatusCodeInvalid = 0
-     * }
-     */
-    public static int k_EHTTPStatusCodeInvalid() {
-        return k_EHTTPStatusCodeInvalid;
-    }
-    private static final int k_EHTTPStatusCode100Continue = (int)100L;
-    /**
-     * {@snippet lang=c :
-     * enum EHTTPStatusCode.k_EHTTPStatusCode100Continue = 100
-     * }
-     */
-    public static int k_EHTTPStatusCode100Continue() {
-        return k_EHTTPStatusCode100Continue;
-    }
-    private static final int k_EHTTPStatusCode101SwitchingProtocols = (int)101L;
-    /**
-     * {@snippet lang=c :
-     * enum EHTTPStatusCode.k_EHTTPStatusCode101SwitchingProtocols = 101
-     * }
-     */
-    public static int k_EHTTPStatusCode101SwitchingProtocols() {
-        return k_EHTTPStatusCode101SwitchingProtocols;
-    }
-    private static final int k_EHTTPStatusCode200OK = (int)200L;
-    /**
-     * {@snippet lang=c :
-     * enum EHTTPStatusCode.k_EHTTPStatusCode200OK = 200
-     * }
-     */
-    public static int k_EHTTPStatusCode200OK() {
-        return k_EHTTPStatusCode200OK;
-    }
-    private static final int k_EHTTPStatusCode201Created = (int)201L;
-    /**
-     * {@snippet lang=c :
-     * enum EHTTPStatusCode.k_EHTTPStatusCode201Created = 201
-     * }
-     */
-    public static int k_EHTTPStatusCode201Created() {
-        return k_EHTTPStatusCode201Created;
-    }
-    private static final int k_EHTTPStatusCode202Accepted = (int)202L;
-    /**
-     * {@snippet lang=c :
-     * enum EHTTPStatusCode.k_EHTTPStatusCode202Accepted = 202
-     * }
-     */
-    public static int k_EHTTPStatusCode202Accepted() {
-        return k_EHTTPStatusCode202Accepted;
-    }
-    private static final int k_EHTTPStatusCode203NonAuthoritative = (int)203L;
-    /**
-     * {@snippet lang=c :
-     * enum EHTTPStatusCode.k_EHTTPStatusCode203NonAuthoritative = 203
-     * }
-     */
-    public static int k_EHTTPStatusCode203NonAuthoritative() {
-        return k_EHTTPStatusCode203NonAuthoritative;
-    }
-    private static final int k_EHTTPStatusCode204NoContent = (int)204L;
-    /**
-     * {@snippet lang=c :
-     * enum EHTTPStatusCode.k_EHTTPStatusCode204NoContent = 204
-     * }
-     */
-    public static int k_EHTTPStatusCode204NoContent() {
-        return k_EHTTPStatusCode204NoContent;
-    }
-    private static final int k_EHTTPStatusCode205ResetContent = (int)205L;
-    /**
-     * {@snippet lang=c :
-     * enum EHTTPStatusCode.k_EHTTPStatusCode205ResetContent = 205
-     * }
-     */
-    public static int k_EHTTPStatusCode205ResetContent() {
-        return k_EHTTPStatusCode205ResetContent;
-    }
-    private static final int k_EHTTPStatusCode206PartialContent = (int)206L;
-    /**
-     * {@snippet lang=c :
-     * enum EHTTPStatusCode.k_EHTTPStatusCode206PartialContent = 206
-     * }
-     */
-    public static int k_EHTTPStatusCode206PartialContent() {
-        return k_EHTTPStatusCode206PartialContent;
-    }
-    private static final int k_EHTTPStatusCode300MultipleChoices = (int)300L;
-    /**
-     * {@snippet lang=c :
-     * enum EHTTPStatusCode.k_EHTTPStatusCode300MultipleChoices = 300
-     * }
-     */
-    public static int k_EHTTPStatusCode300MultipleChoices() {
-        return k_EHTTPStatusCode300MultipleChoices;
-    }
-    private static final int k_EHTTPStatusCode301MovedPermanently = (int)301L;
-    /**
-     * {@snippet lang=c :
-     * enum EHTTPStatusCode.k_EHTTPStatusCode301MovedPermanently = 301
-     * }
-     */
-    public static int k_EHTTPStatusCode301MovedPermanently() {
-        return k_EHTTPStatusCode301MovedPermanently;
-    }
-    private static final int k_EHTTPStatusCode302Found = (int)302L;
-    /**
-     * {@snippet lang=c :
-     * enum EHTTPStatusCode.k_EHTTPStatusCode302Found = 302
-     * }
-     */
-    public static int k_EHTTPStatusCode302Found() {
-        return k_EHTTPStatusCode302Found;
-    }
-    private static final int k_EHTTPStatusCode303SeeOther = (int)303L;
-    /**
-     * {@snippet lang=c :
-     * enum EHTTPStatusCode.k_EHTTPStatusCode303SeeOther = 303
-     * }
-     */
-    public static int k_EHTTPStatusCode303SeeOther() {
-        return k_EHTTPStatusCode303SeeOther;
-    }
-    private static final int k_EHTTPStatusCode304NotModified = (int)304L;
-    /**
-     * {@snippet lang=c :
-     * enum EHTTPStatusCode.k_EHTTPStatusCode304NotModified = 304
-     * }
-     */
-    public static int k_EHTTPStatusCode304NotModified() {
-        return k_EHTTPStatusCode304NotModified;
-    }
-    private static final int k_EHTTPStatusCode305UseProxy = (int)305L;
-    /**
-     * {@snippet lang=c :
-     * enum EHTTPStatusCode.k_EHTTPStatusCode305UseProxy = 305
-     * }
-     */
-    public static int k_EHTTPStatusCode305UseProxy() {
-        return k_EHTTPStatusCode305UseProxy;
-    }
-    private static final int k_EHTTPStatusCode307TemporaryRedirect = (int)307L;
-    /**
-     * {@snippet lang=c :
-     * enum EHTTPStatusCode.k_EHTTPStatusCode307TemporaryRedirect = 307
-     * }
-     */
-    public static int k_EHTTPStatusCode307TemporaryRedirect() {
-        return k_EHTTPStatusCode307TemporaryRedirect;
-    }
-    private static final int k_EHTTPStatusCode308PermanentRedirect = (int)308L;
-    /**
-     * {@snippet lang=c :
-     * enum EHTTPStatusCode.k_EHTTPStatusCode308PermanentRedirect = 308
-     * }
-     */
-    public static int k_EHTTPStatusCode308PermanentRedirect() {
-        return k_EHTTPStatusCode308PermanentRedirect;
-    }
-    private static final int k_EHTTPStatusCode400BadRequest = (int)400L;
-    /**
-     * {@snippet lang=c :
-     * enum EHTTPStatusCode.k_EHTTPStatusCode400BadRequest = 400
-     * }
-     */
-    public static int k_EHTTPStatusCode400BadRequest() {
-        return k_EHTTPStatusCode400BadRequest;
-    }
-    private static final int k_EHTTPStatusCode401Unauthorized = (int)401L;
-    /**
-     * {@snippet lang=c :
-     * enum EHTTPStatusCode.k_EHTTPStatusCode401Unauthorized = 401
-     * }
-     */
-    public static int k_EHTTPStatusCode401Unauthorized() {
-        return k_EHTTPStatusCode401Unauthorized;
-    }
-    private static final int k_EHTTPStatusCode402PaymentRequired = (int)402L;
-    /**
-     * {@snippet lang=c :
-     * enum EHTTPStatusCode.k_EHTTPStatusCode402PaymentRequired = 402
-     * }
-     */
-    public static int k_EHTTPStatusCode402PaymentRequired() {
-        return k_EHTTPStatusCode402PaymentRequired;
-    }
-    private static final int k_EHTTPStatusCode403Forbidden = (int)403L;
-    /**
-     * {@snippet lang=c :
-     * enum EHTTPStatusCode.k_EHTTPStatusCode403Forbidden = 403
-     * }
-     */
-    public static int k_EHTTPStatusCode403Forbidden() {
-        return k_EHTTPStatusCode403Forbidden;
-    }
-    private static final int k_EHTTPStatusCode404NotFound = (int)404L;
-    /**
-     * {@snippet lang=c :
-     * enum EHTTPStatusCode.k_EHTTPStatusCode404NotFound = 404
-     * }
-     */
-    public static int k_EHTTPStatusCode404NotFound() {
-        return k_EHTTPStatusCode404NotFound;
-    }
-    private static final int k_EHTTPStatusCode405MethodNotAllowed = (int)405L;
-    /**
-     * {@snippet lang=c :
-     * enum EHTTPStatusCode.k_EHTTPStatusCode405MethodNotAllowed = 405
-     * }
-     */
-    public static int k_EHTTPStatusCode405MethodNotAllowed() {
-        return k_EHTTPStatusCode405MethodNotAllowed;
-    }
-    private static final int k_EHTTPStatusCode406NotAcceptable = (int)406L;
-    /**
-     * {@snippet lang=c :
-     * enum EHTTPStatusCode.k_EHTTPStatusCode406NotAcceptable = 406
-     * }
-     */
-    public static int k_EHTTPStatusCode406NotAcceptable() {
-        return k_EHTTPStatusCode406NotAcceptable;
-    }
-    private static final int k_EHTTPStatusCode407ProxyAuthRequired = (int)407L;
-    /**
-     * {@snippet lang=c :
-     * enum EHTTPStatusCode.k_EHTTPStatusCode407ProxyAuthRequired = 407
-     * }
-     */
-    public static int k_EHTTPStatusCode407ProxyAuthRequired() {
-        return k_EHTTPStatusCode407ProxyAuthRequired;
-    }
-    private static final int k_EHTTPStatusCode408RequestTimeout = (int)408L;
-    /**
-     * {@snippet lang=c :
-     * enum EHTTPStatusCode.k_EHTTPStatusCode408RequestTimeout = 408
-     * }
-     */
-    public static int k_EHTTPStatusCode408RequestTimeout() {
-        return k_EHTTPStatusCode408RequestTimeout;
-    }
-    private static final int k_EHTTPStatusCode409Conflict = (int)409L;
-    /**
-     * {@snippet lang=c :
-     * enum EHTTPStatusCode.k_EHTTPStatusCode409Conflict = 409
-     * }
-     */
-    public static int k_EHTTPStatusCode409Conflict() {
-        return k_EHTTPStatusCode409Conflict;
-    }
-    private static final int k_EHTTPStatusCode410Gone = (int)410L;
-    /**
-     * {@snippet lang=c :
-     * enum EHTTPStatusCode.k_EHTTPStatusCode410Gone = 410
-     * }
-     */
-    public static int k_EHTTPStatusCode410Gone() {
-        return k_EHTTPStatusCode410Gone;
-    }
-    private static final int k_EHTTPStatusCode411LengthRequired = (int)411L;
-    /**
-     * {@snippet lang=c :
-     * enum EHTTPStatusCode.k_EHTTPStatusCode411LengthRequired = 411
-     * }
-     */
-    public static int k_EHTTPStatusCode411LengthRequired() {
-        return k_EHTTPStatusCode411LengthRequired;
-    }
-    private static final int k_EHTTPStatusCode412PreconditionFailed = (int)412L;
-    /**
-     * {@snippet lang=c :
-     * enum EHTTPStatusCode.k_EHTTPStatusCode412PreconditionFailed = 412
-     * }
-     */
-    public static int k_EHTTPStatusCode412PreconditionFailed() {
-        return k_EHTTPStatusCode412PreconditionFailed;
-    }
-    private static final int k_EHTTPStatusCode413RequestEntityTooLarge = (int)413L;
-    /**
-     * {@snippet lang=c :
-     * enum EHTTPStatusCode.k_EHTTPStatusCode413RequestEntityTooLarge = 413
-     * }
-     */
-    public static int k_EHTTPStatusCode413RequestEntityTooLarge() {
-        return k_EHTTPStatusCode413RequestEntityTooLarge;
-    }
-    private static final int k_EHTTPStatusCode414RequestURITooLong = (int)414L;
-    /**
-     * {@snippet lang=c :
-     * enum EHTTPStatusCode.k_EHTTPStatusCode414RequestURITooLong = 414
-     * }
-     */
-    public static int k_EHTTPStatusCode414RequestURITooLong() {
-        return k_EHTTPStatusCode414RequestURITooLong;
-    }
-    private static final int k_EHTTPStatusCode415UnsupportedMediaType = (int)415L;
-    /**
-     * {@snippet lang=c :
-     * enum EHTTPStatusCode.k_EHTTPStatusCode415UnsupportedMediaType = 415
-     * }
-     */
-    public static int k_EHTTPStatusCode415UnsupportedMediaType() {
-        return k_EHTTPStatusCode415UnsupportedMediaType;
-    }
-    private static final int k_EHTTPStatusCode416RequestedRangeNotSatisfiable = (int)416L;
-    /**
-     * {@snippet lang=c :
-     * enum EHTTPStatusCode.k_EHTTPStatusCode416RequestedRangeNotSatisfiable = 416
-     * }
-     */
-    public static int k_EHTTPStatusCode416RequestedRangeNotSatisfiable() {
-        return k_EHTTPStatusCode416RequestedRangeNotSatisfiable;
-    }
-    private static final int k_EHTTPStatusCode417ExpectationFailed = (int)417L;
-    /**
-     * {@snippet lang=c :
-     * enum EHTTPStatusCode.k_EHTTPStatusCode417ExpectationFailed = 417
-     * }
-     */
-    public static int k_EHTTPStatusCode417ExpectationFailed() {
-        return k_EHTTPStatusCode417ExpectationFailed;
-    }
-    private static final int k_EHTTPStatusCode4xxUnknown = (int)418L;
-    /**
-     * {@snippet lang=c :
-     * enum EHTTPStatusCode.k_EHTTPStatusCode4xxUnknown = 418
-     * }
-     */
-    public static int k_EHTTPStatusCode4xxUnknown() {
-        return k_EHTTPStatusCode4xxUnknown;
-    }
-    private static final int k_EHTTPStatusCode429TooManyRequests = (int)429L;
-    /**
-     * {@snippet lang=c :
-     * enum EHTTPStatusCode.k_EHTTPStatusCode429TooManyRequests = 429
-     * }
-     */
-    public static int k_EHTTPStatusCode429TooManyRequests() {
-        return k_EHTTPStatusCode429TooManyRequests;
-    }
-    private static final int k_EHTTPStatusCode444ConnectionClosed = (int)444L;
-    /**
-     * {@snippet lang=c :
-     * enum EHTTPStatusCode.k_EHTTPStatusCode444ConnectionClosed = 444
-     * }
-     */
-    public static int k_EHTTPStatusCode444ConnectionClosed() {
-        return k_EHTTPStatusCode444ConnectionClosed;
-    }
-    private static final int k_EHTTPStatusCode500InternalServerError = (int)500L;
-    /**
-     * {@snippet lang=c :
-     * enum EHTTPStatusCode.k_EHTTPStatusCode500InternalServerError = 500
-     * }
-     */
-    public static int k_EHTTPStatusCode500InternalServerError() {
-        return k_EHTTPStatusCode500InternalServerError;
-    }
-    private static final int k_EHTTPStatusCode501NotImplemented = (int)501L;
-    /**
-     * {@snippet lang=c :
-     * enum EHTTPStatusCode.k_EHTTPStatusCode501NotImplemented = 501
-     * }
-     */
-    public static int k_EHTTPStatusCode501NotImplemented() {
-        return k_EHTTPStatusCode501NotImplemented;
-    }
-    private static final int k_EHTTPStatusCode502BadGateway = (int)502L;
-    /**
-     * {@snippet lang=c :
-     * enum EHTTPStatusCode.k_EHTTPStatusCode502BadGateway = 502
-     * }
-     */
-    public static int k_EHTTPStatusCode502BadGateway() {
-        return k_EHTTPStatusCode502BadGateway;
-    }
-    private static final int k_EHTTPStatusCode503ServiceUnavailable = (int)503L;
-    /**
-     * {@snippet lang=c :
-     * enum EHTTPStatusCode.k_EHTTPStatusCode503ServiceUnavailable = 503
-     * }
-     */
-    public static int k_EHTTPStatusCode503ServiceUnavailable() {
-        return k_EHTTPStatusCode503ServiceUnavailable;
-    }
-    private static final int k_EHTTPStatusCode504GatewayTimeout = (int)504L;
-    /**
-     * {@snippet lang=c :
-     * enum EHTTPStatusCode.k_EHTTPStatusCode504GatewayTimeout = 504
-     * }
-     */
-    public static int k_EHTTPStatusCode504GatewayTimeout() {
-        return k_EHTTPStatusCode504GatewayTimeout;
-    }
-    private static final int k_EHTTPStatusCode505HTTPVersionNotSupported = (int)505L;
-    /**
-     * {@snippet lang=c :
-     * enum EHTTPStatusCode.k_EHTTPStatusCode505HTTPVersionNotSupported = 505
-     * }
-     */
-    public static int k_EHTTPStatusCode505HTTPVersionNotSupported() {
-        return k_EHTTPStatusCode505HTTPVersionNotSupported;
-    }
-    private static final int k_EHTTPStatusCode5xxUnknown = (int)599L;
-    /**
-     * {@snippet lang=c :
-     * enum EHTTPStatusCode.k_EHTTPStatusCode5xxUnknown = 599
-     * }
-     */
-    public static int k_EHTTPStatusCode5xxUnknown() {
-        return k_EHTTPStatusCode5xxUnknown;
-    }
-    private static final int k_EInputSourceMode_None = (int)0L;
-    /**
-     * {@snippet lang=c :
-     * enum EInputSourceMode.k_EInputSourceMode_None = 0
-     * }
-     */
-    public static int k_EInputSourceMode_None() {
-        return k_EInputSourceMode_None;
-    }
-    private static final int k_EInputSourceMode_Dpad = (int)1L;
-    /**
-     * {@snippet lang=c :
-     * enum EInputSourceMode.k_EInputSourceMode_Dpad = 1
-     * }
-     */
-    public static int k_EInputSourceMode_Dpad() {
-        return k_EInputSourceMode_Dpad;
-    }
-    private static final int k_EInputSourceMode_Buttons = (int)2L;
-    /**
-     * {@snippet lang=c :
-     * enum EInputSourceMode.k_EInputSourceMode_Buttons = 2
-     * }
-     */
-    public static int k_EInputSourceMode_Buttons() {
-        return k_EInputSourceMode_Buttons;
-    }
-    private static final int k_EInputSourceMode_FourButtons = (int)3L;
-    /**
-     * {@snippet lang=c :
-     * enum EInputSourceMode.k_EInputSourceMode_FourButtons = 3
-     * }
-     */
-    public static int k_EInputSourceMode_FourButtons() {
-        return k_EInputSourceMode_FourButtons;
-    }
-    private static final int k_EInputSourceMode_AbsoluteMouse = (int)4L;
-    /**
-     * {@snippet lang=c :
-     * enum EInputSourceMode.k_EInputSourceMode_AbsoluteMouse = 4
-     * }
-     */
-    public static int k_EInputSourceMode_AbsoluteMouse() {
-        return k_EInputSourceMode_AbsoluteMouse;
-    }
-    private static final int k_EInputSourceMode_RelativeMouse = (int)5L;
-    /**
-     * {@snippet lang=c :
-     * enum EInputSourceMode.k_EInputSourceMode_RelativeMouse = 5
-     * }
-     */
-    public static int k_EInputSourceMode_RelativeMouse() {
-        return k_EInputSourceMode_RelativeMouse;
-    }
-    private static final int k_EInputSourceMode_JoystickMove = (int)6L;
-    /**
-     * {@snippet lang=c :
-     * enum EInputSourceMode.k_EInputSourceMode_JoystickMove = 6
-     * }
-     */
-    public static int k_EInputSourceMode_JoystickMove() {
-        return k_EInputSourceMode_JoystickMove;
-    }
-    private static final int k_EInputSourceMode_JoystickMouse = (int)7L;
-    /**
-     * {@snippet lang=c :
-     * enum EInputSourceMode.k_EInputSourceMode_JoystickMouse = 7
-     * }
-     */
-    public static int k_EInputSourceMode_JoystickMouse() {
-        return k_EInputSourceMode_JoystickMouse;
-    }
-    private static final int k_EInputSourceMode_JoystickCamera = (int)8L;
-    /**
-     * {@snippet lang=c :
-     * enum EInputSourceMode.k_EInputSourceMode_JoystickCamera = 8
-     * }
-     */
-    public static int k_EInputSourceMode_JoystickCamera() {
-        return k_EInputSourceMode_JoystickCamera;
-    }
-    private static final int k_EInputSourceMode_ScrollWheel = (int)9L;
-    /**
-     * {@snippet lang=c :
-     * enum EInputSourceMode.k_EInputSourceMode_ScrollWheel = 9
-     * }
-     */
-    public static int k_EInputSourceMode_ScrollWheel() {
-        return k_EInputSourceMode_ScrollWheel;
-    }
-    private static final int k_EInputSourceMode_Trigger = (int)10L;
-    /**
-     * {@snippet lang=c :
-     * enum EInputSourceMode.k_EInputSourceMode_Trigger = 10
-     * }
-     */
-    public static int k_EInputSourceMode_Trigger() {
-        return k_EInputSourceMode_Trigger;
-    }
-    private static final int k_EInputSourceMode_TouchMenu = (int)11L;
-    /**
-     * {@snippet lang=c :
-     * enum EInputSourceMode.k_EInputSourceMode_TouchMenu = 11
-     * }
-     */
-    public static int k_EInputSourceMode_TouchMenu() {
-        return k_EInputSourceMode_TouchMenu;
-    }
-    private static final int k_EInputSourceMode_MouseJoystick = (int)12L;
-    /**
-     * {@snippet lang=c :
-     * enum EInputSourceMode.k_EInputSourceMode_MouseJoystick = 12
-     * }
-     */
-    public static int k_EInputSourceMode_MouseJoystick() {
-        return k_EInputSourceMode_MouseJoystick;
-    }
-    private static final int k_EInputSourceMode_MouseRegion = (int)13L;
-    /**
-     * {@snippet lang=c :
-     * enum EInputSourceMode.k_EInputSourceMode_MouseRegion = 13
-     * }
-     */
-    public static int k_EInputSourceMode_MouseRegion() {
-        return k_EInputSourceMode_MouseRegion;
-    }
-    private static final int k_EInputSourceMode_RadialMenu = (int)14L;
-    /**
-     * {@snippet lang=c :
-     * enum EInputSourceMode.k_EInputSourceMode_RadialMenu = 14
-     * }
-     */
-    public static int k_EInputSourceMode_RadialMenu() {
-        return k_EInputSourceMode_RadialMenu;
-    }
-    private static final int k_EInputSourceMode_SingleButton = (int)15L;
-    /**
-     * {@snippet lang=c :
-     * enum EInputSourceMode.k_EInputSourceMode_SingleButton = 15
-     * }
-     */
-    public static int k_EInputSourceMode_SingleButton() {
-        return k_EInputSourceMode_SingleButton;
-    }
-    private static final int k_EInputSourceMode_Switches = (int)16L;
-    /**
-     * {@snippet lang=c :
-     * enum EInputSourceMode.k_EInputSourceMode_Switches = 16
-     * }
-     */
-    public static int k_EInputSourceMode_Switches() {
-        return k_EInputSourceMode_Switches;
-    }
-    private static final int k_EInputActionOrigin_None = (int)0L;
-    /**
-     * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_None = 0
-     * }
-     */
-    public static int k_EInputActionOrigin_None() {
-        return k_EInputActionOrigin_None;
-    }
-    private static final int k_EInputActionOrigin_SteamController_A = (int)1L;
-    /**
-     * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_SteamController_A = 1
-     * }
-     */
-    public static int k_EInputActionOrigin_SteamController_A() {
-        return k_EInputActionOrigin_SteamController_A;
-    }
-    private static final int k_EInputActionOrigin_SteamController_B = (int)2L;
-    /**
-     * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_SteamController_B = 2
-     * }
-     */
-    public static int k_EInputActionOrigin_SteamController_B() {
-        return k_EInputActionOrigin_SteamController_B;
-    }
-    private static final int k_EInputActionOrigin_SteamController_X = (int)3L;
-    /**
-     * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_SteamController_X = 3
-     * }
-     */
-    public static int k_EInputActionOrigin_SteamController_X() {
-        return k_EInputActionOrigin_SteamController_X;
-    }
-    private static final int k_EInputActionOrigin_SteamController_Y = (int)4L;
-    /**
-     * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_SteamController_Y = 4
-     * }
-     */
-    public static int k_EInputActionOrigin_SteamController_Y() {
-        return k_EInputActionOrigin_SteamController_Y;
-    }
-    private static final int k_EInputActionOrigin_SteamController_LeftBumper = (int)5L;
-    /**
-     * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_SteamController_LeftBumper = 5
-     * }
-     */
-    public static int k_EInputActionOrigin_SteamController_LeftBumper() {
-        return k_EInputActionOrigin_SteamController_LeftBumper;
-    }
-    private static final int k_EInputActionOrigin_SteamController_RightBumper = (int)6L;
-    /**
-     * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_SteamController_RightBumper = 6
-     * }
-     */
-    public static int k_EInputActionOrigin_SteamController_RightBumper() {
-        return k_EInputActionOrigin_SteamController_RightBumper;
-    }
-    private static final int k_EInputActionOrigin_SteamController_LeftGrip = (int)7L;
-    /**
-     * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_SteamController_LeftGrip = 7
-     * }
-     */
-    public static int k_EInputActionOrigin_SteamController_LeftGrip() {
-        return k_EInputActionOrigin_SteamController_LeftGrip;
-    }
-    private static final int k_EInputActionOrigin_SteamController_RightGrip = (int)8L;
-    /**
-     * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_SteamController_RightGrip = 8
-     * }
-     */
-    public static int k_EInputActionOrigin_SteamController_RightGrip() {
-        return k_EInputActionOrigin_SteamController_RightGrip;
-    }
-    private static final int k_EInputActionOrigin_SteamController_Start = (int)9L;
-    /**
-     * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_SteamController_Start = 9
-     * }
-     */
-    public static int k_EInputActionOrigin_SteamController_Start() {
-        return k_EInputActionOrigin_SteamController_Start;
-    }
-    private static final int k_EInputActionOrigin_SteamController_Back = (int)10L;
-    /**
-     * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_SteamController_Back = 10
-     * }
-     */
-    public static int k_EInputActionOrigin_SteamController_Back() {
-        return k_EInputActionOrigin_SteamController_Back;
-    }
-    private static final int k_EInputActionOrigin_SteamController_LeftPad_Touch = (int)11L;
-    /**
-     * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_SteamController_LeftPad_Touch = 11
-     * }
-     */
-    public static int k_EInputActionOrigin_SteamController_LeftPad_Touch() {
-        return k_EInputActionOrigin_SteamController_LeftPad_Touch;
-    }
-    private static final int k_EInputActionOrigin_SteamController_LeftPad_Swipe = (int)12L;
-    /**
-     * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_SteamController_LeftPad_Swipe = 12
-     * }
-     */
-    public static int k_EInputActionOrigin_SteamController_LeftPad_Swipe() {
-        return k_EInputActionOrigin_SteamController_LeftPad_Swipe;
-    }
-    private static final int k_EInputActionOrigin_SteamController_LeftPad_Click = (int)13L;
-    /**
-     * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_SteamController_LeftPad_Click = 13
-     * }
-     */
-    public static int k_EInputActionOrigin_SteamController_LeftPad_Click() {
-        return k_EInputActionOrigin_SteamController_LeftPad_Click;
-    }
-    private static final int k_EInputActionOrigin_SteamController_LeftPad_DPadNorth = (int)14L;
-    /**
-     * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_SteamController_LeftPad_DPadNorth = 14
-     * }
-     */
-    public static int k_EInputActionOrigin_SteamController_LeftPad_DPadNorth() {
-        return k_EInputActionOrigin_SteamController_LeftPad_DPadNorth;
-    }
-    private static final int k_EInputActionOrigin_SteamController_LeftPad_DPadSouth = (int)15L;
-    /**
-     * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_SteamController_LeftPad_DPadSouth = 15
-     * }
-     */
-    public static int k_EInputActionOrigin_SteamController_LeftPad_DPadSouth() {
-        return k_EInputActionOrigin_SteamController_LeftPad_DPadSouth;
-    }
-    private static final int k_EInputActionOrigin_SteamController_LeftPad_DPadWest = (int)16L;
-    /**
-     * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_SteamController_LeftPad_DPadWest = 16
-     * }
-     */
-    public static int k_EInputActionOrigin_SteamController_LeftPad_DPadWest() {
-        return k_EInputActionOrigin_SteamController_LeftPad_DPadWest;
-    }
-    private static final int k_EInputActionOrigin_SteamController_LeftPad_DPadEast = (int)17L;
-    /**
-     * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_SteamController_LeftPad_DPadEast = 17
-     * }
-     */
-    public static int k_EInputActionOrigin_SteamController_LeftPad_DPadEast() {
-        return k_EInputActionOrigin_SteamController_LeftPad_DPadEast;
-    }
-    private static final int k_EInputActionOrigin_SteamController_RightPad_Touch = (int)18L;
-    /**
-     * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_SteamController_RightPad_Touch = 18
-     * }
-     */
-    public static int k_EInputActionOrigin_SteamController_RightPad_Touch() {
-        return k_EInputActionOrigin_SteamController_RightPad_Touch;
-    }
-    private static final int k_EInputActionOrigin_SteamController_RightPad_Swipe = (int)19L;
-    /**
-     * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_SteamController_RightPad_Swipe = 19
-     * }
-     */
-    public static int k_EInputActionOrigin_SteamController_RightPad_Swipe() {
-        return k_EInputActionOrigin_SteamController_RightPad_Swipe;
-    }
-    private static final int k_EInputActionOrigin_SteamController_RightPad_Click = (int)20L;
-    /**
-     * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_SteamController_RightPad_Click = 20
-     * }
-     */
-    public static int k_EInputActionOrigin_SteamController_RightPad_Click() {
-        return k_EInputActionOrigin_SteamController_RightPad_Click;
-    }
-    private static final int k_EInputActionOrigin_SteamController_RightPad_DPadNorth = (int)21L;
-    /**
-     * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_SteamController_RightPad_DPadNorth = 21
-     * }
-     */
-    public static int k_EInputActionOrigin_SteamController_RightPad_DPadNorth() {
-        return k_EInputActionOrigin_SteamController_RightPad_DPadNorth;
-    }
-    private static final int k_EInputActionOrigin_SteamController_RightPad_DPadSouth = (int)22L;
-    /**
-     * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_SteamController_RightPad_DPadSouth = 22
-     * }
-     */
-    public static int k_EInputActionOrigin_SteamController_RightPad_DPadSouth() {
-        return k_EInputActionOrigin_SteamController_RightPad_DPadSouth;
-    }
-    private static final int k_EInputActionOrigin_SteamController_RightPad_DPadWest = (int)23L;
-    /**
-     * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_SteamController_RightPad_DPadWest = 23
-     * }
-     */
-    public static int k_EInputActionOrigin_SteamController_RightPad_DPadWest() {
-        return k_EInputActionOrigin_SteamController_RightPad_DPadWest;
-    }
-    private static final int k_EInputActionOrigin_SteamController_RightPad_DPadEast = (int)24L;
-    /**
-     * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_SteamController_RightPad_DPadEast = 24
-     * }
-     */
-    public static int k_EInputActionOrigin_SteamController_RightPad_DPadEast() {
-        return k_EInputActionOrigin_SteamController_RightPad_DPadEast;
-    }
-    private static final int k_EInputActionOrigin_SteamController_LeftTrigger_Pull = (int)25L;
-    /**
-     * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_SteamController_LeftTrigger_Pull = 25
-     * }
-     */
-    public static int k_EInputActionOrigin_SteamController_LeftTrigger_Pull() {
-        return k_EInputActionOrigin_SteamController_LeftTrigger_Pull;
-    }
-    private static final int k_EInputActionOrigin_SteamController_LeftTrigger_Click = (int)26L;
-    /**
-     * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_SteamController_LeftTrigger_Click = 26
-     * }
-     */
-    public static int k_EInputActionOrigin_SteamController_LeftTrigger_Click() {
-        return k_EInputActionOrigin_SteamController_LeftTrigger_Click;
-    }
-    private static final int k_EInputActionOrigin_SteamController_RightTrigger_Pull = (int)27L;
-    /**
-     * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_SteamController_RightTrigger_Pull = 27
-     * }
-     */
-    public static int k_EInputActionOrigin_SteamController_RightTrigger_Pull() {
-        return k_EInputActionOrigin_SteamController_RightTrigger_Pull;
-    }
-    private static final int k_EInputActionOrigin_SteamController_RightTrigger_Click = (int)28L;
-    /**
-     * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_SteamController_RightTrigger_Click = 28
-     * }
-     */
-    public static int k_EInputActionOrigin_SteamController_RightTrigger_Click() {
-        return k_EInputActionOrigin_SteamController_RightTrigger_Click;
-    }
-    private static final int k_EInputActionOrigin_SteamController_LeftStick_Move = (int)29L;
-    /**
-     * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_SteamController_LeftStick_Move = 29
-     * }
-     */
-    public static int k_EInputActionOrigin_SteamController_LeftStick_Move() {
-        return k_EInputActionOrigin_SteamController_LeftStick_Move;
-    }
-    private static final int k_EInputActionOrigin_SteamController_LeftStick_Click = (int)30L;
-    /**
-     * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_SteamController_LeftStick_Click = 30
-     * }
-     */
-    public static int k_EInputActionOrigin_SteamController_LeftStick_Click() {
-        return k_EInputActionOrigin_SteamController_LeftStick_Click;
-    }
-    private static final int k_EInputActionOrigin_SteamController_LeftStick_DPadNorth = (int)31L;
-    /**
-     * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_SteamController_LeftStick_DPadNorth = 31
-     * }
-     */
-    public static int k_EInputActionOrigin_SteamController_LeftStick_DPadNorth() {
-        return k_EInputActionOrigin_SteamController_LeftStick_DPadNorth;
-    }
-    private static final int k_EInputActionOrigin_SteamController_LeftStick_DPadSouth = (int)32L;
-    /**
-     * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_SteamController_LeftStick_DPadSouth = 32
-     * }
-     */
-    public static int k_EInputActionOrigin_SteamController_LeftStick_DPadSouth() {
-        return k_EInputActionOrigin_SteamController_LeftStick_DPadSouth;
-    }
-    private static final int k_EInputActionOrigin_SteamController_LeftStick_DPadWest = (int)33L;
-    /**
-     * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_SteamController_LeftStick_DPadWest = 33
-     * }
-     */
-    public static int k_EInputActionOrigin_SteamController_LeftStick_DPadWest() {
-        return k_EInputActionOrigin_SteamController_LeftStick_DPadWest;
-    }
-    private static final int k_EInputActionOrigin_SteamController_LeftStick_DPadEast = (int)34L;
-    /**
-     * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_SteamController_LeftStick_DPadEast = 34
-     * }
-     */
-    public static int k_EInputActionOrigin_SteamController_LeftStick_DPadEast() {
-        return k_EInputActionOrigin_SteamController_LeftStick_DPadEast;
-    }
-    private static final int k_EInputActionOrigin_SteamController_Gyro_Move = (int)35L;
-    /**
-     * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_SteamController_Gyro_Move = 35
-     * }
-     */
-    public static int k_EInputActionOrigin_SteamController_Gyro_Move() {
-        return k_EInputActionOrigin_SteamController_Gyro_Move;
-    }
-    private static final int k_EInputActionOrigin_SteamController_Gyro_Pitch = (int)36L;
-    /**
-     * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_SteamController_Gyro_Pitch = 36
-     * }
-     */
-    public static int k_EInputActionOrigin_SteamController_Gyro_Pitch() {
-        return k_EInputActionOrigin_SteamController_Gyro_Pitch;
-    }
-    private static final int k_EInputActionOrigin_SteamController_Gyro_Yaw = (int)37L;
-    /**
-     * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_SteamController_Gyro_Yaw = 37
-     * }
-     */
-    public static int k_EInputActionOrigin_SteamController_Gyro_Yaw() {
-        return k_EInputActionOrigin_SteamController_Gyro_Yaw;
-    }
-    private static final int k_EInputActionOrigin_SteamController_Gyro_Roll = (int)38L;
-    /**
-     * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_SteamController_Gyro_Roll = 38
-     * }
-     */
-    public static int k_EInputActionOrigin_SteamController_Gyro_Roll() {
-        return k_EInputActionOrigin_SteamController_Gyro_Roll;
-    }
-    private static final int k_EInputActionOrigin_SteamController_Reserved0 = (int)39L;
-    /**
-     * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_SteamController_Reserved0 = 39
-     * }
-     */
-    public static int k_EInputActionOrigin_SteamController_Reserved0() {
-        return k_EInputActionOrigin_SteamController_Reserved0;
-    }
-    private static final int k_EInputActionOrigin_SteamController_Reserved1 = (int)40L;
-    /**
-     * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_SteamController_Reserved1 = 40
-     * }
-     */
-    public static int k_EInputActionOrigin_SteamController_Reserved1() {
-        return k_EInputActionOrigin_SteamController_Reserved1;
-    }
-    private static final int k_EInputActionOrigin_SteamController_Reserved2 = (int)41L;
-    /**
-     * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_SteamController_Reserved2 = 41
-     * }
-     */
-    public static int k_EInputActionOrigin_SteamController_Reserved2() {
-        return k_EInputActionOrigin_SteamController_Reserved2;
-    }
-    private static final int k_EInputActionOrigin_SteamController_Reserved3 = (int)42L;
-    /**
-     * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_SteamController_Reserved3 = 42
-     * }
-     */
-    public static int k_EInputActionOrigin_SteamController_Reserved3() {
-        return k_EInputActionOrigin_SteamController_Reserved3;
-    }
-    private static final int k_EInputActionOrigin_SteamController_Reserved4 = (int)43L;
-    /**
-     * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_SteamController_Reserved4 = 43
-     * }
-     */
-    public static int k_EInputActionOrigin_SteamController_Reserved4() {
-        return k_EInputActionOrigin_SteamController_Reserved4;
-    }
-    private static final int k_EInputActionOrigin_SteamController_Reserved5 = (int)44L;
-    /**
-     * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_SteamController_Reserved5 = 44
-     * }
-     */
-    public static int k_EInputActionOrigin_SteamController_Reserved5() {
-        return k_EInputActionOrigin_SteamController_Reserved5;
-    }
-    private static final int k_EInputActionOrigin_SteamController_Reserved6 = (int)45L;
-    /**
-     * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_SteamController_Reserved6 = 45
-     * }
-     */
-    public static int k_EInputActionOrigin_SteamController_Reserved6() {
-        return k_EInputActionOrigin_SteamController_Reserved6;
-    }
-    private static final int k_EInputActionOrigin_SteamController_Reserved7 = (int)46L;
-    /**
-     * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_SteamController_Reserved7 = 46
-     * }
-     */
-    public static int k_EInputActionOrigin_SteamController_Reserved7() {
-        return k_EInputActionOrigin_SteamController_Reserved7;
-    }
-    private static final int k_EInputActionOrigin_SteamController_Reserved8 = (int)47L;
-    /**
-     * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_SteamController_Reserved8 = 47
-     * }
-     */
-    public static int k_EInputActionOrigin_SteamController_Reserved8() {
-        return k_EInputActionOrigin_SteamController_Reserved8;
-    }
-    private static final int k_EInputActionOrigin_SteamController_Reserved9 = (int)48L;
-    /**
-     * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_SteamController_Reserved9 = 48
-     * }
-     */
-    public static int k_EInputActionOrigin_SteamController_Reserved9() {
-        return k_EInputActionOrigin_SteamController_Reserved9;
-    }
-    private static final int k_EInputActionOrigin_SteamController_Reserved10 = (int)49L;
-    /**
-     * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_SteamController_Reserved10 = 49
-     * }
-     */
-    public static int k_EInputActionOrigin_SteamController_Reserved10() {
-        return k_EInputActionOrigin_SteamController_Reserved10;
-    }
-    private static final int k_EInputActionOrigin_PS4_X = (int)50L;
-    /**
-     * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_PS4_X = 50
-     * }
-     */
-    public static int k_EInputActionOrigin_PS4_X() {
-        return k_EInputActionOrigin_PS4_X;
-    }
-    private static final int k_EInputActionOrigin_PS4_Circle = (int)51L;
-    /**
-     * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_PS4_Circle = 51
-     * }
-     */
-    public static int k_EInputActionOrigin_PS4_Circle() {
-        return k_EInputActionOrigin_PS4_Circle;
-    }
-    private static final int k_EInputActionOrigin_PS4_Triangle = (int)52L;
-    /**
-     * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_PS4_Triangle = 52
-     * }
-     */
-    public static int k_EInputActionOrigin_PS4_Triangle() {
-        return k_EInputActionOrigin_PS4_Triangle;
-    }
-    private static final int k_EInputActionOrigin_PS4_Square = (int)53L;
-    /**
-     * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_PS4_Square = 53
-     * }
-     */
-    public static int k_EInputActionOrigin_PS4_Square() {
-        return k_EInputActionOrigin_PS4_Square;
-    }
-    private static final int k_EInputActionOrigin_PS4_LeftBumper = (int)54L;
-    /**
-     * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_PS4_LeftBumper = 54
-     * }
-     */
-    public static int k_EInputActionOrigin_PS4_LeftBumper() {
-        return k_EInputActionOrigin_PS4_LeftBumper;
-    }
-    private static final int k_EInputActionOrigin_PS4_RightBumper = (int)55L;
-    /**
-     * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_PS4_RightBumper = 55
-     * }
-     */
-    public static int k_EInputActionOrigin_PS4_RightBumper() {
-        return k_EInputActionOrigin_PS4_RightBumper;
-    }
-    private static final int k_EInputActionOrigin_PS4_Options = (int)56L;
-    /**
-     * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_PS4_Options = 56
-     * }
-     */
-    public static int k_EInputActionOrigin_PS4_Options() {
-        return k_EInputActionOrigin_PS4_Options;
-    }
-    private static final int k_EInputActionOrigin_PS4_Share = (int)57L;
-    /**
-     * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_PS4_Share = 57
-     * }
-     */
-    public static int k_EInputActionOrigin_PS4_Share() {
-        return k_EInputActionOrigin_PS4_Share;
-    }
-    private static final int k_EInputActionOrigin_PS4_LeftPad_Touch = (int)58L;
-    /**
-     * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_PS4_LeftPad_Touch = 58
-     * }
-     */
-    public static int k_EInputActionOrigin_PS4_LeftPad_Touch() {
-        return k_EInputActionOrigin_PS4_LeftPad_Touch;
-    }
-    private static final int k_EInputActionOrigin_PS4_LeftPad_Swipe = (int)59L;
-    /**
-     * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_PS4_LeftPad_Swipe = 59
-     * }
-     */
-    public static int k_EInputActionOrigin_PS4_LeftPad_Swipe() {
-        return k_EInputActionOrigin_PS4_LeftPad_Swipe;
-    }
-    private static final int k_EInputActionOrigin_PS4_LeftPad_Click = (int)60L;
-    /**
-     * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_PS4_LeftPad_Click = 60
-     * }
-     */
-    public static int k_EInputActionOrigin_PS4_LeftPad_Click() {
-        return k_EInputActionOrigin_PS4_LeftPad_Click;
-    }
-    private static final int k_EInputActionOrigin_PS4_LeftPad_DPadNorth = (int)61L;
-    /**
-     * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_PS4_LeftPad_DPadNorth = 61
-     * }
-     */
-    public static int k_EInputActionOrigin_PS4_LeftPad_DPadNorth() {
-        return k_EInputActionOrigin_PS4_LeftPad_DPadNorth;
-    }
-    private static final int k_EInputActionOrigin_PS4_LeftPad_DPadSouth = (int)62L;
-    /**
-     * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_PS4_LeftPad_DPadSouth = 62
-     * }
-     */
-    public static int k_EInputActionOrigin_PS4_LeftPad_DPadSouth() {
-        return k_EInputActionOrigin_PS4_LeftPad_DPadSouth;
-    }
-    private static final int k_EInputActionOrigin_PS4_LeftPad_DPadWest = (int)63L;
-    /**
-     * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_PS4_LeftPad_DPadWest = 63
-     * }
-     */
-    public static int k_EInputActionOrigin_PS4_LeftPad_DPadWest() {
-        return k_EInputActionOrigin_PS4_LeftPad_DPadWest;
-    }
-    private static final int k_EInputActionOrigin_PS4_LeftPad_DPadEast = (int)64L;
-    /**
-     * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_PS4_LeftPad_DPadEast = 64
-     * }
-     */
-    public static int k_EInputActionOrigin_PS4_LeftPad_DPadEast() {
-        return k_EInputActionOrigin_PS4_LeftPad_DPadEast;
-    }
-    private static final int k_EInputActionOrigin_PS4_RightPad_Touch = (int)65L;
-    /**
-     * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_PS4_RightPad_Touch = 65
-     * }
-     */
-    public static int k_EInputActionOrigin_PS4_RightPad_Touch() {
-        return k_EInputActionOrigin_PS4_RightPad_Touch;
-    }
-    private static final int k_EInputActionOrigin_PS4_RightPad_Swipe = (int)66L;
-    /**
-     * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_PS4_RightPad_Swipe = 66
-     * }
-     */
-    public static int k_EInputActionOrigin_PS4_RightPad_Swipe() {
-        return k_EInputActionOrigin_PS4_RightPad_Swipe;
-    }
-    private static final int k_EInputActionOrigin_PS4_RightPad_Click = (int)67L;
-    /**
-     * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_PS4_RightPad_Click = 67
-     * }
-     */
-    public static int k_EInputActionOrigin_PS4_RightPad_Click() {
-        return k_EInputActionOrigin_PS4_RightPad_Click;
-    }
-    private static final int k_EInputActionOrigin_PS4_RightPad_DPadNorth = (int)68L;
-    /**
-     * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_PS4_RightPad_DPadNorth = 68
-     * }
-     */
-    public static int k_EInputActionOrigin_PS4_RightPad_DPadNorth() {
-        return k_EInputActionOrigin_PS4_RightPad_DPadNorth;
-    }
-    private static final int k_EInputActionOrigin_PS4_RightPad_DPadSouth = (int)69L;
-    /**
-     * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_PS4_RightPad_DPadSouth = 69
-     * }
-     */
-    public static int k_EInputActionOrigin_PS4_RightPad_DPadSouth() {
-        return k_EInputActionOrigin_PS4_RightPad_DPadSouth;
-    }
-    private static final int k_EInputActionOrigin_PS4_RightPad_DPadWest = (int)70L;
-    /**
-     * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_PS4_RightPad_DPadWest = 70
-     * }
-     */
-    public static int k_EInputActionOrigin_PS4_RightPad_DPadWest() {
-        return k_EInputActionOrigin_PS4_RightPad_DPadWest;
-    }
-    private static final int k_EInputActionOrigin_PS4_RightPad_DPadEast = (int)71L;
-    /**
-     * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_PS4_RightPad_DPadEast = 71
-     * }
-     */
-    public static int k_EInputActionOrigin_PS4_RightPad_DPadEast() {
-        return k_EInputActionOrigin_PS4_RightPad_DPadEast;
-    }
-    private static final int k_EInputActionOrigin_PS4_CenterPad_Touch = (int)72L;
-    /**
-     * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_PS4_CenterPad_Touch = 72
-     * }
-     */
-    public static int k_EInputActionOrigin_PS4_CenterPad_Touch() {
-        return k_EInputActionOrigin_PS4_CenterPad_Touch;
-    }
-    private static final int k_EInputActionOrigin_PS4_CenterPad_Swipe = (int)73L;
-    /**
-     * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_PS4_CenterPad_Swipe = 73
-     * }
-     */
-    public static int k_EInputActionOrigin_PS4_CenterPad_Swipe() {
-        return k_EInputActionOrigin_PS4_CenterPad_Swipe;
-    }
-    private static final int k_EInputActionOrigin_PS4_CenterPad_Click = (int)74L;
-    /**
-     * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_PS4_CenterPad_Click = 74
-     * }
-     */
-    public static int k_EInputActionOrigin_PS4_CenterPad_Click() {
-        return k_EInputActionOrigin_PS4_CenterPad_Click;
-    }
-    private static final int k_EInputActionOrigin_PS4_CenterPad_DPadNorth = (int)75L;
-    /**
-     * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_PS4_CenterPad_DPadNorth = 75
-     * }
-     */
-    public static int k_EInputActionOrigin_PS4_CenterPad_DPadNorth() {
-        return k_EInputActionOrigin_PS4_CenterPad_DPadNorth;
-    }
-    private static final int k_EInputActionOrigin_PS4_CenterPad_DPadSouth = (int)76L;
-    /**
-     * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_PS4_CenterPad_DPadSouth = 76
-     * }
-     */
-    public static int k_EInputActionOrigin_PS4_CenterPad_DPadSouth() {
-        return k_EInputActionOrigin_PS4_CenterPad_DPadSouth;
-    }
-    private static final int k_EInputActionOrigin_PS4_CenterPad_DPadWest = (int)77L;
-    /**
-     * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_PS4_CenterPad_DPadWest = 77
-     * }
-     */
-    public static int k_EInputActionOrigin_PS4_CenterPad_DPadWest() {
-        return k_EInputActionOrigin_PS4_CenterPad_DPadWest;
-    }
-    private static final int k_EInputActionOrigin_PS4_CenterPad_DPadEast = (int)78L;
-    /**
-     * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_PS4_CenterPad_DPadEast = 78
-     * }
-     */
-    public static int k_EInputActionOrigin_PS4_CenterPad_DPadEast() {
-        return k_EInputActionOrigin_PS4_CenterPad_DPadEast;
-    }
-    private static final int k_EInputActionOrigin_PS4_LeftTrigger_Pull = (int)79L;
-    /**
-     * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_PS4_LeftTrigger_Pull = 79
-     * }
-     */
-    public static int k_EInputActionOrigin_PS4_LeftTrigger_Pull() {
-        return k_EInputActionOrigin_PS4_LeftTrigger_Pull;
-    }
-    private static final int k_EInputActionOrigin_PS4_LeftTrigger_Click = (int)80L;
-    /**
-     * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_PS4_LeftTrigger_Click = 80
-     * }
-     */
-    public static int k_EInputActionOrigin_PS4_LeftTrigger_Click() {
-        return k_EInputActionOrigin_PS4_LeftTrigger_Click;
-    }
-    private static final int k_EInputActionOrigin_PS4_RightTrigger_Pull = (int)81L;
-    /**
-     * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_PS4_RightTrigger_Pull = 81
-     * }
-     */
-    public static int k_EInputActionOrigin_PS4_RightTrigger_Pull() {
-        return k_EInputActionOrigin_PS4_RightTrigger_Pull;
+    public static void SteamAPI_servernetadr_t_SetQueryPort(short usPort) {
+        var mh$ = SteamAPI_servernetadr_t_SetQueryPort.HANDLE;
+        try {
+            if (TRACE_DOWNCALLS) {
+                traceDowncall("SteamAPI_servernetadr_t_SetQueryPort", usPort);
+            }
+            mh$.invokeExact(usPort);
+        } catch (Throwable ex$) {
+           throw new AssertionError("should not reach here", ex$);
+        }
     }
-    private static final int k_EInputActionOrigin_PS4_RightTrigger_Click = (int)82L;
-    /**
-     * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_PS4_RightTrigger_Click = 82
-     * }
-     */
-    public static int k_EInputActionOrigin_PS4_RightTrigger_Click() {
-        return k_EInputActionOrigin_PS4_RightTrigger_Click;
+
+    private static class SteamAPI_servernetadr_t_GetConnectionPort {
+        public static final FunctionDescriptor DESC = FunctionDescriptor.of(
+            SteamFlat4j.C_SHORT    );
+
+        public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(
+                    SteamFlat4j.findOrThrow("SteamAPI_servernetadr_t_GetConnectionPort"),
+                    DESC);
     }
-    private static final int k_EInputActionOrigin_PS4_LeftStick_Move = (int)83L;
+
     /**
+     * Function descriptor for:
      * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_PS4_LeftStick_Move = 83
+     * uint16 SteamAPI_servernetadr_t_GetConnectionPort()
      * }
      */
-    public static int k_EInputActionOrigin_PS4_LeftStick_Move() {
-        return k_EInputActionOrigin_PS4_LeftStick_Move;
+    public static FunctionDescriptor SteamAPI_servernetadr_t_GetConnectionPort$descriptor() {
+        return SteamAPI_servernetadr_t_GetConnectionPort.DESC;
     }
-    private static final int k_EInputActionOrigin_PS4_LeftStick_Click = (int)84L;
+
     /**
+     * Downcall method handle for:
      * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_PS4_LeftStick_Click = 84
+     * uint16 SteamAPI_servernetadr_t_GetConnectionPort()
      * }
      */
-    public static int k_EInputActionOrigin_PS4_LeftStick_Click() {
-        return k_EInputActionOrigin_PS4_LeftStick_Click;
+    public static MethodHandle SteamAPI_servernetadr_t_GetConnectionPort$handle() {
+        return SteamAPI_servernetadr_t_GetConnectionPort.HANDLE;
     }
-    private static final int k_EInputActionOrigin_PS4_LeftStick_DPadNorth = (int)85L;
     /**
      * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_PS4_LeftStick_DPadNorth = 85
+     * uint16 SteamAPI_servernetadr_t_GetConnectionPort()
      * }
      */
-    public static int k_EInputActionOrigin_PS4_LeftStick_DPadNorth() {
-        return k_EInputActionOrigin_PS4_LeftStick_DPadNorth;
+    public static short SteamAPI_servernetadr_t_GetConnectionPort() {
+        var mh$ = SteamAPI_servernetadr_t_GetConnectionPort.HANDLE;
+        try {
+            if (TRACE_DOWNCALLS) {
+                traceDowncall("SteamAPI_servernetadr_t_GetConnectionPort");
+            }
+            return (short)mh$.invokeExact();
+        } catch (Throwable ex$) {
+           throw new AssertionError("should not reach here", ex$);
+        }
     }
-    private static final int k_EInputActionOrigin_PS4_LeftStick_DPadSouth = (int)86L;
-    /**
-     * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_PS4_LeftStick_DPadSouth = 86
-     * }
-     */
-    public static int k_EInputActionOrigin_PS4_LeftStick_DPadSouth() {
-        return k_EInputActionOrigin_PS4_LeftStick_DPadSouth;
+
+    private static class SteamAPI_servernetadr_t_SetConnectionPort {
+        public static final FunctionDescriptor DESC = FunctionDescriptor.ofVoid(
+            SteamFlat4j.C_SHORT
+        );
+
+        public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(
+                    SteamFlat4j.findOrThrow("SteamAPI_servernetadr_t_SetConnectionPort"),
+                    DESC);
     }
-    private static final int k_EInputActionOrigin_PS4_LeftStick_DPadWest = (int)87L;
+
     /**
+     * Function descriptor for:
      * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_PS4_LeftStick_DPadWest = 87
+     * void SteamAPI_servernetadr_t_SetConnectionPort(uint16 usPort)
      * }
      */
-    public static int k_EInputActionOrigin_PS4_LeftStick_DPadWest() {
-        return k_EInputActionOrigin_PS4_LeftStick_DPadWest;
+    public static FunctionDescriptor SteamAPI_servernetadr_t_SetConnectionPort$descriptor() {
+        return SteamAPI_servernetadr_t_SetConnectionPort.DESC;
     }
-    private static final int k_EInputActionOrigin_PS4_LeftStick_DPadEast = (int)88L;
+
     /**
+     * Downcall method handle for:
      * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_PS4_LeftStick_DPadEast = 88
+     * void SteamAPI_servernetadr_t_SetConnectionPort(uint16 usPort)
      * }
      */
-    public static int k_EInputActionOrigin_PS4_LeftStick_DPadEast() {
-        return k_EInputActionOrigin_PS4_LeftStick_DPadEast;
+    public static MethodHandle SteamAPI_servernetadr_t_SetConnectionPort$handle() {
+        return SteamAPI_servernetadr_t_SetConnectionPort.HANDLE;
     }
-    private static final int k_EInputActionOrigin_PS4_RightStick_Move = (int)89L;
     /**
      * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_PS4_RightStick_Move = 89
+     * void SteamAPI_servernetadr_t_SetConnectionPort(uint16 usPort)
      * }
      */
-    public static int k_EInputActionOrigin_PS4_RightStick_Move() {
-        return k_EInputActionOrigin_PS4_RightStick_Move;
+    public static void SteamAPI_servernetadr_t_SetConnectionPort(short usPort) {
+        var mh$ = SteamAPI_servernetadr_t_SetConnectionPort.HANDLE;
+        try {
+            if (TRACE_DOWNCALLS) {
+                traceDowncall("SteamAPI_servernetadr_t_SetConnectionPort", usPort);
+            }
+            mh$.invokeExact(usPort);
+        } catch (Throwable ex$) {
+           throw new AssertionError("should not reach here", ex$);
+        }
     }
-    private static final int k_EInputActionOrigin_PS4_RightStick_Click = (int)90L;
-    /**
-     * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_PS4_RightStick_Click = 90
-     * }
-     */
-    public static int k_EInputActionOrigin_PS4_RightStick_Click() {
-        return k_EInputActionOrigin_PS4_RightStick_Click;
+
+    private static class SteamAPI_servernetadr_t_GetIP {
+        public static final FunctionDescriptor DESC = FunctionDescriptor.of(
+            SteamFlat4j.C_INT    );
+
+        public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(
+                    SteamFlat4j.findOrThrow("SteamAPI_servernetadr_t_GetIP"),
+                    DESC);
     }
-    private static final int k_EInputActionOrigin_PS4_RightStick_DPadNorth = (int)91L;
+
     /**
+     * Function descriptor for:
      * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_PS4_RightStick_DPadNorth = 91
+     * uint32 SteamAPI_servernetadr_t_GetIP()
      * }
      */
-    public static int k_EInputActionOrigin_PS4_RightStick_DPadNorth() {
-        return k_EInputActionOrigin_PS4_RightStick_DPadNorth;
+    public static FunctionDescriptor SteamAPI_servernetadr_t_GetIP$descriptor() {
+        return SteamAPI_servernetadr_t_GetIP.DESC;
     }
-    private static final int k_EInputActionOrigin_PS4_RightStick_DPadSouth = (int)92L;
+
     /**
+     * Downcall method handle for:
      * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_PS4_RightStick_DPadSouth = 92
+     * uint32 SteamAPI_servernetadr_t_GetIP()
      * }
      */
-    public static int k_EInputActionOrigin_PS4_RightStick_DPadSouth() {
-        return k_EInputActionOrigin_PS4_RightStick_DPadSouth;
+    public static MethodHandle SteamAPI_servernetadr_t_GetIP$handle() {
+        return SteamAPI_servernetadr_t_GetIP.HANDLE;
     }
-    private static final int k_EInputActionOrigin_PS4_RightStick_DPadWest = (int)93L;
     /**
      * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_PS4_RightStick_DPadWest = 93
+     * uint32 SteamAPI_servernetadr_t_GetIP()
      * }
      */
-    public static int k_EInputActionOrigin_PS4_RightStick_DPadWest() {
-        return k_EInputActionOrigin_PS4_RightStick_DPadWest;
+    public static int SteamAPI_servernetadr_t_GetIP() {
+        var mh$ = SteamAPI_servernetadr_t_GetIP.HANDLE;
+        try {
+            if (TRACE_DOWNCALLS) {
+                traceDowncall("SteamAPI_servernetadr_t_GetIP");
+            }
+            return (int)mh$.invokeExact();
+        } catch (Throwable ex$) {
+           throw new AssertionError("should not reach here", ex$);
+        }
     }
-    private static final int k_EInputActionOrigin_PS4_RightStick_DPadEast = (int)94L;
-    /**
-     * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_PS4_RightStick_DPadEast = 94
-     * }
-     */
-    public static int k_EInputActionOrigin_PS4_RightStick_DPadEast() {
-        return k_EInputActionOrigin_PS4_RightStick_DPadEast;
+
+    private static class SteamAPI_servernetadr_t_SetIP {
+        public static final FunctionDescriptor DESC = FunctionDescriptor.ofVoid(
+            SteamFlat4j.C_INT
+        );
+
+        public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(
+                    SteamFlat4j.findOrThrow("SteamAPI_servernetadr_t_SetIP"),
+                    DESC);
     }
-    private static final int k_EInputActionOrigin_PS4_DPad_North = (int)95L;
+
     /**
+     * Function descriptor for:
      * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_PS4_DPad_North = 95
+     * void SteamAPI_servernetadr_t_SetIP(uint32 unIP)
      * }
      */
-    public static int k_EInputActionOrigin_PS4_DPad_North() {
-        return k_EInputActionOrigin_PS4_DPad_North;
+    public static FunctionDescriptor SteamAPI_servernetadr_t_SetIP$descriptor() {
+        return SteamAPI_servernetadr_t_SetIP.DESC;
     }
-    private static final int k_EInputActionOrigin_PS4_DPad_South = (int)96L;
+
     /**
+     * Downcall method handle for:
      * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_PS4_DPad_South = 96
+     * void SteamAPI_servernetadr_t_SetIP(uint32 unIP)
      * }
      */
-    public static int k_EInputActionOrigin_PS4_DPad_South() {
-        return k_EInputActionOrigin_PS4_DPad_South;
+    public static MethodHandle SteamAPI_servernetadr_t_SetIP$handle() {
+        return SteamAPI_servernetadr_t_SetIP.HANDLE;
     }
-    private static final int k_EInputActionOrigin_PS4_DPad_West = (int)97L;
     /**
      * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_PS4_DPad_West = 97
+     * void SteamAPI_servernetadr_t_SetIP(uint32 unIP)
      * }
      */
-    public static int k_EInputActionOrigin_PS4_DPad_West() {
-        return k_EInputActionOrigin_PS4_DPad_West;
+    public static void SteamAPI_servernetadr_t_SetIP(int unIP) {
+        var mh$ = SteamAPI_servernetadr_t_SetIP.HANDLE;
+        try {
+            if (TRACE_DOWNCALLS) {
+                traceDowncall("SteamAPI_servernetadr_t_SetIP", unIP);
+            }
+            mh$.invokeExact(unIP);
+        } catch (Throwable ex$) {
+           throw new AssertionError("should not reach here", ex$);
+        }
     }
-    private static final int k_EInputActionOrigin_PS4_DPad_East = (int)98L;
-    /**
-     * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_PS4_DPad_East = 98
-     * }
-     */
-    public static int k_EInputActionOrigin_PS4_DPad_East() {
-        return k_EInputActionOrigin_PS4_DPad_East;
+
+    private static class SteamAPI_servernetadr_t_GetConnectionAddressString {
+        public static final FunctionDescriptor DESC = FunctionDescriptor.of(
+            SteamFlat4j.C_POINTER    );
+
+        public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(
+                    SteamFlat4j.findOrThrow("SteamAPI_servernetadr_t_GetConnectionAddressString"),
+                    DESC);
     }
-    private static final int k_EInputActionOrigin_PS4_Gyro_Move = (int)99L;
+
     /**
+     * Function descriptor for:
      * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_PS4_Gyro_Move = 99
+     * const char *SteamAPI_servernetadr_t_GetConnectionAddressString()
      * }
      */
-    public static int k_EInputActionOrigin_PS4_Gyro_Move() {
-        return k_EInputActionOrigin_PS4_Gyro_Move;
+    public static FunctionDescriptor SteamAPI_servernetadr_t_GetConnectionAddressString$descriptor() {
+        return SteamAPI_servernetadr_t_GetConnectionAddressString.DESC;
     }
-    private static final int k_EInputActionOrigin_PS4_Gyro_Pitch = (int)100L;
+
     /**
+     * Downcall method handle for:
      * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_PS4_Gyro_Pitch = 100
+     * const char *SteamAPI_servernetadr_t_GetConnectionAddressString()
      * }
      */
-    public static int k_EInputActionOrigin_PS4_Gyro_Pitch() {
-        return k_EInputActionOrigin_PS4_Gyro_Pitch;
+    public static MethodHandle SteamAPI_servernetadr_t_GetConnectionAddressString$handle() {
+        return SteamAPI_servernetadr_t_GetConnectionAddressString.HANDLE;
     }
-    private static final int k_EInputActionOrigin_PS4_Gyro_Yaw = (int)101L;
     /**
      * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_PS4_Gyro_Yaw = 101
+     * const char *SteamAPI_servernetadr_t_GetConnectionAddressString()
      * }
      */
-    public static int k_EInputActionOrigin_PS4_Gyro_Yaw() {
-        return k_EInputActionOrigin_PS4_Gyro_Yaw;
+    public static MemorySegment SteamAPI_servernetadr_t_GetConnectionAddressString() {
+        var mh$ = SteamAPI_servernetadr_t_GetConnectionAddressString.HANDLE;
+        try {
+            if (TRACE_DOWNCALLS) {
+                traceDowncall("SteamAPI_servernetadr_t_GetConnectionAddressString");
+            }
+            return (MemorySegment)mh$.invokeExact();
+        } catch (Throwable ex$) {
+           throw new AssertionError("should not reach here", ex$);
+        }
     }
-    private static final int k_EInputActionOrigin_PS4_Gyro_Roll = (int)102L;
-    /**
-     * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_PS4_Gyro_Roll = 102
-     * }
-     */
-    public static int k_EInputActionOrigin_PS4_Gyro_Roll() {
-        return k_EInputActionOrigin_PS4_Gyro_Roll;
+
+    private static class SteamAPI_servernetadr_t_GetQueryAddressString {
+        public static final FunctionDescriptor DESC = FunctionDescriptor.of(
+            SteamFlat4j.C_POINTER    );
+
+        public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(
+                    SteamFlat4j.findOrThrow("SteamAPI_servernetadr_t_GetQueryAddressString"),
+                    DESC);
     }
-    private static final int k_EInputActionOrigin_PS4_DPad_Move = (int)103L;
+
     /**
+     * Function descriptor for:
      * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_PS4_DPad_Move = 103
+     * const char *SteamAPI_servernetadr_t_GetQueryAddressString()
      * }
      */
-    public static int k_EInputActionOrigin_PS4_DPad_Move() {
-        return k_EInputActionOrigin_PS4_DPad_Move;
+    public static FunctionDescriptor SteamAPI_servernetadr_t_GetQueryAddressString$descriptor() {
+        return SteamAPI_servernetadr_t_GetQueryAddressString.DESC;
     }
-    private static final int k_EInputActionOrigin_PS4_Reserved1 = (int)104L;
+
     /**
+     * Downcall method handle for:
      * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_PS4_Reserved1 = 104
+     * const char *SteamAPI_servernetadr_t_GetQueryAddressString()
      * }
      */
-    public static int k_EInputActionOrigin_PS4_Reserved1() {
-        return k_EInputActionOrigin_PS4_Reserved1;
+    public static MethodHandle SteamAPI_servernetadr_t_GetQueryAddressString$handle() {
+        return SteamAPI_servernetadr_t_GetQueryAddressString.HANDLE;
     }
-    private static final int k_EInputActionOrigin_PS4_Reserved2 = (int)105L;
     /**
      * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_PS4_Reserved2 = 105
+     * const char *SteamAPI_servernetadr_t_GetQueryAddressString()
      * }
      */
-    public static int k_EInputActionOrigin_PS4_Reserved2() {
-        return k_EInputActionOrigin_PS4_Reserved2;
+    public static MemorySegment SteamAPI_servernetadr_t_GetQueryAddressString() {
+        var mh$ = SteamAPI_servernetadr_t_GetQueryAddressString.HANDLE;
+        try {
+            if (TRACE_DOWNCALLS) {
+                traceDowncall("SteamAPI_servernetadr_t_GetQueryAddressString");
+            }
+            return (MemorySegment)mh$.invokeExact();
+        } catch (Throwable ex$) {
+           throw new AssertionError("should not reach here", ex$);
+        }
     }
-    private static final int k_EInputActionOrigin_PS4_Reserved3 = (int)106L;
-    /**
-     * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_PS4_Reserved3 = 106
-     * }
-     */
-    public static int k_EInputActionOrigin_PS4_Reserved3() {
-        return k_EInputActionOrigin_PS4_Reserved3;
+
+    private static class SteamAPI_servernetadr_t_IsLessThan {
+        public static final FunctionDescriptor DESC = FunctionDescriptor.of(
+            SteamFlat4j.C_BOOL,
+            SteamFlat4j.C_POINTER
+        );
+
+        public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(
+                    SteamFlat4j.findOrThrow("SteamAPI_servernetadr_t_IsLessThan"),
+                    DESC);
     }
-    private static final int k_EInputActionOrigin_PS4_Reserved4 = (int)107L;
+
     /**
+     * Function descriptor for:
      * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_PS4_Reserved4 = 107
+     * bool SteamAPI_servernetadr_t_IsLessThan(const servernetadr_t *netadr)
      * }
      */
-    public static int k_EInputActionOrigin_PS4_Reserved4() {
-        return k_EInputActionOrigin_PS4_Reserved4;
+    public static FunctionDescriptor SteamAPI_servernetadr_t_IsLessThan$descriptor() {
+        return SteamAPI_servernetadr_t_IsLessThan.DESC;
     }
-    private static final int k_EInputActionOrigin_PS4_Reserved5 = (int)108L;
+
     /**
+     * Downcall method handle for:
      * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_PS4_Reserved5 = 108
+     * bool SteamAPI_servernetadr_t_IsLessThan(const servernetadr_t *netadr)
      * }
      */
-    public static int k_EInputActionOrigin_PS4_Reserved5() {
-        return k_EInputActionOrigin_PS4_Reserved5;
+    public static MethodHandle SteamAPI_servernetadr_t_IsLessThan$handle() {
+        return SteamAPI_servernetadr_t_IsLessThan.HANDLE;
     }
-    private static final int k_EInputActionOrigin_PS4_Reserved6 = (int)109L;
     /**
      * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_PS4_Reserved6 = 109
+     * bool SteamAPI_servernetadr_t_IsLessThan(const servernetadr_t *netadr)
      * }
      */
-    public static int k_EInputActionOrigin_PS4_Reserved6() {
-        return k_EInputActionOrigin_PS4_Reserved6;
+    public static boolean SteamAPI_servernetadr_t_IsLessThan(MemorySegment netadr) {
+        var mh$ = SteamAPI_servernetadr_t_IsLessThan.HANDLE;
+        try {
+            if (TRACE_DOWNCALLS) {
+                traceDowncall("SteamAPI_servernetadr_t_IsLessThan", netadr);
+            }
+            return (boolean)mh$.invokeExact(netadr);
+        } catch (Throwable ex$) {
+           throw new AssertionError("should not reach here", ex$);
+        }
     }
-    private static final int k_EInputActionOrigin_PS4_Reserved7 = (int)110L;
-    /**
-     * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_PS4_Reserved7 = 110
-     * }
-     */
-    public static int k_EInputActionOrigin_PS4_Reserved7() {
-        return k_EInputActionOrigin_PS4_Reserved7;
+
+    private static class SteamAPI_servernetadr_t_Assign {
+        public static final FunctionDescriptor DESC = FunctionDescriptor.ofVoid(
+            SteamFlat4j.C_POINTER
+        );
+
+        public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(
+                    SteamFlat4j.findOrThrow("SteamAPI_servernetadr_t_Assign"),
+                    DESC);
     }
-    private static final int k_EInputActionOrigin_PS4_Reserved8 = (int)111L;
+
     /**
+     * Function descriptor for:
      * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_PS4_Reserved8 = 111
+     * void SteamAPI_servernetadr_t_Assign(const servernetadr_t *that)
      * }
      */
-    public static int k_EInputActionOrigin_PS4_Reserved8() {
-        return k_EInputActionOrigin_PS4_Reserved8;
+    public static FunctionDescriptor SteamAPI_servernetadr_t_Assign$descriptor() {
+        return SteamAPI_servernetadr_t_Assign.DESC;
     }
-    private static final int k_EInputActionOrigin_PS4_Reserved9 = (int)112L;
+
     /**
+     * Downcall method handle for:
      * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_PS4_Reserved9 = 112
+     * void SteamAPI_servernetadr_t_Assign(const servernetadr_t *that)
      * }
      */
-    public static int k_EInputActionOrigin_PS4_Reserved9() {
-        return k_EInputActionOrigin_PS4_Reserved9;
+    public static MethodHandle SteamAPI_servernetadr_t_Assign$handle() {
+        return SteamAPI_servernetadr_t_Assign.HANDLE;
     }
-    private static final int k_EInputActionOrigin_PS4_Reserved10 = (int)113L;
     /**
      * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_PS4_Reserved10 = 113
+     * void SteamAPI_servernetadr_t_Assign(const servernetadr_t *that)
      * }
      */
-    public static int k_EInputActionOrigin_PS4_Reserved10() {
-        return k_EInputActionOrigin_PS4_Reserved10;
+    public static void SteamAPI_servernetadr_t_Assign(MemorySegment that) {
+        var mh$ = SteamAPI_servernetadr_t_Assign.HANDLE;
+        try {
+            if (TRACE_DOWNCALLS) {
+                traceDowncall("SteamAPI_servernetadr_t_Assign", that);
+            }
+            mh$.invokeExact(that);
+        } catch (Throwable ex$) {
+           throw new AssertionError("should not reach here", ex$);
+        }
     }
-    private static final int k_EInputActionOrigin_XBoxOne_A = (int)114L;
-    /**
-     * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_XBoxOne_A = 114
-     * }
-     */
-    public static int k_EInputActionOrigin_XBoxOne_A() {
-        return k_EInputActionOrigin_XBoxOne_A;
+
+    private static class SteamAPI_gameserveritem_t_Construct {
+        public static final FunctionDescriptor DESC = FunctionDescriptor.ofVoid(    );
+
+        public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(
+                    SteamFlat4j.findOrThrow("SteamAPI_gameserveritem_t_Construct"),
+                    DESC);
     }
-    private static final int k_EInputActionOrigin_XBoxOne_B = (int)115L;
+
     /**
+     * Function descriptor for:
      * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_XBoxOne_B = 115
+     * void SteamAPI_gameserveritem_t_Construct()
      * }
      */
-    public static int k_EInputActionOrigin_XBoxOne_B() {
-        return k_EInputActionOrigin_XBoxOne_B;
+    public static FunctionDescriptor SteamAPI_gameserveritem_t_Construct$descriptor() {
+        return SteamAPI_gameserveritem_t_Construct.DESC;
     }
-    private static final int k_EInputActionOrigin_XBoxOne_X = (int)116L;
+
     /**
+     * Downcall method handle for:
      * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_XBoxOne_X = 116
+     * void SteamAPI_gameserveritem_t_Construct()
      * }
      */
-    public static int k_EInputActionOrigin_XBoxOne_X() {
-        return k_EInputActionOrigin_XBoxOne_X;
+    public static MethodHandle SteamAPI_gameserveritem_t_Construct$handle() {
+        return SteamAPI_gameserveritem_t_Construct.HANDLE;
     }
-    private static final int k_EInputActionOrigin_XBoxOne_Y = (int)117L;
     /**
      * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_XBoxOne_Y = 117
+     * void SteamAPI_gameserveritem_t_Construct()
      * }
      */
-    public static int k_EInputActionOrigin_XBoxOne_Y() {
-        return k_EInputActionOrigin_XBoxOne_Y;
+    public static void SteamAPI_gameserveritem_t_Construct() {
+        var mh$ = SteamAPI_gameserveritem_t_Construct.HANDLE;
+        try {
+            if (TRACE_DOWNCALLS) {
+                traceDowncall("SteamAPI_gameserveritem_t_Construct");
+            }
+            mh$.invokeExact();
+        } catch (Throwable ex$) {
+           throw new AssertionError("should not reach here", ex$);
+        }
     }
-    private static final int k_EInputActionOrigin_XBoxOne_LeftBumper = (int)118L;
-    /**
-     * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_XBoxOne_LeftBumper = 118
-     * }
-     */
-    public static int k_EInputActionOrigin_XBoxOne_LeftBumper() {
-        return k_EInputActionOrigin_XBoxOne_LeftBumper;
+
+    private static class SteamAPI_gameserveritem_t_GetName {
+        public static final FunctionDescriptor DESC = FunctionDescriptor.of(
+            SteamFlat4j.C_POINTER    );
+
+        public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(
+                    SteamFlat4j.findOrThrow("SteamAPI_gameserveritem_t_GetName"),
+                    DESC);
     }
-    private static final int k_EInputActionOrigin_XBoxOne_RightBumper = (int)119L;
+
     /**
+     * Function descriptor for:
      * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_XBoxOne_RightBumper = 119
+     * const char *SteamAPI_gameserveritem_t_GetName()
      * }
      */
-    public static int k_EInputActionOrigin_XBoxOne_RightBumper() {
-        return k_EInputActionOrigin_XBoxOne_RightBumper;
+    public static FunctionDescriptor SteamAPI_gameserveritem_t_GetName$descriptor() {
+        return SteamAPI_gameserveritem_t_GetName.DESC;
     }
-    private static final int k_EInputActionOrigin_XBoxOne_Menu = (int)120L;
+
     /**
+     * Downcall method handle for:
      * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_XBoxOne_Menu = 120
+     * const char *SteamAPI_gameserveritem_t_GetName()
      * }
      */
-    public static int k_EInputActionOrigin_XBoxOne_Menu() {
-        return k_EInputActionOrigin_XBoxOne_Menu;
+    public static MethodHandle SteamAPI_gameserveritem_t_GetName$handle() {
+        return SteamAPI_gameserveritem_t_GetName.HANDLE;
     }
-    private static final int k_EInputActionOrigin_XBoxOne_View = (int)121L;
     /**
      * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_XBoxOne_View = 121
+     * const char *SteamAPI_gameserveritem_t_GetName()
      * }
      */
-    public static int k_EInputActionOrigin_XBoxOne_View() {
-        return k_EInputActionOrigin_XBoxOne_View;
+    public static MemorySegment SteamAPI_gameserveritem_t_GetName() {
+        var mh$ = SteamAPI_gameserveritem_t_GetName.HANDLE;
+        try {
+            if (TRACE_DOWNCALLS) {
+                traceDowncall("SteamAPI_gameserveritem_t_GetName");
+            }
+            return (MemorySegment)mh$.invokeExact();
+        } catch (Throwable ex$) {
+           throw new AssertionError("should not reach here", ex$);
+        }
     }
-    private static final int k_EInputActionOrigin_XBoxOne_LeftTrigger_Pull = (int)122L;
-    /**
-     * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_XBoxOne_LeftTrigger_Pull = 122
-     * }
-     */
-    public static int k_EInputActionOrigin_XBoxOne_LeftTrigger_Pull() {
-        return k_EInputActionOrigin_XBoxOne_LeftTrigger_Pull;
+
+    private static class SteamAPI_gameserveritem_t_SetName {
+        public static final FunctionDescriptor DESC = FunctionDescriptor.ofVoid(
+            SteamFlat4j.C_POINTER
+        );
+
+        public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(
+                    SteamFlat4j.findOrThrow("SteamAPI_gameserveritem_t_SetName"),
+                    DESC);
     }
-    private static final int k_EInputActionOrigin_XBoxOne_LeftTrigger_Click = (int)123L;
+
     /**
+     * Function descriptor for:
      * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_XBoxOne_LeftTrigger_Click = 123
+     * void SteamAPI_gameserveritem_t_SetName(const char *pName)
      * }
      */
-    public static int k_EInputActionOrigin_XBoxOne_LeftTrigger_Click() {
-        return k_EInputActionOrigin_XBoxOne_LeftTrigger_Click;
+    public static FunctionDescriptor SteamAPI_gameserveritem_t_SetName$descriptor() {
+        return SteamAPI_gameserveritem_t_SetName.DESC;
     }
-    private static final int k_EInputActionOrigin_XBoxOne_RightTrigger_Pull = (int)124L;
+
     /**
+     * Downcall method handle for:
      * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_XBoxOne_RightTrigger_Pull = 124
+     * void SteamAPI_gameserveritem_t_SetName(const char *pName)
      * }
      */
-    public static int k_EInputActionOrigin_XBoxOne_RightTrigger_Pull() {
-        return k_EInputActionOrigin_XBoxOne_RightTrigger_Pull;
+    public static MethodHandle SteamAPI_gameserveritem_t_SetName$handle() {
+        return SteamAPI_gameserveritem_t_SetName.HANDLE;
     }
-    private static final int k_EInputActionOrigin_XBoxOne_RightTrigger_Click = (int)125L;
     /**
      * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_XBoxOne_RightTrigger_Click = 125
+     * void SteamAPI_gameserveritem_t_SetName(const char *pName)
      * }
      */
-    public static int k_EInputActionOrigin_XBoxOne_RightTrigger_Click() {
-        return k_EInputActionOrigin_XBoxOne_RightTrigger_Click;
+    public static void SteamAPI_gameserveritem_t_SetName(MemorySegment pName) {
+        var mh$ = SteamAPI_gameserveritem_t_SetName.HANDLE;
+        try {
+            if (TRACE_DOWNCALLS) {
+                traceDowncall("SteamAPI_gameserveritem_t_SetName", pName);
+            }
+            mh$.invokeExact(pName);
+        } catch (Throwable ex$) {
+           throw new AssertionError("should not reach here", ex$);
+        }
     }
-    private static final int k_EInputActionOrigin_XBoxOne_LeftStick_Move = (int)126L;
-    /**
-     * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_XBoxOne_LeftStick_Move = 126
-     * }
-     */
-    public static int k_EInputActionOrigin_XBoxOne_LeftStick_Move() {
-        return k_EInputActionOrigin_XBoxOne_LeftStick_Move;
+
+    private static class SteamAPI_SteamNetworkingIPAddr_Clear {
+        public static final FunctionDescriptor DESC = FunctionDescriptor.ofVoid(    );
+
+        public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(
+                    SteamFlat4j.findOrThrow("SteamAPI_SteamNetworkingIPAddr_Clear"),
+                    DESC);
     }
-    private static final int k_EInputActionOrigin_XBoxOne_LeftStick_Click = (int)127L;
+
     /**
+     * Function descriptor for:
      * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_XBoxOne_LeftStick_Click = 127
+     * void SteamAPI_SteamNetworkingIPAddr_Clear()
      * }
      */
-    public static int k_EInputActionOrigin_XBoxOne_LeftStick_Click() {
-        return k_EInputActionOrigin_XBoxOne_LeftStick_Click;
+    public static FunctionDescriptor SteamAPI_SteamNetworkingIPAddr_Clear$descriptor() {
+        return SteamAPI_SteamNetworkingIPAddr_Clear.DESC;
     }
-    private static final int k_EInputActionOrigin_XBoxOne_LeftStick_DPadNorth = (int)128L;
+
     /**
+     * Downcall method handle for:
      * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_XBoxOne_LeftStick_DPadNorth = 128
+     * void SteamAPI_SteamNetworkingIPAddr_Clear()
      * }
      */
-    public static int k_EInputActionOrigin_XBoxOne_LeftStick_DPadNorth() {
-        return k_EInputActionOrigin_XBoxOne_LeftStick_DPadNorth;
+    public static MethodHandle SteamAPI_SteamNetworkingIPAddr_Clear$handle() {
+        return SteamAPI_SteamNetworkingIPAddr_Clear.HANDLE;
     }
-    private static final int k_EInputActionOrigin_XBoxOne_LeftStick_DPadSouth = (int)129L;
     /**
      * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_XBoxOne_LeftStick_DPadSouth = 129
+     * void SteamAPI_SteamNetworkingIPAddr_Clear()
      * }
      */
-    public static int k_EInputActionOrigin_XBoxOne_LeftStick_DPadSouth() {
-        return k_EInputActionOrigin_XBoxOne_LeftStick_DPadSouth;
+    public static void SteamAPI_SteamNetworkingIPAddr_Clear() {
+        var mh$ = SteamAPI_SteamNetworkingIPAddr_Clear.HANDLE;
+        try {
+            if (TRACE_DOWNCALLS) {
+                traceDowncall("SteamAPI_SteamNetworkingIPAddr_Clear");
+            }
+            mh$.invokeExact();
+        } catch (Throwable ex$) {
+           throw new AssertionError("should not reach here", ex$);
+        }
     }
-    private static final int k_EInputActionOrigin_XBoxOne_LeftStick_DPadWest = (int)130L;
-    /**
-     * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_XBoxOne_LeftStick_DPadWest = 130
-     * }
-     */
-    public static int k_EInputActionOrigin_XBoxOne_LeftStick_DPadWest() {
-        return k_EInputActionOrigin_XBoxOne_LeftStick_DPadWest;
+
+    private static class SteamAPI_SteamNetworkingIPAddr_IsIPv6AllZeros {
+        public static final FunctionDescriptor DESC = FunctionDescriptor.of(
+            SteamFlat4j.C_BOOL    );
+
+        public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(
+                    SteamFlat4j.findOrThrow("SteamAPI_SteamNetworkingIPAddr_IsIPv6AllZeros"),
+                    DESC);
     }
-    private static final int k_EInputActionOrigin_XBoxOne_LeftStick_DPadEast = (int)131L;
+
     /**
+     * Function descriptor for:
      * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_XBoxOne_LeftStick_DPadEast = 131
+     * bool SteamAPI_SteamNetworkingIPAddr_IsIPv6AllZeros()
      * }
      */
-    public static int k_EInputActionOrigin_XBoxOne_LeftStick_DPadEast() {
-        return k_EInputActionOrigin_XBoxOne_LeftStick_DPadEast;
+    public static FunctionDescriptor SteamAPI_SteamNetworkingIPAddr_IsIPv6AllZeros$descriptor() {
+        return SteamAPI_SteamNetworkingIPAddr_IsIPv6AllZeros.DESC;
     }
-    private static final int k_EInputActionOrigin_XBoxOne_RightStick_Move = (int)132L;
+
     /**
+     * Downcall method handle for:
      * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_XBoxOne_RightStick_Move = 132
+     * bool SteamAPI_SteamNetworkingIPAddr_IsIPv6AllZeros()
      * }
      */
-    public static int k_EInputActionOrigin_XBoxOne_RightStick_Move() {
-        return k_EInputActionOrigin_XBoxOne_RightStick_Move;
+    public static MethodHandle SteamAPI_SteamNetworkingIPAddr_IsIPv6AllZeros$handle() {
+        return SteamAPI_SteamNetworkingIPAddr_IsIPv6AllZeros.HANDLE;
     }
-    private static final int k_EInputActionOrigin_XBoxOne_RightStick_Click = (int)133L;
     /**
      * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_XBoxOne_RightStick_Click = 133
+     * bool SteamAPI_SteamNetworkingIPAddr_IsIPv6AllZeros()
      * }
      */
-    public static int k_EInputActionOrigin_XBoxOne_RightStick_Click() {
-        return k_EInputActionOrigin_XBoxOne_RightStick_Click;
+    public static boolean SteamAPI_SteamNetworkingIPAddr_IsIPv6AllZeros() {
+        var mh$ = SteamAPI_SteamNetworkingIPAddr_IsIPv6AllZeros.HANDLE;
+        try {
+            if (TRACE_DOWNCALLS) {
+                traceDowncall("SteamAPI_SteamNetworkingIPAddr_IsIPv6AllZeros");
+            }
+            return (boolean)mh$.invokeExact();
+        } catch (Throwable ex$) {
+           throw new AssertionError("should not reach here", ex$);
+        }
     }
-    private static final int k_EInputActionOrigin_XBoxOne_RightStick_DPadNorth = (int)134L;
-    /**
-     * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_XBoxOne_RightStick_DPadNorth = 134
-     * }
-     */
-    public static int k_EInputActionOrigin_XBoxOne_RightStick_DPadNorth() {
-        return k_EInputActionOrigin_XBoxOne_RightStick_DPadNorth;
+
+    private static class SteamAPI_SteamNetworkingIPAddr_SetIPv6 {
+        public static final FunctionDescriptor DESC = FunctionDescriptor.ofVoid(
+            SteamFlat4j.C_POINTER,
+            SteamFlat4j.C_SHORT
+        );
+
+        public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(
+                    SteamFlat4j.findOrThrow("SteamAPI_SteamNetworkingIPAddr_SetIPv6"),
+                    DESC);
     }
-    private static final int k_EInputActionOrigin_XBoxOne_RightStick_DPadSouth = (int)135L;
+
     /**
+     * Function descriptor for:
      * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_XBoxOne_RightStick_DPadSouth = 135
+     * void SteamAPI_SteamNetworkingIPAddr_SetIPv6(const uint8 *ipv6, uint16 nPort)
      * }
      */
-    public static int k_EInputActionOrigin_XBoxOne_RightStick_DPadSouth() {
-        return k_EInputActionOrigin_XBoxOne_RightStick_DPadSouth;
+    public static FunctionDescriptor SteamAPI_SteamNetworkingIPAddr_SetIPv6$descriptor() {
+        return SteamAPI_SteamNetworkingIPAddr_SetIPv6.DESC;
     }
-    private static final int k_EInputActionOrigin_XBoxOne_RightStick_DPadWest = (int)136L;
+
     /**
+     * Downcall method handle for:
      * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_XBoxOne_RightStick_DPadWest = 136
+     * void SteamAPI_SteamNetworkingIPAddr_SetIPv6(const uint8 *ipv6, uint16 nPort)
      * }
      */
-    public static int k_EInputActionOrigin_XBoxOne_RightStick_DPadWest() {
-        return k_EInputActionOrigin_XBoxOne_RightStick_DPadWest;
+    public static MethodHandle SteamAPI_SteamNetworkingIPAddr_SetIPv6$handle() {
+        return SteamAPI_SteamNetworkingIPAddr_SetIPv6.HANDLE;
     }
-    private static final int k_EInputActionOrigin_XBoxOne_RightStick_DPadEast = (int)137L;
     /**
      * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_XBoxOne_RightStick_DPadEast = 137
+     * void SteamAPI_SteamNetworkingIPAddr_SetIPv6(const uint8 *ipv6, uint16 nPort)
      * }
      */
-    public static int k_EInputActionOrigin_XBoxOne_RightStick_DPadEast() {
-        return k_EInputActionOrigin_XBoxOne_RightStick_DPadEast;
+    public static void SteamAPI_SteamNetworkingIPAddr_SetIPv6(MemorySegment ipv6, short nPort) {
+        var mh$ = SteamAPI_SteamNetworkingIPAddr_SetIPv6.HANDLE;
+        try {
+            if (TRACE_DOWNCALLS) {
+                traceDowncall("SteamAPI_SteamNetworkingIPAddr_SetIPv6", ipv6, nPort);
+            }
+            mh$.invokeExact(ipv6, nPort);
+        } catch (Throwable ex$) {
+           throw new AssertionError("should not reach here", ex$);
+        }
     }
-    private static final int k_EInputActionOrigin_XBoxOne_DPad_North = (int)138L;
-    /**
-     * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_XBoxOne_DPad_North = 138
-     * }
-     */
-    public static int k_EInputActionOrigin_XBoxOne_DPad_North() {
-        return k_EInputActionOrigin_XBoxOne_DPad_North;
+
+    private static class SteamAPI_SteamNetworkingIPAddr_SetIPv4 {
+        public static final FunctionDescriptor DESC = FunctionDescriptor.ofVoid(
+            SteamFlat4j.C_INT,
+            SteamFlat4j.C_SHORT
+        );
+
+        public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(
+                    SteamFlat4j.findOrThrow("SteamAPI_SteamNetworkingIPAddr_SetIPv4"),
+                    DESC);
     }
-    private static final int k_EInputActionOrigin_XBoxOne_DPad_South = (int)139L;
+
     /**
+     * Function descriptor for:
      * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_XBoxOne_DPad_South = 139
+     * void SteamAPI_SteamNetworkingIPAddr_SetIPv4(uint32 nIP, uint16 nPort)
      * }
      */
-    public static int k_EInputActionOrigin_XBoxOne_DPad_South() {
-        return k_EInputActionOrigin_XBoxOne_DPad_South;
+    public static FunctionDescriptor SteamAPI_SteamNetworkingIPAddr_SetIPv4$descriptor() {
+        return SteamAPI_SteamNetworkingIPAddr_SetIPv4.DESC;
     }
-    private static final int k_EInputActionOrigin_XBoxOne_DPad_West = (int)140L;
+
     /**
+     * Downcall method handle for:
      * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_XBoxOne_DPad_West = 140
+     * void SteamAPI_SteamNetworkingIPAddr_SetIPv4(uint32 nIP, uint16 nPort)
      * }
      */
-    public static int k_EInputActionOrigin_XBoxOne_DPad_West() {
-        return k_EInputActionOrigin_XBoxOne_DPad_West;
+    public static MethodHandle SteamAPI_SteamNetworkingIPAddr_SetIPv4$handle() {
+        return SteamAPI_SteamNetworkingIPAddr_SetIPv4.HANDLE;
     }
-    private static final int k_EInputActionOrigin_XBoxOne_DPad_East = (int)141L;
     /**
      * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_XBoxOne_DPad_East = 141
+     * void SteamAPI_SteamNetworkingIPAddr_SetIPv4(uint32 nIP, uint16 nPort)
      * }
      */
-    public static int k_EInputActionOrigin_XBoxOne_DPad_East() {
-        return k_EInputActionOrigin_XBoxOne_DPad_East;
+    public static void SteamAPI_SteamNetworkingIPAddr_SetIPv4(int nIP, short nPort) {
+        var mh$ = SteamAPI_SteamNetworkingIPAddr_SetIPv4.HANDLE;
+        try {
+            if (TRACE_DOWNCALLS) {
+                traceDowncall("SteamAPI_SteamNetworkingIPAddr_SetIPv4", nIP, nPort);
+            }
+            mh$.invokeExact(nIP, nPort);
+        } catch (Throwable ex$) {
+           throw new AssertionError("should not reach here", ex$);
+        }
     }
-    private static final int k_EInputActionOrigin_XBoxOne_DPad_Move = (int)142L;
-    /**
-     * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_XBoxOne_DPad_Move = 142
-     * }
-     */
-    public static int k_EInputActionOrigin_XBoxOne_DPad_Move() {
-        return k_EInputActionOrigin_XBoxOne_DPad_Move;
+
+    private static class SteamAPI_SteamNetworkingIPAddr_IsIPv4 {
+        public static final FunctionDescriptor DESC = FunctionDescriptor.of(
+            SteamFlat4j.C_BOOL    );
+
+        public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(
+                    SteamFlat4j.findOrThrow("SteamAPI_SteamNetworkingIPAddr_IsIPv4"),
+                    DESC);
     }
-    private static final int k_EInputActionOrigin_XBoxOne_LeftGrip_Lower = (int)143L;
+
     /**
+     * Function descriptor for:
      * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_XBoxOne_LeftGrip_Lower = 143
+     * bool SteamAPI_SteamNetworkingIPAddr_IsIPv4()
      * }
      */
-    public static int k_EInputActionOrigin_XBoxOne_LeftGrip_Lower() {
-        return k_EInputActionOrigin_XBoxOne_LeftGrip_Lower;
+    public static FunctionDescriptor SteamAPI_SteamNetworkingIPAddr_IsIPv4$descriptor() {
+        return SteamAPI_SteamNetworkingIPAddr_IsIPv4.DESC;
     }
-    private static final int k_EInputActionOrigin_XBoxOne_LeftGrip_Upper = (int)144L;
+
     /**
+     * Downcall method handle for:
      * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_XBoxOne_LeftGrip_Upper = 144
+     * bool SteamAPI_SteamNetworkingIPAddr_IsIPv4()
      * }
      */
-    public static int k_EInputActionOrigin_XBoxOne_LeftGrip_Upper() {
-        return k_EInputActionOrigin_XBoxOne_LeftGrip_Upper;
+    public static MethodHandle SteamAPI_SteamNetworkingIPAddr_IsIPv4$handle() {
+        return SteamAPI_SteamNetworkingIPAddr_IsIPv4.HANDLE;
     }
-    private static final int k_EInputActionOrigin_XBoxOne_RightGrip_Lower = (int)145L;
     /**
      * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_XBoxOne_RightGrip_Lower = 145
+     * bool SteamAPI_SteamNetworkingIPAddr_IsIPv4()
      * }
      */
-    public static int k_EInputActionOrigin_XBoxOne_RightGrip_Lower() {
-        return k_EInputActionOrigin_XBoxOne_RightGrip_Lower;
+    public static boolean SteamAPI_SteamNetworkingIPAddr_IsIPv4() {
+        var mh$ = SteamAPI_SteamNetworkingIPAddr_IsIPv4.HANDLE;
+        try {
+            if (TRACE_DOWNCALLS) {
+                traceDowncall("SteamAPI_SteamNetworkingIPAddr_IsIPv4");
+            }
+            return (boolean)mh$.invokeExact();
+        } catch (Throwable ex$) {
+           throw new AssertionError("should not reach here", ex$);
+        }
     }
-    private static final int k_EInputActionOrigin_XBoxOne_RightGrip_Upper = (int)146L;
-    /**
-     * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_XBoxOne_RightGrip_Upper = 146
-     * }
-     */
-    public static int k_EInputActionOrigin_XBoxOne_RightGrip_Upper() {
-        return k_EInputActionOrigin_XBoxOne_RightGrip_Upper;
+
+    private static class SteamAPI_SteamNetworkingIPAddr_GetIPv4 {
+        public static final FunctionDescriptor DESC = FunctionDescriptor.of(
+            SteamFlat4j.C_INT    );
+
+        public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(
+                    SteamFlat4j.findOrThrow("SteamAPI_SteamNetworkingIPAddr_GetIPv4"),
+                    DESC);
     }
-    private static final int k_EInputActionOrigin_XBoxOne_Share = (int)147L;
+
     /**
+     * Function descriptor for:
      * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_XBoxOne_Share = 147
+     * uint32 SteamAPI_SteamNetworkingIPAddr_GetIPv4()
      * }
      */
-    public static int k_EInputActionOrigin_XBoxOne_Share() {
-        return k_EInputActionOrigin_XBoxOne_Share;
+    public static FunctionDescriptor SteamAPI_SteamNetworkingIPAddr_GetIPv4$descriptor() {
+        return SteamAPI_SteamNetworkingIPAddr_GetIPv4.DESC;
     }
-    private static final int k_EInputActionOrigin_XBoxOne_Reserved6 = (int)148L;
+
     /**
+     * Downcall method handle for:
      * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_XBoxOne_Reserved6 = 148
+     * uint32 SteamAPI_SteamNetworkingIPAddr_GetIPv4()
      * }
      */
-    public static int k_EInputActionOrigin_XBoxOne_Reserved6() {
-        return k_EInputActionOrigin_XBoxOne_Reserved6;
+    public static MethodHandle SteamAPI_SteamNetworkingIPAddr_GetIPv4$handle() {
+        return SteamAPI_SteamNetworkingIPAddr_GetIPv4.HANDLE;
     }
-    private static final int k_EInputActionOrigin_XBoxOne_Reserved7 = (int)149L;
     /**
      * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_XBoxOne_Reserved7 = 149
+     * uint32 SteamAPI_SteamNetworkingIPAddr_GetIPv4()
      * }
      */
-    public static int k_EInputActionOrigin_XBoxOne_Reserved7() {
-        return k_EInputActionOrigin_XBoxOne_Reserved7;
+    public static int SteamAPI_SteamNetworkingIPAddr_GetIPv4() {
+        var mh$ = SteamAPI_SteamNetworkingIPAddr_GetIPv4.HANDLE;
+        try {
+            if (TRACE_DOWNCALLS) {
+                traceDowncall("SteamAPI_SteamNetworkingIPAddr_GetIPv4");
+            }
+            return (int)mh$.invokeExact();
+        } catch (Throwable ex$) {
+           throw new AssertionError("should not reach here", ex$);
+        }
     }
-    private static final int k_EInputActionOrigin_XBoxOne_Reserved8 = (int)150L;
-    /**
-     * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_XBoxOne_Reserved8 = 150
-     * }
-     */
-    public static int k_EInputActionOrigin_XBoxOne_Reserved8() {
-        return k_EInputActionOrigin_XBoxOne_Reserved8;
+
+    private static class SteamAPI_SteamNetworkingIPAddr_SetIPv6LocalHost {
+        public static final FunctionDescriptor DESC = FunctionDescriptor.ofVoid(
+            SteamFlat4j.C_SHORT
+        );
+
+        public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(
+                    SteamFlat4j.findOrThrow("SteamAPI_SteamNetworkingIPAddr_SetIPv6LocalHost"),
+                    DESC);
     }
-    private static final int k_EInputActionOrigin_XBoxOne_Reserved9 = (int)151L;
+
     /**
+     * Function descriptor for:
      * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_XBoxOne_Reserved9 = 151
+     * void SteamAPI_SteamNetworkingIPAddr_SetIPv6LocalHost(uint16 nPort)
      * }
      */
-    public static int k_EInputActionOrigin_XBoxOne_Reserved9() {
-        return k_EInputActionOrigin_XBoxOne_Reserved9;
+    public static FunctionDescriptor SteamAPI_SteamNetworkingIPAddr_SetIPv6LocalHost$descriptor() {
+        return SteamAPI_SteamNetworkingIPAddr_SetIPv6LocalHost.DESC;
     }
-    private static final int k_EInputActionOrigin_XBoxOne_Reserved10 = (int)152L;
+
     /**
+     * Downcall method handle for:
      * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_XBoxOne_Reserved10 = 152
+     * void SteamAPI_SteamNetworkingIPAddr_SetIPv6LocalHost(uint16 nPort)
      * }
      */
-    public static int k_EInputActionOrigin_XBoxOne_Reserved10() {
-        return k_EInputActionOrigin_XBoxOne_Reserved10;
+    public static MethodHandle SteamAPI_SteamNetworkingIPAddr_SetIPv6LocalHost$handle() {
+        return SteamAPI_SteamNetworkingIPAddr_SetIPv6LocalHost.HANDLE;
     }
-    private static final int k_EInputActionOrigin_XBox360_A = (int)153L;
     /**
      * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_XBox360_A = 153
+     * void SteamAPI_SteamNetworkingIPAddr_SetIPv6LocalHost(uint16 nPort)
      * }
      */
-    public static int k_EInputActionOrigin_XBox360_A() {
-        return k_EInputActionOrigin_XBox360_A;
+    public static void SteamAPI_SteamNetworkingIPAddr_SetIPv6LocalHost(short nPort) {
+        var mh$ = SteamAPI_SteamNetworkingIPAddr_SetIPv6LocalHost.HANDLE;
+        try {
+            if (TRACE_DOWNCALLS) {
+                traceDowncall("SteamAPI_SteamNetworkingIPAddr_SetIPv6LocalHost", nPort);
+            }
+            mh$.invokeExact(nPort);
+        } catch (Throwable ex$) {
+           throw new AssertionError("should not reach here", ex$);
+        }
     }
-    private static final int k_EInputActionOrigin_XBox360_B = (int)154L;
-    /**
-     * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_XBox360_B = 154
-     * }
-     */
-    public static int k_EInputActionOrigin_XBox360_B() {
-        return k_EInputActionOrigin_XBox360_B;
+
+    private static class SteamAPI_SteamNetworkingIPAddr_IsLocalHost {
+        public static final FunctionDescriptor DESC = FunctionDescriptor.of(
+            SteamFlat4j.C_BOOL    );
+
+        public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(
+                    SteamFlat4j.findOrThrow("SteamAPI_SteamNetworkingIPAddr_IsLocalHost"),
+                    DESC);
     }
-    private static final int k_EInputActionOrigin_XBox360_X = (int)155L;
+
     /**
+     * Function descriptor for:
      * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_XBox360_X = 155
+     * bool SteamAPI_SteamNetworkingIPAddr_IsLocalHost()
      * }
      */
-    public static int k_EInputActionOrigin_XBox360_X() {
-        return k_EInputActionOrigin_XBox360_X;
+    public static FunctionDescriptor SteamAPI_SteamNetworkingIPAddr_IsLocalHost$descriptor() {
+        return SteamAPI_SteamNetworkingIPAddr_IsLocalHost.DESC;
     }
-    private static final int k_EInputActionOrigin_XBox360_Y = (int)156L;
+
     /**
+     * Downcall method handle for:
      * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_XBox360_Y = 156
+     * bool SteamAPI_SteamNetworkingIPAddr_IsLocalHost()
      * }
      */
-    public static int k_EInputActionOrigin_XBox360_Y() {
-        return k_EInputActionOrigin_XBox360_Y;
+    public static MethodHandle SteamAPI_SteamNetworkingIPAddr_IsLocalHost$handle() {
+        return SteamAPI_SteamNetworkingIPAddr_IsLocalHost.HANDLE;
     }
-    private static final int k_EInputActionOrigin_XBox360_LeftBumper = (int)157L;
     /**
      * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_XBox360_LeftBumper = 157
+     * bool SteamAPI_SteamNetworkingIPAddr_IsLocalHost()
      * }
      */
-    public static int k_EInputActionOrigin_XBox360_LeftBumper() {
-        return k_EInputActionOrigin_XBox360_LeftBumper;
+    public static boolean SteamAPI_SteamNetworkingIPAddr_IsLocalHost() {
+        var mh$ = SteamAPI_SteamNetworkingIPAddr_IsLocalHost.HANDLE;
+        try {
+            if (TRACE_DOWNCALLS) {
+                traceDowncall("SteamAPI_SteamNetworkingIPAddr_IsLocalHost");
+            }
+            return (boolean)mh$.invokeExact();
+        } catch (Throwable ex$) {
+           throw new AssertionError("should not reach here", ex$);
+        }
     }
-    private static final int k_EInputActionOrigin_XBox360_RightBumper = (int)158L;
-    /**
-     * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_XBox360_RightBumper = 158
-     * }
-     */
-    public static int k_EInputActionOrigin_XBox360_RightBumper() {
-        return k_EInputActionOrigin_XBox360_RightBumper;
+
+    private static class SteamAPI_SteamNetworkingIPAddr_ToString {
+        public static final FunctionDescriptor DESC = FunctionDescriptor.ofVoid(
+            SteamFlat4j.C_POINTER,
+            SteamFlat4j.C_INT,
+            SteamFlat4j.C_BOOL
+        );
+
+        public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(
+                    SteamFlat4j.findOrThrow("SteamAPI_SteamNetworkingIPAddr_ToString"),
+                    DESC);
     }
-    private static final int k_EInputActionOrigin_XBox360_Start = (int)159L;
+
     /**
+     * Function descriptor for:
      * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_XBox360_Start = 159
+     * void SteamAPI_SteamNetworkingIPAddr_ToString(char *buf, uint32 cbBuf, bool bWithPort)
      * }
      */
-    public static int k_EInputActionOrigin_XBox360_Start() {
-        return k_EInputActionOrigin_XBox360_Start;
+    public static FunctionDescriptor SteamAPI_SteamNetworkingIPAddr_ToString$descriptor() {
+        return SteamAPI_SteamNetworkingIPAddr_ToString.DESC;
     }
-    private static final int k_EInputActionOrigin_XBox360_Back = (int)160L;
+
     /**
+     * Downcall method handle for:
      * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_XBox360_Back = 160
+     * void SteamAPI_SteamNetworkingIPAddr_ToString(char *buf, uint32 cbBuf, bool bWithPort)
      * }
      */
-    public static int k_EInputActionOrigin_XBox360_Back() {
-        return k_EInputActionOrigin_XBox360_Back;
+    public static MethodHandle SteamAPI_SteamNetworkingIPAddr_ToString$handle() {
+        return SteamAPI_SteamNetworkingIPAddr_ToString.HANDLE;
     }
-    private static final int k_EInputActionOrigin_XBox360_LeftTrigger_Pull = (int)161L;
     /**
      * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_XBox360_LeftTrigger_Pull = 161
+     * void SteamAPI_SteamNetworkingIPAddr_ToString(char *buf, uint32 cbBuf, bool bWithPort)
      * }
      */
-    public static int k_EInputActionOrigin_XBox360_LeftTrigger_Pull() {
-        return k_EInputActionOrigin_XBox360_LeftTrigger_Pull;
+    public static void SteamAPI_SteamNetworkingIPAddr_ToString(MemorySegment buf, int cbBuf, boolean bWithPort) {
+        var mh$ = SteamAPI_SteamNetworkingIPAddr_ToString.HANDLE;
+        try {
+            if (TRACE_DOWNCALLS) {
+                traceDowncall("SteamAPI_SteamNetworkingIPAddr_ToString", buf, cbBuf, bWithPort);
+            }
+            mh$.invokeExact(buf, cbBuf, bWithPort);
+        } catch (Throwable ex$) {
+           throw new AssertionError("should not reach here", ex$);
+        }
     }
-    private static final int k_EInputActionOrigin_XBox360_LeftTrigger_Click = (int)162L;
-    /**
-     * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_XBox360_LeftTrigger_Click = 162
-     * }
-     */
-    public static int k_EInputActionOrigin_XBox360_LeftTrigger_Click() {
-        return k_EInputActionOrigin_XBox360_LeftTrigger_Click;
+
+    private static class SteamAPI_SteamNetworkingIPAddr_ParseString {
+        public static final FunctionDescriptor DESC = FunctionDescriptor.of(
+            SteamFlat4j.C_BOOL,
+            SteamFlat4j.C_POINTER
+        );
+
+        public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(
+                    SteamFlat4j.findOrThrow("SteamAPI_SteamNetworkingIPAddr_ParseString"),
+                    DESC);
     }
-    private static final int k_EInputActionOrigin_XBox360_RightTrigger_Pull = (int)163L;
+
     /**
+     * Function descriptor for:
      * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_XBox360_RightTrigger_Pull = 163
+     * bool SteamAPI_SteamNetworkingIPAddr_ParseString(const char *pszStr)
      * }
      */
-    public static int k_EInputActionOrigin_XBox360_RightTrigger_Pull() {
-        return k_EInputActionOrigin_XBox360_RightTrigger_Pull;
+    public static FunctionDescriptor SteamAPI_SteamNetworkingIPAddr_ParseString$descriptor() {
+        return SteamAPI_SteamNetworkingIPAddr_ParseString.DESC;
     }
-    private static final int k_EInputActionOrigin_XBox360_RightTrigger_Click = (int)164L;
+
     /**
+     * Downcall method handle for:
      * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_XBox360_RightTrigger_Click = 164
+     * bool SteamAPI_SteamNetworkingIPAddr_ParseString(const char *pszStr)
      * }
      */
-    public static int k_EInputActionOrigin_XBox360_RightTrigger_Click() {
-        return k_EInputActionOrigin_XBox360_RightTrigger_Click;
+    public static MethodHandle SteamAPI_SteamNetworkingIPAddr_ParseString$handle() {
+        return SteamAPI_SteamNetworkingIPAddr_ParseString.HANDLE;
     }
-    private static final int k_EInputActionOrigin_XBox360_LeftStick_Move = (int)165L;
     /**
      * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_XBox360_LeftStick_Move = 165
+     * bool SteamAPI_SteamNetworkingIPAddr_ParseString(const char *pszStr)
      * }
      */
-    public static int k_EInputActionOrigin_XBox360_LeftStick_Move() {
-        return k_EInputActionOrigin_XBox360_LeftStick_Move;
+    public static boolean SteamAPI_SteamNetworkingIPAddr_ParseString(MemorySegment pszStr) {
+        var mh$ = SteamAPI_SteamNetworkingIPAddr_ParseString.HANDLE;
+        try {
+            if (TRACE_DOWNCALLS) {
+                traceDowncall("SteamAPI_SteamNetworkingIPAddr_ParseString", pszStr);
+            }
+            return (boolean)mh$.invokeExact(pszStr);
+        } catch (Throwable ex$) {
+           throw new AssertionError("should not reach here", ex$);
+        }
     }
-    private static final int k_EInputActionOrigin_XBox360_LeftStick_Click = (int)166L;
-    /**
-     * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_XBox360_LeftStick_Click = 166
-     * }
-     */
-    public static int k_EInputActionOrigin_XBox360_LeftStick_Click() {
-        return k_EInputActionOrigin_XBox360_LeftStick_Click;
+
+    private static class SteamAPI_SteamNetworkingIPAddr_IsEqualTo {
+        public static final FunctionDescriptor DESC = FunctionDescriptor.of(
+            SteamFlat4j.C_BOOL,
+            SteamFlat4j.C_POINTER
+        );
+
+        public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(
+                    SteamFlat4j.findOrThrow("SteamAPI_SteamNetworkingIPAddr_IsEqualTo"),
+                    DESC);
     }
-    private static final int k_EInputActionOrigin_XBox360_LeftStick_DPadNorth = (int)167L;
+
     /**
+     * Function descriptor for:
      * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_XBox360_LeftStick_DPadNorth = 167
+     * bool SteamAPI_SteamNetworkingIPAddr_IsEqualTo(const SteamNetworkingIPAddr *x)
      * }
      */
-    public static int k_EInputActionOrigin_XBox360_LeftStick_DPadNorth() {
-        return k_EInputActionOrigin_XBox360_LeftStick_DPadNorth;
+    public static FunctionDescriptor SteamAPI_SteamNetworkingIPAddr_IsEqualTo$descriptor() {
+        return SteamAPI_SteamNetworkingIPAddr_IsEqualTo.DESC;
     }
-    private static final int k_EInputActionOrigin_XBox360_LeftStick_DPadSouth = (int)168L;
+
     /**
+     * Downcall method handle for:
      * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_XBox360_LeftStick_DPadSouth = 168
+     * bool SteamAPI_SteamNetworkingIPAddr_IsEqualTo(const SteamNetworkingIPAddr *x)
      * }
      */
-    public static int k_EInputActionOrigin_XBox360_LeftStick_DPadSouth() {
-        return k_EInputActionOrigin_XBox360_LeftStick_DPadSouth;
+    public static MethodHandle SteamAPI_SteamNetworkingIPAddr_IsEqualTo$handle() {
+        return SteamAPI_SteamNetworkingIPAddr_IsEqualTo.HANDLE;
     }
-    private static final int k_EInputActionOrigin_XBox360_LeftStick_DPadWest = (int)169L;
     /**
      * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_XBox360_LeftStick_DPadWest = 169
+     * bool SteamAPI_SteamNetworkingIPAddr_IsEqualTo(const SteamNetworkingIPAddr *x)
      * }
      */
-    public static int k_EInputActionOrigin_XBox360_LeftStick_DPadWest() {
-        return k_EInputActionOrigin_XBox360_LeftStick_DPadWest;
+    public static boolean SteamAPI_SteamNetworkingIPAddr_IsEqualTo(MemorySegment x) {
+        var mh$ = SteamAPI_SteamNetworkingIPAddr_IsEqualTo.HANDLE;
+        try {
+            if (TRACE_DOWNCALLS) {
+                traceDowncall("SteamAPI_SteamNetworkingIPAddr_IsEqualTo", x);
+            }
+            return (boolean)mh$.invokeExact(x);
+        } catch (Throwable ex$) {
+           throw new AssertionError("should not reach here", ex$);
+        }
     }
-    private static final int k_EInputActionOrigin_XBox360_LeftStick_DPadEast = (int)170L;
-    /**
-     * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_XBox360_LeftStick_DPadEast = 170
-     * }
-     */
-    public static int k_EInputActionOrigin_XBox360_LeftStick_DPadEast() {
-        return k_EInputActionOrigin_XBox360_LeftStick_DPadEast;
+
+    private static class SteamAPI_SteamNetworkingIPAddr_GetFakeIPType {
+        public static final FunctionDescriptor DESC = FunctionDescriptor.of(
+            SteamFlat4j.C_INT    );
+
+        public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(
+                    SteamFlat4j.findOrThrow("SteamAPI_SteamNetworkingIPAddr_GetFakeIPType"),
+                    DESC);
     }
-    private static final int k_EInputActionOrigin_XBox360_RightStick_Move = (int)171L;
+
     /**
+     * Function descriptor for:
      * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_XBox360_RightStick_Move = 171
+     * ESteamNetworkingFakeIPType SteamAPI_SteamNetworkingIPAddr_GetFakeIPType()
      * }
      */
-    public static int k_EInputActionOrigin_XBox360_RightStick_Move() {
-        return k_EInputActionOrigin_XBox360_RightStick_Move;
+    public static FunctionDescriptor SteamAPI_SteamNetworkingIPAddr_GetFakeIPType$descriptor() {
+        return SteamAPI_SteamNetworkingIPAddr_GetFakeIPType.DESC;
     }
-    private static final int k_EInputActionOrigin_XBox360_RightStick_Click = (int)172L;
+
     /**
+     * Downcall method handle for:
      * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_XBox360_RightStick_Click = 172
+     * ESteamNetworkingFakeIPType SteamAPI_SteamNetworkingIPAddr_GetFakeIPType()
      * }
      */
-    public static int k_EInputActionOrigin_XBox360_RightStick_Click() {
-        return k_EInputActionOrigin_XBox360_RightStick_Click;
+    public static MethodHandle SteamAPI_SteamNetworkingIPAddr_GetFakeIPType$handle() {
+        return SteamAPI_SteamNetworkingIPAddr_GetFakeIPType.HANDLE;
     }
-    private static final int k_EInputActionOrigin_XBox360_RightStick_DPadNorth = (int)173L;
     /**
      * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_XBox360_RightStick_DPadNorth = 173
+     * ESteamNetworkingFakeIPType SteamAPI_SteamNetworkingIPAddr_GetFakeIPType()
      * }
      */
-    public static int k_EInputActionOrigin_XBox360_RightStick_DPadNorth() {
-        return k_EInputActionOrigin_XBox360_RightStick_DPadNorth;
+    public static int SteamAPI_SteamNetworkingIPAddr_GetFakeIPType() {
+        var mh$ = SteamAPI_SteamNetworkingIPAddr_GetFakeIPType.HANDLE;
+        try {
+            if (TRACE_DOWNCALLS) {
+                traceDowncall("SteamAPI_SteamNetworkingIPAddr_GetFakeIPType");
+            }
+            return (int)mh$.invokeExact();
+        } catch (Throwable ex$) {
+           throw new AssertionError("should not reach here", ex$);
+        }
     }
-    private static final int k_EInputActionOrigin_XBox360_RightStick_DPadSouth = (int)174L;
-    /**
-     * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_XBox360_RightStick_DPadSouth = 174
-     * }
-     */
-    public static int k_EInputActionOrigin_XBox360_RightStick_DPadSouth() {
-        return k_EInputActionOrigin_XBox360_RightStick_DPadSouth;
+
+    private static class SteamAPI_SteamNetworkingIPAddr_IsFakeIP {
+        public static final FunctionDescriptor DESC = FunctionDescriptor.of(
+            SteamFlat4j.C_BOOL    );
+
+        public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(
+                    SteamFlat4j.findOrThrow("SteamAPI_SteamNetworkingIPAddr_IsFakeIP"),
+                    DESC);
     }
-    private static final int k_EInputActionOrigin_XBox360_RightStick_DPadWest = (int)175L;
+
     /**
+     * Function descriptor for:
      * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_XBox360_RightStick_DPadWest = 175
+     * bool SteamAPI_SteamNetworkingIPAddr_IsFakeIP()
      * }
      */
-    public static int k_EInputActionOrigin_XBox360_RightStick_DPadWest() {
-        return k_EInputActionOrigin_XBox360_RightStick_DPadWest;
+    public static FunctionDescriptor SteamAPI_SteamNetworkingIPAddr_IsFakeIP$descriptor() {
+        return SteamAPI_SteamNetworkingIPAddr_IsFakeIP.DESC;
     }
-    private static final int k_EInputActionOrigin_XBox360_RightStick_DPadEast = (int)176L;
+
     /**
+     * Downcall method handle for:
      * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_XBox360_RightStick_DPadEast = 176
+     * bool SteamAPI_SteamNetworkingIPAddr_IsFakeIP()
      * }
      */
-    public static int k_EInputActionOrigin_XBox360_RightStick_DPadEast() {
-        return k_EInputActionOrigin_XBox360_RightStick_DPadEast;
+    public static MethodHandle SteamAPI_SteamNetworkingIPAddr_IsFakeIP$handle() {
+        return SteamAPI_SteamNetworkingIPAddr_IsFakeIP.HANDLE;
     }
-    private static final int k_EInputActionOrigin_XBox360_DPad_North = (int)177L;
     /**
      * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_XBox360_DPad_North = 177
+     * bool SteamAPI_SteamNetworkingIPAddr_IsFakeIP()
      * }
      */
-    public static int k_EInputActionOrigin_XBox360_DPad_North() {
-        return k_EInputActionOrigin_XBox360_DPad_North;
+    public static boolean SteamAPI_SteamNetworkingIPAddr_IsFakeIP() {
+        var mh$ = SteamAPI_SteamNetworkingIPAddr_IsFakeIP.HANDLE;
+        try {
+            if (TRACE_DOWNCALLS) {
+                traceDowncall("SteamAPI_SteamNetworkingIPAddr_IsFakeIP");
+            }
+            return (boolean)mh$.invokeExact();
+        } catch (Throwable ex$) {
+           throw new AssertionError("should not reach here", ex$);
+        }
     }
-    private static final int k_EInputActionOrigin_XBox360_DPad_South = (int)178L;
-    /**
-     * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_XBox360_DPad_South = 178
-     * }
-     */
-    public static int k_EInputActionOrigin_XBox360_DPad_South() {
-        return k_EInputActionOrigin_XBox360_DPad_South;
+
+    private static class SteamAPI_SteamNetworkingIdentity_Clear {
+        public static final FunctionDescriptor DESC = FunctionDescriptor.ofVoid(    );
+
+        public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(
+                    SteamFlat4j.findOrThrow("SteamAPI_SteamNetworkingIdentity_Clear"),
+                    DESC);
     }
-    private static final int k_EInputActionOrigin_XBox360_DPad_West = (int)179L;
+
     /**
+     * Function descriptor for:
      * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_XBox360_DPad_West = 179
+     * void SteamAPI_SteamNetworkingIdentity_Clear()
      * }
      */
-    public static int k_EInputActionOrigin_XBox360_DPad_West() {
-        return k_EInputActionOrigin_XBox360_DPad_West;
+    public static FunctionDescriptor SteamAPI_SteamNetworkingIdentity_Clear$descriptor() {
+        return SteamAPI_SteamNetworkingIdentity_Clear.DESC;
     }
-    private static final int k_EInputActionOrigin_XBox360_DPad_East = (int)180L;
+
     /**
+     * Downcall method handle for:
      * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_XBox360_DPad_East = 180
+     * void SteamAPI_SteamNetworkingIdentity_Clear()
      * }
      */
-    public static int k_EInputActionOrigin_XBox360_DPad_East() {
-        return k_EInputActionOrigin_XBox360_DPad_East;
+    public static MethodHandle SteamAPI_SteamNetworkingIdentity_Clear$handle() {
+        return SteamAPI_SteamNetworkingIdentity_Clear.HANDLE;
     }
-    private static final int k_EInputActionOrigin_XBox360_DPad_Move = (int)181L;
     /**
      * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_XBox360_DPad_Move = 181
+     * void SteamAPI_SteamNetworkingIdentity_Clear()
      * }
      */
-    public static int k_EInputActionOrigin_XBox360_DPad_Move() {
-        return k_EInputActionOrigin_XBox360_DPad_Move;
+    public static void SteamAPI_SteamNetworkingIdentity_Clear() {
+        var mh$ = SteamAPI_SteamNetworkingIdentity_Clear.HANDLE;
+        try {
+            if (TRACE_DOWNCALLS) {
+                traceDowncall("SteamAPI_SteamNetworkingIdentity_Clear");
+            }
+            mh$.invokeExact();
+        } catch (Throwable ex$) {
+           throw new AssertionError("should not reach here", ex$);
+        }
     }
-    private static final int k_EInputActionOrigin_XBox360_Reserved1 = (int)182L;
-    /**
-     * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_XBox360_Reserved1 = 182
-     * }
-     */
-    public static int k_EInputActionOrigin_XBox360_Reserved1() {
-        return k_EInputActionOrigin_XBox360_Reserved1;
+
+    private static class SteamAPI_SteamNetworkingIdentity_IsInvalid {
+        public static final FunctionDescriptor DESC = FunctionDescriptor.of(
+            SteamFlat4j.C_BOOL    );
+
+        public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(
+                    SteamFlat4j.findOrThrow("SteamAPI_SteamNetworkingIdentity_IsInvalid"),
+                    DESC);
     }
-    private static final int k_EInputActionOrigin_XBox360_Reserved2 = (int)183L;
+
     /**
+     * Function descriptor for:
      * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_XBox360_Reserved2 = 183
+     * bool SteamAPI_SteamNetworkingIdentity_IsInvalid()
      * }
      */
-    public static int k_EInputActionOrigin_XBox360_Reserved2() {
-        return k_EInputActionOrigin_XBox360_Reserved2;
+    public static FunctionDescriptor SteamAPI_SteamNetworkingIdentity_IsInvalid$descriptor() {
+        return SteamAPI_SteamNetworkingIdentity_IsInvalid.DESC;
     }
-    private static final int k_EInputActionOrigin_XBox360_Reserved3 = (int)184L;
+
     /**
+     * Downcall method handle for:
      * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_XBox360_Reserved3 = 184
+     * bool SteamAPI_SteamNetworkingIdentity_IsInvalid()
      * }
      */
-    public static int k_EInputActionOrigin_XBox360_Reserved3() {
-        return k_EInputActionOrigin_XBox360_Reserved3;
+    public static MethodHandle SteamAPI_SteamNetworkingIdentity_IsInvalid$handle() {
+        return SteamAPI_SteamNetworkingIdentity_IsInvalid.HANDLE;
     }
-    private static final int k_EInputActionOrigin_XBox360_Reserved4 = (int)185L;
     /**
      * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_XBox360_Reserved4 = 185
+     * bool SteamAPI_SteamNetworkingIdentity_IsInvalid()
      * }
      */
-    public static int k_EInputActionOrigin_XBox360_Reserved4() {
-        return k_EInputActionOrigin_XBox360_Reserved4;
+    public static boolean SteamAPI_SteamNetworkingIdentity_IsInvalid() {
+        var mh$ = SteamAPI_SteamNetworkingIdentity_IsInvalid.HANDLE;
+        try {
+            if (TRACE_DOWNCALLS) {
+                traceDowncall("SteamAPI_SteamNetworkingIdentity_IsInvalid");
+            }
+            return (boolean)mh$.invokeExact();
+        } catch (Throwable ex$) {
+           throw new AssertionError("should not reach here", ex$);
+        }
     }
-    private static final int k_EInputActionOrigin_XBox360_Reserved5 = (int)186L;
-    /**
-     * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_XBox360_Reserved5 = 186
-     * }
-     */
-    public static int k_EInputActionOrigin_XBox360_Reserved5() {
-        return k_EInputActionOrigin_XBox360_Reserved5;
+
+    private static class SteamAPI_SteamNetworkingIdentity_SetSteamID {
+        public static final FunctionDescriptor DESC = FunctionDescriptor.ofVoid(
+            SteamFlat4j.C_LONG_LONG
+        );
+
+        public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(
+                    SteamFlat4j.findOrThrow("SteamAPI_SteamNetworkingIdentity_SetSteamID"),
+                    DESC);
     }
-    private static final int k_EInputActionOrigin_XBox360_Reserved6 = (int)187L;
+
     /**
+     * Function descriptor for:
      * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_XBox360_Reserved6 = 187
+     * void SteamAPI_SteamNetworkingIdentity_SetSteamID(uint64_steamid steamID)
      * }
      */
-    public static int k_EInputActionOrigin_XBox360_Reserved6() {
-        return k_EInputActionOrigin_XBox360_Reserved6;
+    public static FunctionDescriptor SteamAPI_SteamNetworkingIdentity_SetSteamID$descriptor() {
+        return SteamAPI_SteamNetworkingIdentity_SetSteamID.DESC;
     }
-    private static final int k_EInputActionOrigin_XBox360_Reserved7 = (int)188L;
+
     /**
+     * Downcall method handle for:
      * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_XBox360_Reserved7 = 188
+     * void SteamAPI_SteamNetworkingIdentity_SetSteamID(uint64_steamid steamID)
      * }
      */
-    public static int k_EInputActionOrigin_XBox360_Reserved7() {
-        return k_EInputActionOrigin_XBox360_Reserved7;
+    public static MethodHandle SteamAPI_SteamNetworkingIdentity_SetSteamID$handle() {
+        return SteamAPI_SteamNetworkingIdentity_SetSteamID.HANDLE;
     }
-    private static final int k_EInputActionOrigin_XBox360_Reserved8 = (int)189L;
     /**
      * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_XBox360_Reserved8 = 189
+     * void SteamAPI_SteamNetworkingIdentity_SetSteamID(uint64_steamid steamID)
      * }
      */
-    public static int k_EInputActionOrigin_XBox360_Reserved8() {
-        return k_EInputActionOrigin_XBox360_Reserved8;
+    public static void SteamAPI_SteamNetworkingIdentity_SetSteamID(long steamID) {
+        var mh$ = SteamAPI_SteamNetworkingIdentity_SetSteamID.HANDLE;
+        try {
+            if (TRACE_DOWNCALLS) {
+                traceDowncall("SteamAPI_SteamNetworkingIdentity_SetSteamID", steamID);
+            }
+            mh$.invokeExact(steamID);
+        } catch (Throwable ex$) {
+           throw new AssertionError("should not reach here", ex$);
+        }
     }
-    private static final int k_EInputActionOrigin_XBox360_Reserved9 = (int)190L;
-    /**
-     * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_XBox360_Reserved9 = 190
-     * }
-     */
-    public static int k_EInputActionOrigin_XBox360_Reserved9() {
-        return k_EInputActionOrigin_XBox360_Reserved9;
+
+    private static class SteamAPI_SteamNetworkingIdentity_GetSteamID {
+        public static final FunctionDescriptor DESC = FunctionDescriptor.of(
+            SteamFlat4j.C_LONG_LONG    );
+
+        public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(
+                    SteamFlat4j.findOrThrow("SteamAPI_SteamNetworkingIdentity_GetSteamID"),
+                    DESC);
     }
-    private static final int k_EInputActionOrigin_XBox360_Reserved10 = (int)191L;
+
     /**
+     * Function descriptor for:
      * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_XBox360_Reserved10 = 191
+     * uint64_steamid SteamAPI_SteamNetworkingIdentity_GetSteamID()
      * }
      */
-    public static int k_EInputActionOrigin_XBox360_Reserved10() {
-        return k_EInputActionOrigin_XBox360_Reserved10;
+    public static FunctionDescriptor SteamAPI_SteamNetworkingIdentity_GetSteamID$descriptor() {
+        return SteamAPI_SteamNetworkingIdentity_GetSteamID.DESC;
     }
-    private static final int k_EInputActionOrigin_Switch_A = (int)192L;
+
     /**
+     * Downcall method handle for:
      * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_Switch_A = 192
+     * uint64_steamid SteamAPI_SteamNetworkingIdentity_GetSteamID()
      * }
      */
-    public static int k_EInputActionOrigin_Switch_A() {
-        return k_EInputActionOrigin_Switch_A;
+    public static MethodHandle SteamAPI_SteamNetworkingIdentity_GetSteamID$handle() {
+        return SteamAPI_SteamNetworkingIdentity_GetSteamID.HANDLE;
     }
-    private static final int k_EInputActionOrigin_Switch_B = (int)193L;
     /**
      * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_Switch_B = 193
+     * uint64_steamid SteamAPI_SteamNetworkingIdentity_GetSteamID()
      * }
      */
-    public static int k_EInputActionOrigin_Switch_B() {
-        return k_EInputActionOrigin_Switch_B;
+    public static long SteamAPI_SteamNetworkingIdentity_GetSteamID() {
+        var mh$ = SteamAPI_SteamNetworkingIdentity_GetSteamID.HANDLE;
+        try {
+            if (TRACE_DOWNCALLS) {
+                traceDowncall("SteamAPI_SteamNetworkingIdentity_GetSteamID");
+            }
+            return (long)mh$.invokeExact();
+        } catch (Throwable ex$) {
+           throw new AssertionError("should not reach here", ex$);
+        }
     }
-    private static final int k_EInputActionOrigin_Switch_X = (int)194L;
-    /**
-     * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_Switch_X = 194
-     * }
-     */
-    public static int k_EInputActionOrigin_Switch_X() {
-        return k_EInputActionOrigin_Switch_X;
+
+    private static class SteamAPI_SteamNetworkingIdentity_SetSteamID64 {
+        public static final FunctionDescriptor DESC = FunctionDescriptor.ofVoid(
+            SteamFlat4j.C_LONG_LONG
+        );
+
+        public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(
+                    SteamFlat4j.findOrThrow("SteamAPI_SteamNetworkingIdentity_SetSteamID64"),
+                    DESC);
     }
-    private static final int k_EInputActionOrigin_Switch_Y = (int)195L;
+
     /**
+     * Function descriptor for:
      * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_Switch_Y = 195
+     * void SteamAPI_SteamNetworkingIdentity_SetSteamID64(uint64 steamID)
      * }
      */
-    public static int k_EInputActionOrigin_Switch_Y() {
-        return k_EInputActionOrigin_Switch_Y;
+    public static FunctionDescriptor SteamAPI_SteamNetworkingIdentity_SetSteamID64$descriptor() {
+        return SteamAPI_SteamNetworkingIdentity_SetSteamID64.DESC;
     }
-    private static final int k_EInputActionOrigin_Switch_LeftBumper = (int)196L;
+
     /**
+     * Downcall method handle for:
      * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_Switch_LeftBumper = 196
+     * void SteamAPI_SteamNetworkingIdentity_SetSteamID64(uint64 steamID)
      * }
      */
-    public static int k_EInputActionOrigin_Switch_LeftBumper() {
-        return k_EInputActionOrigin_Switch_LeftBumper;
+    public static MethodHandle SteamAPI_SteamNetworkingIdentity_SetSteamID64$handle() {
+        return SteamAPI_SteamNetworkingIdentity_SetSteamID64.HANDLE;
     }
-    private static final int k_EInputActionOrigin_Switch_RightBumper = (int)197L;
     /**
      * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_Switch_RightBumper = 197
+     * void SteamAPI_SteamNetworkingIdentity_SetSteamID64(uint64 steamID)
      * }
      */
-    public static int k_EInputActionOrigin_Switch_RightBumper() {
-        return k_EInputActionOrigin_Switch_RightBumper;
+    public static void SteamAPI_SteamNetworkingIdentity_SetSteamID64(long steamID) {
+        var mh$ = SteamAPI_SteamNetworkingIdentity_SetSteamID64.HANDLE;
+        try {
+            if (TRACE_DOWNCALLS) {
+                traceDowncall("SteamAPI_SteamNetworkingIdentity_SetSteamID64", steamID);
+            }
+            mh$.invokeExact(steamID);
+        } catch (Throwable ex$) {
+           throw new AssertionError("should not reach here", ex$);
+        }
     }
-    private static final int k_EInputActionOrigin_Switch_Plus = (int)198L;
-    /**
-     * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_Switch_Plus = 198
-     * }
-     */
-    public static int k_EInputActionOrigin_Switch_Plus() {
-        return k_EInputActionOrigin_Switch_Plus;
+
+    private static class SteamAPI_SteamNetworkingIdentity_GetSteamID64 {
+        public static final FunctionDescriptor DESC = FunctionDescriptor.of(
+            SteamFlat4j.C_LONG_LONG    );
+
+        public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(
+                    SteamFlat4j.findOrThrow("SteamAPI_SteamNetworkingIdentity_GetSteamID64"),
+                    DESC);
     }
-    private static final int k_EInputActionOrigin_Switch_Minus = (int)199L;
+
     /**
+     * Function descriptor for:
      * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_Switch_Minus = 199
+     * uint64 SteamAPI_SteamNetworkingIdentity_GetSteamID64()
      * }
      */
-    public static int k_EInputActionOrigin_Switch_Minus() {
-        return k_EInputActionOrigin_Switch_Minus;
+    public static FunctionDescriptor SteamAPI_SteamNetworkingIdentity_GetSteamID64$descriptor() {
+        return SteamAPI_SteamNetworkingIdentity_GetSteamID64.DESC;
     }
-    private static final int k_EInputActionOrigin_Switch_Capture = (int)200L;
+
     /**
+     * Downcall method handle for:
      * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_Switch_Capture = 200
+     * uint64 SteamAPI_SteamNetworkingIdentity_GetSteamID64()
      * }
      */
-    public static int k_EInputActionOrigin_Switch_Capture() {
-        return k_EInputActionOrigin_Switch_Capture;
+    public static MethodHandle SteamAPI_SteamNetworkingIdentity_GetSteamID64$handle() {
+        return SteamAPI_SteamNetworkingIdentity_GetSteamID64.HANDLE;
     }
-    private static final int k_EInputActionOrigin_Switch_LeftTrigger_Pull = (int)201L;
     /**
      * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_Switch_LeftTrigger_Pull = 201
+     * uint64 SteamAPI_SteamNetworkingIdentity_GetSteamID64()
      * }
      */
-    public static int k_EInputActionOrigin_Switch_LeftTrigger_Pull() {
-        return k_EInputActionOrigin_Switch_LeftTrigger_Pull;
+    public static long SteamAPI_SteamNetworkingIdentity_GetSteamID64() {
+        var mh$ = SteamAPI_SteamNetworkingIdentity_GetSteamID64.HANDLE;
+        try {
+            if (TRACE_DOWNCALLS) {
+                traceDowncall("SteamAPI_SteamNetworkingIdentity_GetSteamID64");
+            }
+            return (long)mh$.invokeExact();
+        } catch (Throwable ex$) {
+           throw new AssertionError("should not reach here", ex$);
+        }
     }
-    private static final int k_EInputActionOrigin_Switch_LeftTrigger_Click = (int)202L;
-    /**
-     * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_Switch_LeftTrigger_Click = 202
-     * }
-     */
-    public static int k_EInputActionOrigin_Switch_LeftTrigger_Click() {
-        return k_EInputActionOrigin_Switch_LeftTrigger_Click;
+
+    private static class SteamAPI_SteamNetworkingIdentity_SetXboxPairwiseID {
+        public static final FunctionDescriptor DESC = FunctionDescriptor.of(
+            SteamFlat4j.C_BOOL,
+            SteamFlat4j.C_POINTER
+        );
+
+        public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(
+                    SteamFlat4j.findOrThrow("SteamAPI_SteamNetworkingIdentity_SetXboxPairwiseID"),
+                    DESC);
     }
-    private static final int k_EInputActionOrigin_Switch_RightTrigger_Pull = (int)203L;
+
     /**
+     * Function descriptor for:
      * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_Switch_RightTrigger_Pull = 203
+     * bool SteamAPI_SteamNetworkingIdentity_SetXboxPairwiseID(const char *pszString)
      * }
      */
-    public static int k_EInputActionOrigin_Switch_RightTrigger_Pull() {
-        return k_EInputActionOrigin_Switch_RightTrigger_Pull;
+    public static FunctionDescriptor SteamAPI_SteamNetworkingIdentity_SetXboxPairwiseID$descriptor() {
+        return SteamAPI_SteamNetworkingIdentity_SetXboxPairwiseID.DESC;
     }
-    private static final int k_EInputActionOrigin_Switch_RightTrigger_Click = (int)204L;
+
     /**
+     * Downcall method handle for:
      * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_Switch_RightTrigger_Click = 204
+     * bool SteamAPI_SteamNetworkingIdentity_SetXboxPairwiseID(const char *pszString)
      * }
      */
-    public static int k_EInputActionOrigin_Switch_RightTrigger_Click() {
-        return k_EInputActionOrigin_Switch_RightTrigger_Click;
+    public static MethodHandle SteamAPI_SteamNetworkingIdentity_SetXboxPairwiseID$handle() {
+        return SteamAPI_SteamNetworkingIdentity_SetXboxPairwiseID.HANDLE;
     }
-    private static final int k_EInputActionOrigin_Switch_LeftStick_Move = (int)205L;
     /**
      * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_Switch_LeftStick_Move = 205
+     * bool SteamAPI_SteamNetworkingIdentity_SetXboxPairwiseID(const char *pszString)
      * }
      */
-    public static int k_EInputActionOrigin_Switch_LeftStick_Move() {
-        return k_EInputActionOrigin_Switch_LeftStick_Move;
+    public static boolean SteamAPI_SteamNetworkingIdentity_SetXboxPairwiseID(MemorySegment pszString) {
+        var mh$ = SteamAPI_SteamNetworkingIdentity_SetXboxPairwiseID.HANDLE;
+        try {
+            if (TRACE_DOWNCALLS) {
+                traceDowncall("SteamAPI_SteamNetworkingIdentity_SetXboxPairwiseID", pszString);
+            }
+            return (boolean)mh$.invokeExact(pszString);
+        } catch (Throwable ex$) {
+           throw new AssertionError("should not reach here", ex$);
+        }
     }
-    private static final int k_EInputActionOrigin_Switch_LeftStick_Click = (int)206L;
-    /**
-     * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_Switch_LeftStick_Click = 206
-     * }
-     */
-    public static int k_EInputActionOrigin_Switch_LeftStick_Click() {
-        return k_EInputActionOrigin_Switch_LeftStick_Click;
+
+    private static class SteamAPI_SteamNetworkingIdentity_GetXboxPairwiseID {
+        public static final FunctionDescriptor DESC = FunctionDescriptor.of(
+            SteamFlat4j.C_POINTER    );
+
+        public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(
+                    SteamFlat4j.findOrThrow("SteamAPI_SteamNetworkingIdentity_GetXboxPairwiseID"),
+                    DESC);
     }
-    private static final int k_EInputActionOrigin_Switch_LeftStick_DPadNorth = (int)207L;
+
     /**
+     * Function descriptor for:
      * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_Switch_LeftStick_DPadNorth = 207
+     * const char *SteamAPI_SteamNetworkingIdentity_GetXboxPairwiseID()
      * }
      */
-    public static int k_EInputActionOrigin_Switch_LeftStick_DPadNorth() {
-        return k_EInputActionOrigin_Switch_LeftStick_DPadNorth;
+    public static FunctionDescriptor SteamAPI_SteamNetworkingIdentity_GetXboxPairwiseID$descriptor() {
+        return SteamAPI_SteamNetworkingIdentity_GetXboxPairwiseID.DESC;
     }
-    private static final int k_EInputActionOrigin_Switch_LeftStick_DPadSouth = (int)208L;
+
     /**
+     * Downcall method handle for:
      * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_Switch_LeftStick_DPadSouth = 208
+     * const char *SteamAPI_SteamNetworkingIdentity_GetXboxPairwiseID()
      * }
      */
-    public static int k_EInputActionOrigin_Switch_LeftStick_DPadSouth() {
-        return k_EInputActionOrigin_Switch_LeftStick_DPadSouth;
+    public static MethodHandle SteamAPI_SteamNetworkingIdentity_GetXboxPairwiseID$handle() {
+        return SteamAPI_SteamNetworkingIdentity_GetXboxPairwiseID.HANDLE;
     }
-    private static final int k_EInputActionOrigin_Switch_LeftStick_DPadWest = (int)209L;
     /**
      * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_Switch_LeftStick_DPadWest = 209
+     * const char *SteamAPI_SteamNetworkingIdentity_GetXboxPairwiseID()
      * }
      */
-    public static int k_EInputActionOrigin_Switch_LeftStick_DPadWest() {
-        return k_EInputActionOrigin_Switch_LeftStick_DPadWest;
+    public static MemorySegment SteamAPI_SteamNetworkingIdentity_GetXboxPairwiseID() {
+        var mh$ = SteamAPI_SteamNetworkingIdentity_GetXboxPairwiseID.HANDLE;
+        try {
+            if (TRACE_DOWNCALLS) {
+                traceDowncall("SteamAPI_SteamNetworkingIdentity_GetXboxPairwiseID");
+            }
+            return (MemorySegment)mh$.invokeExact();
+        } catch (Throwable ex$) {
+           throw new AssertionError("should not reach here", ex$);
+        }
     }
-    private static final int k_EInputActionOrigin_Switch_LeftStick_DPadEast = (int)210L;
-    /**
-     * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_Switch_LeftStick_DPadEast = 210
-     * }
-     */
-    public static int k_EInputActionOrigin_Switch_LeftStick_DPadEast() {
-        return k_EInputActionOrigin_Switch_LeftStick_DPadEast;
+
+    private static class SteamAPI_SteamNetworkingIdentity_SetPSNID {
+        public static final FunctionDescriptor DESC = FunctionDescriptor.ofVoid(
+            SteamFlat4j.C_LONG_LONG
+        );
+
+        public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(
+                    SteamFlat4j.findOrThrow("SteamAPI_SteamNetworkingIdentity_SetPSNID"),
+                    DESC);
     }
-    private static final int k_EInputActionOrigin_Switch_RightStick_Move = (int)211L;
+
     /**
+     * Function descriptor for:
      * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_Switch_RightStick_Move = 211
+     * void SteamAPI_SteamNetworkingIdentity_SetPSNID(uint64 id)
      * }
      */
-    public static int k_EInputActionOrigin_Switch_RightStick_Move() {
-        return k_EInputActionOrigin_Switch_RightStick_Move;
+    public static FunctionDescriptor SteamAPI_SteamNetworkingIdentity_SetPSNID$descriptor() {
+        return SteamAPI_SteamNetworkingIdentity_SetPSNID.DESC;
     }
-    private static final int k_EInputActionOrigin_Switch_RightStick_Click = (int)212L;
+
     /**
+     * Downcall method handle for:
      * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_Switch_RightStick_Click = 212
+     * void SteamAPI_SteamNetworkingIdentity_SetPSNID(uint64 id)
      * }
      */
-    public static int k_EInputActionOrigin_Switch_RightStick_Click() {
-        return k_EInputActionOrigin_Switch_RightStick_Click;
+    public static MethodHandle SteamAPI_SteamNetworkingIdentity_SetPSNID$handle() {
+        return SteamAPI_SteamNetworkingIdentity_SetPSNID.HANDLE;
     }
-    private static final int k_EInputActionOrigin_Switch_RightStick_DPadNorth = (int)213L;
     /**
      * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_Switch_RightStick_DPadNorth = 213
+     * void SteamAPI_SteamNetworkingIdentity_SetPSNID(uint64 id)
      * }
      */
-    public static int k_EInputActionOrigin_Switch_RightStick_DPadNorth() {
-        return k_EInputActionOrigin_Switch_RightStick_DPadNorth;
+    public static void SteamAPI_SteamNetworkingIdentity_SetPSNID(long id) {
+        var mh$ = SteamAPI_SteamNetworkingIdentity_SetPSNID.HANDLE;
+        try {
+            if (TRACE_DOWNCALLS) {
+                traceDowncall("SteamAPI_SteamNetworkingIdentity_SetPSNID", id);
+            }
+            mh$.invokeExact(id);
+        } catch (Throwable ex$) {
+           throw new AssertionError("should not reach here", ex$);
+        }
     }
-    private static final int k_EInputActionOrigin_Switch_RightStick_DPadSouth = (int)214L;
-    /**
-     * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_Switch_RightStick_DPadSouth = 214
-     * }
-     */
-    public static int k_EInputActionOrigin_Switch_RightStick_DPadSouth() {
-        return k_EInputActionOrigin_Switch_RightStick_DPadSouth;
+
+    private static class SteamAPI_SteamNetworkingIdentity_GetPSNID {
+        public static final FunctionDescriptor DESC = FunctionDescriptor.of(
+            SteamFlat4j.C_LONG_LONG    );
+
+        public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(
+                    SteamFlat4j.findOrThrow("SteamAPI_SteamNetworkingIdentity_GetPSNID"),
+                    DESC);
     }
-    private static final int k_EInputActionOrigin_Switch_RightStick_DPadWest = (int)215L;
+
     /**
+     * Function descriptor for:
      * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_Switch_RightStick_DPadWest = 215
+     * uint64 SteamAPI_SteamNetworkingIdentity_GetPSNID()
      * }
      */
-    public static int k_EInputActionOrigin_Switch_RightStick_DPadWest() {
-        return k_EInputActionOrigin_Switch_RightStick_DPadWest;
+    public static FunctionDescriptor SteamAPI_SteamNetworkingIdentity_GetPSNID$descriptor() {
+        return SteamAPI_SteamNetworkingIdentity_GetPSNID.DESC;
     }
-    private static final int k_EInputActionOrigin_Switch_RightStick_DPadEast = (int)216L;
+
     /**
+     * Downcall method handle for:
      * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_Switch_RightStick_DPadEast = 216
+     * uint64 SteamAPI_SteamNetworkingIdentity_GetPSNID()
      * }
      */
-    public static int k_EInputActionOrigin_Switch_RightStick_DPadEast() {
-        return k_EInputActionOrigin_Switch_RightStick_DPadEast;
+    public static MethodHandle SteamAPI_SteamNetworkingIdentity_GetPSNID$handle() {
+        return SteamAPI_SteamNetworkingIdentity_GetPSNID.HANDLE;
     }
-    private static final int k_EInputActionOrigin_Switch_DPad_North = (int)217L;
     /**
      * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_Switch_DPad_North = 217
+     * uint64 SteamAPI_SteamNetworkingIdentity_GetPSNID()
      * }
      */
-    public static int k_EInputActionOrigin_Switch_DPad_North() {
-        return k_EInputActionOrigin_Switch_DPad_North;
+    public static long SteamAPI_SteamNetworkingIdentity_GetPSNID() {
+        var mh$ = SteamAPI_SteamNetworkingIdentity_GetPSNID.HANDLE;
+        try {
+            if (TRACE_DOWNCALLS) {
+                traceDowncall("SteamAPI_SteamNetworkingIdentity_GetPSNID");
+            }
+            return (long)mh$.invokeExact();
+        } catch (Throwable ex$) {
+           throw new AssertionError("should not reach here", ex$);
+        }
     }
-    private static final int k_EInputActionOrigin_Switch_DPad_South = (int)218L;
-    /**
-     * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_Switch_DPad_South = 218
-     * }
-     */
-    public static int k_EInputActionOrigin_Switch_DPad_South() {
-        return k_EInputActionOrigin_Switch_DPad_South;
+
+    private static class SteamAPI_SteamNetworkingIdentity_SetStadiaID {
+        public static final FunctionDescriptor DESC = FunctionDescriptor.ofVoid(
+            SteamFlat4j.C_LONG_LONG
+        );
+
+        public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(
+                    SteamFlat4j.findOrThrow("SteamAPI_SteamNetworkingIdentity_SetStadiaID"),
+                    DESC);
     }
-    private static final int k_EInputActionOrigin_Switch_DPad_West = (int)219L;
+
     /**
+     * Function descriptor for:
      * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_Switch_DPad_West = 219
+     * void SteamAPI_SteamNetworkingIdentity_SetStadiaID(uint64 id)
      * }
      */
-    public static int k_EInputActionOrigin_Switch_DPad_West() {
-        return k_EInputActionOrigin_Switch_DPad_West;
+    public static FunctionDescriptor SteamAPI_SteamNetworkingIdentity_SetStadiaID$descriptor() {
+        return SteamAPI_SteamNetworkingIdentity_SetStadiaID.DESC;
     }
-    private static final int k_EInputActionOrigin_Switch_DPad_East = (int)220L;
+
     /**
+     * Downcall method handle for:
      * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_Switch_DPad_East = 220
+     * void SteamAPI_SteamNetworkingIdentity_SetStadiaID(uint64 id)
      * }
      */
-    public static int k_EInputActionOrigin_Switch_DPad_East() {
-        return k_EInputActionOrigin_Switch_DPad_East;
+    public static MethodHandle SteamAPI_SteamNetworkingIdentity_SetStadiaID$handle() {
+        return SteamAPI_SteamNetworkingIdentity_SetStadiaID.HANDLE;
     }
-    private static final int k_EInputActionOrigin_Switch_ProGyro_Move = (int)221L;
     /**
      * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_Switch_ProGyro_Move = 221
+     * void SteamAPI_SteamNetworkingIdentity_SetStadiaID(uint64 id)
      * }
      */
-    public static int k_EInputActionOrigin_Switch_ProGyro_Move() {
-        return k_EInputActionOrigin_Switch_ProGyro_Move;
+    public static void SteamAPI_SteamNetworkingIdentity_SetStadiaID(long id) {
+        var mh$ = SteamAPI_SteamNetworkingIdentity_SetStadiaID.HANDLE;
+        try {
+            if (TRACE_DOWNCALLS) {
+                traceDowncall("SteamAPI_SteamNetworkingIdentity_SetStadiaID", id);
+            }
+            mh$.invokeExact(id);
+        } catch (Throwable ex$) {
+           throw new AssertionError("should not reach here", ex$);
+        }
     }
-    private static final int k_EInputActionOrigin_Switch_ProGyro_Pitch = (int)222L;
-    /**
-     * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_Switch_ProGyro_Pitch = 222
-     * }
-     */
-    public static int k_EInputActionOrigin_Switch_ProGyro_Pitch() {
-        return k_EInputActionOrigin_Switch_ProGyro_Pitch;
+
+    private static class SteamAPI_SteamNetworkingIdentity_GetStadiaID {
+        public static final FunctionDescriptor DESC = FunctionDescriptor.of(
+            SteamFlat4j.C_LONG_LONG    );
+
+        public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(
+                    SteamFlat4j.findOrThrow("SteamAPI_SteamNetworkingIdentity_GetStadiaID"),
+                    DESC);
     }
-    private static final int k_EInputActionOrigin_Switch_ProGyro_Yaw = (int)223L;
+
     /**
+     * Function descriptor for:
      * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_Switch_ProGyro_Yaw = 223
+     * uint64 SteamAPI_SteamNetworkingIdentity_GetStadiaID()
      * }
      */
-    public static int k_EInputActionOrigin_Switch_ProGyro_Yaw() {
-        return k_EInputActionOrigin_Switch_ProGyro_Yaw;
+    public static FunctionDescriptor SteamAPI_SteamNetworkingIdentity_GetStadiaID$descriptor() {
+        return SteamAPI_SteamNetworkingIdentity_GetStadiaID.DESC;
     }
-    private static final int k_EInputActionOrigin_Switch_ProGyro_Roll = (int)224L;
+
     /**
+     * Downcall method handle for:
      * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_Switch_ProGyro_Roll = 224
+     * uint64 SteamAPI_SteamNetworkingIdentity_GetStadiaID()
      * }
      */
-    public static int k_EInputActionOrigin_Switch_ProGyro_Roll() {
-        return k_EInputActionOrigin_Switch_ProGyro_Roll;
+    public static MethodHandle SteamAPI_SteamNetworkingIdentity_GetStadiaID$handle() {
+        return SteamAPI_SteamNetworkingIdentity_GetStadiaID.HANDLE;
     }
-    private static final int k_EInputActionOrigin_Switch_DPad_Move = (int)225L;
     /**
      * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_Switch_DPad_Move = 225
+     * uint64 SteamAPI_SteamNetworkingIdentity_GetStadiaID()
      * }
      */
-    public static int k_EInputActionOrigin_Switch_DPad_Move() {
-        return k_EInputActionOrigin_Switch_DPad_Move;
+    public static long SteamAPI_SteamNetworkingIdentity_GetStadiaID() {
+        var mh$ = SteamAPI_SteamNetworkingIdentity_GetStadiaID.HANDLE;
+        try {
+            if (TRACE_DOWNCALLS) {
+                traceDowncall("SteamAPI_SteamNetworkingIdentity_GetStadiaID");
+            }
+            return (long)mh$.invokeExact();
+        } catch (Throwable ex$) {
+           throw new AssertionError("should not reach here", ex$);
+        }
     }
-    private static final int k_EInputActionOrigin_Switch_Reserved1 = (int)226L;
-    /**
-     * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_Switch_Reserved1 = 226
-     * }
-     */
-    public static int k_EInputActionOrigin_Switch_Reserved1() {
-        return k_EInputActionOrigin_Switch_Reserved1;
+
+    private static class SteamAPI_SteamNetworkingIdentity_SetIPAddr {
+        public static final FunctionDescriptor DESC = FunctionDescriptor.ofVoid(
+            SteamFlat4j.C_POINTER
+        );
+
+        public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(
+                    SteamFlat4j.findOrThrow("SteamAPI_SteamNetworkingIdentity_SetIPAddr"),
+                    DESC);
     }
-    private static final int k_EInputActionOrigin_Switch_Reserved2 = (int)227L;
+
     /**
+     * Function descriptor for:
      * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_Switch_Reserved2 = 227
+     * void SteamAPI_SteamNetworkingIdentity_SetIPAddr(const SteamNetworkingIPAddr *addr)
      * }
      */
-    public static int k_EInputActionOrigin_Switch_Reserved2() {
-        return k_EInputActionOrigin_Switch_Reserved2;
+    public static FunctionDescriptor SteamAPI_SteamNetworkingIdentity_SetIPAddr$descriptor() {
+        return SteamAPI_SteamNetworkingIdentity_SetIPAddr.DESC;
     }
-    private static final int k_EInputActionOrigin_Switch_Reserved3 = (int)228L;
+
     /**
+     * Downcall method handle for:
      * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_Switch_Reserved3 = 228
+     * void SteamAPI_SteamNetworkingIdentity_SetIPAddr(const SteamNetworkingIPAddr *addr)
      * }
      */
-    public static int k_EInputActionOrigin_Switch_Reserved3() {
-        return k_EInputActionOrigin_Switch_Reserved3;
+    public static MethodHandle SteamAPI_SteamNetworkingIdentity_SetIPAddr$handle() {
+        return SteamAPI_SteamNetworkingIdentity_SetIPAddr.HANDLE;
     }
-    private static final int k_EInputActionOrigin_Switch_Reserved4 = (int)229L;
     /**
      * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_Switch_Reserved4 = 229
+     * void SteamAPI_SteamNetworkingIdentity_SetIPAddr(const SteamNetworkingIPAddr *addr)
      * }
      */
-    public static int k_EInputActionOrigin_Switch_Reserved4() {
-        return k_EInputActionOrigin_Switch_Reserved4;
+    public static void SteamAPI_SteamNetworkingIdentity_SetIPAddr(MemorySegment addr) {
+        var mh$ = SteamAPI_SteamNetworkingIdentity_SetIPAddr.HANDLE;
+        try {
+            if (TRACE_DOWNCALLS) {
+                traceDowncall("SteamAPI_SteamNetworkingIdentity_SetIPAddr", addr);
+            }
+            mh$.invokeExact(addr);
+        } catch (Throwable ex$) {
+           throw new AssertionError("should not reach here", ex$);
+        }
     }
-    private static final int k_EInputActionOrigin_Switch_Reserved5 = (int)230L;
-    /**
-     * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_Switch_Reserved5 = 230
-     * }
-     */
-    public static int k_EInputActionOrigin_Switch_Reserved5() {
-        return k_EInputActionOrigin_Switch_Reserved5;
+
+    private static class SteamAPI_SteamNetworkingIdentity_GetIPAddr {
+        public static final FunctionDescriptor DESC = FunctionDescriptor.of(
+            SteamFlat4j.C_POINTER    );
+
+        public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(
+                    SteamFlat4j.findOrThrow("SteamAPI_SteamNetworkingIdentity_GetIPAddr"),
+                    DESC);
     }
-    private static final int k_EInputActionOrigin_Switch_Reserved6 = (int)231L;
+
     /**
+     * Function descriptor for:
      * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_Switch_Reserved6 = 231
+     * const SteamNetworkingIPAddr *SteamAPI_SteamNetworkingIdentity_GetIPAddr()
      * }
      */
-    public static int k_EInputActionOrigin_Switch_Reserved6() {
-        return k_EInputActionOrigin_Switch_Reserved6;
+    public static FunctionDescriptor SteamAPI_SteamNetworkingIdentity_GetIPAddr$descriptor() {
+        return SteamAPI_SteamNetworkingIdentity_GetIPAddr.DESC;
     }
-    private static final int k_EInputActionOrigin_Switch_Reserved7 = (int)232L;
+
     /**
+     * Downcall method handle for:
      * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_Switch_Reserved7 = 232
+     * const SteamNetworkingIPAddr *SteamAPI_SteamNetworkingIdentity_GetIPAddr()
      * }
      */
-    public static int k_EInputActionOrigin_Switch_Reserved7() {
-        return k_EInputActionOrigin_Switch_Reserved7;
+    public static MethodHandle SteamAPI_SteamNetworkingIdentity_GetIPAddr$handle() {
+        return SteamAPI_SteamNetworkingIdentity_GetIPAddr.HANDLE;
     }
-    private static final int k_EInputActionOrigin_Switch_Reserved8 = (int)233L;
     /**
      * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_Switch_Reserved8 = 233
+     * const SteamNetworkingIPAddr *SteamAPI_SteamNetworkingIdentity_GetIPAddr()
      * }
      */
-    public static int k_EInputActionOrigin_Switch_Reserved8() {
-        return k_EInputActionOrigin_Switch_Reserved8;
+    public static MemorySegment SteamAPI_SteamNetworkingIdentity_GetIPAddr() {
+        var mh$ = SteamAPI_SteamNetworkingIdentity_GetIPAddr.HANDLE;
+        try {
+            if (TRACE_DOWNCALLS) {
+                traceDowncall("SteamAPI_SteamNetworkingIdentity_GetIPAddr");
+            }
+            return (MemorySegment)mh$.invokeExact();
+        } catch (Throwable ex$) {
+           throw new AssertionError("should not reach here", ex$);
+        }
     }
-    private static final int k_EInputActionOrigin_Switch_Reserved9 = (int)234L;
-    /**
-     * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_Switch_Reserved9 = 234
-     * }
-     */
-    public static int k_EInputActionOrigin_Switch_Reserved9() {
-        return k_EInputActionOrigin_Switch_Reserved9;
+
+    private static class SteamAPI_SteamNetworkingIdentity_SetIPv4Addr {
+        public static final FunctionDescriptor DESC = FunctionDescriptor.ofVoid(
+            SteamFlat4j.C_INT,
+            SteamFlat4j.C_SHORT
+        );
+
+        public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(
+                    SteamFlat4j.findOrThrow("SteamAPI_SteamNetworkingIdentity_SetIPv4Addr"),
+                    DESC);
     }
-    private static final int k_EInputActionOrigin_Switch_Reserved10 = (int)235L;
+
     /**
+     * Function descriptor for:
      * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_Switch_Reserved10 = 235
+     * void SteamAPI_SteamNetworkingIdentity_SetIPv4Addr(uint32 nIPv4, uint16 nPort)
      * }
      */
-    public static int k_EInputActionOrigin_Switch_Reserved10() {
-        return k_EInputActionOrigin_Switch_Reserved10;
+    public static FunctionDescriptor SteamAPI_SteamNetworkingIdentity_SetIPv4Addr$descriptor() {
+        return SteamAPI_SteamNetworkingIdentity_SetIPv4Addr.DESC;
     }
-    private static final int k_EInputActionOrigin_Switch_RightGyro_Move = (int)236L;
+
     /**
+     * Downcall method handle for:
      * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_Switch_RightGyro_Move = 236
+     * void SteamAPI_SteamNetworkingIdentity_SetIPv4Addr(uint32 nIPv4, uint16 nPort)
      * }
      */
-    public static int k_EInputActionOrigin_Switch_RightGyro_Move() {
-        return k_EInputActionOrigin_Switch_RightGyro_Move;
+    public static MethodHandle SteamAPI_SteamNetworkingIdentity_SetIPv4Addr$handle() {
+        return SteamAPI_SteamNetworkingIdentity_SetIPv4Addr.HANDLE;
     }
-    private static final int k_EInputActionOrigin_Switch_RightGyro_Pitch = (int)237L;
     /**
      * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_Switch_RightGyro_Pitch = 237
+     * void SteamAPI_SteamNetworkingIdentity_SetIPv4Addr(uint32 nIPv4, uint16 nPort)
      * }
      */
-    public static int k_EInputActionOrigin_Switch_RightGyro_Pitch() {
-        return k_EInputActionOrigin_Switch_RightGyro_Pitch;
+    public static void SteamAPI_SteamNetworkingIdentity_SetIPv4Addr(int nIPv4, short nPort) {
+        var mh$ = SteamAPI_SteamNetworkingIdentity_SetIPv4Addr.HANDLE;
+        try {
+            if (TRACE_DOWNCALLS) {
+                traceDowncall("SteamAPI_SteamNetworkingIdentity_SetIPv4Addr", nIPv4, nPort);
+            }
+            mh$.invokeExact(nIPv4, nPort);
+        } catch (Throwable ex$) {
+           throw new AssertionError("should not reach here", ex$);
+        }
     }
-    private static final int k_EInputActionOrigin_Switch_RightGyro_Yaw = (int)238L;
-    /**
-     * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_Switch_RightGyro_Yaw = 238
-     * }
-     */
-    public static int k_EInputActionOrigin_Switch_RightGyro_Yaw() {
-        return k_EInputActionOrigin_Switch_RightGyro_Yaw;
+
+    private static class SteamAPI_SteamNetworkingIdentity_GetIPv4 {
+        public static final FunctionDescriptor DESC = FunctionDescriptor.of(
+            SteamFlat4j.C_INT    );
+
+        public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(
+                    SteamFlat4j.findOrThrow("SteamAPI_SteamNetworkingIdentity_GetIPv4"),
+                    DESC);
     }
-    private static final int k_EInputActionOrigin_Switch_RightGyro_Roll = (int)239L;
+
     /**
+     * Function descriptor for:
      * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_Switch_RightGyro_Roll = 239
+     * uint32 SteamAPI_SteamNetworkingIdentity_GetIPv4()
      * }
      */
-    public static int k_EInputActionOrigin_Switch_RightGyro_Roll() {
-        return k_EInputActionOrigin_Switch_RightGyro_Roll;
+    public static FunctionDescriptor SteamAPI_SteamNetworkingIdentity_GetIPv4$descriptor() {
+        return SteamAPI_SteamNetworkingIdentity_GetIPv4.DESC;
     }
-    private static final int k_EInputActionOrigin_Switch_LeftGyro_Move = (int)240L;
+
     /**
+     * Downcall method handle for:
      * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_Switch_LeftGyro_Move = 240
+     * uint32 SteamAPI_SteamNetworkingIdentity_GetIPv4()
      * }
      */
-    public static int k_EInputActionOrigin_Switch_LeftGyro_Move() {
-        return k_EInputActionOrigin_Switch_LeftGyro_Move;
+    public static MethodHandle SteamAPI_SteamNetworkingIdentity_GetIPv4$handle() {
+        return SteamAPI_SteamNetworkingIdentity_GetIPv4.HANDLE;
     }
-    private static final int k_EInputActionOrigin_Switch_LeftGyro_Pitch = (int)241L;
     /**
      * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_Switch_LeftGyro_Pitch = 241
+     * uint32 SteamAPI_SteamNetworkingIdentity_GetIPv4()
      * }
      */
-    public static int k_EInputActionOrigin_Switch_LeftGyro_Pitch() {
-        return k_EInputActionOrigin_Switch_LeftGyro_Pitch;
+    public static int SteamAPI_SteamNetworkingIdentity_GetIPv4() {
+        var mh$ = SteamAPI_SteamNetworkingIdentity_GetIPv4.HANDLE;
+        try {
+            if (TRACE_DOWNCALLS) {
+                traceDowncall("SteamAPI_SteamNetworkingIdentity_GetIPv4");
+            }
+            return (int)mh$.invokeExact();
+        } catch (Throwable ex$) {
+           throw new AssertionError("should not reach here", ex$);
+        }
     }
-    private static final int k_EInputActionOrigin_Switch_LeftGyro_Yaw = (int)242L;
-    /**
-     * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_Switch_LeftGyro_Yaw = 242
-     * }
-     */
-    public static int k_EInputActionOrigin_Switch_LeftGyro_Yaw() {
-        return k_EInputActionOrigin_Switch_LeftGyro_Yaw;
+
+    private static class SteamAPI_SteamNetworkingIdentity_GetFakeIPType {
+        public static final FunctionDescriptor DESC = FunctionDescriptor.of(
+            SteamFlat4j.C_INT    );
+
+        public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(
+                    SteamFlat4j.findOrThrow("SteamAPI_SteamNetworkingIdentity_GetFakeIPType"),
+                    DESC);
     }
-    private static final int k_EInputActionOrigin_Switch_LeftGyro_Roll = (int)243L;
+
     /**
+     * Function descriptor for:
      * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_Switch_LeftGyro_Roll = 243
+     * ESteamNetworkingFakeIPType SteamAPI_SteamNetworkingIdentity_GetFakeIPType()
      * }
      */
-    public static int k_EInputActionOrigin_Switch_LeftGyro_Roll() {
-        return k_EInputActionOrigin_Switch_LeftGyro_Roll;
+    public static FunctionDescriptor SteamAPI_SteamNetworkingIdentity_GetFakeIPType$descriptor() {
+        return SteamAPI_SteamNetworkingIdentity_GetFakeIPType.DESC;
     }
-    private static final int k_EInputActionOrigin_Switch_LeftGrip_Lower = (int)244L;
+
     /**
+     * Downcall method handle for:
      * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_Switch_LeftGrip_Lower = 244
+     * ESteamNetworkingFakeIPType SteamAPI_SteamNetworkingIdentity_GetFakeIPType()
      * }
      */
-    public static int k_EInputActionOrigin_Switch_LeftGrip_Lower() {
-        return k_EInputActionOrigin_Switch_LeftGrip_Lower;
+    public static MethodHandle SteamAPI_SteamNetworkingIdentity_GetFakeIPType$handle() {
+        return SteamAPI_SteamNetworkingIdentity_GetFakeIPType.HANDLE;
     }
-    private static final int k_EInputActionOrigin_Switch_LeftGrip_Upper = (int)245L;
     /**
      * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_Switch_LeftGrip_Upper = 245
+     * ESteamNetworkingFakeIPType SteamAPI_SteamNetworkingIdentity_GetFakeIPType()
      * }
      */
-    public static int k_EInputActionOrigin_Switch_LeftGrip_Upper() {
-        return k_EInputActionOrigin_Switch_LeftGrip_Upper;
+    public static int SteamAPI_SteamNetworkingIdentity_GetFakeIPType() {
+        var mh$ = SteamAPI_SteamNetworkingIdentity_GetFakeIPType.HANDLE;
+        try {
+            if (TRACE_DOWNCALLS) {
+                traceDowncall("SteamAPI_SteamNetworkingIdentity_GetFakeIPType");
+            }
+            return (int)mh$.invokeExact();
+        } catch (Throwable ex$) {
+           throw new AssertionError("should not reach here", ex$);
+        }
     }
-    private static final int k_EInputActionOrigin_Switch_RightGrip_Lower = (int)246L;
-    /**
-     * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_Switch_RightGrip_Lower = 246
-     * }
-     */
-    public static int k_EInputActionOrigin_Switch_RightGrip_Lower() {
-        return k_EInputActionOrigin_Switch_RightGrip_Lower;
+
+    private static class SteamAPI_SteamNetworkingIdentity_IsFakeIP {
+        public static final FunctionDescriptor DESC = FunctionDescriptor.of(
+            SteamFlat4j.C_BOOL    );
+
+        public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(
+                    SteamFlat4j.findOrThrow("SteamAPI_SteamNetworkingIdentity_IsFakeIP"),
+                    DESC);
     }
-    private static final int k_EInputActionOrigin_Switch_RightGrip_Upper = (int)247L;
+
     /**
+     * Function descriptor for:
      * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_Switch_RightGrip_Upper = 247
+     * bool SteamAPI_SteamNetworkingIdentity_IsFakeIP()
      * }
      */
-    public static int k_EInputActionOrigin_Switch_RightGrip_Upper() {
-        return k_EInputActionOrigin_Switch_RightGrip_Upper;
+    public static FunctionDescriptor SteamAPI_SteamNetworkingIdentity_IsFakeIP$descriptor() {
+        return SteamAPI_SteamNetworkingIdentity_IsFakeIP.DESC;
     }
-    private static final int k_EInputActionOrigin_Switch_JoyConButton_N = (int)248L;
+
     /**
+     * Downcall method handle for:
      * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_Switch_JoyConButton_N = 248
+     * bool SteamAPI_SteamNetworkingIdentity_IsFakeIP()
      * }
      */
-    public static int k_EInputActionOrigin_Switch_JoyConButton_N() {
-        return k_EInputActionOrigin_Switch_JoyConButton_N;
+    public static MethodHandle SteamAPI_SteamNetworkingIdentity_IsFakeIP$handle() {
+        return SteamAPI_SteamNetworkingIdentity_IsFakeIP.HANDLE;
     }
-    private static final int k_EInputActionOrigin_Switch_JoyConButton_E = (int)249L;
     /**
      * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_Switch_JoyConButton_E = 249
+     * bool SteamAPI_SteamNetworkingIdentity_IsFakeIP()
      * }
      */
-    public static int k_EInputActionOrigin_Switch_JoyConButton_E() {
-        return k_EInputActionOrigin_Switch_JoyConButton_E;
+    public static boolean SteamAPI_SteamNetworkingIdentity_IsFakeIP() {
+        var mh$ = SteamAPI_SteamNetworkingIdentity_IsFakeIP.HANDLE;
+        try {
+            if (TRACE_DOWNCALLS) {
+                traceDowncall("SteamAPI_SteamNetworkingIdentity_IsFakeIP");
+            }
+            return (boolean)mh$.invokeExact();
+        } catch (Throwable ex$) {
+           throw new AssertionError("should not reach here", ex$);
+        }
     }
-    private static final int k_EInputActionOrigin_Switch_JoyConButton_S = (int)250L;
-    /**
-     * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_Switch_JoyConButton_S = 250
-     * }
-     */
-    public static int k_EInputActionOrigin_Switch_JoyConButton_S() {
-        return k_EInputActionOrigin_Switch_JoyConButton_S;
+
+    private static class SteamAPI_SteamNetworkingIdentity_SetLocalHost {
+        public static final FunctionDescriptor DESC = FunctionDescriptor.ofVoid(    );
+
+        public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(
+                    SteamFlat4j.findOrThrow("SteamAPI_SteamNetworkingIdentity_SetLocalHost"),
+                    DESC);
     }
-    private static final int k_EInputActionOrigin_Switch_JoyConButton_W = (int)251L;
+
     /**
+     * Function descriptor for:
      * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_Switch_JoyConButton_W = 251
+     * void SteamAPI_SteamNetworkingIdentity_SetLocalHost()
      * }
      */
-    public static int k_EInputActionOrigin_Switch_JoyConButton_W() {
-        return k_EInputActionOrigin_Switch_JoyConButton_W;
+    public static FunctionDescriptor SteamAPI_SteamNetworkingIdentity_SetLocalHost$descriptor() {
+        return SteamAPI_SteamNetworkingIdentity_SetLocalHost.DESC;
     }
-    private static final int k_EInputActionOrigin_Switch_Reserved15 = (int)252L;
+
     /**
+     * Downcall method handle for:
      * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_Switch_Reserved15 = 252
+     * void SteamAPI_SteamNetworkingIdentity_SetLocalHost()
      * }
      */
-    public static int k_EInputActionOrigin_Switch_Reserved15() {
-        return k_EInputActionOrigin_Switch_Reserved15;
+    public static MethodHandle SteamAPI_SteamNetworkingIdentity_SetLocalHost$handle() {
+        return SteamAPI_SteamNetworkingIdentity_SetLocalHost.HANDLE;
     }
-    private static final int k_EInputActionOrigin_Switch_Reserved16 = (int)253L;
     /**
      * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_Switch_Reserved16 = 253
+     * void SteamAPI_SteamNetworkingIdentity_SetLocalHost()
      * }
      */
-    public static int k_EInputActionOrigin_Switch_Reserved16() {
-        return k_EInputActionOrigin_Switch_Reserved16;
+    public static void SteamAPI_SteamNetworkingIdentity_SetLocalHost() {
+        var mh$ = SteamAPI_SteamNetworkingIdentity_SetLocalHost.HANDLE;
+        try {
+            if (TRACE_DOWNCALLS) {
+                traceDowncall("SteamAPI_SteamNetworkingIdentity_SetLocalHost");
+            }
+            mh$.invokeExact();
+        } catch (Throwable ex$) {
+           throw new AssertionError("should not reach here", ex$);
+        }
     }
-    private static final int k_EInputActionOrigin_Switch_Reserved17 = (int)254L;
-    /**
-     * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_Switch_Reserved17 = 254
-     * }
-     */
-    public static int k_EInputActionOrigin_Switch_Reserved17() {
-        return k_EInputActionOrigin_Switch_Reserved17;
+
+    private static class SteamAPI_SteamNetworkingIdentity_IsLocalHost {
+        public static final FunctionDescriptor DESC = FunctionDescriptor.of(
+            SteamFlat4j.C_BOOL    );
+
+        public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(
+                    SteamFlat4j.findOrThrow("SteamAPI_SteamNetworkingIdentity_IsLocalHost"),
+                    DESC);
     }
-    private static final int k_EInputActionOrigin_Switch_Reserved18 = (int)255L;
+
     /**
+     * Function descriptor for:
      * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_Switch_Reserved18 = 255
+     * bool SteamAPI_SteamNetworkingIdentity_IsLocalHost()
      * }
      */
-    public static int k_EInputActionOrigin_Switch_Reserved18() {
-        return k_EInputActionOrigin_Switch_Reserved18;
+    public static FunctionDescriptor SteamAPI_SteamNetworkingIdentity_IsLocalHost$descriptor() {
+        return SteamAPI_SteamNetworkingIdentity_IsLocalHost.DESC;
     }
-    private static final int k_EInputActionOrigin_Switch_Reserved19 = (int)256L;
+
     /**
+     * Downcall method handle for:
      * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_Switch_Reserved19 = 256
+     * bool SteamAPI_SteamNetworkingIdentity_IsLocalHost()
      * }
      */
-    public static int k_EInputActionOrigin_Switch_Reserved19() {
-        return k_EInputActionOrigin_Switch_Reserved19;
+    public static MethodHandle SteamAPI_SteamNetworkingIdentity_IsLocalHost$handle() {
+        return SteamAPI_SteamNetworkingIdentity_IsLocalHost.HANDLE;
     }
-    private static final int k_EInputActionOrigin_Switch_Reserved20 = (int)257L;
     /**
      * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_Switch_Reserved20 = 257
+     * bool SteamAPI_SteamNetworkingIdentity_IsLocalHost()
      * }
      */
-    public static int k_EInputActionOrigin_Switch_Reserved20() {
-        return k_EInputActionOrigin_Switch_Reserved20;
+    public static boolean SteamAPI_SteamNetworkingIdentity_IsLocalHost() {
+        var mh$ = SteamAPI_SteamNetworkingIdentity_IsLocalHost.HANDLE;
+        try {
+            if (TRACE_DOWNCALLS) {
+                traceDowncall("SteamAPI_SteamNetworkingIdentity_IsLocalHost");
+            }
+            return (boolean)mh$.invokeExact();
+        } catch (Throwable ex$) {
+           throw new AssertionError("should not reach here", ex$);
+        }
     }
-    private static final int k_EInputActionOrigin_PS5_X = (int)258L;
-    /**
-     * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_PS5_X = 258
-     * }
-     */
-    public static int k_EInputActionOrigin_PS5_X() {
-        return k_EInputActionOrigin_PS5_X;
+
+    private static class SteamAPI_SteamNetworkingIdentity_SetGenericString {
+        public static final FunctionDescriptor DESC = FunctionDescriptor.of(
+            SteamFlat4j.C_BOOL,
+            SteamFlat4j.C_POINTER
+        );
+
+        public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(
+                    SteamFlat4j.findOrThrow("SteamAPI_SteamNetworkingIdentity_SetGenericString"),
+                    DESC);
     }
-    private static final int k_EInputActionOrigin_PS5_Circle = (int)259L;
+
     /**
+     * Function descriptor for:
      * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_PS5_Circle = 259
+     * bool SteamAPI_SteamNetworkingIdentity_SetGenericString(const char *pszString)
      * }
      */
-    public static int k_EInputActionOrigin_PS5_Circle() {
-        return k_EInputActionOrigin_PS5_Circle;
+    public static FunctionDescriptor SteamAPI_SteamNetworkingIdentity_SetGenericString$descriptor() {
+        return SteamAPI_SteamNetworkingIdentity_SetGenericString.DESC;
     }
-    private static final int k_EInputActionOrigin_PS5_Triangle = (int)260L;
+
     /**
+     * Downcall method handle for:
      * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_PS5_Triangle = 260
+     * bool SteamAPI_SteamNetworkingIdentity_SetGenericString(const char *pszString)
      * }
      */
-    public static int k_EInputActionOrigin_PS5_Triangle() {
-        return k_EInputActionOrigin_PS5_Triangle;
+    public static MethodHandle SteamAPI_SteamNetworkingIdentity_SetGenericString$handle() {
+        return SteamAPI_SteamNetworkingIdentity_SetGenericString.HANDLE;
     }
-    private static final int k_EInputActionOrigin_PS5_Square = (int)261L;
     /**
      * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_PS5_Square = 261
+     * bool SteamAPI_SteamNetworkingIdentity_SetGenericString(const char *pszString)
      * }
      */
-    public static int k_EInputActionOrigin_PS5_Square() {
-        return k_EInputActionOrigin_PS5_Square;
+    public static boolean SteamAPI_SteamNetworkingIdentity_SetGenericString(MemorySegment pszString) {
+        var mh$ = SteamAPI_SteamNetworkingIdentity_SetGenericString.HANDLE;
+        try {
+            if (TRACE_DOWNCALLS) {
+                traceDowncall("SteamAPI_SteamNetworkingIdentity_SetGenericString", pszString);
+            }
+            return (boolean)mh$.invokeExact(pszString);
+        } catch (Throwable ex$) {
+           throw new AssertionError("should not reach here", ex$);
+        }
     }
-    private static final int k_EInputActionOrigin_PS5_LeftBumper = (int)262L;
-    /**
-     * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_PS5_LeftBumper = 262
-     * }
-     */
-    public static int k_EInputActionOrigin_PS5_LeftBumper() {
-        return k_EInputActionOrigin_PS5_LeftBumper;
+
+    private static class SteamAPI_SteamNetworkingIdentity_GetGenericString {
+        public static final FunctionDescriptor DESC = FunctionDescriptor.of(
+            SteamFlat4j.C_POINTER    );
+
+        public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(
+                    SteamFlat4j.findOrThrow("SteamAPI_SteamNetworkingIdentity_GetGenericString"),
+                    DESC);
     }
-    private static final int k_EInputActionOrigin_PS5_RightBumper = (int)263L;
+
     /**
+     * Function descriptor for:
      * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_PS5_RightBumper = 263
+     * const char *SteamAPI_SteamNetworkingIdentity_GetGenericString()
      * }
      */
-    public static int k_EInputActionOrigin_PS5_RightBumper() {
-        return k_EInputActionOrigin_PS5_RightBumper;
+    public static FunctionDescriptor SteamAPI_SteamNetworkingIdentity_GetGenericString$descriptor() {
+        return SteamAPI_SteamNetworkingIdentity_GetGenericString.DESC;
     }
-    private static final int k_EInputActionOrigin_PS5_Option = (int)264L;
+
     /**
+     * Downcall method handle for:
      * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_PS5_Option = 264
+     * const char *SteamAPI_SteamNetworkingIdentity_GetGenericString()
      * }
      */
-    public static int k_EInputActionOrigin_PS5_Option() {
-        return k_EInputActionOrigin_PS5_Option;
+    public static MethodHandle SteamAPI_SteamNetworkingIdentity_GetGenericString$handle() {
+        return SteamAPI_SteamNetworkingIdentity_GetGenericString.HANDLE;
     }
-    private static final int k_EInputActionOrigin_PS5_Create = (int)265L;
     /**
      * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_PS5_Create = 265
+     * const char *SteamAPI_SteamNetworkingIdentity_GetGenericString()
      * }
      */
-    public static int k_EInputActionOrigin_PS5_Create() {
-        return k_EInputActionOrigin_PS5_Create;
+    public static MemorySegment SteamAPI_SteamNetworkingIdentity_GetGenericString() {
+        var mh$ = SteamAPI_SteamNetworkingIdentity_GetGenericString.HANDLE;
+        try {
+            if (TRACE_DOWNCALLS) {
+                traceDowncall("SteamAPI_SteamNetworkingIdentity_GetGenericString");
+            }
+            return (MemorySegment)mh$.invokeExact();
+        } catch (Throwable ex$) {
+           throw new AssertionError("should not reach here", ex$);
+        }
     }
-    private static final int k_EInputActionOrigin_PS5_Mute = (int)266L;
-    /**
-     * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_PS5_Mute = 266
-     * }
-     */
-    public static int k_EInputActionOrigin_PS5_Mute() {
-        return k_EInputActionOrigin_PS5_Mute;
+
+    private static class SteamAPI_SteamNetworkingIdentity_SetGenericBytes {
+        public static final FunctionDescriptor DESC = FunctionDescriptor.of(
+            SteamFlat4j.C_BOOL,
+            SteamFlat4j.C_POINTER,
+            SteamFlat4j.C_INT
+        );
+
+        public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(
+                    SteamFlat4j.findOrThrow("SteamAPI_SteamNetworkingIdentity_SetGenericBytes"),
+                    DESC);
     }
-    private static final int k_EInputActionOrigin_PS5_LeftPad_Touch = (int)267L;
+
     /**
+     * Function descriptor for:
      * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_PS5_LeftPad_Touch = 267
+     * bool SteamAPI_SteamNetworkingIdentity_SetGenericBytes(const void *data, uint32 cbLen)
      * }
      */
-    public static int k_EInputActionOrigin_PS5_LeftPad_Touch() {
-        return k_EInputActionOrigin_PS5_LeftPad_Touch;
+    public static FunctionDescriptor SteamAPI_SteamNetworkingIdentity_SetGenericBytes$descriptor() {
+        return SteamAPI_SteamNetworkingIdentity_SetGenericBytes.DESC;
     }
-    private static final int k_EInputActionOrigin_PS5_LeftPad_Swipe = (int)268L;
+
     /**
+     * Downcall method handle for:
      * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_PS5_LeftPad_Swipe = 268
+     * bool SteamAPI_SteamNetworkingIdentity_SetGenericBytes(const void *data, uint32 cbLen)
      * }
      */
-    public static int k_EInputActionOrigin_PS5_LeftPad_Swipe() {
-        return k_EInputActionOrigin_PS5_LeftPad_Swipe;
+    public static MethodHandle SteamAPI_SteamNetworkingIdentity_SetGenericBytes$handle() {
+        return SteamAPI_SteamNetworkingIdentity_SetGenericBytes.HANDLE;
     }
-    private static final int k_EInputActionOrigin_PS5_LeftPad_Click = (int)269L;
     /**
      * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_PS5_LeftPad_Click = 269
+     * bool SteamAPI_SteamNetworkingIdentity_SetGenericBytes(const void *data, uint32 cbLen)
      * }
      */
-    public static int k_EInputActionOrigin_PS5_LeftPad_Click() {
-        return k_EInputActionOrigin_PS5_LeftPad_Click;
+    public static boolean SteamAPI_SteamNetworkingIdentity_SetGenericBytes(MemorySegment data, int cbLen) {
+        var mh$ = SteamAPI_SteamNetworkingIdentity_SetGenericBytes.HANDLE;
+        try {
+            if (TRACE_DOWNCALLS) {
+                traceDowncall("SteamAPI_SteamNetworkingIdentity_SetGenericBytes", data, cbLen);
+            }
+            return (boolean)mh$.invokeExact(data, cbLen);
+        } catch (Throwable ex$) {
+           throw new AssertionError("should not reach here", ex$);
+        }
     }
-    private static final int k_EInputActionOrigin_PS5_LeftPad_DPadNorth = (int)270L;
-    /**
-     * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_PS5_LeftPad_DPadNorth = 270
-     * }
-     */
-    public static int k_EInputActionOrigin_PS5_LeftPad_DPadNorth() {
-        return k_EInputActionOrigin_PS5_LeftPad_DPadNorth;
+
+    private static class SteamAPI_SteamNetworkingIdentity_GetGenericBytes {
+        public static final FunctionDescriptor DESC = FunctionDescriptor.of(
+            SteamFlat4j.C_POINTER,
+            SteamFlat4j.C_POINTER
+        );
+
+        public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(
+                    SteamFlat4j.findOrThrow("SteamAPI_SteamNetworkingIdentity_GetGenericBytes"),
+                    DESC);
     }
-    private static final int k_EInputActionOrigin_PS5_LeftPad_DPadSouth = (int)271L;
+
     /**
+     * Function descriptor for:
      * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_PS5_LeftPad_DPadSouth = 271
+     * const uint8 *SteamAPI_SteamNetworkingIdentity_GetGenericBytes(int *cbLen)
      * }
      */
-    public static int k_EInputActionOrigin_PS5_LeftPad_DPadSouth() {
-        return k_EInputActionOrigin_PS5_LeftPad_DPadSouth;
+    public static FunctionDescriptor SteamAPI_SteamNetworkingIdentity_GetGenericBytes$descriptor() {
+        return SteamAPI_SteamNetworkingIdentity_GetGenericBytes.DESC;
     }
-    private static final int k_EInputActionOrigin_PS5_LeftPad_DPadWest = (int)272L;
+
     /**
+     * Downcall method handle for:
      * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_PS5_LeftPad_DPadWest = 272
+     * const uint8 *SteamAPI_SteamNetworkingIdentity_GetGenericBytes(int *cbLen)
      * }
      */
-    public static int k_EInputActionOrigin_PS5_LeftPad_DPadWest() {
-        return k_EInputActionOrigin_PS5_LeftPad_DPadWest;
+    public static MethodHandle SteamAPI_SteamNetworkingIdentity_GetGenericBytes$handle() {
+        return SteamAPI_SteamNetworkingIdentity_GetGenericBytes.HANDLE;
     }
-    private static final int k_EInputActionOrigin_PS5_LeftPad_DPadEast = (int)273L;
     /**
      * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_PS5_LeftPad_DPadEast = 273
+     * const uint8 *SteamAPI_SteamNetworkingIdentity_GetGenericBytes(int *cbLen)
      * }
      */
-    public static int k_EInputActionOrigin_PS5_LeftPad_DPadEast() {
-        return k_EInputActionOrigin_PS5_LeftPad_DPadEast;
+    public static MemorySegment SteamAPI_SteamNetworkingIdentity_GetGenericBytes(MemorySegment cbLen) {
+        var mh$ = SteamAPI_SteamNetworkingIdentity_GetGenericBytes.HANDLE;
+        try {
+            if (TRACE_DOWNCALLS) {
+                traceDowncall("SteamAPI_SteamNetworkingIdentity_GetGenericBytes", cbLen);
+            }
+            return (MemorySegment)mh$.invokeExact(cbLen);
+        } catch (Throwable ex$) {
+           throw new AssertionError("should not reach here", ex$);
+        }
     }
-    private static final int k_EInputActionOrigin_PS5_RightPad_Touch = (int)274L;
-    /**
-     * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_PS5_RightPad_Touch = 274
-     * }
-     */
-    public static int k_EInputActionOrigin_PS5_RightPad_Touch() {
-        return k_EInputActionOrigin_PS5_RightPad_Touch;
+
+    private static class SteamAPI_SteamNetworkingIdentity_IsEqualTo {
+        public static final FunctionDescriptor DESC = FunctionDescriptor.of(
+            SteamFlat4j.C_BOOL,
+            SteamFlat4j.C_POINTER
+        );
+
+        public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(
+                    SteamFlat4j.findOrThrow("SteamAPI_SteamNetworkingIdentity_IsEqualTo"),
+                    DESC);
     }
-    private static final int k_EInputActionOrigin_PS5_RightPad_Swipe = (int)275L;
+
     /**
+     * Function descriptor for:
      * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_PS5_RightPad_Swipe = 275
+     * bool SteamAPI_SteamNetworkingIdentity_IsEqualTo(const SteamNetworkingIdentity *x)
      * }
      */
-    public static int k_EInputActionOrigin_PS5_RightPad_Swipe() {
-        return k_EInputActionOrigin_PS5_RightPad_Swipe;
+    public static FunctionDescriptor SteamAPI_SteamNetworkingIdentity_IsEqualTo$descriptor() {
+        return SteamAPI_SteamNetworkingIdentity_IsEqualTo.DESC;
     }
-    private static final int k_EInputActionOrigin_PS5_RightPad_Click = (int)276L;
+
     /**
+     * Downcall method handle for:
      * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_PS5_RightPad_Click = 276
+     * bool SteamAPI_SteamNetworkingIdentity_IsEqualTo(const SteamNetworkingIdentity *x)
      * }
      */
-    public static int k_EInputActionOrigin_PS5_RightPad_Click() {
-        return k_EInputActionOrigin_PS5_RightPad_Click;
+    public static MethodHandle SteamAPI_SteamNetworkingIdentity_IsEqualTo$handle() {
+        return SteamAPI_SteamNetworkingIdentity_IsEqualTo.HANDLE;
     }
-    private static final int k_EInputActionOrigin_PS5_RightPad_DPadNorth = (int)277L;
     /**
      * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_PS5_RightPad_DPadNorth = 277
+     * bool SteamAPI_SteamNetworkingIdentity_IsEqualTo(const SteamNetworkingIdentity *x)
      * }
      */
-    public static int k_EInputActionOrigin_PS5_RightPad_DPadNorth() {
-        return k_EInputActionOrigin_PS5_RightPad_DPadNorth;
+    public static boolean SteamAPI_SteamNetworkingIdentity_IsEqualTo(MemorySegment x) {
+        var mh$ = SteamAPI_SteamNetworkingIdentity_IsEqualTo.HANDLE;
+        try {
+            if (TRACE_DOWNCALLS) {
+                traceDowncall("SteamAPI_SteamNetworkingIdentity_IsEqualTo", x);
+            }
+            return (boolean)mh$.invokeExact(x);
+        } catch (Throwable ex$) {
+           throw new AssertionError("should not reach here", ex$);
+        }
     }
-    private static final int k_EInputActionOrigin_PS5_RightPad_DPadSouth = (int)278L;
-    /**
-     * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_PS5_RightPad_DPadSouth = 278
-     * }
-     */
-    public static int k_EInputActionOrigin_PS5_RightPad_DPadSouth() {
-        return k_EInputActionOrigin_PS5_RightPad_DPadSouth;
+
+    private static class SteamAPI_SteamNetworkingIdentity_ToString {
+        public static final FunctionDescriptor DESC = FunctionDescriptor.ofVoid(
+            SteamFlat4j.C_POINTER,
+            SteamFlat4j.C_INT
+        );
+
+        public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(
+                    SteamFlat4j.findOrThrow("SteamAPI_SteamNetworkingIdentity_ToString"),
+                    DESC);
     }
-    private static final int k_EInputActionOrigin_PS5_RightPad_DPadWest = (int)279L;
+
     /**
+     * Function descriptor for:
      * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_PS5_RightPad_DPadWest = 279
+     * void SteamAPI_SteamNetworkingIdentity_ToString(char *buf, uint32 cbBuf)
      * }
      */
-    public static int k_EInputActionOrigin_PS5_RightPad_DPadWest() {
-        return k_EInputActionOrigin_PS5_RightPad_DPadWest;
+    public static FunctionDescriptor SteamAPI_SteamNetworkingIdentity_ToString$descriptor() {
+        return SteamAPI_SteamNetworkingIdentity_ToString.DESC;
     }
-    private static final int k_EInputActionOrigin_PS5_RightPad_DPadEast = (int)280L;
+
     /**
+     * Downcall method handle for:
      * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_PS5_RightPad_DPadEast = 280
+     * void SteamAPI_SteamNetworkingIdentity_ToString(char *buf, uint32 cbBuf)
      * }
      */
-    public static int k_EInputActionOrigin_PS5_RightPad_DPadEast() {
-        return k_EInputActionOrigin_PS5_RightPad_DPadEast;
+    public static MethodHandle SteamAPI_SteamNetworkingIdentity_ToString$handle() {
+        return SteamAPI_SteamNetworkingIdentity_ToString.HANDLE;
     }
-    private static final int k_EInputActionOrigin_PS5_CenterPad_Touch = (int)281L;
     /**
      * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_PS5_CenterPad_Touch = 281
+     * void SteamAPI_SteamNetworkingIdentity_ToString(char *buf, uint32 cbBuf)
      * }
      */
-    public static int k_EInputActionOrigin_PS5_CenterPad_Touch() {
-        return k_EInputActionOrigin_PS5_CenterPad_Touch;
+    public static void SteamAPI_SteamNetworkingIdentity_ToString(MemorySegment buf, int cbBuf) {
+        var mh$ = SteamAPI_SteamNetworkingIdentity_ToString.HANDLE;
+        try {
+            if (TRACE_DOWNCALLS) {
+                traceDowncall("SteamAPI_SteamNetworkingIdentity_ToString", buf, cbBuf);
+            }
+            mh$.invokeExact(buf, cbBuf);
+        } catch (Throwable ex$) {
+           throw new AssertionError("should not reach here", ex$);
+        }
     }
-    private static final int k_EInputActionOrigin_PS5_CenterPad_Swipe = (int)282L;
-    /**
-     * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_PS5_CenterPad_Swipe = 282
-     * }
-     */
-    public static int k_EInputActionOrigin_PS5_CenterPad_Swipe() {
-        return k_EInputActionOrigin_PS5_CenterPad_Swipe;
+
+    private static class SteamAPI_SteamNetworkingIdentity_ParseString {
+        public static final FunctionDescriptor DESC = FunctionDescriptor.of(
+            SteamFlat4j.C_BOOL,
+            SteamFlat4j.C_POINTER
+        );
+
+        public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(
+                    SteamFlat4j.findOrThrow("SteamAPI_SteamNetworkingIdentity_ParseString"),
+                    DESC);
     }
-    private static final int k_EInputActionOrigin_PS5_CenterPad_Click = (int)283L;
+
     /**
+     * Function descriptor for:
      * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_PS5_CenterPad_Click = 283
+     * bool SteamAPI_SteamNetworkingIdentity_ParseString(const char *pszStr)
      * }
      */
-    public static int k_EInputActionOrigin_PS5_CenterPad_Click() {
-        return k_EInputActionOrigin_PS5_CenterPad_Click;
+    public static FunctionDescriptor SteamAPI_SteamNetworkingIdentity_ParseString$descriptor() {
+        return SteamAPI_SteamNetworkingIdentity_ParseString.DESC;
     }
-    private static final int k_EInputActionOrigin_PS5_CenterPad_DPadNorth = (int)284L;
+
     /**
+     * Downcall method handle for:
      * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_PS5_CenterPad_DPadNorth = 284
+     * bool SteamAPI_SteamNetworkingIdentity_ParseString(const char *pszStr)
      * }
      */
-    public static int k_EInputActionOrigin_PS5_CenterPad_DPadNorth() {
-        return k_EInputActionOrigin_PS5_CenterPad_DPadNorth;
+    public static MethodHandle SteamAPI_SteamNetworkingIdentity_ParseString$handle() {
+        return SteamAPI_SteamNetworkingIdentity_ParseString.HANDLE;
     }
-    private static final int k_EInputActionOrigin_PS5_CenterPad_DPadSouth = (int)285L;
     /**
      * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_PS5_CenterPad_DPadSouth = 285
+     * bool SteamAPI_SteamNetworkingIdentity_ParseString(const char *pszStr)
      * }
      */
-    public static int k_EInputActionOrigin_PS5_CenterPad_DPadSouth() {
-        return k_EInputActionOrigin_PS5_CenterPad_DPadSouth;
+    public static boolean SteamAPI_SteamNetworkingIdentity_ParseString(MemorySegment pszStr) {
+        var mh$ = SteamAPI_SteamNetworkingIdentity_ParseString.HANDLE;
+        try {
+            if (TRACE_DOWNCALLS) {
+                traceDowncall("SteamAPI_SteamNetworkingIdentity_ParseString", pszStr);
+            }
+            return (boolean)mh$.invokeExact(pszStr);
+        } catch (Throwable ex$) {
+           throw new AssertionError("should not reach here", ex$);
+        }
     }
-    private static final int k_EInputActionOrigin_PS5_CenterPad_DPadWest = (int)286L;
-    /**
-     * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_PS5_CenterPad_DPadWest = 286
-     * }
-     */
-    public static int k_EInputActionOrigin_PS5_CenterPad_DPadWest() {
-        return k_EInputActionOrigin_PS5_CenterPad_DPadWest;
+
+    private static class SteamAPI_SteamNetworkingMessage_t_Release {
+        public static final FunctionDescriptor DESC = FunctionDescriptor.ofVoid(    );
+
+        public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(
+                    SteamFlat4j.findOrThrow("SteamAPI_SteamNetworkingMessage_t_Release"),
+                    DESC);
     }
-    private static final int k_EInputActionOrigin_PS5_CenterPad_DPadEast = (int)287L;
+
     /**
+     * Function descriptor for:
      * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_PS5_CenterPad_DPadEast = 287
+     * void SteamAPI_SteamNetworkingMessage_t_Release()
      * }
      */
-    public static int k_EInputActionOrigin_PS5_CenterPad_DPadEast() {
-        return k_EInputActionOrigin_PS5_CenterPad_DPadEast;
+    public static FunctionDescriptor SteamAPI_SteamNetworkingMessage_t_Release$descriptor() {
+        return SteamAPI_SteamNetworkingMessage_t_Release.DESC;
     }
-    private static final int k_EInputActionOrigin_PS5_LeftTrigger_Pull = (int)288L;
+
     /**
+     * Downcall method handle for:
      * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_PS5_LeftTrigger_Pull = 288
+     * void SteamAPI_SteamNetworkingMessage_t_Release()
      * }
      */
-    public static int k_EInputActionOrigin_PS5_LeftTrigger_Pull() {
-        return k_EInputActionOrigin_PS5_LeftTrigger_Pull;
+    public static MethodHandle SteamAPI_SteamNetworkingMessage_t_Release$handle() {
+        return SteamAPI_SteamNetworkingMessage_t_Release.HANDLE;
     }
-    private static final int k_EInputActionOrigin_PS5_LeftTrigger_Click = (int)289L;
     /**
      * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_PS5_LeftTrigger_Click = 289
+     * void SteamAPI_SteamNetworkingMessage_t_Release()
      * }
      */
-    public static int k_EInputActionOrigin_PS5_LeftTrigger_Click() {
-        return k_EInputActionOrigin_PS5_LeftTrigger_Click;
+    public static void SteamAPI_SteamNetworkingMessage_t_Release() {
+        var mh$ = SteamAPI_SteamNetworkingMessage_t_Release.HANDLE;
+        try {
+            if (TRACE_DOWNCALLS) {
+                traceDowncall("SteamAPI_SteamNetworkingMessage_t_Release");
+            }
+            mh$.invokeExact();
+        } catch (Throwable ex$) {
+           throw new AssertionError("should not reach here", ex$);
+        }
     }
-    private static final int k_EInputActionOrigin_PS5_RightTrigger_Pull = (int)290L;
-    /**
-     * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_PS5_RightTrigger_Pull = 290
-     * }
-     */
-    public static int k_EInputActionOrigin_PS5_RightTrigger_Pull() {
-        return k_EInputActionOrigin_PS5_RightTrigger_Pull;
+
+    private static class SteamAPI_SteamNetworkingConfigValue_t_SetInt32 {
+        public static final FunctionDescriptor DESC = FunctionDescriptor.ofVoid(
+            SteamFlat4j.C_INT,
+            SteamFlat4j.C_INT
+        );
+
+        public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(
+                    SteamFlat4j.findOrThrow("SteamAPI_SteamNetworkingConfigValue_t_SetInt32"),
+                    DESC);
     }
-    private static final int k_EInputActionOrigin_PS5_RightTrigger_Click = (int)291L;
+
     /**
+     * Function descriptor for:
      * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_PS5_RightTrigger_Click = 291
+     * void SteamAPI_SteamNetworkingConfigValue_t_SetInt32(ESteamNetworkingConfigValue eVal, int32_t data)
      * }
      */
-    public static int k_EInputActionOrigin_PS5_RightTrigger_Click() {
-        return k_EInputActionOrigin_PS5_RightTrigger_Click;
+    public static FunctionDescriptor SteamAPI_SteamNetworkingConfigValue_t_SetInt32$descriptor() {
+        return SteamAPI_SteamNetworkingConfigValue_t_SetInt32.DESC;
     }
-    private static final int k_EInputActionOrigin_PS5_LeftStick_Move = (int)292L;
+
     /**
+     * Downcall method handle for:
      * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_PS5_LeftStick_Move = 292
+     * void SteamAPI_SteamNetworkingConfigValue_t_SetInt32(ESteamNetworkingConfigValue eVal, int32_t data)
      * }
      */
-    public static int k_EInputActionOrigin_PS5_LeftStick_Move() {
-        return k_EInputActionOrigin_PS5_LeftStick_Move;
+    public static MethodHandle SteamAPI_SteamNetworkingConfigValue_t_SetInt32$handle() {
+        return SteamAPI_SteamNetworkingConfigValue_t_SetInt32.HANDLE;
     }
-    private static final int k_EInputActionOrigin_PS5_LeftStick_Click = (int)293L;
     /**
      * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_PS5_LeftStick_Click = 293
+     * void SteamAPI_SteamNetworkingConfigValue_t_SetInt32(ESteamNetworkingConfigValue eVal, int32_t data)
      * }
      */
-    public static int k_EInputActionOrigin_PS5_LeftStick_Click() {
-        return k_EInputActionOrigin_PS5_LeftStick_Click;
+    public static void SteamAPI_SteamNetworkingConfigValue_t_SetInt32(int eVal, int data) {
+        var mh$ = SteamAPI_SteamNetworkingConfigValue_t_SetInt32.HANDLE;
+        try {
+            if (TRACE_DOWNCALLS) {
+                traceDowncall("SteamAPI_SteamNetworkingConfigValue_t_SetInt32", eVal, data);
+            }
+            mh$.invokeExact(eVal, data);
+        } catch (Throwable ex$) {
+           throw new AssertionError("should not reach here", ex$);
+        }
     }
-    private static final int k_EInputActionOrigin_PS5_LeftStick_DPadNorth = (int)294L;
-    /**
-     * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_PS5_LeftStick_DPadNorth = 294
-     * }
-     */
-    public static int k_EInputActionOrigin_PS5_LeftStick_DPadNorth() {
-        return k_EInputActionOrigin_PS5_LeftStick_DPadNorth;
+
+    private static class SteamAPI_SteamNetworkingConfigValue_t_SetInt64 {
+        public static final FunctionDescriptor DESC = FunctionDescriptor.ofVoid(
+            SteamFlat4j.C_INT,
+            SteamFlat4j.C_LONG_LONG
+        );
+
+        public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(
+                    SteamFlat4j.findOrThrow("SteamAPI_SteamNetworkingConfigValue_t_SetInt64"),
+                    DESC);
     }
-    private static final int k_EInputActionOrigin_PS5_LeftStick_DPadSouth = (int)295L;
+
     /**
+     * Function descriptor for:
      * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_PS5_LeftStick_DPadSouth = 295
+     * void SteamAPI_SteamNetworkingConfigValue_t_SetInt64(ESteamNetworkingConfigValue eVal, int64_t data)
      * }
      */
-    public static int k_EInputActionOrigin_PS5_LeftStick_DPadSouth() {
-        return k_EInputActionOrigin_PS5_LeftStick_DPadSouth;
+    public static FunctionDescriptor SteamAPI_SteamNetworkingConfigValue_t_SetInt64$descriptor() {
+        return SteamAPI_SteamNetworkingConfigValue_t_SetInt64.DESC;
     }
-    private static final int k_EInputActionOrigin_PS5_LeftStick_DPadWest = (int)296L;
+
     /**
+     * Downcall method handle for:
      * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_PS5_LeftStick_DPadWest = 296
+     * void SteamAPI_SteamNetworkingConfigValue_t_SetInt64(ESteamNetworkingConfigValue eVal, int64_t data)
      * }
      */
-    public static int k_EInputActionOrigin_PS5_LeftStick_DPadWest() {
-        return k_EInputActionOrigin_PS5_LeftStick_DPadWest;
+    public static MethodHandle SteamAPI_SteamNetworkingConfigValue_t_SetInt64$handle() {
+        return SteamAPI_SteamNetworkingConfigValue_t_SetInt64.HANDLE;
     }
-    private static final int k_EInputActionOrigin_PS5_LeftStick_DPadEast = (int)297L;
     /**
      * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_PS5_LeftStick_DPadEast = 297
+     * void SteamAPI_SteamNetworkingConfigValue_t_SetInt64(ESteamNetworkingConfigValue eVal, int64_t data)
      * }
      */
-    public static int k_EInputActionOrigin_PS5_LeftStick_DPadEast() {
-        return k_EInputActionOrigin_PS5_LeftStick_DPadEast;
+    public static void SteamAPI_SteamNetworkingConfigValue_t_SetInt64(int eVal, long data) {
+        var mh$ = SteamAPI_SteamNetworkingConfigValue_t_SetInt64.HANDLE;
+        try {
+            if (TRACE_DOWNCALLS) {
+                traceDowncall("SteamAPI_SteamNetworkingConfigValue_t_SetInt64", eVal, data);
+            }
+            mh$.invokeExact(eVal, data);
+        } catch (Throwable ex$) {
+           throw new AssertionError("should not reach here", ex$);
+        }
     }
-    private static final int k_EInputActionOrigin_PS5_RightStick_Move = (int)298L;
-    /**
-     * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_PS5_RightStick_Move = 298
-     * }
-     */
-    public static int k_EInputActionOrigin_PS5_RightStick_Move() {
-        return k_EInputActionOrigin_PS5_RightStick_Move;
+
+    private static class SteamAPI_SteamNetworkingConfigValue_t_SetFloat {
+        public static final FunctionDescriptor DESC = FunctionDescriptor.ofVoid(
+            SteamFlat4j.C_INT,
+            SteamFlat4j.C_FLOAT
+        );
+
+        public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(
+                    SteamFlat4j.findOrThrow("SteamAPI_SteamNetworkingConfigValue_t_SetFloat"),
+                    DESC);
     }
-    private static final int k_EInputActionOrigin_PS5_RightStick_Click = (int)299L;
+
     /**
+     * Function descriptor for:
      * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_PS5_RightStick_Click = 299
+     * void SteamAPI_SteamNetworkingConfigValue_t_SetFloat(ESteamNetworkingConfigValue eVal, float data)
      * }
      */
-    public static int k_EInputActionOrigin_PS5_RightStick_Click() {
-        return k_EInputActionOrigin_PS5_RightStick_Click;
+    public static FunctionDescriptor SteamAPI_SteamNetworkingConfigValue_t_SetFloat$descriptor() {
+        return SteamAPI_SteamNetworkingConfigValue_t_SetFloat.DESC;
     }
-    private static final int k_EInputActionOrigin_PS5_RightStick_DPadNorth = (int)300L;
+
     /**
+     * Downcall method handle for:
      * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_PS5_RightStick_DPadNorth = 300
+     * void SteamAPI_SteamNetworkingConfigValue_t_SetFloat(ESteamNetworkingConfigValue eVal, float data)
      * }
      */
-    public static int k_EInputActionOrigin_PS5_RightStick_DPadNorth() {
-        return k_EInputActionOrigin_PS5_RightStick_DPadNorth;
+    public static MethodHandle SteamAPI_SteamNetworkingConfigValue_t_SetFloat$handle() {
+        return SteamAPI_SteamNetworkingConfigValue_t_SetFloat.HANDLE;
     }
-    private static final int k_EInputActionOrigin_PS5_RightStick_DPadSouth = (int)301L;
     /**
      * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_PS5_RightStick_DPadSouth = 301
+     * void SteamAPI_SteamNetworkingConfigValue_t_SetFloat(ESteamNetworkingConfigValue eVal, float data)
      * }
      */
-    public static int k_EInputActionOrigin_PS5_RightStick_DPadSouth() {
-        return k_EInputActionOrigin_PS5_RightStick_DPadSouth;
+    public static void SteamAPI_SteamNetworkingConfigValue_t_SetFloat(int eVal, float data) {
+        var mh$ = SteamAPI_SteamNetworkingConfigValue_t_SetFloat.HANDLE;
+        try {
+            if (TRACE_DOWNCALLS) {
+                traceDowncall("SteamAPI_SteamNetworkingConfigValue_t_SetFloat", eVal, data);
+            }
+            mh$.invokeExact(eVal, data);
+        } catch (Throwable ex$) {
+           throw new AssertionError("should not reach here", ex$);
+        }
     }
-    private static final int k_EInputActionOrigin_PS5_RightStick_DPadWest = (int)302L;
-    /**
-     * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_PS5_RightStick_DPadWest = 302
-     * }
-     */
-    public static int k_EInputActionOrigin_PS5_RightStick_DPadWest() {
-        return k_EInputActionOrigin_PS5_RightStick_DPadWest;
+
+    private static class SteamAPI_SteamNetworkingConfigValue_t_SetPtr {
+        public static final FunctionDescriptor DESC = FunctionDescriptor.ofVoid(
+            SteamFlat4j.C_INT,
+            SteamFlat4j.C_POINTER
+        );
+
+        public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(
+                    SteamFlat4j.findOrThrow("SteamAPI_SteamNetworkingConfigValue_t_SetPtr"),
+                    DESC);
     }
-    private static final int k_EInputActionOrigin_PS5_RightStick_DPadEast = (int)303L;
+
     /**
+     * Function descriptor for:
      * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_PS5_RightStick_DPadEast = 303
+     * void SteamAPI_SteamNetworkingConfigValue_t_SetPtr(ESteamNetworkingConfigValue eVal, void *data)
      * }
      */
-    public static int k_EInputActionOrigin_PS5_RightStick_DPadEast() {
-        return k_EInputActionOrigin_PS5_RightStick_DPadEast;
+    public static FunctionDescriptor SteamAPI_SteamNetworkingConfigValue_t_SetPtr$descriptor() {
+        return SteamAPI_SteamNetworkingConfigValue_t_SetPtr.DESC;
     }
-    private static final int k_EInputActionOrigin_PS5_DPad_North = (int)304L;
+
     /**
+     * Downcall method handle for:
      * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_PS5_DPad_North = 304
+     * void SteamAPI_SteamNetworkingConfigValue_t_SetPtr(ESteamNetworkingConfigValue eVal, void *data)
      * }
      */
-    public static int k_EInputActionOrigin_PS5_DPad_North() {
-        return k_EInputActionOrigin_PS5_DPad_North;
+    public static MethodHandle SteamAPI_SteamNetworkingConfigValue_t_SetPtr$handle() {
+        return SteamAPI_SteamNetworkingConfigValue_t_SetPtr.HANDLE;
     }
-    private static final int k_EInputActionOrigin_PS5_DPad_South = (int)305L;
     /**
      * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_PS5_DPad_South = 305
+     * void SteamAPI_SteamNetworkingConfigValue_t_SetPtr(ESteamNetworkingConfigValue eVal, void *data)
      * }
      */
-    public static int k_EInputActionOrigin_PS5_DPad_South() {
-        return k_EInputActionOrigin_PS5_DPad_South;
+    public static void SteamAPI_SteamNetworkingConfigValue_t_SetPtr(int eVal, MemorySegment data) {
+        var mh$ = SteamAPI_SteamNetworkingConfigValue_t_SetPtr.HANDLE;
+        try {
+            if (TRACE_DOWNCALLS) {
+                traceDowncall("SteamAPI_SteamNetworkingConfigValue_t_SetPtr", eVal, data);
+            }
+            mh$.invokeExact(eVal, data);
+        } catch (Throwable ex$) {
+           throw new AssertionError("should not reach here", ex$);
+        }
     }
-    private static final int k_EInputActionOrigin_PS5_DPad_West = (int)306L;
-    /**
-     * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_PS5_DPad_West = 306
-     * }
-     */
-    public static int k_EInputActionOrigin_PS5_DPad_West() {
-        return k_EInputActionOrigin_PS5_DPad_West;
+
+    private static class SteamAPI_SteamNetworkingConfigValue_t_SetString {
+        public static final FunctionDescriptor DESC = FunctionDescriptor.ofVoid(
+            SteamFlat4j.C_INT,
+            SteamFlat4j.C_POINTER
+        );
+
+        public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(
+                    SteamFlat4j.findOrThrow("SteamAPI_SteamNetworkingConfigValue_t_SetString"),
+                    DESC);
     }
-    private static final int k_EInputActionOrigin_PS5_DPad_East = (int)307L;
+
     /**
+     * Function descriptor for:
      * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_PS5_DPad_East = 307
+     * void SteamAPI_SteamNetworkingConfigValue_t_SetString(ESteamNetworkingConfigValue eVal, const char *data)
      * }
      */
-    public static int k_EInputActionOrigin_PS5_DPad_East() {
-        return k_EInputActionOrigin_PS5_DPad_East;
+    public static FunctionDescriptor SteamAPI_SteamNetworkingConfigValue_t_SetString$descriptor() {
+        return SteamAPI_SteamNetworkingConfigValue_t_SetString.DESC;
     }
-    private static final int k_EInputActionOrigin_PS5_Gyro_Move = (int)308L;
+
     /**
+     * Downcall method handle for:
      * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_PS5_Gyro_Move = 308
+     * void SteamAPI_SteamNetworkingConfigValue_t_SetString(ESteamNetworkingConfigValue eVal, const char *data)
      * }
      */
-    public static int k_EInputActionOrigin_PS5_Gyro_Move() {
-        return k_EInputActionOrigin_PS5_Gyro_Move;
+    public static MethodHandle SteamAPI_SteamNetworkingConfigValue_t_SetString$handle() {
+        return SteamAPI_SteamNetworkingConfigValue_t_SetString.HANDLE;
     }
-    private static final int k_EInputActionOrigin_PS5_Gyro_Pitch = (int)309L;
     /**
      * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_PS5_Gyro_Pitch = 309
+     * void SteamAPI_SteamNetworkingConfigValue_t_SetString(ESteamNetworkingConfigValue eVal, const char *data)
      * }
      */
-    public static int k_EInputActionOrigin_PS5_Gyro_Pitch() {
-        return k_EInputActionOrigin_PS5_Gyro_Pitch;
+    public static void SteamAPI_SteamNetworkingConfigValue_t_SetString(int eVal, MemorySegment data) {
+        var mh$ = SteamAPI_SteamNetworkingConfigValue_t_SetString.HANDLE;
+        try {
+            if (TRACE_DOWNCALLS) {
+                traceDowncall("SteamAPI_SteamNetworkingConfigValue_t_SetString", eVal, data);
+            }
+            mh$.invokeExact(eVal, data);
+        } catch (Throwable ex$) {
+           throw new AssertionError("should not reach here", ex$);
+        }
     }
-    private static final int k_EInputActionOrigin_PS5_Gyro_Yaw = (int)310L;
-    /**
-     * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_PS5_Gyro_Yaw = 310
-     * }
-     */
-    public static int k_EInputActionOrigin_PS5_Gyro_Yaw() {
-        return k_EInputActionOrigin_PS5_Gyro_Yaw;
+
+    private static class SteamAPI_SteamDatagramHostedAddress_Clear {
+        public static final FunctionDescriptor DESC = FunctionDescriptor.ofVoid(    );
+
+        public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(
+                    SteamFlat4j.findOrThrow("SteamAPI_SteamDatagramHostedAddress_Clear"),
+                    DESC);
     }
-    private static final int k_EInputActionOrigin_PS5_Gyro_Roll = (int)311L;
+
     /**
+     * Function descriptor for:
      * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_PS5_Gyro_Roll = 311
+     * void SteamAPI_SteamDatagramHostedAddress_Clear()
      * }
      */
-    public static int k_EInputActionOrigin_PS5_Gyro_Roll() {
-        return k_EInputActionOrigin_PS5_Gyro_Roll;
+    public static FunctionDescriptor SteamAPI_SteamDatagramHostedAddress_Clear$descriptor() {
+        return SteamAPI_SteamDatagramHostedAddress_Clear.DESC;
     }
-    private static final int k_EInputActionOrigin_PS5_DPad_Move = (int)312L;
+
     /**
+     * Downcall method handle for:
      * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_PS5_DPad_Move = 312
+     * void SteamAPI_SteamDatagramHostedAddress_Clear()
      * }
      */
-    public static int k_EInputActionOrigin_PS5_DPad_Move() {
-        return k_EInputActionOrigin_PS5_DPad_Move;
+    public static MethodHandle SteamAPI_SteamDatagramHostedAddress_Clear$handle() {
+        return SteamAPI_SteamDatagramHostedAddress_Clear.HANDLE;
     }
-    private static final int k_EInputActionOrigin_PS5_LeftGrip = (int)313L;
     /**
      * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_PS5_LeftGrip = 313
+     * void SteamAPI_SteamDatagramHostedAddress_Clear()
      * }
      */
-    public static int k_EInputActionOrigin_PS5_LeftGrip() {
-        return k_EInputActionOrigin_PS5_LeftGrip;
+    public static void SteamAPI_SteamDatagramHostedAddress_Clear() {
+        var mh$ = SteamAPI_SteamDatagramHostedAddress_Clear.HANDLE;
+        try {
+            if (TRACE_DOWNCALLS) {
+                traceDowncall("SteamAPI_SteamDatagramHostedAddress_Clear");
+            }
+            mh$.invokeExact();
+        } catch (Throwable ex$) {
+           throw new AssertionError("should not reach here", ex$);
+        }
     }
-    private static final int k_EInputActionOrigin_PS5_RightGrip = (int)314L;
-    /**
-     * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_PS5_RightGrip = 314
-     * }
-     */
-    public static int k_EInputActionOrigin_PS5_RightGrip() {
-        return k_EInputActionOrigin_PS5_RightGrip;
+
+    private static class SteamAPI_SteamDatagramHostedAddress_GetPopID {
+        public static final FunctionDescriptor DESC = FunctionDescriptor.of(
+            SteamFlat4j.C_INT    );
+
+        public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(
+                    SteamFlat4j.findOrThrow("SteamAPI_SteamDatagramHostedAddress_GetPopID"),
+                    DESC);
     }
-    private static final int k_EInputActionOrigin_PS5_LeftFn = (int)315L;
+
     /**
+     * Function descriptor for:
      * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_PS5_LeftFn = 315
+     * SteamNetworkingPOPID SteamAPI_SteamDatagramHostedAddress_GetPopID()
      * }
      */
-    public static int k_EInputActionOrigin_PS5_LeftFn() {
-        return k_EInputActionOrigin_PS5_LeftFn;
+    public static FunctionDescriptor SteamAPI_SteamDatagramHostedAddress_GetPopID$descriptor() {
+        return SteamAPI_SteamDatagramHostedAddress_GetPopID.DESC;
     }
-    private static final int k_EInputActionOrigin_PS5_RightFn = (int)316L;
+
     /**
+     * Downcall method handle for:
      * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_PS5_RightFn = 316
+     * SteamNetworkingPOPID SteamAPI_SteamDatagramHostedAddress_GetPopID()
      * }
      */
-    public static int k_EInputActionOrigin_PS5_RightFn() {
-        return k_EInputActionOrigin_PS5_RightFn;
+    public static MethodHandle SteamAPI_SteamDatagramHostedAddress_GetPopID$handle() {
+        return SteamAPI_SteamDatagramHostedAddress_GetPopID.HANDLE;
     }
-    private static final int k_EInputActionOrigin_PS5_Reserved5 = (int)317L;
     /**
      * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_PS5_Reserved5 = 317
+     * SteamNetworkingPOPID SteamAPI_SteamDatagramHostedAddress_GetPopID()
      * }
      */
-    public static int k_EInputActionOrigin_PS5_Reserved5() {
-        return k_EInputActionOrigin_PS5_Reserved5;
+    public static int SteamAPI_SteamDatagramHostedAddress_GetPopID() {
+        var mh$ = SteamAPI_SteamDatagramHostedAddress_GetPopID.HANDLE;
+        try {
+            if (TRACE_DOWNCALLS) {
+                traceDowncall("SteamAPI_SteamDatagramHostedAddress_GetPopID");
+            }
+            return (int)mh$.invokeExact();
+        } catch (Throwable ex$) {
+           throw new AssertionError("should not reach here", ex$);
+        }
     }
-    private static final int k_EInputActionOrigin_PS5_Reserved6 = (int)318L;
-    /**
-     * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_PS5_Reserved6 = 318
-     * }
-     */
-    public static int k_EInputActionOrigin_PS5_Reserved6() {
-        return k_EInputActionOrigin_PS5_Reserved6;
+
+    private static class SteamAPI_SteamDatagramHostedAddress_SetDevAddress {
+        public static final FunctionDescriptor DESC = FunctionDescriptor.ofVoid(
+            SteamFlat4j.C_INT,
+            SteamFlat4j.C_SHORT,
+            SteamFlat4j.C_INT
+        );
+
+        public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(
+                    SteamFlat4j.findOrThrow("SteamAPI_SteamDatagramHostedAddress_SetDevAddress"),
+                    DESC);
     }
-    private static final int k_EInputActionOrigin_PS5_Reserved7 = (int)319L;
+
     /**
+     * Function descriptor for:
      * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_PS5_Reserved7 = 319
+     * void SteamAPI_SteamDatagramHostedAddress_SetDevAddress(uint32 nIP, uint16 nPort, SteamNetworkingPOPID popid)
      * }
      */
-    public static int k_EInputActionOrigin_PS5_Reserved7() {
-        return k_EInputActionOrigin_PS5_Reserved7;
+    public static FunctionDescriptor SteamAPI_SteamDatagramHostedAddress_SetDevAddress$descriptor() {
+        return SteamAPI_SteamDatagramHostedAddress_SetDevAddress.DESC;
     }
-    private static final int k_EInputActionOrigin_PS5_Reserved8 = (int)320L;
+
     /**
+     * Downcall method handle for:
      * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_PS5_Reserved8 = 320
+     * void SteamAPI_SteamDatagramHostedAddress_SetDevAddress(uint32 nIP, uint16 nPort, SteamNetworkingPOPID popid)
      * }
      */
-    public static int k_EInputActionOrigin_PS5_Reserved8() {
-        return k_EInputActionOrigin_PS5_Reserved8;
+    public static MethodHandle SteamAPI_SteamDatagramHostedAddress_SetDevAddress$handle() {
+        return SteamAPI_SteamDatagramHostedAddress_SetDevAddress.HANDLE;
     }
-    private static final int k_EInputActionOrigin_PS5_Reserved9 = (int)321L;
     /**
      * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_PS5_Reserved9 = 321
+     * void SteamAPI_SteamDatagramHostedAddress_SetDevAddress(uint32 nIP, uint16 nPort, SteamNetworkingPOPID popid)
      * }
      */
-    public static int k_EInputActionOrigin_PS5_Reserved9() {
-        return k_EInputActionOrigin_PS5_Reserved9;
+    public static void SteamAPI_SteamDatagramHostedAddress_SetDevAddress(int nIP, short nPort, int popid) {
+        var mh$ = SteamAPI_SteamDatagramHostedAddress_SetDevAddress.HANDLE;
+        try {
+            if (TRACE_DOWNCALLS) {
+                traceDowncall("SteamAPI_SteamDatagramHostedAddress_SetDevAddress", nIP, nPort, popid);
+            }
+            mh$.invokeExact(nIP, nPort, popid);
+        } catch (Throwable ex$) {
+           throw new AssertionError("should not reach here", ex$);
+        }
     }
-    private static final int k_EInputActionOrigin_PS5_Reserved10 = (int)322L;
+    private static final int eHTMLMouseButton_Left = (int)0L;
     /**
      * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_PS5_Reserved10 = 322
+     * enum EHTMLMouseButton.eHTMLMouseButton_Left = 0
      * }
      */
-    public static int k_EInputActionOrigin_PS5_Reserved10() {
-        return k_EInputActionOrigin_PS5_Reserved10;
+    public static int eHTMLMouseButton_Left() {
+        return eHTMLMouseButton_Left;
     }
-    private static final int k_EInputActionOrigin_PS5_Reserved11 = (int)323L;
+    private static final int eHTMLMouseButton_Right = (int)1L;
     /**
      * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_PS5_Reserved11 = 323
+     * enum EHTMLMouseButton.eHTMLMouseButton_Right = 1
      * }
      */
-    public static int k_EInputActionOrigin_PS5_Reserved11() {
-        return k_EInputActionOrigin_PS5_Reserved11;
+    public static int eHTMLMouseButton_Right() {
+        return eHTMLMouseButton_Right;
     }
-    private static final int k_EInputActionOrigin_PS5_Reserved12 = (int)324L;
+    private static final int eHTMLMouseButton_Middle = (int)2L;
     /**
      * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_PS5_Reserved12 = 324
+     * enum EHTMLMouseButton.eHTMLMouseButton_Middle = 2
      * }
      */
-    public static int k_EInputActionOrigin_PS5_Reserved12() {
-        return k_EInputActionOrigin_PS5_Reserved12;
+    public static int eHTMLMouseButton_Middle() {
+        return eHTMLMouseButton_Middle;
     }
-    private static final int k_EInputActionOrigin_PS5_Reserved13 = (int)325L;
+    private static final int dc_user = (int)0L;
     /**
      * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_PS5_Reserved13 = 325
+     * enum EMouseCursor.dc_user = 0
      * }
      */
-    public static int k_EInputActionOrigin_PS5_Reserved13() {
-        return k_EInputActionOrigin_PS5_Reserved13;
+    public static int dc_user() {
+        return dc_user;
     }
-    private static final int k_EInputActionOrigin_PS5_Reserved14 = (int)326L;
+    private static final int dc_none = (int)1L;
     /**
      * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_PS5_Reserved14 = 326
+     * enum EMouseCursor.dc_none = 1
      * }
      */
-    public static int k_EInputActionOrigin_PS5_Reserved14() {
-        return k_EInputActionOrigin_PS5_Reserved14;
+    public static int dc_none() {
+        return dc_none;
     }
-    private static final int k_EInputActionOrigin_PS5_Reserved15 = (int)327L;
+    private static final int dc_arrow = (int)2L;
     /**
      * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_PS5_Reserved15 = 327
+     * enum EMouseCursor.dc_arrow = 2
      * }
      */
-    public static int k_EInputActionOrigin_PS5_Reserved15() {
-        return k_EInputActionOrigin_PS5_Reserved15;
+    public static int dc_arrow() {
+        return dc_arrow;
     }
-    private static final int k_EInputActionOrigin_PS5_Reserved16 = (int)328L;
+    private static final int dc_ibeam = (int)3L;
     /**
      * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_PS5_Reserved16 = 328
+     * enum EMouseCursor.dc_ibeam = 3
      * }
      */
-    public static int k_EInputActionOrigin_PS5_Reserved16() {
-        return k_EInputActionOrigin_PS5_Reserved16;
+    public static int dc_ibeam() {
+        return dc_ibeam;
     }
-    private static final int k_EInputActionOrigin_PS5_Reserved17 = (int)329L;
+    private static final int dc_hourglass = (int)4L;
     /**
      * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_PS5_Reserved17 = 329
+     * enum EMouseCursor.dc_hourglass = 4
      * }
      */
-    public static int k_EInputActionOrigin_PS5_Reserved17() {
-        return k_EInputActionOrigin_PS5_Reserved17;
+    public static int dc_hourglass() {
+        return dc_hourglass;
     }
-    private static final int k_EInputActionOrigin_PS5_Reserved18 = (int)330L;
+    private static final int dc_waitarrow = (int)5L;
     /**
      * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_PS5_Reserved18 = 330
+     * enum EMouseCursor.dc_waitarrow = 5
      * }
      */
-    public static int k_EInputActionOrigin_PS5_Reserved18() {
-        return k_EInputActionOrigin_PS5_Reserved18;
+    public static int dc_waitarrow() {
+        return dc_waitarrow;
     }
 }
 

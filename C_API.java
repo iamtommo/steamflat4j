@@ -54,6 +54,15 @@ public class C_API {
         return sb.toString();
     }
 
+    static String writeStructForwardDeclarations(List<Map<String, Object>> structs) {
+        var sb = new StringBuilder();
+        for (var entry : structs) {
+            var name = (String) entry.get("struct");
+            sb.append(format("struct %s;\n", name));
+        }
+        return sb.toString();
+    }
+
     static String writeStructTypedefs(List<Map<String, Object>> structs) {
         var sb = new StringBuilder();
         for (var entry : structs) {
@@ -71,7 +80,7 @@ public class C_API {
             sb.append(format("struct %s {\n", struct));
             for (var field : fields) {
                 var fieldName = (String) field.get("fieldname");
-                var fieldType = (String) field.get("fieldtype");
+                var fieldType = unqualify((String) field.get("fieldtype"));
                 var decl = parseDecl(fieldName, fieldType);
                 sb.append(format("\t%s %s;\n", decl.left, decl.right));
             }
@@ -136,6 +145,12 @@ public class C_API {
 
                 args.add(paramType + " " + paramName);
             }
+
+            // avoid jextract variadic invoker
+            if (args.isEmpty()) {
+                args.add("void");
+            }
+
             sb.append(format("%s %s(%s);\n", returnType, name, String.join(", ", args)));
         }
         return sb.toString();
@@ -162,10 +177,20 @@ public class C_API {
 
         code.append(writeTypedefEnums(enums)).append("\n\n");
         code.append(writeEnums(enums)).append("\n\n");
+        code.append(writeStructForwardDeclarations(structs)).append("\n\n");
         code.append(writeStructTypedefs(structs)).append("\n\n");
         code.append(writeStructTypedefs(callbackStructs)).append("\n\n");
         code.append(writeTypedefs(typedefs)).append("\n\n");
+
+        for (var callback : callbackStructs) {
+            var callbackEnums = callback.get("enums");
+            if (callbackEnums == null) continue;
+            code.append(writeTypedefEnums((List<Map<String, Object>>) callbackEnums)).append("\n\n");
+            code.append(writeEnums((List<Map<String, Object>>) callbackEnums)).append("\n\n");
+        }
+
         code.append(writeStructs(structs)).append("\n\n");
+        code.append(writeStructs(callbackStructs)).append("\n\n");
         code.append(writeInterfaces(interfaces)).append("\n\n");
 
         for (var struct : structs) {
@@ -187,11 +212,14 @@ public class C_API {
             code.append(writeMethods((List<Map<String, Object>>) methods)).append("\n\n");
         }
 
+        code.append("ESteamAPIInitResult SteamAPI_InitFlat( SteamErrMsg *pOutErrMsg );\n");
+        code.append("void SteamAPI_Shutdown();\n");
+
         // fixups
         var lines = code.toString().split("\n");
         for (var i = 0; i < lines.length; i++) {
             var line = lines[i];
-            if (line.contains("SteamInputActionEvent_t::AnalogAction_t")
+            if (line.contains("AnalogAction_t")
                     || line.contains("SteamAPIWarningMessageHook_t")
                     || line.contains("ScePadTriggerEffectParam")
                     || line.contains("SteamDatagramRelayAuthTicket")

@@ -2095,6 +2095,33 @@ enum EServerMode {
 };
 
 
+struct SteamIPAddress_t;
+struct FriendGameInfo_t;
+struct MatchMakingKeyValuePair_t;
+struct servernetadr_t;
+struct gameserveritem_t;
+struct SteamPartyBeaconLocation_t;
+struct SteamParamStringArray_t;
+struct LeaderboardEntry_t;
+struct P2PSessionState_t;
+struct InputAnalogActionData_t;
+struct InputDigitalActionData_t;
+struct InputMotionData_t;
+struct SteamInputActionEvent_t;
+struct SteamUGCDetails_t;
+struct SteamItemDetails_t;
+struct SteamNetworkingIPAddr;
+struct SteamNetworkingIdentity;
+struct SteamNetConnectionInfo_t;
+struct SteamNetConnectionRealTimeStatus_t;
+struct SteamNetConnectionRealTimeLaneStatus_t;
+struct SteamNetworkingMessage_t;
+struct SteamNetworkPingLocation_t;
+struct SteamNetworkingConfigValue_t;
+struct SteamDatagramHostedAddress;
+struct SteamDatagramGameCoordinatorServerLogin;
+
+
 typedef struct SteamIPAddress_t SteamIPAddress_t;
 typedef struct FriendGameInfo_t FriendGameInfo_t;
 typedef struct MatchMakingKeyValuePair_t MatchMakingKeyValuePair_t;
@@ -2408,6 +2435,25 @@ typedef long long SteamNetworkingMicroseconds;
 typedef (*FSteamNetworkingSocketsDebugOutput) (ESteamNetworkingSocketsDebugOutputType, const char *);
 
 
+typedef enum EFailureType EFailureType;
+
+
+enum EFailureType {
+	k_EFailureFlushedCallbackQueue = 0,
+	k_EFailurePipeFail = 1,
+};
+
+
+typedef enum PlayerAcceptState_t PlayerAcceptState_t;
+
+
+enum PlayerAcceptState_t {
+	k_EStateUnknown = 0,
+	k_EStatePlayerAccepted = 1,
+	k_EStatePlayerDeclined = 2,
+};
+
+
 struct SteamIPAddress_t {
 	uint8 m_rgubIPv6[16];
 	ESteamIPType m_eType;
@@ -2498,7 +2544,7 @@ struct InputMotionData_t {
 struct SteamInputActionEvent_t {
 	InputHandle_t controllerHandle;
 	ESteamInputActionEventType eEventType;
-//	SteamInputActionEvent_t::AnalogAction_t analogAction;
+//	AnalogAction_t analogAction;
 };
 struct SteamUGCDetails_t {
 	PublishedFileId_t m_nPublishedFileId;
@@ -2620,6 +2666,1021 @@ struct SteamDatagramGameCoordinatorServerLogin {
 };
 
 
+struct SteamServersConnected_t {
+};
+struct SteamServerConnectFailure_t {
+	EResult m_eResult;
+	bool m_bStillRetrying;
+};
+struct SteamServersDisconnected_t {
+	EResult m_eResult;
+};
+struct ClientGameServerDeny_t {
+	uint32 m_uAppID;
+	uint32 m_unGameServerIP;
+	uint16 m_usGameServerPort;
+	uint16 m_bSecure;
+	uint32 m_uReason;
+};
+struct IPCFailure_t {
+	uint8 m_eFailureType;
+};
+struct LicensesUpdated_t {
+};
+struct ValidateAuthTicketResponse_t {
+	CSteamID m_SteamID;
+	EAuthSessionResponse m_eAuthSessionResponse;
+	CSteamID m_OwnerSteamID;
+};
+struct MicroTxnAuthorizationResponse_t {
+	uint32 m_unAppID;
+	uint64 m_ulOrderID;
+	uint8 m_bAuthorized;
+};
+struct EncryptedAppTicketResponse_t {
+	EResult m_eResult;
+};
+struct GetAuthSessionTicketResponse_t {
+	HAuthTicket m_hAuthTicket;
+	EResult m_eResult;
+};
+struct GameWebCallback_t {
+	char m_szURL[256];
+};
+struct StoreAuthURLResponse_t {
+	char m_szURL[512];
+};
+struct MarketEligibilityResponse_t {
+	bool m_bAllowed;
+	EMarketNotAllowedReasonFlags m_eNotAllowedReason;
+	RTime32 m_rtAllowedAtTime;
+	int m_cdaySteamGuardRequiredDays;
+	int m_cdayNewDeviceCooldown;
+};
+struct DurationControl_t {
+	EResult m_eResult;
+	AppId_t m_appid;
+	bool m_bApplicable;
+	int32 m_csecsLast5h;
+	EDurationControlProgress m_progress;
+	EDurationControlNotification m_notification;
+	int32 m_csecsToday;
+	int32 m_csecsRemaining;
+};
+struct GetTicketForWebApiResponse_t {
+	HAuthTicket m_hAuthTicket;
+	EResult m_eResult;
+	int m_cubTicket;
+	uint8 m_rgubTicket[2560];
+};
+struct PersonaStateChange_t {
+	uint64 m_ulSteamID;
+	int m_nChangeFlags;
+};
+struct GameOverlayActivated_t {
+	uint8 m_bActive;
+	bool m_bUserInitiated;
+	AppId_t m_nAppID;
+	uint32 m_dwOverlayPID;
+};
+struct GameServerChangeRequested_t {
+	char m_rgchServer[64];
+	char m_rgchPassword[64];
+};
+struct GameLobbyJoinRequested_t {
+	CSteamID m_steamIDLobby;
+	CSteamID m_steamIDFriend;
+};
+struct AvatarImageLoaded_t {
+	CSteamID m_steamID;
+	int m_iImage;
+	int m_iWide;
+	int m_iTall;
+};
+struct ClanOfficerListResponse_t {
+	CSteamID m_steamIDClan;
+	int m_cOfficers;
+	uint8 m_bSuccess;
+};
+struct FriendRichPresenceUpdate_t {
+	CSteamID m_steamIDFriend;
+	AppId_t m_nAppID;
+};
+struct GameRichPresenceJoinRequested_t {
+	CSteamID m_steamIDFriend;
+	char m_rgchConnect[256];
+};
+struct GameConnectedClanChatMsg_t {
+	CSteamID m_steamIDClanChat;
+	CSteamID m_steamIDUser;
+	int m_iMessageID;
+};
+struct GameConnectedChatJoin_t {
+	CSteamID m_steamIDClanChat;
+	CSteamID m_steamIDUser;
+};
+struct GameConnectedChatLeave_t {
+	CSteamID m_steamIDClanChat;
+	CSteamID m_steamIDUser;
+	bool m_bKicked;
+	bool m_bDropped;
+};
+struct DownloadClanActivityCountsResult_t {
+	bool m_bSuccess;
+};
+struct JoinClanChatRoomCompletionResult_t {
+	CSteamID m_steamIDClanChat;
+	EChatRoomEnterResponse m_eChatRoomEnterResponse;
+};
+struct GameConnectedFriendChatMsg_t {
+	CSteamID m_steamIDUser;
+	int m_iMessageID;
+};
+struct FriendsGetFollowerCount_t {
+	EResult m_eResult;
+	CSteamID m_steamID;
+	int m_nCount;
+};
+struct FriendsIsFollowing_t {
+	EResult m_eResult;
+	CSteamID m_steamID;
+	bool m_bIsFollowing;
+};
+struct FriendsEnumerateFollowingList_t {
+	EResult m_eResult;
+	CSteamID m_rgSteamID[50];
+	int32 m_nResultsReturned;
+	int32 m_nTotalResultCount;
+};
+struct SetPersonaNameResponse_t {
+	bool m_bSuccess;
+	bool m_bLocalSuccess;
+	EResult m_result;
+};
+struct UnreadChatMessagesChanged_t {
+};
+struct OverlayBrowserProtocolNavigation_t {
+	char rgchURI[1024];
+};
+struct EquippedProfileItemsChanged_t {
+	CSteamID m_steamID;
+};
+struct EquippedProfileItems_t {
+	EResult m_eResult;
+	CSteamID m_steamID;
+	bool m_bHasAnimatedAvatar;
+	bool m_bHasAvatarFrame;
+	bool m_bHasProfileModifier;
+	bool m_bHasProfileBackground;
+	bool m_bHasMiniProfileBackground;
+};
+struct IPCountry_t {
+};
+struct LowBatteryPower_t {
+	uint8 m_nMinutesBatteryLeft;
+};
+struct SteamAPICallCompleted_t {
+	SteamAPICall_t m_hAsyncCall;
+	int m_iCallback;
+	uint32 m_cubParam;
+};
+struct SteamShutdown_t {
+};
+struct CheckFileSignature_t {
+	ECheckFileSignature m_eCheckFileSignature;
+};
+struct GamepadTextInputDismissed_t {
+	bool m_bSubmitted;
+	uint32 m_unSubmittedText;
+	AppId_t m_unAppID;
+};
+struct AppResumingFromSuspend_t {
+};
+struct FloatingGamepadTextInputDismissed_t {
+};
+struct FilterTextDictionaryChanged_t {
+	int m_eLanguage;
+};
+struct FavoritesListChanged_t {
+	uint32 m_nIP;
+	uint32 m_nQueryPort;
+	uint32 m_nConnPort;
+	uint32 m_nAppID;
+	uint32 m_nFlags;
+	bool m_bAdd;
+	AccountID_t m_unAccountId;
+};
+struct LobbyInvite_t {
+	uint64 m_ulSteamIDUser;
+	uint64 m_ulSteamIDLobby;
+	uint64 m_ulGameID;
+};
+struct LobbyEnter_t {
+	uint64 m_ulSteamIDLobby;
+	uint32 m_rgfChatPermissions;
+	bool m_bLocked;
+	uint32 m_EChatRoomEnterResponse;
+};
+struct LobbyDataUpdate_t {
+	uint64 m_ulSteamIDLobby;
+	uint64 m_ulSteamIDMember;
+	uint8 m_bSuccess;
+};
+struct LobbyChatUpdate_t {
+	uint64 m_ulSteamIDLobby;
+	uint64 m_ulSteamIDUserChanged;
+	uint64 m_ulSteamIDMakingChange;
+	uint32 m_rgfChatMemberStateChange;
+};
+struct LobbyChatMsg_t {
+	uint64 m_ulSteamIDLobby;
+	uint64 m_ulSteamIDUser;
+	uint8 m_eChatEntryType;
+	uint32 m_iChatID;
+};
+struct LobbyGameCreated_t {
+	uint64 m_ulSteamIDLobby;
+	uint64 m_ulSteamIDGameServer;
+	uint32 m_unIP;
+	uint16 m_usPort;
+};
+struct LobbyMatchList_t {
+	uint32 m_nLobbiesMatching;
+};
+struct LobbyKicked_t {
+	uint64 m_ulSteamIDLobby;
+	uint64 m_ulSteamIDAdmin;
+	uint8 m_bKickedDueToDisconnect;
+};
+struct LobbyCreated_t {
+	EResult m_eResult;
+	uint64 m_ulSteamIDLobby;
+};
+struct PSNGameBootInviteResult_t {
+	bool m_bGameBootInviteExists;
+	CSteamID m_steamIDLobby;
+};
+struct FavoritesListAccountsUpdated_t {
+	EResult m_eResult;
+};
+struct SearchForGameProgressCallback_t {
+	uint64 m_ullSearchID;
+	EResult m_eResult;
+	CSteamID m_lobbyID;
+	CSteamID m_steamIDEndedSearch;
+	int32 m_nSecondsRemainingEstimate;
+	int32 m_cPlayersSearching;
+};
+struct SearchForGameResultCallback_t {
+	uint64 m_ullSearchID;
+	EResult m_eResult;
+	int32 m_nCountPlayersInGame;
+	int32 m_nCountAcceptedGame;
+	CSteamID m_steamIDHost;
+	bool m_bFinalCallback;
+};
+struct RequestPlayersForGameProgressCallback_t {
+	EResult m_eResult;
+	uint64 m_ullSearchID;
+};
+struct RequestPlayersForGameResultCallback_t {
+	EResult m_eResult;
+	uint64 m_ullSearchID;
+	CSteamID m_SteamIDPlayerFound;
+	CSteamID m_SteamIDLobby;
+	PlayerAcceptState_t m_ePlayerAcceptState;
+	int32 m_nPlayerIndex;
+	int32 m_nTotalPlayersFound;
+	int32 m_nTotalPlayersAcceptedGame;
+	int32 m_nSuggestedTeamIndex;
+	uint64 m_ullUniqueGameID;
+};
+struct RequestPlayersForGameFinalResultCallback_t {
+	EResult m_eResult;
+	uint64 m_ullSearchID;
+	uint64 m_ullUniqueGameID;
+};
+struct SubmitPlayerResultResultCallback_t {
+	EResult m_eResult;
+	uint64 ullUniqueGameID;
+	CSteamID steamIDPlayer;
+};
+struct EndGameResultCallback_t {
+	EResult m_eResult;
+	uint64 ullUniqueGameID;
+};
+struct JoinPartyCallback_t {
+	EResult m_eResult;
+	PartyBeaconID_t m_ulBeaconID;
+	CSteamID m_SteamIDBeaconOwner;
+	char m_rgchConnectString[256];
+};
+struct CreateBeaconCallback_t {
+	EResult m_eResult;
+	PartyBeaconID_t m_ulBeaconID;
+};
+struct ReservationNotificationCallback_t {
+	PartyBeaconID_t m_ulBeaconID;
+	CSteamID m_steamIDJoiner;
+};
+struct ChangeNumOpenSlotsCallback_t {
+	EResult m_eResult;
+};
+struct AvailableBeaconLocationsUpdated_t {
+};
+struct ActiveBeaconsUpdated_t {
+};
+struct RemoteStorageFileShareResult_t {
+	EResult m_eResult;
+	UGCHandle_t m_hFile;
+	char m_rgchFilename[260];
+};
+struct RemoteStoragePublishFileResult_t {
+	EResult m_eResult;
+	PublishedFileId_t m_nPublishedFileId;
+	bool m_bUserNeedsToAcceptWorkshopLegalAgreement;
+};
+struct RemoteStorageDeletePublishedFileResult_t {
+	EResult m_eResult;
+	PublishedFileId_t m_nPublishedFileId;
+};
+struct RemoteStorageEnumerateUserPublishedFilesResult_t {
+	EResult m_eResult;
+	int32 m_nResultsReturned;
+	int32 m_nTotalResultCount;
+	PublishedFileId_t m_rgPublishedFileId[50];
+};
+struct RemoteStorageSubscribePublishedFileResult_t {
+	EResult m_eResult;
+	PublishedFileId_t m_nPublishedFileId;
+};
+struct RemoteStorageEnumerateUserSubscribedFilesResult_t {
+	EResult m_eResult;
+	int32 m_nResultsReturned;
+	int32 m_nTotalResultCount;
+	PublishedFileId_t m_rgPublishedFileId[50];
+	uint32 m_rgRTimeSubscribed[50];
+};
+struct RemoteStorageUnsubscribePublishedFileResult_t {
+	EResult m_eResult;
+	PublishedFileId_t m_nPublishedFileId;
+};
+struct RemoteStorageUpdatePublishedFileResult_t {
+	EResult m_eResult;
+	PublishedFileId_t m_nPublishedFileId;
+	bool m_bUserNeedsToAcceptWorkshopLegalAgreement;
+};
+struct RemoteStorageDownloadUGCResult_t {
+	EResult m_eResult;
+	UGCHandle_t m_hFile;
+	AppId_t m_nAppID;
+	int32 m_nSizeInBytes;
+	char m_pchFileName[260];
+	uint64 m_ulSteamIDOwner;
+};
+struct RemoteStorageGetPublishedFileDetailsResult_t {
+	EResult m_eResult;
+	PublishedFileId_t m_nPublishedFileId;
+	AppId_t m_nCreatorAppID;
+	AppId_t m_nConsumerAppID;
+	char m_rgchTitle[129];
+	char m_rgchDescription[8000];
+	UGCHandle_t m_hFile;
+	UGCHandle_t m_hPreviewFile;
+	uint64 m_ulSteamIDOwner;
+	uint32 m_rtimeCreated;
+	uint32 m_rtimeUpdated;
+	ERemoteStoragePublishedFileVisibility m_eVisibility;
+	bool m_bBanned;
+	char m_rgchTags[1025];
+	bool m_bTagsTruncated;
+	char m_pchFileName[260];
+	int32 m_nFileSize;
+	int32 m_nPreviewFileSize;
+	char m_rgchURL[256];
+	EWorkshopFileType m_eFileType;
+	bool m_bAcceptedForUse;
+};
+struct RemoteStorageEnumerateWorkshopFilesResult_t {
+	EResult m_eResult;
+	int32 m_nResultsReturned;
+	int32 m_nTotalResultCount;
+	PublishedFileId_t m_rgPublishedFileId[50];
+	float m_rgScore[50];
+	AppId_t m_nAppId;
+	uint32 m_unStartIndex;
+};
+struct RemoteStorageGetPublishedItemVoteDetailsResult_t {
+	EResult m_eResult;
+	PublishedFileId_t m_unPublishedFileId;
+	int32 m_nVotesFor;
+	int32 m_nVotesAgainst;
+	int32 m_nReports;
+	float m_fScore;
+};
+struct RemoteStoragePublishedFileSubscribed_t {
+	PublishedFileId_t m_nPublishedFileId;
+	AppId_t m_nAppID;
+};
+struct RemoteStoragePublishedFileUnsubscribed_t {
+	PublishedFileId_t m_nPublishedFileId;
+	AppId_t m_nAppID;
+};
+struct RemoteStoragePublishedFileDeleted_t {
+	PublishedFileId_t m_nPublishedFileId;
+	AppId_t m_nAppID;
+};
+struct RemoteStorageUpdateUserPublishedItemVoteResult_t {
+	EResult m_eResult;
+	PublishedFileId_t m_nPublishedFileId;
+};
+struct RemoteStorageUserVoteDetails_t {
+	EResult m_eResult;
+	PublishedFileId_t m_nPublishedFileId;
+	EWorkshopVote m_eVote;
+};
+struct RemoteStorageEnumerateUserSharedWorkshopFilesResult_t {
+	EResult m_eResult;
+	int32 m_nResultsReturned;
+	int32 m_nTotalResultCount;
+	PublishedFileId_t m_rgPublishedFileId[50];
+};
+struct RemoteStorageSetUserPublishedFileActionResult_t {
+	EResult m_eResult;
+	PublishedFileId_t m_nPublishedFileId;
+	EWorkshopFileAction m_eAction;
+};
+struct RemoteStorageEnumeratePublishedFilesByUserActionResult_t {
+	EResult m_eResult;
+	EWorkshopFileAction m_eAction;
+	int32 m_nResultsReturned;
+	int32 m_nTotalResultCount;
+	PublishedFileId_t m_rgPublishedFileId[50];
+	uint32 m_rgRTimeUpdated[50];
+};
+struct RemoteStoragePublishFileProgress_t {
+	double m_dPercentFile;
+	bool m_bPreview;
+};
+struct RemoteStoragePublishedFileUpdated_t {
+	PublishedFileId_t m_nPublishedFileId;
+	AppId_t m_nAppID;
+	uint64 m_ulUnused;
+};
+struct RemoteStorageFileWriteAsyncComplete_t {
+	EResult m_eResult;
+};
+struct RemoteStorageFileReadAsyncComplete_t {
+	SteamAPICall_t m_hFileReadAsync;
+	EResult m_eResult;
+	uint32 m_nOffset;
+	uint32 m_cubRead;
+};
+struct RemoteStorageLocalFileChange_t {
+};
+struct UserStatsReceived_t {
+	uint64 m_nGameID;
+	EResult m_eResult;
+	CSteamID m_steamIDUser;
+};
+struct UserStatsStored_t {
+	uint64 m_nGameID;
+	EResult m_eResult;
+};
+struct UserAchievementStored_t {
+	uint64 m_nGameID;
+	bool m_bGroupAchievement;
+	char m_rgchAchievementName[128];
+	uint32 m_nCurProgress;
+	uint32 m_nMaxProgress;
+};
+struct LeaderboardFindResult_t {
+	SteamLeaderboard_t m_hSteamLeaderboard;
+	uint8 m_bLeaderboardFound;
+};
+struct LeaderboardScoresDownloaded_t {
+	SteamLeaderboard_t m_hSteamLeaderboard;
+	SteamLeaderboardEntries_t m_hSteamLeaderboardEntries;
+	int m_cEntryCount;
+};
+struct LeaderboardScoreUploaded_t {
+	uint8 m_bSuccess;
+	SteamLeaderboard_t m_hSteamLeaderboard;
+	int32 m_nScore;
+	uint8 m_bScoreChanged;
+	int m_nGlobalRankNew;
+	int m_nGlobalRankPrevious;
+};
+struct NumberOfCurrentPlayers_t {
+	uint8 m_bSuccess;
+	int32 m_cPlayers;
+};
+struct UserStatsUnloaded_t {
+	CSteamID m_steamIDUser;
+};
+struct UserAchievementIconFetched_t {
+	CGameID m_nGameID;
+	char m_rgchAchievementName[128];
+	bool m_bAchieved;
+	int m_nIconHandle;
+};
+struct GlobalAchievementPercentagesReady_t {
+	uint64 m_nGameID;
+	EResult m_eResult;
+};
+struct LeaderboardUGCSet_t {
+	EResult m_eResult;
+	SteamLeaderboard_t m_hSteamLeaderboard;
+};
+struct PS3TrophiesInstalled_t {
+	uint64 m_nGameID;
+	EResult m_eResult;
+	uint64 m_ulRequiredDiskSpace;
+};
+struct GlobalStatsReceived_t {
+	uint64 m_nGameID;
+	EResult m_eResult;
+};
+struct DlcInstalled_t {
+	AppId_t m_nAppID;
+};
+struct NewUrlLaunchParameters_t {
+};
+struct AppProofOfPurchaseKeyResponse_t {
+	EResult m_eResult;
+	uint32 m_nAppID;
+	uint32 m_cchKeyLength;
+	char m_rgchKey[240];
+};
+struct FileDetailsResult_t {
+	EResult m_eResult;
+	uint64 m_ulFileSize;
+	uint8 m_FileSHA[20];
+	uint32 m_unFlags;
+};
+struct TimedTrialStatus_t {
+	AppId_t m_unAppID;
+	bool m_bIsOffline;
+	uint32 m_unSecondsAllowed;
+	uint32 m_unSecondsPlayed;
+};
+struct P2PSessionRequest_t {
+	CSteamID m_steamIDRemote;
+};
+struct P2PSessionConnectFail_t {
+	CSteamID m_steamIDRemote;
+	uint8 m_eP2PSessionError;
+};
+struct SocketStatusCallback_t {
+	SNetSocket_t m_hSocket;
+	SNetListenSocket_t m_hListenSocket;
+	CSteamID m_steamIDRemote;
+	int m_eSNetSocketState;
+};
+struct ScreenshotReady_t {
+	ScreenshotHandle m_hLocal;
+	EResult m_eResult;
+};
+struct ScreenshotRequested_t {
+};
+struct PlaybackStatusHasChanged_t {
+};
+struct VolumeHasChanged_t {
+	float m_flNewVolume;
+};
+struct MusicPlayerRemoteWillActivate_t {
+};
+struct MusicPlayerRemoteWillDeactivate_t {
+};
+struct MusicPlayerRemoteToFront_t {
+};
+struct MusicPlayerWillQuit_t {
+};
+struct MusicPlayerWantsPlay_t {
+};
+struct MusicPlayerWantsPause_t {
+};
+struct MusicPlayerWantsPlayPrevious_t {
+};
+struct MusicPlayerWantsPlayNext_t {
+};
+struct MusicPlayerWantsShuffled_t {
+	bool m_bShuffled;
+};
+struct MusicPlayerWantsLooped_t {
+	bool m_bLooped;
+};
+struct MusicPlayerWantsVolume_t {
+	float m_flNewVolume;
+};
+struct MusicPlayerSelectsQueueEntry_t {
+	int nID;
+};
+struct MusicPlayerSelectsPlaylistEntry_t {
+	int nID;
+};
+struct MusicPlayerWantsPlayingRepeatStatus_t {
+	int m_nPlayingRepeatStatus;
+};
+struct HTTPRequestCompleted_t {
+	HTTPRequestHandle m_hRequest;
+	uint64 m_ulContextValue;
+	bool m_bRequestSuccessful;
+	EHTTPStatusCode m_eStatusCode;
+	uint32 m_unBodySize;
+};
+struct HTTPRequestHeadersReceived_t {
+	HTTPRequestHandle m_hRequest;
+	uint64 m_ulContextValue;
+};
+struct HTTPRequestDataReceived_t {
+	HTTPRequestHandle m_hRequest;
+	uint64 m_ulContextValue;
+	uint32 m_cOffset;
+	uint32 m_cBytesReceived;
+};
+struct SteamInputDeviceConnected_t {
+	InputHandle_t m_ulConnectedDeviceHandle;
+};
+struct SteamInputDeviceDisconnected_t {
+	InputHandle_t m_ulDisconnectedDeviceHandle;
+};
+struct SteamInputConfigurationLoaded_t {
+	AppId_t m_unAppID;
+	InputHandle_t m_ulDeviceHandle;
+	CSteamID m_ulMappingCreator;
+	uint32 m_unMajorRevision;
+	uint32 m_unMinorRevision;
+	bool m_bUsesSteamInputAPI;
+	bool m_bUsesGamepadAPI;
+};
+struct SteamInputGamepadSlotChange_t {
+	AppId_t m_unAppID;
+	InputHandle_t m_ulDeviceHandle;
+	ESteamInputType m_eDeviceType;
+	int m_nOldGamepadSlot;
+	int m_nNewGamepadSlot;
+};
+struct SteamUGCQueryCompleted_t {
+	UGCQueryHandle_t m_handle;
+	EResult m_eResult;
+	uint32 m_unNumResultsReturned;
+	uint32 m_unTotalMatchingResults;
+	bool m_bCachedData;
+	char m_rgchNextCursor[256];
+};
+struct SteamUGCRequestUGCDetailsResult_t {
+	SteamUGCDetails_t m_details;
+	bool m_bCachedData;
+};
+struct CreateItemResult_t {
+	EResult m_eResult;
+	PublishedFileId_t m_nPublishedFileId;
+	bool m_bUserNeedsToAcceptWorkshopLegalAgreement;
+};
+struct SubmitItemUpdateResult_t {
+	EResult m_eResult;
+	bool m_bUserNeedsToAcceptWorkshopLegalAgreement;
+	PublishedFileId_t m_nPublishedFileId;
+};
+struct ItemInstalled_t {
+	AppId_t m_unAppID;
+	PublishedFileId_t m_nPublishedFileId;
+};
+struct DownloadItemResult_t {
+	AppId_t m_unAppID;
+	PublishedFileId_t m_nPublishedFileId;
+	EResult m_eResult;
+};
+struct UserFavoriteItemsListChanged_t {
+	PublishedFileId_t m_nPublishedFileId;
+	EResult m_eResult;
+	bool m_bWasAddRequest;
+};
+struct SetUserItemVoteResult_t {
+	PublishedFileId_t m_nPublishedFileId;
+	EResult m_eResult;
+	bool m_bVoteUp;
+};
+struct GetUserItemVoteResult_t {
+	PublishedFileId_t m_nPublishedFileId;
+	EResult m_eResult;
+	bool m_bVotedUp;
+	bool m_bVotedDown;
+	bool m_bVoteSkipped;
+};
+struct StartPlaytimeTrackingResult_t {
+	EResult m_eResult;
+};
+struct StopPlaytimeTrackingResult_t {
+	EResult m_eResult;
+};
+struct AddUGCDependencyResult_t {
+	EResult m_eResult;
+	PublishedFileId_t m_nPublishedFileId;
+	PublishedFileId_t m_nChildPublishedFileId;
+};
+struct RemoveUGCDependencyResult_t {
+	EResult m_eResult;
+	PublishedFileId_t m_nPublishedFileId;
+	PublishedFileId_t m_nChildPublishedFileId;
+};
+struct AddAppDependencyResult_t {
+	EResult m_eResult;
+	PublishedFileId_t m_nPublishedFileId;
+	AppId_t m_nAppID;
+};
+struct RemoveAppDependencyResult_t {
+	EResult m_eResult;
+	PublishedFileId_t m_nPublishedFileId;
+	AppId_t m_nAppID;
+};
+struct GetAppDependenciesResult_t {
+	EResult m_eResult;
+	PublishedFileId_t m_nPublishedFileId;
+	AppId_t m_rgAppIDs[32];
+	uint32 m_nNumAppDependencies;
+	uint32 m_nTotalNumAppDependencies;
+};
+struct DeleteItemResult_t {
+	EResult m_eResult;
+	PublishedFileId_t m_nPublishedFileId;
+};
+struct UserSubscribedItemsListChanged_t {
+	AppId_t m_nAppID;
+};
+struct WorkshopEULAStatus_t {
+	EResult m_eResult;
+	AppId_t m_nAppID;
+	uint32 m_unVersion;
+	RTime32 m_rtAction;
+	bool m_bAccepted;
+	bool m_bNeedsAction;
+};
+struct HTML_BrowserReady_t {
+	HHTMLBrowser unBrowserHandle;
+};
+struct HTML_NeedsPaint_t {
+	HHTMLBrowser unBrowserHandle;
+	const char * pBGRA;
+	uint32 unWide;
+	uint32 unTall;
+	uint32 unUpdateX;
+	uint32 unUpdateY;
+	uint32 unUpdateWide;
+	uint32 unUpdateTall;
+	uint32 unScrollX;
+	uint32 unScrollY;
+	float flPageScale;
+	uint32 unPageSerial;
+};
+struct HTML_StartRequest_t {
+	HHTMLBrowser unBrowserHandle;
+	const char * pchURL;
+	const char * pchTarget;
+	const char * pchPostData;
+	bool bIsRedirect;
+};
+struct HTML_CloseBrowser_t {
+	HHTMLBrowser unBrowserHandle;
+};
+struct HTML_URLChanged_t {
+	HHTMLBrowser unBrowserHandle;
+	const char * pchURL;
+	const char * pchPostData;
+	bool bIsRedirect;
+	const char * pchPageTitle;
+	bool bNewNavigation;
+};
+struct HTML_FinishedRequest_t {
+	HHTMLBrowser unBrowserHandle;
+	const char * pchURL;
+	const char * pchPageTitle;
+};
+struct HTML_OpenLinkInNewTab_t {
+	HHTMLBrowser unBrowserHandle;
+	const char * pchURL;
+};
+struct HTML_ChangedTitle_t {
+	HHTMLBrowser unBrowserHandle;
+	const char * pchTitle;
+};
+struct HTML_SearchResults_t {
+	HHTMLBrowser unBrowserHandle;
+	uint32 unResults;
+	uint32 unCurrentMatch;
+};
+struct HTML_CanGoBackAndForward_t {
+	HHTMLBrowser unBrowserHandle;
+	bool bCanGoBack;
+	bool bCanGoForward;
+};
+struct HTML_HorizontalScroll_t {
+	HHTMLBrowser unBrowserHandle;
+	uint32 unScrollMax;
+	uint32 unScrollCurrent;
+	float flPageScale;
+	bool bVisible;
+	uint32 unPageSize;
+};
+struct HTML_VerticalScroll_t {
+	HHTMLBrowser unBrowserHandle;
+	uint32 unScrollMax;
+	uint32 unScrollCurrent;
+	float flPageScale;
+	bool bVisible;
+	uint32 unPageSize;
+};
+struct HTML_LinkAtPosition_t {
+	HHTMLBrowser unBrowserHandle;
+	uint32 x;
+	uint32 y;
+	const char * pchURL;
+	bool bInput;
+	bool bLiveLink;
+};
+struct HTML_JSAlert_t {
+	HHTMLBrowser unBrowserHandle;
+	const char * pchMessage;
+};
+struct HTML_JSConfirm_t {
+	HHTMLBrowser unBrowserHandle;
+	const char * pchMessage;
+};
+struct HTML_FileOpenDialog_t {
+	HHTMLBrowser unBrowserHandle;
+	const char * pchTitle;
+	const char * pchInitialFile;
+};
+struct HTML_NewWindow_t {
+	HHTMLBrowser unBrowserHandle;
+	const char * pchURL;
+	uint32 unX;
+	uint32 unY;
+	uint32 unWide;
+	uint32 unTall;
+	HHTMLBrowser unNewWindow_BrowserHandle_IGNORE;
+};
+struct HTML_SetCursor_t {
+	HHTMLBrowser unBrowserHandle;
+	uint32 eMouseCursor;
+};
+struct HTML_StatusText_t {
+	HHTMLBrowser unBrowserHandle;
+	const char * pchMsg;
+};
+struct HTML_ShowToolTip_t {
+	HHTMLBrowser unBrowserHandle;
+	const char * pchMsg;
+};
+struct HTML_UpdateToolTip_t {
+	HHTMLBrowser unBrowserHandle;
+	const char * pchMsg;
+};
+struct HTML_HideToolTip_t {
+	HHTMLBrowser unBrowserHandle;
+};
+struct HTML_BrowserRestarted_t {
+	HHTMLBrowser unBrowserHandle;
+	HHTMLBrowser unOldBrowserHandle;
+};
+struct SteamInventoryResultReady_t {
+	SteamInventoryResult_t m_handle;
+	EResult m_result;
+};
+struct SteamInventoryFullUpdate_t {
+	SteamInventoryResult_t m_handle;
+};
+struct SteamInventoryDefinitionUpdate_t {
+};
+struct SteamInventoryEligiblePromoItemDefIDs_t {
+	EResult m_result;
+	CSteamID m_steamID;
+	int m_numEligiblePromoItemDefs;
+	bool m_bCachedData;
+};
+struct SteamInventoryStartPurchaseResult_t {
+	EResult m_result;
+	uint64 m_ulOrderID;
+	uint64 m_ulTransID;
+};
+struct SteamInventoryRequestPricesResult_t {
+	EResult m_result;
+	char m_rgchCurrency[4];
+};
+struct GetVideoURLResult_t {
+	EResult m_eResult;
+	AppId_t m_unVideoAppID;
+	char m_rgchURL[256];
+};
+struct GetOPFSettingsResult_t {
+	EResult m_eResult;
+	AppId_t m_unVideoAppID;
+};
+struct SteamParentalSettingsChanged_t {
+};
+struct SteamRemotePlaySessionConnected_t {
+	RemotePlaySessionID_t m_unSessionID;
+};
+struct SteamRemotePlaySessionDisconnected_t {
+	RemotePlaySessionID_t m_unSessionID;
+};
+struct SteamRemotePlayTogetherGuestInvite_t {
+	char m_szConnectURL[1024];
+};
+struct SteamNetworkingMessagesSessionRequest_t {
+	SteamNetworkingIdentity m_identityRemote;
+};
+struct SteamNetworkingMessagesSessionFailed_t {
+	SteamNetConnectionInfo_t m_info;
+};
+struct SteamNetConnectionStatusChangedCallback_t {
+	HSteamNetConnection m_hConn;
+	SteamNetConnectionInfo_t m_info;
+	ESteamNetworkingConnectionState m_eOldState;
+};
+struct SteamNetAuthenticationStatus_t {
+	ESteamNetworkingAvailability m_eAvail;
+	char m_debugMsg[256];
+};
+struct SteamRelayNetworkStatus_t {
+	ESteamNetworkingAvailability m_eAvail;
+	int m_bPingMeasurementInProgress;
+	ESteamNetworkingAvailability m_eAvailNetworkConfig;
+	ESteamNetworkingAvailability m_eAvailAnyRelay;
+	char m_debugMsg[256];
+};
+struct GSClientApprove_t {
+	CSteamID m_SteamID;
+	CSteamID m_OwnerSteamID;
+};
+struct GSClientDeny_t {
+	CSteamID m_SteamID;
+	EDenyReason m_eDenyReason;
+	char m_rgchOptionalText[128];
+};
+struct GSClientKick_t {
+	CSteamID m_SteamID;
+	EDenyReason m_eDenyReason;
+};
+struct GSClientAchievementStatus_t {
+	uint64 m_SteamID;
+	char m_pchAchievement[128];
+	bool m_bUnlocked;
+};
+struct GSPolicyResponse_t {
+	uint8 m_bSecure;
+};
+struct GSGameplayStats_t {
+	EResult m_eResult;
+	int32 m_nRank;
+	uint32 m_unTotalConnects;
+	uint32 m_unTotalMinutesPlayed;
+};
+struct GSClientGroupStatus_t {
+	CSteamID m_SteamIDUser;
+	CSteamID m_SteamIDGroup;
+	bool m_bMember;
+	bool m_bOfficer;
+};
+struct GSReputation_t {
+	EResult m_eResult;
+	uint32 m_unReputationScore;
+	bool m_bBanned;
+	uint32 m_unBannedIP;
+	uint16 m_usBannedPort;
+	uint64 m_ulBannedGameID;
+	uint32 m_unBanExpires;
+};
+struct AssociateWithClanResult_t {
+	EResult m_eResult;
+};
+struct ComputeNewPlayerCompatibilityResult_t {
+	EResult m_eResult;
+	int m_cPlayersThatDontLikeCandidate;
+	int m_cPlayersThatCandidateDoesntLike;
+	int m_cClanPlayersThatDontLikeCandidate;
+	CSteamID m_SteamIDCandidate;
+};
+struct GSStatsReceived_t {
+	EResult m_eResult;
+	CSteamID m_steamIDUser;
+};
+struct GSStatsStored_t {
+	EResult m_eResult;
+	CSteamID m_steamIDUser;
+};
+struct GSStatsUnloaded_t {
+	CSteamID m_steamIDUser;
+};
+struct SteamNetworkingFakeIPResult_t {
+	EResult m_eResult;
+	SteamNetworkingIdentity m_identity;
+	uint32 m_unIP;
+	uint16 m_unPorts[8];
+};
+
+
 typedef void* ISteamClient;
 typedef void* ISteamUser;
 typedef void* ISteamFriends;
@@ -2655,68 +3716,68 @@ typedef void* ISteamGameServerStats;
 typedef void* ISteamNetworkingFakeUDPPort;
 
 
-bool SteamAPI_SteamIPAddress_t_IsSet();
+bool SteamAPI_SteamIPAddress_t_IsSet(void);
 
 
-void SteamAPI_MatchMakingKeyValuePair_t_Construct();
+void SteamAPI_MatchMakingKeyValuePair_t_Construct(void);
 
 
-void SteamAPI_servernetadr_t_Construct();
+void SteamAPI_servernetadr_t_Construct(void);
 void SteamAPI_servernetadr_t_Init(unsigned int ip, uint16 usQueryPort, uint16 usConnectionPort);
-uint16 SteamAPI_servernetadr_t_GetQueryPort();
+uint16 SteamAPI_servernetadr_t_GetQueryPort(void);
 void SteamAPI_servernetadr_t_SetQueryPort(uint16 usPort);
-uint16 SteamAPI_servernetadr_t_GetConnectionPort();
+uint16 SteamAPI_servernetadr_t_GetConnectionPort(void);
 void SteamAPI_servernetadr_t_SetConnectionPort(uint16 usPort);
-uint32 SteamAPI_servernetadr_t_GetIP();
+uint32 SteamAPI_servernetadr_t_GetIP(void);
 void SteamAPI_servernetadr_t_SetIP(uint32 unIP);
-const char * SteamAPI_servernetadr_t_GetConnectionAddressString();
-const char * SteamAPI_servernetadr_t_GetQueryAddressString();
+const char * SteamAPI_servernetadr_t_GetConnectionAddressString(void);
+const char * SteamAPI_servernetadr_t_GetQueryAddressString(void);
 bool SteamAPI_servernetadr_t_IsLessThan(const servernetadr_t * netadr);
 void SteamAPI_servernetadr_t_Assign(const servernetadr_t * that);
 
 
-void SteamAPI_gameserveritem_t_Construct();
-const char * SteamAPI_gameserveritem_t_GetName();
+void SteamAPI_gameserveritem_t_Construct(void);
+const char * SteamAPI_gameserveritem_t_GetName(void);
 void SteamAPI_gameserveritem_t_SetName(const char * pName);
 
 
-void SteamAPI_SteamNetworkingIPAddr_Clear();
-bool SteamAPI_SteamNetworkingIPAddr_IsIPv6AllZeros();
+void SteamAPI_SteamNetworkingIPAddr_Clear(void);
+bool SteamAPI_SteamNetworkingIPAddr_IsIPv6AllZeros(void);
 void SteamAPI_SteamNetworkingIPAddr_SetIPv6(const uint8 * ipv6, uint16 nPort);
 void SteamAPI_SteamNetworkingIPAddr_SetIPv4(uint32 nIP, uint16 nPort);
-bool SteamAPI_SteamNetworkingIPAddr_IsIPv4();
-uint32 SteamAPI_SteamNetworkingIPAddr_GetIPv4();
+bool SteamAPI_SteamNetworkingIPAddr_IsIPv4(void);
+uint32 SteamAPI_SteamNetworkingIPAddr_GetIPv4(void);
 void SteamAPI_SteamNetworkingIPAddr_SetIPv6LocalHost(uint16 nPort);
-bool SteamAPI_SteamNetworkingIPAddr_IsLocalHost();
+bool SteamAPI_SteamNetworkingIPAddr_IsLocalHost(void);
 void SteamAPI_SteamNetworkingIPAddr_ToString(char * buf, uint32 cbBuf, bool bWithPort);
 bool SteamAPI_SteamNetworkingIPAddr_ParseString(const char * pszStr);
 bool SteamAPI_SteamNetworkingIPAddr_IsEqualTo(const SteamNetworkingIPAddr * x);
-ESteamNetworkingFakeIPType SteamAPI_SteamNetworkingIPAddr_GetFakeIPType();
-bool SteamAPI_SteamNetworkingIPAddr_IsFakeIP();
+ESteamNetworkingFakeIPType SteamAPI_SteamNetworkingIPAddr_GetFakeIPType(void);
+bool SteamAPI_SteamNetworkingIPAddr_IsFakeIP(void);
 
 
-void SteamAPI_SteamNetworkingIdentity_Clear();
-bool SteamAPI_SteamNetworkingIdentity_IsInvalid();
+void SteamAPI_SteamNetworkingIdentity_Clear(void);
+bool SteamAPI_SteamNetworkingIdentity_IsInvalid(void);
 void SteamAPI_SteamNetworkingIdentity_SetSteamID(uint64_steamid steamID);
-uint64_steamid SteamAPI_SteamNetworkingIdentity_GetSteamID();
+uint64_steamid SteamAPI_SteamNetworkingIdentity_GetSteamID(void);
 void SteamAPI_SteamNetworkingIdentity_SetSteamID64(uint64 steamID);
-uint64 SteamAPI_SteamNetworkingIdentity_GetSteamID64();
+uint64 SteamAPI_SteamNetworkingIdentity_GetSteamID64(void);
 bool SteamAPI_SteamNetworkingIdentity_SetXboxPairwiseID(const char * pszString);
-const char * SteamAPI_SteamNetworkingIdentity_GetXboxPairwiseID();
+const char * SteamAPI_SteamNetworkingIdentity_GetXboxPairwiseID(void);
 void SteamAPI_SteamNetworkingIdentity_SetPSNID(uint64 id);
-uint64 SteamAPI_SteamNetworkingIdentity_GetPSNID();
+uint64 SteamAPI_SteamNetworkingIdentity_GetPSNID(void);
 void SteamAPI_SteamNetworkingIdentity_SetStadiaID(uint64 id);
-uint64 SteamAPI_SteamNetworkingIdentity_GetStadiaID();
+uint64 SteamAPI_SteamNetworkingIdentity_GetStadiaID(void);
 void SteamAPI_SteamNetworkingIdentity_SetIPAddr(const SteamNetworkingIPAddr * addr);
-const SteamNetworkingIPAddr * SteamAPI_SteamNetworkingIdentity_GetIPAddr();
+const SteamNetworkingIPAddr * SteamAPI_SteamNetworkingIdentity_GetIPAddr(void);
 void SteamAPI_SteamNetworkingIdentity_SetIPv4Addr(uint32 nIPv4, uint16 nPort);
-uint32 SteamAPI_SteamNetworkingIdentity_GetIPv4();
-ESteamNetworkingFakeIPType SteamAPI_SteamNetworkingIdentity_GetFakeIPType();
-bool SteamAPI_SteamNetworkingIdentity_IsFakeIP();
-void SteamAPI_SteamNetworkingIdentity_SetLocalHost();
-bool SteamAPI_SteamNetworkingIdentity_IsLocalHost();
+uint32 SteamAPI_SteamNetworkingIdentity_GetIPv4(void);
+ESteamNetworkingFakeIPType SteamAPI_SteamNetworkingIdentity_GetFakeIPType(void);
+bool SteamAPI_SteamNetworkingIdentity_IsFakeIP(void);
+void SteamAPI_SteamNetworkingIdentity_SetLocalHost(void);
+bool SteamAPI_SteamNetworkingIdentity_IsLocalHost(void);
 bool SteamAPI_SteamNetworkingIdentity_SetGenericString(const char * pszString);
-const char * SteamAPI_SteamNetworkingIdentity_GetGenericString();
+const char * SteamAPI_SteamNetworkingIdentity_GetGenericString(void);
 bool SteamAPI_SteamNetworkingIdentity_SetGenericBytes(const void * data, uint32 cbLen);
 const uint8 * SteamAPI_SteamNetworkingIdentity_GetGenericBytes(int * cbLen);
 bool SteamAPI_SteamNetworkingIdentity_IsEqualTo(const SteamNetworkingIdentity * x);
@@ -2724,7 +3785,7 @@ void SteamAPI_SteamNetworkingIdentity_ToString(char * buf, uint32 cbBuf);
 bool SteamAPI_SteamNetworkingIdentity_ParseString(const char * pszStr);
 
 
-void SteamAPI_SteamNetworkingMessage_t_Release();
+void SteamAPI_SteamNetworkingMessage_t_Release(void);
 
 
 void SteamAPI_SteamNetworkingConfigValue_t_SetInt32(ESteamNetworkingConfigValue eVal, int32_t data);
@@ -2734,8 +3795,8 @@ void SteamAPI_SteamNetworkingConfigValue_t_SetPtr(ESteamNetworkingConfigValue eV
 void SteamAPI_SteamNetworkingConfigValue_t_SetString(ESteamNetworkingConfigValue eVal, const char * data);
 
 
-void SteamAPI_SteamDatagramHostedAddress_Clear();
-SteamNetworkingPOPID SteamAPI_SteamDatagramHostedAddress_GetPopID();
+void SteamAPI_SteamDatagramHostedAddress_Clear(void);
+SteamNetworkingPOPID SteamAPI_SteamDatagramHostedAddress_GetPopID(void);
 void SteamAPI_SteamDatagramHostedAddress_SetDevAddress(uint32 nIP, uint16 nPort, SteamNetworkingPOPID popid);
 
 
@@ -2801,7 +3862,7 @@ enum EHTMLKeyModifiers {
 };
 
 
-HSteamPipe SteamAPI_ISteamClient_CreateSteamPipe();
+HSteamPipe SteamAPI_ISteamClient_CreateSteamPipe(void);
 bool SteamAPI_ISteamClient_BReleaseSteamPipe(HSteamPipe hSteamPipe);
 HSteamUser SteamAPI_ISteamClient_ConnectToGlobalUser(HSteamPipe hSteamPipe);
 HSteamUser SteamAPI_ISteamClient_CreateLocalUser(HSteamPipe * phSteamPipe, EAccountType eAccountType);
@@ -2821,9 +3882,9 @@ ISteamNetworking * SteamAPI_ISteamClient_GetISteamNetworking(HSteamUser hSteamUs
 ISteamRemoteStorage * SteamAPI_ISteamClient_GetISteamRemoteStorage(HSteamUser hSteamuser, HSteamPipe hSteamPipe, const char * pchVersion);
 ISteamScreenshots * SteamAPI_ISteamClient_GetISteamScreenshots(HSteamUser hSteamuser, HSteamPipe hSteamPipe, const char * pchVersion);
 ISteamGameSearch * SteamAPI_ISteamClient_GetISteamGameSearch(HSteamUser hSteamuser, HSteamPipe hSteamPipe, const char * pchVersion);
-uint32 SteamAPI_ISteamClient_GetIPCCallCount();
+uint32 SteamAPI_ISteamClient_GetIPCCallCount(void);
 //void SteamAPI_ISteamClient_SetWarningMessageHook(SteamAPIWarningMessageHook_t pFunction);
-bool SteamAPI_ISteamClient_BShutdownIfAllPipesClosed();
+bool SteamAPI_ISteamClient_BShutdownIfAllPipesClosed(void);
 ISteamHTTP * SteamAPI_ISteamClient_GetISteamHTTP(HSteamUser hSteamuser, HSteamPipe hSteamPipe, const char * pchVersion);
 ISteamController * SteamAPI_ISteamClient_GetISteamController(HSteamUser hSteamUser, HSteamPipe hSteamPipe, const char * pchVersion);
 ISteamUGC * SteamAPI_ISteamClient_GetISteamUGC(HSteamUser hSteamUser, HSteamPipe hSteamPipe, const char * pchVersion);
@@ -2837,44 +3898,44 @@ ISteamParties * SteamAPI_ISteamClient_GetISteamParties(HSteamUser hSteamUser, HS
 ISteamRemotePlay * SteamAPI_ISteamClient_GetISteamRemotePlay(HSteamUser hSteamUser, HSteamPipe hSteamPipe, const char * pchVersion);
 
 
-HSteamUser SteamAPI_ISteamUser_GetHSteamUser();
-bool SteamAPI_ISteamUser_BLoggedOn();
-uint64_steamid SteamAPI_ISteamUser_GetSteamID();
+HSteamUser SteamAPI_ISteamUser_GetHSteamUser(void);
+bool SteamAPI_ISteamUser_BLoggedOn(void);
+uint64_steamid SteamAPI_ISteamUser_GetSteamID(void);
 int SteamAPI_ISteamUser_InitiateGameConnection_DEPRECATED(void * pAuthBlob, int cbMaxAuthBlob, uint64_steamid steamIDGameServer, uint32 unIPServer, uint16 usPortServer, bool bSecure);
 void SteamAPI_ISteamUser_TerminateGameConnection_DEPRECATED(uint32 unIPServer, uint16 usPortServer);
 void SteamAPI_ISteamUser_TrackAppUsageEvent(uint64_gameid gameID, int eAppUsageEvent, const char * pchExtraInfo);
 bool SteamAPI_ISteamUser_GetUserDataFolder(char * pchBuffer, int cubBuffer);
-void SteamAPI_ISteamUser_StartVoiceRecording();
-void SteamAPI_ISteamUser_StopVoiceRecording();
+void SteamAPI_ISteamUser_StartVoiceRecording(void);
+void SteamAPI_ISteamUser_StopVoiceRecording(void);
 EVoiceResult SteamAPI_ISteamUser_GetAvailableVoice(uint32 * pcbCompressed, uint32 * pcbUncompressed_Deprecated, uint32 nUncompressedVoiceDesiredSampleRate_Deprecated);
 EVoiceResult SteamAPI_ISteamUser_GetVoice(bool bWantCompressed, void * pDestBuffer, uint32 cbDestBufferSize, uint32 * nBytesWritten, bool bWantUncompressed_Deprecated, void * pUncompressedDestBuffer_Deprecated, uint32 cbUncompressedDestBufferSize_Deprecated, uint32 * nUncompressBytesWritten_Deprecated, uint32 nUncompressedVoiceDesiredSampleRate_Deprecated);
 EVoiceResult SteamAPI_ISteamUser_DecompressVoice(const void * pCompressed, uint32 cbCompressed, void * pDestBuffer, uint32 cbDestBufferSize, uint32 * nBytesWritten, uint32 nDesiredSampleRate);
-uint32 SteamAPI_ISteamUser_GetVoiceOptimalSampleRate();
+uint32 SteamAPI_ISteamUser_GetVoiceOptimalSampleRate(void);
 HAuthTicket SteamAPI_ISteamUser_GetAuthSessionTicket(void * pTicket, int cbMaxTicket, uint32 * pcbTicket, const SteamNetworkingIdentity * pSteamNetworkingIdentity);
 HAuthTicket SteamAPI_ISteamUser_GetAuthTicketForWebApi(const char * pchIdentity);
 EBeginAuthSessionResult SteamAPI_ISteamUser_BeginAuthSession(const void * pAuthTicket, int cbAuthTicket, uint64_steamid steamID);
 void SteamAPI_ISteamUser_EndAuthSession(uint64_steamid steamID);
 void SteamAPI_ISteamUser_CancelAuthTicket(HAuthTicket hAuthTicket);
 EUserHasLicenseForAppResult SteamAPI_ISteamUser_UserHasLicenseForApp(uint64_steamid steamID, AppId_t appID);
-bool SteamAPI_ISteamUser_BIsBehindNAT();
+bool SteamAPI_ISteamUser_BIsBehindNAT(void);
 void SteamAPI_ISteamUser_AdvertiseGame(uint64_steamid steamIDGameServer, uint32 unIPServer, uint16 usPortServer);
 SteamAPICall_t SteamAPI_ISteamUser_RequestEncryptedAppTicket(void * pDataToInclude, int cbDataToInclude);
 bool SteamAPI_ISteamUser_GetEncryptedAppTicket(void * pTicket, int cbMaxTicket, uint32 * pcbTicket);
 int SteamAPI_ISteamUser_GetGameBadgeLevel(int nSeries, bool bFoil);
-int SteamAPI_ISteamUser_GetPlayerSteamLevel();
+int SteamAPI_ISteamUser_GetPlayerSteamLevel(void);
 SteamAPICall_t SteamAPI_ISteamUser_RequestStoreAuthURL(const char * pchRedirectURL);
-bool SteamAPI_ISteamUser_BIsPhoneVerified();
-bool SteamAPI_ISteamUser_BIsTwoFactorEnabled();
-bool SteamAPI_ISteamUser_BIsPhoneIdentifying();
-bool SteamAPI_ISteamUser_BIsPhoneRequiringVerification();
-SteamAPICall_t SteamAPI_ISteamUser_GetMarketEligibility();
-SteamAPICall_t SteamAPI_ISteamUser_GetDurationControl();
+bool SteamAPI_ISteamUser_BIsPhoneVerified(void);
+bool SteamAPI_ISteamUser_BIsTwoFactorEnabled(void);
+bool SteamAPI_ISteamUser_BIsPhoneIdentifying(void);
+bool SteamAPI_ISteamUser_BIsPhoneRequiringVerification(void);
+SteamAPICall_t SteamAPI_ISteamUser_GetMarketEligibility(void);
+SteamAPICall_t SteamAPI_ISteamUser_GetDurationControl(void);
 bool SteamAPI_ISteamUser_BSetDurationControlOnlineState(EDurationControlOnlineState eNewState);
 
 
-const char * SteamAPI_ISteamFriends_GetPersonaName();
+const char * SteamAPI_ISteamFriends_GetPersonaName(void);
 SteamAPICall_t SteamAPI_ISteamFriends_SetPersonaName(const char * pchPersonaName);
-EPersonaState SteamAPI_ISteamFriends_GetPersonaState();
+EPersonaState SteamAPI_ISteamFriends_GetPersonaState(void);
 int SteamAPI_ISteamFriends_GetFriendCount(int iFriendFlags);
 uint64_steamid SteamAPI_ISteamFriends_GetFriendByIndex(int iFriend, int iFriendFlags);
 EFriendRelationship SteamAPI_ISteamFriends_GetFriendRelationship(uint64_steamid steamIDFriend);
@@ -2884,13 +3945,13 @@ bool SteamAPI_ISteamFriends_GetFriendGamePlayed(uint64_steamid steamIDFriend, Fr
 const char * SteamAPI_ISteamFriends_GetFriendPersonaNameHistory(uint64_steamid steamIDFriend, int iPersonaName);
 int SteamAPI_ISteamFriends_GetFriendSteamLevel(uint64_steamid steamIDFriend);
 const char * SteamAPI_ISteamFriends_GetPlayerNickname(uint64_steamid steamIDPlayer);
-int SteamAPI_ISteamFriends_GetFriendsGroupCount();
+int SteamAPI_ISteamFriends_GetFriendsGroupCount(void);
 FriendsGroupID_t SteamAPI_ISteamFriends_GetFriendsGroupIDByIndex(int iFG);
 const char * SteamAPI_ISteamFriends_GetFriendsGroupName(FriendsGroupID_t friendsGroupID);
 int SteamAPI_ISteamFriends_GetFriendsGroupMembersCount(FriendsGroupID_t friendsGroupID);
 void SteamAPI_ISteamFriends_GetFriendsGroupMembersList(FriendsGroupID_t friendsGroupID, CSteamID * pOutSteamIDMembers, int nMembersCount);
 bool SteamAPI_ISteamFriends_HasFriend(uint64_steamid steamIDFriend, int iFriendFlags);
-int SteamAPI_ISteamFriends_GetClanCount();
+int SteamAPI_ISteamFriends_GetClanCount(void);
 uint64_steamid SteamAPI_ISteamFriends_GetClanByIndex(int iClan);
 const char * SteamAPI_ISteamFriends_GetClanName(uint64_steamid steamIDClan);
 const char * SteamAPI_ISteamFriends_GetClanTag(uint64_steamid steamIDClan);
@@ -2914,15 +3975,15 @@ SteamAPICall_t SteamAPI_ISteamFriends_RequestClanOfficerList(uint64_steamid stea
 uint64_steamid SteamAPI_ISteamFriends_GetClanOwner(uint64_steamid steamIDClan);
 int SteamAPI_ISteamFriends_GetClanOfficerCount(uint64_steamid steamIDClan);
 uint64_steamid SteamAPI_ISteamFriends_GetClanOfficerByIndex(uint64_steamid steamIDClan, int iOfficer);
-uint32 SteamAPI_ISteamFriends_GetUserRestrictions();
+uint32 SteamAPI_ISteamFriends_GetUserRestrictions(void);
 bool SteamAPI_ISteamFriends_SetRichPresence(const char * pchKey, const char * pchValue);
-void SteamAPI_ISteamFriends_ClearRichPresence();
+void SteamAPI_ISteamFriends_ClearRichPresence(void);
 const char * SteamAPI_ISteamFriends_GetFriendRichPresence(uint64_steamid steamIDFriend, const char * pchKey);
 int SteamAPI_ISteamFriends_GetFriendRichPresenceKeyCount(uint64_steamid steamIDFriend);
 const char * SteamAPI_ISteamFriends_GetFriendRichPresenceKeyByIndex(uint64_steamid steamIDFriend, int iKey);
 void SteamAPI_ISteamFriends_RequestFriendRichPresence(uint64_steamid steamIDFriend);
 bool SteamAPI_ISteamFriends_InviteUserToGame(uint64_steamid steamIDFriend, const char * pchConnectString);
-int SteamAPI_ISteamFriends_GetCoplayFriendCount();
+int SteamAPI_ISteamFriends_GetCoplayFriendCount(void);
 uint64_steamid SteamAPI_ISteamFriends_GetCoplayFriend(int iCoplayFriend);
 int SteamAPI_ISteamFriends_GetFriendCoplayTime(uint64_steamid steamIDFriend);
 AppId_t SteamAPI_ISteamFriends_GetFriendCoplayGame(uint64_steamid steamIDFriend);
@@ -2944,7 +4005,7 @@ SteamAPICall_t SteamAPI_ISteamFriends_IsFollowing(uint64_steamid steamID);
 SteamAPICall_t SteamAPI_ISteamFriends_EnumerateFollowingList(uint32 unStartIndex);
 bool SteamAPI_ISteamFriends_IsClanPublic(uint64_steamid steamIDClan);
 bool SteamAPI_ISteamFriends_IsClanOfficialGameGroup(uint64_steamid steamIDClan);
-int SteamAPI_ISteamFriends_GetNumChatsWithUnreadPriorityMessages();
+int SteamAPI_ISteamFriends_GetNumChatsWithUnreadPriorityMessages(void);
 void SteamAPI_ISteamFriends_ActivateGameOverlayRemotePlayTogetherInviteDialog(uint64_steamid steamIDLobby);
 bool SteamAPI_ISteamFriends_RegisterProtocolInOverlayBrowser(const char * pchProtocol);
 void SteamAPI_ISteamFriends_ActivateGameOverlayInviteDialogConnectString(const char * pchConnectString);
@@ -2954,50 +4015,50 @@ const char * SteamAPI_ISteamFriends_GetProfileItemPropertyString(uint64_steamid 
 uint32 SteamAPI_ISteamFriends_GetProfileItemPropertyUint(uint64_steamid steamID, ECommunityProfileItemType itemType, ECommunityProfileItemProperty prop);
 
 
-uint32 SteamAPI_ISteamUtils_GetSecondsSinceAppActive();
-uint32 SteamAPI_ISteamUtils_GetSecondsSinceComputerActive();
-EUniverse SteamAPI_ISteamUtils_GetConnectedUniverse();
-uint32 SteamAPI_ISteamUtils_GetServerRealTime();
-const char * SteamAPI_ISteamUtils_GetIPCountry();
+uint32 SteamAPI_ISteamUtils_GetSecondsSinceAppActive(void);
+uint32 SteamAPI_ISteamUtils_GetSecondsSinceComputerActive(void);
+EUniverse SteamAPI_ISteamUtils_GetConnectedUniverse(void);
+uint32 SteamAPI_ISteamUtils_GetServerRealTime(void);
+const char * SteamAPI_ISteamUtils_GetIPCountry(void);
 bool SteamAPI_ISteamUtils_GetImageSize(int iImage, uint32 * pnWidth, uint32 * pnHeight);
 bool SteamAPI_ISteamUtils_GetImageRGBA(int iImage, uint8 * pubDest, int nDestBufferSize);
-uint8 SteamAPI_ISteamUtils_GetCurrentBatteryPower();
-uint32 SteamAPI_ISteamUtils_GetAppID();
+uint8 SteamAPI_ISteamUtils_GetCurrentBatteryPower(void);
+uint32 SteamAPI_ISteamUtils_GetAppID(void);
 void SteamAPI_ISteamUtils_SetOverlayNotificationPosition(ENotificationPosition eNotificationPosition);
 bool SteamAPI_ISteamUtils_IsAPICallCompleted(SteamAPICall_t hSteamAPICall, bool * pbFailed);
 ESteamAPICallFailure SteamAPI_ISteamUtils_GetAPICallFailureReason(SteamAPICall_t hSteamAPICall);
 bool SteamAPI_ISteamUtils_GetAPICallResult(SteamAPICall_t hSteamAPICall, void * pCallback, int cubCallback, int iCallbackExpected, bool * pbFailed);
-uint32 SteamAPI_ISteamUtils_GetIPCCallCount();
+uint32 SteamAPI_ISteamUtils_GetIPCCallCount(void);
 //void SteamAPI_ISteamUtils_SetWarningMessageHook(SteamAPIWarningMessageHook_t pFunction);
-bool SteamAPI_ISteamUtils_IsOverlayEnabled();
-bool SteamAPI_ISteamUtils_BOverlayNeedsPresent();
+bool SteamAPI_ISteamUtils_IsOverlayEnabled(void);
+bool SteamAPI_ISteamUtils_BOverlayNeedsPresent(void);
 SteamAPICall_t SteamAPI_ISteamUtils_CheckFileSignature(const char * szFileName);
 bool SteamAPI_ISteamUtils_ShowGamepadTextInput(EGamepadTextInputMode eInputMode, EGamepadTextInputLineMode eLineInputMode, const char * pchDescription, uint32 unCharMax, const char * pchExistingText);
-uint32 SteamAPI_ISteamUtils_GetEnteredGamepadTextLength();
+uint32 SteamAPI_ISteamUtils_GetEnteredGamepadTextLength(void);
 bool SteamAPI_ISteamUtils_GetEnteredGamepadTextInput(char * pchText, uint32 cchText);
-const char * SteamAPI_ISteamUtils_GetSteamUILanguage();
-bool SteamAPI_ISteamUtils_IsSteamRunningInVR();
+const char * SteamAPI_ISteamUtils_GetSteamUILanguage(void);
+bool SteamAPI_ISteamUtils_IsSteamRunningInVR(void);
 void SteamAPI_ISteamUtils_SetOverlayNotificationInset(int nHorizontalInset, int nVerticalInset);
-bool SteamAPI_ISteamUtils_IsSteamInBigPictureMode();
-void SteamAPI_ISteamUtils_StartVRDashboard();
-bool SteamAPI_ISteamUtils_IsVRHeadsetStreamingEnabled();
+bool SteamAPI_ISteamUtils_IsSteamInBigPictureMode(void);
+void SteamAPI_ISteamUtils_StartVRDashboard(void);
+bool SteamAPI_ISteamUtils_IsVRHeadsetStreamingEnabled(void);
 void SteamAPI_ISteamUtils_SetVRHeadsetStreamingEnabled(bool bEnabled);
-bool SteamAPI_ISteamUtils_IsSteamChinaLauncher();
+bool SteamAPI_ISteamUtils_IsSteamChinaLauncher(void);
 bool SteamAPI_ISteamUtils_InitFilterText(uint32 unFilterOptions);
 int SteamAPI_ISteamUtils_FilterText(ETextFilteringContext eContext, uint64_steamid sourceSteamID, const char * pchInputMessage, char * pchOutFilteredText, uint32 nByteSizeOutFilteredText);
 ESteamIPv6ConnectivityState SteamAPI_ISteamUtils_GetIPv6ConnectivityState(ESteamIPv6ConnectivityProtocol eProtocol);
-bool SteamAPI_ISteamUtils_IsSteamRunningOnSteamDeck();
+bool SteamAPI_ISteamUtils_IsSteamRunningOnSteamDeck(void);
 bool SteamAPI_ISteamUtils_ShowFloatingGamepadTextInput(EFloatingGamepadTextInputMode eKeyboardMode, int nTextFieldXPosition, int nTextFieldYPosition, int nTextFieldWidth, int nTextFieldHeight);
 void SteamAPI_ISteamUtils_SetGameLauncherMode(bool bLauncherMode);
-bool SteamAPI_ISteamUtils_DismissFloatingGamepadTextInput();
-bool SteamAPI_ISteamUtils_DismissGamepadTextInput();
+bool SteamAPI_ISteamUtils_DismissFloatingGamepadTextInput(void);
+bool SteamAPI_ISteamUtils_DismissGamepadTextInput(void);
 
 
-int SteamAPI_ISteamMatchmaking_GetFavoriteGameCount();
+int SteamAPI_ISteamMatchmaking_GetFavoriteGameCount(void);
 bool SteamAPI_ISteamMatchmaking_GetFavoriteGame(int iGame, AppId_t * pnAppID, uint32 * pnIP, uint16 * pnConnPort, uint16 * pnQueryPort, uint32 * punFlags, uint32 * pRTime32LastPlayedOnServer);
 int SteamAPI_ISteamMatchmaking_AddFavoriteGame(AppId_t nAppID, uint32 nIP, uint16 nConnPort, uint16 nQueryPort, uint32 unFlags, uint32 rTime32LastPlayedOnServer);
 bool SteamAPI_ISteamMatchmaking_RemoveFavoriteGame(AppId_t nAppID, uint32 nIP, uint16 nConnPort, uint16 nQueryPort, uint32 unFlags);
-SteamAPICall_t SteamAPI_ISteamMatchmaking_RequestLobbyList();
+SteamAPICall_t SteamAPI_ISteamMatchmaking_RequestLobbyList(void);
 void SteamAPI_ISteamMatchmaking_AddRequestLobbyListStringFilter(const char * pchKeyToMatch, const char * pchValueToMatch, ELobbyComparison eComparisonType);
 void SteamAPI_ISteamMatchmaking_AddRequestLobbyListNumericalFilter(const char * pchKeyToMatch, int nValueToMatch, ELobbyComparison eComparisonType);
 void SteamAPI_ISteamMatchmaking_AddRequestLobbyListNearValueFilter(const char * pchKeyToMatch, int nValueToBeCloseTo);
@@ -3022,7 +4083,7 @@ void SteamAPI_ISteamMatchmaking_SetLobbyMemberData(uint64_steamid steamIDLobby, 
 bool SteamAPI_ISteamMatchmaking_SendLobbyChatMsg(uint64_steamid steamIDLobby, const void * pvMsgBody, int cubMsgBody);
 int SteamAPI_ISteamMatchmaking_GetLobbyChatEntry(uint64_steamid steamIDLobby, int iChatID, CSteamID * pSteamIDUser, void * pvData, int cubData, EChatEntryType * peChatEntryType);
 bool SteamAPI_ISteamMatchmaking_RequestLobbyData(uint64_steamid steamIDLobby);
-void SteamAPI_ISteamMatchmaking_SetLobbyGameServer(uint64_steamid steamIDLobby, uint32 unGameServerIP, uint16 unGameServerPort, uint64_steamid steamIDGameServer);
+void SteamAPI_ISteamMatchmaking_SetLobbyGameServer(uint64_steamid steamIDLobby, uint32 unGameServerIP, uint16 unGameServerPort, uint64_steamid steamID);
 bool SteamAPI_ISteamMatchmaking_GetLobbyGameServer(uint64_steamid steamIDLobby, uint32 * punGameServerIP, uint16 * punGameServerPort, CSteamID * psteamIDGameServer);
 bool SteamAPI_ISteamMatchmaking_SetLobbyMemberLimit(uint64_steamid steamIDLobby, int cMaxMembers);
 int SteamAPI_ISteamMatchmaking_GetLobbyMemberLimit(uint64_steamid steamIDLobby);
@@ -3039,17 +4100,17 @@ void SteamAPI_ISteamMatchmakingServerListResponse_RefreshComplete(HServerListReq
 
 
 void SteamAPI_ISteamMatchmakingPingResponse_ServerResponded(gameserveritem_t * server);
-void SteamAPI_ISteamMatchmakingPingResponse_ServerFailedToRespond();
+void SteamAPI_ISteamMatchmakingPingResponse_ServerFailedToRespond(void);
 
 
 void SteamAPI_ISteamMatchmakingPlayersResponse_AddPlayerToList(const char * pchName, int nScore, float flTimePlayed);
-void SteamAPI_ISteamMatchmakingPlayersResponse_PlayersFailedToRespond();
-void SteamAPI_ISteamMatchmakingPlayersResponse_PlayersRefreshComplete();
+void SteamAPI_ISteamMatchmakingPlayersResponse_PlayersFailedToRespond(void);
+void SteamAPI_ISteamMatchmakingPlayersResponse_PlayersRefreshComplete(void);
 
 
 void SteamAPI_ISteamMatchmakingRulesResponse_RulesResponded(const char * pchRule, const char * pchValue);
-void SteamAPI_ISteamMatchmakingRulesResponse_RulesFailedToRespond();
-void SteamAPI_ISteamMatchmakingRulesResponse_RulesRefreshComplete();
+void SteamAPI_ISteamMatchmakingRulesResponse_RulesFailedToRespond(void);
+void SteamAPI_ISteamMatchmakingRulesResponse_RulesRefreshComplete(void);
 
 
 HServerListRequest SteamAPI_ISteamMatchmakingServers_RequestInternetServerList(AppId_t iApp, MatchMakingKeyValuePair_t ** ppchFilters, uint32 nFilters, ISteamMatchmakingServerListResponse * pRequestServersResponse);
@@ -3074,20 +4135,20 @@ void SteamAPI_ISteamMatchmakingServers_CancelServerQuery(HServerQuery hServerQue
 EGameSearchErrorCode_t SteamAPI_ISteamGameSearch_AddGameSearchParams(const char * pchKeyToFind, const char * pchValuesToFind);
 EGameSearchErrorCode_t SteamAPI_ISteamGameSearch_SearchForGameWithLobby(uint64_steamid steamIDLobby, int nPlayerMin, int nPlayerMax);
 EGameSearchErrorCode_t SteamAPI_ISteamGameSearch_SearchForGameSolo(int nPlayerMin, int nPlayerMax);
-EGameSearchErrorCode_t SteamAPI_ISteamGameSearch_AcceptGame();
-EGameSearchErrorCode_t SteamAPI_ISteamGameSearch_DeclineGame();
+EGameSearchErrorCode_t SteamAPI_ISteamGameSearch_AcceptGame(void);
+EGameSearchErrorCode_t SteamAPI_ISteamGameSearch_DeclineGame(void);
 EGameSearchErrorCode_t SteamAPI_ISteamGameSearch_RetrieveConnectionDetails(uint64_steamid steamIDHost, char * pchConnectionDetails, int cubConnectionDetails);
-EGameSearchErrorCode_t SteamAPI_ISteamGameSearch_EndGameSearch();
+EGameSearchErrorCode_t SteamAPI_ISteamGameSearch_EndGameSearch(void);
 EGameSearchErrorCode_t SteamAPI_ISteamGameSearch_SetGameHostParams(const char * pchKey, const char * pchValue);
 EGameSearchErrorCode_t SteamAPI_ISteamGameSearch_SetConnectionDetails(const char * pchConnectionDetails, int cubConnectionDetails);
 EGameSearchErrorCode_t SteamAPI_ISteamGameSearch_RequestPlayersForGame(int nPlayerMin, int nPlayerMax, int nMaxTeamSize);
 EGameSearchErrorCode_t SteamAPI_ISteamGameSearch_HostConfirmGameStart(uint64 ullUniqueGameID);
-EGameSearchErrorCode_t SteamAPI_ISteamGameSearch_CancelRequestPlayersForGame();
+EGameSearchErrorCode_t SteamAPI_ISteamGameSearch_CancelRequestPlayersForGame(void);
 EGameSearchErrorCode_t SteamAPI_ISteamGameSearch_SubmitPlayerResult(uint64 ullUniqueGameID, uint64_steamid steamIDPlayer, EPlayerResult_t EPlayerResult);
 EGameSearchErrorCode_t SteamAPI_ISteamGameSearch_EndGame(uint64 ullUniqueGameID);
 
 
-uint32 SteamAPI_ISteamParties_GetNumActiveBeacons();
+uint32 SteamAPI_ISteamParties_GetNumActiveBeacons(void);
 PartyBeaconID_t SteamAPI_ISteamParties_GetBeaconByIndex(uint32 unIndex);
 bool SteamAPI_ISteamParties_GetBeaconDetails(PartyBeaconID_t ulBeaconID, CSteamID * pSteamIDBeaconOwner, SteamPartyBeaconLocation_t * pLocation, char * pchMetadata, int cchMetadata);
 SteamAPICall_t SteamAPI_ISteamParties_JoinParty(PartyBeaconID_t ulBeaconID);
@@ -3119,17 +4180,17 @@ bool SteamAPI_ISteamRemoteStorage_FilePersisted(const char * pchFile);
 int32 SteamAPI_ISteamRemoteStorage_GetFileSize(const char * pchFile);
 int64 SteamAPI_ISteamRemoteStorage_GetFileTimestamp(const char * pchFile);
 ERemoteStoragePlatform SteamAPI_ISteamRemoteStorage_GetSyncPlatforms(const char * pchFile);
-int32 SteamAPI_ISteamRemoteStorage_GetFileCount();
+int32 SteamAPI_ISteamRemoteStorage_GetFileCount(void);
 const char * SteamAPI_ISteamRemoteStorage_GetFileNameAndSize(int iFile, int32 * pnFileSizeInBytes);
 bool SteamAPI_ISteamRemoteStorage_GetQuota(uint64 * pnTotalBytes, uint64 * puAvailableBytes);
-bool SteamAPI_ISteamRemoteStorage_IsCloudEnabledForAccount();
-bool SteamAPI_ISteamRemoteStorage_IsCloudEnabledForApp();
+bool SteamAPI_ISteamRemoteStorage_IsCloudEnabledForAccount(void);
+bool SteamAPI_ISteamRemoteStorage_IsCloudEnabledForApp(void);
 void SteamAPI_ISteamRemoteStorage_SetCloudEnabledForApp(bool bEnabled);
 SteamAPICall_t SteamAPI_ISteamRemoteStorage_UGCDownload(UGCHandle_t hContent, uint32 unPriority);
 bool SteamAPI_ISteamRemoteStorage_GetUGCDownloadProgress(UGCHandle_t hContent, int32 * pnBytesDownloaded, int32 * pnBytesExpected);
 bool SteamAPI_ISteamRemoteStorage_GetUGCDetails(UGCHandle_t hContent, AppId_t * pnAppID, char ** ppchName, int32 * pnFileSizeInBytes, CSteamID * pSteamIDOwner);
 int32 SteamAPI_ISteamRemoteStorage_UGCRead(UGCHandle_t hContent, void * pvData, int32 cubDataToRead, uint32 cOffset, EUGCReadAction eAction);
-int32 SteamAPI_ISteamRemoteStorage_GetCachedUGCCount();
+int32 SteamAPI_ISteamRemoteStorage_GetCachedUGCCount(void);
 UGCHandle_t SteamAPI_ISteamRemoteStorage_GetCachedUGCHandle(int32 iCachedContent);
 SteamAPICall_t SteamAPI_ISteamRemoteStorage_PublishWorkshopFile(const char * pchFile, const char * pchPreviewFile, AppId_t nConsumerAppId, const char * pchTitle, const char * pchDescription, ERemoteStoragePublishedFileVisibility eVisibility, SteamParamStringArray_t * pTags, EWorkshopFileType eWorkshopFileType);
 PublishedFileUpdateHandle_t SteamAPI_ISteamRemoteStorage_CreatePublishedFileUpdateRequest(PublishedFileId_t unPublishedFileId);
@@ -3156,13 +4217,13 @@ SteamAPICall_t SteamAPI_ISteamRemoteStorage_SetUserPublishedFileAction(Published
 SteamAPICall_t SteamAPI_ISteamRemoteStorage_EnumeratePublishedFilesByUserAction(EWorkshopFileAction eAction, uint32 unStartIndex);
 SteamAPICall_t SteamAPI_ISteamRemoteStorage_EnumeratePublishedWorkshopFiles(EWorkshopEnumerationType eEnumerationType, uint32 unStartIndex, uint32 unCount, uint32 unDays, SteamParamStringArray_t * pTags, SteamParamStringArray_t * pUserTags);
 SteamAPICall_t SteamAPI_ISteamRemoteStorage_UGCDownloadToLocation(UGCHandle_t hContent, const char * pchLocation, uint32 unPriority);
-int32 SteamAPI_ISteamRemoteStorage_GetLocalFileChangeCount();
+int32 SteamAPI_ISteamRemoteStorage_GetLocalFileChangeCount(void);
 const char * SteamAPI_ISteamRemoteStorage_GetLocalFileChange(int iFile, ERemoteStorageLocalFileChange * pEChangeType, ERemoteStorageFilePathType * pEFilePathType);
-bool SteamAPI_ISteamRemoteStorage_BeginFileWriteBatch();
-bool SteamAPI_ISteamRemoteStorage_EndFileWriteBatch();
+bool SteamAPI_ISteamRemoteStorage_BeginFileWriteBatch(void);
+bool SteamAPI_ISteamRemoteStorage_EndFileWriteBatch(void);
 
 
-bool SteamAPI_ISteamUserStats_RequestCurrentStats();
+bool SteamAPI_ISteamUserStats_RequestCurrentStats(void);
 bool SteamAPI_ISteamUserStats_GetStatInt32(const char * pchName, int32 * pData);
 bool SteamAPI_ISteamUserStats_GetStatFloat(const char * pchName, float * pData);
 bool SteamAPI_ISteamUserStats_SetStatInt32(const char * pchName, int32 nData);
@@ -3172,11 +4233,11 @@ bool SteamAPI_ISteamUserStats_GetAchievement(const char * pchName, bool * pbAchi
 bool SteamAPI_ISteamUserStats_SetAchievement(const char * pchName);
 bool SteamAPI_ISteamUserStats_ClearAchievement(const char * pchName);
 bool SteamAPI_ISteamUserStats_GetAchievementAndUnlockTime(const char * pchName, bool * pbAchieved, uint32 * punUnlockTime);
-bool SteamAPI_ISteamUserStats_StoreStats();
+bool SteamAPI_ISteamUserStats_StoreStats(void);
 int SteamAPI_ISteamUserStats_GetAchievementIcon(const char * pchName);
 const char * SteamAPI_ISteamUserStats_GetAchievementDisplayAttribute(const char * pchName, const char * pchKey);
 bool SteamAPI_ISteamUserStats_IndicateAchievementProgress(const char * pchName, uint32 nCurProgress, uint32 nMaxProgress);
-uint32 SteamAPI_ISteamUserStats_GetNumAchievements();
+uint32 SteamAPI_ISteamUserStats_GetNumAchievements(void);
 const char * SteamAPI_ISteamUserStats_GetAchievementName(uint32 iAchievement);
 SteamAPICall_t SteamAPI_ISteamUserStats_RequestUserStats(uint64_steamid steamIDUser);
 bool SteamAPI_ISteamUserStats_GetUserStatInt32(uint64_steamid steamIDUser, const char * pchName, int32 * pData);
@@ -3195,8 +4256,8 @@ SteamAPICall_t SteamAPI_ISteamUserStats_DownloadLeaderboardEntriesForUsers(Steam
 bool SteamAPI_ISteamUserStats_GetDownloadedLeaderboardEntry(SteamLeaderboardEntries_t hSteamLeaderboardEntries, int index, LeaderboardEntry_t * pLeaderboardEntry, int32 * pDetails, int cDetailsMax);
 SteamAPICall_t SteamAPI_ISteamUserStats_UploadLeaderboardScore(SteamLeaderboard_t hSteamLeaderboard, ELeaderboardUploadScoreMethod eLeaderboardUploadScoreMethod, int32 nScore, const int32 * pScoreDetails, int cScoreDetailsCount);
 SteamAPICall_t SteamAPI_ISteamUserStats_AttachLeaderboardUGC(SteamLeaderboard_t hSteamLeaderboard, UGCHandle_t hUGC);
-SteamAPICall_t SteamAPI_ISteamUserStats_GetNumberOfCurrentPlayers();
-SteamAPICall_t SteamAPI_ISteamUserStats_RequestGlobalAchievementPercentages();
+SteamAPICall_t SteamAPI_ISteamUserStats_GetNumberOfCurrentPlayers(void);
+SteamAPICall_t SteamAPI_ISteamUserStats_RequestGlobalAchievementPercentages(void);
 int SteamAPI_ISteamUserStats_GetMostAchievedAchievementInfo(char * pchName, uint32 unNameBufLen, float * pflPercent, bool * pbAchieved);
 int SteamAPI_ISteamUserStats_GetNextMostAchievedAchievementInfo(int iIteratorPrevious, char * pchName, uint32 unNameBufLen, float * pflPercent, bool * pbAchieved);
 bool SteamAPI_ISteamUserStats_GetAchievementAchievedPercent(const char * pchName, float * pflPercent);
@@ -3209,17 +4270,17 @@ bool SteamAPI_ISteamUserStats_GetAchievementProgressLimitsInt32(const char * pch
 bool SteamAPI_ISteamUserStats_GetAchievementProgressLimitsFloat(const char * pchName, float * pfMinProgress, float * pfMaxProgress);
 
 
-bool SteamAPI_ISteamApps_BIsSubscribed();
-bool SteamAPI_ISteamApps_BIsLowViolence();
-bool SteamAPI_ISteamApps_BIsCybercafe();
-bool SteamAPI_ISteamApps_BIsVACBanned();
-const char * SteamAPI_ISteamApps_GetCurrentGameLanguage();
-const char * SteamAPI_ISteamApps_GetAvailableGameLanguages();
+bool SteamAPI_ISteamApps_BIsSubscribed(void);
+bool SteamAPI_ISteamApps_BIsLowViolence(void);
+bool SteamAPI_ISteamApps_BIsCybercafe(void);
+bool SteamAPI_ISteamApps_BIsVACBanned(void);
+const char * SteamAPI_ISteamApps_GetCurrentGameLanguage(void);
+const char * SteamAPI_ISteamApps_GetAvailableGameLanguages(void);
 bool SteamAPI_ISteamApps_BIsSubscribedApp(AppId_t appID);
 bool SteamAPI_ISteamApps_BIsDlcInstalled(AppId_t appID);
 uint32 SteamAPI_ISteamApps_GetEarliestPurchaseUnixTime(AppId_t nAppID);
-bool SteamAPI_ISteamApps_BIsSubscribedFromFreeWeekend();
-int SteamAPI_ISteamApps_GetDLCCount();
+bool SteamAPI_ISteamApps_BIsSubscribedFromFreeWeekend(void);
+int SteamAPI_ISteamApps_GetDLCCount(void);
 bool SteamAPI_ISteamApps_BGetDLCDataByIndex(int iDLC, AppId_t * pAppID, bool * pbAvailable, char * pchName, int cchNameBufferSize);
 void SteamAPI_ISteamApps_InstallDLC(AppId_t nAppID);
 void SteamAPI_ISteamApps_UninstallDLC(AppId_t nAppID);
@@ -3229,14 +4290,14 @@ bool SteamAPI_ISteamApps_MarkContentCorrupt(bool bMissingFilesOnly);
 uint32 SteamAPI_ISteamApps_GetInstalledDepots(AppId_t appID, DepotId_t * pvecDepots, uint32 cMaxDepots);
 uint32 SteamAPI_ISteamApps_GetAppInstallDir(AppId_t appID, char * pchFolder, uint32 cchFolderBufferSize);
 bool SteamAPI_ISteamApps_BIsAppInstalled(AppId_t appID);
-uint64_steamid SteamAPI_ISteamApps_GetAppOwner();
+uint64_steamid SteamAPI_ISteamApps_GetAppOwner(void);
 const char * SteamAPI_ISteamApps_GetLaunchQueryParam(const char * pchKey);
 bool SteamAPI_ISteamApps_GetDlcDownloadProgress(AppId_t nAppID, uint64 * punBytesDownloaded, uint64 * punBytesTotal);
-int SteamAPI_ISteamApps_GetAppBuildId();
-void SteamAPI_ISteamApps_RequestAllProofOfPurchaseKeys();
+int SteamAPI_ISteamApps_GetAppBuildId(void);
+void SteamAPI_ISteamApps_RequestAllProofOfPurchaseKeys(void);
 SteamAPICall_t SteamAPI_ISteamApps_GetFileDetails(const char * pszFileName);
 int SteamAPI_ISteamApps_GetLaunchCommandLine(char * pszCommandLine, int cubCommandLine);
-bool SteamAPI_ISteamApps_BIsSubscribedFromFamilySharing();
+bool SteamAPI_ISteamApps_BIsSubscribedFromFamilySharing(void);
 bool SteamAPI_ISteamApps_BIsTimedTrial(uint32 * punSecondsAllowed, uint32 * punSecondsPlayed);
 bool SteamAPI_ISteamApps_SetDlcContext(AppId_t nAppID);
 
@@ -3267,29 +4328,29 @@ int SteamAPI_ISteamNetworking_GetMaxPacketSize(SNetSocket_t hSocket);
 
 ScreenshotHandle SteamAPI_ISteamScreenshots_WriteScreenshot(void * pubRGB, uint32 cubRGB, int nWidth, int nHeight);
 ScreenshotHandle SteamAPI_ISteamScreenshots_AddScreenshotToLibrary(const char * pchFilename, const char * pchThumbnailFilename, int nWidth, int nHeight);
-void SteamAPI_ISteamScreenshots_TriggerScreenshot();
+void SteamAPI_ISteamScreenshots_TriggerScreenshot(void);
 void SteamAPI_ISteamScreenshots_HookScreenshots(bool bHook);
 bool SteamAPI_ISteamScreenshots_SetLocation(ScreenshotHandle hScreenshot, const char * pchLocation);
 bool SteamAPI_ISteamScreenshots_TagUser(ScreenshotHandle hScreenshot, uint64_steamid steamID);
 bool SteamAPI_ISteamScreenshots_TagPublishedFile(ScreenshotHandle hScreenshot, PublishedFileId_t unPublishedFileID);
-bool SteamAPI_ISteamScreenshots_IsScreenshotsHooked();
+bool SteamAPI_ISteamScreenshots_IsScreenshotsHooked(void);
 ScreenshotHandle SteamAPI_ISteamScreenshots_AddVRScreenshotToLibrary(EVRScreenshotType eType, const char * pchFilename, const char * pchVRFilename);
 
 
-bool SteamAPI_ISteamMusic_BIsEnabled();
-bool SteamAPI_ISteamMusic_BIsPlaying();
-AudioPlayback_Status SteamAPI_ISteamMusic_GetPlaybackStatus();
-void SteamAPI_ISteamMusic_Play();
-void SteamAPI_ISteamMusic_Pause();
-void SteamAPI_ISteamMusic_PlayPrevious();
-void SteamAPI_ISteamMusic_PlayNext();
+bool SteamAPI_ISteamMusic_BIsEnabled(void);
+bool SteamAPI_ISteamMusic_BIsPlaying(void);
+AudioPlayback_Status SteamAPI_ISteamMusic_GetPlaybackStatus(void);
+void SteamAPI_ISteamMusic_Play(void);
+void SteamAPI_ISteamMusic_Pause(void);
+void SteamAPI_ISteamMusic_PlayPrevious(void);
+void SteamAPI_ISteamMusic_PlayNext(void);
 void SteamAPI_ISteamMusic_SetVolume(float flVolume);
-float SteamAPI_ISteamMusic_GetVolume();
+float SteamAPI_ISteamMusic_GetVolume(void);
 
 
 bool SteamAPI_ISteamMusicRemote_RegisterSteamMusicRemote(const char * pchName);
-bool SteamAPI_ISteamMusicRemote_DeregisterSteamMusicRemote();
-bool SteamAPI_ISteamMusicRemote_BIsCurrentMusicRemote();
+bool SteamAPI_ISteamMusicRemote_DeregisterSteamMusicRemote(void);
+bool SteamAPI_ISteamMusicRemote_BIsCurrentMusicRemote(void);
 bool SteamAPI_ISteamMusicRemote_BActivationSuccess(bool bValue);
 bool SteamAPI_ISteamMusicRemote_SetDisplayName(const char * pchDisplayName);
 bool SteamAPI_ISteamMusicRemote_SetPNGIcon_64x64(void * pvBuffer, uint32 cbBufferLength);
@@ -3303,22 +4364,22 @@ bool SteamAPI_ISteamMusicRemote_UpdatePlaybackStatus(AudioPlayback_Status nStatu
 bool SteamAPI_ISteamMusicRemote_UpdateShuffled(bool bValue);
 bool SteamAPI_ISteamMusicRemote_UpdateLooped(bool bValue);
 bool SteamAPI_ISteamMusicRemote_UpdateVolume(float flValue);
-bool SteamAPI_ISteamMusicRemote_CurrentEntryWillChange();
+bool SteamAPI_ISteamMusicRemote_CurrentEntryWillChange(void);
 bool SteamAPI_ISteamMusicRemote_CurrentEntryIsAvailable(bool bAvailable);
 bool SteamAPI_ISteamMusicRemote_UpdateCurrentEntryText(const char * pchText);
 bool SteamAPI_ISteamMusicRemote_UpdateCurrentEntryElapsedSeconds(int nValue);
 bool SteamAPI_ISteamMusicRemote_UpdateCurrentEntryCoverArt(void * pvBuffer, uint32 cbBufferLength);
-bool SteamAPI_ISteamMusicRemote_CurrentEntryDidChange();
-bool SteamAPI_ISteamMusicRemote_QueueWillChange();
-bool SteamAPI_ISteamMusicRemote_ResetQueueEntries();
+bool SteamAPI_ISteamMusicRemote_CurrentEntryDidChange(void);
+bool SteamAPI_ISteamMusicRemote_QueueWillChange(void);
+bool SteamAPI_ISteamMusicRemote_ResetQueueEntries(void);
 bool SteamAPI_ISteamMusicRemote_SetQueueEntry(int nID, int nPosition, const char * pchEntryText);
 bool SteamAPI_ISteamMusicRemote_SetCurrentQueueEntry(int nID);
-bool SteamAPI_ISteamMusicRemote_QueueDidChange();
-bool SteamAPI_ISteamMusicRemote_PlaylistWillChange();
-bool SteamAPI_ISteamMusicRemote_ResetPlaylistEntries();
+bool SteamAPI_ISteamMusicRemote_QueueDidChange(void);
+bool SteamAPI_ISteamMusicRemote_PlaylistWillChange(void);
+bool SteamAPI_ISteamMusicRemote_ResetPlaylistEntries(void);
 bool SteamAPI_ISteamMusicRemote_SetPlaylistEntry(int nID, int nPosition, const char * pchEntryText);
 bool SteamAPI_ISteamMusicRemote_SetCurrentPlaylistEntry(int nID);
-bool SteamAPI_ISteamMusicRemote_PlaylistDidChange();
+bool SteamAPI_ISteamMusicRemote_PlaylistDidChange(void);
 
 
 HTTPRequestHandle SteamAPI_ISteamHTTP_CreateHTTPRequest(EHTTPMethod eHTTPRequestMethod, const char * pchAbsoluteURL);
@@ -3349,13 +4410,13 @@ bool SteamAPI_ISteamHTTP_GetHTTPRequestWasTimedOut(HTTPRequestHandle hRequest, b
 
 
 bool SteamAPI_ISteamInput_Init(bool bExplicitlyCallRunFrame);
-bool SteamAPI_ISteamInput_Shutdown();
+bool SteamAPI_ISteamInput_Shutdown(void);
 bool SteamAPI_ISteamInput_SetInputActionManifestFilePath(const char * pchInputActionManifestAbsolutePath);
 void SteamAPI_ISteamInput_RunFrame(bool bReservedValue);
 bool SteamAPI_ISteamInput_BWaitForData(bool bWaitForever, uint32 unTimeout);
-bool SteamAPI_ISteamInput_BNewDataAvailable();
+bool SteamAPI_ISteamInput_BNewDataAvailable(void);
 int SteamAPI_ISteamInput_GetConnectedControllers(InputHandle_t * handlesOut);
-void SteamAPI_ISteamInput_EnableDeviceCallbacks();
+void SteamAPI_ISteamInput_EnableDeviceCallbacks(void);
 void SteamAPI_ISteamInput_EnableActionEventCallbacks(SteamInputActionEventCallbackPointer pCallback);
 InputActionSetHandle_t SteamAPI_ISteamInput_GetActionSetHandle(const char * pszActionSetName);
 void SteamAPI_ISteamInput_ActivateActionSet(InputHandle_t inputHandle, InputActionSetHandle_t actionSetHandle);
@@ -3394,13 +4455,13 @@ EInputActionOrigin SteamAPI_ISteamInput_GetActionOriginFromXboxOrigin(InputHandl
 EInputActionOrigin SteamAPI_ISteamInput_TranslateActionOrigin(ESteamInputType eDestinationInputType, EInputActionOrigin eSourceOrigin);
 bool SteamAPI_ISteamInput_GetDeviceBindingRevision(InputHandle_t inputHandle, int * pMajor, int * pMinor);
 uint32 SteamAPI_ISteamInput_GetRemotePlaySessionID(InputHandle_t inputHandle);
-uint16 SteamAPI_ISteamInput_GetSessionInputConfigurationSettings();
+uint16 SteamAPI_ISteamInput_GetSessionInputConfigurationSettings(void);
 //void SteamAPI_ISteamInput_SetDualSenseTriggerEffect(InputHandle_t inputHandle, const ScePadTriggerEffectParam * pParam);
 
 
-bool SteamAPI_ISteamController_Init();
-bool SteamAPI_ISteamController_Shutdown();
-void SteamAPI_ISteamController_RunFrame();
+bool SteamAPI_ISteamController_Init(void);
+bool SteamAPI_ISteamController_Shutdown(void);
+void SteamAPI_ISteamController_RunFrame(void);
 int SteamAPI_ISteamController_GetConnectedControllers(ControllerHandle_t * handlesOut);
 ControllerActionSetHandle_t SteamAPI_ISteamController_GetActionSetHandle(const char * pszActionSetName);
 void SteamAPI_ISteamController_ActivateActionSet(ControllerHandle_t controllerHandle, ControllerActionSetHandle_t actionSetHandle);
@@ -3504,7 +4565,7 @@ SteamAPICall_t SteamAPI_ISteamUGC_AddItemToFavorites(AppId_t nAppId, PublishedFi
 SteamAPICall_t SteamAPI_ISteamUGC_RemoveItemFromFavorites(AppId_t nAppId, PublishedFileId_t nPublishedFileID);
 SteamAPICall_t SteamAPI_ISteamUGC_SubscribeItem(PublishedFileId_t nPublishedFileID);
 SteamAPICall_t SteamAPI_ISteamUGC_UnsubscribeItem(PublishedFileId_t nPublishedFileID);
-uint32 SteamAPI_ISteamUGC_GetNumSubscribedItems();
+uint32 SteamAPI_ISteamUGC_GetNumSubscribedItems(void);
 uint32 SteamAPI_ISteamUGC_GetSubscribedItems(PublishedFileId_t * pvecPublishedFileID, uint32 cMaxEntries);
 uint32 SteamAPI_ISteamUGC_GetItemState(PublishedFileId_t nPublishedFileID);
 bool SteamAPI_ISteamUGC_GetItemInstallInfo(PublishedFileId_t nPublishedFileID, uint64 * punSizeOnDisk, char * pchFolder, uint32 cchFolderSize, uint32 * punTimeStamp);
@@ -3514,20 +4575,20 @@ bool SteamAPI_ISteamUGC_BInitWorkshopForGameServer(DepotId_t unWorkshopDepotID, 
 void SteamAPI_ISteamUGC_SuspendDownloads(bool bSuspend);
 SteamAPICall_t SteamAPI_ISteamUGC_StartPlaytimeTracking(PublishedFileId_t * pvecPublishedFileID, uint32 unNumPublishedFileIDs);
 SteamAPICall_t SteamAPI_ISteamUGC_StopPlaytimeTracking(PublishedFileId_t * pvecPublishedFileID, uint32 unNumPublishedFileIDs);
-SteamAPICall_t SteamAPI_ISteamUGC_StopPlaytimeTrackingForAllItems();
+SteamAPICall_t SteamAPI_ISteamUGC_StopPlaytimeTrackingForAllItems(void);
 SteamAPICall_t SteamAPI_ISteamUGC_AddDependency(PublishedFileId_t nParentPublishedFileID, PublishedFileId_t nChildPublishedFileID);
 SteamAPICall_t SteamAPI_ISteamUGC_RemoveDependency(PublishedFileId_t nParentPublishedFileID, PublishedFileId_t nChildPublishedFileID);
 SteamAPICall_t SteamAPI_ISteamUGC_AddAppDependency(PublishedFileId_t nPublishedFileID, AppId_t nAppID);
 SteamAPICall_t SteamAPI_ISteamUGC_RemoveAppDependency(PublishedFileId_t nPublishedFileID, AppId_t nAppID);
 SteamAPICall_t SteamAPI_ISteamUGC_GetAppDependencies(PublishedFileId_t nPublishedFileID);
 SteamAPICall_t SteamAPI_ISteamUGC_DeleteItem(PublishedFileId_t nPublishedFileID);
-bool SteamAPI_ISteamUGC_ShowWorkshopEULA();
-SteamAPICall_t SteamAPI_ISteamUGC_GetWorkshopEULAStatus();
+bool SteamAPI_ISteamUGC_ShowWorkshopEULA(void);
+SteamAPICall_t SteamAPI_ISteamUGC_GetWorkshopEULAStatus(void);
 uint32 SteamAPI_ISteamUGC_GetUserContentDescriptorPreferences(EUGCContentDescriptorID * pvecDescriptors, uint32 cMaxEntries);
 
 
-bool SteamAPI_ISteamHTMLSurface_Init();
-bool SteamAPI_ISteamHTMLSurface_Shutdown();
+bool SteamAPI_ISteamHTMLSurface_Init(void);
+bool SteamAPI_ISteamHTMLSurface_Shutdown(void);
 SteamAPICall_t SteamAPI_ISteamHTMLSurface_CreateBrowser(const char * pchUserAgent, const char * pchUserCSS);
 void SteamAPI_ISteamHTMLSurface_RemoveBrowser(HHTMLBrowser unBrowserHandle);
 void SteamAPI_ISteamHTMLSurface_LoadURL(HHTMLBrowser unBrowserHandle, const char * pchURL, const char * pchPostData);
@@ -3582,20 +4643,20 @@ bool SteamAPI_ISteamInventory_AddPromoItems(SteamInventoryResult_t * pResultHand
 bool SteamAPI_ISteamInventory_ConsumeItem(SteamInventoryResult_t * pResultHandle, SteamItemInstanceID_t itemConsume, uint32 unQuantity);
 bool SteamAPI_ISteamInventory_ExchangeItems(SteamInventoryResult_t * pResultHandle, const SteamItemDef_t * pArrayGenerate, const uint32 * punArrayGenerateQuantity, uint32 unArrayGenerateLength, const SteamItemInstanceID_t * pArrayDestroy, const uint32 * punArrayDestroyQuantity, uint32 unArrayDestroyLength);
 bool SteamAPI_ISteamInventory_TransferItemQuantity(SteamInventoryResult_t * pResultHandle, SteamItemInstanceID_t itemIdSource, uint32 unQuantity, SteamItemInstanceID_t itemIdDest);
-void SteamAPI_ISteamInventory_SendItemDropHeartbeat();
+void SteamAPI_ISteamInventory_SendItemDropHeartbeat(void);
 bool SteamAPI_ISteamInventory_TriggerItemDrop(SteamInventoryResult_t * pResultHandle, SteamItemDef_t dropListDefinition);
 bool SteamAPI_ISteamInventory_TradeItems(SteamInventoryResult_t * pResultHandle, uint64_steamid steamIDTradePartner, const SteamItemInstanceID_t * pArrayGive, const uint32 * pArrayGiveQuantity, uint32 nArrayGiveLength, const SteamItemInstanceID_t * pArrayGet, const uint32 * pArrayGetQuantity, uint32 nArrayGetLength);
-bool SteamAPI_ISteamInventory_LoadItemDefinitions();
+bool SteamAPI_ISteamInventory_LoadItemDefinitions(void);
 bool SteamAPI_ISteamInventory_GetItemDefinitionIDs(SteamItemDef_t * pItemDefIDs, uint32 * punItemDefIDsArraySize);
 bool SteamAPI_ISteamInventory_GetItemDefinitionProperty(SteamItemDef_t iDefinition, const char * pchPropertyName, char * pchValueBuffer, uint32 * punValueBufferSizeOut);
 SteamAPICall_t SteamAPI_ISteamInventory_RequestEligiblePromoItemDefinitionsIDs(uint64_steamid steamID);
 bool SteamAPI_ISteamInventory_GetEligiblePromoItemDefinitionIDs(uint64_steamid steamID, SteamItemDef_t * pItemDefIDs, uint32 * punItemDefIDsArraySize);
 SteamAPICall_t SteamAPI_ISteamInventory_StartPurchase(const SteamItemDef_t * pArrayItemDefs, const uint32 * punArrayQuantity, uint32 unArrayLength);
-SteamAPICall_t SteamAPI_ISteamInventory_RequestPrices();
-uint32 SteamAPI_ISteamInventory_GetNumItemsWithPrices();
+SteamAPICall_t SteamAPI_ISteamInventory_RequestPrices(void);
+uint32 SteamAPI_ISteamInventory_GetNumItemsWithPrices(void);
 bool SteamAPI_ISteamInventory_GetItemsWithPrices(SteamItemDef_t * pArrayItemDefs, uint64 * pCurrentPrices, uint64 * pBasePrices, uint32 unArrayLength);
 bool SteamAPI_ISteamInventory_GetItemPrice(SteamItemDef_t iDefinition, uint64 * pCurrentPrice, uint64 * pBasePrice);
-SteamInventoryUpdateHandle_t SteamAPI_ISteamInventory_StartUpdateProperties();
+SteamInventoryUpdateHandle_t SteamAPI_ISteamInventory_StartUpdateProperties(void);
 bool SteamAPI_ISteamInventory_RemoveProperty(SteamInventoryUpdateHandle_t handle, SteamItemInstanceID_t nItemID, const char * pchPropertyName);
 bool SteamAPI_ISteamInventory_SetPropertyString(SteamInventoryUpdateHandle_t handle, SteamItemInstanceID_t nItemID, const char * pchPropertyName, const char * pchPropertyValue);
 bool SteamAPI_ISteamInventory_SetPropertyBool(SteamInventoryUpdateHandle_t handle, SteamItemInstanceID_t nItemID, const char * pchPropertyName, bool bValue);
@@ -3605,15 +4666,15 @@ bool SteamAPI_ISteamInventory_SubmitUpdateProperties(SteamInventoryUpdateHandle_
 bool SteamAPI_ISteamInventory_InspectItem(SteamInventoryResult_t * pResultHandle, const char * pchItemToken);
 
 
-bool SteamAPI_ISteamParentalSettings_BIsParentalLockEnabled();
-bool SteamAPI_ISteamParentalSettings_BIsParentalLockLocked();
+bool SteamAPI_ISteamParentalSettings_BIsParentalLockEnabled(void);
+bool SteamAPI_ISteamParentalSettings_BIsParentalLockLocked(void);
 bool SteamAPI_ISteamParentalSettings_BIsAppBlocked(AppId_t nAppID);
 bool SteamAPI_ISteamParentalSettings_BIsAppInBlockList(AppId_t nAppID);
 bool SteamAPI_ISteamParentalSettings_BIsFeatureBlocked(EParentalFeature eFeature);
 bool SteamAPI_ISteamParentalSettings_BIsFeatureInBlockList(EParentalFeature eFeature);
 
 
-uint32 SteamAPI_ISteamRemotePlay_GetSessionCount();
+uint32 SteamAPI_ISteamRemotePlay_GetSessionCount(void);
 RemotePlaySessionID_t SteamAPI_ISteamRemotePlay_GetSessionID(int iSessionIndex);
 uint64_steamid SteamAPI_ISteamRemotePlay_GetSessionSteamID(RemotePlaySessionID_t unSessionID);
 const char * SteamAPI_ISteamRemotePlay_GetSessionClientName(RemotePlaySessionID_t unSessionID);
@@ -3653,17 +4714,17 @@ bool SteamAPI_ISteamNetworkingSockets_GetListenSocketAddress(HSteamListenSocket 
 bool SteamAPI_ISteamNetworkingSockets_CreateSocketPair(HSteamNetConnection * pOutConnection1, HSteamNetConnection * pOutConnection2, bool bUseNetworkLoopback, const SteamNetworkingIdentity * pIdentity1, const SteamNetworkingIdentity * pIdentity2);
 EResult SteamAPI_ISteamNetworkingSockets_ConfigureConnectionLanes(HSteamNetConnection hConn, int nNumLanes, const int * pLanePriorities, const uint16 * pLaneWeights);
 bool SteamAPI_ISteamNetworkingSockets_GetIdentity(SteamNetworkingIdentity * pIdentity);
-ESteamNetworkingAvailability SteamAPI_ISteamNetworkingSockets_InitAuthentication();
+ESteamNetworkingAvailability SteamAPI_ISteamNetworkingSockets_InitAuthentication(void);
 ESteamNetworkingAvailability SteamAPI_ISteamNetworkingSockets_GetAuthenticationStatus(SteamNetAuthenticationStatus_t * pDetails);
-HSteamNetPollGroup SteamAPI_ISteamNetworkingSockets_CreatePollGroup();
+HSteamNetPollGroup SteamAPI_ISteamNetworkingSockets_CreatePollGroup(void);
 bool SteamAPI_ISteamNetworkingSockets_DestroyPollGroup(HSteamNetPollGroup hPollGroup);
 bool SteamAPI_ISteamNetworkingSockets_SetConnectionPollGroup(HSteamNetConnection hConn, HSteamNetPollGroup hPollGroup);
 int SteamAPI_ISteamNetworkingSockets_ReceiveMessagesOnPollGroup(HSteamNetPollGroup hPollGroup, SteamNetworkingMessage_t ** ppOutMessages, int nMaxMessages);
 //bool SteamAPI_ISteamNetworkingSockets_ReceivedRelayAuthTicket(const void * pvTicket, int cbTicket, SteamDatagramRelayAuthTicket * pOutParsedTicket);
 //int SteamAPI_ISteamNetworkingSockets_FindRelayAuthTicketForServer(const SteamNetworkingIdentity * identityGameServer, int nRemoteVirtualPort, SteamDatagramRelayAuthTicket * pOutParsedTicket);
 HSteamNetConnection SteamAPI_ISteamNetworkingSockets_ConnectToHostedDedicatedServer(const SteamNetworkingIdentity * identityTarget, int nRemoteVirtualPort, int nOptions, const SteamNetworkingConfigValue_t * pOptions);
-uint16 SteamAPI_ISteamNetworkingSockets_GetHostedDedicatedServerPort();
-SteamNetworkingPOPID SteamAPI_ISteamNetworkingSockets_GetHostedDedicatedServerPOPID();
+uint16 SteamAPI_ISteamNetworkingSockets_GetHostedDedicatedServerPort(void);
+SteamNetworkingPOPID SteamAPI_ISteamNetworkingSockets_GetHostedDedicatedServerPOPID(void);
 EResult SteamAPI_ISteamNetworkingSockets_GetHostedDedicatedServerAddress(SteamDatagramHostedAddress * pRouting);
 HSteamListenSocket SteamAPI_ISteamNetworkingSockets_CreateHostedDedicatedServerListenSocket(int nLocalVirtualPort, int nOptions, const SteamNetworkingConfigValue_t * pOptions);
 EResult SteamAPI_ISteamNetworkingSockets_GetGameCoordinatorServerLogin(SteamDatagramGameCoordinatorServerLogin * pLoginInfo, int * pcbSignedBlob, void * pBlob);
@@ -3672,7 +4733,7 @@ EResult SteamAPI_ISteamNetworkingSockets_GetGameCoordinatorServerLogin(SteamData
 bool SteamAPI_ISteamNetworkingSockets_GetCertificateRequest(int * pcbBlob, void * pBlob, SteamNetworkingErrMsg * errMsg);
 bool SteamAPI_ISteamNetworkingSockets_SetCertificate(const void * pCertificate, int cbCertificate, SteamNetworkingErrMsg * errMsg);
 void SteamAPI_ISteamNetworkingSockets_ResetIdentity(const SteamNetworkingIdentity * pIdentity);
-void SteamAPI_ISteamNetworkingSockets_RunCallbacks();
+void SteamAPI_ISteamNetworkingSockets_RunCallbacks(void);
 bool SteamAPI_ISteamNetworkingSockets_BeginAsyncRequestFakeIP(int nNumPorts);
 void SteamAPI_ISteamNetworkingSockets_GetFakeIP(int idxFirstPort, SteamNetworkingFakeIPResult_t * pInfo);
 HSteamListenSocket SteamAPI_ISteamNetworkingSockets_CreateListenSocketP2PFakeIP(int idxFakePort, int nOptions, const SteamNetworkingConfigValue_t * pOptions);
@@ -3681,7 +4742,7 @@ ISteamNetworkingFakeUDPPort * SteamAPI_ISteamNetworkingSockets_CreateFakeUDPPort
 
 
 SteamNetworkingMessage_t * SteamAPI_ISteamNetworkingUtils_AllocateMessage(int cbAllocateBuffer);
-void SteamAPI_ISteamNetworkingUtils_InitRelayNetworkAccess();
+void SteamAPI_ISteamNetworkingUtils_InitRelayNetworkAccess(void);
 ESteamNetworkingAvailability SteamAPI_ISteamNetworkingUtils_GetRelayNetworkStatus(SteamRelayNetworkStatus_t * pDetails);
 float SteamAPI_ISteamNetworkingUtils_GetLocalPingLocation(SteamNetworkPingLocation_t * result);
 int SteamAPI_ISteamNetworkingUtils_EstimatePingTimeBetweenTwoLocations(const SteamNetworkPingLocation_t * location1, const SteamNetworkPingLocation_t * location2);
@@ -3691,9 +4752,9 @@ bool SteamAPI_ISteamNetworkingUtils_ParsePingLocationString(const char * pszStri
 bool SteamAPI_ISteamNetworkingUtils_CheckPingDataUpToDate(float flMaxAgeSeconds);
 int SteamAPI_ISteamNetworkingUtils_GetPingToDataCenter(SteamNetworkingPOPID popID, SteamNetworkingPOPID * pViaRelayPoP);
 int SteamAPI_ISteamNetworkingUtils_GetDirectPingToPOP(SteamNetworkingPOPID popID);
-int SteamAPI_ISteamNetworkingUtils_GetPOPCount();
+int SteamAPI_ISteamNetworkingUtils_GetPOPCount(void);
 int SteamAPI_ISteamNetworkingUtils_GetPOPList(SteamNetworkingPOPID * list, int nListSz);
-SteamNetworkingMicroseconds SteamAPI_ISteamNetworkingUtils_GetLocalTimestamp();
+SteamNetworkingMicroseconds SteamAPI_ISteamNetworkingUtils_GetLocalTimestamp(void);
 void SteamAPI_ISteamNetworkingUtils_SetDebugOutputFunction(ESteamNetworkingSocketsDebugOutputType eDetailLevel, FSteamNetworkingSocketsDebugOutput pfnFunc);
 bool SteamAPI_ISteamNetworkingUtils_IsFakeIPv4(uint32 nIPv4);
 ESteamNetworkingFakeIPType SteamAPI_ISteamNetworkingUtils_GetIPv4FakeIPType(uint32 nIPv4);
@@ -3728,12 +4789,12 @@ void SteamAPI_ISteamGameServer_SetGameDescription(const char * pszGameDescriptio
 void SteamAPI_ISteamGameServer_SetModDir(const char * pszModDir);
 void SteamAPI_ISteamGameServer_SetDedicatedServer(bool bDedicated);
 void SteamAPI_ISteamGameServer_LogOn(const char * pszToken);
-void SteamAPI_ISteamGameServer_LogOnAnonymous();
-void SteamAPI_ISteamGameServer_LogOff();
-bool SteamAPI_ISteamGameServer_BLoggedOn();
-bool SteamAPI_ISteamGameServer_BSecure();
-uint64_steamid SteamAPI_ISteamGameServer_GetSteamID();
-bool SteamAPI_ISteamGameServer_WasRestartRequested();
+void SteamAPI_ISteamGameServer_LogOnAnonymous(void);
+void SteamAPI_ISteamGameServer_LogOff(void);
+bool SteamAPI_ISteamGameServer_BLoggedOn(void);
+bool SteamAPI_ISteamGameServer_BSecure(void);
+uint64_steamid SteamAPI_ISteamGameServer_GetSteamID(void);
+bool SteamAPI_ISteamGameServer_WasRestartRequested(void);
 void SteamAPI_ISteamGameServer_SetMaxPlayerCount(int cPlayersMax);
 void SteamAPI_ISteamGameServer_SetBotPlayerCount(int cBotplayers);
 void SteamAPI_ISteamGameServer_SetServerName(const char * pszServerName);
@@ -3741,7 +4802,7 @@ void SteamAPI_ISteamGameServer_SetMapName(const char * pszMapName);
 void SteamAPI_ISteamGameServer_SetPasswordProtected(bool bPasswordProtected);
 void SteamAPI_ISteamGameServer_SetSpectatorPort(uint16 unSpectatorPort);
 void SteamAPI_ISteamGameServer_SetSpectatorServerName(const char * pszSpectatorServerName);
-void SteamAPI_ISteamGameServer_ClearAllKeyValues();
+void SteamAPI_ISteamGameServer_ClearAllKeyValues(void);
 void SteamAPI_ISteamGameServer_SetKeyValue(const char * pKey, const char * pValue);
 void SteamAPI_ISteamGameServer_SetGameTags(const char * pchGameTags);
 void SteamAPI_ISteamGameServer_SetGameData(const char * pchGameData);
@@ -3753,15 +4814,15 @@ void SteamAPI_ISteamGameServer_EndAuthSession(uint64_steamid steamID);
 void SteamAPI_ISteamGameServer_CancelAuthTicket(HAuthTicket hAuthTicket);
 EUserHasLicenseForAppResult SteamAPI_ISteamGameServer_UserHasLicenseForApp(uint64_steamid steamID, AppId_t appID);
 bool SteamAPI_ISteamGameServer_RequestUserGroupStatus(uint64_steamid steamIDUser, uint64_steamid steamIDGroup);
-void SteamAPI_ISteamGameServer_GetGameplayStats();
-SteamAPICall_t SteamAPI_ISteamGameServer_GetServerReputation();
-SteamIPAddress_t SteamAPI_ISteamGameServer_GetPublicIP();
+void SteamAPI_ISteamGameServer_GetGameplayStats(void);
+SteamAPICall_t SteamAPI_ISteamGameServer_GetServerReputation(void);
+SteamIPAddress_t SteamAPI_ISteamGameServer_GetPublicIP(void);
 bool SteamAPI_ISteamGameServer_HandleIncomingPacket(const void * pData, int cbData, uint32 srcIP, uint16 srcPort);
 int SteamAPI_ISteamGameServer_GetNextOutgoingPacket(void * pOut, int cbMaxOut, uint32 * pNetAdr, uint16 * pPort);
 SteamAPICall_t SteamAPI_ISteamGameServer_AssociateWithClan(uint64_steamid steamIDClan);
 SteamAPICall_t SteamAPI_ISteamGameServer_ComputeNewPlayerCompatibility(uint64_steamid steamIDNewPlayer);
 bool SteamAPI_ISteamGameServer_SendUserConnectAndAuthenticate_DEPRECATED(uint32 unIPClient, const void * pvAuthBlob, uint32 cubAuthBlobSize, CSteamID * pSteamIDUser);
-uint64_steamid SteamAPI_ISteamGameServer_CreateUnauthenticatedUserConnection();
+uint64_steamid SteamAPI_ISteamGameServer_CreateUnauthenticatedUserConnection(void);
 void SteamAPI_ISteamGameServer_SendUserDisconnect_DEPRECATED(uint64_steamid steamIDUser);
 bool SteamAPI_ISteamGameServer_BUpdateUserData(uint64_steamid steamIDUser, const char * pchPlayerName, uint32 uScore);
 
@@ -3778,7 +4839,11 @@ bool SteamAPI_ISteamGameServerStats_ClearUserAchievement(uint64_steamid steamIDU
 SteamAPICall_t SteamAPI_ISteamGameServerStats_StoreUserStats(uint64_steamid steamIDUser);
 
 
-void SteamAPI_ISteamNetworkingFakeUDPPort_DestroyFakeUDPPort();
+void SteamAPI_ISteamNetworkingFakeUDPPort_DestroyFakeUDPPort(void);
 EResult SteamAPI_ISteamNetworkingFakeUDPPort_SendMessageToFakeIP(const SteamNetworkingIPAddr * remoteAddress, const void * pData, uint32 cbData, int nSendFlags);
 int SteamAPI_ISteamNetworkingFakeUDPPort_ReceiveMessages(SteamNetworkingMessage_t ** ppOutMessages, int nMaxMessages);
 void SteamAPI_ISteamNetworkingFakeUDPPort_ScheduleCleanup(const SteamNetworkingIPAddr * remoteAddress);
+
+
+ESteamAPIInitResult SteamAPI_InitFlat( SteamErrMsg *pOutErrMsg );
+void SteamAPI_Shutdown();
