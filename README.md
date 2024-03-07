@@ -39,7 +39,7 @@ java -classpath gson-2.10.1.jar C_API.java
 See output in `steam_api.h`
 
 ### Step 2: Generate Java FFI
-jextract -t steamflat4j --header-class-name SteamFlat4j --output src/main/java/steamflat4j steam_api.h
+jextract -t steamflat4j --header-class-name SteamFlat --output src/main/java/ steam_api.h
 
 
 ## How it works
