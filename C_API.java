@@ -1,5 +1,6 @@
 import com.google.gson.Gson;
 
+import java.lang.SuppressWarnings;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -9,6 +10,7 @@ import java.util.Map;
 
 import static java.lang.String.format;
 
+@SuppressWarnings("unchecked")
 public class C_API {
 
     record Decl(String left, String right) {}
@@ -123,7 +125,7 @@ public class C_API {
         return sb.toString();
     }
 
-    static String writeMethods(List<Map<String, Object>> methods) {
+    static String writeMethods(List<Map<String, Object>> methods, String ... instancePtrs) {
         var sb = new StringBuilder();
         for (var entry : methods) {
             var name = (String) entry.get("methodname_flat");
@@ -133,6 +135,9 @@ public class C_API {
             }
             var params = (List<Map<String, Object>>) entry.get("params");
             var args = new ArrayList<String>();
+            for (var instancePtr : instancePtrs) {
+                args.add(instancePtr + " ptr");
+            }
             for (var param : params) {
                 var paramName = (String) param.get("paramname");
                 var paramType = (String) param.get("paramtype");
@@ -152,6 +157,16 @@ public class C_API {
             }
 
             sb.append(format("%s %s(%s);\n", returnType, name, String.join(", ", args)));
+        }
+        return sb.toString();
+    }
+
+    static String writeAccessors(String className, List<Map<String, Object>> accessors) {
+        var sb = new StringBuilder();
+        for (var entry : accessors) {
+            var king = (String) entry.get("kind");
+            var name = (String) entry.get("name_flat");
+            sb.append(format("%s %s(void);\n", className, name));
         }
         return sb.toString();
     }
@@ -207,9 +222,15 @@ public class C_API {
         }
 
         for (var iface : interfaces) {
-            var methods = iface.get("methods");
-            if (methods == null) continue;
-            code.append(writeMethods((List<Map<String, Object>>) methods)).append("\n\n");
+            var className = (String) iface.get("classname");
+            var methods = (List<Map<String, Object>>) iface.get("methods");
+            var accessors = (List<Map<String, Object>>) iface.get("accessors");
+            if (methods != null) {
+                code.append(writeMethods(methods, className)).append("\n\n");
+            }
+            if (accessors != null) {
+                code.append(writeAccessors(className, accessors)).append("\n\n");
+            }
         }
 
         code.append("ESteamAPIInitResult SteamAPI_InitFlat( SteamErrMsg *pOutErrMsg );\n");

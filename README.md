@@ -11,6 +11,20 @@ static {
 
 And use the `_flat` Steam APIs:
 
+```java
+try (var arena = Arena.ofConfined()) {
+        var errMsg = arena.allocate(C_CHAR, 1024);
+        var result = SteamAPI_InitFlat(errMsg);
+        if (result != k_ESteamAPIInitResult_OK()) {
+            System.out.println("err: " + errMsg.getString(0));
+            System.exit(1);
+        }
+
+        var steamUser = SteamAPI_SteamUser_v023();
+        var steamId = SteamAPI_ISteamUser_GetSteamID(steamUser);
+}
+```
+
 
 ## Building
 ### Requirements
