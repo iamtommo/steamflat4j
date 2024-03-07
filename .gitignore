@@ -1,5 +1,6 @@
 /jextract-22-win/
 steam_api.json
+steam_api.h
 /lib/
 steam_appid.txt
 
