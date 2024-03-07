@@ -1,5 +1,5 @@
 # Steamflat4j
-Jextract generated Panama bindings for steamworks_flat_api
+[Jextract](https://jdk.java.net/jextract/) generated [Panama](https://openjdk.org/projects/panama/) bindings for the Steamworks sdk (flat)
 
 ## Usage
 First load the Steam dll
@@ -28,9 +28,9 @@ try (var arena = Arena.ofConfined()) {
 
 ## Building
 ### Requirements
-JDK 22 (Panama)
-Jextract
-Gradle 8.7-rc-1 (jdk 22 support)
+- JDK 22 (Panama)
+- Jextract
+- Gradle 8.7-rc-1 (jdk 22 support)
 
 ### Step 1: Generate C API header
 ```sh
@@ -40,3 +40,35 @@ See output in `steam_api.h`
 
 ### Step 2: Generate Java FFI
 jextract -t steamflat4j --header-class-name SteamFlat4j --output src/main/java/steamflat4j steam_api.h
+
+
+## How it works
+As per the Steam documentation:
+```
+steam_api_flat.h declares a set of "flat" functions that mirror the interface functions in the SDK. This is not pure C code, but it does use plain C linkage and calling conventions, so it is easy to interop with other languages. These functions are exported by steam_api[64][.dll/.so/dylib].
+steam_api.json describes (almost all of) the interfaces, types, and functions in the SDK. It is intended that this file be used by an automated process to generate binding layer. We hope that this can be used to automate 95% of the work, but there are still a few special cases that need to be handled manually. In particular, CSteamID and CGameID will probably require special handling by your binding layer to make it efficient.
+```
+
+To use `steam_api_flat.h` first we need to generate a pure C api header, done by `C_API.java`.
+This writes out a single header file `steam_api.h` with the whole Steam sdk, i.e.:
+```c
+enum ESteamAPIInitResult {
+	k_ESteamAPIInitResult_OK = 0,
+	k_ESteamAPIInitResult_FailedGeneric = 1,
+	k_ESteamAPIInitResult_NoSteamClient = 2,
+	k_ESteamAPIInitResult_VersionMismatch = 3,
+};
+
+typedef char SteamErrMsg[1024];
+
+ESteamAPIInitResult SteamAPI_InitFlat( SteamErrMsg *pOutErrMsg );
+```
+
+This is then fed into `jextract` to produce the Java FFI bindings, and ends up with code like so:
+```java
+var errMsg = arena.allocate(C_CHAR, 1024);
+var result = SteamAPI_InitFlat(errMsg);
+if (result != k_ESteamAPIInitResult_OK()) {
+    // etc
+}
+```
