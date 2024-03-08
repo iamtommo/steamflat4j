@@ -25,7 +25,7 @@ public class RemoteStorageLocalFileChange_t {
     }
 
     private static final GroupLayout $LAYOUT = MemoryLayout.structLayout(
-        MemoryLayout.paddingLayout(4)
+
     ).withName("RemoteStorageLocalFileChange_t");
 
     /**

@@ -25,7 +25,7 @@ public class IPCountry_t {
     }
 
     private static final GroupLayout $LAYOUT = MemoryLayout.structLayout(
-        MemoryLayout.paddingLayout(4)
+
     ).withName("IPCountry_t");
 
     /**

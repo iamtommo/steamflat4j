@@ -6,6 +6,7 @@ import java.lang.foreign.Arena;
 import java.nio.file.Path;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static steamflat4j.SteamFlat.*;
 import static steamflat4j.SteamFlat_1.*;
 import static steamflat4j.SteamFlat_2.k_ESteamAPIInitResult_OK;
 import static steamflat4j.SteamFlat_3.C_CHAR;
@@ -13,7 +14,14 @@ import static steamflat4j.SteamFlat_3.C_CHAR;
 public class SteamTest {
 
     static {
-        System.load(Path.of("lib/steam_api64.dll").toAbsolutePath().toString());
+        var os = System.getProperty("os.name");
+        if (os.contains("Windows")) {
+            System.load(Path.of("lib/win/steam_api64.dll").toAbsolutePath().toString());
+        } else if (os.startsWith("Mac OS") || os.startsWith("Darwin")) {
+            System.load(Path.of("lib/osx/libsteam_api.dylib").toAbsolutePath().toString());
+        } else {
+
+        }
     }
 
     @Test
@@ -26,19 +34,64 @@ public class SteamTest {
             }
             assertEquals(k_ESteamAPIInitResult_OK(), result);
 
+            SteamAPI_ManualDispatch_Init();
+
             var user = SteamAPI_SteamUser_v023();
-            //var user3 = SteamAPI_ISteamUser_GetHSteamUser();
-
-            //var ver = arena.allocateFrom("SteamClient017");
-            //var steamclient = SteamInternal_CreateInterface(ver);
-            //var steampipe = SteamAPI_GetHSteamPipe();
-
-            //var userVer = arena.allocateFrom("SteamUser023");
-            //SteamAPI_ISteamClient_GetISteamUser((int) steamclient.address(), steampipe, userVer);
-
             var steamId = SteamAPI_ISteamUser_GetSteamID(user);
-            System.out.println("steamId " + steamId);
-            //assertNotEquals(0L, steamId);
+
+            runCallbacks();
+        }
+    }
+
+    private void runCallbacks() {
+        try (var arena = Arena.ofConfined()) {
+            var steamPipe = SteamAPI_GetHSteamPipe();
+            SteamAPI_ManualDispatch_RunFrame(steamPipe);
+            var callback = CallbackMsg_t.allocate(arena);
+            while (SteamAPI_ManualDispatch_GetNextCallback(steamPipe, callback)) {
+                System.out.println("callback");
+
+                var callbackId = CallbackMsg_t.m_iCallback(callback);
+                if (callbackId == k_iCallback_SteamAPICallCompleted_t()) {
+                    try (var callResultArena = Arena.ofConfined()) {
+                        var tmpCallResult = callResultArena.allocate(SteamAPICallCompleted_t.m_cubParam(callback));
+                        var failed = callResultArena.allocate(C_BOOL, 1);
+                        if (SteamAPI_ManualDispatch_GetAPICallResult(steamPipe, SteamAPICallCompleted_t.m_hAsyncCall(callback), tmpCallResult, SteamAPICallCompleted_t.m_cubParam(callback), SteamAPICallCompleted_t.m_iCallback(callback), failed)) {
+                            System.out.println("callback dispatch");
+                        }
+                    }
+                } else {
+                    System.out.println("callback dispatch2 " + callbackId);
+                }
+                SteamAPI_ManualDispatch_FreeLastCallback(steamPipe);
+            }
+/**
+ * HSteamPipe hSteamPipe = SteamAPI_GetHSteamPipe(); // See also SteamGameServer_GetHSteamPipe()
+ * 	SteamAPI_ManualDispatch_RunFrame( hSteamPipe )
+ * 	CallbackMsg_t callback;
+ * 	while ( SteamAPI_ManualDispatch_GetNextCallback( hSteamPipe, &callback ) )
+ * 	    {
+ * 		// Check for dispatching API call results
+ * 		if ( callback.m_iCallback == SteamAPICallCompleted_t::k_iCallback )
+ *        {
+ * 			SteamAPICallCompleted_t *pCallCompleted = (SteamAPICallCompleted_t *)callback.
+ * 			void *pTmpCallResult = malloc( pCallback->m_cubParam );
+ * 			bool bFailed;
+ * 			if ( SteamAPI_ManualDispatch_GetAPICallResult( hSteamPipe, pCallCompleted->m_hAsyncCall, pTmpCallResult, pCallback->m_cubParam, pCallback->m_iCallback, &bFailed ) )
+ *            {
+ * 				// Dispatch the call result to the registered handler(s) for the
+ * 				// call identified by pCallCompleted->m_hAsyncCall
+ *            }
+ * 			free( pTmpCallResult );
+ *        }
+ * 		else
+ *        {
+ * 			// Look at callback.m_iCallback to see what kind of callback it is,
+ * 			// and dispatch to appropriate handler(s)
+ *        }
+ * 		SteamAPI_ManualDispatch_FreeLastCallback( hSteamPipe );
+ *    }
+ */
         }
     }
 

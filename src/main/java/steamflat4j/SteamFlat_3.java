@@ -67,133 +67,276 @@ public class SteamFlat_3 {
     public static final ValueLayout.OfDouble C_DOUBLE = ValueLayout.JAVA_DOUBLE;
     public static final AddressLayout C_POINTER = ValueLayout.ADDRESS
             .withTargetLayout(MemoryLayout.sequenceLayout(java.lang.Long.MAX_VALUE, JAVA_BYTE));
-    public static final ValueLayout.OfInt C_LONG = ValueLayout.JAVA_INT;
-    public static final ValueLayout.OfDouble C_LONG_DOUBLE = ValueLayout.JAVA_DOUBLE;
-    private static final int _VCRT_COMPILER_PREPROCESSOR = (int)1L;
+    public static final ValueLayout.OfLong C_LONG = ValueLayout.JAVA_LONG;
+    private static final int __WORDSIZE = (int)64L;
     /**
      * {@snippet lang=c :
-     * #define _VCRT_COMPILER_PREPROCESSOR 1
+     * #define __WORDSIZE 64
      * }
      */
-    public static int _VCRT_COMPILER_PREPROCESSOR() {
-        return _VCRT_COMPILER_PREPROCESSOR;
+    public static int __WORDSIZE() {
+        return __WORDSIZE;
     }
-    private static final int _SAL_VERSION = (int)20L;
+    private static final int __DARWIN_ONLY_64_BIT_INO_T = (int)1L;
     /**
      * {@snippet lang=c :
-     * #define _SAL_VERSION 20
+     * #define __DARWIN_ONLY_64_BIT_INO_T 1
      * }
      */
-    public static int _SAL_VERSION() {
-        return _SAL_VERSION;
+    public static int __DARWIN_ONLY_64_BIT_INO_T() {
+        return __DARWIN_ONLY_64_BIT_INO_T;
     }
-    private static final int __SAL_H_VERSION = (int)180000000L;
+    private static final int __DARWIN_ONLY_UNIX_CONFORMANCE = (int)1L;
     /**
      * {@snippet lang=c :
-     * #define __SAL_H_VERSION 180000000
+     * #define __DARWIN_ONLY_UNIX_CONFORMANCE 1
      * }
      */
-    public static int __SAL_H_VERSION() {
-        return __SAL_H_VERSION;
+    public static int __DARWIN_ONLY_UNIX_CONFORMANCE() {
+        return __DARWIN_ONLY_UNIX_CONFORMANCE;
     }
-    private static final int _USE_DECLSPECS_FOR_SAL = (int)0L;
+    private static final int __DARWIN_ONLY_VERS_1050 = (int)1L;
     /**
      * {@snippet lang=c :
-     * #define _USE_DECLSPECS_FOR_SAL 0
+     * #define __DARWIN_ONLY_VERS_1050 1
      * }
      */
-    public static int _USE_DECLSPECS_FOR_SAL() {
-        return _USE_DECLSPECS_FOR_SAL;
+    public static int __DARWIN_ONLY_VERS_1050() {
+        return __DARWIN_ONLY_VERS_1050;
     }
-    private static final int _USE_ATTRIBUTES_FOR_SAL = (int)0L;
+    private static final int __DARWIN_UNIX03 = (int)1L;
     /**
      * {@snippet lang=c :
-     * #define _USE_ATTRIBUTES_FOR_SAL 0
+     * #define __DARWIN_UNIX03 1
      * }
      */
-    public static int _USE_ATTRIBUTES_FOR_SAL() {
-        return _USE_ATTRIBUTES_FOR_SAL;
+    public static int __DARWIN_UNIX03() {
+        return __DARWIN_UNIX03;
     }
-    private static final int _CRT_PACKING = (int)8L;
+    private static final int __DARWIN_64_BIT_INO_T = (int)1L;
     /**
      * {@snippet lang=c :
-     * #define _CRT_PACKING 8
+     * #define __DARWIN_64_BIT_INO_T 1
      * }
      */
-    public static int _CRT_PACKING() {
-        return _CRT_PACKING;
+    public static int __DARWIN_64_BIT_INO_T() {
+        return __DARWIN_64_BIT_INO_T;
     }
-    private static final int _HAS_EXCEPTIONS = (int)1L;
+    private static final int __DARWIN_VERS_1050 = (int)1L;
     /**
      * {@snippet lang=c :
-     * #define _HAS_EXCEPTIONS 1
+     * #define __DARWIN_VERS_1050 1
      * }
      */
-    public static int _HAS_EXCEPTIONS() {
-        return _HAS_EXCEPTIONS;
+    public static int __DARWIN_VERS_1050() {
+        return __DARWIN_VERS_1050;
     }
-    private static final int _HAS_CXX17 = (int)0L;
+    private static final int __DARWIN_NON_CANCELABLE = (int)0L;
     /**
      * {@snippet lang=c :
-     * #define _HAS_CXX17 0
+     * #define __DARWIN_NON_CANCELABLE 0
      * }
      */
-    public static int _HAS_CXX17() {
-        return _HAS_CXX17;
+    public static int __DARWIN_NON_CANCELABLE() {
+        return __DARWIN_NON_CANCELABLE;
     }
-    private static final int _HAS_CXX20 = (int)0L;
+    private static final int __STDC_WANT_LIB_EXT1__ = (int)1L;
     /**
      * {@snippet lang=c :
-     * #define _HAS_CXX20 0
+     * #define __STDC_WANT_LIB_EXT1__ 1
      * }
      */
-    public static int _HAS_CXX20() {
-        return _HAS_CXX20;
+    public static int __STDC_WANT_LIB_EXT1__() {
+        return __STDC_WANT_LIB_EXT1__;
     }
-    private static final int _HAS_NODISCARD = (int)0L;
+    private static final int __DARWIN_NO_LONG_LONG = (int)0L;
     /**
      * {@snippet lang=c :
-     * #define _HAS_NODISCARD 0
+     * #define __DARWIN_NO_LONG_LONG 0
      * }
      */
-    public static int _HAS_NODISCARD() {
-        return _HAS_NODISCARD;
+    public static int __DARWIN_NO_LONG_LONG() {
+        return __DARWIN_NO_LONG_LONG;
     }
-    private static final int WCHAR_MIN = (int)0L;
+    private static final int _DARWIN_FEATURE_64_BIT_INODE = (int)1L;
     /**
      * {@snippet lang=c :
-     * #define WCHAR_MIN 0
+     * #define _DARWIN_FEATURE_64_BIT_INODE 1
      * }
      */
-    public static int WCHAR_MIN() {
-        return WCHAR_MIN;
+    public static int _DARWIN_FEATURE_64_BIT_INODE() {
+        return _DARWIN_FEATURE_64_BIT_INODE;
     }
-    private static final int WCHAR_MAX = (int)65535L;
+    private static final int _DARWIN_FEATURE_ONLY_64_BIT_INODE = (int)1L;
     /**
      * {@snippet lang=c :
-     * #define WCHAR_MAX 65535
+     * #define _DARWIN_FEATURE_ONLY_64_BIT_INODE 1
      * }
      */
-    public static int WCHAR_MAX() {
-        return WCHAR_MAX;
+    public static int _DARWIN_FEATURE_ONLY_64_BIT_INODE() {
+        return _DARWIN_FEATURE_ONLY_64_BIT_INODE;
     }
-    private static final int WINT_MIN = (int)0L;
+    private static final int _DARWIN_FEATURE_ONLY_VERS_1050 = (int)1L;
     /**
      * {@snippet lang=c :
-     * #define WINT_MIN 0
+     * #define _DARWIN_FEATURE_ONLY_VERS_1050 1
      * }
      */
-    public static int WINT_MIN() {
-        return WINT_MIN;
+    public static int _DARWIN_FEATURE_ONLY_VERS_1050() {
+        return _DARWIN_FEATURE_ONLY_VERS_1050;
     }
-    private static final int WINT_MAX = (int)65535L;
+    private static final int _DARWIN_FEATURE_ONLY_UNIX_CONFORMANCE = (int)1L;
     /**
      * {@snippet lang=c :
-     * #define WINT_MAX 65535
+     * #define _DARWIN_FEATURE_ONLY_UNIX_CONFORMANCE 1
      * }
      */
-    public static int WINT_MAX() {
-        return WINT_MAX;
+    public static int _DARWIN_FEATURE_ONLY_UNIX_CONFORMANCE() {
+        return _DARWIN_FEATURE_ONLY_UNIX_CONFORMANCE;
+    }
+    private static final int _DARWIN_FEATURE_UNIX_CONFORMANCE = (int)3L;
+    /**
+     * {@snippet lang=c :
+     * #define _DARWIN_FEATURE_UNIX_CONFORMANCE 3
+     * }
+     */
+    public static int _DARWIN_FEATURE_UNIX_CONFORMANCE() {
+        return _DARWIN_FEATURE_UNIX_CONFORMANCE;
+    }
+    private static final int __has_ptrcheck = (int)0L;
+    /**
+     * {@snippet lang=c :
+     * #define __has_ptrcheck 0
+     * }
+     */
+    public static int __has_ptrcheck() {
+        return __has_ptrcheck;
+    }
+    private static final int __PTHREAD_SIZE__ = (int)8176L;
+    /**
+     * {@snippet lang=c :
+     * #define __PTHREAD_SIZE__ 8176
+     * }
+     */
+    public static int __PTHREAD_SIZE__() {
+        return __PTHREAD_SIZE__;
+    }
+    private static final int __PTHREAD_ATTR_SIZE__ = (int)56L;
+    /**
+     * {@snippet lang=c :
+     * #define __PTHREAD_ATTR_SIZE__ 56
+     * }
+     */
+    public static int __PTHREAD_ATTR_SIZE__() {
+        return __PTHREAD_ATTR_SIZE__;
+    }
+    private static final int __PTHREAD_MUTEXATTR_SIZE__ = (int)8L;
+    /**
+     * {@snippet lang=c :
+     * #define __PTHREAD_MUTEXATTR_SIZE__ 8
+     * }
+     */
+    public static int __PTHREAD_MUTEXATTR_SIZE__() {
+        return __PTHREAD_MUTEXATTR_SIZE__;
+    }
+    private static final int __PTHREAD_MUTEX_SIZE__ = (int)56L;
+    /**
+     * {@snippet lang=c :
+     * #define __PTHREAD_MUTEX_SIZE__ 56
+     * }
+     */
+    public static int __PTHREAD_MUTEX_SIZE__() {
+        return __PTHREAD_MUTEX_SIZE__;
+    }
+    private static final int __PTHREAD_CONDATTR_SIZE__ = (int)8L;
+    /**
+     * {@snippet lang=c :
+     * #define __PTHREAD_CONDATTR_SIZE__ 8
+     * }
+     */
+    public static int __PTHREAD_CONDATTR_SIZE__() {
+        return __PTHREAD_CONDATTR_SIZE__;
+    }
+    private static final int __PTHREAD_COND_SIZE__ = (int)40L;
+    /**
+     * {@snippet lang=c :
+     * #define __PTHREAD_COND_SIZE__ 40
+     * }
+     */
+    public static int __PTHREAD_COND_SIZE__() {
+        return __PTHREAD_COND_SIZE__;
+    }
+    private static final int __PTHREAD_ONCE_SIZE__ = (int)8L;
+    /**
+     * {@snippet lang=c :
+     * #define __PTHREAD_ONCE_SIZE__ 8
+     * }
+     */
+    public static int __PTHREAD_ONCE_SIZE__() {
+        return __PTHREAD_ONCE_SIZE__;
+    }
+    private static final int __PTHREAD_RWLOCK_SIZE__ = (int)192L;
+    /**
+     * {@snippet lang=c :
+     * #define __PTHREAD_RWLOCK_SIZE__ 192
+     * }
+     */
+    public static int __PTHREAD_RWLOCK_SIZE__() {
+        return __PTHREAD_RWLOCK_SIZE__;
+    }
+    private static final int __PTHREAD_RWLOCKATTR_SIZE__ = (int)16L;
+    /**
+     * {@snippet lang=c :
+     * #define __PTHREAD_RWLOCKATTR_SIZE__ 16
+     * }
+     */
+    public static int __PTHREAD_RWLOCKATTR_SIZE__() {
+        return __PTHREAD_RWLOCKATTR_SIZE__;
+    }
+    private static final int INT8_MAX = (int)127L;
+    /**
+     * {@snippet lang=c :
+     * #define INT8_MAX 127
+     * }
+     */
+    public static int INT8_MAX() {
+        return INT8_MAX;
+    }
+    private static final int INT16_MAX = (int)32767L;
+    /**
+     * {@snippet lang=c :
+     * #define INT16_MAX 32767
+     * }
+     */
+    public static int INT16_MAX() {
+        return INT16_MAX;
+    }
+    private static final int INT32_MAX = (int)2147483647L;
+    /**
+     * {@snippet lang=c :
+     * #define INT32_MAX 2147483647
+     * }
+     */
+    public static int INT32_MAX() {
+        return INT32_MAX;
+    }
+    private static final int UINT8_MAX = (int)255L;
+    /**
+     * {@snippet lang=c :
+     * #define UINT8_MAX 255
+     * }
+     */
+    public static int UINT8_MAX() {
+        return UINT8_MAX;
+    }
+    private static final int UINT16_MAX = (int)65535L;
+    /**
+     * {@snippet lang=c :
+     * #define UINT16_MAX 65535
+     * }
+     */
+    public static int UINT16_MAX() {
+        return UINT16_MAX;
     }
     private static final int true_ = (int)1L;
     /**
@@ -221,293 +364,6 @@ public class SteamFlat_3 {
      */
     public static int __bool_true_false_are_defined() {
         return __bool_true_false_are_defined;
-    }
-    /**
-     * {@snippet lang=c :
-     * typedef unsigned long long uintptr_t
-     * }
-     */
-    public static final OfLong uintptr_t = SteamFlat.C_LONG_LONG;
-    /**
-     * {@snippet lang=c :
-     * typedef char *va_list
-     * }
-     */
-    public static final AddressLayout va_list = SteamFlat.C_POINTER;
-
-    /**
-     * Variadic invoker class for:
-     * {@snippet lang=c :
-     * void __va_start(va_list *, ...)
-     * }
-     */
-    public static class __va_start {
-        private static final FunctionDescriptor BASE_DESC = FunctionDescriptor.ofVoid(
-                SteamFlat.C_POINTER
-            );
-        private static final MemorySegment ADDR = SteamFlat.findOrThrow("__va_start");
-
-        private final MethodHandle handle;
-        private final FunctionDescriptor descriptor;
-        private final MethodHandle spreader;
-
-        private __va_start(MethodHandle handle, FunctionDescriptor descriptor, MethodHandle spreader) {
-            this.handle = handle;
-            this.descriptor = descriptor;
-            this.spreader = spreader;
-        }
-
-        /**
-         * Variadic invoker factory for:
-         * {@snippet lang=c :
-         * void __va_start(va_list *, ...)
-         * }
-         */
-        public static __va_start makeInvoker(MemoryLayout... layouts) {
-            FunctionDescriptor desc$ = BASE_DESC.appendArgumentLayouts(layouts);
-            Linker.Option fva$ = Linker.Option.firstVariadicArg(BASE_DESC.argumentLayouts().size());
-            var mh$ = Linker.nativeLinker().downcallHandle(ADDR, desc$, fva$);
-            var spreader$ = mh$.asSpreader(Object[].class, layouts.length);
-            return new __va_start(mh$, desc$, spreader$);
-        }
-
-        /**
-         * {@return the specialized method handle}
-         */
-        public MethodHandle handle() {
-            return handle;
-        }
-
-        /**
-         * {@return the specialized descriptor}
-         */
-        public FunctionDescriptor descriptor() {
-            return descriptor;
-        }
-
-        public void apply(MemorySegment x0, Object... x1) {
-            try {
-                if (TRACE_DOWNCALLS) {
-                    traceDowncall("__va_start", x0, x1);
-                }
-                spreader.invokeExact(x0, x1);
-            } catch(IllegalArgumentException | ClassCastException ex$)  {
-                throw ex$; // rethrow IAE from passing wrong number/type of args
-            } catch (Throwable ex$) {
-               throw new AssertionError("should not reach here", ex$);
-            }
-        }
-    }
-    /**
-     * {@snippet lang=c :
-     * typedef unsigned long long size_t
-     * }
-     */
-    public static final OfLong size_t = SteamFlat.C_LONG_LONG;
-    /**
-     * {@snippet lang=c :
-     * typedef long long ptrdiff_t
-     * }
-     */
-    public static final OfLong ptrdiff_t = SteamFlat.C_LONG_LONG;
-    /**
-     * {@snippet lang=c :
-     * typedef long long intptr_t
-     * }
-     */
-    public static final OfLong intptr_t = SteamFlat.C_LONG_LONG;
-    /**
-     * {@snippet lang=c :
-     * typedef bool __vcrt_bool
-     * }
-     */
-    public static final OfBoolean __vcrt_bool = SteamFlat.C_BOOL;
-    /**
-     * {@snippet lang=c :
-     * typedef unsigned short wchar_t
-     * }
-     */
-    public static final OfShort wchar_t = SteamFlat.C_SHORT;
-
-    private static class __security_init_cookie {
-        public static final FunctionDescriptor DESC = FunctionDescriptor.ofVoid(    );
-
-        public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(
-                    SteamFlat.findOrThrow("__security_init_cookie"),
-                    DESC);
-    }
-
-    /**
-     * Function descriptor for:
-     * {@snippet lang=c :
-     * void __security_init_cookie()
-     * }
-     */
-    public static FunctionDescriptor __security_init_cookie$descriptor() {
-        return __security_init_cookie.DESC;
-    }
-
-    /**
-     * Downcall method handle for:
-     * {@snippet lang=c :
-     * void __security_init_cookie()
-     * }
-     */
-    public static MethodHandle __security_init_cookie$handle() {
-        return __security_init_cookie.HANDLE;
-    }
-    /**
-     * {@snippet lang=c :
-     * void __security_init_cookie()
-     * }
-     */
-    public static void __security_init_cookie() {
-        var mh$ = __security_init_cookie.HANDLE;
-        try {
-            if (TRACE_DOWNCALLS) {
-                traceDowncall("__security_init_cookie");
-            }
-            mh$.invokeExact();
-        } catch (Throwable ex$) {
-           throw new AssertionError("should not reach here", ex$);
-        }
-    }
-
-    private static class __security_check_cookie {
-        public static final FunctionDescriptor DESC = FunctionDescriptor.ofVoid(
-            SteamFlat.C_LONG_LONG
-        );
-
-        public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(
-                    SteamFlat.findOrThrow("__security_check_cookie"),
-                    DESC);
-    }
-
-    /**
-     * Function descriptor for:
-     * {@snippet lang=c :
-     * void __security_check_cookie(uintptr_t _StackCookie)
-     * }
-     */
-    public static FunctionDescriptor __security_check_cookie$descriptor() {
-        return __security_check_cookie.DESC;
-    }
-
-    /**
-     * Downcall method handle for:
-     * {@snippet lang=c :
-     * void __security_check_cookie(uintptr_t _StackCookie)
-     * }
-     */
-    public static MethodHandle __security_check_cookie$handle() {
-        return __security_check_cookie.HANDLE;
-    }
-    /**
-     * {@snippet lang=c :
-     * void __security_check_cookie(uintptr_t _StackCookie)
-     * }
-     */
-    public static void __security_check_cookie(long _StackCookie) {
-        var mh$ = __security_check_cookie.HANDLE;
-        try {
-            if (TRACE_DOWNCALLS) {
-                traceDowncall("__security_check_cookie", _StackCookie);
-            }
-            mh$.invokeExact(_StackCookie);
-        } catch (Throwable ex$) {
-           throw new AssertionError("should not reach here", ex$);
-        }
-    }
-
-    private static class __report_gsfailure {
-        public static final FunctionDescriptor DESC = FunctionDescriptor.ofVoid(
-            SteamFlat.C_LONG_LONG
-        );
-
-        public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(
-                    SteamFlat.findOrThrow("__report_gsfailure"),
-                    DESC);
-    }
-
-    /**
-     * Function descriptor for:
-     * {@snippet lang=c :
-     * void __report_gsfailure(uintptr_t _StackCookie)
-     * }
-     */
-    public static FunctionDescriptor __report_gsfailure$descriptor() {
-        return __report_gsfailure.DESC;
-    }
-
-    /**
-     * Downcall method handle for:
-     * {@snippet lang=c :
-     * void __report_gsfailure(uintptr_t _StackCookie)
-     * }
-     */
-    public static MethodHandle __report_gsfailure$handle() {
-        return __report_gsfailure.HANDLE;
-    }
-    /**
-     * {@snippet lang=c :
-     * void __report_gsfailure(uintptr_t _StackCookie)
-     * }
-     */
-    public static void __report_gsfailure(long _StackCookie) {
-        var mh$ = __report_gsfailure.HANDLE;
-        try {
-            if (TRACE_DOWNCALLS) {
-                traceDowncall("__report_gsfailure", _StackCookie);
-            }
-            mh$.invokeExact(_StackCookie);
-        } catch (Throwable ex$) {
-           throw new AssertionError("should not reach here", ex$);
-        }
-    }
-
-    private static class __security_cookie$constants {
-        public static final OfLong LAYOUT = SteamFlat.C_LONG_LONG;
-        public static final MemorySegment SEGMENT = SteamFlat.findOrThrow("__security_cookie").reinterpret(LAYOUT.byteSize());
-    }
-
-    /**
-     * Layout for variable:
-     * {@snippet lang=c :
-     * extern uintptr_t __security_cookie
-     * }
-     */
-    public static OfLong __security_cookie$layout() {
-        return __security_cookie$constants.LAYOUT;
-    }
-
-    /**
-     * Segment for variable:
-     * {@snippet lang=c :
-     * extern uintptr_t __security_cookie
-     * }
-     */
-    public static MemorySegment __security_cookie$segment() {
-        return __security_cookie$constants.SEGMENT;
-    }
-
-    /**
-     * Getter for variable:
-     * {@snippet lang=c :
-     * extern uintptr_t __security_cookie
-     * }
-     */
-    public static long __security_cookie() {
-        return __security_cookie$constants.SEGMENT.get(__security_cookie$constants.LAYOUT, 0L);
-    }
-
-    /**
-     * Setter for variable:
-     * {@snippet lang=c :
-     * extern uintptr_t __security_cookie
-     * }
-     */
-    public static void __security_cookie(long varValue) {
-        __security_cookie$constants.SEGMENT.set(__security_cookie$constants.LAYOUT, 0L, varValue);
     }
     /**
      * {@snippet lang=c :
@@ -559,112 +415,458 @@ public class SteamFlat_3 {
     public static final OfLong uint64_t = SteamFlat.C_LONG_LONG;
     /**
      * {@snippet lang=c :
-     * typedef signed char int_least8_t
+     * typedef int8_t int_least8_t
      * }
      */
     public static final OfByte int_least8_t = SteamFlat.C_CHAR;
     /**
      * {@snippet lang=c :
-     * typedef short int_least16_t
+     * typedef int16_t int_least16_t
      * }
      */
     public static final OfShort int_least16_t = SteamFlat.C_SHORT;
     /**
      * {@snippet lang=c :
-     * typedef int int_least32_t
+     * typedef int32_t int_least32_t
      * }
      */
     public static final OfInt int_least32_t = SteamFlat.C_INT;
     /**
      * {@snippet lang=c :
-     * typedef long long int_least64_t
+     * typedef int64_t int_least64_t
      * }
      */
     public static final OfLong int_least64_t = SteamFlat.C_LONG_LONG;
     /**
      * {@snippet lang=c :
-     * typedef unsigned char uint_least8_t
+     * typedef uint8_t uint_least8_t
      * }
      */
     public static final OfByte uint_least8_t = SteamFlat.C_CHAR;
     /**
      * {@snippet lang=c :
-     * typedef unsigned short uint_least16_t
+     * typedef uint16_t uint_least16_t
      * }
      */
     public static final OfShort uint_least16_t = SteamFlat.C_SHORT;
     /**
      * {@snippet lang=c :
-     * typedef unsigned int uint_least32_t
+     * typedef uint32_t uint_least32_t
      * }
      */
     public static final OfInt uint_least32_t = SteamFlat.C_INT;
     /**
      * {@snippet lang=c :
-     * typedef unsigned long long uint_least64_t
+     * typedef uint64_t uint_least64_t
      * }
      */
     public static final OfLong uint_least64_t = SteamFlat.C_LONG_LONG;
     /**
      * {@snippet lang=c :
-     * typedef signed char int_fast8_t
+     * typedef int8_t int_fast8_t
      * }
      */
     public static final OfByte int_fast8_t = SteamFlat.C_CHAR;
     /**
      * {@snippet lang=c :
-     * typedef int int_fast16_t
+     * typedef int16_t int_fast16_t
      * }
      */
-    public static final OfInt int_fast16_t = SteamFlat.C_INT;
+    public static final OfShort int_fast16_t = SteamFlat.C_SHORT;
     /**
      * {@snippet lang=c :
-     * typedef int int_fast32_t
+     * typedef int32_t int_fast32_t
      * }
      */
     public static final OfInt int_fast32_t = SteamFlat.C_INT;
     /**
      * {@snippet lang=c :
-     * typedef long long int_fast64_t
+     * typedef int64_t int_fast64_t
      * }
      */
     public static final OfLong int_fast64_t = SteamFlat.C_LONG_LONG;
     /**
      * {@snippet lang=c :
-     * typedef unsigned char uint_fast8_t
+     * typedef uint8_t uint_fast8_t
      * }
      */
     public static final OfByte uint_fast8_t = SteamFlat.C_CHAR;
     /**
      * {@snippet lang=c :
-     * typedef unsigned int uint_fast16_t
+     * typedef uint16_t uint_fast16_t
      * }
      */
-    public static final OfInt uint_fast16_t = SteamFlat.C_INT;
+    public static final OfShort uint_fast16_t = SteamFlat.C_SHORT;
     /**
      * {@snippet lang=c :
-     * typedef unsigned int uint_fast32_t
+     * typedef uint32_t uint_fast32_t
      * }
      */
     public static final OfInt uint_fast32_t = SteamFlat.C_INT;
     /**
      * {@snippet lang=c :
-     * typedef unsigned long long uint_fast64_t
+     * typedef uint64_t uint_fast64_t
      * }
      */
     public static final OfLong uint_fast64_t = SteamFlat.C_LONG_LONG;
     /**
      * {@snippet lang=c :
-     * typedef long long intmax_t
+     * typedef signed char __int8_t
      * }
      */
-    public static final OfLong intmax_t = SteamFlat.C_LONG_LONG;
+    public static final OfByte __int8_t = SteamFlat.C_CHAR;
     /**
      * {@snippet lang=c :
-     * typedef unsigned long long uintmax_t
+     * typedef unsigned char __uint8_t
      * }
      */
-    public static final OfLong uintmax_t = SteamFlat.C_LONG_LONG;
+    public static final OfByte __uint8_t = SteamFlat.C_CHAR;
+    /**
+     * {@snippet lang=c :
+     * typedef short __int16_t
+     * }
+     */
+    public static final OfShort __int16_t = SteamFlat.C_SHORT;
+    /**
+     * {@snippet lang=c :
+     * typedef unsigned short __uint16_t
+     * }
+     */
+    public static final OfShort __uint16_t = SteamFlat.C_SHORT;
+    /**
+     * {@snippet lang=c :
+     * typedef int __int32_t
+     * }
+     */
+    public static final OfInt __int32_t = SteamFlat.C_INT;
+    /**
+     * {@snippet lang=c :
+     * typedef unsigned int __uint32_t
+     * }
+     */
+    public static final OfInt __uint32_t = SteamFlat.C_INT;
+    /**
+     * {@snippet lang=c :
+     * typedef long long __int64_t
+     * }
+     */
+    public static final OfLong __int64_t = SteamFlat.C_LONG_LONG;
+    /**
+     * {@snippet lang=c :
+     * typedef unsigned long long __uint64_t
+     * }
+     */
+    public static final OfLong __uint64_t = SteamFlat.C_LONG_LONG;
+    /**
+     * {@snippet lang=c :
+     * typedef long __darwin_intptr_t
+     * }
+     */
+    public static final OfLong __darwin_intptr_t = SteamFlat.C_LONG;
+    /**
+     * {@snippet lang=c :
+     * typedef unsigned int __darwin_natural_t
+     * }
+     */
+    public static final OfInt __darwin_natural_t = SteamFlat.C_INT;
+    /**
+     * {@snippet lang=c :
+     * typedef int __darwin_ct_rune_t
+     * }
+     */
+    public static final OfInt __darwin_ct_rune_t = SteamFlat.C_INT;
+    /**
+     * {@snippet lang=c :
+     * typedef long __darwin_ptrdiff_t
+     * }
+     */
+    public static final OfLong __darwin_ptrdiff_t = SteamFlat.C_LONG;
+    /**
+     * {@snippet lang=c :
+     * typedef unsigned long __darwin_size_t
+     * }
+     */
+    public static final OfLong __darwin_size_t = SteamFlat.C_LONG;
+    /**
+     * {@snippet lang=c :
+     * typedef __builtin_va_list __darwin_va_list
+     * }
+     */
+    public static final AddressLayout __darwin_va_list = SteamFlat.C_POINTER;
+    /**
+     * {@snippet lang=c :
+     * typedef int __darwin_wchar_t
+     * }
+     */
+    public static final OfInt __darwin_wchar_t = SteamFlat.C_INT;
+    /**
+     * {@snippet lang=c :
+     * typedef __darwin_wchar_t __darwin_rune_t
+     * }
+     */
+    public static final OfInt __darwin_rune_t = SteamFlat.C_INT;
+    /**
+     * {@snippet lang=c :
+     * typedef int __darwin_wint_t
+     * }
+     */
+    public static final OfInt __darwin_wint_t = SteamFlat.C_INT;
+    /**
+     * {@snippet lang=c :
+     * typedef unsigned long __darwin_clock_t
+     * }
+     */
+    public static final OfLong __darwin_clock_t = SteamFlat.C_LONG;
+    /**
+     * {@snippet lang=c :
+     * typedef __uint32_t __darwin_socklen_t
+     * }
+     */
+    public static final OfInt __darwin_socklen_t = SteamFlat.C_INT;
+    /**
+     * {@snippet lang=c :
+     * typedef long __darwin_ssize_t
+     * }
+     */
+    public static final OfLong __darwin_ssize_t = SteamFlat.C_LONG;
+    /**
+     * {@snippet lang=c :
+     * typedef long __darwin_time_t
+     * }
+     */
+    public static final OfLong __darwin_time_t = SteamFlat.C_LONG;
+    /**
+     * {@snippet lang=c :
+     * typedef __int64_t __darwin_blkcnt_t
+     * }
+     */
+    public static final OfLong __darwin_blkcnt_t = SteamFlat.C_LONG_LONG;
+    /**
+     * {@snippet lang=c :
+     * typedef __int32_t __darwin_blksize_t
+     * }
+     */
+    public static final OfInt __darwin_blksize_t = SteamFlat.C_INT;
+    /**
+     * {@snippet lang=c :
+     * typedef __int32_t __darwin_dev_t
+     * }
+     */
+    public static final OfInt __darwin_dev_t = SteamFlat.C_INT;
+    /**
+     * {@snippet lang=c :
+     * typedef unsigned int __darwin_fsblkcnt_t
+     * }
+     */
+    public static final OfInt __darwin_fsblkcnt_t = SteamFlat.C_INT;
+    /**
+     * {@snippet lang=c :
+     * typedef unsigned int __darwin_fsfilcnt_t
+     * }
+     */
+    public static final OfInt __darwin_fsfilcnt_t = SteamFlat.C_INT;
+    /**
+     * {@snippet lang=c :
+     * typedef __uint32_t __darwin_gid_t
+     * }
+     */
+    public static final OfInt __darwin_gid_t = SteamFlat.C_INT;
+    /**
+     * {@snippet lang=c :
+     * typedef __uint32_t __darwin_id_t
+     * }
+     */
+    public static final OfInt __darwin_id_t = SteamFlat.C_INT;
+    /**
+     * {@snippet lang=c :
+     * typedef __uint64_t __darwin_ino64_t
+     * }
+     */
+    public static final OfLong __darwin_ino64_t = SteamFlat.C_LONG_LONG;
+    /**
+     * {@snippet lang=c :
+     * typedef __darwin_ino64_t __darwin_ino_t
+     * }
+     */
+    public static final OfLong __darwin_ino_t = SteamFlat.C_LONG_LONG;
+    /**
+     * {@snippet lang=c :
+     * typedef __darwin_natural_t __darwin_mach_port_name_t
+     * }
+     */
+    public static final OfInt __darwin_mach_port_name_t = SteamFlat.C_INT;
+    /**
+     * {@snippet lang=c :
+     * typedef __darwin_mach_port_name_t __darwin_mach_port_t
+     * }
+     */
+    public static final OfInt __darwin_mach_port_t = SteamFlat.C_INT;
+    /**
+     * {@snippet lang=c :
+     * typedef __uint16_t __darwin_mode_t
+     * }
+     */
+    public static final OfShort __darwin_mode_t = SteamFlat.C_SHORT;
+    /**
+     * {@snippet lang=c :
+     * typedef __int64_t __darwin_off_t
+     * }
+     */
+    public static final OfLong __darwin_off_t = SteamFlat.C_LONG_LONG;
+    /**
+     * {@snippet lang=c :
+     * typedef __int32_t __darwin_pid_t
+     * }
+     */
+    public static final OfInt __darwin_pid_t = SteamFlat.C_INT;
+    /**
+     * {@snippet lang=c :
+     * typedef __uint32_t __darwin_sigset_t
+     * }
+     */
+    public static final OfInt __darwin_sigset_t = SteamFlat.C_INT;
+    /**
+     * {@snippet lang=c :
+     * typedef __int32_t __darwin_suseconds_t
+     * }
+     */
+    public static final OfInt __darwin_suseconds_t = SteamFlat.C_INT;
+    /**
+     * {@snippet lang=c :
+     * typedef __uint32_t __darwin_uid_t
+     * }
+     */
+    public static final OfInt __darwin_uid_t = SteamFlat.C_INT;
+    /**
+     * {@snippet lang=c :
+     * typedef __uint32_t __darwin_useconds_t
+     * }
+     */
+    public static final OfInt __darwin_useconds_t = SteamFlat.C_INT;
+    /**
+     * {@snippet lang=c :
+     * typedef unsigned long __darwin_pthread_key_t
+     * }
+     */
+    public static final OfLong __darwin_pthread_key_t = SteamFlat.C_LONG;
+    /**
+     * {@snippet lang=c :
+     * typedef struct _opaque_pthread_t {
+     *     long __sig;
+     *     struct __darwin_pthread_handler_rec *__cleanup_stack;
+     *     char __opaque[8176];
+     * } *__darwin_pthread_t
+     * }
+     */
+    public static final AddressLayout __darwin_pthread_t = SteamFlat.C_POINTER;
+    /**
+     * {@snippet lang=c :
+     * typedef unsigned char u_int8_t
+     * }
+     */
+    public static final OfByte u_int8_t = SteamFlat.C_CHAR;
+    /**
+     * {@snippet lang=c :
+     * typedef unsigned short u_int16_t
+     * }
+     */
+    public static final OfShort u_int16_t = SteamFlat.C_SHORT;
+    /**
+     * {@snippet lang=c :
+     * typedef unsigned int u_int32_t
+     * }
+     */
+    public static final OfInt u_int32_t = SteamFlat.C_INT;
+    /**
+     * {@snippet lang=c :
+     * typedef unsigned long long u_int64_t
+     * }
+     */
+    public static final OfLong u_int64_t = SteamFlat.C_LONG_LONG;
+    /**
+     * {@snippet lang=c :
+     * typedef int64_t register_t
+     * }
+     */
+    public static final OfLong register_t = SteamFlat.C_LONG_LONG;
+    /**
+     * {@snippet lang=c :
+     * typedef unsigned long uintptr_t
+     * }
+     */
+    public static final OfLong uintptr_t = SteamFlat.C_LONG;
+    /**
+     * {@snippet lang=c :
+     * typedef u_int64_t user_addr_t
+     * }
+     */
+    public static final OfLong user_addr_t = SteamFlat.C_LONG_LONG;
+    /**
+     * {@snippet lang=c :
+     * typedef u_int64_t user_size_t
+     * }
+     */
+    public static final OfLong user_size_t = SteamFlat.C_LONG_LONG;
+    /**
+     * {@snippet lang=c :
+     * typedef int64_t user_ssize_t
+     * }
+     */
+    public static final OfLong user_ssize_t = SteamFlat.C_LONG_LONG;
+    /**
+     * {@snippet lang=c :
+     * typedef int64_t user_long_t
+     * }
+     */
+    public static final OfLong user_long_t = SteamFlat.C_LONG_LONG;
+    /**
+     * {@snippet lang=c :
+     * typedef u_int64_t user_ulong_t
+     * }
+     */
+    public static final OfLong user_ulong_t = SteamFlat.C_LONG_LONG;
+    /**
+     * {@snippet lang=c :
+     * typedef int64_t user_time_t
+     * }
+     */
+    public static final OfLong user_time_t = SteamFlat.C_LONG_LONG;
+    /**
+     * {@snippet lang=c :
+     * typedef int64_t user_off_t
+     * }
+     */
+    public static final OfLong user_off_t = SteamFlat.C_LONG_LONG;
+    /**
+     * {@snippet lang=c :
+     * typedef u_int64_t syscall_arg_t
+     * }
+     */
+    public static final OfLong syscall_arg_t = SteamFlat.C_LONG_LONG;
+    /**
+     * {@snippet lang=c :
+     * typedef __darwin_intptr_t intptr_t
+     * }
+     */
+    public static final OfLong intptr_t = SteamFlat.C_LONG;
+    /**
+     * {@snippet lang=c :
+     * typedef long intmax_t
+     * }
+     */
+    public static final OfLong intmax_t = SteamFlat.C_LONG;
+    /**
+     * {@snippet lang=c :
+     * typedef unsigned long uintmax_t
+     * }
+     */
+    public static final OfLong uintmax_t = SteamFlat.C_LONG;
+    /**
+     * {@snippet lang=c :
+     * typedef uint64_t size_t
+     * }
+     */
+    public static final OfLong size_t = SteamFlat.C_LONG_LONG;
     /**
      * {@snippet lang=c :
      * typedef uint64_t uint64_gameid
@@ -8608,555 +8810,6 @@ public class SteamFlat_3 {
      */
     public static int k_EInputActionOrigin_PS5_LeftPad_Click() {
         return k_EInputActionOrigin_PS5_LeftPad_Click;
-    }
-    private static final int k_EInputActionOrigin_PS5_LeftPad_DPadNorth = (int)270L;
-    /**
-     * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_PS5_LeftPad_DPadNorth = 270
-     * }
-     */
-    public static int k_EInputActionOrigin_PS5_LeftPad_DPadNorth() {
-        return k_EInputActionOrigin_PS5_LeftPad_DPadNorth;
-    }
-    private static final int k_EInputActionOrigin_PS5_LeftPad_DPadSouth = (int)271L;
-    /**
-     * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_PS5_LeftPad_DPadSouth = 271
-     * }
-     */
-    public static int k_EInputActionOrigin_PS5_LeftPad_DPadSouth() {
-        return k_EInputActionOrigin_PS5_LeftPad_DPadSouth;
-    }
-    private static final int k_EInputActionOrigin_PS5_LeftPad_DPadWest = (int)272L;
-    /**
-     * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_PS5_LeftPad_DPadWest = 272
-     * }
-     */
-    public static int k_EInputActionOrigin_PS5_LeftPad_DPadWest() {
-        return k_EInputActionOrigin_PS5_LeftPad_DPadWest;
-    }
-    private static final int k_EInputActionOrigin_PS5_LeftPad_DPadEast = (int)273L;
-    /**
-     * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_PS5_LeftPad_DPadEast = 273
-     * }
-     */
-    public static int k_EInputActionOrigin_PS5_LeftPad_DPadEast() {
-        return k_EInputActionOrigin_PS5_LeftPad_DPadEast;
-    }
-    private static final int k_EInputActionOrigin_PS5_RightPad_Touch = (int)274L;
-    /**
-     * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_PS5_RightPad_Touch = 274
-     * }
-     */
-    public static int k_EInputActionOrigin_PS5_RightPad_Touch() {
-        return k_EInputActionOrigin_PS5_RightPad_Touch;
-    }
-    private static final int k_EInputActionOrigin_PS5_RightPad_Swipe = (int)275L;
-    /**
-     * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_PS5_RightPad_Swipe = 275
-     * }
-     */
-    public static int k_EInputActionOrigin_PS5_RightPad_Swipe() {
-        return k_EInputActionOrigin_PS5_RightPad_Swipe;
-    }
-    private static final int k_EInputActionOrigin_PS5_RightPad_Click = (int)276L;
-    /**
-     * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_PS5_RightPad_Click = 276
-     * }
-     */
-    public static int k_EInputActionOrigin_PS5_RightPad_Click() {
-        return k_EInputActionOrigin_PS5_RightPad_Click;
-    }
-    private static final int k_EInputActionOrigin_PS5_RightPad_DPadNorth = (int)277L;
-    /**
-     * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_PS5_RightPad_DPadNorth = 277
-     * }
-     */
-    public static int k_EInputActionOrigin_PS5_RightPad_DPadNorth() {
-        return k_EInputActionOrigin_PS5_RightPad_DPadNorth;
-    }
-    private static final int k_EInputActionOrigin_PS5_RightPad_DPadSouth = (int)278L;
-    /**
-     * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_PS5_RightPad_DPadSouth = 278
-     * }
-     */
-    public static int k_EInputActionOrigin_PS5_RightPad_DPadSouth() {
-        return k_EInputActionOrigin_PS5_RightPad_DPadSouth;
-    }
-    private static final int k_EInputActionOrigin_PS5_RightPad_DPadWest = (int)279L;
-    /**
-     * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_PS5_RightPad_DPadWest = 279
-     * }
-     */
-    public static int k_EInputActionOrigin_PS5_RightPad_DPadWest() {
-        return k_EInputActionOrigin_PS5_RightPad_DPadWest;
-    }
-    private static final int k_EInputActionOrigin_PS5_RightPad_DPadEast = (int)280L;
-    /**
-     * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_PS5_RightPad_DPadEast = 280
-     * }
-     */
-    public static int k_EInputActionOrigin_PS5_RightPad_DPadEast() {
-        return k_EInputActionOrigin_PS5_RightPad_DPadEast;
-    }
-    private static final int k_EInputActionOrigin_PS5_CenterPad_Touch = (int)281L;
-    /**
-     * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_PS5_CenterPad_Touch = 281
-     * }
-     */
-    public static int k_EInputActionOrigin_PS5_CenterPad_Touch() {
-        return k_EInputActionOrigin_PS5_CenterPad_Touch;
-    }
-    private static final int k_EInputActionOrigin_PS5_CenterPad_Swipe = (int)282L;
-    /**
-     * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_PS5_CenterPad_Swipe = 282
-     * }
-     */
-    public static int k_EInputActionOrigin_PS5_CenterPad_Swipe() {
-        return k_EInputActionOrigin_PS5_CenterPad_Swipe;
-    }
-    private static final int k_EInputActionOrigin_PS5_CenterPad_Click = (int)283L;
-    /**
-     * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_PS5_CenterPad_Click = 283
-     * }
-     */
-    public static int k_EInputActionOrigin_PS5_CenterPad_Click() {
-        return k_EInputActionOrigin_PS5_CenterPad_Click;
-    }
-    private static final int k_EInputActionOrigin_PS5_CenterPad_DPadNorth = (int)284L;
-    /**
-     * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_PS5_CenterPad_DPadNorth = 284
-     * }
-     */
-    public static int k_EInputActionOrigin_PS5_CenterPad_DPadNorth() {
-        return k_EInputActionOrigin_PS5_CenterPad_DPadNorth;
-    }
-    private static final int k_EInputActionOrigin_PS5_CenterPad_DPadSouth = (int)285L;
-    /**
-     * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_PS5_CenterPad_DPadSouth = 285
-     * }
-     */
-    public static int k_EInputActionOrigin_PS5_CenterPad_DPadSouth() {
-        return k_EInputActionOrigin_PS5_CenterPad_DPadSouth;
-    }
-    private static final int k_EInputActionOrigin_PS5_CenterPad_DPadWest = (int)286L;
-    /**
-     * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_PS5_CenterPad_DPadWest = 286
-     * }
-     */
-    public static int k_EInputActionOrigin_PS5_CenterPad_DPadWest() {
-        return k_EInputActionOrigin_PS5_CenterPad_DPadWest;
-    }
-    private static final int k_EInputActionOrigin_PS5_CenterPad_DPadEast = (int)287L;
-    /**
-     * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_PS5_CenterPad_DPadEast = 287
-     * }
-     */
-    public static int k_EInputActionOrigin_PS5_CenterPad_DPadEast() {
-        return k_EInputActionOrigin_PS5_CenterPad_DPadEast;
-    }
-    private static final int k_EInputActionOrigin_PS5_LeftTrigger_Pull = (int)288L;
-    /**
-     * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_PS5_LeftTrigger_Pull = 288
-     * }
-     */
-    public static int k_EInputActionOrigin_PS5_LeftTrigger_Pull() {
-        return k_EInputActionOrigin_PS5_LeftTrigger_Pull;
-    }
-    private static final int k_EInputActionOrigin_PS5_LeftTrigger_Click = (int)289L;
-    /**
-     * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_PS5_LeftTrigger_Click = 289
-     * }
-     */
-    public static int k_EInputActionOrigin_PS5_LeftTrigger_Click() {
-        return k_EInputActionOrigin_PS5_LeftTrigger_Click;
-    }
-    private static final int k_EInputActionOrigin_PS5_RightTrigger_Pull = (int)290L;
-    /**
-     * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_PS5_RightTrigger_Pull = 290
-     * }
-     */
-    public static int k_EInputActionOrigin_PS5_RightTrigger_Pull() {
-        return k_EInputActionOrigin_PS5_RightTrigger_Pull;
-    }
-    private static final int k_EInputActionOrigin_PS5_RightTrigger_Click = (int)291L;
-    /**
-     * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_PS5_RightTrigger_Click = 291
-     * }
-     */
-    public static int k_EInputActionOrigin_PS5_RightTrigger_Click() {
-        return k_EInputActionOrigin_PS5_RightTrigger_Click;
-    }
-    private static final int k_EInputActionOrigin_PS5_LeftStick_Move = (int)292L;
-    /**
-     * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_PS5_LeftStick_Move = 292
-     * }
-     */
-    public static int k_EInputActionOrigin_PS5_LeftStick_Move() {
-        return k_EInputActionOrigin_PS5_LeftStick_Move;
-    }
-    private static final int k_EInputActionOrigin_PS5_LeftStick_Click = (int)293L;
-    /**
-     * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_PS5_LeftStick_Click = 293
-     * }
-     */
-    public static int k_EInputActionOrigin_PS5_LeftStick_Click() {
-        return k_EInputActionOrigin_PS5_LeftStick_Click;
-    }
-    private static final int k_EInputActionOrigin_PS5_LeftStick_DPadNorth = (int)294L;
-    /**
-     * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_PS5_LeftStick_DPadNorth = 294
-     * }
-     */
-    public static int k_EInputActionOrigin_PS5_LeftStick_DPadNorth() {
-        return k_EInputActionOrigin_PS5_LeftStick_DPadNorth;
-    }
-    private static final int k_EInputActionOrigin_PS5_LeftStick_DPadSouth = (int)295L;
-    /**
-     * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_PS5_LeftStick_DPadSouth = 295
-     * }
-     */
-    public static int k_EInputActionOrigin_PS5_LeftStick_DPadSouth() {
-        return k_EInputActionOrigin_PS5_LeftStick_DPadSouth;
-    }
-    private static final int k_EInputActionOrigin_PS5_LeftStick_DPadWest = (int)296L;
-    /**
-     * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_PS5_LeftStick_DPadWest = 296
-     * }
-     */
-    public static int k_EInputActionOrigin_PS5_LeftStick_DPadWest() {
-        return k_EInputActionOrigin_PS5_LeftStick_DPadWest;
-    }
-    private static final int k_EInputActionOrigin_PS5_LeftStick_DPadEast = (int)297L;
-    /**
-     * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_PS5_LeftStick_DPadEast = 297
-     * }
-     */
-    public static int k_EInputActionOrigin_PS5_LeftStick_DPadEast() {
-        return k_EInputActionOrigin_PS5_LeftStick_DPadEast;
-    }
-    private static final int k_EInputActionOrigin_PS5_RightStick_Move = (int)298L;
-    /**
-     * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_PS5_RightStick_Move = 298
-     * }
-     */
-    public static int k_EInputActionOrigin_PS5_RightStick_Move() {
-        return k_EInputActionOrigin_PS5_RightStick_Move;
-    }
-    private static final int k_EInputActionOrigin_PS5_RightStick_Click = (int)299L;
-    /**
-     * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_PS5_RightStick_Click = 299
-     * }
-     */
-    public static int k_EInputActionOrigin_PS5_RightStick_Click() {
-        return k_EInputActionOrigin_PS5_RightStick_Click;
-    }
-    private static final int k_EInputActionOrigin_PS5_RightStick_DPadNorth = (int)300L;
-    /**
-     * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_PS5_RightStick_DPadNorth = 300
-     * }
-     */
-    public static int k_EInputActionOrigin_PS5_RightStick_DPadNorth() {
-        return k_EInputActionOrigin_PS5_RightStick_DPadNorth;
-    }
-    private static final int k_EInputActionOrigin_PS5_RightStick_DPadSouth = (int)301L;
-    /**
-     * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_PS5_RightStick_DPadSouth = 301
-     * }
-     */
-    public static int k_EInputActionOrigin_PS5_RightStick_DPadSouth() {
-        return k_EInputActionOrigin_PS5_RightStick_DPadSouth;
-    }
-    private static final int k_EInputActionOrigin_PS5_RightStick_DPadWest = (int)302L;
-    /**
-     * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_PS5_RightStick_DPadWest = 302
-     * }
-     */
-    public static int k_EInputActionOrigin_PS5_RightStick_DPadWest() {
-        return k_EInputActionOrigin_PS5_RightStick_DPadWest;
-    }
-    private static final int k_EInputActionOrigin_PS5_RightStick_DPadEast = (int)303L;
-    /**
-     * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_PS5_RightStick_DPadEast = 303
-     * }
-     */
-    public static int k_EInputActionOrigin_PS5_RightStick_DPadEast() {
-        return k_EInputActionOrigin_PS5_RightStick_DPadEast;
-    }
-    private static final int k_EInputActionOrigin_PS5_DPad_North = (int)304L;
-    /**
-     * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_PS5_DPad_North = 304
-     * }
-     */
-    public static int k_EInputActionOrigin_PS5_DPad_North() {
-        return k_EInputActionOrigin_PS5_DPad_North;
-    }
-    private static final int k_EInputActionOrigin_PS5_DPad_South = (int)305L;
-    /**
-     * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_PS5_DPad_South = 305
-     * }
-     */
-    public static int k_EInputActionOrigin_PS5_DPad_South() {
-        return k_EInputActionOrigin_PS5_DPad_South;
-    }
-    private static final int k_EInputActionOrigin_PS5_DPad_West = (int)306L;
-    /**
-     * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_PS5_DPad_West = 306
-     * }
-     */
-    public static int k_EInputActionOrigin_PS5_DPad_West() {
-        return k_EInputActionOrigin_PS5_DPad_West;
-    }
-    private static final int k_EInputActionOrigin_PS5_DPad_East = (int)307L;
-    /**
-     * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_PS5_DPad_East = 307
-     * }
-     */
-    public static int k_EInputActionOrigin_PS5_DPad_East() {
-        return k_EInputActionOrigin_PS5_DPad_East;
-    }
-    private static final int k_EInputActionOrigin_PS5_Gyro_Move = (int)308L;
-    /**
-     * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_PS5_Gyro_Move = 308
-     * }
-     */
-    public static int k_EInputActionOrigin_PS5_Gyro_Move() {
-        return k_EInputActionOrigin_PS5_Gyro_Move;
-    }
-    private static final int k_EInputActionOrigin_PS5_Gyro_Pitch = (int)309L;
-    /**
-     * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_PS5_Gyro_Pitch = 309
-     * }
-     */
-    public static int k_EInputActionOrigin_PS5_Gyro_Pitch() {
-        return k_EInputActionOrigin_PS5_Gyro_Pitch;
-    }
-    private static final int k_EInputActionOrigin_PS5_Gyro_Yaw = (int)310L;
-    /**
-     * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_PS5_Gyro_Yaw = 310
-     * }
-     */
-    public static int k_EInputActionOrigin_PS5_Gyro_Yaw() {
-        return k_EInputActionOrigin_PS5_Gyro_Yaw;
-    }
-    private static final int k_EInputActionOrigin_PS5_Gyro_Roll = (int)311L;
-    /**
-     * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_PS5_Gyro_Roll = 311
-     * }
-     */
-    public static int k_EInputActionOrigin_PS5_Gyro_Roll() {
-        return k_EInputActionOrigin_PS5_Gyro_Roll;
-    }
-    private static final int k_EInputActionOrigin_PS5_DPad_Move = (int)312L;
-    /**
-     * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_PS5_DPad_Move = 312
-     * }
-     */
-    public static int k_EInputActionOrigin_PS5_DPad_Move() {
-        return k_EInputActionOrigin_PS5_DPad_Move;
-    }
-    private static final int k_EInputActionOrigin_PS5_LeftGrip = (int)313L;
-    /**
-     * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_PS5_LeftGrip = 313
-     * }
-     */
-    public static int k_EInputActionOrigin_PS5_LeftGrip() {
-        return k_EInputActionOrigin_PS5_LeftGrip;
-    }
-    private static final int k_EInputActionOrigin_PS5_RightGrip = (int)314L;
-    /**
-     * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_PS5_RightGrip = 314
-     * }
-     */
-    public static int k_EInputActionOrigin_PS5_RightGrip() {
-        return k_EInputActionOrigin_PS5_RightGrip;
-    }
-    private static final int k_EInputActionOrigin_PS5_LeftFn = (int)315L;
-    /**
-     * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_PS5_LeftFn = 315
-     * }
-     */
-    public static int k_EInputActionOrigin_PS5_LeftFn() {
-        return k_EInputActionOrigin_PS5_LeftFn;
-    }
-    private static final int k_EInputActionOrigin_PS5_RightFn = (int)316L;
-    /**
-     * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_PS5_RightFn = 316
-     * }
-     */
-    public static int k_EInputActionOrigin_PS5_RightFn() {
-        return k_EInputActionOrigin_PS5_RightFn;
-    }
-    private static final int k_EInputActionOrigin_PS5_Reserved5 = (int)317L;
-    /**
-     * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_PS5_Reserved5 = 317
-     * }
-     */
-    public static int k_EInputActionOrigin_PS5_Reserved5() {
-        return k_EInputActionOrigin_PS5_Reserved5;
-    }
-    private static final int k_EInputActionOrigin_PS5_Reserved6 = (int)318L;
-    /**
-     * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_PS5_Reserved6 = 318
-     * }
-     */
-    public static int k_EInputActionOrigin_PS5_Reserved6() {
-        return k_EInputActionOrigin_PS5_Reserved6;
-    }
-    private static final int k_EInputActionOrigin_PS5_Reserved7 = (int)319L;
-    /**
-     * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_PS5_Reserved7 = 319
-     * }
-     */
-    public static int k_EInputActionOrigin_PS5_Reserved7() {
-        return k_EInputActionOrigin_PS5_Reserved7;
-    }
-    private static final int k_EInputActionOrigin_PS5_Reserved8 = (int)320L;
-    /**
-     * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_PS5_Reserved8 = 320
-     * }
-     */
-    public static int k_EInputActionOrigin_PS5_Reserved8() {
-        return k_EInputActionOrigin_PS5_Reserved8;
-    }
-    private static final int k_EInputActionOrigin_PS5_Reserved9 = (int)321L;
-    /**
-     * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_PS5_Reserved9 = 321
-     * }
-     */
-    public static int k_EInputActionOrigin_PS5_Reserved9() {
-        return k_EInputActionOrigin_PS5_Reserved9;
-    }
-    private static final int k_EInputActionOrigin_PS5_Reserved10 = (int)322L;
-    /**
-     * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_PS5_Reserved10 = 322
-     * }
-     */
-    public static int k_EInputActionOrigin_PS5_Reserved10() {
-        return k_EInputActionOrigin_PS5_Reserved10;
-    }
-    private static final int k_EInputActionOrigin_PS5_Reserved11 = (int)323L;
-    /**
-     * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_PS5_Reserved11 = 323
-     * }
-     */
-    public static int k_EInputActionOrigin_PS5_Reserved11() {
-        return k_EInputActionOrigin_PS5_Reserved11;
-    }
-    private static final int k_EInputActionOrigin_PS5_Reserved12 = (int)324L;
-    /**
-     * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_PS5_Reserved12 = 324
-     * }
-     */
-    public static int k_EInputActionOrigin_PS5_Reserved12() {
-        return k_EInputActionOrigin_PS5_Reserved12;
-    }
-    private static final int k_EInputActionOrigin_PS5_Reserved13 = (int)325L;
-    /**
-     * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_PS5_Reserved13 = 325
-     * }
-     */
-    public static int k_EInputActionOrigin_PS5_Reserved13() {
-        return k_EInputActionOrigin_PS5_Reserved13;
-    }
-    private static final int k_EInputActionOrigin_PS5_Reserved14 = (int)326L;
-    /**
-     * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_PS5_Reserved14 = 326
-     * }
-     */
-    public static int k_EInputActionOrigin_PS5_Reserved14() {
-        return k_EInputActionOrigin_PS5_Reserved14;
-    }
-    private static final int k_EInputActionOrigin_PS5_Reserved15 = (int)327L;
-    /**
-     * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_PS5_Reserved15 = 327
-     * }
-     */
-    public static int k_EInputActionOrigin_PS5_Reserved15() {
-        return k_EInputActionOrigin_PS5_Reserved15;
-    }
-    private static final int k_EInputActionOrigin_PS5_Reserved16 = (int)328L;
-    /**
-     * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_PS5_Reserved16 = 328
-     * }
-     */
-    public static int k_EInputActionOrigin_PS5_Reserved16() {
-        return k_EInputActionOrigin_PS5_Reserved16;
-    }
-    private static final int k_EInputActionOrigin_PS5_Reserved17 = (int)329L;
-    /**
-     * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_PS5_Reserved17 = 329
-     * }
-     */
-    public static int k_EInputActionOrigin_PS5_Reserved17() {
-        return k_EInputActionOrigin_PS5_Reserved17;
-    }
-    private static final int k_EInputActionOrigin_PS5_Reserved18 = (int)330L;
-    /**
-     * {@snippet lang=c :
-     * enum EInputActionOrigin.k_EInputActionOrigin_PS5_Reserved18 = 330
-     * }
-     */
-    public static int k_EInputActionOrigin_PS5_Reserved18() {
-        return k_EInputActionOrigin_PS5_Reserved18;
     }
 }
 

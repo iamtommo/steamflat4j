@@ -25,7 +25,7 @@ public class MusicPlayerRemoteToFront_t {
     }
 
     private static final GroupLayout $LAYOUT = MemoryLayout.structLayout(
-        MemoryLayout.paddingLayout(4)
+
     ).withName("MusicPlayerRemoteToFront_t");
 
     /**

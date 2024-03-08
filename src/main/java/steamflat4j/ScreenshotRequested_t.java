@@ -25,7 +25,7 @@ public class ScreenshotRequested_t {
     }
 
     private static final GroupLayout $LAYOUT = MemoryLayout.structLayout(
-        MemoryLayout.paddingLayout(4)
+
     ).withName("ScreenshotRequested_t");
 
     /**

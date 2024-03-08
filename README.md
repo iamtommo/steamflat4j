@@ -25,6 +25,61 @@ try (var arena = Arena.ofConfined()) {
 }
 ```
 
+### Callbacks
+Steam manual dispatch callbacks look like this in C++:
+```C
+
+ HSteamPipe hSteamPipe = SteamAPI_GetHSteamPipe(); // See also SteamGameServer_GetHSteamPipe()
+ 	SteamAPI_ManualDispatch_RunFrame( hSteamPipe )
+ 	CallbackMsg_t callback;
+ 	while ( SteamAPI_ManualDispatch_GetNextCallback( hSteamPipe, &callback ) )
+ 	    {
+ 		// Check for dispatching API call results
+ 		if ( callback.m_iCallback == SteamAPICallCompleted_t::k_iCallback )
+        {
+ 			SteamAPICallCompleted_t *pCallCompleted = (SteamAPICallCompleted_t *)callback.
+ 			void *pTmpCallResult = malloc( pCallback->m_cubParam );
+ 			bool bFailed;
+ 			if ( SteamAPI_ManualDispatch_GetAPICallResult( hSteamPipe, pCallCompleted->m_hAsyncCall, pTmpCallResult, pCallback->m_cubParam, pCallback->m_iCallback, &bFailed ) )
+            {
+ 				// Dispatch the call result to the registered handler(s) for the
+ 				// call identified by pCallCompleted->m_hAsyncCall
+            }
+ 			free( pTmpCallResult );
+        }
+ 		else
+        {
+ 			// Look at callback.m_iCallback to see what kind of callback it is,
+ 			// and dispatch to appropriate handler(s)
+        }
+ 		SteamAPI_ManualDispatch_FreeLastCallback( hSteamPipe );
+    }
+```
+
+The Java equivalent looks like this:
+```java
+try (var arena = Arena.ofConfined()) {
+            var steamPipe = SteamAPI_GetHSteamPipe();
+            SteamAPI_ManualDispatch_RunFrame(steamPipe);
+            var callback = CallbackMsg_t.allocate(arena);
+            while (SteamAPI_ManualDispatch_GetNextCallback(steamPipe, callback)) {
+                var callbackId = CallbackMsg_t.m_iCallback(callback);
+                if (callbackId == k_iCallback_SteamAPICallCompleted_t()) {
+                    try (var callResultArena = Arena.ofConfined()) {
+                        var tmpCallResult = callResultArena.allocate(SteamAPICallCompleted_t.m_cubParam(callback));
+                        var failed = callResultArena.allocate(C_BOOL, 1);
+                        if (SteamAPI_ManualDispatch_GetAPICallResult(steamPipe, SteamAPICallCompleted_t.m_hAsyncCall(callback), tmpCallResult, SteamAPICallCompleted_t.m_cubParam(callback), SteamAPICallCompleted_t.m_iCallback(callback), failed)) {
+                            
+                        }
+                    }
+                } else {
+                    
+                }
+                SteamAPI_ManualDispatch_FreeLastCallback(steamPipe);
+            }
+}
+```
+
 
 ## Building
 ### Requirements
