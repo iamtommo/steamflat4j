@@ -236,12 +236,17 @@ public class C_API {
             var className = (String) iface.get("classname");
             var methods = (List<Map<String, Object>>) iface.get("methods");
             var accessors = (List<Map<String, Object>>) iface.get("accessors");
+            var versionString = (String) iface.get("version_string");
             if (methods != null) {
                 code.append(writeMethods(methods, className)).append("\n\n");
             }
             if (accessors != null) {
                 code.append(writeAccessors(className, accessors)).append("\n\n");
             }
+
+            // todo currently ISteamGameServer -> STEAMGAMESERVER
+            // but should maybe use accessor name
+            code.append(format("#define %s_INTERFACE_VERSION \"%s\"\n", className.substring(1).toUpperCase(), versionString));
         }
 
         // todo presumptuous packing
@@ -266,6 +271,7 @@ public class C_API {
                 typedef struct CallbackMsg_t CallbackMsg_t;
                 """);
 
+        // todo maybe unnecessary
         code.append("""
                 enum { k_iSteamUserCallbacks = 100 };
                 enum { k_iSteamGameServerCallbacks = 200 };
@@ -307,10 +313,30 @@ public class C_API {
                 enum { k_iSteamChatCallbacks = 5900 };
                 """);
 
+        code.append("HSteamPipe SteamAPI_GetHSteamPipe(void);\n");
+
         code.append("ESteamAPIInitResult SteamAPI_InitFlat( SteamErrMsg *pOutErrMsg );\n");
         code.append("void SteamAPI_Shutdown(void);\n");
         code.append("bool SteamAPI_RestartAppIfNecessary( uint32 unOwnAppID );\n");
-        code.append("HSteamPipe SteamAPI_GetHSteamPipe(void);\n");
+
+        // 	const char *pszInternalCheckInterfaceVersions =
+        //		STEAMUTILS_INTERFACE_VERSION "\0"
+        //		STEAMNETWORKINGUTILS_INTERFACE_VERSION "\0"
+        //
+        //		STEAMGAMESERVER_INTERFACE_VERSION "\0"
+        //		STEAMGAMESERVERSTATS_INTERFACE_VERSION "\0"
+        //		STEAMHTTP_INTERFACE_VERSION "\0"
+        //		STEAMINVENTORY_INTERFACE_VERSION "\0"
+        //		STEAMNETWORKING_INTERFACE_VERSION "\0"
+        //		STEAMNETWORKINGMESSAGES_INTERFACE_VERSION "\0"
+        //		STEAMNETWORKINGSOCKETS_INTERFACE_VERSION "\0"
+        //		STEAMUGC_INTERFACE_VERSION "\0"
+        //		"\0";
+        code.append("ESteamAPIInitResult SteamInternal_GameServer_Init_V2( uint32 unIP, uint16 usGamePort, uint16 usQueryPort, EServerMode eServerMode, const char *pchVersionString, const char *pszInternalCheckInterfaceVersions, SteamErrMsg *pOutErrMsg );\n");
+        code.append("void SteamGameServer_Shutdown(void);\n");
+        code.append("uint64 SteamGameServer_GetSteamID(void);\n");
+        code.append("bool SteamGameServer_BSecure(void);\n");
+
         code.append("void SteamAPI_ManualDispatch_Init(void);\n");
         code.append("void SteamAPI_ManualDispatch_RunFrame(HSteamPipe hSteamPipe);\n");
         code.append("bool SteamAPI_ManualDispatch_GetNextCallback( HSteamPipe hSteamPipe, CallbackMsg_t *pCallbackMsg );\n");

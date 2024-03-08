@@ -32,23 +32,18 @@ Steam manual dispatch callbacks look like this in C++:
  HSteamPipe hSteamPipe = SteamAPI_GetHSteamPipe(); // See also SteamGameServer_GetHSteamPipe()
  	SteamAPI_ManualDispatch_RunFrame( hSteamPipe )
  	CallbackMsg_t callback;
- 	while ( SteamAPI_ManualDispatch_GetNextCallback( hSteamPipe, &callback ) )
- 	    {
+ 	while ( SteamAPI_ManualDispatch_GetNextCallback( hSteamPipe, &callback ) ) {
  		// Check for dispatching API call results
- 		if ( callback.m_iCallback == SteamAPICallCompleted_t::k_iCallback )
-        {
+ 		if ( callback.m_iCallback == SteamAPICallCompleted_t::k_iCallback ) {
  			SteamAPICallCompleted_t *pCallCompleted = (SteamAPICallCompleted_t *)callback.
  			void *pTmpCallResult = malloc( pCallback->m_cubParam );
  			bool bFailed;
- 			if ( SteamAPI_ManualDispatch_GetAPICallResult( hSteamPipe, pCallCompleted->m_hAsyncCall, pTmpCallResult, pCallback->m_cubParam, pCallback->m_iCallback, &bFailed ) )
-            {
+ 			if ( SteamAPI_ManualDispatch_GetAPICallResult( hSteamPipe, pCallCompleted->m_hAsyncCall, pTmpCallResult, pCallback->m_cubParam, pCallback->m_iCallback, &bFailed ) ) {
  				// Dispatch the call result to the registered handler(s) for the
  				// call identified by pCallCompleted->m_hAsyncCall
             }
  			free( pTmpCallResult );
-        }
- 		else
-        {
+        } else {
  			// Look at callback.m_iCallback to see what kind of callback it is,
  			// and dispatch to appropriate handler(s)
         }

@@ -12946,6 +12946,51 @@ public class SteamFlat extends SteamFlat_1 {
         return k_iSteamChatCallbacks;
     }
 
+    private static class SteamAPI_GetHSteamPipe {
+        public static final FunctionDescriptor DESC = FunctionDescriptor.of(
+            SteamFlat.C_INT    );
+
+        public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(
+                    SteamFlat.findOrThrow("SteamAPI_GetHSteamPipe"),
+                    DESC);
+    }
+
+    /**
+     * Function descriptor for:
+     * {@snippet lang=c :
+     * HSteamPipe SteamAPI_GetHSteamPipe()
+     * }
+     */
+    public static FunctionDescriptor SteamAPI_GetHSteamPipe$descriptor() {
+        return SteamAPI_GetHSteamPipe.DESC;
+    }
+
+    /**
+     * Downcall method handle for:
+     * {@snippet lang=c :
+     * HSteamPipe SteamAPI_GetHSteamPipe()
+     * }
+     */
+    public static MethodHandle SteamAPI_GetHSteamPipe$handle() {
+        return SteamAPI_GetHSteamPipe.HANDLE;
+    }
+    /**
+     * {@snippet lang=c :
+     * HSteamPipe SteamAPI_GetHSteamPipe()
+     * }
+     */
+    public static int SteamAPI_GetHSteamPipe() {
+        var mh$ = SteamAPI_GetHSteamPipe.HANDLE;
+        try {
+            if (TRACE_DOWNCALLS) {
+                traceDowncall("SteamAPI_GetHSteamPipe");
+            }
+            return (int)mh$.invokeExact();
+        } catch (Throwable ex$) {
+           throw new AssertionError("should not reach here", ex$);
+        }
+    }
+
     private static class SteamAPI_InitFlat {
         public static final FunctionDescriptor DESC = FunctionDescriptor.of(
             SteamFlat.C_INT,
@@ -13084,46 +13129,188 @@ public class SteamFlat extends SteamFlat_1 {
         }
     }
 
-    private static class SteamAPI_GetHSteamPipe {
+    private static class SteamInternal_GameServer_Init_V2 {
         public static final FunctionDescriptor DESC = FunctionDescriptor.of(
-            SteamFlat.C_INT    );
+            SteamFlat.C_INT,
+            SteamFlat.C_INT,
+            SteamFlat.C_SHORT,
+            SteamFlat.C_SHORT,
+            SteamFlat.C_INT,
+            SteamFlat.C_POINTER,
+            SteamFlat.C_POINTER,
+            SteamFlat.C_POINTER
+        );
 
         public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(
-                    SteamFlat.findOrThrow("SteamAPI_GetHSteamPipe"),
+                    SteamFlat.findOrThrow("SteamInternal_GameServer_Init_V2"),
                     DESC);
     }
 
     /**
      * Function descriptor for:
      * {@snippet lang=c :
-     * HSteamPipe SteamAPI_GetHSteamPipe()
+     * ESteamAPIInitResult SteamInternal_GameServer_Init_V2(uint32 unIP, uint16 usGamePort, uint16 usQueryPort, EServerMode eServerMode, const char *pchVersionString, const char *pszInternalCheckInterfaceVersions, SteamErrMsg *pOutErrMsg)
      * }
      */
-    public static FunctionDescriptor SteamAPI_GetHSteamPipe$descriptor() {
-        return SteamAPI_GetHSteamPipe.DESC;
+    public static FunctionDescriptor SteamInternal_GameServer_Init_V2$descriptor() {
+        return SteamInternal_GameServer_Init_V2.DESC;
     }
 
     /**
      * Downcall method handle for:
      * {@snippet lang=c :
-     * HSteamPipe SteamAPI_GetHSteamPipe()
+     * ESteamAPIInitResult SteamInternal_GameServer_Init_V2(uint32 unIP, uint16 usGamePort, uint16 usQueryPort, EServerMode eServerMode, const char *pchVersionString, const char *pszInternalCheckInterfaceVersions, SteamErrMsg *pOutErrMsg)
      * }
      */
-    public static MethodHandle SteamAPI_GetHSteamPipe$handle() {
-        return SteamAPI_GetHSteamPipe.HANDLE;
+    public static MethodHandle SteamInternal_GameServer_Init_V2$handle() {
+        return SteamInternal_GameServer_Init_V2.HANDLE;
     }
     /**
      * {@snippet lang=c :
-     * HSteamPipe SteamAPI_GetHSteamPipe()
+     * ESteamAPIInitResult SteamInternal_GameServer_Init_V2(uint32 unIP, uint16 usGamePort, uint16 usQueryPort, EServerMode eServerMode, const char *pchVersionString, const char *pszInternalCheckInterfaceVersions, SteamErrMsg *pOutErrMsg)
      * }
      */
-    public static int SteamAPI_GetHSteamPipe() {
-        var mh$ = SteamAPI_GetHSteamPipe.HANDLE;
+    public static int SteamInternal_GameServer_Init_V2(int unIP, short usGamePort, short usQueryPort, int eServerMode, MemorySegment pchVersionString, MemorySegment pszInternalCheckInterfaceVersions, MemorySegment pOutErrMsg) {
+        var mh$ = SteamInternal_GameServer_Init_V2.HANDLE;
         try {
             if (TRACE_DOWNCALLS) {
-                traceDowncall("SteamAPI_GetHSteamPipe");
+                traceDowncall("SteamInternal_GameServer_Init_V2", unIP, usGamePort, usQueryPort, eServerMode, pchVersionString, pszInternalCheckInterfaceVersions, pOutErrMsg);
             }
-            return (int)mh$.invokeExact();
+            return (int)mh$.invokeExact(unIP, usGamePort, usQueryPort, eServerMode, pchVersionString, pszInternalCheckInterfaceVersions, pOutErrMsg);
+        } catch (Throwable ex$) {
+           throw new AssertionError("should not reach here", ex$);
+        }
+    }
+
+    private static class SteamGameServer_Shutdown {
+        public static final FunctionDescriptor DESC = FunctionDescriptor.ofVoid(    );
+
+        public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(
+                    SteamFlat.findOrThrow("SteamGameServer_Shutdown"),
+                    DESC);
+    }
+
+    /**
+     * Function descriptor for:
+     * {@snippet lang=c :
+     * void SteamGameServer_Shutdown()
+     * }
+     */
+    public static FunctionDescriptor SteamGameServer_Shutdown$descriptor() {
+        return SteamGameServer_Shutdown.DESC;
+    }
+
+    /**
+     * Downcall method handle for:
+     * {@snippet lang=c :
+     * void SteamGameServer_Shutdown()
+     * }
+     */
+    public static MethodHandle SteamGameServer_Shutdown$handle() {
+        return SteamGameServer_Shutdown.HANDLE;
+    }
+    /**
+     * {@snippet lang=c :
+     * void SteamGameServer_Shutdown()
+     * }
+     */
+    public static void SteamGameServer_Shutdown() {
+        var mh$ = SteamGameServer_Shutdown.HANDLE;
+        try {
+            if (TRACE_DOWNCALLS) {
+                traceDowncall("SteamGameServer_Shutdown");
+            }
+            mh$.invokeExact();
+        } catch (Throwable ex$) {
+           throw new AssertionError("should not reach here", ex$);
+        }
+    }
+
+    private static class SteamGameServer_GetSteamID {
+        public static final FunctionDescriptor DESC = FunctionDescriptor.of(
+            SteamFlat.C_LONG_LONG    );
+
+        public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(
+                    SteamFlat.findOrThrow("SteamGameServer_GetSteamID"),
+                    DESC);
+    }
+
+    /**
+     * Function descriptor for:
+     * {@snippet lang=c :
+     * uint64 SteamGameServer_GetSteamID()
+     * }
+     */
+    public static FunctionDescriptor SteamGameServer_GetSteamID$descriptor() {
+        return SteamGameServer_GetSteamID.DESC;
+    }
+
+    /**
+     * Downcall method handle for:
+     * {@snippet lang=c :
+     * uint64 SteamGameServer_GetSteamID()
+     * }
+     */
+    public static MethodHandle SteamGameServer_GetSteamID$handle() {
+        return SteamGameServer_GetSteamID.HANDLE;
+    }
+    /**
+     * {@snippet lang=c :
+     * uint64 SteamGameServer_GetSteamID()
+     * }
+     */
+    public static long SteamGameServer_GetSteamID() {
+        var mh$ = SteamGameServer_GetSteamID.HANDLE;
+        try {
+            if (TRACE_DOWNCALLS) {
+                traceDowncall("SteamGameServer_GetSteamID");
+            }
+            return (long)mh$.invokeExact();
+        } catch (Throwable ex$) {
+           throw new AssertionError("should not reach here", ex$);
+        }
+    }
+
+    private static class SteamGameServer_BSecure {
+        public static final FunctionDescriptor DESC = FunctionDescriptor.of(
+            SteamFlat.C_BOOL    );
+
+        public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(
+                    SteamFlat.findOrThrow("SteamGameServer_BSecure"),
+                    DESC);
+    }
+
+    /**
+     * Function descriptor for:
+     * {@snippet lang=c :
+     * bool SteamGameServer_BSecure()
+     * }
+     */
+    public static FunctionDescriptor SteamGameServer_BSecure$descriptor() {
+        return SteamGameServer_BSecure.DESC;
+    }
+
+    /**
+     * Downcall method handle for:
+     * {@snippet lang=c :
+     * bool SteamGameServer_BSecure()
+     * }
+     */
+    public static MethodHandle SteamGameServer_BSecure$handle() {
+        return SteamGameServer_BSecure.HANDLE;
+    }
+    /**
+     * {@snippet lang=c :
+     * bool SteamGameServer_BSecure()
+     * }
+     */
+    public static boolean SteamGameServer_BSecure() {
+        var mh$ = SteamGameServer_BSecure.HANDLE;
+        try {
+            if (TRACE_DOWNCALLS) {
+                traceDowncall("SteamGameServer_BSecure");
+            }
+            return (boolean)mh$.invokeExact();
         } catch (Throwable ex$) {
            throw new AssertionError("should not reach here", ex$);
         }
@@ -13843,6 +14030,402 @@ public class SteamFlat extends SteamFlat_1 {
      */
     public static int SIG_ATOMIC_MAX() {
         return SIG_ATOMIC_MAX;
+    }
+    /**
+     * {@snippet lang=c :
+     * #define STEAMCLIENT_INTERFACE_VERSION "null"
+     * }
+     */
+    public static MemorySegment STEAMCLIENT_INTERFACE_VERSION() {
+        class Holder {
+            static final MemorySegment STEAMCLIENT_INTERFACE_VERSION
+                = SteamFlat.LIBRARY_ARENA.allocateFrom("null");
+        }
+        return Holder.STEAMCLIENT_INTERFACE_VERSION;
+    }
+    /**
+     * {@snippet lang=c :
+     * #define STEAMUSER_INTERFACE_VERSION "SteamUser023"
+     * }
+     */
+    public static MemorySegment STEAMUSER_INTERFACE_VERSION() {
+        class Holder {
+            static final MemorySegment STEAMUSER_INTERFACE_VERSION
+                = SteamFlat.LIBRARY_ARENA.allocateFrom("SteamUser023");
+        }
+        return Holder.STEAMUSER_INTERFACE_VERSION;
+    }
+    /**
+     * {@snippet lang=c :
+     * #define STEAMFRIENDS_INTERFACE_VERSION "SteamFriends017"
+     * }
+     */
+    public static MemorySegment STEAMFRIENDS_INTERFACE_VERSION() {
+        class Holder {
+            static final MemorySegment STEAMFRIENDS_INTERFACE_VERSION
+                = SteamFlat.LIBRARY_ARENA.allocateFrom("SteamFriends017");
+        }
+        return Holder.STEAMFRIENDS_INTERFACE_VERSION;
+    }
+    /**
+     * {@snippet lang=c :
+     * #define STEAMUTILS_INTERFACE_VERSION "SteamUtils010"
+     * }
+     */
+    public static MemorySegment STEAMUTILS_INTERFACE_VERSION() {
+        class Holder {
+            static final MemorySegment STEAMUTILS_INTERFACE_VERSION
+                = SteamFlat.LIBRARY_ARENA.allocateFrom("SteamUtils010");
+        }
+        return Holder.STEAMUTILS_INTERFACE_VERSION;
+    }
+    /**
+     * {@snippet lang=c :
+     * #define STEAMMATCHMAKING_INTERFACE_VERSION "SteamMatchMaking009"
+     * }
+     */
+    public static MemorySegment STEAMMATCHMAKING_INTERFACE_VERSION() {
+        class Holder {
+            static final MemorySegment STEAMMATCHMAKING_INTERFACE_VERSION
+                = SteamFlat.LIBRARY_ARENA.allocateFrom("SteamMatchMaking009");
+        }
+        return Holder.STEAMMATCHMAKING_INTERFACE_VERSION;
+    }
+    /**
+     * {@snippet lang=c :
+     * #define STEAMMATCHMAKINGSERVERLISTRESPONSE_INTERFACE_VERSION "null"
+     * }
+     */
+    public static MemorySegment STEAMMATCHMAKINGSERVERLISTRESPONSE_INTERFACE_VERSION() {
+        class Holder {
+            static final MemorySegment STEAMMATCHMAKINGSERVERLISTRESPONSE_INTERFACE_VERSION
+                = SteamFlat.LIBRARY_ARENA.allocateFrom("null");
+        }
+        return Holder.STEAMMATCHMAKINGSERVERLISTRESPONSE_INTERFACE_VERSION;
+    }
+    /**
+     * {@snippet lang=c :
+     * #define STEAMMATCHMAKINGPINGRESPONSE_INTERFACE_VERSION "null"
+     * }
+     */
+    public static MemorySegment STEAMMATCHMAKINGPINGRESPONSE_INTERFACE_VERSION() {
+        class Holder {
+            static final MemorySegment STEAMMATCHMAKINGPINGRESPONSE_INTERFACE_VERSION
+                = SteamFlat.LIBRARY_ARENA.allocateFrom("null");
+        }
+        return Holder.STEAMMATCHMAKINGPINGRESPONSE_INTERFACE_VERSION;
+    }
+    /**
+     * {@snippet lang=c :
+     * #define STEAMMATCHMAKINGPLAYERSRESPONSE_INTERFACE_VERSION "null"
+     * }
+     */
+    public static MemorySegment STEAMMATCHMAKINGPLAYERSRESPONSE_INTERFACE_VERSION() {
+        class Holder {
+            static final MemorySegment STEAMMATCHMAKINGPLAYERSRESPONSE_INTERFACE_VERSION
+                = SteamFlat.LIBRARY_ARENA.allocateFrom("null");
+        }
+        return Holder.STEAMMATCHMAKINGPLAYERSRESPONSE_INTERFACE_VERSION;
+    }
+    /**
+     * {@snippet lang=c :
+     * #define STEAMMATCHMAKINGRULESRESPONSE_INTERFACE_VERSION "null"
+     * }
+     */
+    public static MemorySegment STEAMMATCHMAKINGRULESRESPONSE_INTERFACE_VERSION() {
+        class Holder {
+            static final MemorySegment STEAMMATCHMAKINGRULESRESPONSE_INTERFACE_VERSION
+                = SteamFlat.LIBRARY_ARENA.allocateFrom("null");
+        }
+        return Holder.STEAMMATCHMAKINGRULESRESPONSE_INTERFACE_VERSION;
+    }
+    /**
+     * {@snippet lang=c :
+     * #define STEAMMATCHMAKINGSERVERS_INTERFACE_VERSION "SteamMatchMakingServers002"
+     * }
+     */
+    public static MemorySegment STEAMMATCHMAKINGSERVERS_INTERFACE_VERSION() {
+        class Holder {
+            static final MemorySegment STEAMMATCHMAKINGSERVERS_INTERFACE_VERSION
+                = SteamFlat.LIBRARY_ARENA.allocateFrom("SteamMatchMakingServers002");
+        }
+        return Holder.STEAMMATCHMAKINGSERVERS_INTERFACE_VERSION;
+    }
+    /**
+     * {@snippet lang=c :
+     * #define STEAMGAMESEARCH_INTERFACE_VERSION "SteamMatchGameSearch001"
+     * }
+     */
+    public static MemorySegment STEAMGAMESEARCH_INTERFACE_VERSION() {
+        class Holder {
+            static final MemorySegment STEAMGAMESEARCH_INTERFACE_VERSION
+                = SteamFlat.LIBRARY_ARENA.allocateFrom("SteamMatchGameSearch001");
+        }
+        return Holder.STEAMGAMESEARCH_INTERFACE_VERSION;
+    }
+    /**
+     * {@snippet lang=c :
+     * #define STEAMPARTIES_INTERFACE_VERSION "SteamParties002"
+     * }
+     */
+    public static MemorySegment STEAMPARTIES_INTERFACE_VERSION() {
+        class Holder {
+            static final MemorySegment STEAMPARTIES_INTERFACE_VERSION
+                = SteamFlat.LIBRARY_ARENA.allocateFrom("SteamParties002");
+        }
+        return Holder.STEAMPARTIES_INTERFACE_VERSION;
+    }
+    /**
+     * {@snippet lang=c :
+     * #define STEAMREMOTESTORAGE_INTERFACE_VERSION "STEAMREMOTESTORAGE_INTERFACE_VERSION016"
+     * }
+     */
+    public static MemorySegment STEAMREMOTESTORAGE_INTERFACE_VERSION() {
+        class Holder {
+            static final MemorySegment STEAMREMOTESTORAGE_INTERFACE_VERSION
+                = SteamFlat.LIBRARY_ARENA.allocateFrom("STEAMREMOTESTORAGE_INTERFACE_VERSION016");
+        }
+        return Holder.STEAMREMOTESTORAGE_INTERFACE_VERSION;
+    }
+    /**
+     * {@snippet lang=c :
+     * #define STEAMUSERSTATS_INTERFACE_VERSION "STEAMUSERSTATS_INTERFACE_VERSION012"
+     * }
+     */
+    public static MemorySegment STEAMUSERSTATS_INTERFACE_VERSION() {
+        class Holder {
+            static final MemorySegment STEAMUSERSTATS_INTERFACE_VERSION
+                = SteamFlat.LIBRARY_ARENA.allocateFrom("STEAMUSERSTATS_INTERFACE_VERSION012");
+        }
+        return Holder.STEAMUSERSTATS_INTERFACE_VERSION;
+    }
+    /**
+     * {@snippet lang=c :
+     * #define STEAMAPPS_INTERFACE_VERSION "STEAMAPPS_INTERFACE_VERSION008"
+     * }
+     */
+    public static MemorySegment STEAMAPPS_INTERFACE_VERSION() {
+        class Holder {
+            static final MemorySegment STEAMAPPS_INTERFACE_VERSION
+                = SteamFlat.LIBRARY_ARENA.allocateFrom("STEAMAPPS_INTERFACE_VERSION008");
+        }
+        return Holder.STEAMAPPS_INTERFACE_VERSION;
+    }
+    /**
+     * {@snippet lang=c :
+     * #define STEAMNETWORKING_INTERFACE_VERSION "SteamNetworking006"
+     * }
+     */
+    public static MemorySegment STEAMNETWORKING_INTERFACE_VERSION() {
+        class Holder {
+            static final MemorySegment STEAMNETWORKING_INTERFACE_VERSION
+                = SteamFlat.LIBRARY_ARENA.allocateFrom("SteamNetworking006");
+        }
+        return Holder.STEAMNETWORKING_INTERFACE_VERSION;
+    }
+    /**
+     * {@snippet lang=c :
+     * #define STEAMSCREENSHOTS_INTERFACE_VERSION "STEAMSCREENSHOTS_INTERFACE_VERSION003"
+     * }
+     */
+    public static MemorySegment STEAMSCREENSHOTS_INTERFACE_VERSION() {
+        class Holder {
+            static final MemorySegment STEAMSCREENSHOTS_INTERFACE_VERSION
+                = SteamFlat.LIBRARY_ARENA.allocateFrom("STEAMSCREENSHOTS_INTERFACE_VERSION003");
+        }
+        return Holder.STEAMSCREENSHOTS_INTERFACE_VERSION;
+    }
+    /**
+     * {@snippet lang=c :
+     * #define STEAMMUSIC_INTERFACE_VERSION "STEAMMUSIC_INTERFACE_VERSION001"
+     * }
+     */
+    public static MemorySegment STEAMMUSIC_INTERFACE_VERSION() {
+        class Holder {
+            static final MemorySegment STEAMMUSIC_INTERFACE_VERSION
+                = SteamFlat.LIBRARY_ARENA.allocateFrom("STEAMMUSIC_INTERFACE_VERSION001");
+        }
+        return Holder.STEAMMUSIC_INTERFACE_VERSION;
+    }
+    /**
+     * {@snippet lang=c :
+     * #define STEAMMUSICREMOTE_INTERFACE_VERSION "STEAMMUSICREMOTE_INTERFACE_VERSION001"
+     * }
+     */
+    public static MemorySegment STEAMMUSICREMOTE_INTERFACE_VERSION() {
+        class Holder {
+            static final MemorySegment STEAMMUSICREMOTE_INTERFACE_VERSION
+                = SteamFlat.LIBRARY_ARENA.allocateFrom("STEAMMUSICREMOTE_INTERFACE_VERSION001");
+        }
+        return Holder.STEAMMUSICREMOTE_INTERFACE_VERSION;
+    }
+    /**
+     * {@snippet lang=c :
+     * #define STEAMHTTP_INTERFACE_VERSION "STEAMHTTP_INTERFACE_VERSION003"
+     * }
+     */
+    public static MemorySegment STEAMHTTP_INTERFACE_VERSION() {
+        class Holder {
+            static final MemorySegment STEAMHTTP_INTERFACE_VERSION
+                = SteamFlat.LIBRARY_ARENA.allocateFrom("STEAMHTTP_INTERFACE_VERSION003");
+        }
+        return Holder.STEAMHTTP_INTERFACE_VERSION;
+    }
+    /**
+     * {@snippet lang=c :
+     * #define STEAMINPUT_INTERFACE_VERSION "SteamInput006"
+     * }
+     */
+    public static MemorySegment STEAMINPUT_INTERFACE_VERSION() {
+        class Holder {
+            static final MemorySegment STEAMINPUT_INTERFACE_VERSION
+                = SteamFlat.LIBRARY_ARENA.allocateFrom("SteamInput006");
+        }
+        return Holder.STEAMINPUT_INTERFACE_VERSION;
+    }
+    /**
+     * {@snippet lang=c :
+     * #define STEAMCONTROLLER_INTERFACE_VERSION "SteamController008"
+     * }
+     */
+    public static MemorySegment STEAMCONTROLLER_INTERFACE_VERSION() {
+        class Holder {
+            static final MemorySegment STEAMCONTROLLER_INTERFACE_VERSION
+                = SteamFlat.LIBRARY_ARENA.allocateFrom("SteamController008");
+        }
+        return Holder.STEAMCONTROLLER_INTERFACE_VERSION;
+    }
+    /**
+     * {@snippet lang=c :
+     * #define STEAMUGC_INTERFACE_VERSION "STEAMUGC_INTERFACE_VERSION018"
+     * }
+     */
+    public static MemorySegment STEAMUGC_INTERFACE_VERSION() {
+        class Holder {
+            static final MemorySegment STEAMUGC_INTERFACE_VERSION
+                = SteamFlat.LIBRARY_ARENA.allocateFrom("STEAMUGC_INTERFACE_VERSION018");
+        }
+        return Holder.STEAMUGC_INTERFACE_VERSION;
+    }
+    /**
+     * {@snippet lang=c :
+     * #define STEAMHTMLSURFACE_INTERFACE_VERSION "STEAMHTMLSURFACE_INTERFACE_VERSION_005"
+     * }
+     */
+    public static MemorySegment STEAMHTMLSURFACE_INTERFACE_VERSION() {
+        class Holder {
+            static final MemorySegment STEAMHTMLSURFACE_INTERFACE_VERSION
+                = SteamFlat.LIBRARY_ARENA.allocateFrom("STEAMHTMLSURFACE_INTERFACE_VERSION_005");
+        }
+        return Holder.STEAMHTMLSURFACE_INTERFACE_VERSION;
+    }
+    /**
+     * {@snippet lang=c :
+     * #define STEAMINVENTORY_INTERFACE_VERSION "STEAMINVENTORY_INTERFACE_V003"
+     * }
+     */
+    public static MemorySegment STEAMINVENTORY_INTERFACE_VERSION() {
+        class Holder {
+            static final MemorySegment STEAMINVENTORY_INTERFACE_VERSION
+                = SteamFlat.LIBRARY_ARENA.allocateFrom("STEAMINVENTORY_INTERFACE_V003");
+        }
+        return Holder.STEAMINVENTORY_INTERFACE_VERSION;
+    }
+    /**
+     * {@snippet lang=c :
+     * #define STEAMPARENTALSETTINGS_INTERFACE_VERSION "STEAMPARENTALSETTINGS_INTERFACE_VERSION001"
+     * }
+     */
+    public static MemorySegment STEAMPARENTALSETTINGS_INTERFACE_VERSION() {
+        class Holder {
+            static final MemorySegment STEAMPARENTALSETTINGS_INTERFACE_VERSION
+                = SteamFlat.LIBRARY_ARENA.allocateFrom("STEAMPARENTALSETTINGS_INTERFACE_VERSION001");
+        }
+        return Holder.STEAMPARENTALSETTINGS_INTERFACE_VERSION;
+    }
+    /**
+     * {@snippet lang=c :
+     * #define STEAMREMOTEPLAY_INTERFACE_VERSION "STEAMREMOTEPLAY_INTERFACE_VERSION002"
+     * }
+     */
+    public static MemorySegment STEAMREMOTEPLAY_INTERFACE_VERSION() {
+        class Holder {
+            static final MemorySegment STEAMREMOTEPLAY_INTERFACE_VERSION
+                = SteamFlat.LIBRARY_ARENA.allocateFrom("STEAMREMOTEPLAY_INTERFACE_VERSION002");
+        }
+        return Holder.STEAMREMOTEPLAY_INTERFACE_VERSION;
+    }
+    /**
+     * {@snippet lang=c :
+     * #define STEAMNETWORKINGMESSAGES_INTERFACE_VERSION "SteamNetworkingMessages002"
+     * }
+     */
+    public static MemorySegment STEAMNETWORKINGMESSAGES_INTERFACE_VERSION() {
+        class Holder {
+            static final MemorySegment STEAMNETWORKINGMESSAGES_INTERFACE_VERSION
+                = SteamFlat.LIBRARY_ARENA.allocateFrom("SteamNetworkingMessages002");
+        }
+        return Holder.STEAMNETWORKINGMESSAGES_INTERFACE_VERSION;
+    }
+    /**
+     * {@snippet lang=c :
+     * #define STEAMNETWORKINGSOCKETS_INTERFACE_VERSION "SteamNetworkingSockets012"
+     * }
+     */
+    public static MemorySegment STEAMNETWORKINGSOCKETS_INTERFACE_VERSION() {
+        class Holder {
+            static final MemorySegment STEAMNETWORKINGSOCKETS_INTERFACE_VERSION
+                = SteamFlat.LIBRARY_ARENA.allocateFrom("SteamNetworkingSockets012");
+        }
+        return Holder.STEAMNETWORKINGSOCKETS_INTERFACE_VERSION;
+    }
+    /**
+     * {@snippet lang=c :
+     * #define STEAMNETWORKINGUTILS_INTERFACE_VERSION "SteamNetworkingUtils004"
+     * }
+     */
+    public static MemorySegment STEAMNETWORKINGUTILS_INTERFACE_VERSION() {
+        class Holder {
+            static final MemorySegment STEAMNETWORKINGUTILS_INTERFACE_VERSION
+                = SteamFlat.LIBRARY_ARENA.allocateFrom("SteamNetworkingUtils004");
+        }
+        return Holder.STEAMNETWORKINGUTILS_INTERFACE_VERSION;
+    }
+    /**
+     * {@snippet lang=c :
+     * #define STEAMGAMESERVER_INTERFACE_VERSION "SteamGameServer015"
+     * }
+     */
+    public static MemorySegment STEAMGAMESERVER_INTERFACE_VERSION() {
+        class Holder {
+            static final MemorySegment STEAMGAMESERVER_INTERFACE_VERSION
+                = SteamFlat.LIBRARY_ARENA.allocateFrom("SteamGameServer015");
+        }
+        return Holder.STEAMGAMESERVER_INTERFACE_VERSION;
+    }
+    /**
+     * {@snippet lang=c :
+     * #define STEAMGAMESERVERSTATS_INTERFACE_VERSION "SteamGameServerStats001"
+     * }
+     */
+    public static MemorySegment STEAMGAMESERVERSTATS_INTERFACE_VERSION() {
+        class Holder {
+            static final MemorySegment STEAMGAMESERVERSTATS_INTERFACE_VERSION
+                = SteamFlat.LIBRARY_ARENA.allocateFrom("SteamGameServerStats001");
+        }
+        return Holder.STEAMGAMESERVERSTATS_INTERFACE_VERSION;
+    }
+    /**
+     * {@snippet lang=c :
+     * #define STEAMNETWORKINGFAKEUDPPORT_INTERFACE_VERSION "null"
+     * }
+     */
+    public static MemorySegment STEAMNETWORKINGFAKEUDPPORT_INTERFACE_VERSION() {
+        class Holder {
+            static final MemorySegment STEAMNETWORKINGFAKEUDPPORT_INTERFACE_VERSION
+                = SteamFlat.LIBRARY_ARENA.allocateFrom("null");
+        }
+        return Holder.STEAMNETWORKINGFAKEUDPPORT_INTERFACE_VERSION;
     }
 }
 
