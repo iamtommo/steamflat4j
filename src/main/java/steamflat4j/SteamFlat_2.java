@@ -8381,473 +8381,2345 @@ public class SteamFlat_2 extends SteamFlat_3 {
      * }
      */
     public static final OfLong SteamNetworkingMicroseconds = SteamFlat.C_LONG_LONG;
-    private static final int k_iCallback_SteamServersConnected_t = (int)101L;
-    /**
-     * {@snippet lang=c :
-     * enum <anonymous>.k_iCallback_SteamServersConnected_t = 101
-     * }
-     */
-    public static int k_iCallback_SteamServersConnected_t() {
-        return k_iCallback_SteamServersConnected_t;
+
+    private static class k_uAppIdInvalid$constants {
+        public static final OfInt LAYOUT = SteamFlat.C_INT;
+        public static final MemorySegment SEGMENT = SteamFlat.findOrThrow("k_uAppIdInvalid").reinterpret(LAYOUT.byteSize());
     }
-    private static final int k_iCallback_SteamServerConnectFailure_t = (int)102L;
+
     /**
+     * Layout for variable:
      * {@snippet lang=c :
-     * enum <anonymous>.k_iCallback_SteamServerConnectFailure_t = 102
+     * const AppId_t k_uAppIdInvalid = 0
      * }
      */
-    public static int k_iCallback_SteamServerConnectFailure_t() {
-        return k_iCallback_SteamServerConnectFailure_t;
+    public static OfInt k_uAppIdInvalid$layout() {
+        return k_uAppIdInvalid$constants.LAYOUT;
     }
-    private static final int k_iCallback_SteamServersDisconnected_t = (int)103L;
+
     /**
+     * Segment for variable:
      * {@snippet lang=c :
-     * enum <anonymous>.k_iCallback_SteamServersDisconnected_t = 103
+     * const AppId_t k_uAppIdInvalid = 0
      * }
      */
-    public static int k_iCallback_SteamServersDisconnected_t() {
-        return k_iCallback_SteamServersDisconnected_t;
+    public static MemorySegment k_uAppIdInvalid$segment() {
+        return k_uAppIdInvalid$constants.SEGMENT;
     }
-    private static final int k_iCallback_ClientGameServerDeny_t = (int)113L;
+
     /**
+     * Getter for variable:
      * {@snippet lang=c :
-     * enum <anonymous>.k_iCallback_ClientGameServerDeny_t = 113
+     * const AppId_t k_uAppIdInvalid = 0
      * }
      */
-    public static int k_iCallback_ClientGameServerDeny_t() {
-        return k_iCallback_ClientGameServerDeny_t;
+    public static int k_uAppIdInvalid() {
+        return k_uAppIdInvalid$constants.SEGMENT.get(k_uAppIdInvalid$constants.LAYOUT, 0L);
     }
-    private static final int k_EFailureFlushedCallbackQueue = (int)0L;
+
     /**
+     * Setter for variable:
      * {@snippet lang=c :
-     * enum EFailureType.k_EFailureFlushedCallbackQueue = 0
+     * const AppId_t k_uAppIdInvalid = 0
      * }
      */
-    public static int k_EFailureFlushedCallbackQueue() {
-        return k_EFailureFlushedCallbackQueue;
+    public static void k_uAppIdInvalid(int varValue) {
+        k_uAppIdInvalid$constants.SEGMENT.set(k_uAppIdInvalid$constants.LAYOUT, 0L, varValue);
     }
-    private static final int k_EFailurePipeFail = (int)1L;
-    /**
-     * {@snippet lang=c :
-     * enum EFailureType.k_EFailurePipeFail = 1
-     * }
-     */
-    public static int k_EFailurePipeFail() {
-        return k_EFailurePipeFail;
+
+    private static class k_uDepotIdInvalid$constants {
+        public static final OfInt LAYOUT = SteamFlat.C_INT;
+        public static final MemorySegment SEGMENT = SteamFlat.findOrThrow("k_uDepotIdInvalid").reinterpret(LAYOUT.byteSize());
     }
-    private static final int k_iCallback_IPCFailure_t = (int)117L;
+
     /**
+     * Layout for variable:
      * {@snippet lang=c :
-     * enum <anonymous>.k_iCallback_IPCFailure_t = 117
+     * const DepotId_t k_uDepotIdInvalid = 0
      * }
      */
-    public static int k_iCallback_IPCFailure_t() {
-        return k_iCallback_IPCFailure_t;
+    public static OfInt k_uDepotIdInvalid$layout() {
+        return k_uDepotIdInvalid$constants.LAYOUT;
     }
-    private static final int k_iCallback_LicensesUpdated_t = (int)125L;
+
     /**
+     * Segment for variable:
      * {@snippet lang=c :
-     * enum <anonymous>.k_iCallback_LicensesUpdated_t = 125
+     * const DepotId_t k_uDepotIdInvalid = 0
      * }
      */
-    public static int k_iCallback_LicensesUpdated_t() {
-        return k_iCallback_LicensesUpdated_t;
+    public static MemorySegment k_uDepotIdInvalid$segment() {
+        return k_uDepotIdInvalid$constants.SEGMENT;
     }
-    private static final int k_iCallback_ValidateAuthTicketResponse_t = (int)143L;
+
     /**
+     * Getter for variable:
      * {@snippet lang=c :
-     * enum <anonymous>.k_iCallback_ValidateAuthTicketResponse_t = 143
+     * const DepotId_t k_uDepotIdInvalid = 0
      * }
      */
-    public static int k_iCallback_ValidateAuthTicketResponse_t() {
-        return k_iCallback_ValidateAuthTicketResponse_t;
+    public static int k_uDepotIdInvalid() {
+        return k_uDepotIdInvalid$constants.SEGMENT.get(k_uDepotIdInvalid$constants.LAYOUT, 0L);
     }
-    private static final int k_iCallback_MicroTxnAuthorizationResponse_t = (int)152L;
+
     /**
+     * Setter for variable:
      * {@snippet lang=c :
-     * enum <anonymous>.k_iCallback_MicroTxnAuthorizationResponse_t = 152
+     * const DepotId_t k_uDepotIdInvalid = 0
      * }
      */
-    public static int k_iCallback_MicroTxnAuthorizationResponse_t() {
-        return k_iCallback_MicroTxnAuthorizationResponse_t;
+    public static void k_uDepotIdInvalid(int varValue) {
+        k_uDepotIdInvalid$constants.SEGMENT.set(k_uDepotIdInvalid$constants.LAYOUT, 0L, varValue);
     }
-    private static final int k_iCallback_EncryptedAppTicketResponse_t = (int)154L;
-    /**
-     * {@snippet lang=c :
-     * enum <anonymous>.k_iCallback_EncryptedAppTicketResponse_t = 154
-     * }
-     */
-    public static int k_iCallback_EncryptedAppTicketResponse_t() {
-        return k_iCallback_EncryptedAppTicketResponse_t;
+
+    private static class k_uAPICallInvalid$constants {
+        public static final OfLong LAYOUT = SteamFlat.C_LONG_LONG;
+        public static final MemorySegment SEGMENT = SteamFlat.findOrThrow("k_uAPICallInvalid").reinterpret(LAYOUT.byteSize());
     }
-    private static final int k_iCallback_GetAuthSessionTicketResponse_t = (int)163L;
+
     /**
+     * Layout for variable:
      * {@snippet lang=c :
-     * enum <anonymous>.k_iCallback_GetAuthSessionTicketResponse_t = 163
+     * const SteamAPICall_t k_uAPICallInvalid = 0
      * }
      */
-    public static int k_iCallback_GetAuthSessionTicketResponse_t() {
-        return k_iCallback_GetAuthSessionTicketResponse_t;
+    public static OfLong k_uAPICallInvalid$layout() {
+        return k_uAPICallInvalid$constants.LAYOUT;
     }
-    private static final int k_iCallback_GameWebCallback_t = (int)164L;
+
     /**
+     * Segment for variable:
      * {@snippet lang=c :
-     * enum <anonymous>.k_iCallback_GameWebCallback_t = 164
+     * const SteamAPICall_t k_uAPICallInvalid = 0
      * }
      */
-    public static int k_iCallback_GameWebCallback_t() {
-        return k_iCallback_GameWebCallback_t;
+    public static MemorySegment k_uAPICallInvalid$segment() {
+        return k_uAPICallInvalid$constants.SEGMENT;
     }
-    private static final int k_iCallback_StoreAuthURLResponse_t = (int)165L;
+
     /**
+     * Getter for variable:
      * {@snippet lang=c :
-     * enum <anonymous>.k_iCallback_StoreAuthURLResponse_t = 165
+     * const SteamAPICall_t k_uAPICallInvalid = 0
      * }
      */
-    public static int k_iCallback_StoreAuthURLResponse_t() {
-        return k_iCallback_StoreAuthURLResponse_t;
+    public static long k_uAPICallInvalid() {
+        return k_uAPICallInvalid$constants.SEGMENT.get(k_uAPICallInvalid$constants.LAYOUT, 0L);
     }
-    private static final int k_iCallback_MarketEligibilityResponse_t = (int)166L;
+
     /**
+     * Setter for variable:
      * {@snippet lang=c :
-     * enum <anonymous>.k_iCallback_MarketEligibilityResponse_t = 166
+     * const SteamAPICall_t k_uAPICallInvalid = 0
      * }
      */
-    public static int k_iCallback_MarketEligibilityResponse_t() {
-        return k_iCallback_MarketEligibilityResponse_t;
+    public static void k_uAPICallInvalid(long varValue) {
+        k_uAPICallInvalid$constants.SEGMENT.set(k_uAPICallInvalid$constants.LAYOUT, 0L, varValue);
     }
-    private static final int k_iCallback_DurationControl_t = (int)167L;
-    /**
-     * {@snippet lang=c :
-     * enum <anonymous>.k_iCallback_DurationControl_t = 167
-     * }
-     */
-    public static int k_iCallback_DurationControl_t() {
-        return k_iCallback_DurationControl_t;
+
+    private static class k_uAccountIdInvalid$constants {
+        public static final OfInt LAYOUT = SteamFlat.C_INT;
+        public static final MemorySegment SEGMENT = SteamFlat.findOrThrow("k_uAccountIdInvalid").reinterpret(LAYOUT.byteSize());
     }
-    private static final int k_iCallback_GetTicketForWebApiResponse_t = (int)168L;
+
     /**
+     * Layout for variable:
      * {@snippet lang=c :
-     * enum <anonymous>.k_iCallback_GetTicketForWebApiResponse_t = 168
+     * const AccountID_t k_uAccountIdInvalid = 0
      * }
      */
-    public static int k_iCallback_GetTicketForWebApiResponse_t() {
-        return k_iCallback_GetTicketForWebApiResponse_t;
+    public static OfInt k_uAccountIdInvalid$layout() {
+        return k_uAccountIdInvalid$constants.LAYOUT;
     }
-    private static final int k_iCallback_PersonaStateChange_t = (int)304L;
+
     /**
+     * Segment for variable:
      * {@snippet lang=c :
-     * enum <anonymous>.k_iCallback_PersonaStateChange_t = 304
+     * const AccountID_t k_uAccountIdInvalid = 0
      * }
      */
-    public static int k_iCallback_PersonaStateChange_t() {
-        return k_iCallback_PersonaStateChange_t;
+    public static MemorySegment k_uAccountIdInvalid$segment() {
+        return k_uAccountIdInvalid$constants.SEGMENT;
     }
-    private static final int k_iCallback_GameOverlayActivated_t = (int)331L;
+
     /**
+     * Getter for variable:
      * {@snippet lang=c :
-     * enum <anonymous>.k_iCallback_GameOverlayActivated_t = 331
+     * const AccountID_t k_uAccountIdInvalid = 0
      * }
      */
-    public static int k_iCallback_GameOverlayActivated_t() {
-        return k_iCallback_GameOverlayActivated_t;
+    public static int k_uAccountIdInvalid() {
+        return k_uAccountIdInvalid$constants.SEGMENT.get(k_uAccountIdInvalid$constants.LAYOUT, 0L);
     }
-    private static final int k_iCallback_GameServerChangeRequested_t = (int)332L;
+
     /**
+     * Setter for variable:
      * {@snippet lang=c :
-     * enum <anonymous>.k_iCallback_GameServerChangeRequested_t = 332
+     * const AccountID_t k_uAccountIdInvalid = 0
      * }
      */
-    public static int k_iCallback_GameServerChangeRequested_t() {
-        return k_iCallback_GameServerChangeRequested_t;
+    public static void k_uAccountIdInvalid(int varValue) {
+        k_uAccountIdInvalid$constants.SEGMENT.set(k_uAccountIdInvalid$constants.LAYOUT, 0L, varValue);
     }
-    private static final int k_iCallback_GameLobbyJoinRequested_t = (int)333L;
-    /**
-     * {@snippet lang=c :
-     * enum <anonymous>.k_iCallback_GameLobbyJoinRequested_t = 333
-     * }
-     */
-    public static int k_iCallback_GameLobbyJoinRequested_t() {
-        return k_iCallback_GameLobbyJoinRequested_t;
+
+    private static class k_ulPartyBeaconIdInvalid$constants {
+        public static final OfLong LAYOUT = SteamFlat.C_LONG_LONG;
+        public static final MemorySegment SEGMENT = SteamFlat.findOrThrow("k_ulPartyBeaconIdInvalid").reinterpret(LAYOUT.byteSize());
     }
-    private static final int k_iCallback_AvatarImageLoaded_t = (int)334L;
+
     /**
+     * Layout for variable:
      * {@snippet lang=c :
-     * enum <anonymous>.k_iCallback_AvatarImageLoaded_t = 334
+     * const PartyBeaconID_t k_ulPartyBeaconIdInvalid = 0
      * }
      */
-    public static int k_iCallback_AvatarImageLoaded_t() {
-        return k_iCallback_AvatarImageLoaded_t;
+    public static OfLong k_ulPartyBeaconIdInvalid$layout() {
+        return k_ulPartyBeaconIdInvalid$constants.LAYOUT;
     }
-    private static final int k_iCallback_ClanOfficerListResponse_t = (int)335L;
+
     /**
+     * Segment for variable:
      * {@snippet lang=c :
-     * enum <anonymous>.k_iCallback_ClanOfficerListResponse_t = 335
+     * const PartyBeaconID_t k_ulPartyBeaconIdInvalid = 0
      * }
      */
-    public static int k_iCallback_ClanOfficerListResponse_t() {
-        return k_iCallback_ClanOfficerListResponse_t;
+    public static MemorySegment k_ulPartyBeaconIdInvalid$segment() {
+        return k_ulPartyBeaconIdInvalid$constants.SEGMENT;
     }
-    private static final int k_iCallback_FriendRichPresenceUpdate_t = (int)336L;
+
     /**
+     * Getter for variable:
      * {@snippet lang=c :
-     * enum <anonymous>.k_iCallback_FriendRichPresenceUpdate_t = 336
+     * const PartyBeaconID_t k_ulPartyBeaconIdInvalid = 0
      * }
      */
-    public static int k_iCallback_FriendRichPresenceUpdate_t() {
-        return k_iCallback_FriendRichPresenceUpdate_t;
+    public static long k_ulPartyBeaconIdInvalid() {
+        return k_ulPartyBeaconIdInvalid$constants.SEGMENT.get(k_ulPartyBeaconIdInvalid$constants.LAYOUT, 0L);
     }
-    private static final int k_iCallback_GameRichPresenceJoinRequested_t = (int)337L;
+
     /**
+     * Setter for variable:
      * {@snippet lang=c :
-     * enum <anonymous>.k_iCallback_GameRichPresenceJoinRequested_t = 337
+     * const PartyBeaconID_t k_ulPartyBeaconIdInvalid = 0
      * }
      */
-    public static int k_iCallback_GameRichPresenceJoinRequested_t() {
-        return k_iCallback_GameRichPresenceJoinRequested_t;
+    public static void k_ulPartyBeaconIdInvalid(long varValue) {
+        k_ulPartyBeaconIdInvalid$constants.SEGMENT.set(k_ulPartyBeaconIdInvalid$constants.LAYOUT, 0L, varValue);
     }
-    private static final int k_iCallback_GameConnectedClanChatMsg_t = (int)338L;
-    /**
-     * {@snippet lang=c :
-     * enum <anonymous>.k_iCallback_GameConnectedClanChatMsg_t = 338
-     * }
-     */
-    public static int k_iCallback_GameConnectedClanChatMsg_t() {
-        return k_iCallback_GameConnectedClanChatMsg_t;
+
+    private static class k_HAuthTicketInvalid$constants {
+        public static final OfInt LAYOUT = SteamFlat.C_INT;
+        public static final MemorySegment SEGMENT = SteamFlat.findOrThrow("k_HAuthTicketInvalid").reinterpret(LAYOUT.byteSize());
     }
-    private static final int k_iCallback_GameConnectedChatJoin_t = (int)339L;
+
     /**
+     * Layout for variable:
      * {@snippet lang=c :
-     * enum <anonymous>.k_iCallback_GameConnectedChatJoin_t = 339
+     * const HAuthTicket k_HAuthTicketInvalid = 0
      * }
      */
-    public static int k_iCallback_GameConnectedChatJoin_t() {
-        return k_iCallback_GameConnectedChatJoin_t;
+    public static OfInt k_HAuthTicketInvalid$layout() {
+        return k_HAuthTicketInvalid$constants.LAYOUT;
     }
-    private static final int k_iCallback_GameConnectedChatLeave_t = (int)340L;
+
     /**
+     * Segment for variable:
      * {@snippet lang=c :
-     * enum <anonymous>.k_iCallback_GameConnectedChatLeave_t = 340
+     * const HAuthTicket k_HAuthTicketInvalid = 0
      * }
      */
-    public static int k_iCallback_GameConnectedChatLeave_t() {
-        return k_iCallback_GameConnectedChatLeave_t;
+    public static MemorySegment k_HAuthTicketInvalid$segment() {
+        return k_HAuthTicketInvalid$constants.SEGMENT;
     }
-    private static final int k_iCallback_DownloadClanActivityCountsResult_t = (int)341L;
+
     /**
+     * Getter for variable:
      * {@snippet lang=c :
-     * enum <anonymous>.k_iCallback_DownloadClanActivityCountsResult_t = 341
+     * const HAuthTicket k_HAuthTicketInvalid = 0
      * }
      */
-    public static int k_iCallback_DownloadClanActivityCountsResult_t() {
-        return k_iCallback_DownloadClanActivityCountsResult_t;
+    public static int k_HAuthTicketInvalid() {
+        return k_HAuthTicketInvalid$constants.SEGMENT.get(k_HAuthTicketInvalid$constants.LAYOUT, 0L);
     }
-    private static final int k_iCallback_JoinClanChatRoomCompletionResult_t = (int)342L;
+
     /**
+     * Setter for variable:
      * {@snippet lang=c :
-     * enum <anonymous>.k_iCallback_JoinClanChatRoomCompletionResult_t = 342
+     * const HAuthTicket k_HAuthTicketInvalid = 0
      * }
      */
-    public static int k_iCallback_JoinClanChatRoomCompletionResult_t() {
-        return k_iCallback_JoinClanChatRoomCompletionResult_t;
+    public static void k_HAuthTicketInvalid(int varValue) {
+        k_HAuthTicketInvalid$constants.SEGMENT.set(k_HAuthTicketInvalid$constants.LAYOUT, 0L, varValue);
     }
-    private static final int k_iCallback_GameConnectedFriendChatMsg_t = (int)343L;
-    /**
-     * {@snippet lang=c :
-     * enum <anonymous>.k_iCallback_GameConnectedFriendChatMsg_t = 343
-     * }
-     */
-    public static int k_iCallback_GameConnectedFriendChatMsg_t() {
-        return k_iCallback_GameConnectedFriendChatMsg_t;
+
+    private static class k_unSteamAccountIDMask$constants {
+        public static final OfInt LAYOUT = SteamFlat.C_INT;
+        public static final MemorySegment SEGMENT = SteamFlat.findOrThrow("k_unSteamAccountIDMask").reinterpret(LAYOUT.byteSize());
     }
-    private static final int k_iCallback_FriendsGetFollowerCount_t = (int)344L;
+
     /**
+     * Layout for variable:
      * {@snippet lang=c :
-     * enum <anonymous>.k_iCallback_FriendsGetFollowerCount_t = 344
+     * const unsigned int k_unSteamAccountIDMask = 4294967295U
      * }
      */
-    public static int k_iCallback_FriendsGetFollowerCount_t() {
-        return k_iCallback_FriendsGetFollowerCount_t;
+    public static OfInt k_unSteamAccountIDMask$layout() {
+        return k_unSteamAccountIDMask$constants.LAYOUT;
     }
-    private static final int k_iCallback_FriendsIsFollowing_t = (int)345L;
+
     /**
+     * Segment for variable:
      * {@snippet lang=c :
-     * enum <anonymous>.k_iCallback_FriendsIsFollowing_t = 345
+     * const unsigned int k_unSteamAccountIDMask = 4294967295U
      * }
      */
-    public static int k_iCallback_FriendsIsFollowing_t() {
-        return k_iCallback_FriendsIsFollowing_t;
+    public static MemorySegment k_unSteamAccountIDMask$segment() {
+        return k_unSteamAccountIDMask$constants.SEGMENT;
     }
-    private static final int k_iCallback_FriendsEnumerateFollowingList_t = (int)346L;
+
     /**
+     * Getter for variable:
      * {@snippet lang=c :
-     * enum <anonymous>.k_iCallback_FriendsEnumerateFollowingList_t = 346
+     * const unsigned int k_unSteamAccountIDMask = 4294967295U
      * }
      */
-    public static int k_iCallback_FriendsEnumerateFollowingList_t() {
-        return k_iCallback_FriendsEnumerateFollowingList_t;
+    public static int k_unSteamAccountIDMask() {
+        return k_unSteamAccountIDMask$constants.SEGMENT.get(k_unSteamAccountIDMask$constants.LAYOUT, 0L);
     }
-    private static final int k_iCallback_SetPersonaNameResponse_t = (int)347L;
+
     /**
+     * Setter for variable:
      * {@snippet lang=c :
-     * enum <anonymous>.k_iCallback_SetPersonaNameResponse_t = 347
+     * const unsigned int k_unSteamAccountIDMask = 4294967295U
      * }
      */
-    public static int k_iCallback_SetPersonaNameResponse_t() {
-        return k_iCallback_SetPersonaNameResponse_t;
+    public static void k_unSteamAccountIDMask(int varValue) {
+        k_unSteamAccountIDMask$constants.SEGMENT.set(k_unSteamAccountIDMask$constants.LAYOUT, 0L, varValue);
     }
-    private static final int k_iCallback_UnreadChatMessagesChanged_t = (int)348L;
-    /**
-     * {@snippet lang=c :
-     * enum <anonymous>.k_iCallback_UnreadChatMessagesChanged_t = 348
-     * }
-     */
-    public static int k_iCallback_UnreadChatMessagesChanged_t() {
-        return k_iCallback_UnreadChatMessagesChanged_t;
+
+    private static class k_unSteamAccountInstanceMask$constants {
+        public static final OfInt LAYOUT = SteamFlat.C_INT;
+        public static final MemorySegment SEGMENT = SteamFlat.findOrThrow("k_unSteamAccountInstanceMask").reinterpret(LAYOUT.byteSize());
     }
-    private static final int k_iCallback_OverlayBrowserProtocolNavigation_t = (int)349L;
+
     /**
+     * Layout for variable:
      * {@snippet lang=c :
-     * enum <anonymous>.k_iCallback_OverlayBrowserProtocolNavigation_t = 349
+     * const unsigned int k_unSteamAccountInstanceMask = 1048575
      * }
      */
-    public static int k_iCallback_OverlayBrowserProtocolNavigation_t() {
-        return k_iCallback_OverlayBrowserProtocolNavigation_t;
+    public static OfInt k_unSteamAccountInstanceMask$layout() {
+        return k_unSteamAccountInstanceMask$constants.LAYOUT;
     }
-    private static final int k_iCallback_EquippedProfileItemsChanged_t = (int)350L;
+
     /**
+     * Segment for variable:
      * {@snippet lang=c :
-     * enum <anonymous>.k_iCallback_EquippedProfileItemsChanged_t = 350
+     * const unsigned int k_unSteamAccountInstanceMask = 1048575
      * }
      */
-    public static int k_iCallback_EquippedProfileItemsChanged_t() {
-        return k_iCallback_EquippedProfileItemsChanged_t;
+    public static MemorySegment k_unSteamAccountInstanceMask$segment() {
+        return k_unSteamAccountInstanceMask$constants.SEGMENT;
     }
-    private static final int k_iCallback_EquippedProfileItems_t = (int)351L;
+
     /**
+     * Getter for variable:
      * {@snippet lang=c :
-     * enum <anonymous>.k_iCallback_EquippedProfileItems_t = 351
+     * const unsigned int k_unSteamAccountInstanceMask = 1048575
      * }
      */
-    public static int k_iCallback_EquippedProfileItems_t() {
-        return k_iCallback_EquippedProfileItems_t;
+    public static int k_unSteamAccountInstanceMask() {
+        return k_unSteamAccountInstanceMask$constants.SEGMENT.get(k_unSteamAccountInstanceMask$constants.LAYOUT, 0L);
     }
-    private static final int k_iCallback_IPCountry_t = (int)701L;
+
     /**
+     * Setter for variable:
      * {@snippet lang=c :
-     * enum <anonymous>.k_iCallback_IPCountry_t = 701
+     * const unsigned int k_unSteamAccountInstanceMask = 1048575
      * }
      */
-    public static int k_iCallback_IPCountry_t() {
-        return k_iCallback_IPCountry_t;
+    public static void k_unSteamAccountInstanceMask(int varValue) {
+        k_unSteamAccountInstanceMask$constants.SEGMENT.set(k_unSteamAccountInstanceMask$constants.LAYOUT, 0L, varValue);
     }
-    private static final int k_iCallback_LowBatteryPower_t = (int)702L;
-    /**
-     * {@snippet lang=c :
-     * enum <anonymous>.k_iCallback_LowBatteryPower_t = 702
-     * }
-     */
-    public static int k_iCallback_LowBatteryPower_t() {
-        return k_iCallback_LowBatteryPower_t;
+
+    private static class k_unSteamUserDefaultInstance$constants {
+        public static final OfInt LAYOUT = SteamFlat.C_INT;
+        public static final MemorySegment SEGMENT = SteamFlat.findOrThrow("k_unSteamUserDefaultInstance").reinterpret(LAYOUT.byteSize());
     }
-    private static final int k_iCallback_SteamAPICallCompleted_t = (int)703L;
+
     /**
+     * Layout for variable:
      * {@snippet lang=c :
-     * enum <anonymous>.k_iCallback_SteamAPICallCompleted_t = 703
+     * const unsigned int k_unSteamUserDefaultInstance = 1
      * }
      */
-    public static int k_iCallback_SteamAPICallCompleted_t() {
-        return k_iCallback_SteamAPICallCompleted_t;
+    public static OfInt k_unSteamUserDefaultInstance$layout() {
+        return k_unSteamUserDefaultInstance$constants.LAYOUT;
     }
-    private static final int k_iCallback_SteamShutdown_t = (int)704L;
+
     /**
+     * Segment for variable:
      * {@snippet lang=c :
-     * enum <anonymous>.k_iCallback_SteamShutdown_t = 704
+     * const unsigned int k_unSteamUserDefaultInstance = 1
      * }
      */
-    public static int k_iCallback_SteamShutdown_t() {
-        return k_iCallback_SteamShutdown_t;
+    public static MemorySegment k_unSteamUserDefaultInstance$segment() {
+        return k_unSteamUserDefaultInstance$constants.SEGMENT;
     }
-    private static final int k_iCallback_CheckFileSignature_t = (int)705L;
+
     /**
+     * Getter for variable:
      * {@snippet lang=c :
-     * enum <anonymous>.k_iCallback_CheckFileSignature_t = 705
+     * const unsigned int k_unSteamUserDefaultInstance = 1
      * }
      */
-    public static int k_iCallback_CheckFileSignature_t() {
-        return k_iCallback_CheckFileSignature_t;
+    public static int k_unSteamUserDefaultInstance() {
+        return k_unSteamUserDefaultInstance$constants.SEGMENT.get(k_unSteamUserDefaultInstance$constants.LAYOUT, 0L);
     }
-    private static final int k_iCallback_GamepadTextInputDismissed_t = (int)714L;
+
     /**
+     * Setter for variable:
      * {@snippet lang=c :
-     * enum <anonymous>.k_iCallback_GamepadTextInputDismissed_t = 714
+     * const unsigned int k_unSteamUserDefaultInstance = 1
      * }
      */
-    public static int k_iCallback_GamepadTextInputDismissed_t() {
-        return k_iCallback_GamepadTextInputDismissed_t;
+    public static void k_unSteamUserDefaultInstance(int varValue) {
+        k_unSteamUserDefaultInstance$constants.SEGMENT.set(k_unSteamUserDefaultInstance$constants.LAYOUT, 0L, varValue);
     }
-    private static final int k_iCallback_AppResumingFromSuspend_t = (int)736L;
-    /**
-     * {@snippet lang=c :
-     * enum <anonymous>.k_iCallback_AppResumingFromSuspend_t = 736
-     * }
-     */
-    public static int k_iCallback_AppResumingFromSuspend_t() {
-        return k_iCallback_AppResumingFromSuspend_t;
+
+    private static class k_cchGameExtraInfoMax$constants {
+        public static final OfInt LAYOUT = SteamFlat.C_INT;
+        public static final MemorySegment SEGMENT = SteamFlat.findOrThrow("k_cchGameExtraInfoMax").reinterpret(LAYOUT.byteSize());
     }
-    private static final int k_iCallback_FloatingGamepadTextInputDismissed_t = (int)738L;
+
     /**
+     * Layout for variable:
      * {@snippet lang=c :
-     * enum <anonymous>.k_iCallback_FloatingGamepadTextInputDismissed_t = 738
+     * const int k_cchGameExtraInfoMax = 64
      * }
      */
-    public static int k_iCallback_FloatingGamepadTextInputDismissed_t() {
-        return k_iCallback_FloatingGamepadTextInputDismissed_t;
+    public static OfInt k_cchGameExtraInfoMax$layout() {
+        return k_cchGameExtraInfoMax$constants.LAYOUT;
     }
-    private static final int k_iCallback_FilterTextDictionaryChanged_t = (int)739L;
+
     /**
+     * Segment for variable:
      * {@snippet lang=c :
-     * enum <anonymous>.k_iCallback_FilterTextDictionaryChanged_t = 739
+     * const int k_cchGameExtraInfoMax = 64
      * }
      */
-    public static int k_iCallback_FilterTextDictionaryChanged_t() {
-        return k_iCallback_FilterTextDictionaryChanged_t;
+    public static MemorySegment k_cchGameExtraInfoMax$segment() {
+        return k_cchGameExtraInfoMax$constants.SEGMENT;
     }
-    private static final int k_iCallback_FavoritesListChanged_t = (int)502L;
+
     /**
+     * Getter for variable:
      * {@snippet lang=c :
-     * enum <anonymous>.k_iCallback_FavoritesListChanged_t = 502
+     * const int k_cchGameExtraInfoMax = 64
      * }
      */
-    public static int k_iCallback_FavoritesListChanged_t() {
-        return k_iCallback_FavoritesListChanged_t;
+    public static int k_cchGameExtraInfoMax() {
+        return k_cchGameExtraInfoMax$constants.SEGMENT.get(k_cchGameExtraInfoMax$constants.LAYOUT, 0L);
     }
-    private static final int k_iCallback_LobbyInvite_t = (int)503L;
+
     /**
+     * Setter for variable:
      * {@snippet lang=c :
-     * enum <anonymous>.k_iCallback_LobbyInvite_t = 503
+     * const int k_cchGameExtraInfoMax = 64
      * }
      */
-    public static int k_iCallback_LobbyInvite_t() {
-        return k_iCallback_LobbyInvite_t;
+    public static void k_cchGameExtraInfoMax(int varValue) {
+        k_cchGameExtraInfoMax$constants.SEGMENT.set(k_cchGameExtraInfoMax$constants.LAYOUT, 0L, varValue);
     }
-    private static final int k_iCallback_LobbyEnter_t = (int)504L;
-    /**
-     * {@snippet lang=c :
-     * enum <anonymous>.k_iCallback_LobbyEnter_t = 504
-     * }
-     */
-    public static int k_iCallback_LobbyEnter_t() {
-        return k_iCallback_LobbyEnter_t;
+
+    private static class k_cchMaxSteamErrMsg$constants {
+        public static final OfInt LAYOUT = SteamFlat.C_INT;
+        public static final MemorySegment SEGMENT = SteamFlat.findOrThrow("k_cchMaxSteamErrMsg").reinterpret(LAYOUT.byteSize());
     }
-    private static final int k_iCallback_LobbyDataUpdate_t = (int)505L;
+
     /**
+     * Layout for variable:
      * {@snippet lang=c :
-     * enum <anonymous>.k_iCallback_LobbyDataUpdate_t = 505
+     * const int k_cchMaxSteamErrMsg = 1024
      * }
      */
-    public static int k_iCallback_LobbyDataUpdate_t() {
-        return k_iCallback_LobbyDataUpdate_t;
+    public static OfInt k_cchMaxSteamErrMsg$layout() {
+        return k_cchMaxSteamErrMsg$constants.LAYOUT;
+    }
+
+    /**
+     * Segment for variable:
+     * {@snippet lang=c :
+     * const int k_cchMaxSteamErrMsg = 1024
+     * }
+     */
+    public static MemorySegment k_cchMaxSteamErrMsg$segment() {
+        return k_cchMaxSteamErrMsg$constants.SEGMENT;
+    }
+
+    /**
+     * Getter for variable:
+     * {@snippet lang=c :
+     * const int k_cchMaxSteamErrMsg = 1024
+     * }
+     */
+    public static int k_cchMaxSteamErrMsg() {
+        return k_cchMaxSteamErrMsg$constants.SEGMENT.get(k_cchMaxSteamErrMsg$constants.LAYOUT, 0L);
+    }
+
+    /**
+     * Setter for variable:
+     * {@snippet lang=c :
+     * const int k_cchMaxSteamErrMsg = 1024
+     * }
+     */
+    public static void k_cchMaxSteamErrMsg(int varValue) {
+        k_cchMaxSteamErrMsg$constants.SEGMENT.set(k_cchMaxSteamErrMsg$constants.LAYOUT, 0L, varValue);
+    }
+
+    private static class k_cchMaxFriendsGroupName$constants {
+        public static final OfInt LAYOUT = SteamFlat.C_INT;
+        public static final MemorySegment SEGMENT = SteamFlat.findOrThrow("k_cchMaxFriendsGroupName").reinterpret(LAYOUT.byteSize());
+    }
+
+    /**
+     * Layout for variable:
+     * {@snippet lang=c :
+     * const int k_cchMaxFriendsGroupName = 64
+     * }
+     */
+    public static OfInt k_cchMaxFriendsGroupName$layout() {
+        return k_cchMaxFriendsGroupName$constants.LAYOUT;
+    }
+
+    /**
+     * Segment for variable:
+     * {@snippet lang=c :
+     * const int k_cchMaxFriendsGroupName = 64
+     * }
+     */
+    public static MemorySegment k_cchMaxFriendsGroupName$segment() {
+        return k_cchMaxFriendsGroupName$constants.SEGMENT;
+    }
+
+    /**
+     * Getter for variable:
+     * {@snippet lang=c :
+     * const int k_cchMaxFriendsGroupName = 64
+     * }
+     */
+    public static int k_cchMaxFriendsGroupName() {
+        return k_cchMaxFriendsGroupName$constants.SEGMENT.get(k_cchMaxFriendsGroupName$constants.LAYOUT, 0L);
+    }
+
+    /**
+     * Setter for variable:
+     * {@snippet lang=c :
+     * const int k_cchMaxFriendsGroupName = 64
+     * }
+     */
+    public static void k_cchMaxFriendsGroupName(int varValue) {
+        k_cchMaxFriendsGroupName$constants.SEGMENT.set(k_cchMaxFriendsGroupName$constants.LAYOUT, 0L, varValue);
+    }
+
+    private static class k_cFriendsGroupLimit$constants {
+        public static final OfInt LAYOUT = SteamFlat.C_INT;
+        public static final MemorySegment SEGMENT = SteamFlat.findOrThrow("k_cFriendsGroupLimit").reinterpret(LAYOUT.byteSize());
+    }
+
+    /**
+     * Layout for variable:
+     * {@snippet lang=c :
+     * const int k_cFriendsGroupLimit = 100
+     * }
+     */
+    public static OfInt k_cFriendsGroupLimit$layout() {
+        return k_cFriendsGroupLimit$constants.LAYOUT;
+    }
+
+    /**
+     * Segment for variable:
+     * {@snippet lang=c :
+     * const int k_cFriendsGroupLimit = 100
+     * }
+     */
+    public static MemorySegment k_cFriendsGroupLimit$segment() {
+        return k_cFriendsGroupLimit$constants.SEGMENT;
+    }
+
+    /**
+     * Getter for variable:
+     * {@snippet lang=c :
+     * const int k_cFriendsGroupLimit = 100
+     * }
+     */
+    public static int k_cFriendsGroupLimit() {
+        return k_cFriendsGroupLimit$constants.SEGMENT.get(k_cFriendsGroupLimit$constants.LAYOUT, 0L);
+    }
+
+    /**
+     * Setter for variable:
+     * {@snippet lang=c :
+     * const int k_cFriendsGroupLimit = 100
+     * }
+     */
+    public static void k_cFriendsGroupLimit(int varValue) {
+        k_cFriendsGroupLimit$constants.SEGMENT.set(k_cFriendsGroupLimit$constants.LAYOUT, 0L, varValue);
+    }
+
+    private static class k_FriendsGroupID_Invalid$constants {
+        public static final OfShort LAYOUT = SteamFlat.C_SHORT;
+        public static final MemorySegment SEGMENT = SteamFlat.findOrThrow("k_FriendsGroupID_Invalid").reinterpret(LAYOUT.byteSize());
+    }
+
+    /**
+     * Layout for variable:
+     * {@snippet lang=c :
+     * const FriendsGroupID_t k_FriendsGroupID_Invalid = -1
+     * }
+     */
+    public static OfShort k_FriendsGroupID_Invalid$layout() {
+        return k_FriendsGroupID_Invalid$constants.LAYOUT;
+    }
+
+    /**
+     * Segment for variable:
+     * {@snippet lang=c :
+     * const FriendsGroupID_t k_FriendsGroupID_Invalid = -1
+     * }
+     */
+    public static MemorySegment k_FriendsGroupID_Invalid$segment() {
+        return k_FriendsGroupID_Invalid$constants.SEGMENT;
+    }
+
+    /**
+     * Getter for variable:
+     * {@snippet lang=c :
+     * const FriendsGroupID_t k_FriendsGroupID_Invalid = -1
+     * }
+     */
+    public static short k_FriendsGroupID_Invalid() {
+        return k_FriendsGroupID_Invalid$constants.SEGMENT.get(k_FriendsGroupID_Invalid$constants.LAYOUT, 0L);
+    }
+
+    /**
+     * Setter for variable:
+     * {@snippet lang=c :
+     * const FriendsGroupID_t k_FriendsGroupID_Invalid = -1
+     * }
+     */
+    public static void k_FriendsGroupID_Invalid(short varValue) {
+        k_FriendsGroupID_Invalid$constants.SEGMENT.set(k_FriendsGroupID_Invalid$constants.LAYOUT, 0L, varValue);
+    }
+
+    private static class k_cEnumerateFollowersMax$constants {
+        public static final OfInt LAYOUT = SteamFlat.C_INT;
+        public static final MemorySegment SEGMENT = SteamFlat.findOrThrow("k_cEnumerateFollowersMax").reinterpret(LAYOUT.byteSize());
+    }
+
+    /**
+     * Layout for variable:
+     * {@snippet lang=c :
+     * const int k_cEnumerateFollowersMax = 50
+     * }
+     */
+    public static OfInt k_cEnumerateFollowersMax$layout() {
+        return k_cEnumerateFollowersMax$constants.LAYOUT;
+    }
+
+    /**
+     * Segment for variable:
+     * {@snippet lang=c :
+     * const int k_cEnumerateFollowersMax = 50
+     * }
+     */
+    public static MemorySegment k_cEnumerateFollowersMax$segment() {
+        return k_cEnumerateFollowersMax$constants.SEGMENT;
+    }
+
+    /**
+     * Getter for variable:
+     * {@snippet lang=c :
+     * const int k_cEnumerateFollowersMax = 50
+     * }
+     */
+    public static int k_cEnumerateFollowersMax() {
+        return k_cEnumerateFollowersMax$constants.SEGMENT.get(k_cEnumerateFollowersMax$constants.LAYOUT, 0L);
+    }
+
+    /**
+     * Setter for variable:
+     * {@snippet lang=c :
+     * const int k_cEnumerateFollowersMax = 50
+     * }
+     */
+    public static void k_cEnumerateFollowersMax(int varValue) {
+        k_cEnumerateFollowersMax$constants.SEGMENT.set(k_cEnumerateFollowersMax$constants.LAYOUT, 0L, varValue);
+    }
+
+    private static class k_usFriendGameInfoQueryPort_NotInitialized$constants {
+        public static final OfShort LAYOUT = SteamFlat.C_SHORT;
+        public static final MemorySegment SEGMENT = SteamFlat.findOrThrow("k_usFriendGameInfoQueryPort_NotInitialized").reinterpret(LAYOUT.byteSize());
+    }
+
+    /**
+     * Layout for variable:
+     * {@snippet lang=c :
+     * const uint16 k_usFriendGameInfoQueryPort_NotInitialized = 65535
+     * }
+     */
+    public static OfShort k_usFriendGameInfoQueryPort_NotInitialized$layout() {
+        return k_usFriendGameInfoQueryPort_NotInitialized$constants.LAYOUT;
+    }
+
+    /**
+     * Segment for variable:
+     * {@snippet lang=c :
+     * const uint16 k_usFriendGameInfoQueryPort_NotInitialized = 65535
+     * }
+     */
+    public static MemorySegment k_usFriendGameInfoQueryPort_NotInitialized$segment() {
+        return k_usFriendGameInfoQueryPort_NotInitialized$constants.SEGMENT;
+    }
+
+    /**
+     * Getter for variable:
+     * {@snippet lang=c :
+     * const uint16 k_usFriendGameInfoQueryPort_NotInitialized = 65535
+     * }
+     */
+    public static short k_usFriendGameInfoQueryPort_NotInitialized() {
+        return k_usFriendGameInfoQueryPort_NotInitialized$constants.SEGMENT.get(k_usFriendGameInfoQueryPort_NotInitialized$constants.LAYOUT, 0L);
+    }
+
+    /**
+     * Setter for variable:
+     * {@snippet lang=c :
+     * const uint16 k_usFriendGameInfoQueryPort_NotInitialized = 65535
+     * }
+     */
+    public static void k_usFriendGameInfoQueryPort_NotInitialized(short varValue) {
+        k_usFriendGameInfoQueryPort_NotInitialized$constants.SEGMENT.set(k_usFriendGameInfoQueryPort_NotInitialized$constants.LAYOUT, 0L, varValue);
+    }
+
+    private static class k_usFriendGameInfoQueryPort_Error$constants {
+        public static final OfShort LAYOUT = SteamFlat.C_SHORT;
+        public static final MemorySegment SEGMENT = SteamFlat.findOrThrow("k_usFriendGameInfoQueryPort_Error").reinterpret(LAYOUT.byteSize());
+    }
+
+    /**
+     * Layout for variable:
+     * {@snippet lang=c :
+     * const uint16 k_usFriendGameInfoQueryPort_Error = 65534
+     * }
+     */
+    public static OfShort k_usFriendGameInfoQueryPort_Error$layout() {
+        return k_usFriendGameInfoQueryPort_Error$constants.LAYOUT;
+    }
+
+    /**
+     * Segment for variable:
+     * {@snippet lang=c :
+     * const uint16 k_usFriendGameInfoQueryPort_Error = 65534
+     * }
+     */
+    public static MemorySegment k_usFriendGameInfoQueryPort_Error$segment() {
+        return k_usFriendGameInfoQueryPort_Error$constants.SEGMENT;
+    }
+
+    /**
+     * Getter for variable:
+     * {@snippet lang=c :
+     * const uint16 k_usFriendGameInfoQueryPort_Error = 65534
+     * }
+     */
+    public static short k_usFriendGameInfoQueryPort_Error() {
+        return k_usFriendGameInfoQueryPort_Error$constants.SEGMENT.get(k_usFriendGameInfoQueryPort_Error$constants.LAYOUT, 0L);
+    }
+
+    /**
+     * Setter for variable:
+     * {@snippet lang=c :
+     * const uint16 k_usFriendGameInfoQueryPort_Error = 65534
+     * }
+     */
+    public static void k_usFriendGameInfoQueryPort_Error(short varValue) {
+        k_usFriendGameInfoQueryPort_Error$constants.SEGMENT.set(k_usFriendGameInfoQueryPort_Error$constants.LAYOUT, 0L, varValue);
+    }
+
+    private static class k_cubChatMetadataMax$constants {
+        public static final OfInt LAYOUT = SteamFlat.C_INT;
+        public static final MemorySegment SEGMENT = SteamFlat.findOrThrow("k_cubChatMetadataMax").reinterpret(LAYOUT.byteSize());
+    }
+
+    /**
+     * Layout for variable:
+     * {@snippet lang=c :
+     * const uint32 k_cubChatMetadataMax = 8192
+     * }
+     */
+    public static OfInt k_cubChatMetadataMax$layout() {
+        return k_cubChatMetadataMax$constants.LAYOUT;
+    }
+
+    /**
+     * Segment for variable:
+     * {@snippet lang=c :
+     * const uint32 k_cubChatMetadataMax = 8192
+     * }
+     */
+    public static MemorySegment k_cubChatMetadataMax$segment() {
+        return k_cubChatMetadataMax$constants.SEGMENT;
+    }
+
+    /**
+     * Getter for variable:
+     * {@snippet lang=c :
+     * const uint32 k_cubChatMetadataMax = 8192
+     * }
+     */
+    public static int k_cubChatMetadataMax() {
+        return k_cubChatMetadataMax$constants.SEGMENT.get(k_cubChatMetadataMax$constants.LAYOUT, 0L);
+    }
+
+    /**
+     * Setter for variable:
+     * {@snippet lang=c :
+     * const uint32 k_cubChatMetadataMax = 8192
+     * }
+     */
+    public static void k_cubChatMetadataMax(int varValue) {
+        k_cubChatMetadataMax$constants.SEGMENT.set(k_cubChatMetadataMax$constants.LAYOUT, 0L, varValue);
+    }
+
+    private static class k_cbMaxGameServerGameDir$constants {
+        public static final OfInt LAYOUT = SteamFlat.C_INT;
+        public static final MemorySegment SEGMENT = SteamFlat.findOrThrow("k_cbMaxGameServerGameDir").reinterpret(LAYOUT.byteSize());
+    }
+
+    /**
+     * Layout for variable:
+     * {@snippet lang=c :
+     * const int k_cbMaxGameServerGameDir = 32
+     * }
+     */
+    public static OfInt k_cbMaxGameServerGameDir$layout() {
+        return k_cbMaxGameServerGameDir$constants.LAYOUT;
+    }
+
+    /**
+     * Segment for variable:
+     * {@snippet lang=c :
+     * const int k_cbMaxGameServerGameDir = 32
+     * }
+     */
+    public static MemorySegment k_cbMaxGameServerGameDir$segment() {
+        return k_cbMaxGameServerGameDir$constants.SEGMENT;
+    }
+
+    /**
+     * Getter for variable:
+     * {@snippet lang=c :
+     * const int k_cbMaxGameServerGameDir = 32
+     * }
+     */
+    public static int k_cbMaxGameServerGameDir() {
+        return k_cbMaxGameServerGameDir$constants.SEGMENT.get(k_cbMaxGameServerGameDir$constants.LAYOUT, 0L);
+    }
+
+    /**
+     * Setter for variable:
+     * {@snippet lang=c :
+     * const int k_cbMaxGameServerGameDir = 32
+     * }
+     */
+    public static void k_cbMaxGameServerGameDir(int varValue) {
+        k_cbMaxGameServerGameDir$constants.SEGMENT.set(k_cbMaxGameServerGameDir$constants.LAYOUT, 0L, varValue);
+    }
+
+    private static class k_cbMaxGameServerMapName$constants {
+        public static final OfInt LAYOUT = SteamFlat.C_INT;
+        public static final MemorySegment SEGMENT = SteamFlat.findOrThrow("k_cbMaxGameServerMapName").reinterpret(LAYOUT.byteSize());
+    }
+
+    /**
+     * Layout for variable:
+     * {@snippet lang=c :
+     * const int k_cbMaxGameServerMapName = 32
+     * }
+     */
+    public static OfInt k_cbMaxGameServerMapName$layout() {
+        return k_cbMaxGameServerMapName$constants.LAYOUT;
+    }
+
+    /**
+     * Segment for variable:
+     * {@snippet lang=c :
+     * const int k_cbMaxGameServerMapName = 32
+     * }
+     */
+    public static MemorySegment k_cbMaxGameServerMapName$segment() {
+        return k_cbMaxGameServerMapName$constants.SEGMENT;
+    }
+
+    /**
+     * Getter for variable:
+     * {@snippet lang=c :
+     * const int k_cbMaxGameServerMapName = 32
+     * }
+     */
+    public static int k_cbMaxGameServerMapName() {
+        return k_cbMaxGameServerMapName$constants.SEGMENT.get(k_cbMaxGameServerMapName$constants.LAYOUT, 0L);
+    }
+
+    /**
+     * Setter for variable:
+     * {@snippet lang=c :
+     * const int k_cbMaxGameServerMapName = 32
+     * }
+     */
+    public static void k_cbMaxGameServerMapName(int varValue) {
+        k_cbMaxGameServerMapName$constants.SEGMENT.set(k_cbMaxGameServerMapName$constants.LAYOUT, 0L, varValue);
+    }
+
+    private static class k_cbMaxGameServerGameDescription$constants {
+        public static final OfInt LAYOUT = SteamFlat.C_INT;
+        public static final MemorySegment SEGMENT = SteamFlat.findOrThrow("k_cbMaxGameServerGameDescription").reinterpret(LAYOUT.byteSize());
+    }
+
+    /**
+     * Layout for variable:
+     * {@snippet lang=c :
+     * const int k_cbMaxGameServerGameDescription = 64
+     * }
+     */
+    public static OfInt k_cbMaxGameServerGameDescription$layout() {
+        return k_cbMaxGameServerGameDescription$constants.LAYOUT;
+    }
+
+    /**
+     * Segment for variable:
+     * {@snippet lang=c :
+     * const int k_cbMaxGameServerGameDescription = 64
+     * }
+     */
+    public static MemorySegment k_cbMaxGameServerGameDescription$segment() {
+        return k_cbMaxGameServerGameDescription$constants.SEGMENT;
+    }
+
+    /**
+     * Getter for variable:
+     * {@snippet lang=c :
+     * const int k_cbMaxGameServerGameDescription = 64
+     * }
+     */
+    public static int k_cbMaxGameServerGameDescription() {
+        return k_cbMaxGameServerGameDescription$constants.SEGMENT.get(k_cbMaxGameServerGameDescription$constants.LAYOUT, 0L);
+    }
+
+    /**
+     * Setter for variable:
+     * {@snippet lang=c :
+     * const int k_cbMaxGameServerGameDescription = 64
+     * }
+     */
+    public static void k_cbMaxGameServerGameDescription(int varValue) {
+        k_cbMaxGameServerGameDescription$constants.SEGMENT.set(k_cbMaxGameServerGameDescription$constants.LAYOUT, 0L, varValue);
+    }
+
+    private static class k_cbMaxGameServerName$constants {
+        public static final OfInt LAYOUT = SteamFlat.C_INT;
+        public static final MemorySegment SEGMENT = SteamFlat.findOrThrow("k_cbMaxGameServerName").reinterpret(LAYOUT.byteSize());
+    }
+
+    /**
+     * Layout for variable:
+     * {@snippet lang=c :
+     * const int k_cbMaxGameServerName = 64
+     * }
+     */
+    public static OfInt k_cbMaxGameServerName$layout() {
+        return k_cbMaxGameServerName$constants.LAYOUT;
+    }
+
+    /**
+     * Segment for variable:
+     * {@snippet lang=c :
+     * const int k_cbMaxGameServerName = 64
+     * }
+     */
+    public static MemorySegment k_cbMaxGameServerName$segment() {
+        return k_cbMaxGameServerName$constants.SEGMENT;
+    }
+
+    /**
+     * Getter for variable:
+     * {@snippet lang=c :
+     * const int k_cbMaxGameServerName = 64
+     * }
+     */
+    public static int k_cbMaxGameServerName() {
+        return k_cbMaxGameServerName$constants.SEGMENT.get(k_cbMaxGameServerName$constants.LAYOUT, 0L);
+    }
+
+    /**
+     * Setter for variable:
+     * {@snippet lang=c :
+     * const int k_cbMaxGameServerName = 64
+     * }
+     */
+    public static void k_cbMaxGameServerName(int varValue) {
+        k_cbMaxGameServerName$constants.SEGMENT.set(k_cbMaxGameServerName$constants.LAYOUT, 0L, varValue);
+    }
+
+    private static class k_cbMaxGameServerTags$constants {
+        public static final OfInt LAYOUT = SteamFlat.C_INT;
+        public static final MemorySegment SEGMENT = SteamFlat.findOrThrow("k_cbMaxGameServerTags").reinterpret(LAYOUT.byteSize());
+    }
+
+    /**
+     * Layout for variable:
+     * {@snippet lang=c :
+     * const int k_cbMaxGameServerTags = 128
+     * }
+     */
+    public static OfInt k_cbMaxGameServerTags$layout() {
+        return k_cbMaxGameServerTags$constants.LAYOUT;
+    }
+
+    /**
+     * Segment for variable:
+     * {@snippet lang=c :
+     * const int k_cbMaxGameServerTags = 128
+     * }
+     */
+    public static MemorySegment k_cbMaxGameServerTags$segment() {
+        return k_cbMaxGameServerTags$constants.SEGMENT;
+    }
+
+    /**
+     * Getter for variable:
+     * {@snippet lang=c :
+     * const int k_cbMaxGameServerTags = 128
+     * }
+     */
+    public static int k_cbMaxGameServerTags() {
+        return k_cbMaxGameServerTags$constants.SEGMENT.get(k_cbMaxGameServerTags$constants.LAYOUT, 0L);
+    }
+
+    /**
+     * Setter for variable:
+     * {@snippet lang=c :
+     * const int k_cbMaxGameServerTags = 128
+     * }
+     */
+    public static void k_cbMaxGameServerTags(int varValue) {
+        k_cbMaxGameServerTags$constants.SEGMENT.set(k_cbMaxGameServerTags$constants.LAYOUT, 0L, varValue);
+    }
+
+    private static class k_cbMaxGameServerGameData$constants {
+        public static final OfInt LAYOUT = SteamFlat.C_INT;
+        public static final MemorySegment SEGMENT = SteamFlat.findOrThrow("k_cbMaxGameServerGameData").reinterpret(LAYOUT.byteSize());
+    }
+
+    /**
+     * Layout for variable:
+     * {@snippet lang=c :
+     * const int k_cbMaxGameServerGameData = 2048
+     * }
+     */
+    public static OfInt k_cbMaxGameServerGameData$layout() {
+        return k_cbMaxGameServerGameData$constants.LAYOUT;
+    }
+
+    /**
+     * Segment for variable:
+     * {@snippet lang=c :
+     * const int k_cbMaxGameServerGameData = 2048
+     * }
+     */
+    public static MemorySegment k_cbMaxGameServerGameData$segment() {
+        return k_cbMaxGameServerGameData$constants.SEGMENT;
+    }
+
+    /**
+     * Getter for variable:
+     * {@snippet lang=c :
+     * const int k_cbMaxGameServerGameData = 2048
+     * }
+     */
+    public static int k_cbMaxGameServerGameData() {
+        return k_cbMaxGameServerGameData$constants.SEGMENT.get(k_cbMaxGameServerGameData$constants.LAYOUT, 0L);
+    }
+
+    /**
+     * Setter for variable:
+     * {@snippet lang=c :
+     * const int k_cbMaxGameServerGameData = 2048
+     * }
+     */
+    public static void k_cbMaxGameServerGameData(int varValue) {
+        k_cbMaxGameServerGameData$constants.SEGMENT.set(k_cbMaxGameServerGameData$constants.LAYOUT, 0L, varValue);
+    }
+
+    private static class HSERVERQUERY_INVALID$constants {
+        public static final OfInt LAYOUT = SteamFlat.C_INT;
+        public static final MemorySegment SEGMENT = SteamFlat.findOrThrow("HSERVERQUERY_INVALID").reinterpret(LAYOUT.byteSize());
+    }
+
+    /**
+     * Layout for variable:
+     * {@snippet lang=c :
+     * const int HSERVERQUERY_INVALID = 4294967295U
+     * }
+     */
+    public static OfInt HSERVERQUERY_INVALID$layout() {
+        return HSERVERQUERY_INVALID$constants.LAYOUT;
+    }
+
+    /**
+     * Segment for variable:
+     * {@snippet lang=c :
+     * const int HSERVERQUERY_INVALID = 4294967295U
+     * }
+     */
+    public static MemorySegment HSERVERQUERY_INVALID$segment() {
+        return HSERVERQUERY_INVALID$constants.SEGMENT;
+    }
+
+    /**
+     * Getter for variable:
+     * {@snippet lang=c :
+     * const int HSERVERQUERY_INVALID = 4294967295U
+     * }
+     */
+    public static int HSERVERQUERY_INVALID() {
+        return HSERVERQUERY_INVALID$constants.SEGMENT.get(HSERVERQUERY_INVALID$constants.LAYOUT, 0L);
+    }
+
+    /**
+     * Setter for variable:
+     * {@snippet lang=c :
+     * const int HSERVERQUERY_INVALID = 4294967295U
+     * }
+     */
+    public static void HSERVERQUERY_INVALID(int varValue) {
+        HSERVERQUERY_INVALID$constants.SEGMENT.set(HSERVERQUERY_INVALID$constants.LAYOUT, 0L, varValue);
+    }
+
+    private static class k_unFavoriteFlagNone$constants {
+        public static final OfInt LAYOUT = SteamFlat.C_INT;
+        public static final MemorySegment SEGMENT = SteamFlat.findOrThrow("k_unFavoriteFlagNone").reinterpret(LAYOUT.byteSize());
+    }
+
+    /**
+     * Layout for variable:
+     * {@snippet lang=c :
+     * const uint32 k_unFavoriteFlagNone = 0
+     * }
+     */
+    public static OfInt k_unFavoriteFlagNone$layout() {
+        return k_unFavoriteFlagNone$constants.LAYOUT;
+    }
+
+    /**
+     * Segment for variable:
+     * {@snippet lang=c :
+     * const uint32 k_unFavoriteFlagNone = 0
+     * }
+     */
+    public static MemorySegment k_unFavoriteFlagNone$segment() {
+        return k_unFavoriteFlagNone$constants.SEGMENT;
+    }
+
+    /**
+     * Getter for variable:
+     * {@snippet lang=c :
+     * const uint32 k_unFavoriteFlagNone = 0
+     * }
+     */
+    public static int k_unFavoriteFlagNone() {
+        return k_unFavoriteFlagNone$constants.SEGMENT.get(k_unFavoriteFlagNone$constants.LAYOUT, 0L);
+    }
+
+    /**
+     * Setter for variable:
+     * {@snippet lang=c :
+     * const uint32 k_unFavoriteFlagNone = 0
+     * }
+     */
+    public static void k_unFavoriteFlagNone(int varValue) {
+        k_unFavoriteFlagNone$constants.SEGMENT.set(k_unFavoriteFlagNone$constants.LAYOUT, 0L, varValue);
+    }
+
+    private static class k_unFavoriteFlagFavorite$constants {
+        public static final OfInt LAYOUT = SteamFlat.C_INT;
+        public static final MemorySegment SEGMENT = SteamFlat.findOrThrow("k_unFavoriteFlagFavorite").reinterpret(LAYOUT.byteSize());
+    }
+
+    /**
+     * Layout for variable:
+     * {@snippet lang=c :
+     * const uint32 k_unFavoriteFlagFavorite = 1
+     * }
+     */
+    public static OfInt k_unFavoriteFlagFavorite$layout() {
+        return k_unFavoriteFlagFavorite$constants.LAYOUT;
+    }
+
+    /**
+     * Segment for variable:
+     * {@snippet lang=c :
+     * const uint32 k_unFavoriteFlagFavorite = 1
+     * }
+     */
+    public static MemorySegment k_unFavoriteFlagFavorite$segment() {
+        return k_unFavoriteFlagFavorite$constants.SEGMENT;
+    }
+
+    /**
+     * Getter for variable:
+     * {@snippet lang=c :
+     * const uint32 k_unFavoriteFlagFavorite = 1
+     * }
+     */
+    public static int k_unFavoriteFlagFavorite() {
+        return k_unFavoriteFlagFavorite$constants.SEGMENT.get(k_unFavoriteFlagFavorite$constants.LAYOUT, 0L);
+    }
+
+    /**
+     * Setter for variable:
+     * {@snippet lang=c :
+     * const uint32 k_unFavoriteFlagFavorite = 1
+     * }
+     */
+    public static void k_unFavoriteFlagFavorite(int varValue) {
+        k_unFavoriteFlagFavorite$constants.SEGMENT.set(k_unFavoriteFlagFavorite$constants.LAYOUT, 0L, varValue);
+    }
+
+    private static class k_unFavoriteFlagHistory$constants {
+        public static final OfInt LAYOUT = SteamFlat.C_INT;
+        public static final MemorySegment SEGMENT = SteamFlat.findOrThrow("k_unFavoriteFlagHistory").reinterpret(LAYOUT.byteSize());
+    }
+
+    /**
+     * Layout for variable:
+     * {@snippet lang=c :
+     * const uint32 k_unFavoriteFlagHistory = 2
+     * }
+     */
+    public static OfInt k_unFavoriteFlagHistory$layout() {
+        return k_unFavoriteFlagHistory$constants.LAYOUT;
+    }
+
+    /**
+     * Segment for variable:
+     * {@snippet lang=c :
+     * const uint32 k_unFavoriteFlagHistory = 2
+     * }
+     */
+    public static MemorySegment k_unFavoriteFlagHistory$segment() {
+        return k_unFavoriteFlagHistory$constants.SEGMENT;
+    }
+
+    /**
+     * Getter for variable:
+     * {@snippet lang=c :
+     * const uint32 k_unFavoriteFlagHistory = 2
+     * }
+     */
+    public static int k_unFavoriteFlagHistory() {
+        return k_unFavoriteFlagHistory$constants.SEGMENT.get(k_unFavoriteFlagHistory$constants.LAYOUT, 0L);
+    }
+
+    /**
+     * Setter for variable:
+     * {@snippet lang=c :
+     * const uint32 k_unFavoriteFlagHistory = 2
+     * }
+     */
+    public static void k_unFavoriteFlagHistory(int varValue) {
+        k_unFavoriteFlagHistory$constants.SEGMENT.set(k_unFavoriteFlagHistory$constants.LAYOUT, 0L, varValue);
+    }
+
+    private static class k_unMaxCloudFileChunkSize$constants {
+        public static final OfInt LAYOUT = SteamFlat.C_INT;
+        public static final MemorySegment SEGMENT = SteamFlat.findOrThrow("k_unMaxCloudFileChunkSize").reinterpret(LAYOUT.byteSize());
+    }
+
+    /**
+     * Layout for variable:
+     * {@snippet lang=c :
+     * const uint32 k_unMaxCloudFileChunkSize = 100 * 1024 * 1024
+     * }
+     */
+    public static OfInt k_unMaxCloudFileChunkSize$layout() {
+        return k_unMaxCloudFileChunkSize$constants.LAYOUT;
+    }
+
+    /**
+     * Segment for variable:
+     * {@snippet lang=c :
+     * const uint32 k_unMaxCloudFileChunkSize = 100 * 1024 * 1024
+     * }
+     */
+    public static MemorySegment k_unMaxCloudFileChunkSize$segment() {
+        return k_unMaxCloudFileChunkSize$constants.SEGMENT;
+    }
+
+    /**
+     * Getter for variable:
+     * {@snippet lang=c :
+     * const uint32 k_unMaxCloudFileChunkSize = 100 * 1024 * 1024
+     * }
+     */
+    public static int k_unMaxCloudFileChunkSize() {
+        return k_unMaxCloudFileChunkSize$constants.SEGMENT.get(k_unMaxCloudFileChunkSize$constants.LAYOUT, 0L);
+    }
+
+    /**
+     * Setter for variable:
+     * {@snippet lang=c :
+     * const uint32 k_unMaxCloudFileChunkSize = 100 * 1024 * 1024
+     * }
+     */
+    public static void k_unMaxCloudFileChunkSize(int varValue) {
+        k_unMaxCloudFileChunkSize$constants.SEGMENT.set(k_unMaxCloudFileChunkSize$constants.LAYOUT, 0L, varValue);
+    }
+
+    private static class k_PublishedFileIdInvalid$constants {
+        public static final OfLong LAYOUT = SteamFlat.C_LONG_LONG;
+        public static final MemorySegment SEGMENT = SteamFlat.findOrThrow("k_PublishedFileIdInvalid").reinterpret(LAYOUT.byteSize());
+    }
+
+    /**
+     * Layout for variable:
+     * {@snippet lang=c :
+     * const PublishedFileId_t k_PublishedFileIdInvalid = 0
+     * }
+     */
+    public static OfLong k_PublishedFileIdInvalid$layout() {
+        return k_PublishedFileIdInvalid$constants.LAYOUT;
+    }
+
+    /**
+     * Segment for variable:
+     * {@snippet lang=c :
+     * const PublishedFileId_t k_PublishedFileIdInvalid = 0
+     * }
+     */
+    public static MemorySegment k_PublishedFileIdInvalid$segment() {
+        return k_PublishedFileIdInvalid$constants.SEGMENT;
+    }
+
+    /**
+     * Getter for variable:
+     * {@snippet lang=c :
+     * const PublishedFileId_t k_PublishedFileIdInvalid = 0
+     * }
+     */
+    public static long k_PublishedFileIdInvalid() {
+        return k_PublishedFileIdInvalid$constants.SEGMENT.get(k_PublishedFileIdInvalid$constants.LAYOUT, 0L);
+    }
+
+    /**
+     * Setter for variable:
+     * {@snippet lang=c :
+     * const PublishedFileId_t k_PublishedFileIdInvalid = 0
+     * }
+     */
+    public static void k_PublishedFileIdInvalid(long varValue) {
+        k_PublishedFileIdInvalid$constants.SEGMENT.set(k_PublishedFileIdInvalid$constants.LAYOUT, 0L, varValue);
+    }
+
+    private static class k_UGCHandleInvalid$constants {
+        public static final OfLong LAYOUT = SteamFlat.C_LONG_LONG;
+        public static final MemorySegment SEGMENT = SteamFlat.findOrThrow("k_UGCHandleInvalid").reinterpret(LAYOUT.byteSize());
+    }
+
+    /**
+     * Layout for variable:
+     * {@snippet lang=c :
+     * const UGCHandle_t k_UGCHandleInvalid = 18446744073709551615ULL
+     * }
+     */
+    public static OfLong k_UGCHandleInvalid$layout() {
+        return k_UGCHandleInvalid$constants.LAYOUT;
+    }
+
+    /**
+     * Segment for variable:
+     * {@snippet lang=c :
+     * const UGCHandle_t k_UGCHandleInvalid = 18446744073709551615ULL
+     * }
+     */
+    public static MemorySegment k_UGCHandleInvalid$segment() {
+        return k_UGCHandleInvalid$constants.SEGMENT;
+    }
+
+    /**
+     * Getter for variable:
+     * {@snippet lang=c :
+     * const UGCHandle_t k_UGCHandleInvalid = 18446744073709551615ULL
+     * }
+     */
+    public static long k_UGCHandleInvalid() {
+        return k_UGCHandleInvalid$constants.SEGMENT.get(k_UGCHandleInvalid$constants.LAYOUT, 0L);
+    }
+
+    /**
+     * Setter for variable:
+     * {@snippet lang=c :
+     * const UGCHandle_t k_UGCHandleInvalid = 18446744073709551615ULL
+     * }
+     */
+    public static void k_UGCHandleInvalid(long varValue) {
+        k_UGCHandleInvalid$constants.SEGMENT.set(k_UGCHandleInvalid$constants.LAYOUT, 0L, varValue);
+    }
+
+    private static class k_PublishedFileUpdateHandleInvalid$constants {
+        public static final OfLong LAYOUT = SteamFlat.C_LONG_LONG;
+        public static final MemorySegment SEGMENT = SteamFlat.findOrThrow("k_PublishedFileUpdateHandleInvalid").reinterpret(LAYOUT.byteSize());
+    }
+
+    /**
+     * Layout for variable:
+     * {@snippet lang=c :
+     * const PublishedFileUpdateHandle_t k_PublishedFileUpdateHandleInvalid = 18446744073709551615ULL
+     * }
+     */
+    public static OfLong k_PublishedFileUpdateHandleInvalid$layout() {
+        return k_PublishedFileUpdateHandleInvalid$constants.LAYOUT;
+    }
+
+    /**
+     * Segment for variable:
+     * {@snippet lang=c :
+     * const PublishedFileUpdateHandle_t k_PublishedFileUpdateHandleInvalid = 18446744073709551615ULL
+     * }
+     */
+    public static MemorySegment k_PublishedFileUpdateHandleInvalid$segment() {
+        return k_PublishedFileUpdateHandleInvalid$constants.SEGMENT;
+    }
+
+    /**
+     * Getter for variable:
+     * {@snippet lang=c :
+     * const PublishedFileUpdateHandle_t k_PublishedFileUpdateHandleInvalid = 18446744073709551615ULL
+     * }
+     */
+    public static long k_PublishedFileUpdateHandleInvalid() {
+        return k_PublishedFileUpdateHandleInvalid$constants.SEGMENT.get(k_PublishedFileUpdateHandleInvalid$constants.LAYOUT, 0L);
+    }
+
+    /**
+     * Setter for variable:
+     * {@snippet lang=c :
+     * const PublishedFileUpdateHandle_t k_PublishedFileUpdateHandleInvalid = 18446744073709551615ULL
+     * }
+     */
+    public static void k_PublishedFileUpdateHandleInvalid(long varValue) {
+        k_PublishedFileUpdateHandleInvalid$constants.SEGMENT.set(k_PublishedFileUpdateHandleInvalid$constants.LAYOUT, 0L, varValue);
+    }
+
+    private static class k_UGCFileStreamHandleInvalid$constants {
+        public static final OfLong LAYOUT = SteamFlat.C_LONG_LONG;
+        public static final MemorySegment SEGMENT = SteamFlat.findOrThrow("k_UGCFileStreamHandleInvalid").reinterpret(LAYOUT.byteSize());
+    }
+
+    /**
+     * Layout for variable:
+     * {@snippet lang=c :
+     * const UGCFileWriteStreamHandle_t k_UGCFileStreamHandleInvalid = 18446744073709551615ULL
+     * }
+     */
+    public static OfLong k_UGCFileStreamHandleInvalid$layout() {
+        return k_UGCFileStreamHandleInvalid$constants.LAYOUT;
+    }
+
+    /**
+     * Segment for variable:
+     * {@snippet lang=c :
+     * const UGCFileWriteStreamHandle_t k_UGCFileStreamHandleInvalid = 18446744073709551615ULL
+     * }
+     */
+    public static MemorySegment k_UGCFileStreamHandleInvalid$segment() {
+        return k_UGCFileStreamHandleInvalid$constants.SEGMENT;
+    }
+
+    /**
+     * Getter for variable:
+     * {@snippet lang=c :
+     * const UGCFileWriteStreamHandle_t k_UGCFileStreamHandleInvalid = 18446744073709551615ULL
+     * }
+     */
+    public static long k_UGCFileStreamHandleInvalid() {
+        return k_UGCFileStreamHandleInvalid$constants.SEGMENT.get(k_UGCFileStreamHandleInvalid$constants.LAYOUT, 0L);
+    }
+
+    /**
+     * Setter for variable:
+     * {@snippet lang=c :
+     * const UGCFileWriteStreamHandle_t k_UGCFileStreamHandleInvalid = 18446744073709551615ULL
+     * }
+     */
+    public static void k_UGCFileStreamHandleInvalid(long varValue) {
+        k_UGCFileStreamHandleInvalid$constants.SEGMENT.set(k_UGCFileStreamHandleInvalid$constants.LAYOUT, 0L, varValue);
+    }
+
+    private static class k_cchPublishedDocumentTitleMax$constants {
+        public static final OfInt LAYOUT = SteamFlat.C_INT;
+        public static final MemorySegment SEGMENT = SteamFlat.findOrThrow("k_cchPublishedDocumentTitleMax").reinterpret(LAYOUT.byteSize());
+    }
+
+    /**
+     * Layout for variable:
+     * {@snippet lang=c :
+     * const uint32 k_cchPublishedDocumentTitleMax = 128 + 1
+     * }
+     */
+    public static OfInt k_cchPublishedDocumentTitleMax$layout() {
+        return k_cchPublishedDocumentTitleMax$constants.LAYOUT;
+    }
+
+    /**
+     * Segment for variable:
+     * {@snippet lang=c :
+     * const uint32 k_cchPublishedDocumentTitleMax = 128 + 1
+     * }
+     */
+    public static MemorySegment k_cchPublishedDocumentTitleMax$segment() {
+        return k_cchPublishedDocumentTitleMax$constants.SEGMENT;
+    }
+
+    /**
+     * Getter for variable:
+     * {@snippet lang=c :
+     * const uint32 k_cchPublishedDocumentTitleMax = 128 + 1
+     * }
+     */
+    public static int k_cchPublishedDocumentTitleMax() {
+        return k_cchPublishedDocumentTitleMax$constants.SEGMENT.get(k_cchPublishedDocumentTitleMax$constants.LAYOUT, 0L);
+    }
+
+    /**
+     * Setter for variable:
+     * {@snippet lang=c :
+     * const uint32 k_cchPublishedDocumentTitleMax = 128 + 1
+     * }
+     */
+    public static void k_cchPublishedDocumentTitleMax(int varValue) {
+        k_cchPublishedDocumentTitleMax$constants.SEGMENT.set(k_cchPublishedDocumentTitleMax$constants.LAYOUT, 0L, varValue);
+    }
+
+    private static class k_cchPublishedDocumentDescriptionMax$constants {
+        public static final OfInt LAYOUT = SteamFlat.C_INT;
+        public static final MemorySegment SEGMENT = SteamFlat.findOrThrow("k_cchPublishedDocumentDescriptionMax").reinterpret(LAYOUT.byteSize());
+    }
+
+    /**
+     * Layout for variable:
+     * {@snippet lang=c :
+     * const uint32 k_cchPublishedDocumentDescriptionMax = 8000
+     * }
+     */
+    public static OfInt k_cchPublishedDocumentDescriptionMax$layout() {
+        return k_cchPublishedDocumentDescriptionMax$constants.LAYOUT;
+    }
+
+    /**
+     * Segment for variable:
+     * {@snippet lang=c :
+     * const uint32 k_cchPublishedDocumentDescriptionMax = 8000
+     * }
+     */
+    public static MemorySegment k_cchPublishedDocumentDescriptionMax$segment() {
+        return k_cchPublishedDocumentDescriptionMax$constants.SEGMENT;
+    }
+
+    /**
+     * Getter for variable:
+     * {@snippet lang=c :
+     * const uint32 k_cchPublishedDocumentDescriptionMax = 8000
+     * }
+     */
+    public static int k_cchPublishedDocumentDescriptionMax() {
+        return k_cchPublishedDocumentDescriptionMax$constants.SEGMENT.get(k_cchPublishedDocumentDescriptionMax$constants.LAYOUT, 0L);
+    }
+
+    /**
+     * Setter for variable:
+     * {@snippet lang=c :
+     * const uint32 k_cchPublishedDocumentDescriptionMax = 8000
+     * }
+     */
+    public static void k_cchPublishedDocumentDescriptionMax(int varValue) {
+        k_cchPublishedDocumentDescriptionMax$constants.SEGMENT.set(k_cchPublishedDocumentDescriptionMax$constants.LAYOUT, 0L, varValue);
+    }
+
+    private static class k_cchPublishedDocumentChangeDescriptionMax$constants {
+        public static final OfInt LAYOUT = SteamFlat.C_INT;
+        public static final MemorySegment SEGMENT = SteamFlat.findOrThrow("k_cchPublishedDocumentChangeDescriptionMax").reinterpret(LAYOUT.byteSize());
+    }
+
+    /**
+     * Layout for variable:
+     * {@snippet lang=c :
+     * const uint32 k_cchPublishedDocumentChangeDescriptionMax = 8000
+     * }
+     */
+    public static OfInt k_cchPublishedDocumentChangeDescriptionMax$layout() {
+        return k_cchPublishedDocumentChangeDescriptionMax$constants.LAYOUT;
+    }
+
+    /**
+     * Segment for variable:
+     * {@snippet lang=c :
+     * const uint32 k_cchPublishedDocumentChangeDescriptionMax = 8000
+     * }
+     */
+    public static MemorySegment k_cchPublishedDocumentChangeDescriptionMax$segment() {
+        return k_cchPublishedDocumentChangeDescriptionMax$constants.SEGMENT;
+    }
+
+    /**
+     * Getter for variable:
+     * {@snippet lang=c :
+     * const uint32 k_cchPublishedDocumentChangeDescriptionMax = 8000
+     * }
+     */
+    public static int k_cchPublishedDocumentChangeDescriptionMax() {
+        return k_cchPublishedDocumentChangeDescriptionMax$constants.SEGMENT.get(k_cchPublishedDocumentChangeDescriptionMax$constants.LAYOUT, 0L);
+    }
+
+    /**
+     * Setter for variable:
+     * {@snippet lang=c :
+     * const uint32 k_cchPublishedDocumentChangeDescriptionMax = 8000
+     * }
+     */
+    public static void k_cchPublishedDocumentChangeDescriptionMax(int varValue) {
+        k_cchPublishedDocumentChangeDescriptionMax$constants.SEGMENT.set(k_cchPublishedDocumentChangeDescriptionMax$constants.LAYOUT, 0L, varValue);
+    }
+
+    private static class k_unEnumeratePublishedFilesMaxResults$constants {
+        public static final OfInt LAYOUT = SteamFlat.C_INT;
+        public static final MemorySegment SEGMENT = SteamFlat.findOrThrow("k_unEnumeratePublishedFilesMaxResults").reinterpret(LAYOUT.byteSize());
+    }
+
+    /**
+     * Layout for variable:
+     * {@snippet lang=c :
+     * const uint32 k_unEnumeratePublishedFilesMaxResults = 50
+     * }
+     */
+    public static OfInt k_unEnumeratePublishedFilesMaxResults$layout() {
+        return k_unEnumeratePublishedFilesMaxResults$constants.LAYOUT;
+    }
+
+    /**
+     * Segment for variable:
+     * {@snippet lang=c :
+     * const uint32 k_unEnumeratePublishedFilesMaxResults = 50
+     * }
+     */
+    public static MemorySegment k_unEnumeratePublishedFilesMaxResults$segment() {
+        return k_unEnumeratePublishedFilesMaxResults$constants.SEGMENT;
+    }
+
+    /**
+     * Getter for variable:
+     * {@snippet lang=c :
+     * const uint32 k_unEnumeratePublishedFilesMaxResults = 50
+     * }
+     */
+    public static int k_unEnumeratePublishedFilesMaxResults() {
+        return k_unEnumeratePublishedFilesMaxResults$constants.SEGMENT.get(k_unEnumeratePublishedFilesMaxResults$constants.LAYOUT, 0L);
+    }
+
+    /**
+     * Setter for variable:
+     * {@snippet lang=c :
+     * const uint32 k_unEnumeratePublishedFilesMaxResults = 50
+     * }
+     */
+    public static void k_unEnumeratePublishedFilesMaxResults(int varValue) {
+        k_unEnumeratePublishedFilesMaxResults$constants.SEGMENT.set(k_unEnumeratePublishedFilesMaxResults$constants.LAYOUT, 0L, varValue);
+    }
+
+    private static class k_cchTagListMax$constants {
+        public static final OfInt LAYOUT = SteamFlat.C_INT;
+        public static final MemorySegment SEGMENT = SteamFlat.findOrThrow("k_cchTagListMax").reinterpret(LAYOUT.byteSize());
+    }
+
+    /**
+     * Layout for variable:
+     * {@snippet lang=c :
+     * const uint32 k_cchTagListMax = 1024 + 1
+     * }
+     */
+    public static OfInt k_cchTagListMax$layout() {
+        return k_cchTagListMax$constants.LAYOUT;
+    }
+
+    /**
+     * Segment for variable:
+     * {@snippet lang=c :
+     * const uint32 k_cchTagListMax = 1024 + 1
+     * }
+     */
+    public static MemorySegment k_cchTagListMax$segment() {
+        return k_cchTagListMax$constants.SEGMENT;
+    }
+
+    /**
+     * Getter for variable:
+     * {@snippet lang=c :
+     * const uint32 k_cchTagListMax = 1024 + 1
+     * }
+     */
+    public static int k_cchTagListMax() {
+        return k_cchTagListMax$constants.SEGMENT.get(k_cchTagListMax$constants.LAYOUT, 0L);
+    }
+
+    /**
+     * Setter for variable:
+     * {@snippet lang=c :
+     * const uint32 k_cchTagListMax = 1024 + 1
+     * }
+     */
+    public static void k_cchTagListMax(int varValue) {
+        k_cchTagListMax$constants.SEGMENT.set(k_cchTagListMax$constants.LAYOUT, 0L, varValue);
+    }
+
+    private static class k_cchFilenameMax$constants {
+        public static final OfInt LAYOUT = SteamFlat.C_INT;
+        public static final MemorySegment SEGMENT = SteamFlat.findOrThrow("k_cchFilenameMax").reinterpret(LAYOUT.byteSize());
+    }
+
+    /**
+     * Layout for variable:
+     * {@snippet lang=c :
+     * const uint32 k_cchFilenameMax = 260
+     * }
+     */
+    public static OfInt k_cchFilenameMax$layout() {
+        return k_cchFilenameMax$constants.LAYOUT;
+    }
+
+    /**
+     * Segment for variable:
+     * {@snippet lang=c :
+     * const uint32 k_cchFilenameMax = 260
+     * }
+     */
+    public static MemorySegment k_cchFilenameMax$segment() {
+        return k_cchFilenameMax$constants.SEGMENT;
+    }
+
+    /**
+     * Getter for variable:
+     * {@snippet lang=c :
+     * const uint32 k_cchFilenameMax = 260
+     * }
+     */
+    public static int k_cchFilenameMax() {
+        return k_cchFilenameMax$constants.SEGMENT.get(k_cchFilenameMax$constants.LAYOUT, 0L);
+    }
+
+    /**
+     * Setter for variable:
+     * {@snippet lang=c :
+     * const uint32 k_cchFilenameMax = 260
+     * }
+     */
+    public static void k_cchFilenameMax(int varValue) {
+        k_cchFilenameMax$constants.SEGMENT.set(k_cchFilenameMax$constants.LAYOUT, 0L, varValue);
+    }
+
+    private static class k_cchPublishedFileURLMax$constants {
+        public static final OfInt LAYOUT = SteamFlat.C_INT;
+        public static final MemorySegment SEGMENT = SteamFlat.findOrThrow("k_cchPublishedFileURLMax").reinterpret(LAYOUT.byteSize());
+    }
+
+    /**
+     * Layout for variable:
+     * {@snippet lang=c :
+     * const uint32 k_cchPublishedFileURLMax = 256
+     * }
+     */
+    public static OfInt k_cchPublishedFileURLMax$layout() {
+        return k_cchPublishedFileURLMax$constants.LAYOUT;
+    }
+
+    /**
+     * Segment for variable:
+     * {@snippet lang=c :
+     * const uint32 k_cchPublishedFileURLMax = 256
+     * }
+     */
+    public static MemorySegment k_cchPublishedFileURLMax$segment() {
+        return k_cchPublishedFileURLMax$constants.SEGMENT;
+    }
+
+    /**
+     * Getter for variable:
+     * {@snippet lang=c :
+     * const uint32 k_cchPublishedFileURLMax = 256
+     * }
+     */
+    public static int k_cchPublishedFileURLMax() {
+        return k_cchPublishedFileURLMax$constants.SEGMENT.get(k_cchPublishedFileURLMax$constants.LAYOUT, 0L);
+    }
+
+    /**
+     * Setter for variable:
+     * {@snippet lang=c :
+     * const uint32 k_cchPublishedFileURLMax = 256
+     * }
+     */
+    public static void k_cchPublishedFileURLMax(int varValue) {
+        k_cchPublishedFileURLMax$constants.SEGMENT.set(k_cchPublishedFileURLMax$constants.LAYOUT, 0L, varValue);
+    }
+
+    private static class k_cubAppProofOfPurchaseKeyMax$constants {
+        public static final OfInt LAYOUT = SteamFlat.C_INT;
+        public static final MemorySegment SEGMENT = SteamFlat.findOrThrow("k_cubAppProofOfPurchaseKeyMax").reinterpret(LAYOUT.byteSize());
+    }
+
+    /**
+     * Layout for variable:
+     * {@snippet lang=c :
+     * const int k_cubAppProofOfPurchaseKeyMax = 240
+     * }
+     */
+    public static OfInt k_cubAppProofOfPurchaseKeyMax$layout() {
+        return k_cubAppProofOfPurchaseKeyMax$constants.LAYOUT;
+    }
+
+    /**
+     * Segment for variable:
+     * {@snippet lang=c :
+     * const int k_cubAppProofOfPurchaseKeyMax = 240
+     * }
+     */
+    public static MemorySegment k_cubAppProofOfPurchaseKeyMax$segment() {
+        return k_cubAppProofOfPurchaseKeyMax$constants.SEGMENT;
+    }
+
+    /**
+     * Getter for variable:
+     * {@snippet lang=c :
+     * const int k_cubAppProofOfPurchaseKeyMax = 240
+     * }
+     */
+    public static int k_cubAppProofOfPurchaseKeyMax() {
+        return k_cubAppProofOfPurchaseKeyMax$constants.SEGMENT.get(k_cubAppProofOfPurchaseKeyMax$constants.LAYOUT, 0L);
+    }
+
+    /**
+     * Setter for variable:
+     * {@snippet lang=c :
+     * const int k_cubAppProofOfPurchaseKeyMax = 240
+     * }
+     */
+    public static void k_cubAppProofOfPurchaseKeyMax(int varValue) {
+        k_cubAppProofOfPurchaseKeyMax$constants.SEGMENT.set(k_cubAppProofOfPurchaseKeyMax$constants.LAYOUT, 0L, varValue);
+    }
+
+    private static class k_nScreenshotMaxTaggedUsers$constants {
+        public static final OfInt LAYOUT = SteamFlat.C_INT;
+        public static final MemorySegment SEGMENT = SteamFlat.findOrThrow("k_nScreenshotMaxTaggedUsers").reinterpret(LAYOUT.byteSize());
+    }
+
+    /**
+     * Layout for variable:
+     * {@snippet lang=c :
+     * const uint32 k_nScreenshotMaxTaggedUsers = 32
+     * }
+     */
+    public static OfInt k_nScreenshotMaxTaggedUsers$layout() {
+        return k_nScreenshotMaxTaggedUsers$constants.LAYOUT;
+    }
+
+    /**
+     * Segment for variable:
+     * {@snippet lang=c :
+     * const uint32 k_nScreenshotMaxTaggedUsers = 32
+     * }
+     */
+    public static MemorySegment k_nScreenshotMaxTaggedUsers$segment() {
+        return k_nScreenshotMaxTaggedUsers$constants.SEGMENT;
+    }
+
+    /**
+     * Getter for variable:
+     * {@snippet lang=c :
+     * const uint32 k_nScreenshotMaxTaggedUsers = 32
+     * }
+     */
+    public static int k_nScreenshotMaxTaggedUsers() {
+        return k_nScreenshotMaxTaggedUsers$constants.SEGMENT.get(k_nScreenshotMaxTaggedUsers$constants.LAYOUT, 0L);
+    }
+
+    /**
+     * Setter for variable:
+     * {@snippet lang=c :
+     * const uint32 k_nScreenshotMaxTaggedUsers = 32
+     * }
+     */
+    public static void k_nScreenshotMaxTaggedUsers(int varValue) {
+        k_nScreenshotMaxTaggedUsers$constants.SEGMENT.set(k_nScreenshotMaxTaggedUsers$constants.LAYOUT, 0L, varValue);
+    }
+
+    private static class k_nScreenshotMaxTaggedPublishedFiles$constants {
+        public static final OfInt LAYOUT = SteamFlat.C_INT;
+        public static final MemorySegment SEGMENT = SteamFlat.findOrThrow("k_nScreenshotMaxTaggedPublishedFiles").reinterpret(LAYOUT.byteSize());
+    }
+
+    /**
+     * Layout for variable:
+     * {@snippet lang=c :
+     * const uint32 k_nScreenshotMaxTaggedPublishedFiles = 32
+     * }
+     */
+    public static OfInt k_nScreenshotMaxTaggedPublishedFiles$layout() {
+        return k_nScreenshotMaxTaggedPublishedFiles$constants.LAYOUT;
+    }
+
+    /**
+     * Segment for variable:
+     * {@snippet lang=c :
+     * const uint32 k_nScreenshotMaxTaggedPublishedFiles = 32
+     * }
+     */
+    public static MemorySegment k_nScreenshotMaxTaggedPublishedFiles$segment() {
+        return k_nScreenshotMaxTaggedPublishedFiles$constants.SEGMENT;
+    }
+
+    /**
+     * Getter for variable:
+     * {@snippet lang=c :
+     * const uint32 k_nScreenshotMaxTaggedPublishedFiles = 32
+     * }
+     */
+    public static int k_nScreenshotMaxTaggedPublishedFiles() {
+        return k_nScreenshotMaxTaggedPublishedFiles$constants.SEGMENT.get(k_nScreenshotMaxTaggedPublishedFiles$constants.LAYOUT, 0L);
+    }
+
+    /**
+     * Setter for variable:
+     * {@snippet lang=c :
+     * const uint32 k_nScreenshotMaxTaggedPublishedFiles = 32
+     * }
+     */
+    public static void k_nScreenshotMaxTaggedPublishedFiles(int varValue) {
+        k_nScreenshotMaxTaggedPublishedFiles$constants.SEGMENT.set(k_nScreenshotMaxTaggedPublishedFiles$constants.LAYOUT, 0L, varValue);
+    }
+
+    private static class k_cubUFSTagTypeMax$constants {
+        public static final OfInt LAYOUT = SteamFlat.C_INT;
+        public static final MemorySegment SEGMENT = SteamFlat.findOrThrow("k_cubUFSTagTypeMax").reinterpret(LAYOUT.byteSize());
+    }
+
+    /**
+     * Layout for variable:
+     * {@snippet lang=c :
+     * const int k_cubUFSTagTypeMax = 255
+     * }
+     */
+    public static OfInt k_cubUFSTagTypeMax$layout() {
+        return k_cubUFSTagTypeMax$constants.LAYOUT;
+    }
+
+    /**
+     * Segment for variable:
+     * {@snippet lang=c :
+     * const int k_cubUFSTagTypeMax = 255
+     * }
+     */
+    public static MemorySegment k_cubUFSTagTypeMax$segment() {
+        return k_cubUFSTagTypeMax$constants.SEGMENT;
+    }
+
+    /**
+     * Getter for variable:
+     * {@snippet lang=c :
+     * const int k_cubUFSTagTypeMax = 255
+     * }
+     */
+    public static int k_cubUFSTagTypeMax() {
+        return k_cubUFSTagTypeMax$constants.SEGMENT.get(k_cubUFSTagTypeMax$constants.LAYOUT, 0L);
+    }
+
+    /**
+     * Setter for variable:
+     * {@snippet lang=c :
+     * const int k_cubUFSTagTypeMax = 255
+     * }
+     */
+    public static void k_cubUFSTagTypeMax(int varValue) {
+        k_cubUFSTagTypeMax$constants.SEGMENT.set(k_cubUFSTagTypeMax$constants.LAYOUT, 0L, varValue);
+    }
+
+    private static class k_cubUFSTagValueMax$constants {
+        public static final OfInt LAYOUT = SteamFlat.C_INT;
+        public static final MemorySegment SEGMENT = SteamFlat.findOrThrow("k_cubUFSTagValueMax").reinterpret(LAYOUT.byteSize());
+    }
+
+    /**
+     * Layout for variable:
+     * {@snippet lang=c :
+     * const int k_cubUFSTagValueMax = 255
+     * }
+     */
+    public static OfInt k_cubUFSTagValueMax$layout() {
+        return k_cubUFSTagValueMax$constants.LAYOUT;
+    }
+
+    /**
+     * Segment for variable:
+     * {@snippet lang=c :
+     * const int k_cubUFSTagValueMax = 255
+     * }
+     */
+    public static MemorySegment k_cubUFSTagValueMax$segment() {
+        return k_cubUFSTagValueMax$constants.SEGMENT;
+    }
+
+    /**
+     * Getter for variable:
+     * {@snippet lang=c :
+     * const int k_cubUFSTagValueMax = 255
+     * }
+     */
+    public static int k_cubUFSTagValueMax() {
+        return k_cubUFSTagValueMax$constants.SEGMENT.get(k_cubUFSTagValueMax$constants.LAYOUT, 0L);
+    }
+
+    /**
+     * Setter for variable:
+     * {@snippet lang=c :
+     * const int k_cubUFSTagValueMax = 255
+     * }
+     */
+    public static void k_cubUFSTagValueMax(int varValue) {
+        k_cubUFSTagValueMax$constants.SEGMENT.set(k_cubUFSTagValueMax$constants.LAYOUT, 0L, varValue);
+    }
+
+    private static class k_ScreenshotThumbWidth$constants {
+        public static final OfInt LAYOUT = SteamFlat.C_INT;
+        public static final MemorySegment SEGMENT = SteamFlat.findOrThrow("k_ScreenshotThumbWidth").reinterpret(LAYOUT.byteSize());
+    }
+
+    /**
+     * Layout for variable:
+     * {@snippet lang=c :
+     * const int k_ScreenshotThumbWidth = 200
+     * }
+     */
+    public static OfInt k_ScreenshotThumbWidth$layout() {
+        return k_ScreenshotThumbWidth$constants.LAYOUT;
+    }
+
+    /**
+     * Segment for variable:
+     * {@snippet lang=c :
+     * const int k_ScreenshotThumbWidth = 200
+     * }
+     */
+    public static MemorySegment k_ScreenshotThumbWidth$segment() {
+        return k_ScreenshotThumbWidth$constants.SEGMENT;
+    }
+
+    /**
+     * Getter for variable:
+     * {@snippet lang=c :
+     * const int k_ScreenshotThumbWidth = 200
+     * }
+     */
+    public static int k_ScreenshotThumbWidth() {
+        return k_ScreenshotThumbWidth$constants.SEGMENT.get(k_ScreenshotThumbWidth$constants.LAYOUT, 0L);
+    }
+
+    /**
+     * Setter for variable:
+     * {@snippet lang=c :
+     * const int k_ScreenshotThumbWidth = 200
+     * }
+     */
+    public static void k_ScreenshotThumbWidth(int varValue) {
+        k_ScreenshotThumbWidth$constants.SEGMENT.set(k_ScreenshotThumbWidth$constants.LAYOUT, 0L, varValue);
+    }
+
+    private static class k_UGCQueryHandleInvalid$constants {
+        public static final OfLong LAYOUT = SteamFlat.C_LONG_LONG;
+        public static final MemorySegment SEGMENT = SteamFlat.findOrThrow("k_UGCQueryHandleInvalid").reinterpret(LAYOUT.byteSize());
+    }
+
+    /**
+     * Layout for variable:
+     * {@snippet lang=c :
+     * const UGCQueryHandle_t k_UGCQueryHandleInvalid = 18446744073709551615ULL
+     * }
+     */
+    public static OfLong k_UGCQueryHandleInvalid$layout() {
+        return k_UGCQueryHandleInvalid$constants.LAYOUT;
+    }
+
+    /**
+     * Segment for variable:
+     * {@snippet lang=c :
+     * const UGCQueryHandle_t k_UGCQueryHandleInvalid = 18446744073709551615ULL
+     * }
+     */
+    public static MemorySegment k_UGCQueryHandleInvalid$segment() {
+        return k_UGCQueryHandleInvalid$constants.SEGMENT;
+    }
+
+    /**
+     * Getter for variable:
+     * {@snippet lang=c :
+     * const UGCQueryHandle_t k_UGCQueryHandleInvalid = 18446744073709551615ULL
+     * }
+     */
+    public static long k_UGCQueryHandleInvalid() {
+        return k_UGCQueryHandleInvalid$constants.SEGMENT.get(k_UGCQueryHandleInvalid$constants.LAYOUT, 0L);
+    }
+
+    /**
+     * Setter for variable:
+     * {@snippet lang=c :
+     * const UGCQueryHandle_t k_UGCQueryHandleInvalid = 18446744073709551615ULL
+     * }
+     */
+    public static void k_UGCQueryHandleInvalid(long varValue) {
+        k_UGCQueryHandleInvalid$constants.SEGMENT.set(k_UGCQueryHandleInvalid$constants.LAYOUT, 0L, varValue);
+    }
+
+    private static class k_UGCUpdateHandleInvalid$constants {
+        public static final OfLong LAYOUT = SteamFlat.C_LONG_LONG;
+        public static final MemorySegment SEGMENT = SteamFlat.findOrThrow("k_UGCUpdateHandleInvalid").reinterpret(LAYOUT.byteSize());
+    }
+
+    /**
+     * Layout for variable:
+     * {@snippet lang=c :
+     * const UGCUpdateHandle_t k_UGCUpdateHandleInvalid = 18446744073709551615ULL
+     * }
+     */
+    public static OfLong k_UGCUpdateHandleInvalid$layout() {
+        return k_UGCUpdateHandleInvalid$constants.LAYOUT;
+    }
+
+    /**
+     * Segment for variable:
+     * {@snippet lang=c :
+     * const UGCUpdateHandle_t k_UGCUpdateHandleInvalid = 18446744073709551615ULL
+     * }
+     */
+    public static MemorySegment k_UGCUpdateHandleInvalid$segment() {
+        return k_UGCUpdateHandleInvalid$constants.SEGMENT;
+    }
+
+    /**
+     * Getter for variable:
+     * {@snippet lang=c :
+     * const UGCUpdateHandle_t k_UGCUpdateHandleInvalid = 18446744073709551615ULL
+     * }
+     */
+    public static long k_UGCUpdateHandleInvalid() {
+        return k_UGCUpdateHandleInvalid$constants.SEGMENT.get(k_UGCUpdateHandleInvalid$constants.LAYOUT, 0L);
+    }
+
+    /**
+     * Setter for variable:
+     * {@snippet lang=c :
+     * const UGCUpdateHandle_t k_UGCUpdateHandleInvalid = 18446744073709551615ULL
+     * }
+     */
+    public static void k_UGCUpdateHandleInvalid(long varValue) {
+        k_UGCUpdateHandleInvalid$constants.SEGMENT.set(k_UGCUpdateHandleInvalid$constants.LAYOUT, 0L, varValue);
+    }
+
+    private static class kNumUGCResultsPerPage$constants {
+        public static final OfInt LAYOUT = SteamFlat.C_INT;
+        public static final MemorySegment SEGMENT = SteamFlat.findOrThrow("kNumUGCResultsPerPage").reinterpret(LAYOUT.byteSize());
+    }
+
+    /**
+     * Layout for variable:
+     * {@snippet lang=c :
+     * const uint32 kNumUGCResultsPerPage = 50
+     * }
+     */
+    public static OfInt kNumUGCResultsPerPage$layout() {
+        return kNumUGCResultsPerPage$constants.LAYOUT;
+    }
+
+    /**
+     * Segment for variable:
+     * {@snippet lang=c :
+     * const uint32 kNumUGCResultsPerPage = 50
+     * }
+     */
+    public static MemorySegment kNumUGCResultsPerPage$segment() {
+        return kNumUGCResultsPerPage$constants.SEGMENT;
+    }
+
+    /**
+     * Getter for variable:
+     * {@snippet lang=c :
+     * const uint32 kNumUGCResultsPerPage = 50
+     * }
+     */
+    public static int kNumUGCResultsPerPage() {
+        return kNumUGCResultsPerPage$constants.SEGMENT.get(kNumUGCResultsPerPage$constants.LAYOUT, 0L);
+    }
+
+    /**
+     * Setter for variable:
+     * {@snippet lang=c :
+     * const uint32 kNumUGCResultsPerPage = 50
+     * }
+     */
+    public static void kNumUGCResultsPerPage(int varValue) {
+        kNumUGCResultsPerPage$constants.SEGMENT.set(kNumUGCResultsPerPage$constants.LAYOUT, 0L, varValue);
+    }
+
+    private static class k_cchDeveloperMetadataMax$constants {
+        public static final OfInt LAYOUT = SteamFlat.C_INT;
+        public static final MemorySegment SEGMENT = SteamFlat.findOrThrow("k_cchDeveloperMetadataMax").reinterpret(LAYOUT.byteSize());
+    }
+
+    /**
+     * Layout for variable:
+     * {@snippet lang=c :
+     * const uint32 k_cchDeveloperMetadataMax = 5000
+     * }
+     */
+    public static OfInt k_cchDeveloperMetadataMax$layout() {
+        return k_cchDeveloperMetadataMax$constants.LAYOUT;
+    }
+
+    /**
+     * Segment for variable:
+     * {@snippet lang=c :
+     * const uint32 k_cchDeveloperMetadataMax = 5000
+     * }
+     */
+    public static MemorySegment k_cchDeveloperMetadataMax$segment() {
+        return k_cchDeveloperMetadataMax$constants.SEGMENT;
+    }
+
+    /**
+     * Getter for variable:
+     * {@snippet lang=c :
+     * const uint32 k_cchDeveloperMetadataMax = 5000
+     * }
+     */
+    public static int k_cchDeveloperMetadataMax() {
+        return k_cchDeveloperMetadataMax$constants.SEGMENT.get(k_cchDeveloperMetadataMax$constants.LAYOUT, 0L);
+    }
+
+    /**
+     * Setter for variable:
+     * {@snippet lang=c :
+     * const uint32 k_cchDeveloperMetadataMax = 5000
+     * }
+     */
+    public static void k_cchDeveloperMetadataMax(int varValue) {
+        k_cchDeveloperMetadataMax$constants.SEGMENT.set(k_cchDeveloperMetadataMax$constants.LAYOUT, 0L, varValue);
+    }
+
+    private static class INVALID_HTMLBROWSER$constants {
+        public static final OfInt LAYOUT = SteamFlat.C_INT;
+        public static final MemorySegment SEGMENT = SteamFlat.findOrThrow("INVALID_HTMLBROWSER").reinterpret(LAYOUT.byteSize());
+    }
+
+    /**
+     * Layout for variable:
+     * {@snippet lang=c :
+     * const uint32 INVALID_HTMLBROWSER = 0
+     * }
+     */
+    public static OfInt INVALID_HTMLBROWSER$layout() {
+        return INVALID_HTMLBROWSER$constants.LAYOUT;
+    }
+
+    /**
+     * Segment for variable:
+     * {@snippet lang=c :
+     * const uint32 INVALID_HTMLBROWSER = 0
+     * }
+     */
+    public static MemorySegment INVALID_HTMLBROWSER$segment() {
+        return INVALID_HTMLBROWSER$constants.SEGMENT;
+    }
+
+    /**
+     * Getter for variable:
+     * {@snippet lang=c :
+     * const uint32 INVALID_HTMLBROWSER = 0
+     * }
+     */
+    public static int INVALID_HTMLBROWSER() {
+        return INVALID_HTMLBROWSER$constants.SEGMENT.get(INVALID_HTMLBROWSER$constants.LAYOUT, 0L);
+    }
+
+    /**
+     * Setter for variable:
+     * {@snippet lang=c :
+     * const uint32 INVALID_HTMLBROWSER = 0
+     * }
+     */
+    public static void INVALID_HTMLBROWSER(int varValue) {
+        INVALID_HTMLBROWSER$constants.SEGMENT.set(INVALID_HTMLBROWSER$constants.LAYOUT, 0L, varValue);
+    }
+
+    private static class k_SteamItemInstanceIDInvalid$constants {
+        public static final OfLong LAYOUT = SteamFlat.C_LONG_LONG;
+        public static final MemorySegment SEGMENT = SteamFlat.findOrThrow("k_SteamItemInstanceIDInvalid").reinterpret(LAYOUT.byteSize());
+    }
+
+    /**
+     * Layout for variable:
+     * {@snippet lang=c :
+     * const SteamItemInstanceID_t k_SteamItemInstanceIDInvalid = (SteamItemInstanceID_t)~0
+     * }
+     */
+    public static OfLong k_SteamItemInstanceIDInvalid$layout() {
+        return k_SteamItemInstanceIDInvalid$constants.LAYOUT;
+    }
+
+    /**
+     * Segment for variable:
+     * {@snippet lang=c :
+     * const SteamItemInstanceID_t k_SteamItemInstanceIDInvalid = (SteamItemInstanceID_t)~0
+     * }
+     */
+    public static MemorySegment k_SteamItemInstanceIDInvalid$segment() {
+        return k_SteamItemInstanceIDInvalid$constants.SEGMENT;
+    }
+
+    /**
+     * Getter for variable:
+     * {@snippet lang=c :
+     * const SteamItemInstanceID_t k_SteamItemInstanceIDInvalid = (SteamItemInstanceID_t)~0
+     * }
+     */
+    public static long k_SteamItemInstanceIDInvalid() {
+        return k_SteamItemInstanceIDInvalid$constants.SEGMENT.get(k_SteamItemInstanceIDInvalid$constants.LAYOUT, 0L);
+    }
+
+    /**
+     * Setter for variable:
+     * {@snippet lang=c :
+     * const SteamItemInstanceID_t k_SteamItemInstanceIDInvalid = (SteamItemInstanceID_t)~0
+     * }
+     */
+    public static void k_SteamItemInstanceIDInvalid(long varValue) {
+        k_SteamItemInstanceIDInvalid$constants.SEGMENT.set(k_SteamItemInstanceIDInvalid$constants.LAYOUT, 0L, varValue);
     }
 }
 

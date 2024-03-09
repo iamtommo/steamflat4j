@@ -179,6 +179,17 @@ public class C_API {
         return sb.toString();
     }
 
+    static String writeConsts(List<Map<String, Object>> consts) {
+        var sb = new StringBuilder();
+        for (var entry : consts) {
+            var constName = (String) entry.get("constname");
+            var constType = (String) entry.get("consttype");
+            var constVal = (String) entry.get("constval");
+            sb.append(format("const %s %s = %s;\n", constType, constName, constVal));
+        }
+        return sb.toString();
+    }
+
     public static void main(String[] args) throws IOException {
         var gson = new Gson();
         var file = Files.readString(Path.of("steam_api.json"));
@@ -190,6 +201,7 @@ public class C_API {
         List<Map<String, Object>> callbackStructs = (List<Map<String, Object>>) json.get("callback_structs");
         List<Map<String, Object>> enums = (List<Map<String, Object>>) json.get("enums");
         List<Map<String, Object>> interfaces = (List<Map<String, Object>>) json.get("interfaces");
+        List<Map<String, Object>> consts = (List<Map<String, Object>>) json.get("consts");
 
         code.append("#include <stdint.h>;\n");
         code.append("#include <stdbool.h>;\n");
@@ -205,6 +217,7 @@ public class C_API {
         code.append(writeStructTypedefs(structs)).append("\n\n");
         code.append(writeStructTypedefs(callbackStructs)).append("\n\n");
         code.append(writeTypedefs(typedefs)).append("\n\n");
+        code.append(writeConsts(consts)).append("\n\n");
 
         for (var callback : callbackStructs) {
             var callbackEnums = callback.get("enums");
@@ -244,8 +257,8 @@ public class C_API {
                 code.append(writeAccessors(className, accessors)).append("\n\n");
             }
 
-            // todo currently ISteamGameServer -> STEAMGAMESERVER
-            // but should maybe use accessor name
+            // todo currently ISteamGameServer -> STEAMGAMESERVER, but should maybe use accessor name
+            // todo some have no version string (i.e. callback interfaces)
             code.append(format("#define %s_INTERFACE_VERSION \"%s\"\n", className.substring(1).toUpperCase(), versionString));
         }
 
@@ -314,6 +327,9 @@ public class C_API {
                 """);
 
         code.append("HSteamPipe SteamAPI_GetHSteamPipe(void);\n");
+        code.append("HSteamUser SteamAPI_GetHSteamUser(void);\n");
+        code.append("HSteamPipe SteamGameServer_GetHSteamPipe(void);\n");
+        code.append("HSteamUser SteamGameServer_GetHSteamUser(void);\n");
 
         code.append("ESteamAPIInitResult SteamAPI_InitFlat( SteamErrMsg *pOutErrMsg );\n");
         code.append("void SteamAPI_Shutdown(void);\n");

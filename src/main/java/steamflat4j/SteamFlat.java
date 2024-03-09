@@ -18,6 +18,4698 @@ public class SteamFlat extends SteamFlat_1 {
         // Should not be called directly
     }
 
+    private static class SteamAPI_ISteamController_GetStringForActionOrigin {
+        public static final FunctionDescriptor DESC = FunctionDescriptor.of(
+            SteamFlat.C_POINTER,
+            SteamFlat.C_POINTER,
+            SteamFlat.C_INT
+        );
+
+        public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(
+                    SteamFlat.findOrThrow("SteamAPI_ISteamController_GetStringForActionOrigin"),
+                    DESC);
+    }
+
+    /**
+     * Function descriptor for:
+     * {@snippet lang=c :
+     * const char *SteamAPI_ISteamController_GetStringForActionOrigin(ISteamController ptr, EControllerActionOrigin eOrigin)
+     * }
+     */
+    public static FunctionDescriptor SteamAPI_ISteamController_GetStringForActionOrigin$descriptor() {
+        return SteamAPI_ISteamController_GetStringForActionOrigin.DESC;
+    }
+
+    /**
+     * Downcall method handle for:
+     * {@snippet lang=c :
+     * const char *SteamAPI_ISteamController_GetStringForActionOrigin(ISteamController ptr, EControllerActionOrigin eOrigin)
+     * }
+     */
+    public static MethodHandle SteamAPI_ISteamController_GetStringForActionOrigin$handle() {
+        return SteamAPI_ISteamController_GetStringForActionOrigin.HANDLE;
+    }
+    /**
+     * {@snippet lang=c :
+     * const char *SteamAPI_ISteamController_GetStringForActionOrigin(ISteamController ptr, EControllerActionOrigin eOrigin)
+     * }
+     */
+    public static MemorySegment SteamAPI_ISteamController_GetStringForActionOrigin(MemorySegment ptr, int eOrigin) {
+        var mh$ = SteamAPI_ISteamController_GetStringForActionOrigin.HANDLE;
+        try {
+            if (TRACE_DOWNCALLS) {
+                traceDowncall("SteamAPI_ISteamController_GetStringForActionOrigin", ptr, eOrigin);
+            }
+            return (MemorySegment)mh$.invokeExact(ptr, eOrigin);
+        } catch (Throwable ex$) {
+           throw new AssertionError("should not reach here", ex$);
+        }
+    }
+
+    private static class SteamAPI_ISteamController_StopAnalogActionMomentum {
+        public static final FunctionDescriptor DESC = FunctionDescriptor.ofVoid(
+            SteamFlat.C_POINTER,
+            SteamFlat.C_LONG_LONG,
+            SteamFlat.C_LONG_LONG
+        );
+
+        public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(
+                    SteamFlat.findOrThrow("SteamAPI_ISteamController_StopAnalogActionMomentum"),
+                    DESC);
+    }
+
+    /**
+     * Function descriptor for:
+     * {@snippet lang=c :
+     * void SteamAPI_ISteamController_StopAnalogActionMomentum(ISteamController ptr, ControllerHandle_t controllerHandle, ControllerAnalogActionHandle_t eAction)
+     * }
+     */
+    public static FunctionDescriptor SteamAPI_ISteamController_StopAnalogActionMomentum$descriptor() {
+        return SteamAPI_ISteamController_StopAnalogActionMomentum.DESC;
+    }
+
+    /**
+     * Downcall method handle for:
+     * {@snippet lang=c :
+     * void SteamAPI_ISteamController_StopAnalogActionMomentum(ISteamController ptr, ControllerHandle_t controllerHandle, ControllerAnalogActionHandle_t eAction)
+     * }
+     */
+    public static MethodHandle SteamAPI_ISteamController_StopAnalogActionMomentum$handle() {
+        return SteamAPI_ISteamController_StopAnalogActionMomentum.HANDLE;
+    }
+    /**
+     * {@snippet lang=c :
+     * void SteamAPI_ISteamController_StopAnalogActionMomentum(ISteamController ptr, ControllerHandle_t controllerHandle, ControllerAnalogActionHandle_t eAction)
+     * }
+     */
+    public static void SteamAPI_ISteamController_StopAnalogActionMomentum(MemorySegment ptr, long controllerHandle, long eAction) {
+        var mh$ = SteamAPI_ISteamController_StopAnalogActionMomentum.HANDLE;
+        try {
+            if (TRACE_DOWNCALLS) {
+                traceDowncall("SteamAPI_ISteamController_StopAnalogActionMomentum", ptr, controllerHandle, eAction);
+            }
+            mh$.invokeExact(ptr, controllerHandle, eAction);
+        } catch (Throwable ex$) {
+           throw new AssertionError("should not reach here", ex$);
+        }
+    }
+
+    private static class SteamAPI_ISteamController_GetMotionData {
+        public static final FunctionDescriptor DESC = FunctionDescriptor.of(
+            InputMotionData_t.layout(),
+            SteamFlat.C_POINTER,
+            SteamFlat.C_LONG_LONG
+        );
+
+        public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(
+                    SteamFlat.findOrThrow("SteamAPI_ISteamController_GetMotionData"),
+                    DESC);
+    }
+
+    /**
+     * Function descriptor for:
+     * {@snippet lang=c :
+     * InputMotionData_t SteamAPI_ISteamController_GetMotionData(ISteamController ptr, ControllerHandle_t controllerHandle)
+     * }
+     */
+    public static FunctionDescriptor SteamAPI_ISteamController_GetMotionData$descriptor() {
+        return SteamAPI_ISteamController_GetMotionData.DESC;
+    }
+
+    /**
+     * Downcall method handle for:
+     * {@snippet lang=c :
+     * InputMotionData_t SteamAPI_ISteamController_GetMotionData(ISteamController ptr, ControllerHandle_t controllerHandle)
+     * }
+     */
+    public static MethodHandle SteamAPI_ISteamController_GetMotionData$handle() {
+        return SteamAPI_ISteamController_GetMotionData.HANDLE;
+    }
+    /**
+     * {@snippet lang=c :
+     * InputMotionData_t SteamAPI_ISteamController_GetMotionData(ISteamController ptr, ControllerHandle_t controllerHandle)
+     * }
+     */
+    public static MemorySegment SteamAPI_ISteamController_GetMotionData(SegmentAllocator allocator, MemorySegment ptr, long controllerHandle) {
+        var mh$ = SteamAPI_ISteamController_GetMotionData.HANDLE;
+        try {
+            if (TRACE_DOWNCALLS) {
+                traceDowncall("SteamAPI_ISteamController_GetMotionData", allocator, ptr, controllerHandle);
+            }
+            return (MemorySegment)mh$.invokeExact(allocator, ptr, controllerHandle);
+        } catch (Throwable ex$) {
+           throw new AssertionError("should not reach here", ex$);
+        }
+    }
+
+    private static class SteamAPI_ISteamController_TriggerHapticPulse {
+        public static final FunctionDescriptor DESC = FunctionDescriptor.ofVoid(
+            SteamFlat.C_POINTER,
+            SteamFlat.C_LONG_LONG,
+            SteamFlat.C_INT,
+            SteamFlat.C_SHORT
+        );
+
+        public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(
+                    SteamFlat.findOrThrow("SteamAPI_ISteamController_TriggerHapticPulse"),
+                    DESC);
+    }
+
+    /**
+     * Function descriptor for:
+     * {@snippet lang=c :
+     * void SteamAPI_ISteamController_TriggerHapticPulse(ISteamController ptr, ControllerHandle_t controllerHandle, ESteamControllerPad eTargetPad, unsigned short usDurationMicroSec)
+     * }
+     */
+    public static FunctionDescriptor SteamAPI_ISteamController_TriggerHapticPulse$descriptor() {
+        return SteamAPI_ISteamController_TriggerHapticPulse.DESC;
+    }
+
+    /**
+     * Downcall method handle for:
+     * {@snippet lang=c :
+     * void SteamAPI_ISteamController_TriggerHapticPulse(ISteamController ptr, ControllerHandle_t controllerHandle, ESteamControllerPad eTargetPad, unsigned short usDurationMicroSec)
+     * }
+     */
+    public static MethodHandle SteamAPI_ISteamController_TriggerHapticPulse$handle() {
+        return SteamAPI_ISteamController_TriggerHapticPulse.HANDLE;
+    }
+    /**
+     * {@snippet lang=c :
+     * void SteamAPI_ISteamController_TriggerHapticPulse(ISteamController ptr, ControllerHandle_t controllerHandle, ESteamControllerPad eTargetPad, unsigned short usDurationMicroSec)
+     * }
+     */
+    public static void SteamAPI_ISteamController_TriggerHapticPulse(MemorySegment ptr, long controllerHandle, int eTargetPad, short usDurationMicroSec) {
+        var mh$ = SteamAPI_ISteamController_TriggerHapticPulse.HANDLE;
+        try {
+            if (TRACE_DOWNCALLS) {
+                traceDowncall("SteamAPI_ISteamController_TriggerHapticPulse", ptr, controllerHandle, eTargetPad, usDurationMicroSec);
+            }
+            mh$.invokeExact(ptr, controllerHandle, eTargetPad, usDurationMicroSec);
+        } catch (Throwable ex$) {
+           throw new AssertionError("should not reach here", ex$);
+        }
+    }
+
+    private static class SteamAPI_ISteamController_TriggerRepeatedHapticPulse {
+        public static final FunctionDescriptor DESC = FunctionDescriptor.ofVoid(
+            SteamFlat.C_POINTER,
+            SteamFlat.C_LONG_LONG,
+            SteamFlat.C_INT,
+            SteamFlat.C_SHORT,
+            SteamFlat.C_SHORT,
+            SteamFlat.C_SHORT,
+            SteamFlat.C_INT
+        );
+
+        public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(
+                    SteamFlat.findOrThrow("SteamAPI_ISteamController_TriggerRepeatedHapticPulse"),
+                    DESC);
+    }
+
+    /**
+     * Function descriptor for:
+     * {@snippet lang=c :
+     * void SteamAPI_ISteamController_TriggerRepeatedHapticPulse(ISteamController ptr, ControllerHandle_t controllerHandle, ESteamControllerPad eTargetPad, unsigned short usDurationMicroSec, unsigned short usOffMicroSec, unsigned short unRepeat, unsigned int nFlags)
+     * }
+     */
+    public static FunctionDescriptor SteamAPI_ISteamController_TriggerRepeatedHapticPulse$descriptor() {
+        return SteamAPI_ISteamController_TriggerRepeatedHapticPulse.DESC;
+    }
+
+    /**
+     * Downcall method handle for:
+     * {@snippet lang=c :
+     * void SteamAPI_ISteamController_TriggerRepeatedHapticPulse(ISteamController ptr, ControllerHandle_t controllerHandle, ESteamControllerPad eTargetPad, unsigned short usDurationMicroSec, unsigned short usOffMicroSec, unsigned short unRepeat, unsigned int nFlags)
+     * }
+     */
+    public static MethodHandle SteamAPI_ISteamController_TriggerRepeatedHapticPulse$handle() {
+        return SteamAPI_ISteamController_TriggerRepeatedHapticPulse.HANDLE;
+    }
+    /**
+     * {@snippet lang=c :
+     * void SteamAPI_ISteamController_TriggerRepeatedHapticPulse(ISteamController ptr, ControllerHandle_t controllerHandle, ESteamControllerPad eTargetPad, unsigned short usDurationMicroSec, unsigned short usOffMicroSec, unsigned short unRepeat, unsigned int nFlags)
+     * }
+     */
+    public static void SteamAPI_ISteamController_TriggerRepeatedHapticPulse(MemorySegment ptr, long controllerHandle, int eTargetPad, short usDurationMicroSec, short usOffMicroSec, short unRepeat, int nFlags) {
+        var mh$ = SteamAPI_ISteamController_TriggerRepeatedHapticPulse.HANDLE;
+        try {
+            if (TRACE_DOWNCALLS) {
+                traceDowncall("SteamAPI_ISteamController_TriggerRepeatedHapticPulse", ptr, controllerHandle, eTargetPad, usDurationMicroSec, usOffMicroSec, unRepeat, nFlags);
+            }
+            mh$.invokeExact(ptr, controllerHandle, eTargetPad, usDurationMicroSec, usOffMicroSec, unRepeat, nFlags);
+        } catch (Throwable ex$) {
+           throw new AssertionError("should not reach here", ex$);
+        }
+    }
+
+    private static class SteamAPI_ISteamController_TriggerVibration {
+        public static final FunctionDescriptor DESC = FunctionDescriptor.ofVoid(
+            SteamFlat.C_POINTER,
+            SteamFlat.C_LONG_LONG,
+            SteamFlat.C_SHORT,
+            SteamFlat.C_SHORT
+        );
+
+        public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(
+                    SteamFlat.findOrThrow("SteamAPI_ISteamController_TriggerVibration"),
+                    DESC);
+    }
+
+    /**
+     * Function descriptor for:
+     * {@snippet lang=c :
+     * void SteamAPI_ISteamController_TriggerVibration(ISteamController ptr, ControllerHandle_t controllerHandle, unsigned short usLeftSpeed, unsigned short usRightSpeed)
+     * }
+     */
+    public static FunctionDescriptor SteamAPI_ISteamController_TriggerVibration$descriptor() {
+        return SteamAPI_ISteamController_TriggerVibration.DESC;
+    }
+
+    /**
+     * Downcall method handle for:
+     * {@snippet lang=c :
+     * void SteamAPI_ISteamController_TriggerVibration(ISteamController ptr, ControllerHandle_t controllerHandle, unsigned short usLeftSpeed, unsigned short usRightSpeed)
+     * }
+     */
+    public static MethodHandle SteamAPI_ISteamController_TriggerVibration$handle() {
+        return SteamAPI_ISteamController_TriggerVibration.HANDLE;
+    }
+    /**
+     * {@snippet lang=c :
+     * void SteamAPI_ISteamController_TriggerVibration(ISteamController ptr, ControllerHandle_t controllerHandle, unsigned short usLeftSpeed, unsigned short usRightSpeed)
+     * }
+     */
+    public static void SteamAPI_ISteamController_TriggerVibration(MemorySegment ptr, long controllerHandle, short usLeftSpeed, short usRightSpeed) {
+        var mh$ = SteamAPI_ISteamController_TriggerVibration.HANDLE;
+        try {
+            if (TRACE_DOWNCALLS) {
+                traceDowncall("SteamAPI_ISteamController_TriggerVibration", ptr, controllerHandle, usLeftSpeed, usRightSpeed);
+            }
+            mh$.invokeExact(ptr, controllerHandle, usLeftSpeed, usRightSpeed);
+        } catch (Throwable ex$) {
+           throw new AssertionError("should not reach here", ex$);
+        }
+    }
+
+    private static class SteamAPI_ISteamController_SetLEDColor {
+        public static final FunctionDescriptor DESC = FunctionDescriptor.ofVoid(
+            SteamFlat.C_POINTER,
+            SteamFlat.C_LONG_LONG,
+            SteamFlat.C_CHAR,
+            SteamFlat.C_CHAR,
+            SteamFlat.C_CHAR,
+            SteamFlat.C_INT
+        );
+
+        public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(
+                    SteamFlat.findOrThrow("SteamAPI_ISteamController_SetLEDColor"),
+                    DESC);
+    }
+
+    /**
+     * Function descriptor for:
+     * {@snippet lang=c :
+     * void SteamAPI_ISteamController_SetLEDColor(ISteamController ptr, ControllerHandle_t controllerHandle, uint8 nColorR, uint8 nColorG, uint8 nColorB, unsigned int nFlags)
+     * }
+     */
+    public static FunctionDescriptor SteamAPI_ISteamController_SetLEDColor$descriptor() {
+        return SteamAPI_ISteamController_SetLEDColor.DESC;
+    }
+
+    /**
+     * Downcall method handle for:
+     * {@snippet lang=c :
+     * void SteamAPI_ISteamController_SetLEDColor(ISteamController ptr, ControllerHandle_t controllerHandle, uint8 nColorR, uint8 nColorG, uint8 nColorB, unsigned int nFlags)
+     * }
+     */
+    public static MethodHandle SteamAPI_ISteamController_SetLEDColor$handle() {
+        return SteamAPI_ISteamController_SetLEDColor.HANDLE;
+    }
+    /**
+     * {@snippet lang=c :
+     * void SteamAPI_ISteamController_SetLEDColor(ISteamController ptr, ControllerHandle_t controllerHandle, uint8 nColorR, uint8 nColorG, uint8 nColorB, unsigned int nFlags)
+     * }
+     */
+    public static void SteamAPI_ISteamController_SetLEDColor(MemorySegment ptr, long controllerHandle, byte nColorR, byte nColorG, byte nColorB, int nFlags) {
+        var mh$ = SteamAPI_ISteamController_SetLEDColor.HANDLE;
+        try {
+            if (TRACE_DOWNCALLS) {
+                traceDowncall("SteamAPI_ISteamController_SetLEDColor", ptr, controllerHandle, nColorR, nColorG, nColorB, nFlags);
+            }
+            mh$.invokeExact(ptr, controllerHandle, nColorR, nColorG, nColorB, nFlags);
+        } catch (Throwable ex$) {
+           throw new AssertionError("should not reach here", ex$);
+        }
+    }
+
+    private static class SteamAPI_ISteamController_ShowBindingPanel {
+        public static final FunctionDescriptor DESC = FunctionDescriptor.of(
+            SteamFlat.C_BOOL,
+            SteamFlat.C_POINTER,
+            SteamFlat.C_LONG_LONG
+        );
+
+        public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(
+                    SteamFlat.findOrThrow("SteamAPI_ISteamController_ShowBindingPanel"),
+                    DESC);
+    }
+
+    /**
+     * Function descriptor for:
+     * {@snippet lang=c :
+     * bool SteamAPI_ISteamController_ShowBindingPanel(ISteamController ptr, ControllerHandle_t controllerHandle)
+     * }
+     */
+    public static FunctionDescriptor SteamAPI_ISteamController_ShowBindingPanel$descriptor() {
+        return SteamAPI_ISteamController_ShowBindingPanel.DESC;
+    }
+
+    /**
+     * Downcall method handle for:
+     * {@snippet lang=c :
+     * bool SteamAPI_ISteamController_ShowBindingPanel(ISteamController ptr, ControllerHandle_t controllerHandle)
+     * }
+     */
+    public static MethodHandle SteamAPI_ISteamController_ShowBindingPanel$handle() {
+        return SteamAPI_ISteamController_ShowBindingPanel.HANDLE;
+    }
+    /**
+     * {@snippet lang=c :
+     * bool SteamAPI_ISteamController_ShowBindingPanel(ISteamController ptr, ControllerHandle_t controllerHandle)
+     * }
+     */
+    public static boolean SteamAPI_ISteamController_ShowBindingPanel(MemorySegment ptr, long controllerHandle) {
+        var mh$ = SteamAPI_ISteamController_ShowBindingPanel.HANDLE;
+        try {
+            if (TRACE_DOWNCALLS) {
+                traceDowncall("SteamAPI_ISteamController_ShowBindingPanel", ptr, controllerHandle);
+            }
+            return (boolean)mh$.invokeExact(ptr, controllerHandle);
+        } catch (Throwable ex$) {
+           throw new AssertionError("should not reach here", ex$);
+        }
+    }
+
+    private static class SteamAPI_ISteamController_GetInputTypeForHandle {
+        public static final FunctionDescriptor DESC = FunctionDescriptor.of(
+            SteamFlat.C_INT,
+            SteamFlat.C_POINTER,
+            SteamFlat.C_LONG_LONG
+        );
+
+        public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(
+                    SteamFlat.findOrThrow("SteamAPI_ISteamController_GetInputTypeForHandle"),
+                    DESC);
+    }
+
+    /**
+     * Function descriptor for:
+     * {@snippet lang=c :
+     * ESteamInputType SteamAPI_ISteamController_GetInputTypeForHandle(ISteamController ptr, ControllerHandle_t controllerHandle)
+     * }
+     */
+    public static FunctionDescriptor SteamAPI_ISteamController_GetInputTypeForHandle$descriptor() {
+        return SteamAPI_ISteamController_GetInputTypeForHandle.DESC;
+    }
+
+    /**
+     * Downcall method handle for:
+     * {@snippet lang=c :
+     * ESteamInputType SteamAPI_ISteamController_GetInputTypeForHandle(ISteamController ptr, ControllerHandle_t controllerHandle)
+     * }
+     */
+    public static MethodHandle SteamAPI_ISteamController_GetInputTypeForHandle$handle() {
+        return SteamAPI_ISteamController_GetInputTypeForHandle.HANDLE;
+    }
+    /**
+     * {@snippet lang=c :
+     * ESteamInputType SteamAPI_ISteamController_GetInputTypeForHandle(ISteamController ptr, ControllerHandle_t controllerHandle)
+     * }
+     */
+    public static int SteamAPI_ISteamController_GetInputTypeForHandle(MemorySegment ptr, long controllerHandle) {
+        var mh$ = SteamAPI_ISteamController_GetInputTypeForHandle.HANDLE;
+        try {
+            if (TRACE_DOWNCALLS) {
+                traceDowncall("SteamAPI_ISteamController_GetInputTypeForHandle", ptr, controllerHandle);
+            }
+            return (int)mh$.invokeExact(ptr, controllerHandle);
+        } catch (Throwable ex$) {
+           throw new AssertionError("should not reach here", ex$);
+        }
+    }
+
+    private static class SteamAPI_ISteamController_GetControllerForGamepadIndex {
+        public static final FunctionDescriptor DESC = FunctionDescriptor.of(
+            SteamFlat.C_LONG_LONG,
+            SteamFlat.C_POINTER,
+            SteamFlat.C_INT
+        );
+
+        public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(
+                    SteamFlat.findOrThrow("SteamAPI_ISteamController_GetControllerForGamepadIndex"),
+                    DESC);
+    }
+
+    /**
+     * Function descriptor for:
+     * {@snippet lang=c :
+     * ControllerHandle_t SteamAPI_ISteamController_GetControllerForGamepadIndex(ISteamController ptr, int nIndex)
+     * }
+     */
+    public static FunctionDescriptor SteamAPI_ISteamController_GetControllerForGamepadIndex$descriptor() {
+        return SteamAPI_ISteamController_GetControllerForGamepadIndex.DESC;
+    }
+
+    /**
+     * Downcall method handle for:
+     * {@snippet lang=c :
+     * ControllerHandle_t SteamAPI_ISteamController_GetControllerForGamepadIndex(ISteamController ptr, int nIndex)
+     * }
+     */
+    public static MethodHandle SteamAPI_ISteamController_GetControllerForGamepadIndex$handle() {
+        return SteamAPI_ISteamController_GetControllerForGamepadIndex.HANDLE;
+    }
+    /**
+     * {@snippet lang=c :
+     * ControllerHandle_t SteamAPI_ISteamController_GetControllerForGamepadIndex(ISteamController ptr, int nIndex)
+     * }
+     */
+    public static long SteamAPI_ISteamController_GetControllerForGamepadIndex(MemorySegment ptr, int nIndex) {
+        var mh$ = SteamAPI_ISteamController_GetControllerForGamepadIndex.HANDLE;
+        try {
+            if (TRACE_DOWNCALLS) {
+                traceDowncall("SteamAPI_ISteamController_GetControllerForGamepadIndex", ptr, nIndex);
+            }
+            return (long)mh$.invokeExact(ptr, nIndex);
+        } catch (Throwable ex$) {
+           throw new AssertionError("should not reach here", ex$);
+        }
+    }
+
+    private static class SteamAPI_ISteamController_GetGamepadIndexForController {
+        public static final FunctionDescriptor DESC = FunctionDescriptor.of(
+            SteamFlat.C_INT,
+            SteamFlat.C_POINTER,
+            SteamFlat.C_LONG_LONG
+        );
+
+        public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(
+                    SteamFlat.findOrThrow("SteamAPI_ISteamController_GetGamepadIndexForController"),
+                    DESC);
+    }
+
+    /**
+     * Function descriptor for:
+     * {@snippet lang=c :
+     * int SteamAPI_ISteamController_GetGamepadIndexForController(ISteamController ptr, ControllerHandle_t ulControllerHandle)
+     * }
+     */
+    public static FunctionDescriptor SteamAPI_ISteamController_GetGamepadIndexForController$descriptor() {
+        return SteamAPI_ISteamController_GetGamepadIndexForController.DESC;
+    }
+
+    /**
+     * Downcall method handle for:
+     * {@snippet lang=c :
+     * int SteamAPI_ISteamController_GetGamepadIndexForController(ISteamController ptr, ControllerHandle_t ulControllerHandle)
+     * }
+     */
+    public static MethodHandle SteamAPI_ISteamController_GetGamepadIndexForController$handle() {
+        return SteamAPI_ISteamController_GetGamepadIndexForController.HANDLE;
+    }
+    /**
+     * {@snippet lang=c :
+     * int SteamAPI_ISteamController_GetGamepadIndexForController(ISteamController ptr, ControllerHandle_t ulControllerHandle)
+     * }
+     */
+    public static int SteamAPI_ISteamController_GetGamepadIndexForController(MemorySegment ptr, long ulControllerHandle) {
+        var mh$ = SteamAPI_ISteamController_GetGamepadIndexForController.HANDLE;
+        try {
+            if (TRACE_DOWNCALLS) {
+                traceDowncall("SteamAPI_ISteamController_GetGamepadIndexForController", ptr, ulControllerHandle);
+            }
+            return (int)mh$.invokeExact(ptr, ulControllerHandle);
+        } catch (Throwable ex$) {
+           throw new AssertionError("should not reach here", ex$);
+        }
+    }
+
+    private static class SteamAPI_ISteamController_GetStringForXboxOrigin {
+        public static final FunctionDescriptor DESC = FunctionDescriptor.of(
+            SteamFlat.C_POINTER,
+            SteamFlat.C_POINTER,
+            SteamFlat.C_INT
+        );
+
+        public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(
+                    SteamFlat.findOrThrow("SteamAPI_ISteamController_GetStringForXboxOrigin"),
+                    DESC);
+    }
+
+    /**
+     * Function descriptor for:
+     * {@snippet lang=c :
+     * const char *SteamAPI_ISteamController_GetStringForXboxOrigin(ISteamController ptr, EXboxOrigin eOrigin)
+     * }
+     */
+    public static FunctionDescriptor SteamAPI_ISteamController_GetStringForXboxOrigin$descriptor() {
+        return SteamAPI_ISteamController_GetStringForXboxOrigin.DESC;
+    }
+
+    /**
+     * Downcall method handle for:
+     * {@snippet lang=c :
+     * const char *SteamAPI_ISteamController_GetStringForXboxOrigin(ISteamController ptr, EXboxOrigin eOrigin)
+     * }
+     */
+    public static MethodHandle SteamAPI_ISteamController_GetStringForXboxOrigin$handle() {
+        return SteamAPI_ISteamController_GetStringForXboxOrigin.HANDLE;
+    }
+    /**
+     * {@snippet lang=c :
+     * const char *SteamAPI_ISteamController_GetStringForXboxOrigin(ISteamController ptr, EXboxOrigin eOrigin)
+     * }
+     */
+    public static MemorySegment SteamAPI_ISteamController_GetStringForXboxOrigin(MemorySegment ptr, int eOrigin) {
+        var mh$ = SteamAPI_ISteamController_GetStringForXboxOrigin.HANDLE;
+        try {
+            if (TRACE_DOWNCALLS) {
+                traceDowncall("SteamAPI_ISteamController_GetStringForXboxOrigin", ptr, eOrigin);
+            }
+            return (MemorySegment)mh$.invokeExact(ptr, eOrigin);
+        } catch (Throwable ex$) {
+           throw new AssertionError("should not reach here", ex$);
+        }
+    }
+
+    private static class SteamAPI_ISteamController_GetGlyphForXboxOrigin {
+        public static final FunctionDescriptor DESC = FunctionDescriptor.of(
+            SteamFlat.C_POINTER,
+            SteamFlat.C_POINTER,
+            SteamFlat.C_INT
+        );
+
+        public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(
+                    SteamFlat.findOrThrow("SteamAPI_ISteamController_GetGlyphForXboxOrigin"),
+                    DESC);
+    }
+
+    /**
+     * Function descriptor for:
+     * {@snippet lang=c :
+     * const char *SteamAPI_ISteamController_GetGlyphForXboxOrigin(ISteamController ptr, EXboxOrigin eOrigin)
+     * }
+     */
+    public static FunctionDescriptor SteamAPI_ISteamController_GetGlyphForXboxOrigin$descriptor() {
+        return SteamAPI_ISteamController_GetGlyphForXboxOrigin.DESC;
+    }
+
+    /**
+     * Downcall method handle for:
+     * {@snippet lang=c :
+     * const char *SteamAPI_ISteamController_GetGlyphForXboxOrigin(ISteamController ptr, EXboxOrigin eOrigin)
+     * }
+     */
+    public static MethodHandle SteamAPI_ISteamController_GetGlyphForXboxOrigin$handle() {
+        return SteamAPI_ISteamController_GetGlyphForXboxOrigin.HANDLE;
+    }
+    /**
+     * {@snippet lang=c :
+     * const char *SteamAPI_ISteamController_GetGlyphForXboxOrigin(ISteamController ptr, EXboxOrigin eOrigin)
+     * }
+     */
+    public static MemorySegment SteamAPI_ISteamController_GetGlyphForXboxOrigin(MemorySegment ptr, int eOrigin) {
+        var mh$ = SteamAPI_ISteamController_GetGlyphForXboxOrigin.HANDLE;
+        try {
+            if (TRACE_DOWNCALLS) {
+                traceDowncall("SteamAPI_ISteamController_GetGlyphForXboxOrigin", ptr, eOrigin);
+            }
+            return (MemorySegment)mh$.invokeExact(ptr, eOrigin);
+        } catch (Throwable ex$) {
+           throw new AssertionError("should not reach here", ex$);
+        }
+    }
+
+    private static class SteamAPI_ISteamController_GetActionOriginFromXboxOrigin {
+        public static final FunctionDescriptor DESC = FunctionDescriptor.of(
+            SteamFlat.C_INT,
+            SteamFlat.C_POINTER,
+            SteamFlat.C_LONG_LONG,
+            SteamFlat.C_INT
+        );
+
+        public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(
+                    SteamFlat.findOrThrow("SteamAPI_ISteamController_GetActionOriginFromXboxOrigin"),
+                    DESC);
+    }
+
+    /**
+     * Function descriptor for:
+     * {@snippet lang=c :
+     * EControllerActionOrigin SteamAPI_ISteamController_GetActionOriginFromXboxOrigin(ISteamController ptr, ControllerHandle_t controllerHandle, EXboxOrigin eOrigin)
+     * }
+     */
+    public static FunctionDescriptor SteamAPI_ISteamController_GetActionOriginFromXboxOrigin$descriptor() {
+        return SteamAPI_ISteamController_GetActionOriginFromXboxOrigin.DESC;
+    }
+
+    /**
+     * Downcall method handle for:
+     * {@snippet lang=c :
+     * EControllerActionOrigin SteamAPI_ISteamController_GetActionOriginFromXboxOrigin(ISteamController ptr, ControllerHandle_t controllerHandle, EXboxOrigin eOrigin)
+     * }
+     */
+    public static MethodHandle SteamAPI_ISteamController_GetActionOriginFromXboxOrigin$handle() {
+        return SteamAPI_ISteamController_GetActionOriginFromXboxOrigin.HANDLE;
+    }
+    /**
+     * {@snippet lang=c :
+     * EControllerActionOrigin SteamAPI_ISteamController_GetActionOriginFromXboxOrigin(ISteamController ptr, ControllerHandle_t controllerHandle, EXboxOrigin eOrigin)
+     * }
+     */
+    public static int SteamAPI_ISteamController_GetActionOriginFromXboxOrigin(MemorySegment ptr, long controllerHandle, int eOrigin) {
+        var mh$ = SteamAPI_ISteamController_GetActionOriginFromXboxOrigin.HANDLE;
+        try {
+            if (TRACE_DOWNCALLS) {
+                traceDowncall("SteamAPI_ISteamController_GetActionOriginFromXboxOrigin", ptr, controllerHandle, eOrigin);
+            }
+            return (int)mh$.invokeExact(ptr, controllerHandle, eOrigin);
+        } catch (Throwable ex$) {
+           throw new AssertionError("should not reach here", ex$);
+        }
+    }
+
+    private static class SteamAPI_ISteamController_TranslateActionOrigin {
+        public static final FunctionDescriptor DESC = FunctionDescriptor.of(
+            SteamFlat.C_INT,
+            SteamFlat.C_POINTER,
+            SteamFlat.C_INT,
+            SteamFlat.C_INT
+        );
+
+        public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(
+                    SteamFlat.findOrThrow("SteamAPI_ISteamController_TranslateActionOrigin"),
+                    DESC);
+    }
+
+    /**
+     * Function descriptor for:
+     * {@snippet lang=c :
+     * EControllerActionOrigin SteamAPI_ISteamController_TranslateActionOrigin(ISteamController ptr, ESteamInputType eDestinationInputType, EControllerActionOrigin eSourceOrigin)
+     * }
+     */
+    public static FunctionDescriptor SteamAPI_ISteamController_TranslateActionOrigin$descriptor() {
+        return SteamAPI_ISteamController_TranslateActionOrigin.DESC;
+    }
+
+    /**
+     * Downcall method handle for:
+     * {@snippet lang=c :
+     * EControllerActionOrigin SteamAPI_ISteamController_TranslateActionOrigin(ISteamController ptr, ESteamInputType eDestinationInputType, EControllerActionOrigin eSourceOrigin)
+     * }
+     */
+    public static MethodHandle SteamAPI_ISteamController_TranslateActionOrigin$handle() {
+        return SteamAPI_ISteamController_TranslateActionOrigin.HANDLE;
+    }
+    /**
+     * {@snippet lang=c :
+     * EControllerActionOrigin SteamAPI_ISteamController_TranslateActionOrigin(ISteamController ptr, ESteamInputType eDestinationInputType, EControllerActionOrigin eSourceOrigin)
+     * }
+     */
+    public static int SteamAPI_ISteamController_TranslateActionOrigin(MemorySegment ptr, int eDestinationInputType, int eSourceOrigin) {
+        var mh$ = SteamAPI_ISteamController_TranslateActionOrigin.HANDLE;
+        try {
+            if (TRACE_DOWNCALLS) {
+                traceDowncall("SteamAPI_ISteamController_TranslateActionOrigin", ptr, eDestinationInputType, eSourceOrigin);
+            }
+            return (int)mh$.invokeExact(ptr, eDestinationInputType, eSourceOrigin);
+        } catch (Throwable ex$) {
+           throw new AssertionError("should not reach here", ex$);
+        }
+    }
+
+    private static class SteamAPI_ISteamController_GetControllerBindingRevision {
+        public static final FunctionDescriptor DESC = FunctionDescriptor.of(
+            SteamFlat.C_BOOL,
+            SteamFlat.C_POINTER,
+            SteamFlat.C_LONG_LONG,
+            SteamFlat.C_POINTER,
+            SteamFlat.C_POINTER
+        );
+
+        public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(
+                    SteamFlat.findOrThrow("SteamAPI_ISteamController_GetControllerBindingRevision"),
+                    DESC);
+    }
+
+    /**
+     * Function descriptor for:
+     * {@snippet lang=c :
+     * bool SteamAPI_ISteamController_GetControllerBindingRevision(ISteamController ptr, ControllerHandle_t controllerHandle, int *pMajor, int *pMinor)
+     * }
+     */
+    public static FunctionDescriptor SteamAPI_ISteamController_GetControllerBindingRevision$descriptor() {
+        return SteamAPI_ISteamController_GetControllerBindingRevision.DESC;
+    }
+
+    /**
+     * Downcall method handle for:
+     * {@snippet lang=c :
+     * bool SteamAPI_ISteamController_GetControllerBindingRevision(ISteamController ptr, ControllerHandle_t controllerHandle, int *pMajor, int *pMinor)
+     * }
+     */
+    public static MethodHandle SteamAPI_ISteamController_GetControllerBindingRevision$handle() {
+        return SteamAPI_ISteamController_GetControllerBindingRevision.HANDLE;
+    }
+    /**
+     * {@snippet lang=c :
+     * bool SteamAPI_ISteamController_GetControllerBindingRevision(ISteamController ptr, ControllerHandle_t controllerHandle, int *pMajor, int *pMinor)
+     * }
+     */
+    public static boolean SteamAPI_ISteamController_GetControllerBindingRevision(MemorySegment ptr, long controllerHandle, MemorySegment pMajor, MemorySegment pMinor) {
+        var mh$ = SteamAPI_ISteamController_GetControllerBindingRevision.HANDLE;
+        try {
+            if (TRACE_DOWNCALLS) {
+                traceDowncall("SteamAPI_ISteamController_GetControllerBindingRevision", ptr, controllerHandle, pMajor, pMinor);
+            }
+            return (boolean)mh$.invokeExact(ptr, controllerHandle, pMajor, pMinor);
+        } catch (Throwable ex$) {
+           throw new AssertionError("should not reach here", ex$);
+        }
+    }
+
+    private static class SteamAPI_SteamController_v008 {
+        public static final FunctionDescriptor DESC = FunctionDescriptor.of(
+            SteamFlat.C_POINTER    );
+
+        public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(
+                    SteamFlat.findOrThrow("SteamAPI_SteamController_v008"),
+                    DESC);
+    }
+
+    /**
+     * Function descriptor for:
+     * {@snippet lang=c :
+     * ISteamController SteamAPI_SteamController_v008()
+     * }
+     */
+    public static FunctionDescriptor SteamAPI_SteamController_v008$descriptor() {
+        return SteamAPI_SteamController_v008.DESC;
+    }
+
+    /**
+     * Downcall method handle for:
+     * {@snippet lang=c :
+     * ISteamController SteamAPI_SteamController_v008()
+     * }
+     */
+    public static MethodHandle SteamAPI_SteamController_v008$handle() {
+        return SteamAPI_SteamController_v008.HANDLE;
+    }
+    /**
+     * {@snippet lang=c :
+     * ISteamController SteamAPI_SteamController_v008()
+     * }
+     */
+    public static MemorySegment SteamAPI_SteamController_v008() {
+        var mh$ = SteamAPI_SteamController_v008.HANDLE;
+        try {
+            if (TRACE_DOWNCALLS) {
+                traceDowncall("SteamAPI_SteamController_v008");
+            }
+            return (MemorySegment)mh$.invokeExact();
+        } catch (Throwable ex$) {
+           throw new AssertionError("should not reach here", ex$);
+        }
+    }
+
+    private static class SteamAPI_ISteamUGC_CreateQueryUserUGCRequest {
+        public static final FunctionDescriptor DESC = FunctionDescriptor.of(
+            SteamFlat.C_LONG_LONG,
+            SteamFlat.C_POINTER,
+            SteamFlat.C_INT,
+            SteamFlat.C_INT,
+            SteamFlat.C_INT,
+            SteamFlat.C_INT,
+            SteamFlat.C_INT,
+            SteamFlat.C_INT,
+            SteamFlat.C_INT
+        );
+
+        public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(
+                    SteamFlat.findOrThrow("SteamAPI_ISteamUGC_CreateQueryUserUGCRequest"),
+                    DESC);
+    }
+
+    /**
+     * Function descriptor for:
+     * {@snippet lang=c :
+     * UGCQueryHandle_t SteamAPI_ISteamUGC_CreateQueryUserUGCRequest(ISteamUGC ptr, AccountID_t unAccountID, EUserUGCList eListType, EUGCMatchingUGCType eMatchingUGCType, EUserUGCListSortOrder eSortOrder, AppId_t nCreatorAppID, AppId_t nConsumerAppID, uint32 unPage)
+     * }
+     */
+    public static FunctionDescriptor SteamAPI_ISteamUGC_CreateQueryUserUGCRequest$descriptor() {
+        return SteamAPI_ISteamUGC_CreateQueryUserUGCRequest.DESC;
+    }
+
+    /**
+     * Downcall method handle for:
+     * {@snippet lang=c :
+     * UGCQueryHandle_t SteamAPI_ISteamUGC_CreateQueryUserUGCRequest(ISteamUGC ptr, AccountID_t unAccountID, EUserUGCList eListType, EUGCMatchingUGCType eMatchingUGCType, EUserUGCListSortOrder eSortOrder, AppId_t nCreatorAppID, AppId_t nConsumerAppID, uint32 unPage)
+     * }
+     */
+    public static MethodHandle SteamAPI_ISteamUGC_CreateQueryUserUGCRequest$handle() {
+        return SteamAPI_ISteamUGC_CreateQueryUserUGCRequest.HANDLE;
+    }
+    /**
+     * {@snippet lang=c :
+     * UGCQueryHandle_t SteamAPI_ISteamUGC_CreateQueryUserUGCRequest(ISteamUGC ptr, AccountID_t unAccountID, EUserUGCList eListType, EUGCMatchingUGCType eMatchingUGCType, EUserUGCListSortOrder eSortOrder, AppId_t nCreatorAppID, AppId_t nConsumerAppID, uint32 unPage)
+     * }
+     */
+    public static long SteamAPI_ISteamUGC_CreateQueryUserUGCRequest(MemorySegment ptr, int unAccountID, int eListType, int eMatchingUGCType, int eSortOrder, int nCreatorAppID, int nConsumerAppID, int unPage) {
+        var mh$ = SteamAPI_ISteamUGC_CreateQueryUserUGCRequest.HANDLE;
+        try {
+            if (TRACE_DOWNCALLS) {
+                traceDowncall("SteamAPI_ISteamUGC_CreateQueryUserUGCRequest", ptr, unAccountID, eListType, eMatchingUGCType, eSortOrder, nCreatorAppID, nConsumerAppID, unPage);
+            }
+            return (long)mh$.invokeExact(ptr, unAccountID, eListType, eMatchingUGCType, eSortOrder, nCreatorAppID, nConsumerAppID, unPage);
+        } catch (Throwable ex$) {
+           throw new AssertionError("should not reach here", ex$);
+        }
+    }
+
+    private static class SteamAPI_ISteamUGC_CreateQueryAllUGCRequestPage {
+        public static final FunctionDescriptor DESC = FunctionDescriptor.of(
+            SteamFlat.C_LONG_LONG,
+            SteamFlat.C_POINTER,
+            SteamFlat.C_INT,
+            SteamFlat.C_INT,
+            SteamFlat.C_INT,
+            SteamFlat.C_INT,
+            SteamFlat.C_INT
+        );
+
+        public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(
+                    SteamFlat.findOrThrow("SteamAPI_ISteamUGC_CreateQueryAllUGCRequestPage"),
+                    DESC);
+    }
+
+    /**
+     * Function descriptor for:
+     * {@snippet lang=c :
+     * UGCQueryHandle_t SteamAPI_ISteamUGC_CreateQueryAllUGCRequestPage(ISteamUGC ptr, EUGCQuery eQueryType, EUGCMatchingUGCType eMatchingeMatchingUGCTypeFileType, AppId_t nCreatorAppID, AppId_t nConsumerAppID, uint32 unPage)
+     * }
+     */
+    public static FunctionDescriptor SteamAPI_ISteamUGC_CreateQueryAllUGCRequestPage$descriptor() {
+        return SteamAPI_ISteamUGC_CreateQueryAllUGCRequestPage.DESC;
+    }
+
+    /**
+     * Downcall method handle for:
+     * {@snippet lang=c :
+     * UGCQueryHandle_t SteamAPI_ISteamUGC_CreateQueryAllUGCRequestPage(ISteamUGC ptr, EUGCQuery eQueryType, EUGCMatchingUGCType eMatchingeMatchingUGCTypeFileType, AppId_t nCreatorAppID, AppId_t nConsumerAppID, uint32 unPage)
+     * }
+     */
+    public static MethodHandle SteamAPI_ISteamUGC_CreateQueryAllUGCRequestPage$handle() {
+        return SteamAPI_ISteamUGC_CreateQueryAllUGCRequestPage.HANDLE;
+    }
+    /**
+     * {@snippet lang=c :
+     * UGCQueryHandle_t SteamAPI_ISteamUGC_CreateQueryAllUGCRequestPage(ISteamUGC ptr, EUGCQuery eQueryType, EUGCMatchingUGCType eMatchingeMatchingUGCTypeFileType, AppId_t nCreatorAppID, AppId_t nConsumerAppID, uint32 unPage)
+     * }
+     */
+    public static long SteamAPI_ISteamUGC_CreateQueryAllUGCRequestPage(MemorySegment ptr, int eQueryType, int eMatchingeMatchingUGCTypeFileType, int nCreatorAppID, int nConsumerAppID, int unPage) {
+        var mh$ = SteamAPI_ISteamUGC_CreateQueryAllUGCRequestPage.HANDLE;
+        try {
+            if (TRACE_DOWNCALLS) {
+                traceDowncall("SteamAPI_ISteamUGC_CreateQueryAllUGCRequestPage", ptr, eQueryType, eMatchingeMatchingUGCTypeFileType, nCreatorAppID, nConsumerAppID, unPage);
+            }
+            return (long)mh$.invokeExact(ptr, eQueryType, eMatchingeMatchingUGCTypeFileType, nCreatorAppID, nConsumerAppID, unPage);
+        } catch (Throwable ex$) {
+           throw new AssertionError("should not reach here", ex$);
+        }
+    }
+
+    private static class SteamAPI_ISteamUGC_CreateQueryAllUGCRequestCursor {
+        public static final FunctionDescriptor DESC = FunctionDescriptor.of(
+            SteamFlat.C_LONG_LONG,
+            SteamFlat.C_POINTER,
+            SteamFlat.C_INT,
+            SteamFlat.C_INT,
+            SteamFlat.C_INT,
+            SteamFlat.C_INT,
+            SteamFlat.C_POINTER
+        );
+
+        public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(
+                    SteamFlat.findOrThrow("SteamAPI_ISteamUGC_CreateQueryAllUGCRequestCursor"),
+                    DESC);
+    }
+
+    /**
+     * Function descriptor for:
+     * {@snippet lang=c :
+     * UGCQueryHandle_t SteamAPI_ISteamUGC_CreateQueryAllUGCRequestCursor(ISteamUGC ptr, EUGCQuery eQueryType, EUGCMatchingUGCType eMatchingeMatchingUGCTypeFileType, AppId_t nCreatorAppID, AppId_t nConsumerAppID, const char *pchCursor)
+     * }
+     */
+    public static FunctionDescriptor SteamAPI_ISteamUGC_CreateQueryAllUGCRequestCursor$descriptor() {
+        return SteamAPI_ISteamUGC_CreateQueryAllUGCRequestCursor.DESC;
+    }
+
+    /**
+     * Downcall method handle for:
+     * {@snippet lang=c :
+     * UGCQueryHandle_t SteamAPI_ISteamUGC_CreateQueryAllUGCRequestCursor(ISteamUGC ptr, EUGCQuery eQueryType, EUGCMatchingUGCType eMatchingeMatchingUGCTypeFileType, AppId_t nCreatorAppID, AppId_t nConsumerAppID, const char *pchCursor)
+     * }
+     */
+    public static MethodHandle SteamAPI_ISteamUGC_CreateQueryAllUGCRequestCursor$handle() {
+        return SteamAPI_ISteamUGC_CreateQueryAllUGCRequestCursor.HANDLE;
+    }
+    /**
+     * {@snippet lang=c :
+     * UGCQueryHandle_t SteamAPI_ISteamUGC_CreateQueryAllUGCRequestCursor(ISteamUGC ptr, EUGCQuery eQueryType, EUGCMatchingUGCType eMatchingeMatchingUGCTypeFileType, AppId_t nCreatorAppID, AppId_t nConsumerAppID, const char *pchCursor)
+     * }
+     */
+    public static long SteamAPI_ISteamUGC_CreateQueryAllUGCRequestCursor(MemorySegment ptr, int eQueryType, int eMatchingeMatchingUGCTypeFileType, int nCreatorAppID, int nConsumerAppID, MemorySegment pchCursor) {
+        var mh$ = SteamAPI_ISteamUGC_CreateQueryAllUGCRequestCursor.HANDLE;
+        try {
+            if (TRACE_DOWNCALLS) {
+                traceDowncall("SteamAPI_ISteamUGC_CreateQueryAllUGCRequestCursor", ptr, eQueryType, eMatchingeMatchingUGCTypeFileType, nCreatorAppID, nConsumerAppID, pchCursor);
+            }
+            return (long)mh$.invokeExact(ptr, eQueryType, eMatchingeMatchingUGCTypeFileType, nCreatorAppID, nConsumerAppID, pchCursor);
+        } catch (Throwable ex$) {
+           throw new AssertionError("should not reach here", ex$);
+        }
+    }
+
+    private static class SteamAPI_ISteamUGC_CreateQueryUGCDetailsRequest {
+        public static final FunctionDescriptor DESC = FunctionDescriptor.of(
+            SteamFlat.C_LONG_LONG,
+            SteamFlat.C_POINTER,
+            SteamFlat.C_POINTER,
+            SteamFlat.C_INT
+        );
+
+        public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(
+                    SteamFlat.findOrThrow("SteamAPI_ISteamUGC_CreateQueryUGCDetailsRequest"),
+                    DESC);
+    }
+
+    /**
+     * Function descriptor for:
+     * {@snippet lang=c :
+     * UGCQueryHandle_t SteamAPI_ISteamUGC_CreateQueryUGCDetailsRequest(ISteamUGC ptr, PublishedFileId_t *pvecPublishedFileID, uint32 unNumPublishedFileIDs)
+     * }
+     */
+    public static FunctionDescriptor SteamAPI_ISteamUGC_CreateQueryUGCDetailsRequest$descriptor() {
+        return SteamAPI_ISteamUGC_CreateQueryUGCDetailsRequest.DESC;
+    }
+
+    /**
+     * Downcall method handle for:
+     * {@snippet lang=c :
+     * UGCQueryHandle_t SteamAPI_ISteamUGC_CreateQueryUGCDetailsRequest(ISteamUGC ptr, PublishedFileId_t *pvecPublishedFileID, uint32 unNumPublishedFileIDs)
+     * }
+     */
+    public static MethodHandle SteamAPI_ISteamUGC_CreateQueryUGCDetailsRequest$handle() {
+        return SteamAPI_ISteamUGC_CreateQueryUGCDetailsRequest.HANDLE;
+    }
+    /**
+     * {@snippet lang=c :
+     * UGCQueryHandle_t SteamAPI_ISteamUGC_CreateQueryUGCDetailsRequest(ISteamUGC ptr, PublishedFileId_t *pvecPublishedFileID, uint32 unNumPublishedFileIDs)
+     * }
+     */
+    public static long SteamAPI_ISteamUGC_CreateQueryUGCDetailsRequest(MemorySegment ptr, MemorySegment pvecPublishedFileID, int unNumPublishedFileIDs) {
+        var mh$ = SteamAPI_ISteamUGC_CreateQueryUGCDetailsRequest.HANDLE;
+        try {
+            if (TRACE_DOWNCALLS) {
+                traceDowncall("SteamAPI_ISteamUGC_CreateQueryUGCDetailsRequest", ptr, pvecPublishedFileID, unNumPublishedFileIDs);
+            }
+            return (long)mh$.invokeExact(ptr, pvecPublishedFileID, unNumPublishedFileIDs);
+        } catch (Throwable ex$) {
+           throw new AssertionError("should not reach here", ex$);
+        }
+    }
+
+    private static class SteamAPI_ISteamUGC_SendQueryUGCRequest {
+        public static final FunctionDescriptor DESC = FunctionDescriptor.of(
+            SteamFlat.C_LONG_LONG,
+            SteamFlat.C_POINTER,
+            SteamFlat.C_LONG_LONG
+        );
+
+        public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(
+                    SteamFlat.findOrThrow("SteamAPI_ISteamUGC_SendQueryUGCRequest"),
+                    DESC);
+    }
+
+    /**
+     * Function descriptor for:
+     * {@snippet lang=c :
+     * SteamAPICall_t SteamAPI_ISteamUGC_SendQueryUGCRequest(ISteamUGC ptr, UGCQueryHandle_t handle)
+     * }
+     */
+    public static FunctionDescriptor SteamAPI_ISteamUGC_SendQueryUGCRequest$descriptor() {
+        return SteamAPI_ISteamUGC_SendQueryUGCRequest.DESC;
+    }
+
+    /**
+     * Downcall method handle for:
+     * {@snippet lang=c :
+     * SteamAPICall_t SteamAPI_ISteamUGC_SendQueryUGCRequest(ISteamUGC ptr, UGCQueryHandle_t handle)
+     * }
+     */
+    public static MethodHandle SteamAPI_ISteamUGC_SendQueryUGCRequest$handle() {
+        return SteamAPI_ISteamUGC_SendQueryUGCRequest.HANDLE;
+    }
+    /**
+     * {@snippet lang=c :
+     * SteamAPICall_t SteamAPI_ISteamUGC_SendQueryUGCRequest(ISteamUGC ptr, UGCQueryHandle_t handle)
+     * }
+     */
+    public static long SteamAPI_ISteamUGC_SendQueryUGCRequest(MemorySegment ptr, long handle) {
+        var mh$ = SteamAPI_ISteamUGC_SendQueryUGCRequest.HANDLE;
+        try {
+            if (TRACE_DOWNCALLS) {
+                traceDowncall("SteamAPI_ISteamUGC_SendQueryUGCRequest", ptr, handle);
+            }
+            return (long)mh$.invokeExact(ptr, handle);
+        } catch (Throwable ex$) {
+           throw new AssertionError("should not reach here", ex$);
+        }
+    }
+
+    private static class SteamAPI_ISteamUGC_GetQueryUGCResult {
+        public static final FunctionDescriptor DESC = FunctionDescriptor.of(
+            SteamFlat.C_BOOL,
+            SteamFlat.C_POINTER,
+            SteamFlat.C_LONG_LONG,
+            SteamFlat.C_INT,
+            SteamFlat.C_POINTER
+        );
+
+        public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(
+                    SteamFlat.findOrThrow("SteamAPI_ISteamUGC_GetQueryUGCResult"),
+                    DESC);
+    }
+
+    /**
+     * Function descriptor for:
+     * {@snippet lang=c :
+     * bool SteamAPI_ISteamUGC_GetQueryUGCResult(ISteamUGC ptr, UGCQueryHandle_t handle, uint32 index, SteamUGCDetails_t *pDetails)
+     * }
+     */
+    public static FunctionDescriptor SteamAPI_ISteamUGC_GetQueryUGCResult$descriptor() {
+        return SteamAPI_ISteamUGC_GetQueryUGCResult.DESC;
+    }
+
+    /**
+     * Downcall method handle for:
+     * {@snippet lang=c :
+     * bool SteamAPI_ISteamUGC_GetQueryUGCResult(ISteamUGC ptr, UGCQueryHandle_t handle, uint32 index, SteamUGCDetails_t *pDetails)
+     * }
+     */
+    public static MethodHandle SteamAPI_ISteamUGC_GetQueryUGCResult$handle() {
+        return SteamAPI_ISteamUGC_GetQueryUGCResult.HANDLE;
+    }
+    /**
+     * {@snippet lang=c :
+     * bool SteamAPI_ISteamUGC_GetQueryUGCResult(ISteamUGC ptr, UGCQueryHandle_t handle, uint32 index, SteamUGCDetails_t *pDetails)
+     * }
+     */
+    public static boolean SteamAPI_ISteamUGC_GetQueryUGCResult(MemorySegment ptr, long handle, int index, MemorySegment pDetails) {
+        var mh$ = SteamAPI_ISteamUGC_GetQueryUGCResult.HANDLE;
+        try {
+            if (TRACE_DOWNCALLS) {
+                traceDowncall("SteamAPI_ISteamUGC_GetQueryUGCResult", ptr, handle, index, pDetails);
+            }
+            return (boolean)mh$.invokeExact(ptr, handle, index, pDetails);
+        } catch (Throwable ex$) {
+           throw new AssertionError("should not reach here", ex$);
+        }
+    }
+
+    private static class SteamAPI_ISteamUGC_GetQueryUGCNumTags {
+        public static final FunctionDescriptor DESC = FunctionDescriptor.of(
+            SteamFlat.C_INT,
+            SteamFlat.C_POINTER,
+            SteamFlat.C_LONG_LONG,
+            SteamFlat.C_INT
+        );
+
+        public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(
+                    SteamFlat.findOrThrow("SteamAPI_ISteamUGC_GetQueryUGCNumTags"),
+                    DESC);
+    }
+
+    /**
+     * Function descriptor for:
+     * {@snippet lang=c :
+     * uint32 SteamAPI_ISteamUGC_GetQueryUGCNumTags(ISteamUGC ptr, UGCQueryHandle_t handle, uint32 index)
+     * }
+     */
+    public static FunctionDescriptor SteamAPI_ISteamUGC_GetQueryUGCNumTags$descriptor() {
+        return SteamAPI_ISteamUGC_GetQueryUGCNumTags.DESC;
+    }
+
+    /**
+     * Downcall method handle for:
+     * {@snippet lang=c :
+     * uint32 SteamAPI_ISteamUGC_GetQueryUGCNumTags(ISteamUGC ptr, UGCQueryHandle_t handle, uint32 index)
+     * }
+     */
+    public static MethodHandle SteamAPI_ISteamUGC_GetQueryUGCNumTags$handle() {
+        return SteamAPI_ISteamUGC_GetQueryUGCNumTags.HANDLE;
+    }
+    /**
+     * {@snippet lang=c :
+     * uint32 SteamAPI_ISteamUGC_GetQueryUGCNumTags(ISteamUGC ptr, UGCQueryHandle_t handle, uint32 index)
+     * }
+     */
+    public static int SteamAPI_ISteamUGC_GetQueryUGCNumTags(MemorySegment ptr, long handle, int index) {
+        var mh$ = SteamAPI_ISteamUGC_GetQueryUGCNumTags.HANDLE;
+        try {
+            if (TRACE_DOWNCALLS) {
+                traceDowncall("SteamAPI_ISteamUGC_GetQueryUGCNumTags", ptr, handle, index);
+            }
+            return (int)mh$.invokeExact(ptr, handle, index);
+        } catch (Throwable ex$) {
+           throw new AssertionError("should not reach here", ex$);
+        }
+    }
+
+    private static class SteamAPI_ISteamUGC_GetQueryUGCTag {
+        public static final FunctionDescriptor DESC = FunctionDescriptor.of(
+            SteamFlat.C_BOOL,
+            SteamFlat.C_POINTER,
+            SteamFlat.C_LONG_LONG,
+            SteamFlat.C_INT,
+            SteamFlat.C_INT,
+            SteamFlat.C_POINTER,
+            SteamFlat.C_INT
+        );
+
+        public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(
+                    SteamFlat.findOrThrow("SteamAPI_ISteamUGC_GetQueryUGCTag"),
+                    DESC);
+    }
+
+    /**
+     * Function descriptor for:
+     * {@snippet lang=c :
+     * bool SteamAPI_ISteamUGC_GetQueryUGCTag(ISteamUGC ptr, UGCQueryHandle_t handle, uint32 index, uint32 indexTag, char *pchValue, uint32 cchValueSize)
+     * }
+     */
+    public static FunctionDescriptor SteamAPI_ISteamUGC_GetQueryUGCTag$descriptor() {
+        return SteamAPI_ISteamUGC_GetQueryUGCTag.DESC;
+    }
+
+    /**
+     * Downcall method handle for:
+     * {@snippet lang=c :
+     * bool SteamAPI_ISteamUGC_GetQueryUGCTag(ISteamUGC ptr, UGCQueryHandle_t handle, uint32 index, uint32 indexTag, char *pchValue, uint32 cchValueSize)
+     * }
+     */
+    public static MethodHandle SteamAPI_ISteamUGC_GetQueryUGCTag$handle() {
+        return SteamAPI_ISteamUGC_GetQueryUGCTag.HANDLE;
+    }
+    /**
+     * {@snippet lang=c :
+     * bool SteamAPI_ISteamUGC_GetQueryUGCTag(ISteamUGC ptr, UGCQueryHandle_t handle, uint32 index, uint32 indexTag, char *pchValue, uint32 cchValueSize)
+     * }
+     */
+    public static boolean SteamAPI_ISteamUGC_GetQueryUGCTag(MemorySegment ptr, long handle, int index, int indexTag, MemorySegment pchValue, int cchValueSize) {
+        var mh$ = SteamAPI_ISteamUGC_GetQueryUGCTag.HANDLE;
+        try {
+            if (TRACE_DOWNCALLS) {
+                traceDowncall("SteamAPI_ISteamUGC_GetQueryUGCTag", ptr, handle, index, indexTag, pchValue, cchValueSize);
+            }
+            return (boolean)mh$.invokeExact(ptr, handle, index, indexTag, pchValue, cchValueSize);
+        } catch (Throwable ex$) {
+           throw new AssertionError("should not reach here", ex$);
+        }
+    }
+
+    private static class SteamAPI_ISteamUGC_GetQueryUGCTagDisplayName {
+        public static final FunctionDescriptor DESC = FunctionDescriptor.of(
+            SteamFlat.C_BOOL,
+            SteamFlat.C_POINTER,
+            SteamFlat.C_LONG_LONG,
+            SteamFlat.C_INT,
+            SteamFlat.C_INT,
+            SteamFlat.C_POINTER,
+            SteamFlat.C_INT
+        );
+
+        public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(
+                    SteamFlat.findOrThrow("SteamAPI_ISteamUGC_GetQueryUGCTagDisplayName"),
+                    DESC);
+    }
+
+    /**
+     * Function descriptor for:
+     * {@snippet lang=c :
+     * bool SteamAPI_ISteamUGC_GetQueryUGCTagDisplayName(ISteamUGC ptr, UGCQueryHandle_t handle, uint32 index, uint32 indexTag, char *pchValue, uint32 cchValueSize)
+     * }
+     */
+    public static FunctionDescriptor SteamAPI_ISteamUGC_GetQueryUGCTagDisplayName$descriptor() {
+        return SteamAPI_ISteamUGC_GetQueryUGCTagDisplayName.DESC;
+    }
+
+    /**
+     * Downcall method handle for:
+     * {@snippet lang=c :
+     * bool SteamAPI_ISteamUGC_GetQueryUGCTagDisplayName(ISteamUGC ptr, UGCQueryHandle_t handle, uint32 index, uint32 indexTag, char *pchValue, uint32 cchValueSize)
+     * }
+     */
+    public static MethodHandle SteamAPI_ISteamUGC_GetQueryUGCTagDisplayName$handle() {
+        return SteamAPI_ISteamUGC_GetQueryUGCTagDisplayName.HANDLE;
+    }
+    /**
+     * {@snippet lang=c :
+     * bool SteamAPI_ISteamUGC_GetQueryUGCTagDisplayName(ISteamUGC ptr, UGCQueryHandle_t handle, uint32 index, uint32 indexTag, char *pchValue, uint32 cchValueSize)
+     * }
+     */
+    public static boolean SteamAPI_ISteamUGC_GetQueryUGCTagDisplayName(MemorySegment ptr, long handle, int index, int indexTag, MemorySegment pchValue, int cchValueSize) {
+        var mh$ = SteamAPI_ISteamUGC_GetQueryUGCTagDisplayName.HANDLE;
+        try {
+            if (TRACE_DOWNCALLS) {
+                traceDowncall("SteamAPI_ISteamUGC_GetQueryUGCTagDisplayName", ptr, handle, index, indexTag, pchValue, cchValueSize);
+            }
+            return (boolean)mh$.invokeExact(ptr, handle, index, indexTag, pchValue, cchValueSize);
+        } catch (Throwable ex$) {
+           throw new AssertionError("should not reach here", ex$);
+        }
+    }
+
+    private static class SteamAPI_ISteamUGC_GetQueryUGCPreviewURL {
+        public static final FunctionDescriptor DESC = FunctionDescriptor.of(
+            SteamFlat.C_BOOL,
+            SteamFlat.C_POINTER,
+            SteamFlat.C_LONG_LONG,
+            SteamFlat.C_INT,
+            SteamFlat.C_POINTER,
+            SteamFlat.C_INT
+        );
+
+        public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(
+                    SteamFlat.findOrThrow("SteamAPI_ISteamUGC_GetQueryUGCPreviewURL"),
+                    DESC);
+    }
+
+    /**
+     * Function descriptor for:
+     * {@snippet lang=c :
+     * bool SteamAPI_ISteamUGC_GetQueryUGCPreviewURL(ISteamUGC ptr, UGCQueryHandle_t handle, uint32 index, char *pchURL, uint32 cchURLSize)
+     * }
+     */
+    public static FunctionDescriptor SteamAPI_ISteamUGC_GetQueryUGCPreviewURL$descriptor() {
+        return SteamAPI_ISteamUGC_GetQueryUGCPreviewURL.DESC;
+    }
+
+    /**
+     * Downcall method handle for:
+     * {@snippet lang=c :
+     * bool SteamAPI_ISteamUGC_GetQueryUGCPreviewURL(ISteamUGC ptr, UGCQueryHandle_t handle, uint32 index, char *pchURL, uint32 cchURLSize)
+     * }
+     */
+    public static MethodHandle SteamAPI_ISteamUGC_GetQueryUGCPreviewURL$handle() {
+        return SteamAPI_ISteamUGC_GetQueryUGCPreviewURL.HANDLE;
+    }
+    /**
+     * {@snippet lang=c :
+     * bool SteamAPI_ISteamUGC_GetQueryUGCPreviewURL(ISteamUGC ptr, UGCQueryHandle_t handle, uint32 index, char *pchURL, uint32 cchURLSize)
+     * }
+     */
+    public static boolean SteamAPI_ISteamUGC_GetQueryUGCPreviewURL(MemorySegment ptr, long handle, int index, MemorySegment pchURL, int cchURLSize) {
+        var mh$ = SteamAPI_ISteamUGC_GetQueryUGCPreviewURL.HANDLE;
+        try {
+            if (TRACE_DOWNCALLS) {
+                traceDowncall("SteamAPI_ISteamUGC_GetQueryUGCPreviewURL", ptr, handle, index, pchURL, cchURLSize);
+            }
+            return (boolean)mh$.invokeExact(ptr, handle, index, pchURL, cchURLSize);
+        } catch (Throwable ex$) {
+           throw new AssertionError("should not reach here", ex$);
+        }
+    }
+
+    private static class SteamAPI_ISteamUGC_GetQueryUGCMetadata {
+        public static final FunctionDescriptor DESC = FunctionDescriptor.of(
+            SteamFlat.C_BOOL,
+            SteamFlat.C_POINTER,
+            SteamFlat.C_LONG_LONG,
+            SteamFlat.C_INT,
+            SteamFlat.C_POINTER,
+            SteamFlat.C_INT
+        );
+
+        public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(
+                    SteamFlat.findOrThrow("SteamAPI_ISteamUGC_GetQueryUGCMetadata"),
+                    DESC);
+    }
+
+    /**
+     * Function descriptor for:
+     * {@snippet lang=c :
+     * bool SteamAPI_ISteamUGC_GetQueryUGCMetadata(ISteamUGC ptr, UGCQueryHandle_t handle, uint32 index, char *pchMetadata, uint32 cchMetadatasize)
+     * }
+     */
+    public static FunctionDescriptor SteamAPI_ISteamUGC_GetQueryUGCMetadata$descriptor() {
+        return SteamAPI_ISteamUGC_GetQueryUGCMetadata.DESC;
+    }
+
+    /**
+     * Downcall method handle for:
+     * {@snippet lang=c :
+     * bool SteamAPI_ISteamUGC_GetQueryUGCMetadata(ISteamUGC ptr, UGCQueryHandle_t handle, uint32 index, char *pchMetadata, uint32 cchMetadatasize)
+     * }
+     */
+    public static MethodHandle SteamAPI_ISteamUGC_GetQueryUGCMetadata$handle() {
+        return SteamAPI_ISteamUGC_GetQueryUGCMetadata.HANDLE;
+    }
+    /**
+     * {@snippet lang=c :
+     * bool SteamAPI_ISteamUGC_GetQueryUGCMetadata(ISteamUGC ptr, UGCQueryHandle_t handle, uint32 index, char *pchMetadata, uint32 cchMetadatasize)
+     * }
+     */
+    public static boolean SteamAPI_ISteamUGC_GetQueryUGCMetadata(MemorySegment ptr, long handle, int index, MemorySegment pchMetadata, int cchMetadatasize) {
+        var mh$ = SteamAPI_ISteamUGC_GetQueryUGCMetadata.HANDLE;
+        try {
+            if (TRACE_DOWNCALLS) {
+                traceDowncall("SteamAPI_ISteamUGC_GetQueryUGCMetadata", ptr, handle, index, pchMetadata, cchMetadatasize);
+            }
+            return (boolean)mh$.invokeExact(ptr, handle, index, pchMetadata, cchMetadatasize);
+        } catch (Throwable ex$) {
+           throw new AssertionError("should not reach here", ex$);
+        }
+    }
+
+    private static class SteamAPI_ISteamUGC_GetQueryUGCChildren {
+        public static final FunctionDescriptor DESC = FunctionDescriptor.of(
+            SteamFlat.C_BOOL,
+            SteamFlat.C_POINTER,
+            SteamFlat.C_LONG_LONG,
+            SteamFlat.C_INT,
+            SteamFlat.C_POINTER,
+            SteamFlat.C_INT
+        );
+
+        public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(
+                    SteamFlat.findOrThrow("SteamAPI_ISteamUGC_GetQueryUGCChildren"),
+                    DESC);
+    }
+
+    /**
+     * Function descriptor for:
+     * {@snippet lang=c :
+     * bool SteamAPI_ISteamUGC_GetQueryUGCChildren(ISteamUGC ptr, UGCQueryHandle_t handle, uint32 index, PublishedFileId_t *pvecPublishedFileID, uint32 cMaxEntries)
+     * }
+     */
+    public static FunctionDescriptor SteamAPI_ISteamUGC_GetQueryUGCChildren$descriptor() {
+        return SteamAPI_ISteamUGC_GetQueryUGCChildren.DESC;
+    }
+
+    /**
+     * Downcall method handle for:
+     * {@snippet lang=c :
+     * bool SteamAPI_ISteamUGC_GetQueryUGCChildren(ISteamUGC ptr, UGCQueryHandle_t handle, uint32 index, PublishedFileId_t *pvecPublishedFileID, uint32 cMaxEntries)
+     * }
+     */
+    public static MethodHandle SteamAPI_ISteamUGC_GetQueryUGCChildren$handle() {
+        return SteamAPI_ISteamUGC_GetQueryUGCChildren.HANDLE;
+    }
+    /**
+     * {@snippet lang=c :
+     * bool SteamAPI_ISteamUGC_GetQueryUGCChildren(ISteamUGC ptr, UGCQueryHandle_t handle, uint32 index, PublishedFileId_t *pvecPublishedFileID, uint32 cMaxEntries)
+     * }
+     */
+    public static boolean SteamAPI_ISteamUGC_GetQueryUGCChildren(MemorySegment ptr, long handle, int index, MemorySegment pvecPublishedFileID, int cMaxEntries) {
+        var mh$ = SteamAPI_ISteamUGC_GetQueryUGCChildren.HANDLE;
+        try {
+            if (TRACE_DOWNCALLS) {
+                traceDowncall("SteamAPI_ISteamUGC_GetQueryUGCChildren", ptr, handle, index, pvecPublishedFileID, cMaxEntries);
+            }
+            return (boolean)mh$.invokeExact(ptr, handle, index, pvecPublishedFileID, cMaxEntries);
+        } catch (Throwable ex$) {
+           throw new AssertionError("should not reach here", ex$);
+        }
+    }
+
+    private static class SteamAPI_ISteamUGC_GetQueryUGCStatistic {
+        public static final FunctionDescriptor DESC = FunctionDescriptor.of(
+            SteamFlat.C_BOOL,
+            SteamFlat.C_POINTER,
+            SteamFlat.C_LONG_LONG,
+            SteamFlat.C_INT,
+            SteamFlat.C_INT,
+            SteamFlat.C_POINTER
+        );
+
+        public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(
+                    SteamFlat.findOrThrow("SteamAPI_ISteamUGC_GetQueryUGCStatistic"),
+                    DESC);
+    }
+
+    /**
+     * Function descriptor for:
+     * {@snippet lang=c :
+     * bool SteamAPI_ISteamUGC_GetQueryUGCStatistic(ISteamUGC ptr, UGCQueryHandle_t handle, uint32 index, EItemStatistic eStatType, uint64 *pStatValue)
+     * }
+     */
+    public static FunctionDescriptor SteamAPI_ISteamUGC_GetQueryUGCStatistic$descriptor() {
+        return SteamAPI_ISteamUGC_GetQueryUGCStatistic.DESC;
+    }
+
+    /**
+     * Downcall method handle for:
+     * {@snippet lang=c :
+     * bool SteamAPI_ISteamUGC_GetQueryUGCStatistic(ISteamUGC ptr, UGCQueryHandle_t handle, uint32 index, EItemStatistic eStatType, uint64 *pStatValue)
+     * }
+     */
+    public static MethodHandle SteamAPI_ISteamUGC_GetQueryUGCStatistic$handle() {
+        return SteamAPI_ISteamUGC_GetQueryUGCStatistic.HANDLE;
+    }
+    /**
+     * {@snippet lang=c :
+     * bool SteamAPI_ISteamUGC_GetQueryUGCStatistic(ISteamUGC ptr, UGCQueryHandle_t handle, uint32 index, EItemStatistic eStatType, uint64 *pStatValue)
+     * }
+     */
+    public static boolean SteamAPI_ISteamUGC_GetQueryUGCStatistic(MemorySegment ptr, long handle, int index, int eStatType, MemorySegment pStatValue) {
+        var mh$ = SteamAPI_ISteamUGC_GetQueryUGCStatistic.HANDLE;
+        try {
+            if (TRACE_DOWNCALLS) {
+                traceDowncall("SteamAPI_ISteamUGC_GetQueryUGCStatistic", ptr, handle, index, eStatType, pStatValue);
+            }
+            return (boolean)mh$.invokeExact(ptr, handle, index, eStatType, pStatValue);
+        } catch (Throwable ex$) {
+           throw new AssertionError("should not reach here", ex$);
+        }
+    }
+
+    private static class SteamAPI_ISteamUGC_GetQueryUGCNumAdditionalPreviews {
+        public static final FunctionDescriptor DESC = FunctionDescriptor.of(
+            SteamFlat.C_INT,
+            SteamFlat.C_POINTER,
+            SteamFlat.C_LONG_LONG,
+            SteamFlat.C_INT
+        );
+
+        public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(
+                    SteamFlat.findOrThrow("SteamAPI_ISteamUGC_GetQueryUGCNumAdditionalPreviews"),
+                    DESC);
+    }
+
+    /**
+     * Function descriptor for:
+     * {@snippet lang=c :
+     * uint32 SteamAPI_ISteamUGC_GetQueryUGCNumAdditionalPreviews(ISteamUGC ptr, UGCQueryHandle_t handle, uint32 index)
+     * }
+     */
+    public static FunctionDescriptor SteamAPI_ISteamUGC_GetQueryUGCNumAdditionalPreviews$descriptor() {
+        return SteamAPI_ISteamUGC_GetQueryUGCNumAdditionalPreviews.DESC;
+    }
+
+    /**
+     * Downcall method handle for:
+     * {@snippet lang=c :
+     * uint32 SteamAPI_ISteamUGC_GetQueryUGCNumAdditionalPreviews(ISteamUGC ptr, UGCQueryHandle_t handle, uint32 index)
+     * }
+     */
+    public static MethodHandle SteamAPI_ISteamUGC_GetQueryUGCNumAdditionalPreviews$handle() {
+        return SteamAPI_ISteamUGC_GetQueryUGCNumAdditionalPreviews.HANDLE;
+    }
+    /**
+     * {@snippet lang=c :
+     * uint32 SteamAPI_ISteamUGC_GetQueryUGCNumAdditionalPreviews(ISteamUGC ptr, UGCQueryHandle_t handle, uint32 index)
+     * }
+     */
+    public static int SteamAPI_ISteamUGC_GetQueryUGCNumAdditionalPreviews(MemorySegment ptr, long handle, int index) {
+        var mh$ = SteamAPI_ISteamUGC_GetQueryUGCNumAdditionalPreviews.HANDLE;
+        try {
+            if (TRACE_DOWNCALLS) {
+                traceDowncall("SteamAPI_ISteamUGC_GetQueryUGCNumAdditionalPreviews", ptr, handle, index);
+            }
+            return (int)mh$.invokeExact(ptr, handle, index);
+        } catch (Throwable ex$) {
+           throw new AssertionError("should not reach here", ex$);
+        }
+    }
+
+    private static class SteamAPI_ISteamUGC_GetQueryUGCAdditionalPreview {
+        public static final FunctionDescriptor DESC = FunctionDescriptor.of(
+            SteamFlat.C_BOOL,
+            SteamFlat.C_POINTER,
+            SteamFlat.C_LONG_LONG,
+            SteamFlat.C_INT,
+            SteamFlat.C_INT,
+            SteamFlat.C_POINTER,
+            SteamFlat.C_INT,
+            SteamFlat.C_POINTER,
+            SteamFlat.C_INT,
+            SteamFlat.C_POINTER
+        );
+
+        public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(
+                    SteamFlat.findOrThrow("SteamAPI_ISteamUGC_GetQueryUGCAdditionalPreview"),
+                    DESC);
+    }
+
+    /**
+     * Function descriptor for:
+     * {@snippet lang=c :
+     * bool SteamAPI_ISteamUGC_GetQueryUGCAdditionalPreview(ISteamUGC ptr, UGCQueryHandle_t handle, uint32 index, uint32 previewIndex, char *pchURLOrVideoID, uint32 cchURLSize, char *pchOriginalFileName, uint32 cchOriginalFileNameSize, EItemPreviewType *pPreviewType)
+     * }
+     */
+    public static FunctionDescriptor SteamAPI_ISteamUGC_GetQueryUGCAdditionalPreview$descriptor() {
+        return SteamAPI_ISteamUGC_GetQueryUGCAdditionalPreview.DESC;
+    }
+
+    /**
+     * Downcall method handle for:
+     * {@snippet lang=c :
+     * bool SteamAPI_ISteamUGC_GetQueryUGCAdditionalPreview(ISteamUGC ptr, UGCQueryHandle_t handle, uint32 index, uint32 previewIndex, char *pchURLOrVideoID, uint32 cchURLSize, char *pchOriginalFileName, uint32 cchOriginalFileNameSize, EItemPreviewType *pPreviewType)
+     * }
+     */
+    public static MethodHandle SteamAPI_ISteamUGC_GetQueryUGCAdditionalPreview$handle() {
+        return SteamAPI_ISteamUGC_GetQueryUGCAdditionalPreview.HANDLE;
+    }
+    /**
+     * {@snippet lang=c :
+     * bool SteamAPI_ISteamUGC_GetQueryUGCAdditionalPreview(ISteamUGC ptr, UGCQueryHandle_t handle, uint32 index, uint32 previewIndex, char *pchURLOrVideoID, uint32 cchURLSize, char *pchOriginalFileName, uint32 cchOriginalFileNameSize, EItemPreviewType *pPreviewType)
+     * }
+     */
+    public static boolean SteamAPI_ISteamUGC_GetQueryUGCAdditionalPreview(MemorySegment ptr, long handle, int index, int previewIndex, MemorySegment pchURLOrVideoID, int cchURLSize, MemorySegment pchOriginalFileName, int cchOriginalFileNameSize, MemorySegment pPreviewType) {
+        var mh$ = SteamAPI_ISteamUGC_GetQueryUGCAdditionalPreview.HANDLE;
+        try {
+            if (TRACE_DOWNCALLS) {
+                traceDowncall("SteamAPI_ISteamUGC_GetQueryUGCAdditionalPreview", ptr, handle, index, previewIndex, pchURLOrVideoID, cchURLSize, pchOriginalFileName, cchOriginalFileNameSize, pPreviewType);
+            }
+            return (boolean)mh$.invokeExact(ptr, handle, index, previewIndex, pchURLOrVideoID, cchURLSize, pchOriginalFileName, cchOriginalFileNameSize, pPreviewType);
+        } catch (Throwable ex$) {
+           throw new AssertionError("should not reach here", ex$);
+        }
+    }
+
+    private static class SteamAPI_ISteamUGC_GetQueryUGCNumKeyValueTags {
+        public static final FunctionDescriptor DESC = FunctionDescriptor.of(
+            SteamFlat.C_INT,
+            SteamFlat.C_POINTER,
+            SteamFlat.C_LONG_LONG,
+            SteamFlat.C_INT
+        );
+
+        public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(
+                    SteamFlat.findOrThrow("SteamAPI_ISteamUGC_GetQueryUGCNumKeyValueTags"),
+                    DESC);
+    }
+
+    /**
+     * Function descriptor for:
+     * {@snippet lang=c :
+     * uint32 SteamAPI_ISteamUGC_GetQueryUGCNumKeyValueTags(ISteamUGC ptr, UGCQueryHandle_t handle, uint32 index)
+     * }
+     */
+    public static FunctionDescriptor SteamAPI_ISteamUGC_GetQueryUGCNumKeyValueTags$descriptor() {
+        return SteamAPI_ISteamUGC_GetQueryUGCNumKeyValueTags.DESC;
+    }
+
+    /**
+     * Downcall method handle for:
+     * {@snippet lang=c :
+     * uint32 SteamAPI_ISteamUGC_GetQueryUGCNumKeyValueTags(ISteamUGC ptr, UGCQueryHandle_t handle, uint32 index)
+     * }
+     */
+    public static MethodHandle SteamAPI_ISteamUGC_GetQueryUGCNumKeyValueTags$handle() {
+        return SteamAPI_ISteamUGC_GetQueryUGCNumKeyValueTags.HANDLE;
+    }
+    /**
+     * {@snippet lang=c :
+     * uint32 SteamAPI_ISteamUGC_GetQueryUGCNumKeyValueTags(ISteamUGC ptr, UGCQueryHandle_t handle, uint32 index)
+     * }
+     */
+    public static int SteamAPI_ISteamUGC_GetQueryUGCNumKeyValueTags(MemorySegment ptr, long handle, int index) {
+        var mh$ = SteamAPI_ISteamUGC_GetQueryUGCNumKeyValueTags.HANDLE;
+        try {
+            if (TRACE_DOWNCALLS) {
+                traceDowncall("SteamAPI_ISteamUGC_GetQueryUGCNumKeyValueTags", ptr, handle, index);
+            }
+            return (int)mh$.invokeExact(ptr, handle, index);
+        } catch (Throwable ex$) {
+           throw new AssertionError("should not reach here", ex$);
+        }
+    }
+
+    private static class SteamAPI_ISteamUGC_GetQueryUGCKeyValueTag {
+        public static final FunctionDescriptor DESC = FunctionDescriptor.of(
+            SteamFlat.C_BOOL,
+            SteamFlat.C_POINTER,
+            SteamFlat.C_LONG_LONG,
+            SteamFlat.C_INT,
+            SteamFlat.C_INT,
+            SteamFlat.C_POINTER,
+            SteamFlat.C_INT,
+            SteamFlat.C_POINTER,
+            SteamFlat.C_INT
+        );
+
+        public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(
+                    SteamFlat.findOrThrow("SteamAPI_ISteamUGC_GetQueryUGCKeyValueTag"),
+                    DESC);
+    }
+
+    /**
+     * Function descriptor for:
+     * {@snippet lang=c :
+     * bool SteamAPI_ISteamUGC_GetQueryUGCKeyValueTag(ISteamUGC ptr, UGCQueryHandle_t handle, uint32 index, uint32 keyValueTagIndex, char *pchKey, uint32 cchKeySize, char *pchValue, uint32 cchValueSize)
+     * }
+     */
+    public static FunctionDescriptor SteamAPI_ISteamUGC_GetQueryUGCKeyValueTag$descriptor() {
+        return SteamAPI_ISteamUGC_GetQueryUGCKeyValueTag.DESC;
+    }
+
+    /**
+     * Downcall method handle for:
+     * {@snippet lang=c :
+     * bool SteamAPI_ISteamUGC_GetQueryUGCKeyValueTag(ISteamUGC ptr, UGCQueryHandle_t handle, uint32 index, uint32 keyValueTagIndex, char *pchKey, uint32 cchKeySize, char *pchValue, uint32 cchValueSize)
+     * }
+     */
+    public static MethodHandle SteamAPI_ISteamUGC_GetQueryUGCKeyValueTag$handle() {
+        return SteamAPI_ISteamUGC_GetQueryUGCKeyValueTag.HANDLE;
+    }
+    /**
+     * {@snippet lang=c :
+     * bool SteamAPI_ISteamUGC_GetQueryUGCKeyValueTag(ISteamUGC ptr, UGCQueryHandle_t handle, uint32 index, uint32 keyValueTagIndex, char *pchKey, uint32 cchKeySize, char *pchValue, uint32 cchValueSize)
+     * }
+     */
+    public static boolean SteamAPI_ISteamUGC_GetQueryUGCKeyValueTag(MemorySegment ptr, long handle, int index, int keyValueTagIndex, MemorySegment pchKey, int cchKeySize, MemorySegment pchValue, int cchValueSize) {
+        var mh$ = SteamAPI_ISteamUGC_GetQueryUGCKeyValueTag.HANDLE;
+        try {
+            if (TRACE_DOWNCALLS) {
+                traceDowncall("SteamAPI_ISteamUGC_GetQueryUGCKeyValueTag", ptr, handle, index, keyValueTagIndex, pchKey, cchKeySize, pchValue, cchValueSize);
+            }
+            return (boolean)mh$.invokeExact(ptr, handle, index, keyValueTagIndex, pchKey, cchKeySize, pchValue, cchValueSize);
+        } catch (Throwable ex$) {
+           throw new AssertionError("should not reach here", ex$);
+        }
+    }
+
+    private static class SteamAPI_ISteamUGC_GetQueryFirstUGCKeyValueTag {
+        public static final FunctionDescriptor DESC = FunctionDescriptor.of(
+            SteamFlat.C_BOOL,
+            SteamFlat.C_POINTER,
+            SteamFlat.C_LONG_LONG,
+            SteamFlat.C_INT,
+            SteamFlat.C_POINTER,
+            SteamFlat.C_POINTER,
+            SteamFlat.C_INT
+        );
+
+        public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(
+                    SteamFlat.findOrThrow("SteamAPI_ISteamUGC_GetQueryFirstUGCKeyValueTag"),
+                    DESC);
+    }
+
+    /**
+     * Function descriptor for:
+     * {@snippet lang=c :
+     * bool SteamAPI_ISteamUGC_GetQueryFirstUGCKeyValueTag(ISteamUGC ptr, UGCQueryHandle_t handle, uint32 index, const char *pchKey, char *pchValue, uint32 cchValueSize)
+     * }
+     */
+    public static FunctionDescriptor SteamAPI_ISteamUGC_GetQueryFirstUGCKeyValueTag$descriptor() {
+        return SteamAPI_ISteamUGC_GetQueryFirstUGCKeyValueTag.DESC;
+    }
+
+    /**
+     * Downcall method handle for:
+     * {@snippet lang=c :
+     * bool SteamAPI_ISteamUGC_GetQueryFirstUGCKeyValueTag(ISteamUGC ptr, UGCQueryHandle_t handle, uint32 index, const char *pchKey, char *pchValue, uint32 cchValueSize)
+     * }
+     */
+    public static MethodHandle SteamAPI_ISteamUGC_GetQueryFirstUGCKeyValueTag$handle() {
+        return SteamAPI_ISteamUGC_GetQueryFirstUGCKeyValueTag.HANDLE;
+    }
+    /**
+     * {@snippet lang=c :
+     * bool SteamAPI_ISteamUGC_GetQueryFirstUGCKeyValueTag(ISteamUGC ptr, UGCQueryHandle_t handle, uint32 index, const char *pchKey, char *pchValue, uint32 cchValueSize)
+     * }
+     */
+    public static boolean SteamAPI_ISteamUGC_GetQueryFirstUGCKeyValueTag(MemorySegment ptr, long handle, int index, MemorySegment pchKey, MemorySegment pchValue, int cchValueSize) {
+        var mh$ = SteamAPI_ISteamUGC_GetQueryFirstUGCKeyValueTag.HANDLE;
+        try {
+            if (TRACE_DOWNCALLS) {
+                traceDowncall("SteamAPI_ISteamUGC_GetQueryFirstUGCKeyValueTag", ptr, handle, index, pchKey, pchValue, cchValueSize);
+            }
+            return (boolean)mh$.invokeExact(ptr, handle, index, pchKey, pchValue, cchValueSize);
+        } catch (Throwable ex$) {
+           throw new AssertionError("should not reach here", ex$);
+        }
+    }
+
+    private static class SteamAPI_ISteamUGC_GetQueryUGCContentDescriptors {
+        public static final FunctionDescriptor DESC = FunctionDescriptor.of(
+            SteamFlat.C_INT,
+            SteamFlat.C_POINTER,
+            SteamFlat.C_LONG_LONG,
+            SteamFlat.C_INT,
+            SteamFlat.C_POINTER,
+            SteamFlat.C_INT
+        );
+
+        public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(
+                    SteamFlat.findOrThrow("SteamAPI_ISteamUGC_GetQueryUGCContentDescriptors"),
+                    DESC);
+    }
+
+    /**
+     * Function descriptor for:
+     * {@snippet lang=c :
+     * uint32 SteamAPI_ISteamUGC_GetQueryUGCContentDescriptors(ISteamUGC ptr, UGCQueryHandle_t handle, uint32 index, EUGCContentDescriptorID *pvecDescriptors, uint32 cMaxEntries)
+     * }
+     */
+    public static FunctionDescriptor SteamAPI_ISteamUGC_GetQueryUGCContentDescriptors$descriptor() {
+        return SteamAPI_ISteamUGC_GetQueryUGCContentDescriptors.DESC;
+    }
+
+    /**
+     * Downcall method handle for:
+     * {@snippet lang=c :
+     * uint32 SteamAPI_ISteamUGC_GetQueryUGCContentDescriptors(ISteamUGC ptr, UGCQueryHandle_t handle, uint32 index, EUGCContentDescriptorID *pvecDescriptors, uint32 cMaxEntries)
+     * }
+     */
+    public static MethodHandle SteamAPI_ISteamUGC_GetQueryUGCContentDescriptors$handle() {
+        return SteamAPI_ISteamUGC_GetQueryUGCContentDescriptors.HANDLE;
+    }
+    /**
+     * {@snippet lang=c :
+     * uint32 SteamAPI_ISteamUGC_GetQueryUGCContentDescriptors(ISteamUGC ptr, UGCQueryHandle_t handle, uint32 index, EUGCContentDescriptorID *pvecDescriptors, uint32 cMaxEntries)
+     * }
+     */
+    public static int SteamAPI_ISteamUGC_GetQueryUGCContentDescriptors(MemorySegment ptr, long handle, int index, MemorySegment pvecDescriptors, int cMaxEntries) {
+        var mh$ = SteamAPI_ISteamUGC_GetQueryUGCContentDescriptors.HANDLE;
+        try {
+            if (TRACE_DOWNCALLS) {
+                traceDowncall("SteamAPI_ISteamUGC_GetQueryUGCContentDescriptors", ptr, handle, index, pvecDescriptors, cMaxEntries);
+            }
+            return (int)mh$.invokeExact(ptr, handle, index, pvecDescriptors, cMaxEntries);
+        } catch (Throwable ex$) {
+           throw new AssertionError("should not reach here", ex$);
+        }
+    }
+
+    private static class SteamAPI_ISteamUGC_ReleaseQueryUGCRequest {
+        public static final FunctionDescriptor DESC = FunctionDescriptor.of(
+            SteamFlat.C_BOOL,
+            SteamFlat.C_POINTER,
+            SteamFlat.C_LONG_LONG
+        );
+
+        public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(
+                    SteamFlat.findOrThrow("SteamAPI_ISteamUGC_ReleaseQueryUGCRequest"),
+                    DESC);
+    }
+
+    /**
+     * Function descriptor for:
+     * {@snippet lang=c :
+     * bool SteamAPI_ISteamUGC_ReleaseQueryUGCRequest(ISteamUGC ptr, UGCQueryHandle_t handle)
+     * }
+     */
+    public static FunctionDescriptor SteamAPI_ISteamUGC_ReleaseQueryUGCRequest$descriptor() {
+        return SteamAPI_ISteamUGC_ReleaseQueryUGCRequest.DESC;
+    }
+
+    /**
+     * Downcall method handle for:
+     * {@snippet lang=c :
+     * bool SteamAPI_ISteamUGC_ReleaseQueryUGCRequest(ISteamUGC ptr, UGCQueryHandle_t handle)
+     * }
+     */
+    public static MethodHandle SteamAPI_ISteamUGC_ReleaseQueryUGCRequest$handle() {
+        return SteamAPI_ISteamUGC_ReleaseQueryUGCRequest.HANDLE;
+    }
+    /**
+     * {@snippet lang=c :
+     * bool SteamAPI_ISteamUGC_ReleaseQueryUGCRequest(ISteamUGC ptr, UGCQueryHandle_t handle)
+     * }
+     */
+    public static boolean SteamAPI_ISteamUGC_ReleaseQueryUGCRequest(MemorySegment ptr, long handle) {
+        var mh$ = SteamAPI_ISteamUGC_ReleaseQueryUGCRequest.HANDLE;
+        try {
+            if (TRACE_DOWNCALLS) {
+                traceDowncall("SteamAPI_ISteamUGC_ReleaseQueryUGCRequest", ptr, handle);
+            }
+            return (boolean)mh$.invokeExact(ptr, handle);
+        } catch (Throwable ex$) {
+           throw new AssertionError("should not reach here", ex$);
+        }
+    }
+
+    private static class SteamAPI_ISteamUGC_AddRequiredTag {
+        public static final FunctionDescriptor DESC = FunctionDescriptor.of(
+            SteamFlat.C_BOOL,
+            SteamFlat.C_POINTER,
+            SteamFlat.C_LONG_LONG,
+            SteamFlat.C_POINTER
+        );
+
+        public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(
+                    SteamFlat.findOrThrow("SteamAPI_ISteamUGC_AddRequiredTag"),
+                    DESC);
+    }
+
+    /**
+     * Function descriptor for:
+     * {@snippet lang=c :
+     * bool SteamAPI_ISteamUGC_AddRequiredTag(ISteamUGC ptr, UGCQueryHandle_t handle, const char *pTagName)
+     * }
+     */
+    public static FunctionDescriptor SteamAPI_ISteamUGC_AddRequiredTag$descriptor() {
+        return SteamAPI_ISteamUGC_AddRequiredTag.DESC;
+    }
+
+    /**
+     * Downcall method handle for:
+     * {@snippet lang=c :
+     * bool SteamAPI_ISteamUGC_AddRequiredTag(ISteamUGC ptr, UGCQueryHandle_t handle, const char *pTagName)
+     * }
+     */
+    public static MethodHandle SteamAPI_ISteamUGC_AddRequiredTag$handle() {
+        return SteamAPI_ISteamUGC_AddRequiredTag.HANDLE;
+    }
+    /**
+     * {@snippet lang=c :
+     * bool SteamAPI_ISteamUGC_AddRequiredTag(ISteamUGC ptr, UGCQueryHandle_t handle, const char *pTagName)
+     * }
+     */
+    public static boolean SteamAPI_ISteamUGC_AddRequiredTag(MemorySegment ptr, long handle, MemorySegment pTagName) {
+        var mh$ = SteamAPI_ISteamUGC_AddRequiredTag.HANDLE;
+        try {
+            if (TRACE_DOWNCALLS) {
+                traceDowncall("SteamAPI_ISteamUGC_AddRequiredTag", ptr, handle, pTagName);
+            }
+            return (boolean)mh$.invokeExact(ptr, handle, pTagName);
+        } catch (Throwable ex$) {
+           throw new AssertionError("should not reach here", ex$);
+        }
+    }
+
+    private static class SteamAPI_ISteamUGC_AddRequiredTagGroup {
+        public static final FunctionDescriptor DESC = FunctionDescriptor.of(
+            SteamFlat.C_BOOL,
+            SteamFlat.C_POINTER,
+            SteamFlat.C_LONG_LONG,
+            SteamFlat.C_POINTER
+        );
+
+        public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(
+                    SteamFlat.findOrThrow("SteamAPI_ISteamUGC_AddRequiredTagGroup"),
+                    DESC);
+    }
+
+    /**
+     * Function descriptor for:
+     * {@snippet lang=c :
+     * bool SteamAPI_ISteamUGC_AddRequiredTagGroup(ISteamUGC ptr, UGCQueryHandle_t handle, const SteamParamStringArray_t *pTagGroups)
+     * }
+     */
+    public static FunctionDescriptor SteamAPI_ISteamUGC_AddRequiredTagGroup$descriptor() {
+        return SteamAPI_ISteamUGC_AddRequiredTagGroup.DESC;
+    }
+
+    /**
+     * Downcall method handle for:
+     * {@snippet lang=c :
+     * bool SteamAPI_ISteamUGC_AddRequiredTagGroup(ISteamUGC ptr, UGCQueryHandle_t handle, const SteamParamStringArray_t *pTagGroups)
+     * }
+     */
+    public static MethodHandle SteamAPI_ISteamUGC_AddRequiredTagGroup$handle() {
+        return SteamAPI_ISteamUGC_AddRequiredTagGroup.HANDLE;
+    }
+    /**
+     * {@snippet lang=c :
+     * bool SteamAPI_ISteamUGC_AddRequiredTagGroup(ISteamUGC ptr, UGCQueryHandle_t handle, const SteamParamStringArray_t *pTagGroups)
+     * }
+     */
+    public static boolean SteamAPI_ISteamUGC_AddRequiredTagGroup(MemorySegment ptr, long handle, MemorySegment pTagGroups) {
+        var mh$ = SteamAPI_ISteamUGC_AddRequiredTagGroup.HANDLE;
+        try {
+            if (TRACE_DOWNCALLS) {
+                traceDowncall("SteamAPI_ISteamUGC_AddRequiredTagGroup", ptr, handle, pTagGroups);
+            }
+            return (boolean)mh$.invokeExact(ptr, handle, pTagGroups);
+        } catch (Throwable ex$) {
+           throw new AssertionError("should not reach here", ex$);
+        }
+    }
+
+    private static class SteamAPI_ISteamUGC_AddExcludedTag {
+        public static final FunctionDescriptor DESC = FunctionDescriptor.of(
+            SteamFlat.C_BOOL,
+            SteamFlat.C_POINTER,
+            SteamFlat.C_LONG_LONG,
+            SteamFlat.C_POINTER
+        );
+
+        public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(
+                    SteamFlat.findOrThrow("SteamAPI_ISteamUGC_AddExcludedTag"),
+                    DESC);
+    }
+
+    /**
+     * Function descriptor for:
+     * {@snippet lang=c :
+     * bool SteamAPI_ISteamUGC_AddExcludedTag(ISteamUGC ptr, UGCQueryHandle_t handle, const char *pTagName)
+     * }
+     */
+    public static FunctionDescriptor SteamAPI_ISteamUGC_AddExcludedTag$descriptor() {
+        return SteamAPI_ISteamUGC_AddExcludedTag.DESC;
+    }
+
+    /**
+     * Downcall method handle for:
+     * {@snippet lang=c :
+     * bool SteamAPI_ISteamUGC_AddExcludedTag(ISteamUGC ptr, UGCQueryHandle_t handle, const char *pTagName)
+     * }
+     */
+    public static MethodHandle SteamAPI_ISteamUGC_AddExcludedTag$handle() {
+        return SteamAPI_ISteamUGC_AddExcludedTag.HANDLE;
+    }
+    /**
+     * {@snippet lang=c :
+     * bool SteamAPI_ISteamUGC_AddExcludedTag(ISteamUGC ptr, UGCQueryHandle_t handle, const char *pTagName)
+     * }
+     */
+    public static boolean SteamAPI_ISteamUGC_AddExcludedTag(MemorySegment ptr, long handle, MemorySegment pTagName) {
+        var mh$ = SteamAPI_ISteamUGC_AddExcludedTag.HANDLE;
+        try {
+            if (TRACE_DOWNCALLS) {
+                traceDowncall("SteamAPI_ISteamUGC_AddExcludedTag", ptr, handle, pTagName);
+            }
+            return (boolean)mh$.invokeExact(ptr, handle, pTagName);
+        } catch (Throwable ex$) {
+           throw new AssertionError("should not reach here", ex$);
+        }
+    }
+
+    private static class SteamAPI_ISteamUGC_SetReturnOnlyIDs {
+        public static final FunctionDescriptor DESC = FunctionDescriptor.of(
+            SteamFlat.C_BOOL,
+            SteamFlat.C_POINTER,
+            SteamFlat.C_LONG_LONG,
+            SteamFlat.C_BOOL
+        );
+
+        public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(
+                    SteamFlat.findOrThrow("SteamAPI_ISteamUGC_SetReturnOnlyIDs"),
+                    DESC);
+    }
+
+    /**
+     * Function descriptor for:
+     * {@snippet lang=c :
+     * bool SteamAPI_ISteamUGC_SetReturnOnlyIDs(ISteamUGC ptr, UGCQueryHandle_t handle, bool bReturnOnlyIDs)
+     * }
+     */
+    public static FunctionDescriptor SteamAPI_ISteamUGC_SetReturnOnlyIDs$descriptor() {
+        return SteamAPI_ISteamUGC_SetReturnOnlyIDs.DESC;
+    }
+
+    /**
+     * Downcall method handle for:
+     * {@snippet lang=c :
+     * bool SteamAPI_ISteamUGC_SetReturnOnlyIDs(ISteamUGC ptr, UGCQueryHandle_t handle, bool bReturnOnlyIDs)
+     * }
+     */
+    public static MethodHandle SteamAPI_ISteamUGC_SetReturnOnlyIDs$handle() {
+        return SteamAPI_ISteamUGC_SetReturnOnlyIDs.HANDLE;
+    }
+    /**
+     * {@snippet lang=c :
+     * bool SteamAPI_ISteamUGC_SetReturnOnlyIDs(ISteamUGC ptr, UGCQueryHandle_t handle, bool bReturnOnlyIDs)
+     * }
+     */
+    public static boolean SteamAPI_ISteamUGC_SetReturnOnlyIDs(MemorySegment ptr, long handle, boolean bReturnOnlyIDs) {
+        var mh$ = SteamAPI_ISteamUGC_SetReturnOnlyIDs.HANDLE;
+        try {
+            if (TRACE_DOWNCALLS) {
+                traceDowncall("SteamAPI_ISteamUGC_SetReturnOnlyIDs", ptr, handle, bReturnOnlyIDs);
+            }
+            return (boolean)mh$.invokeExact(ptr, handle, bReturnOnlyIDs);
+        } catch (Throwable ex$) {
+           throw new AssertionError("should not reach here", ex$);
+        }
+    }
+
+    private static class SteamAPI_ISteamUGC_SetReturnKeyValueTags {
+        public static final FunctionDescriptor DESC = FunctionDescriptor.of(
+            SteamFlat.C_BOOL,
+            SteamFlat.C_POINTER,
+            SteamFlat.C_LONG_LONG,
+            SteamFlat.C_BOOL
+        );
+
+        public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(
+                    SteamFlat.findOrThrow("SteamAPI_ISteamUGC_SetReturnKeyValueTags"),
+                    DESC);
+    }
+
+    /**
+     * Function descriptor for:
+     * {@snippet lang=c :
+     * bool SteamAPI_ISteamUGC_SetReturnKeyValueTags(ISteamUGC ptr, UGCQueryHandle_t handle, bool bReturnKeyValueTags)
+     * }
+     */
+    public static FunctionDescriptor SteamAPI_ISteamUGC_SetReturnKeyValueTags$descriptor() {
+        return SteamAPI_ISteamUGC_SetReturnKeyValueTags.DESC;
+    }
+
+    /**
+     * Downcall method handle for:
+     * {@snippet lang=c :
+     * bool SteamAPI_ISteamUGC_SetReturnKeyValueTags(ISteamUGC ptr, UGCQueryHandle_t handle, bool bReturnKeyValueTags)
+     * }
+     */
+    public static MethodHandle SteamAPI_ISteamUGC_SetReturnKeyValueTags$handle() {
+        return SteamAPI_ISteamUGC_SetReturnKeyValueTags.HANDLE;
+    }
+    /**
+     * {@snippet lang=c :
+     * bool SteamAPI_ISteamUGC_SetReturnKeyValueTags(ISteamUGC ptr, UGCQueryHandle_t handle, bool bReturnKeyValueTags)
+     * }
+     */
+    public static boolean SteamAPI_ISteamUGC_SetReturnKeyValueTags(MemorySegment ptr, long handle, boolean bReturnKeyValueTags) {
+        var mh$ = SteamAPI_ISteamUGC_SetReturnKeyValueTags.HANDLE;
+        try {
+            if (TRACE_DOWNCALLS) {
+                traceDowncall("SteamAPI_ISteamUGC_SetReturnKeyValueTags", ptr, handle, bReturnKeyValueTags);
+            }
+            return (boolean)mh$.invokeExact(ptr, handle, bReturnKeyValueTags);
+        } catch (Throwable ex$) {
+           throw new AssertionError("should not reach here", ex$);
+        }
+    }
+
+    private static class SteamAPI_ISteamUGC_SetReturnLongDescription {
+        public static final FunctionDescriptor DESC = FunctionDescriptor.of(
+            SteamFlat.C_BOOL,
+            SteamFlat.C_POINTER,
+            SteamFlat.C_LONG_LONG,
+            SteamFlat.C_BOOL
+        );
+
+        public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(
+                    SteamFlat.findOrThrow("SteamAPI_ISteamUGC_SetReturnLongDescription"),
+                    DESC);
+    }
+
+    /**
+     * Function descriptor for:
+     * {@snippet lang=c :
+     * bool SteamAPI_ISteamUGC_SetReturnLongDescription(ISteamUGC ptr, UGCQueryHandle_t handle, bool bReturnLongDescription)
+     * }
+     */
+    public static FunctionDescriptor SteamAPI_ISteamUGC_SetReturnLongDescription$descriptor() {
+        return SteamAPI_ISteamUGC_SetReturnLongDescription.DESC;
+    }
+
+    /**
+     * Downcall method handle for:
+     * {@snippet lang=c :
+     * bool SteamAPI_ISteamUGC_SetReturnLongDescription(ISteamUGC ptr, UGCQueryHandle_t handle, bool bReturnLongDescription)
+     * }
+     */
+    public static MethodHandle SteamAPI_ISteamUGC_SetReturnLongDescription$handle() {
+        return SteamAPI_ISteamUGC_SetReturnLongDescription.HANDLE;
+    }
+    /**
+     * {@snippet lang=c :
+     * bool SteamAPI_ISteamUGC_SetReturnLongDescription(ISteamUGC ptr, UGCQueryHandle_t handle, bool bReturnLongDescription)
+     * }
+     */
+    public static boolean SteamAPI_ISteamUGC_SetReturnLongDescription(MemorySegment ptr, long handle, boolean bReturnLongDescription) {
+        var mh$ = SteamAPI_ISteamUGC_SetReturnLongDescription.HANDLE;
+        try {
+            if (TRACE_DOWNCALLS) {
+                traceDowncall("SteamAPI_ISteamUGC_SetReturnLongDescription", ptr, handle, bReturnLongDescription);
+            }
+            return (boolean)mh$.invokeExact(ptr, handle, bReturnLongDescription);
+        } catch (Throwable ex$) {
+           throw new AssertionError("should not reach here", ex$);
+        }
+    }
+
+    private static class SteamAPI_ISteamUGC_SetReturnMetadata {
+        public static final FunctionDescriptor DESC = FunctionDescriptor.of(
+            SteamFlat.C_BOOL,
+            SteamFlat.C_POINTER,
+            SteamFlat.C_LONG_LONG,
+            SteamFlat.C_BOOL
+        );
+
+        public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(
+                    SteamFlat.findOrThrow("SteamAPI_ISteamUGC_SetReturnMetadata"),
+                    DESC);
+    }
+
+    /**
+     * Function descriptor for:
+     * {@snippet lang=c :
+     * bool SteamAPI_ISteamUGC_SetReturnMetadata(ISteamUGC ptr, UGCQueryHandle_t handle, bool bReturnMetadata)
+     * }
+     */
+    public static FunctionDescriptor SteamAPI_ISteamUGC_SetReturnMetadata$descriptor() {
+        return SteamAPI_ISteamUGC_SetReturnMetadata.DESC;
+    }
+
+    /**
+     * Downcall method handle for:
+     * {@snippet lang=c :
+     * bool SteamAPI_ISteamUGC_SetReturnMetadata(ISteamUGC ptr, UGCQueryHandle_t handle, bool bReturnMetadata)
+     * }
+     */
+    public static MethodHandle SteamAPI_ISteamUGC_SetReturnMetadata$handle() {
+        return SteamAPI_ISteamUGC_SetReturnMetadata.HANDLE;
+    }
+    /**
+     * {@snippet lang=c :
+     * bool SteamAPI_ISteamUGC_SetReturnMetadata(ISteamUGC ptr, UGCQueryHandle_t handle, bool bReturnMetadata)
+     * }
+     */
+    public static boolean SteamAPI_ISteamUGC_SetReturnMetadata(MemorySegment ptr, long handle, boolean bReturnMetadata) {
+        var mh$ = SteamAPI_ISteamUGC_SetReturnMetadata.HANDLE;
+        try {
+            if (TRACE_DOWNCALLS) {
+                traceDowncall("SteamAPI_ISteamUGC_SetReturnMetadata", ptr, handle, bReturnMetadata);
+            }
+            return (boolean)mh$.invokeExact(ptr, handle, bReturnMetadata);
+        } catch (Throwable ex$) {
+           throw new AssertionError("should not reach here", ex$);
+        }
+    }
+
+    private static class SteamAPI_ISteamUGC_SetReturnChildren {
+        public static final FunctionDescriptor DESC = FunctionDescriptor.of(
+            SteamFlat.C_BOOL,
+            SteamFlat.C_POINTER,
+            SteamFlat.C_LONG_LONG,
+            SteamFlat.C_BOOL
+        );
+
+        public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(
+                    SteamFlat.findOrThrow("SteamAPI_ISteamUGC_SetReturnChildren"),
+                    DESC);
+    }
+
+    /**
+     * Function descriptor for:
+     * {@snippet lang=c :
+     * bool SteamAPI_ISteamUGC_SetReturnChildren(ISteamUGC ptr, UGCQueryHandle_t handle, bool bReturnChildren)
+     * }
+     */
+    public static FunctionDescriptor SteamAPI_ISteamUGC_SetReturnChildren$descriptor() {
+        return SteamAPI_ISteamUGC_SetReturnChildren.DESC;
+    }
+
+    /**
+     * Downcall method handle for:
+     * {@snippet lang=c :
+     * bool SteamAPI_ISteamUGC_SetReturnChildren(ISteamUGC ptr, UGCQueryHandle_t handle, bool bReturnChildren)
+     * }
+     */
+    public static MethodHandle SteamAPI_ISteamUGC_SetReturnChildren$handle() {
+        return SteamAPI_ISteamUGC_SetReturnChildren.HANDLE;
+    }
+    /**
+     * {@snippet lang=c :
+     * bool SteamAPI_ISteamUGC_SetReturnChildren(ISteamUGC ptr, UGCQueryHandle_t handle, bool bReturnChildren)
+     * }
+     */
+    public static boolean SteamAPI_ISteamUGC_SetReturnChildren(MemorySegment ptr, long handle, boolean bReturnChildren) {
+        var mh$ = SteamAPI_ISteamUGC_SetReturnChildren.HANDLE;
+        try {
+            if (TRACE_DOWNCALLS) {
+                traceDowncall("SteamAPI_ISteamUGC_SetReturnChildren", ptr, handle, bReturnChildren);
+            }
+            return (boolean)mh$.invokeExact(ptr, handle, bReturnChildren);
+        } catch (Throwable ex$) {
+           throw new AssertionError("should not reach here", ex$);
+        }
+    }
+
+    private static class SteamAPI_ISteamUGC_SetReturnAdditionalPreviews {
+        public static final FunctionDescriptor DESC = FunctionDescriptor.of(
+            SteamFlat.C_BOOL,
+            SteamFlat.C_POINTER,
+            SteamFlat.C_LONG_LONG,
+            SteamFlat.C_BOOL
+        );
+
+        public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(
+                    SteamFlat.findOrThrow("SteamAPI_ISteamUGC_SetReturnAdditionalPreviews"),
+                    DESC);
+    }
+
+    /**
+     * Function descriptor for:
+     * {@snippet lang=c :
+     * bool SteamAPI_ISteamUGC_SetReturnAdditionalPreviews(ISteamUGC ptr, UGCQueryHandle_t handle, bool bReturnAdditionalPreviews)
+     * }
+     */
+    public static FunctionDescriptor SteamAPI_ISteamUGC_SetReturnAdditionalPreviews$descriptor() {
+        return SteamAPI_ISteamUGC_SetReturnAdditionalPreviews.DESC;
+    }
+
+    /**
+     * Downcall method handle for:
+     * {@snippet lang=c :
+     * bool SteamAPI_ISteamUGC_SetReturnAdditionalPreviews(ISteamUGC ptr, UGCQueryHandle_t handle, bool bReturnAdditionalPreviews)
+     * }
+     */
+    public static MethodHandle SteamAPI_ISteamUGC_SetReturnAdditionalPreviews$handle() {
+        return SteamAPI_ISteamUGC_SetReturnAdditionalPreviews.HANDLE;
+    }
+    /**
+     * {@snippet lang=c :
+     * bool SteamAPI_ISteamUGC_SetReturnAdditionalPreviews(ISteamUGC ptr, UGCQueryHandle_t handle, bool bReturnAdditionalPreviews)
+     * }
+     */
+    public static boolean SteamAPI_ISteamUGC_SetReturnAdditionalPreviews(MemorySegment ptr, long handle, boolean bReturnAdditionalPreviews) {
+        var mh$ = SteamAPI_ISteamUGC_SetReturnAdditionalPreviews.HANDLE;
+        try {
+            if (TRACE_DOWNCALLS) {
+                traceDowncall("SteamAPI_ISteamUGC_SetReturnAdditionalPreviews", ptr, handle, bReturnAdditionalPreviews);
+            }
+            return (boolean)mh$.invokeExact(ptr, handle, bReturnAdditionalPreviews);
+        } catch (Throwable ex$) {
+           throw new AssertionError("should not reach here", ex$);
+        }
+    }
+
+    private static class SteamAPI_ISteamUGC_SetReturnTotalOnly {
+        public static final FunctionDescriptor DESC = FunctionDescriptor.of(
+            SteamFlat.C_BOOL,
+            SteamFlat.C_POINTER,
+            SteamFlat.C_LONG_LONG,
+            SteamFlat.C_BOOL
+        );
+
+        public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(
+                    SteamFlat.findOrThrow("SteamAPI_ISteamUGC_SetReturnTotalOnly"),
+                    DESC);
+    }
+
+    /**
+     * Function descriptor for:
+     * {@snippet lang=c :
+     * bool SteamAPI_ISteamUGC_SetReturnTotalOnly(ISteamUGC ptr, UGCQueryHandle_t handle, bool bReturnTotalOnly)
+     * }
+     */
+    public static FunctionDescriptor SteamAPI_ISteamUGC_SetReturnTotalOnly$descriptor() {
+        return SteamAPI_ISteamUGC_SetReturnTotalOnly.DESC;
+    }
+
+    /**
+     * Downcall method handle for:
+     * {@snippet lang=c :
+     * bool SteamAPI_ISteamUGC_SetReturnTotalOnly(ISteamUGC ptr, UGCQueryHandle_t handle, bool bReturnTotalOnly)
+     * }
+     */
+    public static MethodHandle SteamAPI_ISteamUGC_SetReturnTotalOnly$handle() {
+        return SteamAPI_ISteamUGC_SetReturnTotalOnly.HANDLE;
+    }
+    /**
+     * {@snippet lang=c :
+     * bool SteamAPI_ISteamUGC_SetReturnTotalOnly(ISteamUGC ptr, UGCQueryHandle_t handle, bool bReturnTotalOnly)
+     * }
+     */
+    public static boolean SteamAPI_ISteamUGC_SetReturnTotalOnly(MemorySegment ptr, long handle, boolean bReturnTotalOnly) {
+        var mh$ = SteamAPI_ISteamUGC_SetReturnTotalOnly.HANDLE;
+        try {
+            if (TRACE_DOWNCALLS) {
+                traceDowncall("SteamAPI_ISteamUGC_SetReturnTotalOnly", ptr, handle, bReturnTotalOnly);
+            }
+            return (boolean)mh$.invokeExact(ptr, handle, bReturnTotalOnly);
+        } catch (Throwable ex$) {
+           throw new AssertionError("should not reach here", ex$);
+        }
+    }
+
+    private static class SteamAPI_ISteamUGC_SetReturnPlaytimeStats {
+        public static final FunctionDescriptor DESC = FunctionDescriptor.of(
+            SteamFlat.C_BOOL,
+            SteamFlat.C_POINTER,
+            SteamFlat.C_LONG_LONG,
+            SteamFlat.C_INT
+        );
+
+        public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(
+                    SteamFlat.findOrThrow("SteamAPI_ISteamUGC_SetReturnPlaytimeStats"),
+                    DESC);
+    }
+
+    /**
+     * Function descriptor for:
+     * {@snippet lang=c :
+     * bool SteamAPI_ISteamUGC_SetReturnPlaytimeStats(ISteamUGC ptr, UGCQueryHandle_t handle, uint32 unDays)
+     * }
+     */
+    public static FunctionDescriptor SteamAPI_ISteamUGC_SetReturnPlaytimeStats$descriptor() {
+        return SteamAPI_ISteamUGC_SetReturnPlaytimeStats.DESC;
+    }
+
+    /**
+     * Downcall method handle for:
+     * {@snippet lang=c :
+     * bool SteamAPI_ISteamUGC_SetReturnPlaytimeStats(ISteamUGC ptr, UGCQueryHandle_t handle, uint32 unDays)
+     * }
+     */
+    public static MethodHandle SteamAPI_ISteamUGC_SetReturnPlaytimeStats$handle() {
+        return SteamAPI_ISteamUGC_SetReturnPlaytimeStats.HANDLE;
+    }
+    /**
+     * {@snippet lang=c :
+     * bool SteamAPI_ISteamUGC_SetReturnPlaytimeStats(ISteamUGC ptr, UGCQueryHandle_t handle, uint32 unDays)
+     * }
+     */
+    public static boolean SteamAPI_ISteamUGC_SetReturnPlaytimeStats(MemorySegment ptr, long handle, int unDays) {
+        var mh$ = SteamAPI_ISteamUGC_SetReturnPlaytimeStats.HANDLE;
+        try {
+            if (TRACE_DOWNCALLS) {
+                traceDowncall("SteamAPI_ISteamUGC_SetReturnPlaytimeStats", ptr, handle, unDays);
+            }
+            return (boolean)mh$.invokeExact(ptr, handle, unDays);
+        } catch (Throwable ex$) {
+           throw new AssertionError("should not reach here", ex$);
+        }
+    }
+
+    private static class SteamAPI_ISteamUGC_SetLanguage {
+        public static final FunctionDescriptor DESC = FunctionDescriptor.of(
+            SteamFlat.C_BOOL,
+            SteamFlat.C_POINTER,
+            SteamFlat.C_LONG_LONG,
+            SteamFlat.C_POINTER
+        );
+
+        public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(
+                    SteamFlat.findOrThrow("SteamAPI_ISteamUGC_SetLanguage"),
+                    DESC);
+    }
+
+    /**
+     * Function descriptor for:
+     * {@snippet lang=c :
+     * bool SteamAPI_ISteamUGC_SetLanguage(ISteamUGC ptr, UGCQueryHandle_t handle, const char *pchLanguage)
+     * }
+     */
+    public static FunctionDescriptor SteamAPI_ISteamUGC_SetLanguage$descriptor() {
+        return SteamAPI_ISteamUGC_SetLanguage.DESC;
+    }
+
+    /**
+     * Downcall method handle for:
+     * {@snippet lang=c :
+     * bool SteamAPI_ISteamUGC_SetLanguage(ISteamUGC ptr, UGCQueryHandle_t handle, const char *pchLanguage)
+     * }
+     */
+    public static MethodHandle SteamAPI_ISteamUGC_SetLanguage$handle() {
+        return SteamAPI_ISteamUGC_SetLanguage.HANDLE;
+    }
+    /**
+     * {@snippet lang=c :
+     * bool SteamAPI_ISteamUGC_SetLanguage(ISteamUGC ptr, UGCQueryHandle_t handle, const char *pchLanguage)
+     * }
+     */
+    public static boolean SteamAPI_ISteamUGC_SetLanguage(MemorySegment ptr, long handle, MemorySegment pchLanguage) {
+        var mh$ = SteamAPI_ISteamUGC_SetLanguage.HANDLE;
+        try {
+            if (TRACE_DOWNCALLS) {
+                traceDowncall("SteamAPI_ISteamUGC_SetLanguage", ptr, handle, pchLanguage);
+            }
+            return (boolean)mh$.invokeExact(ptr, handle, pchLanguage);
+        } catch (Throwable ex$) {
+           throw new AssertionError("should not reach here", ex$);
+        }
+    }
+
+    private static class SteamAPI_ISteamUGC_SetAllowCachedResponse {
+        public static final FunctionDescriptor DESC = FunctionDescriptor.of(
+            SteamFlat.C_BOOL,
+            SteamFlat.C_POINTER,
+            SteamFlat.C_LONG_LONG,
+            SteamFlat.C_INT
+        );
+
+        public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(
+                    SteamFlat.findOrThrow("SteamAPI_ISteamUGC_SetAllowCachedResponse"),
+                    DESC);
+    }
+
+    /**
+     * Function descriptor for:
+     * {@snippet lang=c :
+     * bool SteamAPI_ISteamUGC_SetAllowCachedResponse(ISteamUGC ptr, UGCQueryHandle_t handle, uint32 unMaxAgeSeconds)
+     * }
+     */
+    public static FunctionDescriptor SteamAPI_ISteamUGC_SetAllowCachedResponse$descriptor() {
+        return SteamAPI_ISteamUGC_SetAllowCachedResponse.DESC;
+    }
+
+    /**
+     * Downcall method handle for:
+     * {@snippet lang=c :
+     * bool SteamAPI_ISteamUGC_SetAllowCachedResponse(ISteamUGC ptr, UGCQueryHandle_t handle, uint32 unMaxAgeSeconds)
+     * }
+     */
+    public static MethodHandle SteamAPI_ISteamUGC_SetAllowCachedResponse$handle() {
+        return SteamAPI_ISteamUGC_SetAllowCachedResponse.HANDLE;
+    }
+    /**
+     * {@snippet lang=c :
+     * bool SteamAPI_ISteamUGC_SetAllowCachedResponse(ISteamUGC ptr, UGCQueryHandle_t handle, uint32 unMaxAgeSeconds)
+     * }
+     */
+    public static boolean SteamAPI_ISteamUGC_SetAllowCachedResponse(MemorySegment ptr, long handle, int unMaxAgeSeconds) {
+        var mh$ = SteamAPI_ISteamUGC_SetAllowCachedResponse.HANDLE;
+        try {
+            if (TRACE_DOWNCALLS) {
+                traceDowncall("SteamAPI_ISteamUGC_SetAllowCachedResponse", ptr, handle, unMaxAgeSeconds);
+            }
+            return (boolean)mh$.invokeExact(ptr, handle, unMaxAgeSeconds);
+        } catch (Throwable ex$) {
+           throw new AssertionError("should not reach here", ex$);
+        }
+    }
+
+    private static class SteamAPI_ISteamUGC_SetCloudFileNameFilter {
+        public static final FunctionDescriptor DESC = FunctionDescriptor.of(
+            SteamFlat.C_BOOL,
+            SteamFlat.C_POINTER,
+            SteamFlat.C_LONG_LONG,
+            SteamFlat.C_POINTER
+        );
+
+        public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(
+                    SteamFlat.findOrThrow("SteamAPI_ISteamUGC_SetCloudFileNameFilter"),
+                    DESC);
+    }
+
+    /**
+     * Function descriptor for:
+     * {@snippet lang=c :
+     * bool SteamAPI_ISteamUGC_SetCloudFileNameFilter(ISteamUGC ptr, UGCQueryHandle_t handle, const char *pMatchCloudFileName)
+     * }
+     */
+    public static FunctionDescriptor SteamAPI_ISteamUGC_SetCloudFileNameFilter$descriptor() {
+        return SteamAPI_ISteamUGC_SetCloudFileNameFilter.DESC;
+    }
+
+    /**
+     * Downcall method handle for:
+     * {@snippet lang=c :
+     * bool SteamAPI_ISteamUGC_SetCloudFileNameFilter(ISteamUGC ptr, UGCQueryHandle_t handle, const char *pMatchCloudFileName)
+     * }
+     */
+    public static MethodHandle SteamAPI_ISteamUGC_SetCloudFileNameFilter$handle() {
+        return SteamAPI_ISteamUGC_SetCloudFileNameFilter.HANDLE;
+    }
+    /**
+     * {@snippet lang=c :
+     * bool SteamAPI_ISteamUGC_SetCloudFileNameFilter(ISteamUGC ptr, UGCQueryHandle_t handle, const char *pMatchCloudFileName)
+     * }
+     */
+    public static boolean SteamAPI_ISteamUGC_SetCloudFileNameFilter(MemorySegment ptr, long handle, MemorySegment pMatchCloudFileName) {
+        var mh$ = SteamAPI_ISteamUGC_SetCloudFileNameFilter.HANDLE;
+        try {
+            if (TRACE_DOWNCALLS) {
+                traceDowncall("SteamAPI_ISteamUGC_SetCloudFileNameFilter", ptr, handle, pMatchCloudFileName);
+            }
+            return (boolean)mh$.invokeExact(ptr, handle, pMatchCloudFileName);
+        } catch (Throwable ex$) {
+           throw new AssertionError("should not reach here", ex$);
+        }
+    }
+
+    private static class SteamAPI_ISteamUGC_SetMatchAnyTag {
+        public static final FunctionDescriptor DESC = FunctionDescriptor.of(
+            SteamFlat.C_BOOL,
+            SteamFlat.C_POINTER,
+            SteamFlat.C_LONG_LONG,
+            SteamFlat.C_BOOL
+        );
+
+        public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(
+                    SteamFlat.findOrThrow("SteamAPI_ISteamUGC_SetMatchAnyTag"),
+                    DESC);
+    }
+
+    /**
+     * Function descriptor for:
+     * {@snippet lang=c :
+     * bool SteamAPI_ISteamUGC_SetMatchAnyTag(ISteamUGC ptr, UGCQueryHandle_t handle, bool bMatchAnyTag)
+     * }
+     */
+    public static FunctionDescriptor SteamAPI_ISteamUGC_SetMatchAnyTag$descriptor() {
+        return SteamAPI_ISteamUGC_SetMatchAnyTag.DESC;
+    }
+
+    /**
+     * Downcall method handle for:
+     * {@snippet lang=c :
+     * bool SteamAPI_ISteamUGC_SetMatchAnyTag(ISteamUGC ptr, UGCQueryHandle_t handle, bool bMatchAnyTag)
+     * }
+     */
+    public static MethodHandle SteamAPI_ISteamUGC_SetMatchAnyTag$handle() {
+        return SteamAPI_ISteamUGC_SetMatchAnyTag.HANDLE;
+    }
+    /**
+     * {@snippet lang=c :
+     * bool SteamAPI_ISteamUGC_SetMatchAnyTag(ISteamUGC ptr, UGCQueryHandle_t handle, bool bMatchAnyTag)
+     * }
+     */
+    public static boolean SteamAPI_ISteamUGC_SetMatchAnyTag(MemorySegment ptr, long handle, boolean bMatchAnyTag) {
+        var mh$ = SteamAPI_ISteamUGC_SetMatchAnyTag.HANDLE;
+        try {
+            if (TRACE_DOWNCALLS) {
+                traceDowncall("SteamAPI_ISteamUGC_SetMatchAnyTag", ptr, handle, bMatchAnyTag);
+            }
+            return (boolean)mh$.invokeExact(ptr, handle, bMatchAnyTag);
+        } catch (Throwable ex$) {
+           throw new AssertionError("should not reach here", ex$);
+        }
+    }
+
+    private static class SteamAPI_ISteamUGC_SetSearchText {
+        public static final FunctionDescriptor DESC = FunctionDescriptor.of(
+            SteamFlat.C_BOOL,
+            SteamFlat.C_POINTER,
+            SteamFlat.C_LONG_LONG,
+            SteamFlat.C_POINTER
+        );
+
+        public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(
+                    SteamFlat.findOrThrow("SteamAPI_ISteamUGC_SetSearchText"),
+                    DESC);
+    }
+
+    /**
+     * Function descriptor for:
+     * {@snippet lang=c :
+     * bool SteamAPI_ISteamUGC_SetSearchText(ISteamUGC ptr, UGCQueryHandle_t handle, const char *pSearchText)
+     * }
+     */
+    public static FunctionDescriptor SteamAPI_ISteamUGC_SetSearchText$descriptor() {
+        return SteamAPI_ISteamUGC_SetSearchText.DESC;
+    }
+
+    /**
+     * Downcall method handle for:
+     * {@snippet lang=c :
+     * bool SteamAPI_ISteamUGC_SetSearchText(ISteamUGC ptr, UGCQueryHandle_t handle, const char *pSearchText)
+     * }
+     */
+    public static MethodHandle SteamAPI_ISteamUGC_SetSearchText$handle() {
+        return SteamAPI_ISteamUGC_SetSearchText.HANDLE;
+    }
+    /**
+     * {@snippet lang=c :
+     * bool SteamAPI_ISteamUGC_SetSearchText(ISteamUGC ptr, UGCQueryHandle_t handle, const char *pSearchText)
+     * }
+     */
+    public static boolean SteamAPI_ISteamUGC_SetSearchText(MemorySegment ptr, long handle, MemorySegment pSearchText) {
+        var mh$ = SteamAPI_ISteamUGC_SetSearchText.HANDLE;
+        try {
+            if (TRACE_DOWNCALLS) {
+                traceDowncall("SteamAPI_ISteamUGC_SetSearchText", ptr, handle, pSearchText);
+            }
+            return (boolean)mh$.invokeExact(ptr, handle, pSearchText);
+        } catch (Throwable ex$) {
+           throw new AssertionError("should not reach here", ex$);
+        }
+    }
+
+    private static class SteamAPI_ISteamUGC_SetRankedByTrendDays {
+        public static final FunctionDescriptor DESC = FunctionDescriptor.of(
+            SteamFlat.C_BOOL,
+            SteamFlat.C_POINTER,
+            SteamFlat.C_LONG_LONG,
+            SteamFlat.C_INT
+        );
+
+        public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(
+                    SteamFlat.findOrThrow("SteamAPI_ISteamUGC_SetRankedByTrendDays"),
+                    DESC);
+    }
+
+    /**
+     * Function descriptor for:
+     * {@snippet lang=c :
+     * bool SteamAPI_ISteamUGC_SetRankedByTrendDays(ISteamUGC ptr, UGCQueryHandle_t handle, uint32 unDays)
+     * }
+     */
+    public static FunctionDescriptor SteamAPI_ISteamUGC_SetRankedByTrendDays$descriptor() {
+        return SteamAPI_ISteamUGC_SetRankedByTrendDays.DESC;
+    }
+
+    /**
+     * Downcall method handle for:
+     * {@snippet lang=c :
+     * bool SteamAPI_ISteamUGC_SetRankedByTrendDays(ISteamUGC ptr, UGCQueryHandle_t handle, uint32 unDays)
+     * }
+     */
+    public static MethodHandle SteamAPI_ISteamUGC_SetRankedByTrendDays$handle() {
+        return SteamAPI_ISteamUGC_SetRankedByTrendDays.HANDLE;
+    }
+    /**
+     * {@snippet lang=c :
+     * bool SteamAPI_ISteamUGC_SetRankedByTrendDays(ISteamUGC ptr, UGCQueryHandle_t handle, uint32 unDays)
+     * }
+     */
+    public static boolean SteamAPI_ISteamUGC_SetRankedByTrendDays(MemorySegment ptr, long handle, int unDays) {
+        var mh$ = SteamAPI_ISteamUGC_SetRankedByTrendDays.HANDLE;
+        try {
+            if (TRACE_DOWNCALLS) {
+                traceDowncall("SteamAPI_ISteamUGC_SetRankedByTrendDays", ptr, handle, unDays);
+            }
+            return (boolean)mh$.invokeExact(ptr, handle, unDays);
+        } catch (Throwable ex$) {
+           throw new AssertionError("should not reach here", ex$);
+        }
+    }
+
+    private static class SteamAPI_ISteamUGC_SetTimeCreatedDateRange {
+        public static final FunctionDescriptor DESC = FunctionDescriptor.of(
+            SteamFlat.C_BOOL,
+            SteamFlat.C_POINTER,
+            SteamFlat.C_LONG_LONG,
+            SteamFlat.C_INT,
+            SteamFlat.C_INT
+        );
+
+        public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(
+                    SteamFlat.findOrThrow("SteamAPI_ISteamUGC_SetTimeCreatedDateRange"),
+                    DESC);
+    }
+
+    /**
+     * Function descriptor for:
+     * {@snippet lang=c :
+     * bool SteamAPI_ISteamUGC_SetTimeCreatedDateRange(ISteamUGC ptr, UGCQueryHandle_t handle, RTime32 rtStart, RTime32 rtEnd)
+     * }
+     */
+    public static FunctionDescriptor SteamAPI_ISteamUGC_SetTimeCreatedDateRange$descriptor() {
+        return SteamAPI_ISteamUGC_SetTimeCreatedDateRange.DESC;
+    }
+
+    /**
+     * Downcall method handle for:
+     * {@snippet lang=c :
+     * bool SteamAPI_ISteamUGC_SetTimeCreatedDateRange(ISteamUGC ptr, UGCQueryHandle_t handle, RTime32 rtStart, RTime32 rtEnd)
+     * }
+     */
+    public static MethodHandle SteamAPI_ISteamUGC_SetTimeCreatedDateRange$handle() {
+        return SteamAPI_ISteamUGC_SetTimeCreatedDateRange.HANDLE;
+    }
+    /**
+     * {@snippet lang=c :
+     * bool SteamAPI_ISteamUGC_SetTimeCreatedDateRange(ISteamUGC ptr, UGCQueryHandle_t handle, RTime32 rtStart, RTime32 rtEnd)
+     * }
+     */
+    public static boolean SteamAPI_ISteamUGC_SetTimeCreatedDateRange(MemorySegment ptr, long handle, int rtStart, int rtEnd) {
+        var mh$ = SteamAPI_ISteamUGC_SetTimeCreatedDateRange.HANDLE;
+        try {
+            if (TRACE_DOWNCALLS) {
+                traceDowncall("SteamAPI_ISteamUGC_SetTimeCreatedDateRange", ptr, handle, rtStart, rtEnd);
+            }
+            return (boolean)mh$.invokeExact(ptr, handle, rtStart, rtEnd);
+        } catch (Throwable ex$) {
+           throw new AssertionError("should not reach here", ex$);
+        }
+    }
+
+    private static class SteamAPI_ISteamUGC_SetTimeUpdatedDateRange {
+        public static final FunctionDescriptor DESC = FunctionDescriptor.of(
+            SteamFlat.C_BOOL,
+            SteamFlat.C_POINTER,
+            SteamFlat.C_LONG_LONG,
+            SteamFlat.C_INT,
+            SteamFlat.C_INT
+        );
+
+        public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(
+                    SteamFlat.findOrThrow("SteamAPI_ISteamUGC_SetTimeUpdatedDateRange"),
+                    DESC);
+    }
+
+    /**
+     * Function descriptor for:
+     * {@snippet lang=c :
+     * bool SteamAPI_ISteamUGC_SetTimeUpdatedDateRange(ISteamUGC ptr, UGCQueryHandle_t handle, RTime32 rtStart, RTime32 rtEnd)
+     * }
+     */
+    public static FunctionDescriptor SteamAPI_ISteamUGC_SetTimeUpdatedDateRange$descriptor() {
+        return SteamAPI_ISteamUGC_SetTimeUpdatedDateRange.DESC;
+    }
+
+    /**
+     * Downcall method handle for:
+     * {@snippet lang=c :
+     * bool SteamAPI_ISteamUGC_SetTimeUpdatedDateRange(ISteamUGC ptr, UGCQueryHandle_t handle, RTime32 rtStart, RTime32 rtEnd)
+     * }
+     */
+    public static MethodHandle SteamAPI_ISteamUGC_SetTimeUpdatedDateRange$handle() {
+        return SteamAPI_ISteamUGC_SetTimeUpdatedDateRange.HANDLE;
+    }
+    /**
+     * {@snippet lang=c :
+     * bool SteamAPI_ISteamUGC_SetTimeUpdatedDateRange(ISteamUGC ptr, UGCQueryHandle_t handle, RTime32 rtStart, RTime32 rtEnd)
+     * }
+     */
+    public static boolean SteamAPI_ISteamUGC_SetTimeUpdatedDateRange(MemorySegment ptr, long handle, int rtStart, int rtEnd) {
+        var mh$ = SteamAPI_ISteamUGC_SetTimeUpdatedDateRange.HANDLE;
+        try {
+            if (TRACE_DOWNCALLS) {
+                traceDowncall("SteamAPI_ISteamUGC_SetTimeUpdatedDateRange", ptr, handle, rtStart, rtEnd);
+            }
+            return (boolean)mh$.invokeExact(ptr, handle, rtStart, rtEnd);
+        } catch (Throwable ex$) {
+           throw new AssertionError("should not reach here", ex$);
+        }
+    }
+
+    private static class SteamAPI_ISteamUGC_AddRequiredKeyValueTag {
+        public static final FunctionDescriptor DESC = FunctionDescriptor.of(
+            SteamFlat.C_BOOL,
+            SteamFlat.C_POINTER,
+            SteamFlat.C_LONG_LONG,
+            SteamFlat.C_POINTER,
+            SteamFlat.C_POINTER
+        );
+
+        public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(
+                    SteamFlat.findOrThrow("SteamAPI_ISteamUGC_AddRequiredKeyValueTag"),
+                    DESC);
+    }
+
+    /**
+     * Function descriptor for:
+     * {@snippet lang=c :
+     * bool SteamAPI_ISteamUGC_AddRequiredKeyValueTag(ISteamUGC ptr, UGCQueryHandle_t handle, const char *pKey, const char *pValue)
+     * }
+     */
+    public static FunctionDescriptor SteamAPI_ISteamUGC_AddRequiredKeyValueTag$descriptor() {
+        return SteamAPI_ISteamUGC_AddRequiredKeyValueTag.DESC;
+    }
+
+    /**
+     * Downcall method handle for:
+     * {@snippet lang=c :
+     * bool SteamAPI_ISteamUGC_AddRequiredKeyValueTag(ISteamUGC ptr, UGCQueryHandle_t handle, const char *pKey, const char *pValue)
+     * }
+     */
+    public static MethodHandle SteamAPI_ISteamUGC_AddRequiredKeyValueTag$handle() {
+        return SteamAPI_ISteamUGC_AddRequiredKeyValueTag.HANDLE;
+    }
+    /**
+     * {@snippet lang=c :
+     * bool SteamAPI_ISteamUGC_AddRequiredKeyValueTag(ISteamUGC ptr, UGCQueryHandle_t handle, const char *pKey, const char *pValue)
+     * }
+     */
+    public static boolean SteamAPI_ISteamUGC_AddRequiredKeyValueTag(MemorySegment ptr, long handle, MemorySegment pKey, MemorySegment pValue) {
+        var mh$ = SteamAPI_ISteamUGC_AddRequiredKeyValueTag.HANDLE;
+        try {
+            if (TRACE_DOWNCALLS) {
+                traceDowncall("SteamAPI_ISteamUGC_AddRequiredKeyValueTag", ptr, handle, pKey, pValue);
+            }
+            return (boolean)mh$.invokeExact(ptr, handle, pKey, pValue);
+        } catch (Throwable ex$) {
+           throw new AssertionError("should not reach here", ex$);
+        }
+    }
+
+    private static class SteamAPI_ISteamUGC_RequestUGCDetails {
+        public static final FunctionDescriptor DESC = FunctionDescriptor.of(
+            SteamFlat.C_LONG_LONG,
+            SteamFlat.C_POINTER,
+            SteamFlat.C_LONG_LONG,
+            SteamFlat.C_INT
+        );
+
+        public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(
+                    SteamFlat.findOrThrow("SteamAPI_ISteamUGC_RequestUGCDetails"),
+                    DESC);
+    }
+
+    /**
+     * Function descriptor for:
+     * {@snippet lang=c :
+     * SteamAPICall_t SteamAPI_ISteamUGC_RequestUGCDetails(ISteamUGC ptr, PublishedFileId_t nPublishedFileID, uint32 unMaxAgeSeconds)
+     * }
+     */
+    public static FunctionDescriptor SteamAPI_ISteamUGC_RequestUGCDetails$descriptor() {
+        return SteamAPI_ISteamUGC_RequestUGCDetails.DESC;
+    }
+
+    /**
+     * Downcall method handle for:
+     * {@snippet lang=c :
+     * SteamAPICall_t SteamAPI_ISteamUGC_RequestUGCDetails(ISteamUGC ptr, PublishedFileId_t nPublishedFileID, uint32 unMaxAgeSeconds)
+     * }
+     */
+    public static MethodHandle SteamAPI_ISteamUGC_RequestUGCDetails$handle() {
+        return SteamAPI_ISteamUGC_RequestUGCDetails.HANDLE;
+    }
+    /**
+     * {@snippet lang=c :
+     * SteamAPICall_t SteamAPI_ISteamUGC_RequestUGCDetails(ISteamUGC ptr, PublishedFileId_t nPublishedFileID, uint32 unMaxAgeSeconds)
+     * }
+     */
+    public static long SteamAPI_ISteamUGC_RequestUGCDetails(MemorySegment ptr, long nPublishedFileID, int unMaxAgeSeconds) {
+        var mh$ = SteamAPI_ISteamUGC_RequestUGCDetails.HANDLE;
+        try {
+            if (TRACE_DOWNCALLS) {
+                traceDowncall("SteamAPI_ISteamUGC_RequestUGCDetails", ptr, nPublishedFileID, unMaxAgeSeconds);
+            }
+            return (long)mh$.invokeExact(ptr, nPublishedFileID, unMaxAgeSeconds);
+        } catch (Throwable ex$) {
+           throw new AssertionError("should not reach here", ex$);
+        }
+    }
+
+    private static class SteamAPI_ISteamUGC_CreateItem {
+        public static final FunctionDescriptor DESC = FunctionDescriptor.of(
+            SteamFlat.C_LONG_LONG,
+            SteamFlat.C_POINTER,
+            SteamFlat.C_INT,
+            SteamFlat.C_INT
+        );
+
+        public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(
+                    SteamFlat.findOrThrow("SteamAPI_ISteamUGC_CreateItem"),
+                    DESC);
+    }
+
+    /**
+     * Function descriptor for:
+     * {@snippet lang=c :
+     * SteamAPICall_t SteamAPI_ISteamUGC_CreateItem(ISteamUGC ptr, AppId_t nConsumerAppId, EWorkshopFileType eFileType)
+     * }
+     */
+    public static FunctionDescriptor SteamAPI_ISteamUGC_CreateItem$descriptor() {
+        return SteamAPI_ISteamUGC_CreateItem.DESC;
+    }
+
+    /**
+     * Downcall method handle for:
+     * {@snippet lang=c :
+     * SteamAPICall_t SteamAPI_ISteamUGC_CreateItem(ISteamUGC ptr, AppId_t nConsumerAppId, EWorkshopFileType eFileType)
+     * }
+     */
+    public static MethodHandle SteamAPI_ISteamUGC_CreateItem$handle() {
+        return SteamAPI_ISteamUGC_CreateItem.HANDLE;
+    }
+    /**
+     * {@snippet lang=c :
+     * SteamAPICall_t SteamAPI_ISteamUGC_CreateItem(ISteamUGC ptr, AppId_t nConsumerAppId, EWorkshopFileType eFileType)
+     * }
+     */
+    public static long SteamAPI_ISteamUGC_CreateItem(MemorySegment ptr, int nConsumerAppId, int eFileType) {
+        var mh$ = SteamAPI_ISteamUGC_CreateItem.HANDLE;
+        try {
+            if (TRACE_DOWNCALLS) {
+                traceDowncall("SteamAPI_ISteamUGC_CreateItem", ptr, nConsumerAppId, eFileType);
+            }
+            return (long)mh$.invokeExact(ptr, nConsumerAppId, eFileType);
+        } catch (Throwable ex$) {
+           throw new AssertionError("should not reach here", ex$);
+        }
+    }
+
+    private static class SteamAPI_ISteamUGC_StartItemUpdate {
+        public static final FunctionDescriptor DESC = FunctionDescriptor.of(
+            SteamFlat.C_LONG_LONG,
+            SteamFlat.C_POINTER,
+            SteamFlat.C_INT,
+            SteamFlat.C_LONG_LONG
+        );
+
+        public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(
+                    SteamFlat.findOrThrow("SteamAPI_ISteamUGC_StartItemUpdate"),
+                    DESC);
+    }
+
+    /**
+     * Function descriptor for:
+     * {@snippet lang=c :
+     * UGCUpdateHandle_t SteamAPI_ISteamUGC_StartItemUpdate(ISteamUGC ptr, AppId_t nConsumerAppId, PublishedFileId_t nPublishedFileID)
+     * }
+     */
+    public static FunctionDescriptor SteamAPI_ISteamUGC_StartItemUpdate$descriptor() {
+        return SteamAPI_ISteamUGC_StartItemUpdate.DESC;
+    }
+
+    /**
+     * Downcall method handle for:
+     * {@snippet lang=c :
+     * UGCUpdateHandle_t SteamAPI_ISteamUGC_StartItemUpdate(ISteamUGC ptr, AppId_t nConsumerAppId, PublishedFileId_t nPublishedFileID)
+     * }
+     */
+    public static MethodHandle SteamAPI_ISteamUGC_StartItemUpdate$handle() {
+        return SteamAPI_ISteamUGC_StartItemUpdate.HANDLE;
+    }
+    /**
+     * {@snippet lang=c :
+     * UGCUpdateHandle_t SteamAPI_ISteamUGC_StartItemUpdate(ISteamUGC ptr, AppId_t nConsumerAppId, PublishedFileId_t nPublishedFileID)
+     * }
+     */
+    public static long SteamAPI_ISteamUGC_StartItemUpdate(MemorySegment ptr, int nConsumerAppId, long nPublishedFileID) {
+        var mh$ = SteamAPI_ISteamUGC_StartItemUpdate.HANDLE;
+        try {
+            if (TRACE_DOWNCALLS) {
+                traceDowncall("SteamAPI_ISteamUGC_StartItemUpdate", ptr, nConsumerAppId, nPublishedFileID);
+            }
+            return (long)mh$.invokeExact(ptr, nConsumerAppId, nPublishedFileID);
+        } catch (Throwable ex$) {
+           throw new AssertionError("should not reach here", ex$);
+        }
+    }
+
+    private static class SteamAPI_ISteamUGC_SetItemTitle {
+        public static final FunctionDescriptor DESC = FunctionDescriptor.of(
+            SteamFlat.C_BOOL,
+            SteamFlat.C_POINTER,
+            SteamFlat.C_LONG_LONG,
+            SteamFlat.C_POINTER
+        );
+
+        public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(
+                    SteamFlat.findOrThrow("SteamAPI_ISteamUGC_SetItemTitle"),
+                    DESC);
+    }
+
+    /**
+     * Function descriptor for:
+     * {@snippet lang=c :
+     * bool SteamAPI_ISteamUGC_SetItemTitle(ISteamUGC ptr, UGCUpdateHandle_t handle, const char *pchTitle)
+     * }
+     */
+    public static FunctionDescriptor SteamAPI_ISteamUGC_SetItemTitle$descriptor() {
+        return SteamAPI_ISteamUGC_SetItemTitle.DESC;
+    }
+
+    /**
+     * Downcall method handle for:
+     * {@snippet lang=c :
+     * bool SteamAPI_ISteamUGC_SetItemTitle(ISteamUGC ptr, UGCUpdateHandle_t handle, const char *pchTitle)
+     * }
+     */
+    public static MethodHandle SteamAPI_ISteamUGC_SetItemTitle$handle() {
+        return SteamAPI_ISteamUGC_SetItemTitle.HANDLE;
+    }
+    /**
+     * {@snippet lang=c :
+     * bool SteamAPI_ISteamUGC_SetItemTitle(ISteamUGC ptr, UGCUpdateHandle_t handle, const char *pchTitle)
+     * }
+     */
+    public static boolean SteamAPI_ISteamUGC_SetItemTitle(MemorySegment ptr, long handle, MemorySegment pchTitle) {
+        var mh$ = SteamAPI_ISteamUGC_SetItemTitle.HANDLE;
+        try {
+            if (TRACE_DOWNCALLS) {
+                traceDowncall("SteamAPI_ISteamUGC_SetItemTitle", ptr, handle, pchTitle);
+            }
+            return (boolean)mh$.invokeExact(ptr, handle, pchTitle);
+        } catch (Throwable ex$) {
+           throw new AssertionError("should not reach here", ex$);
+        }
+    }
+
+    private static class SteamAPI_ISteamUGC_SetItemDescription {
+        public static final FunctionDescriptor DESC = FunctionDescriptor.of(
+            SteamFlat.C_BOOL,
+            SteamFlat.C_POINTER,
+            SteamFlat.C_LONG_LONG,
+            SteamFlat.C_POINTER
+        );
+
+        public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(
+                    SteamFlat.findOrThrow("SteamAPI_ISteamUGC_SetItemDescription"),
+                    DESC);
+    }
+
+    /**
+     * Function descriptor for:
+     * {@snippet lang=c :
+     * bool SteamAPI_ISteamUGC_SetItemDescription(ISteamUGC ptr, UGCUpdateHandle_t handle, const char *pchDescription)
+     * }
+     */
+    public static FunctionDescriptor SteamAPI_ISteamUGC_SetItemDescription$descriptor() {
+        return SteamAPI_ISteamUGC_SetItemDescription.DESC;
+    }
+
+    /**
+     * Downcall method handle for:
+     * {@snippet lang=c :
+     * bool SteamAPI_ISteamUGC_SetItemDescription(ISteamUGC ptr, UGCUpdateHandle_t handle, const char *pchDescription)
+     * }
+     */
+    public static MethodHandle SteamAPI_ISteamUGC_SetItemDescription$handle() {
+        return SteamAPI_ISteamUGC_SetItemDescription.HANDLE;
+    }
+    /**
+     * {@snippet lang=c :
+     * bool SteamAPI_ISteamUGC_SetItemDescription(ISteamUGC ptr, UGCUpdateHandle_t handle, const char *pchDescription)
+     * }
+     */
+    public static boolean SteamAPI_ISteamUGC_SetItemDescription(MemorySegment ptr, long handle, MemorySegment pchDescription) {
+        var mh$ = SteamAPI_ISteamUGC_SetItemDescription.HANDLE;
+        try {
+            if (TRACE_DOWNCALLS) {
+                traceDowncall("SteamAPI_ISteamUGC_SetItemDescription", ptr, handle, pchDescription);
+            }
+            return (boolean)mh$.invokeExact(ptr, handle, pchDescription);
+        } catch (Throwable ex$) {
+           throw new AssertionError("should not reach here", ex$);
+        }
+    }
+
+    private static class SteamAPI_ISteamUGC_SetItemUpdateLanguage {
+        public static final FunctionDescriptor DESC = FunctionDescriptor.of(
+            SteamFlat.C_BOOL,
+            SteamFlat.C_POINTER,
+            SteamFlat.C_LONG_LONG,
+            SteamFlat.C_POINTER
+        );
+
+        public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(
+                    SteamFlat.findOrThrow("SteamAPI_ISteamUGC_SetItemUpdateLanguage"),
+                    DESC);
+    }
+
+    /**
+     * Function descriptor for:
+     * {@snippet lang=c :
+     * bool SteamAPI_ISteamUGC_SetItemUpdateLanguage(ISteamUGC ptr, UGCUpdateHandle_t handle, const char *pchLanguage)
+     * }
+     */
+    public static FunctionDescriptor SteamAPI_ISteamUGC_SetItemUpdateLanguage$descriptor() {
+        return SteamAPI_ISteamUGC_SetItemUpdateLanguage.DESC;
+    }
+
+    /**
+     * Downcall method handle for:
+     * {@snippet lang=c :
+     * bool SteamAPI_ISteamUGC_SetItemUpdateLanguage(ISteamUGC ptr, UGCUpdateHandle_t handle, const char *pchLanguage)
+     * }
+     */
+    public static MethodHandle SteamAPI_ISteamUGC_SetItemUpdateLanguage$handle() {
+        return SteamAPI_ISteamUGC_SetItemUpdateLanguage.HANDLE;
+    }
+    /**
+     * {@snippet lang=c :
+     * bool SteamAPI_ISteamUGC_SetItemUpdateLanguage(ISteamUGC ptr, UGCUpdateHandle_t handle, const char *pchLanguage)
+     * }
+     */
+    public static boolean SteamAPI_ISteamUGC_SetItemUpdateLanguage(MemorySegment ptr, long handle, MemorySegment pchLanguage) {
+        var mh$ = SteamAPI_ISteamUGC_SetItemUpdateLanguage.HANDLE;
+        try {
+            if (TRACE_DOWNCALLS) {
+                traceDowncall("SteamAPI_ISteamUGC_SetItemUpdateLanguage", ptr, handle, pchLanguage);
+            }
+            return (boolean)mh$.invokeExact(ptr, handle, pchLanguage);
+        } catch (Throwable ex$) {
+           throw new AssertionError("should not reach here", ex$);
+        }
+    }
+
+    private static class SteamAPI_ISteamUGC_SetItemMetadata {
+        public static final FunctionDescriptor DESC = FunctionDescriptor.of(
+            SteamFlat.C_BOOL,
+            SteamFlat.C_POINTER,
+            SteamFlat.C_LONG_LONG,
+            SteamFlat.C_POINTER
+        );
+
+        public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(
+                    SteamFlat.findOrThrow("SteamAPI_ISteamUGC_SetItemMetadata"),
+                    DESC);
+    }
+
+    /**
+     * Function descriptor for:
+     * {@snippet lang=c :
+     * bool SteamAPI_ISteamUGC_SetItemMetadata(ISteamUGC ptr, UGCUpdateHandle_t handle, const char *pchMetaData)
+     * }
+     */
+    public static FunctionDescriptor SteamAPI_ISteamUGC_SetItemMetadata$descriptor() {
+        return SteamAPI_ISteamUGC_SetItemMetadata.DESC;
+    }
+
+    /**
+     * Downcall method handle for:
+     * {@snippet lang=c :
+     * bool SteamAPI_ISteamUGC_SetItemMetadata(ISteamUGC ptr, UGCUpdateHandle_t handle, const char *pchMetaData)
+     * }
+     */
+    public static MethodHandle SteamAPI_ISteamUGC_SetItemMetadata$handle() {
+        return SteamAPI_ISteamUGC_SetItemMetadata.HANDLE;
+    }
+    /**
+     * {@snippet lang=c :
+     * bool SteamAPI_ISteamUGC_SetItemMetadata(ISteamUGC ptr, UGCUpdateHandle_t handle, const char *pchMetaData)
+     * }
+     */
+    public static boolean SteamAPI_ISteamUGC_SetItemMetadata(MemorySegment ptr, long handle, MemorySegment pchMetaData) {
+        var mh$ = SteamAPI_ISteamUGC_SetItemMetadata.HANDLE;
+        try {
+            if (TRACE_DOWNCALLS) {
+                traceDowncall("SteamAPI_ISteamUGC_SetItemMetadata", ptr, handle, pchMetaData);
+            }
+            return (boolean)mh$.invokeExact(ptr, handle, pchMetaData);
+        } catch (Throwable ex$) {
+           throw new AssertionError("should not reach here", ex$);
+        }
+    }
+
+    private static class SteamAPI_ISteamUGC_SetItemVisibility {
+        public static final FunctionDescriptor DESC = FunctionDescriptor.of(
+            SteamFlat.C_BOOL,
+            SteamFlat.C_POINTER,
+            SteamFlat.C_LONG_LONG,
+            SteamFlat.C_INT
+        );
+
+        public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(
+                    SteamFlat.findOrThrow("SteamAPI_ISteamUGC_SetItemVisibility"),
+                    DESC);
+    }
+
+    /**
+     * Function descriptor for:
+     * {@snippet lang=c :
+     * bool SteamAPI_ISteamUGC_SetItemVisibility(ISteamUGC ptr, UGCUpdateHandle_t handle, ERemoteStoragePublishedFileVisibility eVisibility)
+     * }
+     */
+    public static FunctionDescriptor SteamAPI_ISteamUGC_SetItemVisibility$descriptor() {
+        return SteamAPI_ISteamUGC_SetItemVisibility.DESC;
+    }
+
+    /**
+     * Downcall method handle for:
+     * {@snippet lang=c :
+     * bool SteamAPI_ISteamUGC_SetItemVisibility(ISteamUGC ptr, UGCUpdateHandle_t handle, ERemoteStoragePublishedFileVisibility eVisibility)
+     * }
+     */
+    public static MethodHandle SteamAPI_ISteamUGC_SetItemVisibility$handle() {
+        return SteamAPI_ISteamUGC_SetItemVisibility.HANDLE;
+    }
+    /**
+     * {@snippet lang=c :
+     * bool SteamAPI_ISteamUGC_SetItemVisibility(ISteamUGC ptr, UGCUpdateHandle_t handle, ERemoteStoragePublishedFileVisibility eVisibility)
+     * }
+     */
+    public static boolean SteamAPI_ISteamUGC_SetItemVisibility(MemorySegment ptr, long handle, int eVisibility) {
+        var mh$ = SteamAPI_ISteamUGC_SetItemVisibility.HANDLE;
+        try {
+            if (TRACE_DOWNCALLS) {
+                traceDowncall("SteamAPI_ISteamUGC_SetItemVisibility", ptr, handle, eVisibility);
+            }
+            return (boolean)mh$.invokeExact(ptr, handle, eVisibility);
+        } catch (Throwable ex$) {
+           throw new AssertionError("should not reach here", ex$);
+        }
+    }
+
+    private static class SteamAPI_ISteamUGC_SetItemTags {
+        public static final FunctionDescriptor DESC = FunctionDescriptor.of(
+            SteamFlat.C_BOOL,
+            SteamFlat.C_POINTER,
+            SteamFlat.C_LONG_LONG,
+            SteamFlat.C_POINTER,
+            SteamFlat.C_BOOL
+        );
+
+        public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(
+                    SteamFlat.findOrThrow("SteamAPI_ISteamUGC_SetItemTags"),
+                    DESC);
+    }
+
+    /**
+     * Function descriptor for:
+     * {@snippet lang=c :
+     * bool SteamAPI_ISteamUGC_SetItemTags(ISteamUGC ptr, UGCUpdateHandle_t updateHandle, const SteamParamStringArray_t *pTags, bool bAllowAdminTags)
+     * }
+     */
+    public static FunctionDescriptor SteamAPI_ISteamUGC_SetItemTags$descriptor() {
+        return SteamAPI_ISteamUGC_SetItemTags.DESC;
+    }
+
+    /**
+     * Downcall method handle for:
+     * {@snippet lang=c :
+     * bool SteamAPI_ISteamUGC_SetItemTags(ISteamUGC ptr, UGCUpdateHandle_t updateHandle, const SteamParamStringArray_t *pTags, bool bAllowAdminTags)
+     * }
+     */
+    public static MethodHandle SteamAPI_ISteamUGC_SetItemTags$handle() {
+        return SteamAPI_ISteamUGC_SetItemTags.HANDLE;
+    }
+    /**
+     * {@snippet lang=c :
+     * bool SteamAPI_ISteamUGC_SetItemTags(ISteamUGC ptr, UGCUpdateHandle_t updateHandle, const SteamParamStringArray_t *pTags, bool bAllowAdminTags)
+     * }
+     */
+    public static boolean SteamAPI_ISteamUGC_SetItemTags(MemorySegment ptr, long updateHandle, MemorySegment pTags, boolean bAllowAdminTags) {
+        var mh$ = SteamAPI_ISteamUGC_SetItemTags.HANDLE;
+        try {
+            if (TRACE_DOWNCALLS) {
+                traceDowncall("SteamAPI_ISteamUGC_SetItemTags", ptr, updateHandle, pTags, bAllowAdminTags);
+            }
+            return (boolean)mh$.invokeExact(ptr, updateHandle, pTags, bAllowAdminTags);
+        } catch (Throwable ex$) {
+           throw new AssertionError("should not reach here", ex$);
+        }
+    }
+
+    private static class SteamAPI_ISteamUGC_SetItemContent {
+        public static final FunctionDescriptor DESC = FunctionDescriptor.of(
+            SteamFlat.C_BOOL,
+            SteamFlat.C_POINTER,
+            SteamFlat.C_LONG_LONG,
+            SteamFlat.C_POINTER
+        );
+
+        public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(
+                    SteamFlat.findOrThrow("SteamAPI_ISteamUGC_SetItemContent"),
+                    DESC);
+    }
+
+    /**
+     * Function descriptor for:
+     * {@snippet lang=c :
+     * bool SteamAPI_ISteamUGC_SetItemContent(ISteamUGC ptr, UGCUpdateHandle_t handle, const char *pszContentFolder)
+     * }
+     */
+    public static FunctionDescriptor SteamAPI_ISteamUGC_SetItemContent$descriptor() {
+        return SteamAPI_ISteamUGC_SetItemContent.DESC;
+    }
+
+    /**
+     * Downcall method handle for:
+     * {@snippet lang=c :
+     * bool SteamAPI_ISteamUGC_SetItemContent(ISteamUGC ptr, UGCUpdateHandle_t handle, const char *pszContentFolder)
+     * }
+     */
+    public static MethodHandle SteamAPI_ISteamUGC_SetItemContent$handle() {
+        return SteamAPI_ISteamUGC_SetItemContent.HANDLE;
+    }
+    /**
+     * {@snippet lang=c :
+     * bool SteamAPI_ISteamUGC_SetItemContent(ISteamUGC ptr, UGCUpdateHandle_t handle, const char *pszContentFolder)
+     * }
+     */
+    public static boolean SteamAPI_ISteamUGC_SetItemContent(MemorySegment ptr, long handle, MemorySegment pszContentFolder) {
+        var mh$ = SteamAPI_ISteamUGC_SetItemContent.HANDLE;
+        try {
+            if (TRACE_DOWNCALLS) {
+                traceDowncall("SteamAPI_ISteamUGC_SetItemContent", ptr, handle, pszContentFolder);
+            }
+            return (boolean)mh$.invokeExact(ptr, handle, pszContentFolder);
+        } catch (Throwable ex$) {
+           throw new AssertionError("should not reach here", ex$);
+        }
+    }
+
+    private static class SteamAPI_ISteamUGC_SetItemPreview {
+        public static final FunctionDescriptor DESC = FunctionDescriptor.of(
+            SteamFlat.C_BOOL,
+            SteamFlat.C_POINTER,
+            SteamFlat.C_LONG_LONG,
+            SteamFlat.C_POINTER
+        );
+
+        public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(
+                    SteamFlat.findOrThrow("SteamAPI_ISteamUGC_SetItemPreview"),
+                    DESC);
+    }
+
+    /**
+     * Function descriptor for:
+     * {@snippet lang=c :
+     * bool SteamAPI_ISteamUGC_SetItemPreview(ISteamUGC ptr, UGCUpdateHandle_t handle, const char *pszPreviewFile)
+     * }
+     */
+    public static FunctionDescriptor SteamAPI_ISteamUGC_SetItemPreview$descriptor() {
+        return SteamAPI_ISteamUGC_SetItemPreview.DESC;
+    }
+
+    /**
+     * Downcall method handle for:
+     * {@snippet lang=c :
+     * bool SteamAPI_ISteamUGC_SetItemPreview(ISteamUGC ptr, UGCUpdateHandle_t handle, const char *pszPreviewFile)
+     * }
+     */
+    public static MethodHandle SteamAPI_ISteamUGC_SetItemPreview$handle() {
+        return SteamAPI_ISteamUGC_SetItemPreview.HANDLE;
+    }
+    /**
+     * {@snippet lang=c :
+     * bool SteamAPI_ISteamUGC_SetItemPreview(ISteamUGC ptr, UGCUpdateHandle_t handle, const char *pszPreviewFile)
+     * }
+     */
+    public static boolean SteamAPI_ISteamUGC_SetItemPreview(MemorySegment ptr, long handle, MemorySegment pszPreviewFile) {
+        var mh$ = SteamAPI_ISteamUGC_SetItemPreview.HANDLE;
+        try {
+            if (TRACE_DOWNCALLS) {
+                traceDowncall("SteamAPI_ISteamUGC_SetItemPreview", ptr, handle, pszPreviewFile);
+            }
+            return (boolean)mh$.invokeExact(ptr, handle, pszPreviewFile);
+        } catch (Throwable ex$) {
+           throw new AssertionError("should not reach here", ex$);
+        }
+    }
+
+    private static class SteamAPI_ISteamUGC_SetAllowLegacyUpload {
+        public static final FunctionDescriptor DESC = FunctionDescriptor.of(
+            SteamFlat.C_BOOL,
+            SteamFlat.C_POINTER,
+            SteamFlat.C_LONG_LONG,
+            SteamFlat.C_BOOL
+        );
+
+        public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(
+                    SteamFlat.findOrThrow("SteamAPI_ISteamUGC_SetAllowLegacyUpload"),
+                    DESC);
+    }
+
+    /**
+     * Function descriptor for:
+     * {@snippet lang=c :
+     * bool SteamAPI_ISteamUGC_SetAllowLegacyUpload(ISteamUGC ptr, UGCUpdateHandle_t handle, bool bAllowLegacyUpload)
+     * }
+     */
+    public static FunctionDescriptor SteamAPI_ISteamUGC_SetAllowLegacyUpload$descriptor() {
+        return SteamAPI_ISteamUGC_SetAllowLegacyUpload.DESC;
+    }
+
+    /**
+     * Downcall method handle for:
+     * {@snippet lang=c :
+     * bool SteamAPI_ISteamUGC_SetAllowLegacyUpload(ISteamUGC ptr, UGCUpdateHandle_t handle, bool bAllowLegacyUpload)
+     * }
+     */
+    public static MethodHandle SteamAPI_ISteamUGC_SetAllowLegacyUpload$handle() {
+        return SteamAPI_ISteamUGC_SetAllowLegacyUpload.HANDLE;
+    }
+    /**
+     * {@snippet lang=c :
+     * bool SteamAPI_ISteamUGC_SetAllowLegacyUpload(ISteamUGC ptr, UGCUpdateHandle_t handle, bool bAllowLegacyUpload)
+     * }
+     */
+    public static boolean SteamAPI_ISteamUGC_SetAllowLegacyUpload(MemorySegment ptr, long handle, boolean bAllowLegacyUpload) {
+        var mh$ = SteamAPI_ISteamUGC_SetAllowLegacyUpload.HANDLE;
+        try {
+            if (TRACE_DOWNCALLS) {
+                traceDowncall("SteamAPI_ISteamUGC_SetAllowLegacyUpload", ptr, handle, bAllowLegacyUpload);
+            }
+            return (boolean)mh$.invokeExact(ptr, handle, bAllowLegacyUpload);
+        } catch (Throwable ex$) {
+           throw new AssertionError("should not reach here", ex$);
+        }
+    }
+
+    private static class SteamAPI_ISteamUGC_RemoveAllItemKeyValueTags {
+        public static final FunctionDescriptor DESC = FunctionDescriptor.of(
+            SteamFlat.C_BOOL,
+            SteamFlat.C_POINTER,
+            SteamFlat.C_LONG_LONG
+        );
+
+        public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(
+                    SteamFlat.findOrThrow("SteamAPI_ISteamUGC_RemoveAllItemKeyValueTags"),
+                    DESC);
+    }
+
+    /**
+     * Function descriptor for:
+     * {@snippet lang=c :
+     * bool SteamAPI_ISteamUGC_RemoveAllItemKeyValueTags(ISteamUGC ptr, UGCUpdateHandle_t handle)
+     * }
+     */
+    public static FunctionDescriptor SteamAPI_ISteamUGC_RemoveAllItemKeyValueTags$descriptor() {
+        return SteamAPI_ISteamUGC_RemoveAllItemKeyValueTags.DESC;
+    }
+
+    /**
+     * Downcall method handle for:
+     * {@snippet lang=c :
+     * bool SteamAPI_ISteamUGC_RemoveAllItemKeyValueTags(ISteamUGC ptr, UGCUpdateHandle_t handle)
+     * }
+     */
+    public static MethodHandle SteamAPI_ISteamUGC_RemoveAllItemKeyValueTags$handle() {
+        return SteamAPI_ISteamUGC_RemoveAllItemKeyValueTags.HANDLE;
+    }
+    /**
+     * {@snippet lang=c :
+     * bool SteamAPI_ISteamUGC_RemoveAllItemKeyValueTags(ISteamUGC ptr, UGCUpdateHandle_t handle)
+     * }
+     */
+    public static boolean SteamAPI_ISteamUGC_RemoveAllItemKeyValueTags(MemorySegment ptr, long handle) {
+        var mh$ = SteamAPI_ISteamUGC_RemoveAllItemKeyValueTags.HANDLE;
+        try {
+            if (TRACE_DOWNCALLS) {
+                traceDowncall("SteamAPI_ISteamUGC_RemoveAllItemKeyValueTags", ptr, handle);
+            }
+            return (boolean)mh$.invokeExact(ptr, handle);
+        } catch (Throwable ex$) {
+           throw new AssertionError("should not reach here", ex$);
+        }
+    }
+
+    private static class SteamAPI_ISteamUGC_RemoveItemKeyValueTags {
+        public static final FunctionDescriptor DESC = FunctionDescriptor.of(
+            SteamFlat.C_BOOL,
+            SteamFlat.C_POINTER,
+            SteamFlat.C_LONG_LONG,
+            SteamFlat.C_POINTER
+        );
+
+        public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(
+                    SteamFlat.findOrThrow("SteamAPI_ISteamUGC_RemoveItemKeyValueTags"),
+                    DESC);
+    }
+
+    /**
+     * Function descriptor for:
+     * {@snippet lang=c :
+     * bool SteamAPI_ISteamUGC_RemoveItemKeyValueTags(ISteamUGC ptr, UGCUpdateHandle_t handle, const char *pchKey)
+     * }
+     */
+    public static FunctionDescriptor SteamAPI_ISteamUGC_RemoveItemKeyValueTags$descriptor() {
+        return SteamAPI_ISteamUGC_RemoveItemKeyValueTags.DESC;
+    }
+
+    /**
+     * Downcall method handle for:
+     * {@snippet lang=c :
+     * bool SteamAPI_ISteamUGC_RemoveItemKeyValueTags(ISteamUGC ptr, UGCUpdateHandle_t handle, const char *pchKey)
+     * }
+     */
+    public static MethodHandle SteamAPI_ISteamUGC_RemoveItemKeyValueTags$handle() {
+        return SteamAPI_ISteamUGC_RemoveItemKeyValueTags.HANDLE;
+    }
+    /**
+     * {@snippet lang=c :
+     * bool SteamAPI_ISteamUGC_RemoveItemKeyValueTags(ISteamUGC ptr, UGCUpdateHandle_t handle, const char *pchKey)
+     * }
+     */
+    public static boolean SteamAPI_ISteamUGC_RemoveItemKeyValueTags(MemorySegment ptr, long handle, MemorySegment pchKey) {
+        var mh$ = SteamAPI_ISteamUGC_RemoveItemKeyValueTags.HANDLE;
+        try {
+            if (TRACE_DOWNCALLS) {
+                traceDowncall("SteamAPI_ISteamUGC_RemoveItemKeyValueTags", ptr, handle, pchKey);
+            }
+            return (boolean)mh$.invokeExact(ptr, handle, pchKey);
+        } catch (Throwable ex$) {
+           throw new AssertionError("should not reach here", ex$);
+        }
+    }
+
+    private static class SteamAPI_ISteamUGC_AddItemKeyValueTag {
+        public static final FunctionDescriptor DESC = FunctionDescriptor.of(
+            SteamFlat.C_BOOL,
+            SteamFlat.C_POINTER,
+            SteamFlat.C_LONG_LONG,
+            SteamFlat.C_POINTER,
+            SteamFlat.C_POINTER
+        );
+
+        public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(
+                    SteamFlat.findOrThrow("SteamAPI_ISteamUGC_AddItemKeyValueTag"),
+                    DESC);
+    }
+
+    /**
+     * Function descriptor for:
+     * {@snippet lang=c :
+     * bool SteamAPI_ISteamUGC_AddItemKeyValueTag(ISteamUGC ptr, UGCUpdateHandle_t handle, const char *pchKey, const char *pchValue)
+     * }
+     */
+    public static FunctionDescriptor SteamAPI_ISteamUGC_AddItemKeyValueTag$descriptor() {
+        return SteamAPI_ISteamUGC_AddItemKeyValueTag.DESC;
+    }
+
+    /**
+     * Downcall method handle for:
+     * {@snippet lang=c :
+     * bool SteamAPI_ISteamUGC_AddItemKeyValueTag(ISteamUGC ptr, UGCUpdateHandle_t handle, const char *pchKey, const char *pchValue)
+     * }
+     */
+    public static MethodHandle SteamAPI_ISteamUGC_AddItemKeyValueTag$handle() {
+        return SteamAPI_ISteamUGC_AddItemKeyValueTag.HANDLE;
+    }
+    /**
+     * {@snippet lang=c :
+     * bool SteamAPI_ISteamUGC_AddItemKeyValueTag(ISteamUGC ptr, UGCUpdateHandle_t handle, const char *pchKey, const char *pchValue)
+     * }
+     */
+    public static boolean SteamAPI_ISteamUGC_AddItemKeyValueTag(MemorySegment ptr, long handle, MemorySegment pchKey, MemorySegment pchValue) {
+        var mh$ = SteamAPI_ISteamUGC_AddItemKeyValueTag.HANDLE;
+        try {
+            if (TRACE_DOWNCALLS) {
+                traceDowncall("SteamAPI_ISteamUGC_AddItemKeyValueTag", ptr, handle, pchKey, pchValue);
+            }
+            return (boolean)mh$.invokeExact(ptr, handle, pchKey, pchValue);
+        } catch (Throwable ex$) {
+           throw new AssertionError("should not reach here", ex$);
+        }
+    }
+
+    private static class SteamAPI_ISteamUGC_AddItemPreviewFile {
+        public static final FunctionDescriptor DESC = FunctionDescriptor.of(
+            SteamFlat.C_BOOL,
+            SteamFlat.C_POINTER,
+            SteamFlat.C_LONG_LONG,
+            SteamFlat.C_POINTER,
+            SteamFlat.C_INT
+        );
+
+        public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(
+                    SteamFlat.findOrThrow("SteamAPI_ISteamUGC_AddItemPreviewFile"),
+                    DESC);
+    }
+
+    /**
+     * Function descriptor for:
+     * {@snippet lang=c :
+     * bool SteamAPI_ISteamUGC_AddItemPreviewFile(ISteamUGC ptr, UGCUpdateHandle_t handle, const char *pszPreviewFile, EItemPreviewType type)
+     * }
+     */
+    public static FunctionDescriptor SteamAPI_ISteamUGC_AddItemPreviewFile$descriptor() {
+        return SteamAPI_ISteamUGC_AddItemPreviewFile.DESC;
+    }
+
+    /**
+     * Downcall method handle for:
+     * {@snippet lang=c :
+     * bool SteamAPI_ISteamUGC_AddItemPreviewFile(ISteamUGC ptr, UGCUpdateHandle_t handle, const char *pszPreviewFile, EItemPreviewType type)
+     * }
+     */
+    public static MethodHandle SteamAPI_ISteamUGC_AddItemPreviewFile$handle() {
+        return SteamAPI_ISteamUGC_AddItemPreviewFile.HANDLE;
+    }
+    /**
+     * {@snippet lang=c :
+     * bool SteamAPI_ISteamUGC_AddItemPreviewFile(ISteamUGC ptr, UGCUpdateHandle_t handle, const char *pszPreviewFile, EItemPreviewType type)
+     * }
+     */
+    public static boolean SteamAPI_ISteamUGC_AddItemPreviewFile(MemorySegment ptr, long handle, MemorySegment pszPreviewFile, int type) {
+        var mh$ = SteamAPI_ISteamUGC_AddItemPreviewFile.HANDLE;
+        try {
+            if (TRACE_DOWNCALLS) {
+                traceDowncall("SteamAPI_ISteamUGC_AddItemPreviewFile", ptr, handle, pszPreviewFile, type);
+            }
+            return (boolean)mh$.invokeExact(ptr, handle, pszPreviewFile, type);
+        } catch (Throwable ex$) {
+           throw new AssertionError("should not reach here", ex$);
+        }
+    }
+
+    private static class SteamAPI_ISteamUGC_AddItemPreviewVideo {
+        public static final FunctionDescriptor DESC = FunctionDescriptor.of(
+            SteamFlat.C_BOOL,
+            SteamFlat.C_POINTER,
+            SteamFlat.C_LONG_LONG,
+            SteamFlat.C_POINTER
+        );
+
+        public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(
+                    SteamFlat.findOrThrow("SteamAPI_ISteamUGC_AddItemPreviewVideo"),
+                    DESC);
+    }
+
+    /**
+     * Function descriptor for:
+     * {@snippet lang=c :
+     * bool SteamAPI_ISteamUGC_AddItemPreviewVideo(ISteamUGC ptr, UGCUpdateHandle_t handle, const char *pszVideoID)
+     * }
+     */
+    public static FunctionDescriptor SteamAPI_ISteamUGC_AddItemPreviewVideo$descriptor() {
+        return SteamAPI_ISteamUGC_AddItemPreviewVideo.DESC;
+    }
+
+    /**
+     * Downcall method handle for:
+     * {@snippet lang=c :
+     * bool SteamAPI_ISteamUGC_AddItemPreviewVideo(ISteamUGC ptr, UGCUpdateHandle_t handle, const char *pszVideoID)
+     * }
+     */
+    public static MethodHandle SteamAPI_ISteamUGC_AddItemPreviewVideo$handle() {
+        return SteamAPI_ISteamUGC_AddItemPreviewVideo.HANDLE;
+    }
+    /**
+     * {@snippet lang=c :
+     * bool SteamAPI_ISteamUGC_AddItemPreviewVideo(ISteamUGC ptr, UGCUpdateHandle_t handle, const char *pszVideoID)
+     * }
+     */
+    public static boolean SteamAPI_ISteamUGC_AddItemPreviewVideo(MemorySegment ptr, long handle, MemorySegment pszVideoID) {
+        var mh$ = SteamAPI_ISteamUGC_AddItemPreviewVideo.HANDLE;
+        try {
+            if (TRACE_DOWNCALLS) {
+                traceDowncall("SteamAPI_ISteamUGC_AddItemPreviewVideo", ptr, handle, pszVideoID);
+            }
+            return (boolean)mh$.invokeExact(ptr, handle, pszVideoID);
+        } catch (Throwable ex$) {
+           throw new AssertionError("should not reach here", ex$);
+        }
+    }
+
+    private static class SteamAPI_ISteamUGC_UpdateItemPreviewFile {
+        public static final FunctionDescriptor DESC = FunctionDescriptor.of(
+            SteamFlat.C_BOOL,
+            SteamFlat.C_POINTER,
+            SteamFlat.C_LONG_LONG,
+            SteamFlat.C_INT,
+            SteamFlat.C_POINTER
+        );
+
+        public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(
+                    SteamFlat.findOrThrow("SteamAPI_ISteamUGC_UpdateItemPreviewFile"),
+                    DESC);
+    }
+
+    /**
+     * Function descriptor for:
+     * {@snippet lang=c :
+     * bool SteamAPI_ISteamUGC_UpdateItemPreviewFile(ISteamUGC ptr, UGCUpdateHandle_t handle, uint32 index, const char *pszPreviewFile)
+     * }
+     */
+    public static FunctionDescriptor SteamAPI_ISteamUGC_UpdateItemPreviewFile$descriptor() {
+        return SteamAPI_ISteamUGC_UpdateItemPreviewFile.DESC;
+    }
+
+    /**
+     * Downcall method handle for:
+     * {@snippet lang=c :
+     * bool SteamAPI_ISteamUGC_UpdateItemPreviewFile(ISteamUGC ptr, UGCUpdateHandle_t handle, uint32 index, const char *pszPreviewFile)
+     * }
+     */
+    public static MethodHandle SteamAPI_ISteamUGC_UpdateItemPreviewFile$handle() {
+        return SteamAPI_ISteamUGC_UpdateItemPreviewFile.HANDLE;
+    }
+    /**
+     * {@snippet lang=c :
+     * bool SteamAPI_ISteamUGC_UpdateItemPreviewFile(ISteamUGC ptr, UGCUpdateHandle_t handle, uint32 index, const char *pszPreviewFile)
+     * }
+     */
+    public static boolean SteamAPI_ISteamUGC_UpdateItemPreviewFile(MemorySegment ptr, long handle, int index, MemorySegment pszPreviewFile) {
+        var mh$ = SteamAPI_ISteamUGC_UpdateItemPreviewFile.HANDLE;
+        try {
+            if (TRACE_DOWNCALLS) {
+                traceDowncall("SteamAPI_ISteamUGC_UpdateItemPreviewFile", ptr, handle, index, pszPreviewFile);
+            }
+            return (boolean)mh$.invokeExact(ptr, handle, index, pszPreviewFile);
+        } catch (Throwable ex$) {
+           throw new AssertionError("should not reach here", ex$);
+        }
+    }
+
+    private static class SteamAPI_ISteamUGC_UpdateItemPreviewVideo {
+        public static final FunctionDescriptor DESC = FunctionDescriptor.of(
+            SteamFlat.C_BOOL,
+            SteamFlat.C_POINTER,
+            SteamFlat.C_LONG_LONG,
+            SteamFlat.C_INT,
+            SteamFlat.C_POINTER
+        );
+
+        public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(
+                    SteamFlat.findOrThrow("SteamAPI_ISteamUGC_UpdateItemPreviewVideo"),
+                    DESC);
+    }
+
+    /**
+     * Function descriptor for:
+     * {@snippet lang=c :
+     * bool SteamAPI_ISteamUGC_UpdateItemPreviewVideo(ISteamUGC ptr, UGCUpdateHandle_t handle, uint32 index, const char *pszVideoID)
+     * }
+     */
+    public static FunctionDescriptor SteamAPI_ISteamUGC_UpdateItemPreviewVideo$descriptor() {
+        return SteamAPI_ISteamUGC_UpdateItemPreviewVideo.DESC;
+    }
+
+    /**
+     * Downcall method handle for:
+     * {@snippet lang=c :
+     * bool SteamAPI_ISteamUGC_UpdateItemPreviewVideo(ISteamUGC ptr, UGCUpdateHandle_t handle, uint32 index, const char *pszVideoID)
+     * }
+     */
+    public static MethodHandle SteamAPI_ISteamUGC_UpdateItemPreviewVideo$handle() {
+        return SteamAPI_ISteamUGC_UpdateItemPreviewVideo.HANDLE;
+    }
+    /**
+     * {@snippet lang=c :
+     * bool SteamAPI_ISteamUGC_UpdateItemPreviewVideo(ISteamUGC ptr, UGCUpdateHandle_t handle, uint32 index, const char *pszVideoID)
+     * }
+     */
+    public static boolean SteamAPI_ISteamUGC_UpdateItemPreviewVideo(MemorySegment ptr, long handle, int index, MemorySegment pszVideoID) {
+        var mh$ = SteamAPI_ISteamUGC_UpdateItemPreviewVideo.HANDLE;
+        try {
+            if (TRACE_DOWNCALLS) {
+                traceDowncall("SteamAPI_ISteamUGC_UpdateItemPreviewVideo", ptr, handle, index, pszVideoID);
+            }
+            return (boolean)mh$.invokeExact(ptr, handle, index, pszVideoID);
+        } catch (Throwable ex$) {
+           throw new AssertionError("should not reach here", ex$);
+        }
+    }
+
+    private static class SteamAPI_ISteamUGC_RemoveItemPreview {
+        public static final FunctionDescriptor DESC = FunctionDescriptor.of(
+            SteamFlat.C_BOOL,
+            SteamFlat.C_POINTER,
+            SteamFlat.C_LONG_LONG,
+            SteamFlat.C_INT
+        );
+
+        public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(
+                    SteamFlat.findOrThrow("SteamAPI_ISteamUGC_RemoveItemPreview"),
+                    DESC);
+    }
+
+    /**
+     * Function descriptor for:
+     * {@snippet lang=c :
+     * bool SteamAPI_ISteamUGC_RemoveItemPreview(ISteamUGC ptr, UGCUpdateHandle_t handle, uint32 index)
+     * }
+     */
+    public static FunctionDescriptor SteamAPI_ISteamUGC_RemoveItemPreview$descriptor() {
+        return SteamAPI_ISteamUGC_RemoveItemPreview.DESC;
+    }
+
+    /**
+     * Downcall method handle for:
+     * {@snippet lang=c :
+     * bool SteamAPI_ISteamUGC_RemoveItemPreview(ISteamUGC ptr, UGCUpdateHandle_t handle, uint32 index)
+     * }
+     */
+    public static MethodHandle SteamAPI_ISteamUGC_RemoveItemPreview$handle() {
+        return SteamAPI_ISteamUGC_RemoveItemPreview.HANDLE;
+    }
+    /**
+     * {@snippet lang=c :
+     * bool SteamAPI_ISteamUGC_RemoveItemPreview(ISteamUGC ptr, UGCUpdateHandle_t handle, uint32 index)
+     * }
+     */
+    public static boolean SteamAPI_ISteamUGC_RemoveItemPreview(MemorySegment ptr, long handle, int index) {
+        var mh$ = SteamAPI_ISteamUGC_RemoveItemPreview.HANDLE;
+        try {
+            if (TRACE_DOWNCALLS) {
+                traceDowncall("SteamAPI_ISteamUGC_RemoveItemPreview", ptr, handle, index);
+            }
+            return (boolean)mh$.invokeExact(ptr, handle, index);
+        } catch (Throwable ex$) {
+           throw new AssertionError("should not reach here", ex$);
+        }
+    }
+
+    private static class SteamAPI_ISteamUGC_AddContentDescriptor {
+        public static final FunctionDescriptor DESC = FunctionDescriptor.of(
+            SteamFlat.C_BOOL,
+            SteamFlat.C_POINTER,
+            SteamFlat.C_LONG_LONG,
+            SteamFlat.C_INT
+        );
+
+        public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(
+                    SteamFlat.findOrThrow("SteamAPI_ISteamUGC_AddContentDescriptor"),
+                    DESC);
+    }
+
+    /**
+     * Function descriptor for:
+     * {@snippet lang=c :
+     * bool SteamAPI_ISteamUGC_AddContentDescriptor(ISteamUGC ptr, UGCUpdateHandle_t handle, EUGCContentDescriptorID descid)
+     * }
+     */
+    public static FunctionDescriptor SteamAPI_ISteamUGC_AddContentDescriptor$descriptor() {
+        return SteamAPI_ISteamUGC_AddContentDescriptor.DESC;
+    }
+
+    /**
+     * Downcall method handle for:
+     * {@snippet lang=c :
+     * bool SteamAPI_ISteamUGC_AddContentDescriptor(ISteamUGC ptr, UGCUpdateHandle_t handle, EUGCContentDescriptorID descid)
+     * }
+     */
+    public static MethodHandle SteamAPI_ISteamUGC_AddContentDescriptor$handle() {
+        return SteamAPI_ISteamUGC_AddContentDescriptor.HANDLE;
+    }
+    /**
+     * {@snippet lang=c :
+     * bool SteamAPI_ISteamUGC_AddContentDescriptor(ISteamUGC ptr, UGCUpdateHandle_t handle, EUGCContentDescriptorID descid)
+     * }
+     */
+    public static boolean SteamAPI_ISteamUGC_AddContentDescriptor(MemorySegment ptr, long handle, int descid) {
+        var mh$ = SteamAPI_ISteamUGC_AddContentDescriptor.HANDLE;
+        try {
+            if (TRACE_DOWNCALLS) {
+                traceDowncall("SteamAPI_ISteamUGC_AddContentDescriptor", ptr, handle, descid);
+            }
+            return (boolean)mh$.invokeExact(ptr, handle, descid);
+        } catch (Throwable ex$) {
+           throw new AssertionError("should not reach here", ex$);
+        }
+    }
+
+    private static class SteamAPI_ISteamUGC_RemoveContentDescriptor {
+        public static final FunctionDescriptor DESC = FunctionDescriptor.of(
+            SteamFlat.C_BOOL,
+            SteamFlat.C_POINTER,
+            SteamFlat.C_LONG_LONG,
+            SteamFlat.C_INT
+        );
+
+        public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(
+                    SteamFlat.findOrThrow("SteamAPI_ISteamUGC_RemoveContentDescriptor"),
+                    DESC);
+    }
+
+    /**
+     * Function descriptor for:
+     * {@snippet lang=c :
+     * bool SteamAPI_ISteamUGC_RemoveContentDescriptor(ISteamUGC ptr, UGCUpdateHandle_t handle, EUGCContentDescriptorID descid)
+     * }
+     */
+    public static FunctionDescriptor SteamAPI_ISteamUGC_RemoveContentDescriptor$descriptor() {
+        return SteamAPI_ISteamUGC_RemoveContentDescriptor.DESC;
+    }
+
+    /**
+     * Downcall method handle for:
+     * {@snippet lang=c :
+     * bool SteamAPI_ISteamUGC_RemoveContentDescriptor(ISteamUGC ptr, UGCUpdateHandle_t handle, EUGCContentDescriptorID descid)
+     * }
+     */
+    public static MethodHandle SteamAPI_ISteamUGC_RemoveContentDescriptor$handle() {
+        return SteamAPI_ISteamUGC_RemoveContentDescriptor.HANDLE;
+    }
+    /**
+     * {@snippet lang=c :
+     * bool SteamAPI_ISteamUGC_RemoveContentDescriptor(ISteamUGC ptr, UGCUpdateHandle_t handle, EUGCContentDescriptorID descid)
+     * }
+     */
+    public static boolean SteamAPI_ISteamUGC_RemoveContentDescriptor(MemorySegment ptr, long handle, int descid) {
+        var mh$ = SteamAPI_ISteamUGC_RemoveContentDescriptor.HANDLE;
+        try {
+            if (TRACE_DOWNCALLS) {
+                traceDowncall("SteamAPI_ISteamUGC_RemoveContentDescriptor", ptr, handle, descid);
+            }
+            return (boolean)mh$.invokeExact(ptr, handle, descid);
+        } catch (Throwable ex$) {
+           throw new AssertionError("should not reach here", ex$);
+        }
+    }
+
+    private static class SteamAPI_ISteamUGC_SubmitItemUpdate {
+        public static final FunctionDescriptor DESC = FunctionDescriptor.of(
+            SteamFlat.C_LONG_LONG,
+            SteamFlat.C_POINTER,
+            SteamFlat.C_LONG_LONG,
+            SteamFlat.C_POINTER
+        );
+
+        public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(
+                    SteamFlat.findOrThrow("SteamAPI_ISteamUGC_SubmitItemUpdate"),
+                    DESC);
+    }
+
+    /**
+     * Function descriptor for:
+     * {@snippet lang=c :
+     * SteamAPICall_t SteamAPI_ISteamUGC_SubmitItemUpdate(ISteamUGC ptr, UGCUpdateHandle_t handle, const char *pchChangeNote)
+     * }
+     */
+    public static FunctionDescriptor SteamAPI_ISteamUGC_SubmitItemUpdate$descriptor() {
+        return SteamAPI_ISteamUGC_SubmitItemUpdate.DESC;
+    }
+
+    /**
+     * Downcall method handle for:
+     * {@snippet lang=c :
+     * SteamAPICall_t SteamAPI_ISteamUGC_SubmitItemUpdate(ISteamUGC ptr, UGCUpdateHandle_t handle, const char *pchChangeNote)
+     * }
+     */
+    public static MethodHandle SteamAPI_ISteamUGC_SubmitItemUpdate$handle() {
+        return SteamAPI_ISteamUGC_SubmitItemUpdate.HANDLE;
+    }
+    /**
+     * {@snippet lang=c :
+     * SteamAPICall_t SteamAPI_ISteamUGC_SubmitItemUpdate(ISteamUGC ptr, UGCUpdateHandle_t handle, const char *pchChangeNote)
+     * }
+     */
+    public static long SteamAPI_ISteamUGC_SubmitItemUpdate(MemorySegment ptr, long handle, MemorySegment pchChangeNote) {
+        var mh$ = SteamAPI_ISteamUGC_SubmitItemUpdate.HANDLE;
+        try {
+            if (TRACE_DOWNCALLS) {
+                traceDowncall("SteamAPI_ISteamUGC_SubmitItemUpdate", ptr, handle, pchChangeNote);
+            }
+            return (long)mh$.invokeExact(ptr, handle, pchChangeNote);
+        } catch (Throwable ex$) {
+           throw new AssertionError("should not reach here", ex$);
+        }
+    }
+
+    private static class SteamAPI_ISteamUGC_GetItemUpdateProgress {
+        public static final FunctionDescriptor DESC = FunctionDescriptor.of(
+            SteamFlat.C_INT,
+            SteamFlat.C_POINTER,
+            SteamFlat.C_LONG_LONG,
+            SteamFlat.C_POINTER,
+            SteamFlat.C_POINTER
+        );
+
+        public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(
+                    SteamFlat.findOrThrow("SteamAPI_ISteamUGC_GetItemUpdateProgress"),
+                    DESC);
+    }
+
+    /**
+     * Function descriptor for:
+     * {@snippet lang=c :
+     * EItemUpdateStatus SteamAPI_ISteamUGC_GetItemUpdateProgress(ISteamUGC ptr, UGCUpdateHandle_t handle, uint64 *punBytesProcessed, uint64 *punBytesTotal)
+     * }
+     */
+    public static FunctionDescriptor SteamAPI_ISteamUGC_GetItemUpdateProgress$descriptor() {
+        return SteamAPI_ISteamUGC_GetItemUpdateProgress.DESC;
+    }
+
+    /**
+     * Downcall method handle for:
+     * {@snippet lang=c :
+     * EItemUpdateStatus SteamAPI_ISteamUGC_GetItemUpdateProgress(ISteamUGC ptr, UGCUpdateHandle_t handle, uint64 *punBytesProcessed, uint64 *punBytesTotal)
+     * }
+     */
+    public static MethodHandle SteamAPI_ISteamUGC_GetItemUpdateProgress$handle() {
+        return SteamAPI_ISteamUGC_GetItemUpdateProgress.HANDLE;
+    }
+    /**
+     * {@snippet lang=c :
+     * EItemUpdateStatus SteamAPI_ISteamUGC_GetItemUpdateProgress(ISteamUGC ptr, UGCUpdateHandle_t handle, uint64 *punBytesProcessed, uint64 *punBytesTotal)
+     * }
+     */
+    public static int SteamAPI_ISteamUGC_GetItemUpdateProgress(MemorySegment ptr, long handle, MemorySegment punBytesProcessed, MemorySegment punBytesTotal) {
+        var mh$ = SteamAPI_ISteamUGC_GetItemUpdateProgress.HANDLE;
+        try {
+            if (TRACE_DOWNCALLS) {
+                traceDowncall("SteamAPI_ISteamUGC_GetItemUpdateProgress", ptr, handle, punBytesProcessed, punBytesTotal);
+            }
+            return (int)mh$.invokeExact(ptr, handle, punBytesProcessed, punBytesTotal);
+        } catch (Throwable ex$) {
+           throw new AssertionError("should not reach here", ex$);
+        }
+    }
+
+    private static class SteamAPI_ISteamUGC_SetUserItemVote {
+        public static final FunctionDescriptor DESC = FunctionDescriptor.of(
+            SteamFlat.C_LONG_LONG,
+            SteamFlat.C_POINTER,
+            SteamFlat.C_LONG_LONG,
+            SteamFlat.C_BOOL
+        );
+
+        public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(
+                    SteamFlat.findOrThrow("SteamAPI_ISteamUGC_SetUserItemVote"),
+                    DESC);
+    }
+
+    /**
+     * Function descriptor for:
+     * {@snippet lang=c :
+     * SteamAPICall_t SteamAPI_ISteamUGC_SetUserItemVote(ISteamUGC ptr, PublishedFileId_t nPublishedFileID, bool bVoteUp)
+     * }
+     */
+    public static FunctionDescriptor SteamAPI_ISteamUGC_SetUserItemVote$descriptor() {
+        return SteamAPI_ISteamUGC_SetUserItemVote.DESC;
+    }
+
+    /**
+     * Downcall method handle for:
+     * {@snippet lang=c :
+     * SteamAPICall_t SteamAPI_ISteamUGC_SetUserItemVote(ISteamUGC ptr, PublishedFileId_t nPublishedFileID, bool bVoteUp)
+     * }
+     */
+    public static MethodHandle SteamAPI_ISteamUGC_SetUserItemVote$handle() {
+        return SteamAPI_ISteamUGC_SetUserItemVote.HANDLE;
+    }
+    /**
+     * {@snippet lang=c :
+     * SteamAPICall_t SteamAPI_ISteamUGC_SetUserItemVote(ISteamUGC ptr, PublishedFileId_t nPublishedFileID, bool bVoteUp)
+     * }
+     */
+    public static long SteamAPI_ISteamUGC_SetUserItemVote(MemorySegment ptr, long nPublishedFileID, boolean bVoteUp) {
+        var mh$ = SteamAPI_ISteamUGC_SetUserItemVote.HANDLE;
+        try {
+            if (TRACE_DOWNCALLS) {
+                traceDowncall("SteamAPI_ISteamUGC_SetUserItemVote", ptr, nPublishedFileID, bVoteUp);
+            }
+            return (long)mh$.invokeExact(ptr, nPublishedFileID, bVoteUp);
+        } catch (Throwable ex$) {
+           throw new AssertionError("should not reach here", ex$);
+        }
+    }
+
+    private static class SteamAPI_ISteamUGC_GetUserItemVote {
+        public static final FunctionDescriptor DESC = FunctionDescriptor.of(
+            SteamFlat.C_LONG_LONG,
+            SteamFlat.C_POINTER,
+            SteamFlat.C_LONG_LONG
+        );
+
+        public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(
+                    SteamFlat.findOrThrow("SteamAPI_ISteamUGC_GetUserItemVote"),
+                    DESC);
+    }
+
+    /**
+     * Function descriptor for:
+     * {@snippet lang=c :
+     * SteamAPICall_t SteamAPI_ISteamUGC_GetUserItemVote(ISteamUGC ptr, PublishedFileId_t nPublishedFileID)
+     * }
+     */
+    public static FunctionDescriptor SteamAPI_ISteamUGC_GetUserItemVote$descriptor() {
+        return SteamAPI_ISteamUGC_GetUserItemVote.DESC;
+    }
+
+    /**
+     * Downcall method handle for:
+     * {@snippet lang=c :
+     * SteamAPICall_t SteamAPI_ISteamUGC_GetUserItemVote(ISteamUGC ptr, PublishedFileId_t nPublishedFileID)
+     * }
+     */
+    public static MethodHandle SteamAPI_ISteamUGC_GetUserItemVote$handle() {
+        return SteamAPI_ISteamUGC_GetUserItemVote.HANDLE;
+    }
+    /**
+     * {@snippet lang=c :
+     * SteamAPICall_t SteamAPI_ISteamUGC_GetUserItemVote(ISteamUGC ptr, PublishedFileId_t nPublishedFileID)
+     * }
+     */
+    public static long SteamAPI_ISteamUGC_GetUserItemVote(MemorySegment ptr, long nPublishedFileID) {
+        var mh$ = SteamAPI_ISteamUGC_GetUserItemVote.HANDLE;
+        try {
+            if (TRACE_DOWNCALLS) {
+                traceDowncall("SteamAPI_ISteamUGC_GetUserItemVote", ptr, nPublishedFileID);
+            }
+            return (long)mh$.invokeExact(ptr, nPublishedFileID);
+        } catch (Throwable ex$) {
+           throw new AssertionError("should not reach here", ex$);
+        }
+    }
+
+    private static class SteamAPI_ISteamUGC_AddItemToFavorites {
+        public static final FunctionDescriptor DESC = FunctionDescriptor.of(
+            SteamFlat.C_LONG_LONG,
+            SteamFlat.C_POINTER,
+            SteamFlat.C_INT,
+            SteamFlat.C_LONG_LONG
+        );
+
+        public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(
+                    SteamFlat.findOrThrow("SteamAPI_ISteamUGC_AddItemToFavorites"),
+                    DESC);
+    }
+
+    /**
+     * Function descriptor for:
+     * {@snippet lang=c :
+     * SteamAPICall_t SteamAPI_ISteamUGC_AddItemToFavorites(ISteamUGC ptr, AppId_t nAppId, PublishedFileId_t nPublishedFileID)
+     * }
+     */
+    public static FunctionDescriptor SteamAPI_ISteamUGC_AddItemToFavorites$descriptor() {
+        return SteamAPI_ISteamUGC_AddItemToFavorites.DESC;
+    }
+
+    /**
+     * Downcall method handle for:
+     * {@snippet lang=c :
+     * SteamAPICall_t SteamAPI_ISteamUGC_AddItemToFavorites(ISteamUGC ptr, AppId_t nAppId, PublishedFileId_t nPublishedFileID)
+     * }
+     */
+    public static MethodHandle SteamAPI_ISteamUGC_AddItemToFavorites$handle() {
+        return SteamAPI_ISteamUGC_AddItemToFavorites.HANDLE;
+    }
+    /**
+     * {@snippet lang=c :
+     * SteamAPICall_t SteamAPI_ISteamUGC_AddItemToFavorites(ISteamUGC ptr, AppId_t nAppId, PublishedFileId_t nPublishedFileID)
+     * }
+     */
+    public static long SteamAPI_ISteamUGC_AddItemToFavorites(MemorySegment ptr, int nAppId, long nPublishedFileID) {
+        var mh$ = SteamAPI_ISteamUGC_AddItemToFavorites.HANDLE;
+        try {
+            if (TRACE_DOWNCALLS) {
+                traceDowncall("SteamAPI_ISteamUGC_AddItemToFavorites", ptr, nAppId, nPublishedFileID);
+            }
+            return (long)mh$.invokeExact(ptr, nAppId, nPublishedFileID);
+        } catch (Throwable ex$) {
+           throw new AssertionError("should not reach here", ex$);
+        }
+    }
+
+    private static class SteamAPI_ISteamUGC_RemoveItemFromFavorites {
+        public static final FunctionDescriptor DESC = FunctionDescriptor.of(
+            SteamFlat.C_LONG_LONG,
+            SteamFlat.C_POINTER,
+            SteamFlat.C_INT,
+            SteamFlat.C_LONG_LONG
+        );
+
+        public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(
+                    SteamFlat.findOrThrow("SteamAPI_ISteamUGC_RemoveItemFromFavorites"),
+                    DESC);
+    }
+
+    /**
+     * Function descriptor for:
+     * {@snippet lang=c :
+     * SteamAPICall_t SteamAPI_ISteamUGC_RemoveItemFromFavorites(ISteamUGC ptr, AppId_t nAppId, PublishedFileId_t nPublishedFileID)
+     * }
+     */
+    public static FunctionDescriptor SteamAPI_ISteamUGC_RemoveItemFromFavorites$descriptor() {
+        return SteamAPI_ISteamUGC_RemoveItemFromFavorites.DESC;
+    }
+
+    /**
+     * Downcall method handle for:
+     * {@snippet lang=c :
+     * SteamAPICall_t SteamAPI_ISteamUGC_RemoveItemFromFavorites(ISteamUGC ptr, AppId_t nAppId, PublishedFileId_t nPublishedFileID)
+     * }
+     */
+    public static MethodHandle SteamAPI_ISteamUGC_RemoveItemFromFavorites$handle() {
+        return SteamAPI_ISteamUGC_RemoveItemFromFavorites.HANDLE;
+    }
+    /**
+     * {@snippet lang=c :
+     * SteamAPICall_t SteamAPI_ISteamUGC_RemoveItemFromFavorites(ISteamUGC ptr, AppId_t nAppId, PublishedFileId_t nPublishedFileID)
+     * }
+     */
+    public static long SteamAPI_ISteamUGC_RemoveItemFromFavorites(MemorySegment ptr, int nAppId, long nPublishedFileID) {
+        var mh$ = SteamAPI_ISteamUGC_RemoveItemFromFavorites.HANDLE;
+        try {
+            if (TRACE_DOWNCALLS) {
+                traceDowncall("SteamAPI_ISteamUGC_RemoveItemFromFavorites", ptr, nAppId, nPublishedFileID);
+            }
+            return (long)mh$.invokeExact(ptr, nAppId, nPublishedFileID);
+        } catch (Throwable ex$) {
+           throw new AssertionError("should not reach here", ex$);
+        }
+    }
+
+    private static class SteamAPI_ISteamUGC_SubscribeItem {
+        public static final FunctionDescriptor DESC = FunctionDescriptor.of(
+            SteamFlat.C_LONG_LONG,
+            SteamFlat.C_POINTER,
+            SteamFlat.C_LONG_LONG
+        );
+
+        public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(
+                    SteamFlat.findOrThrow("SteamAPI_ISteamUGC_SubscribeItem"),
+                    DESC);
+    }
+
+    /**
+     * Function descriptor for:
+     * {@snippet lang=c :
+     * SteamAPICall_t SteamAPI_ISteamUGC_SubscribeItem(ISteamUGC ptr, PublishedFileId_t nPublishedFileID)
+     * }
+     */
+    public static FunctionDescriptor SteamAPI_ISteamUGC_SubscribeItem$descriptor() {
+        return SteamAPI_ISteamUGC_SubscribeItem.DESC;
+    }
+
+    /**
+     * Downcall method handle for:
+     * {@snippet lang=c :
+     * SteamAPICall_t SteamAPI_ISteamUGC_SubscribeItem(ISteamUGC ptr, PublishedFileId_t nPublishedFileID)
+     * }
+     */
+    public static MethodHandle SteamAPI_ISteamUGC_SubscribeItem$handle() {
+        return SteamAPI_ISteamUGC_SubscribeItem.HANDLE;
+    }
+    /**
+     * {@snippet lang=c :
+     * SteamAPICall_t SteamAPI_ISteamUGC_SubscribeItem(ISteamUGC ptr, PublishedFileId_t nPublishedFileID)
+     * }
+     */
+    public static long SteamAPI_ISteamUGC_SubscribeItem(MemorySegment ptr, long nPublishedFileID) {
+        var mh$ = SteamAPI_ISteamUGC_SubscribeItem.HANDLE;
+        try {
+            if (TRACE_DOWNCALLS) {
+                traceDowncall("SteamAPI_ISteamUGC_SubscribeItem", ptr, nPublishedFileID);
+            }
+            return (long)mh$.invokeExact(ptr, nPublishedFileID);
+        } catch (Throwable ex$) {
+           throw new AssertionError("should not reach here", ex$);
+        }
+    }
+
+    private static class SteamAPI_ISteamUGC_UnsubscribeItem {
+        public static final FunctionDescriptor DESC = FunctionDescriptor.of(
+            SteamFlat.C_LONG_LONG,
+            SteamFlat.C_POINTER,
+            SteamFlat.C_LONG_LONG
+        );
+
+        public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(
+                    SteamFlat.findOrThrow("SteamAPI_ISteamUGC_UnsubscribeItem"),
+                    DESC);
+    }
+
+    /**
+     * Function descriptor for:
+     * {@snippet lang=c :
+     * SteamAPICall_t SteamAPI_ISteamUGC_UnsubscribeItem(ISteamUGC ptr, PublishedFileId_t nPublishedFileID)
+     * }
+     */
+    public static FunctionDescriptor SteamAPI_ISteamUGC_UnsubscribeItem$descriptor() {
+        return SteamAPI_ISteamUGC_UnsubscribeItem.DESC;
+    }
+
+    /**
+     * Downcall method handle for:
+     * {@snippet lang=c :
+     * SteamAPICall_t SteamAPI_ISteamUGC_UnsubscribeItem(ISteamUGC ptr, PublishedFileId_t nPublishedFileID)
+     * }
+     */
+    public static MethodHandle SteamAPI_ISteamUGC_UnsubscribeItem$handle() {
+        return SteamAPI_ISteamUGC_UnsubscribeItem.HANDLE;
+    }
+    /**
+     * {@snippet lang=c :
+     * SteamAPICall_t SteamAPI_ISteamUGC_UnsubscribeItem(ISteamUGC ptr, PublishedFileId_t nPublishedFileID)
+     * }
+     */
+    public static long SteamAPI_ISteamUGC_UnsubscribeItem(MemorySegment ptr, long nPublishedFileID) {
+        var mh$ = SteamAPI_ISteamUGC_UnsubscribeItem.HANDLE;
+        try {
+            if (TRACE_DOWNCALLS) {
+                traceDowncall("SteamAPI_ISteamUGC_UnsubscribeItem", ptr, nPublishedFileID);
+            }
+            return (long)mh$.invokeExact(ptr, nPublishedFileID);
+        } catch (Throwable ex$) {
+           throw new AssertionError("should not reach here", ex$);
+        }
+    }
+
+    private static class SteamAPI_ISteamUGC_GetNumSubscribedItems {
+        public static final FunctionDescriptor DESC = FunctionDescriptor.of(
+            SteamFlat.C_INT,
+            SteamFlat.C_POINTER
+        );
+
+        public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(
+                    SteamFlat.findOrThrow("SteamAPI_ISteamUGC_GetNumSubscribedItems"),
+                    DESC);
+    }
+
+    /**
+     * Function descriptor for:
+     * {@snippet lang=c :
+     * uint32 SteamAPI_ISteamUGC_GetNumSubscribedItems(ISteamUGC ptr)
+     * }
+     */
+    public static FunctionDescriptor SteamAPI_ISteamUGC_GetNumSubscribedItems$descriptor() {
+        return SteamAPI_ISteamUGC_GetNumSubscribedItems.DESC;
+    }
+
+    /**
+     * Downcall method handle for:
+     * {@snippet lang=c :
+     * uint32 SteamAPI_ISteamUGC_GetNumSubscribedItems(ISteamUGC ptr)
+     * }
+     */
+    public static MethodHandle SteamAPI_ISteamUGC_GetNumSubscribedItems$handle() {
+        return SteamAPI_ISteamUGC_GetNumSubscribedItems.HANDLE;
+    }
+    /**
+     * {@snippet lang=c :
+     * uint32 SteamAPI_ISteamUGC_GetNumSubscribedItems(ISteamUGC ptr)
+     * }
+     */
+    public static int SteamAPI_ISteamUGC_GetNumSubscribedItems(MemorySegment ptr) {
+        var mh$ = SteamAPI_ISteamUGC_GetNumSubscribedItems.HANDLE;
+        try {
+            if (TRACE_DOWNCALLS) {
+                traceDowncall("SteamAPI_ISteamUGC_GetNumSubscribedItems", ptr);
+            }
+            return (int)mh$.invokeExact(ptr);
+        } catch (Throwable ex$) {
+           throw new AssertionError("should not reach here", ex$);
+        }
+    }
+
+    private static class SteamAPI_ISteamUGC_GetSubscribedItems {
+        public static final FunctionDescriptor DESC = FunctionDescriptor.of(
+            SteamFlat.C_INT,
+            SteamFlat.C_POINTER,
+            SteamFlat.C_POINTER,
+            SteamFlat.C_INT
+        );
+
+        public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(
+                    SteamFlat.findOrThrow("SteamAPI_ISteamUGC_GetSubscribedItems"),
+                    DESC);
+    }
+
+    /**
+     * Function descriptor for:
+     * {@snippet lang=c :
+     * uint32 SteamAPI_ISteamUGC_GetSubscribedItems(ISteamUGC ptr, PublishedFileId_t *pvecPublishedFileID, uint32 cMaxEntries)
+     * }
+     */
+    public static FunctionDescriptor SteamAPI_ISteamUGC_GetSubscribedItems$descriptor() {
+        return SteamAPI_ISteamUGC_GetSubscribedItems.DESC;
+    }
+
+    /**
+     * Downcall method handle for:
+     * {@snippet lang=c :
+     * uint32 SteamAPI_ISteamUGC_GetSubscribedItems(ISteamUGC ptr, PublishedFileId_t *pvecPublishedFileID, uint32 cMaxEntries)
+     * }
+     */
+    public static MethodHandle SteamAPI_ISteamUGC_GetSubscribedItems$handle() {
+        return SteamAPI_ISteamUGC_GetSubscribedItems.HANDLE;
+    }
+    /**
+     * {@snippet lang=c :
+     * uint32 SteamAPI_ISteamUGC_GetSubscribedItems(ISteamUGC ptr, PublishedFileId_t *pvecPublishedFileID, uint32 cMaxEntries)
+     * }
+     */
+    public static int SteamAPI_ISteamUGC_GetSubscribedItems(MemorySegment ptr, MemorySegment pvecPublishedFileID, int cMaxEntries) {
+        var mh$ = SteamAPI_ISteamUGC_GetSubscribedItems.HANDLE;
+        try {
+            if (TRACE_DOWNCALLS) {
+                traceDowncall("SteamAPI_ISteamUGC_GetSubscribedItems", ptr, pvecPublishedFileID, cMaxEntries);
+            }
+            return (int)mh$.invokeExact(ptr, pvecPublishedFileID, cMaxEntries);
+        } catch (Throwable ex$) {
+           throw new AssertionError("should not reach here", ex$);
+        }
+    }
+
+    private static class SteamAPI_ISteamUGC_GetItemState {
+        public static final FunctionDescriptor DESC = FunctionDescriptor.of(
+            SteamFlat.C_INT,
+            SteamFlat.C_POINTER,
+            SteamFlat.C_LONG_LONG
+        );
+
+        public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(
+                    SteamFlat.findOrThrow("SteamAPI_ISteamUGC_GetItemState"),
+                    DESC);
+    }
+
+    /**
+     * Function descriptor for:
+     * {@snippet lang=c :
+     * uint32 SteamAPI_ISteamUGC_GetItemState(ISteamUGC ptr, PublishedFileId_t nPublishedFileID)
+     * }
+     */
+    public static FunctionDescriptor SteamAPI_ISteamUGC_GetItemState$descriptor() {
+        return SteamAPI_ISteamUGC_GetItemState.DESC;
+    }
+
+    /**
+     * Downcall method handle for:
+     * {@snippet lang=c :
+     * uint32 SteamAPI_ISteamUGC_GetItemState(ISteamUGC ptr, PublishedFileId_t nPublishedFileID)
+     * }
+     */
+    public static MethodHandle SteamAPI_ISteamUGC_GetItemState$handle() {
+        return SteamAPI_ISteamUGC_GetItemState.HANDLE;
+    }
+    /**
+     * {@snippet lang=c :
+     * uint32 SteamAPI_ISteamUGC_GetItemState(ISteamUGC ptr, PublishedFileId_t nPublishedFileID)
+     * }
+     */
+    public static int SteamAPI_ISteamUGC_GetItemState(MemorySegment ptr, long nPublishedFileID) {
+        var mh$ = SteamAPI_ISteamUGC_GetItemState.HANDLE;
+        try {
+            if (TRACE_DOWNCALLS) {
+                traceDowncall("SteamAPI_ISteamUGC_GetItemState", ptr, nPublishedFileID);
+            }
+            return (int)mh$.invokeExact(ptr, nPublishedFileID);
+        } catch (Throwable ex$) {
+           throw new AssertionError("should not reach here", ex$);
+        }
+    }
+
+    private static class SteamAPI_ISteamUGC_GetItemInstallInfo {
+        public static final FunctionDescriptor DESC = FunctionDescriptor.of(
+            SteamFlat.C_BOOL,
+            SteamFlat.C_POINTER,
+            SteamFlat.C_LONG_LONG,
+            SteamFlat.C_POINTER,
+            SteamFlat.C_POINTER,
+            SteamFlat.C_INT,
+            SteamFlat.C_POINTER
+        );
+
+        public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(
+                    SteamFlat.findOrThrow("SteamAPI_ISteamUGC_GetItemInstallInfo"),
+                    DESC);
+    }
+
+    /**
+     * Function descriptor for:
+     * {@snippet lang=c :
+     * bool SteamAPI_ISteamUGC_GetItemInstallInfo(ISteamUGC ptr, PublishedFileId_t nPublishedFileID, uint64 *punSizeOnDisk, char *pchFolder, uint32 cchFolderSize, uint32 *punTimeStamp)
+     * }
+     */
+    public static FunctionDescriptor SteamAPI_ISteamUGC_GetItemInstallInfo$descriptor() {
+        return SteamAPI_ISteamUGC_GetItemInstallInfo.DESC;
+    }
+
+    /**
+     * Downcall method handle for:
+     * {@snippet lang=c :
+     * bool SteamAPI_ISteamUGC_GetItemInstallInfo(ISteamUGC ptr, PublishedFileId_t nPublishedFileID, uint64 *punSizeOnDisk, char *pchFolder, uint32 cchFolderSize, uint32 *punTimeStamp)
+     * }
+     */
+    public static MethodHandle SteamAPI_ISteamUGC_GetItemInstallInfo$handle() {
+        return SteamAPI_ISteamUGC_GetItemInstallInfo.HANDLE;
+    }
+    /**
+     * {@snippet lang=c :
+     * bool SteamAPI_ISteamUGC_GetItemInstallInfo(ISteamUGC ptr, PublishedFileId_t nPublishedFileID, uint64 *punSizeOnDisk, char *pchFolder, uint32 cchFolderSize, uint32 *punTimeStamp)
+     * }
+     */
+    public static boolean SteamAPI_ISteamUGC_GetItemInstallInfo(MemorySegment ptr, long nPublishedFileID, MemorySegment punSizeOnDisk, MemorySegment pchFolder, int cchFolderSize, MemorySegment punTimeStamp) {
+        var mh$ = SteamAPI_ISteamUGC_GetItemInstallInfo.HANDLE;
+        try {
+            if (TRACE_DOWNCALLS) {
+                traceDowncall("SteamAPI_ISteamUGC_GetItemInstallInfo", ptr, nPublishedFileID, punSizeOnDisk, pchFolder, cchFolderSize, punTimeStamp);
+            }
+            return (boolean)mh$.invokeExact(ptr, nPublishedFileID, punSizeOnDisk, pchFolder, cchFolderSize, punTimeStamp);
+        } catch (Throwable ex$) {
+           throw new AssertionError("should not reach here", ex$);
+        }
+    }
+
+    private static class SteamAPI_ISteamUGC_GetItemDownloadInfo {
+        public static final FunctionDescriptor DESC = FunctionDescriptor.of(
+            SteamFlat.C_BOOL,
+            SteamFlat.C_POINTER,
+            SteamFlat.C_LONG_LONG,
+            SteamFlat.C_POINTER,
+            SteamFlat.C_POINTER
+        );
+
+        public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(
+                    SteamFlat.findOrThrow("SteamAPI_ISteamUGC_GetItemDownloadInfo"),
+                    DESC);
+    }
+
+    /**
+     * Function descriptor for:
+     * {@snippet lang=c :
+     * bool SteamAPI_ISteamUGC_GetItemDownloadInfo(ISteamUGC ptr, PublishedFileId_t nPublishedFileID, uint64 *punBytesDownloaded, uint64 *punBytesTotal)
+     * }
+     */
+    public static FunctionDescriptor SteamAPI_ISteamUGC_GetItemDownloadInfo$descriptor() {
+        return SteamAPI_ISteamUGC_GetItemDownloadInfo.DESC;
+    }
+
+    /**
+     * Downcall method handle for:
+     * {@snippet lang=c :
+     * bool SteamAPI_ISteamUGC_GetItemDownloadInfo(ISteamUGC ptr, PublishedFileId_t nPublishedFileID, uint64 *punBytesDownloaded, uint64 *punBytesTotal)
+     * }
+     */
+    public static MethodHandle SteamAPI_ISteamUGC_GetItemDownloadInfo$handle() {
+        return SteamAPI_ISteamUGC_GetItemDownloadInfo.HANDLE;
+    }
+    /**
+     * {@snippet lang=c :
+     * bool SteamAPI_ISteamUGC_GetItemDownloadInfo(ISteamUGC ptr, PublishedFileId_t nPublishedFileID, uint64 *punBytesDownloaded, uint64 *punBytesTotal)
+     * }
+     */
+    public static boolean SteamAPI_ISteamUGC_GetItemDownloadInfo(MemorySegment ptr, long nPublishedFileID, MemorySegment punBytesDownloaded, MemorySegment punBytesTotal) {
+        var mh$ = SteamAPI_ISteamUGC_GetItemDownloadInfo.HANDLE;
+        try {
+            if (TRACE_DOWNCALLS) {
+                traceDowncall("SteamAPI_ISteamUGC_GetItemDownloadInfo", ptr, nPublishedFileID, punBytesDownloaded, punBytesTotal);
+            }
+            return (boolean)mh$.invokeExact(ptr, nPublishedFileID, punBytesDownloaded, punBytesTotal);
+        } catch (Throwable ex$) {
+           throw new AssertionError("should not reach here", ex$);
+        }
+    }
+
+    private static class SteamAPI_ISteamUGC_DownloadItem {
+        public static final FunctionDescriptor DESC = FunctionDescriptor.of(
+            SteamFlat.C_BOOL,
+            SteamFlat.C_POINTER,
+            SteamFlat.C_LONG_LONG,
+            SteamFlat.C_BOOL
+        );
+
+        public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(
+                    SteamFlat.findOrThrow("SteamAPI_ISteamUGC_DownloadItem"),
+                    DESC);
+    }
+
+    /**
+     * Function descriptor for:
+     * {@snippet lang=c :
+     * bool SteamAPI_ISteamUGC_DownloadItem(ISteamUGC ptr, PublishedFileId_t nPublishedFileID, bool bHighPriority)
+     * }
+     */
+    public static FunctionDescriptor SteamAPI_ISteamUGC_DownloadItem$descriptor() {
+        return SteamAPI_ISteamUGC_DownloadItem.DESC;
+    }
+
+    /**
+     * Downcall method handle for:
+     * {@snippet lang=c :
+     * bool SteamAPI_ISteamUGC_DownloadItem(ISteamUGC ptr, PublishedFileId_t nPublishedFileID, bool bHighPriority)
+     * }
+     */
+    public static MethodHandle SteamAPI_ISteamUGC_DownloadItem$handle() {
+        return SteamAPI_ISteamUGC_DownloadItem.HANDLE;
+    }
+    /**
+     * {@snippet lang=c :
+     * bool SteamAPI_ISteamUGC_DownloadItem(ISteamUGC ptr, PublishedFileId_t nPublishedFileID, bool bHighPriority)
+     * }
+     */
+    public static boolean SteamAPI_ISteamUGC_DownloadItem(MemorySegment ptr, long nPublishedFileID, boolean bHighPriority) {
+        var mh$ = SteamAPI_ISteamUGC_DownloadItem.HANDLE;
+        try {
+            if (TRACE_DOWNCALLS) {
+                traceDowncall("SteamAPI_ISteamUGC_DownloadItem", ptr, nPublishedFileID, bHighPriority);
+            }
+            return (boolean)mh$.invokeExact(ptr, nPublishedFileID, bHighPriority);
+        } catch (Throwable ex$) {
+           throw new AssertionError("should not reach here", ex$);
+        }
+    }
+
+    private static class SteamAPI_ISteamUGC_BInitWorkshopForGameServer {
+        public static final FunctionDescriptor DESC = FunctionDescriptor.of(
+            SteamFlat.C_BOOL,
+            SteamFlat.C_POINTER,
+            SteamFlat.C_INT,
+            SteamFlat.C_POINTER
+        );
+
+        public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(
+                    SteamFlat.findOrThrow("SteamAPI_ISteamUGC_BInitWorkshopForGameServer"),
+                    DESC);
+    }
+
+    /**
+     * Function descriptor for:
+     * {@snippet lang=c :
+     * bool SteamAPI_ISteamUGC_BInitWorkshopForGameServer(ISteamUGC ptr, DepotId_t unWorkshopDepotID, const char *pszFolder)
+     * }
+     */
+    public static FunctionDescriptor SteamAPI_ISteamUGC_BInitWorkshopForGameServer$descriptor() {
+        return SteamAPI_ISteamUGC_BInitWorkshopForGameServer.DESC;
+    }
+
+    /**
+     * Downcall method handle for:
+     * {@snippet lang=c :
+     * bool SteamAPI_ISteamUGC_BInitWorkshopForGameServer(ISteamUGC ptr, DepotId_t unWorkshopDepotID, const char *pszFolder)
+     * }
+     */
+    public static MethodHandle SteamAPI_ISteamUGC_BInitWorkshopForGameServer$handle() {
+        return SteamAPI_ISteamUGC_BInitWorkshopForGameServer.HANDLE;
+    }
+    /**
+     * {@snippet lang=c :
+     * bool SteamAPI_ISteamUGC_BInitWorkshopForGameServer(ISteamUGC ptr, DepotId_t unWorkshopDepotID, const char *pszFolder)
+     * }
+     */
+    public static boolean SteamAPI_ISteamUGC_BInitWorkshopForGameServer(MemorySegment ptr, int unWorkshopDepotID, MemorySegment pszFolder) {
+        var mh$ = SteamAPI_ISteamUGC_BInitWorkshopForGameServer.HANDLE;
+        try {
+            if (TRACE_DOWNCALLS) {
+                traceDowncall("SteamAPI_ISteamUGC_BInitWorkshopForGameServer", ptr, unWorkshopDepotID, pszFolder);
+            }
+            return (boolean)mh$.invokeExact(ptr, unWorkshopDepotID, pszFolder);
+        } catch (Throwable ex$) {
+           throw new AssertionError("should not reach here", ex$);
+        }
+    }
+
+    private static class SteamAPI_ISteamUGC_SuspendDownloads {
+        public static final FunctionDescriptor DESC = FunctionDescriptor.ofVoid(
+            SteamFlat.C_POINTER,
+            SteamFlat.C_BOOL
+        );
+
+        public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(
+                    SteamFlat.findOrThrow("SteamAPI_ISteamUGC_SuspendDownloads"),
+                    DESC);
+    }
+
+    /**
+     * Function descriptor for:
+     * {@snippet lang=c :
+     * void SteamAPI_ISteamUGC_SuspendDownloads(ISteamUGC ptr, bool bSuspend)
+     * }
+     */
+    public static FunctionDescriptor SteamAPI_ISteamUGC_SuspendDownloads$descriptor() {
+        return SteamAPI_ISteamUGC_SuspendDownloads.DESC;
+    }
+
+    /**
+     * Downcall method handle for:
+     * {@snippet lang=c :
+     * void SteamAPI_ISteamUGC_SuspendDownloads(ISteamUGC ptr, bool bSuspend)
+     * }
+     */
+    public static MethodHandle SteamAPI_ISteamUGC_SuspendDownloads$handle() {
+        return SteamAPI_ISteamUGC_SuspendDownloads.HANDLE;
+    }
+    /**
+     * {@snippet lang=c :
+     * void SteamAPI_ISteamUGC_SuspendDownloads(ISteamUGC ptr, bool bSuspend)
+     * }
+     */
+    public static void SteamAPI_ISteamUGC_SuspendDownloads(MemorySegment ptr, boolean bSuspend) {
+        var mh$ = SteamAPI_ISteamUGC_SuspendDownloads.HANDLE;
+        try {
+            if (TRACE_DOWNCALLS) {
+                traceDowncall("SteamAPI_ISteamUGC_SuspendDownloads", ptr, bSuspend);
+            }
+            mh$.invokeExact(ptr, bSuspend);
+        } catch (Throwable ex$) {
+           throw new AssertionError("should not reach here", ex$);
+        }
+    }
+
     private static class SteamAPI_ISteamUGC_StartPlaytimeTracking {
         public static final FunctionDescriptor DESC = FunctionDescriptor.of(
             SteamFlat.C_LONG_LONG,
@@ -12984,6 +17676,141 @@ public class SteamFlat extends SteamFlat_1 {
         try {
             if (TRACE_DOWNCALLS) {
                 traceDowncall("SteamAPI_GetHSteamPipe");
+            }
+            return (int)mh$.invokeExact();
+        } catch (Throwable ex$) {
+           throw new AssertionError("should not reach here", ex$);
+        }
+    }
+
+    private static class SteamAPI_GetHSteamUser {
+        public static final FunctionDescriptor DESC = FunctionDescriptor.of(
+            SteamFlat.C_INT    );
+
+        public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(
+                    SteamFlat.findOrThrow("SteamAPI_GetHSteamUser"),
+                    DESC);
+    }
+
+    /**
+     * Function descriptor for:
+     * {@snippet lang=c :
+     * HSteamUser SteamAPI_GetHSteamUser()
+     * }
+     */
+    public static FunctionDescriptor SteamAPI_GetHSteamUser$descriptor() {
+        return SteamAPI_GetHSteamUser.DESC;
+    }
+
+    /**
+     * Downcall method handle for:
+     * {@snippet lang=c :
+     * HSteamUser SteamAPI_GetHSteamUser()
+     * }
+     */
+    public static MethodHandle SteamAPI_GetHSteamUser$handle() {
+        return SteamAPI_GetHSteamUser.HANDLE;
+    }
+    /**
+     * {@snippet lang=c :
+     * HSteamUser SteamAPI_GetHSteamUser()
+     * }
+     */
+    public static int SteamAPI_GetHSteamUser() {
+        var mh$ = SteamAPI_GetHSteamUser.HANDLE;
+        try {
+            if (TRACE_DOWNCALLS) {
+                traceDowncall("SteamAPI_GetHSteamUser");
+            }
+            return (int)mh$.invokeExact();
+        } catch (Throwable ex$) {
+           throw new AssertionError("should not reach here", ex$);
+        }
+    }
+
+    private static class SteamGameServer_GetHSteamPipe {
+        public static final FunctionDescriptor DESC = FunctionDescriptor.of(
+            SteamFlat.C_INT    );
+
+        public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(
+                    SteamFlat.findOrThrow("SteamGameServer_GetHSteamPipe"),
+                    DESC);
+    }
+
+    /**
+     * Function descriptor for:
+     * {@snippet lang=c :
+     * HSteamPipe SteamGameServer_GetHSteamPipe()
+     * }
+     */
+    public static FunctionDescriptor SteamGameServer_GetHSteamPipe$descriptor() {
+        return SteamGameServer_GetHSteamPipe.DESC;
+    }
+
+    /**
+     * Downcall method handle for:
+     * {@snippet lang=c :
+     * HSteamPipe SteamGameServer_GetHSteamPipe()
+     * }
+     */
+    public static MethodHandle SteamGameServer_GetHSteamPipe$handle() {
+        return SteamGameServer_GetHSteamPipe.HANDLE;
+    }
+    /**
+     * {@snippet lang=c :
+     * HSteamPipe SteamGameServer_GetHSteamPipe()
+     * }
+     */
+    public static int SteamGameServer_GetHSteamPipe() {
+        var mh$ = SteamGameServer_GetHSteamPipe.HANDLE;
+        try {
+            if (TRACE_DOWNCALLS) {
+                traceDowncall("SteamGameServer_GetHSteamPipe");
+            }
+            return (int)mh$.invokeExact();
+        } catch (Throwable ex$) {
+           throw new AssertionError("should not reach here", ex$);
+        }
+    }
+
+    private static class SteamGameServer_GetHSteamUser {
+        public static final FunctionDescriptor DESC = FunctionDescriptor.of(
+            SteamFlat.C_INT    );
+
+        public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(
+                    SteamFlat.findOrThrow("SteamGameServer_GetHSteamUser"),
+                    DESC);
+    }
+
+    /**
+     * Function descriptor for:
+     * {@snippet lang=c :
+     * HSteamUser SteamGameServer_GetHSteamUser()
+     * }
+     */
+    public static FunctionDescriptor SteamGameServer_GetHSteamUser$descriptor() {
+        return SteamGameServer_GetHSteamUser.DESC;
+    }
+
+    /**
+     * Downcall method handle for:
+     * {@snippet lang=c :
+     * HSteamUser SteamGameServer_GetHSteamUser()
+     * }
+     */
+    public static MethodHandle SteamGameServer_GetHSteamUser$handle() {
+        return SteamGameServer_GetHSteamUser.HANDLE;
+    }
+    /**
+     * {@snippet lang=c :
+     * HSteamUser SteamGameServer_GetHSteamUser()
+     * }
+     */
+    public static int SteamGameServer_GetHSteamUser() {
+        var mh$ = SteamGameServer_GetHSteamUser.HANDLE;
+        try {
+            if (TRACE_DOWNCALLS) {
+                traceDowncall("SteamGameServer_GetHSteamUser");
             }
             return (int)mh$.invokeExact();
         } catch (Throwable ex$) {
