@@ -233,9 +233,12 @@ public class C_API {
         code.append(writeInterfaces(interfaces)).append("\n\n");
 
         for (var struct : structs) {
+            var structName = (String) struct.get("struct");
             var methods = struct.get("methods");
             if (methods == null) continue;
-            code.append(writeMethods((List<Map<String, Object>>) methods)).append("\n\n");
+
+            // todo improve hardcoded ptr
+            code.append(writeMethods((List<Map<String, Object>>) methods, structName + "*")).append("\n\n");
         }
 
         for (var iface : interfaces) {

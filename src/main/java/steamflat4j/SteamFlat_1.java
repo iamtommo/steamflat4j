@@ -4133,7 +4133,9 @@ public class SteamFlat_1 extends SteamFlat_2 {
 
     private static class SteamAPI_SteamIPAddress_t_IsSet {
         public static final FunctionDescriptor DESC = FunctionDescriptor.of(
-            SteamFlat.C_BOOL    );
+            SteamFlat.C_BOOL,
+            SteamFlat.C_POINTER
+        );
 
         public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(
                     SteamFlat.findOrThrow("SteamAPI_SteamIPAddress_t_IsSet"),
@@ -4143,7 +4145,7 @@ public class SteamFlat_1 extends SteamFlat_2 {
     /**
      * Function descriptor for:
      * {@snippet lang=c :
-     * bool SteamAPI_SteamIPAddress_t_IsSet()
+     * bool SteamAPI_SteamIPAddress_t_IsSet(SteamIPAddress_t *ptr)
      * }
      */
     public static FunctionDescriptor SteamAPI_SteamIPAddress_t_IsSet$descriptor() {
@@ -4153,7 +4155,7 @@ public class SteamFlat_1 extends SteamFlat_2 {
     /**
      * Downcall method handle for:
      * {@snippet lang=c :
-     * bool SteamAPI_SteamIPAddress_t_IsSet()
+     * bool SteamAPI_SteamIPAddress_t_IsSet(SteamIPAddress_t *ptr)
      * }
      */
     public static MethodHandle SteamAPI_SteamIPAddress_t_IsSet$handle() {
@@ -4161,23 +4163,25 @@ public class SteamFlat_1 extends SteamFlat_2 {
     }
     /**
      * {@snippet lang=c :
-     * bool SteamAPI_SteamIPAddress_t_IsSet()
+     * bool SteamAPI_SteamIPAddress_t_IsSet(SteamIPAddress_t *ptr)
      * }
      */
-    public static boolean SteamAPI_SteamIPAddress_t_IsSet() {
+    public static boolean SteamAPI_SteamIPAddress_t_IsSet(MemorySegment ptr) {
         var mh$ = SteamAPI_SteamIPAddress_t_IsSet.HANDLE;
         try {
             if (TRACE_DOWNCALLS) {
-                traceDowncall("SteamAPI_SteamIPAddress_t_IsSet");
+                traceDowncall("SteamAPI_SteamIPAddress_t_IsSet", ptr);
             }
-            return (boolean)mh$.invokeExact();
+            return (boolean)mh$.invokeExact(ptr);
         } catch (Throwable ex$) {
            throw new AssertionError("should not reach here", ex$);
         }
     }
 
     private static class SteamAPI_MatchMakingKeyValuePair_t_Construct {
-        public static final FunctionDescriptor DESC = FunctionDescriptor.ofVoid(    );
+        public static final FunctionDescriptor DESC = FunctionDescriptor.ofVoid(
+            SteamFlat.C_POINTER
+        );
 
         public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(
                     SteamFlat.findOrThrow("SteamAPI_MatchMakingKeyValuePair_t_Construct"),
@@ -4187,7 +4191,7 @@ public class SteamFlat_1 extends SteamFlat_2 {
     /**
      * Function descriptor for:
      * {@snippet lang=c :
-     * void SteamAPI_MatchMakingKeyValuePair_t_Construct()
+     * void SteamAPI_MatchMakingKeyValuePair_t_Construct(MatchMakingKeyValuePair_t *ptr)
      * }
      */
     public static FunctionDescriptor SteamAPI_MatchMakingKeyValuePair_t_Construct$descriptor() {
@@ -4197,7 +4201,7 @@ public class SteamFlat_1 extends SteamFlat_2 {
     /**
      * Downcall method handle for:
      * {@snippet lang=c :
-     * void SteamAPI_MatchMakingKeyValuePair_t_Construct()
+     * void SteamAPI_MatchMakingKeyValuePair_t_Construct(MatchMakingKeyValuePair_t *ptr)
      * }
      */
     public static MethodHandle SteamAPI_MatchMakingKeyValuePair_t_Construct$handle() {
@@ -4205,23 +4209,25 @@ public class SteamFlat_1 extends SteamFlat_2 {
     }
     /**
      * {@snippet lang=c :
-     * void SteamAPI_MatchMakingKeyValuePair_t_Construct()
+     * void SteamAPI_MatchMakingKeyValuePair_t_Construct(MatchMakingKeyValuePair_t *ptr)
      * }
      */
-    public static void SteamAPI_MatchMakingKeyValuePair_t_Construct() {
+    public static void SteamAPI_MatchMakingKeyValuePair_t_Construct(MemorySegment ptr) {
         var mh$ = SteamAPI_MatchMakingKeyValuePair_t_Construct.HANDLE;
         try {
             if (TRACE_DOWNCALLS) {
-                traceDowncall("SteamAPI_MatchMakingKeyValuePair_t_Construct");
+                traceDowncall("SteamAPI_MatchMakingKeyValuePair_t_Construct", ptr);
             }
-            mh$.invokeExact();
+            mh$.invokeExact(ptr);
         } catch (Throwable ex$) {
            throw new AssertionError("should not reach here", ex$);
         }
     }
 
     private static class SteamAPI_servernetadr_t_Construct {
-        public static final FunctionDescriptor DESC = FunctionDescriptor.ofVoid(    );
+        public static final FunctionDescriptor DESC = FunctionDescriptor.ofVoid(
+            SteamFlat.C_POINTER
+        );
 
         public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(
                     SteamFlat.findOrThrow("SteamAPI_servernetadr_t_Construct"),
@@ -4231,7 +4237,7 @@ public class SteamFlat_1 extends SteamFlat_2 {
     /**
      * Function descriptor for:
      * {@snippet lang=c :
-     * void SteamAPI_servernetadr_t_Construct()
+     * void SteamAPI_servernetadr_t_Construct(servernetadr_t *ptr)
      * }
      */
     public static FunctionDescriptor SteamAPI_servernetadr_t_Construct$descriptor() {
@@ -4241,7 +4247,7 @@ public class SteamFlat_1 extends SteamFlat_2 {
     /**
      * Downcall method handle for:
      * {@snippet lang=c :
-     * void SteamAPI_servernetadr_t_Construct()
+     * void SteamAPI_servernetadr_t_Construct(servernetadr_t *ptr)
      * }
      */
     public static MethodHandle SteamAPI_servernetadr_t_Construct$handle() {
@@ -4249,16 +4255,16 @@ public class SteamFlat_1 extends SteamFlat_2 {
     }
     /**
      * {@snippet lang=c :
-     * void SteamAPI_servernetadr_t_Construct()
+     * void SteamAPI_servernetadr_t_Construct(servernetadr_t *ptr)
      * }
      */
-    public static void SteamAPI_servernetadr_t_Construct() {
+    public static void SteamAPI_servernetadr_t_Construct(MemorySegment ptr) {
         var mh$ = SteamAPI_servernetadr_t_Construct.HANDLE;
         try {
             if (TRACE_DOWNCALLS) {
-                traceDowncall("SteamAPI_servernetadr_t_Construct");
+                traceDowncall("SteamAPI_servernetadr_t_Construct", ptr);
             }
-            mh$.invokeExact();
+            mh$.invokeExact(ptr);
         } catch (Throwable ex$) {
            throw new AssertionError("should not reach here", ex$);
         }
@@ -4266,6 +4272,7 @@ public class SteamFlat_1 extends SteamFlat_2 {
 
     private static class SteamAPI_servernetadr_t_Init {
         public static final FunctionDescriptor DESC = FunctionDescriptor.ofVoid(
+            SteamFlat.C_POINTER,
             SteamFlat.C_INT,
             SteamFlat.C_SHORT,
             SteamFlat.C_SHORT
@@ -4279,7 +4286,7 @@ public class SteamFlat_1 extends SteamFlat_2 {
     /**
      * Function descriptor for:
      * {@snippet lang=c :
-     * void SteamAPI_servernetadr_t_Init(unsigned int ip, uint16 usQueryPort, uint16 usConnectionPort)
+     * void SteamAPI_servernetadr_t_Init(servernetadr_t *ptr, unsigned int ip, uint16 usQueryPort, uint16 usConnectionPort)
      * }
      */
     public static FunctionDescriptor SteamAPI_servernetadr_t_Init$descriptor() {
@@ -4289,7 +4296,7 @@ public class SteamFlat_1 extends SteamFlat_2 {
     /**
      * Downcall method handle for:
      * {@snippet lang=c :
-     * void SteamAPI_servernetadr_t_Init(unsigned int ip, uint16 usQueryPort, uint16 usConnectionPort)
+     * void SteamAPI_servernetadr_t_Init(servernetadr_t *ptr, unsigned int ip, uint16 usQueryPort, uint16 usConnectionPort)
      * }
      */
     public static MethodHandle SteamAPI_servernetadr_t_Init$handle() {
@@ -4297,16 +4304,16 @@ public class SteamFlat_1 extends SteamFlat_2 {
     }
     /**
      * {@snippet lang=c :
-     * void SteamAPI_servernetadr_t_Init(unsigned int ip, uint16 usQueryPort, uint16 usConnectionPort)
+     * void SteamAPI_servernetadr_t_Init(servernetadr_t *ptr, unsigned int ip, uint16 usQueryPort, uint16 usConnectionPort)
      * }
      */
-    public static void SteamAPI_servernetadr_t_Init(int ip, short usQueryPort, short usConnectionPort) {
+    public static void SteamAPI_servernetadr_t_Init(MemorySegment ptr, int ip, short usQueryPort, short usConnectionPort) {
         var mh$ = SteamAPI_servernetadr_t_Init.HANDLE;
         try {
             if (TRACE_DOWNCALLS) {
-                traceDowncall("SteamAPI_servernetadr_t_Init", ip, usQueryPort, usConnectionPort);
+                traceDowncall("SteamAPI_servernetadr_t_Init", ptr, ip, usQueryPort, usConnectionPort);
             }
-            mh$.invokeExact(ip, usQueryPort, usConnectionPort);
+            mh$.invokeExact(ptr, ip, usQueryPort, usConnectionPort);
         } catch (Throwable ex$) {
            throw new AssertionError("should not reach here", ex$);
         }
@@ -4314,7 +4321,9 @@ public class SteamFlat_1 extends SteamFlat_2 {
 
     private static class SteamAPI_servernetadr_t_GetQueryPort {
         public static final FunctionDescriptor DESC = FunctionDescriptor.of(
-            SteamFlat.C_SHORT    );
+            SteamFlat.C_SHORT,
+            SteamFlat.C_POINTER
+        );
 
         public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(
                     SteamFlat.findOrThrow("SteamAPI_servernetadr_t_GetQueryPort"),
@@ -4324,7 +4333,7 @@ public class SteamFlat_1 extends SteamFlat_2 {
     /**
      * Function descriptor for:
      * {@snippet lang=c :
-     * uint16 SteamAPI_servernetadr_t_GetQueryPort()
+     * uint16 SteamAPI_servernetadr_t_GetQueryPort(servernetadr_t *ptr)
      * }
      */
     public static FunctionDescriptor SteamAPI_servernetadr_t_GetQueryPort$descriptor() {
@@ -4334,7 +4343,7 @@ public class SteamFlat_1 extends SteamFlat_2 {
     /**
      * Downcall method handle for:
      * {@snippet lang=c :
-     * uint16 SteamAPI_servernetadr_t_GetQueryPort()
+     * uint16 SteamAPI_servernetadr_t_GetQueryPort(servernetadr_t *ptr)
      * }
      */
     public static MethodHandle SteamAPI_servernetadr_t_GetQueryPort$handle() {
@@ -4342,16 +4351,16 @@ public class SteamFlat_1 extends SteamFlat_2 {
     }
     /**
      * {@snippet lang=c :
-     * uint16 SteamAPI_servernetadr_t_GetQueryPort()
+     * uint16 SteamAPI_servernetadr_t_GetQueryPort(servernetadr_t *ptr)
      * }
      */
-    public static short SteamAPI_servernetadr_t_GetQueryPort() {
+    public static short SteamAPI_servernetadr_t_GetQueryPort(MemorySegment ptr) {
         var mh$ = SteamAPI_servernetadr_t_GetQueryPort.HANDLE;
         try {
             if (TRACE_DOWNCALLS) {
-                traceDowncall("SteamAPI_servernetadr_t_GetQueryPort");
+                traceDowncall("SteamAPI_servernetadr_t_GetQueryPort", ptr);
             }
-            return (short)mh$.invokeExact();
+            return (short)mh$.invokeExact(ptr);
         } catch (Throwable ex$) {
            throw new AssertionError("should not reach here", ex$);
         }
@@ -4359,6 +4368,7 @@ public class SteamFlat_1 extends SteamFlat_2 {
 
     private static class SteamAPI_servernetadr_t_SetQueryPort {
         public static final FunctionDescriptor DESC = FunctionDescriptor.ofVoid(
+            SteamFlat.C_POINTER,
             SteamFlat.C_SHORT
         );
 
@@ -4370,7 +4380,7 @@ public class SteamFlat_1 extends SteamFlat_2 {
     /**
      * Function descriptor for:
      * {@snippet lang=c :
-     * void SteamAPI_servernetadr_t_SetQueryPort(uint16 usPort)
+     * void SteamAPI_servernetadr_t_SetQueryPort(servernetadr_t *ptr, uint16 usPort)
      * }
      */
     public static FunctionDescriptor SteamAPI_servernetadr_t_SetQueryPort$descriptor() {
@@ -4380,7 +4390,7 @@ public class SteamFlat_1 extends SteamFlat_2 {
     /**
      * Downcall method handle for:
      * {@snippet lang=c :
-     * void SteamAPI_servernetadr_t_SetQueryPort(uint16 usPort)
+     * void SteamAPI_servernetadr_t_SetQueryPort(servernetadr_t *ptr, uint16 usPort)
      * }
      */
     public static MethodHandle SteamAPI_servernetadr_t_SetQueryPort$handle() {
@@ -4388,16 +4398,16 @@ public class SteamFlat_1 extends SteamFlat_2 {
     }
     /**
      * {@snippet lang=c :
-     * void SteamAPI_servernetadr_t_SetQueryPort(uint16 usPort)
+     * void SteamAPI_servernetadr_t_SetQueryPort(servernetadr_t *ptr, uint16 usPort)
      * }
      */
-    public static void SteamAPI_servernetadr_t_SetQueryPort(short usPort) {
+    public static void SteamAPI_servernetadr_t_SetQueryPort(MemorySegment ptr, short usPort) {
         var mh$ = SteamAPI_servernetadr_t_SetQueryPort.HANDLE;
         try {
             if (TRACE_DOWNCALLS) {
-                traceDowncall("SteamAPI_servernetadr_t_SetQueryPort", usPort);
+                traceDowncall("SteamAPI_servernetadr_t_SetQueryPort", ptr, usPort);
             }
-            mh$.invokeExact(usPort);
+            mh$.invokeExact(ptr, usPort);
         } catch (Throwable ex$) {
            throw new AssertionError("should not reach here", ex$);
         }
@@ -4405,7 +4415,9 @@ public class SteamFlat_1 extends SteamFlat_2 {
 
     private static class SteamAPI_servernetadr_t_GetConnectionPort {
         public static final FunctionDescriptor DESC = FunctionDescriptor.of(
-            SteamFlat.C_SHORT    );
+            SteamFlat.C_SHORT,
+            SteamFlat.C_POINTER
+        );
 
         public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(
                     SteamFlat.findOrThrow("SteamAPI_servernetadr_t_GetConnectionPort"),
@@ -4415,7 +4427,7 @@ public class SteamFlat_1 extends SteamFlat_2 {
     /**
      * Function descriptor for:
      * {@snippet lang=c :
-     * uint16 SteamAPI_servernetadr_t_GetConnectionPort()
+     * uint16 SteamAPI_servernetadr_t_GetConnectionPort(servernetadr_t *ptr)
      * }
      */
     public static FunctionDescriptor SteamAPI_servernetadr_t_GetConnectionPort$descriptor() {
@@ -4425,7 +4437,7 @@ public class SteamFlat_1 extends SteamFlat_2 {
     /**
      * Downcall method handle for:
      * {@snippet lang=c :
-     * uint16 SteamAPI_servernetadr_t_GetConnectionPort()
+     * uint16 SteamAPI_servernetadr_t_GetConnectionPort(servernetadr_t *ptr)
      * }
      */
     public static MethodHandle SteamAPI_servernetadr_t_GetConnectionPort$handle() {
@@ -4433,16 +4445,16 @@ public class SteamFlat_1 extends SteamFlat_2 {
     }
     /**
      * {@snippet lang=c :
-     * uint16 SteamAPI_servernetadr_t_GetConnectionPort()
+     * uint16 SteamAPI_servernetadr_t_GetConnectionPort(servernetadr_t *ptr)
      * }
      */
-    public static short SteamAPI_servernetadr_t_GetConnectionPort() {
+    public static short SteamAPI_servernetadr_t_GetConnectionPort(MemorySegment ptr) {
         var mh$ = SteamAPI_servernetadr_t_GetConnectionPort.HANDLE;
         try {
             if (TRACE_DOWNCALLS) {
-                traceDowncall("SteamAPI_servernetadr_t_GetConnectionPort");
+                traceDowncall("SteamAPI_servernetadr_t_GetConnectionPort", ptr);
             }
-            return (short)mh$.invokeExact();
+            return (short)mh$.invokeExact(ptr);
         } catch (Throwable ex$) {
            throw new AssertionError("should not reach here", ex$);
         }
@@ -4450,6 +4462,7 @@ public class SteamFlat_1 extends SteamFlat_2 {
 
     private static class SteamAPI_servernetadr_t_SetConnectionPort {
         public static final FunctionDescriptor DESC = FunctionDescriptor.ofVoid(
+            SteamFlat.C_POINTER,
             SteamFlat.C_SHORT
         );
 
@@ -4461,7 +4474,7 @@ public class SteamFlat_1 extends SteamFlat_2 {
     /**
      * Function descriptor for:
      * {@snippet lang=c :
-     * void SteamAPI_servernetadr_t_SetConnectionPort(uint16 usPort)
+     * void SteamAPI_servernetadr_t_SetConnectionPort(servernetadr_t *ptr, uint16 usPort)
      * }
      */
     public static FunctionDescriptor SteamAPI_servernetadr_t_SetConnectionPort$descriptor() {
@@ -4471,7 +4484,7 @@ public class SteamFlat_1 extends SteamFlat_2 {
     /**
      * Downcall method handle for:
      * {@snippet lang=c :
-     * void SteamAPI_servernetadr_t_SetConnectionPort(uint16 usPort)
+     * void SteamAPI_servernetadr_t_SetConnectionPort(servernetadr_t *ptr, uint16 usPort)
      * }
      */
     public static MethodHandle SteamAPI_servernetadr_t_SetConnectionPort$handle() {
@@ -4479,16 +4492,16 @@ public class SteamFlat_1 extends SteamFlat_2 {
     }
     /**
      * {@snippet lang=c :
-     * void SteamAPI_servernetadr_t_SetConnectionPort(uint16 usPort)
+     * void SteamAPI_servernetadr_t_SetConnectionPort(servernetadr_t *ptr, uint16 usPort)
      * }
      */
-    public static void SteamAPI_servernetadr_t_SetConnectionPort(short usPort) {
+    public static void SteamAPI_servernetadr_t_SetConnectionPort(MemorySegment ptr, short usPort) {
         var mh$ = SteamAPI_servernetadr_t_SetConnectionPort.HANDLE;
         try {
             if (TRACE_DOWNCALLS) {
-                traceDowncall("SteamAPI_servernetadr_t_SetConnectionPort", usPort);
+                traceDowncall("SteamAPI_servernetadr_t_SetConnectionPort", ptr, usPort);
             }
-            mh$.invokeExact(usPort);
+            mh$.invokeExact(ptr, usPort);
         } catch (Throwable ex$) {
            throw new AssertionError("should not reach here", ex$);
         }
@@ -4496,7 +4509,9 @@ public class SteamFlat_1 extends SteamFlat_2 {
 
     private static class SteamAPI_servernetadr_t_GetIP {
         public static final FunctionDescriptor DESC = FunctionDescriptor.of(
-            SteamFlat.C_INT    );
+            SteamFlat.C_INT,
+            SteamFlat.C_POINTER
+        );
 
         public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(
                     SteamFlat.findOrThrow("SteamAPI_servernetadr_t_GetIP"),
@@ -4506,7 +4521,7 @@ public class SteamFlat_1 extends SteamFlat_2 {
     /**
      * Function descriptor for:
      * {@snippet lang=c :
-     * uint32 SteamAPI_servernetadr_t_GetIP()
+     * uint32 SteamAPI_servernetadr_t_GetIP(servernetadr_t *ptr)
      * }
      */
     public static FunctionDescriptor SteamAPI_servernetadr_t_GetIP$descriptor() {
@@ -4516,7 +4531,7 @@ public class SteamFlat_1 extends SteamFlat_2 {
     /**
      * Downcall method handle for:
      * {@snippet lang=c :
-     * uint32 SteamAPI_servernetadr_t_GetIP()
+     * uint32 SteamAPI_servernetadr_t_GetIP(servernetadr_t *ptr)
      * }
      */
     public static MethodHandle SteamAPI_servernetadr_t_GetIP$handle() {
@@ -4524,16 +4539,16 @@ public class SteamFlat_1 extends SteamFlat_2 {
     }
     /**
      * {@snippet lang=c :
-     * uint32 SteamAPI_servernetadr_t_GetIP()
+     * uint32 SteamAPI_servernetadr_t_GetIP(servernetadr_t *ptr)
      * }
      */
-    public static int SteamAPI_servernetadr_t_GetIP() {
+    public static int SteamAPI_servernetadr_t_GetIP(MemorySegment ptr) {
         var mh$ = SteamAPI_servernetadr_t_GetIP.HANDLE;
         try {
             if (TRACE_DOWNCALLS) {
-                traceDowncall("SteamAPI_servernetadr_t_GetIP");
+                traceDowncall("SteamAPI_servernetadr_t_GetIP", ptr);
             }
-            return (int)mh$.invokeExact();
+            return (int)mh$.invokeExact(ptr);
         } catch (Throwable ex$) {
            throw new AssertionError("should not reach here", ex$);
         }
@@ -4541,6 +4556,7 @@ public class SteamFlat_1 extends SteamFlat_2 {
 
     private static class SteamAPI_servernetadr_t_SetIP {
         public static final FunctionDescriptor DESC = FunctionDescriptor.ofVoid(
+            SteamFlat.C_POINTER,
             SteamFlat.C_INT
         );
 
@@ -4552,7 +4568,7 @@ public class SteamFlat_1 extends SteamFlat_2 {
     /**
      * Function descriptor for:
      * {@snippet lang=c :
-     * void SteamAPI_servernetadr_t_SetIP(uint32 unIP)
+     * void SteamAPI_servernetadr_t_SetIP(servernetadr_t *ptr, uint32 unIP)
      * }
      */
     public static FunctionDescriptor SteamAPI_servernetadr_t_SetIP$descriptor() {
@@ -4562,7 +4578,7 @@ public class SteamFlat_1 extends SteamFlat_2 {
     /**
      * Downcall method handle for:
      * {@snippet lang=c :
-     * void SteamAPI_servernetadr_t_SetIP(uint32 unIP)
+     * void SteamAPI_servernetadr_t_SetIP(servernetadr_t *ptr, uint32 unIP)
      * }
      */
     public static MethodHandle SteamAPI_servernetadr_t_SetIP$handle() {
@@ -4570,16 +4586,16 @@ public class SteamFlat_1 extends SteamFlat_2 {
     }
     /**
      * {@snippet lang=c :
-     * void SteamAPI_servernetadr_t_SetIP(uint32 unIP)
+     * void SteamAPI_servernetadr_t_SetIP(servernetadr_t *ptr, uint32 unIP)
      * }
      */
-    public static void SteamAPI_servernetadr_t_SetIP(int unIP) {
+    public static void SteamAPI_servernetadr_t_SetIP(MemorySegment ptr, int unIP) {
         var mh$ = SteamAPI_servernetadr_t_SetIP.HANDLE;
         try {
             if (TRACE_DOWNCALLS) {
-                traceDowncall("SteamAPI_servernetadr_t_SetIP", unIP);
+                traceDowncall("SteamAPI_servernetadr_t_SetIP", ptr, unIP);
             }
-            mh$.invokeExact(unIP);
+            mh$.invokeExact(ptr, unIP);
         } catch (Throwable ex$) {
            throw new AssertionError("should not reach here", ex$);
         }
@@ -4587,7 +4603,9 @@ public class SteamFlat_1 extends SteamFlat_2 {
 
     private static class SteamAPI_servernetadr_t_GetConnectionAddressString {
         public static final FunctionDescriptor DESC = FunctionDescriptor.of(
-            SteamFlat.C_POINTER    );
+            SteamFlat.C_POINTER,
+            SteamFlat.C_POINTER
+        );
 
         public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(
                     SteamFlat.findOrThrow("SteamAPI_servernetadr_t_GetConnectionAddressString"),
@@ -4597,7 +4615,7 @@ public class SteamFlat_1 extends SteamFlat_2 {
     /**
      * Function descriptor for:
      * {@snippet lang=c :
-     * const char *SteamAPI_servernetadr_t_GetConnectionAddressString()
+     * const char *SteamAPI_servernetadr_t_GetConnectionAddressString(servernetadr_t *ptr)
      * }
      */
     public static FunctionDescriptor SteamAPI_servernetadr_t_GetConnectionAddressString$descriptor() {
@@ -4607,7 +4625,7 @@ public class SteamFlat_1 extends SteamFlat_2 {
     /**
      * Downcall method handle for:
      * {@snippet lang=c :
-     * const char *SteamAPI_servernetadr_t_GetConnectionAddressString()
+     * const char *SteamAPI_servernetadr_t_GetConnectionAddressString(servernetadr_t *ptr)
      * }
      */
     public static MethodHandle SteamAPI_servernetadr_t_GetConnectionAddressString$handle() {
@@ -4615,16 +4633,16 @@ public class SteamFlat_1 extends SteamFlat_2 {
     }
     /**
      * {@snippet lang=c :
-     * const char *SteamAPI_servernetadr_t_GetConnectionAddressString()
+     * const char *SteamAPI_servernetadr_t_GetConnectionAddressString(servernetadr_t *ptr)
      * }
      */
-    public static MemorySegment SteamAPI_servernetadr_t_GetConnectionAddressString() {
+    public static MemorySegment SteamAPI_servernetadr_t_GetConnectionAddressString(MemorySegment ptr) {
         var mh$ = SteamAPI_servernetadr_t_GetConnectionAddressString.HANDLE;
         try {
             if (TRACE_DOWNCALLS) {
-                traceDowncall("SteamAPI_servernetadr_t_GetConnectionAddressString");
+                traceDowncall("SteamAPI_servernetadr_t_GetConnectionAddressString", ptr);
             }
-            return (MemorySegment)mh$.invokeExact();
+            return (MemorySegment)mh$.invokeExact(ptr);
         } catch (Throwable ex$) {
            throw new AssertionError("should not reach here", ex$);
         }
@@ -4632,7 +4650,9 @@ public class SteamFlat_1 extends SteamFlat_2 {
 
     private static class SteamAPI_servernetadr_t_GetQueryAddressString {
         public static final FunctionDescriptor DESC = FunctionDescriptor.of(
-            SteamFlat.C_POINTER    );
+            SteamFlat.C_POINTER,
+            SteamFlat.C_POINTER
+        );
 
         public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(
                     SteamFlat.findOrThrow("SteamAPI_servernetadr_t_GetQueryAddressString"),
@@ -4642,7 +4662,7 @@ public class SteamFlat_1 extends SteamFlat_2 {
     /**
      * Function descriptor for:
      * {@snippet lang=c :
-     * const char *SteamAPI_servernetadr_t_GetQueryAddressString()
+     * const char *SteamAPI_servernetadr_t_GetQueryAddressString(servernetadr_t *ptr)
      * }
      */
     public static FunctionDescriptor SteamAPI_servernetadr_t_GetQueryAddressString$descriptor() {
@@ -4652,7 +4672,7 @@ public class SteamFlat_1 extends SteamFlat_2 {
     /**
      * Downcall method handle for:
      * {@snippet lang=c :
-     * const char *SteamAPI_servernetadr_t_GetQueryAddressString()
+     * const char *SteamAPI_servernetadr_t_GetQueryAddressString(servernetadr_t *ptr)
      * }
      */
     public static MethodHandle SteamAPI_servernetadr_t_GetQueryAddressString$handle() {
@@ -4660,16 +4680,16 @@ public class SteamFlat_1 extends SteamFlat_2 {
     }
     /**
      * {@snippet lang=c :
-     * const char *SteamAPI_servernetadr_t_GetQueryAddressString()
+     * const char *SteamAPI_servernetadr_t_GetQueryAddressString(servernetadr_t *ptr)
      * }
      */
-    public static MemorySegment SteamAPI_servernetadr_t_GetQueryAddressString() {
+    public static MemorySegment SteamAPI_servernetadr_t_GetQueryAddressString(MemorySegment ptr) {
         var mh$ = SteamAPI_servernetadr_t_GetQueryAddressString.HANDLE;
         try {
             if (TRACE_DOWNCALLS) {
-                traceDowncall("SteamAPI_servernetadr_t_GetQueryAddressString");
+                traceDowncall("SteamAPI_servernetadr_t_GetQueryAddressString", ptr);
             }
-            return (MemorySegment)mh$.invokeExact();
+            return (MemorySegment)mh$.invokeExact(ptr);
         } catch (Throwable ex$) {
            throw new AssertionError("should not reach here", ex$);
         }
@@ -4678,6 +4698,7 @@ public class SteamFlat_1 extends SteamFlat_2 {
     private static class SteamAPI_servernetadr_t_IsLessThan {
         public static final FunctionDescriptor DESC = FunctionDescriptor.of(
             SteamFlat.C_BOOL,
+            SteamFlat.C_POINTER,
             SteamFlat.C_POINTER
         );
 
@@ -4689,7 +4710,7 @@ public class SteamFlat_1 extends SteamFlat_2 {
     /**
      * Function descriptor for:
      * {@snippet lang=c :
-     * bool SteamAPI_servernetadr_t_IsLessThan(const servernetadr_t *netadr)
+     * bool SteamAPI_servernetadr_t_IsLessThan(servernetadr_t *ptr, const servernetadr_t *netadr)
      * }
      */
     public static FunctionDescriptor SteamAPI_servernetadr_t_IsLessThan$descriptor() {
@@ -4699,7 +4720,7 @@ public class SteamFlat_1 extends SteamFlat_2 {
     /**
      * Downcall method handle for:
      * {@snippet lang=c :
-     * bool SteamAPI_servernetadr_t_IsLessThan(const servernetadr_t *netadr)
+     * bool SteamAPI_servernetadr_t_IsLessThan(servernetadr_t *ptr, const servernetadr_t *netadr)
      * }
      */
     public static MethodHandle SteamAPI_servernetadr_t_IsLessThan$handle() {
@@ -4707,16 +4728,16 @@ public class SteamFlat_1 extends SteamFlat_2 {
     }
     /**
      * {@snippet lang=c :
-     * bool SteamAPI_servernetadr_t_IsLessThan(const servernetadr_t *netadr)
+     * bool SteamAPI_servernetadr_t_IsLessThan(servernetadr_t *ptr, const servernetadr_t *netadr)
      * }
      */
-    public static boolean SteamAPI_servernetadr_t_IsLessThan(MemorySegment netadr) {
+    public static boolean SteamAPI_servernetadr_t_IsLessThan(MemorySegment ptr, MemorySegment netadr) {
         var mh$ = SteamAPI_servernetadr_t_IsLessThan.HANDLE;
         try {
             if (TRACE_DOWNCALLS) {
-                traceDowncall("SteamAPI_servernetadr_t_IsLessThan", netadr);
+                traceDowncall("SteamAPI_servernetadr_t_IsLessThan", ptr, netadr);
             }
-            return (boolean)mh$.invokeExact(netadr);
+            return (boolean)mh$.invokeExact(ptr, netadr);
         } catch (Throwable ex$) {
            throw new AssertionError("should not reach here", ex$);
         }
@@ -4724,6 +4745,7 @@ public class SteamFlat_1 extends SteamFlat_2 {
 
     private static class SteamAPI_servernetadr_t_Assign {
         public static final FunctionDescriptor DESC = FunctionDescriptor.ofVoid(
+            SteamFlat.C_POINTER,
             SteamFlat.C_POINTER
         );
 
@@ -4735,7 +4757,7 @@ public class SteamFlat_1 extends SteamFlat_2 {
     /**
      * Function descriptor for:
      * {@snippet lang=c :
-     * void SteamAPI_servernetadr_t_Assign(const servernetadr_t *that)
+     * void SteamAPI_servernetadr_t_Assign(servernetadr_t *ptr, const servernetadr_t *that)
      * }
      */
     public static FunctionDescriptor SteamAPI_servernetadr_t_Assign$descriptor() {
@@ -4745,7 +4767,7 @@ public class SteamFlat_1 extends SteamFlat_2 {
     /**
      * Downcall method handle for:
      * {@snippet lang=c :
-     * void SteamAPI_servernetadr_t_Assign(const servernetadr_t *that)
+     * void SteamAPI_servernetadr_t_Assign(servernetadr_t *ptr, const servernetadr_t *that)
      * }
      */
     public static MethodHandle SteamAPI_servernetadr_t_Assign$handle() {
@@ -4753,23 +4775,25 @@ public class SteamFlat_1 extends SteamFlat_2 {
     }
     /**
      * {@snippet lang=c :
-     * void SteamAPI_servernetadr_t_Assign(const servernetadr_t *that)
+     * void SteamAPI_servernetadr_t_Assign(servernetadr_t *ptr, const servernetadr_t *that)
      * }
      */
-    public static void SteamAPI_servernetadr_t_Assign(MemorySegment that) {
+    public static void SteamAPI_servernetadr_t_Assign(MemorySegment ptr, MemorySegment that) {
         var mh$ = SteamAPI_servernetadr_t_Assign.HANDLE;
         try {
             if (TRACE_DOWNCALLS) {
-                traceDowncall("SteamAPI_servernetadr_t_Assign", that);
+                traceDowncall("SteamAPI_servernetadr_t_Assign", ptr, that);
             }
-            mh$.invokeExact(that);
+            mh$.invokeExact(ptr, that);
         } catch (Throwable ex$) {
            throw new AssertionError("should not reach here", ex$);
         }
     }
 
     private static class SteamAPI_gameserveritem_t_Construct {
-        public static final FunctionDescriptor DESC = FunctionDescriptor.ofVoid(    );
+        public static final FunctionDescriptor DESC = FunctionDescriptor.ofVoid(
+            SteamFlat.C_POINTER
+        );
 
         public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(
                     SteamFlat.findOrThrow("SteamAPI_gameserveritem_t_Construct"),
@@ -4779,7 +4803,7 @@ public class SteamFlat_1 extends SteamFlat_2 {
     /**
      * Function descriptor for:
      * {@snippet lang=c :
-     * void SteamAPI_gameserveritem_t_Construct()
+     * void SteamAPI_gameserveritem_t_Construct(gameserveritem_t *ptr)
      * }
      */
     public static FunctionDescriptor SteamAPI_gameserveritem_t_Construct$descriptor() {
@@ -4789,7 +4813,7 @@ public class SteamFlat_1 extends SteamFlat_2 {
     /**
      * Downcall method handle for:
      * {@snippet lang=c :
-     * void SteamAPI_gameserveritem_t_Construct()
+     * void SteamAPI_gameserveritem_t_Construct(gameserveritem_t *ptr)
      * }
      */
     public static MethodHandle SteamAPI_gameserveritem_t_Construct$handle() {
@@ -4797,16 +4821,16 @@ public class SteamFlat_1 extends SteamFlat_2 {
     }
     /**
      * {@snippet lang=c :
-     * void SteamAPI_gameserveritem_t_Construct()
+     * void SteamAPI_gameserveritem_t_Construct(gameserveritem_t *ptr)
      * }
      */
-    public static void SteamAPI_gameserveritem_t_Construct() {
+    public static void SteamAPI_gameserveritem_t_Construct(MemorySegment ptr) {
         var mh$ = SteamAPI_gameserveritem_t_Construct.HANDLE;
         try {
             if (TRACE_DOWNCALLS) {
-                traceDowncall("SteamAPI_gameserveritem_t_Construct");
+                traceDowncall("SteamAPI_gameserveritem_t_Construct", ptr);
             }
-            mh$.invokeExact();
+            mh$.invokeExact(ptr);
         } catch (Throwable ex$) {
            throw new AssertionError("should not reach here", ex$);
         }
@@ -4814,7 +4838,9 @@ public class SteamFlat_1 extends SteamFlat_2 {
 
     private static class SteamAPI_gameserveritem_t_GetName {
         public static final FunctionDescriptor DESC = FunctionDescriptor.of(
-            SteamFlat.C_POINTER    );
+            SteamFlat.C_POINTER,
+            SteamFlat.C_POINTER
+        );
 
         public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(
                     SteamFlat.findOrThrow("SteamAPI_gameserveritem_t_GetName"),
@@ -4824,7 +4850,7 @@ public class SteamFlat_1 extends SteamFlat_2 {
     /**
      * Function descriptor for:
      * {@snippet lang=c :
-     * const char *SteamAPI_gameserveritem_t_GetName()
+     * const char *SteamAPI_gameserveritem_t_GetName(gameserveritem_t *ptr)
      * }
      */
     public static FunctionDescriptor SteamAPI_gameserveritem_t_GetName$descriptor() {
@@ -4834,7 +4860,7 @@ public class SteamFlat_1 extends SteamFlat_2 {
     /**
      * Downcall method handle for:
      * {@snippet lang=c :
-     * const char *SteamAPI_gameserveritem_t_GetName()
+     * const char *SteamAPI_gameserveritem_t_GetName(gameserveritem_t *ptr)
      * }
      */
     public static MethodHandle SteamAPI_gameserveritem_t_GetName$handle() {
@@ -4842,16 +4868,16 @@ public class SteamFlat_1 extends SteamFlat_2 {
     }
     /**
      * {@snippet lang=c :
-     * const char *SteamAPI_gameserveritem_t_GetName()
+     * const char *SteamAPI_gameserveritem_t_GetName(gameserveritem_t *ptr)
      * }
      */
-    public static MemorySegment SteamAPI_gameserveritem_t_GetName() {
+    public static MemorySegment SteamAPI_gameserveritem_t_GetName(MemorySegment ptr) {
         var mh$ = SteamAPI_gameserveritem_t_GetName.HANDLE;
         try {
             if (TRACE_DOWNCALLS) {
-                traceDowncall("SteamAPI_gameserveritem_t_GetName");
+                traceDowncall("SteamAPI_gameserveritem_t_GetName", ptr);
             }
-            return (MemorySegment)mh$.invokeExact();
+            return (MemorySegment)mh$.invokeExact(ptr);
         } catch (Throwable ex$) {
            throw new AssertionError("should not reach here", ex$);
         }
@@ -4859,6 +4885,7 @@ public class SteamFlat_1 extends SteamFlat_2 {
 
     private static class SteamAPI_gameserveritem_t_SetName {
         public static final FunctionDescriptor DESC = FunctionDescriptor.ofVoid(
+            SteamFlat.C_POINTER,
             SteamFlat.C_POINTER
         );
 
@@ -4870,7 +4897,7 @@ public class SteamFlat_1 extends SteamFlat_2 {
     /**
      * Function descriptor for:
      * {@snippet lang=c :
-     * void SteamAPI_gameserveritem_t_SetName(const char *pName)
+     * void SteamAPI_gameserveritem_t_SetName(gameserveritem_t *ptr, const char *pName)
      * }
      */
     public static FunctionDescriptor SteamAPI_gameserveritem_t_SetName$descriptor() {
@@ -4880,7 +4907,7 @@ public class SteamFlat_1 extends SteamFlat_2 {
     /**
      * Downcall method handle for:
      * {@snippet lang=c :
-     * void SteamAPI_gameserveritem_t_SetName(const char *pName)
+     * void SteamAPI_gameserveritem_t_SetName(gameserveritem_t *ptr, const char *pName)
      * }
      */
     public static MethodHandle SteamAPI_gameserveritem_t_SetName$handle() {
@@ -4888,23 +4915,25 @@ public class SteamFlat_1 extends SteamFlat_2 {
     }
     /**
      * {@snippet lang=c :
-     * void SteamAPI_gameserveritem_t_SetName(const char *pName)
+     * void SteamAPI_gameserveritem_t_SetName(gameserveritem_t *ptr, const char *pName)
      * }
      */
-    public static void SteamAPI_gameserveritem_t_SetName(MemorySegment pName) {
+    public static void SteamAPI_gameserveritem_t_SetName(MemorySegment ptr, MemorySegment pName) {
         var mh$ = SteamAPI_gameserveritem_t_SetName.HANDLE;
         try {
             if (TRACE_DOWNCALLS) {
-                traceDowncall("SteamAPI_gameserveritem_t_SetName", pName);
+                traceDowncall("SteamAPI_gameserveritem_t_SetName", ptr, pName);
             }
-            mh$.invokeExact(pName);
+            mh$.invokeExact(ptr, pName);
         } catch (Throwable ex$) {
            throw new AssertionError("should not reach here", ex$);
         }
     }
 
     private static class SteamAPI_SteamNetworkingIPAddr_Clear {
-        public static final FunctionDescriptor DESC = FunctionDescriptor.ofVoid(    );
+        public static final FunctionDescriptor DESC = FunctionDescriptor.ofVoid(
+            SteamFlat.C_POINTER
+        );
 
         public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(
                     SteamFlat.findOrThrow("SteamAPI_SteamNetworkingIPAddr_Clear"),
@@ -4914,7 +4943,7 @@ public class SteamFlat_1 extends SteamFlat_2 {
     /**
      * Function descriptor for:
      * {@snippet lang=c :
-     * void SteamAPI_SteamNetworkingIPAddr_Clear()
+     * void SteamAPI_SteamNetworkingIPAddr_Clear(SteamNetworkingIPAddr *ptr)
      * }
      */
     public static FunctionDescriptor SteamAPI_SteamNetworkingIPAddr_Clear$descriptor() {
@@ -4924,7 +4953,7 @@ public class SteamFlat_1 extends SteamFlat_2 {
     /**
      * Downcall method handle for:
      * {@snippet lang=c :
-     * void SteamAPI_SteamNetworkingIPAddr_Clear()
+     * void SteamAPI_SteamNetworkingIPAddr_Clear(SteamNetworkingIPAddr *ptr)
      * }
      */
     public static MethodHandle SteamAPI_SteamNetworkingIPAddr_Clear$handle() {
@@ -4932,16 +4961,16 @@ public class SteamFlat_1 extends SteamFlat_2 {
     }
     /**
      * {@snippet lang=c :
-     * void SteamAPI_SteamNetworkingIPAddr_Clear()
+     * void SteamAPI_SteamNetworkingIPAddr_Clear(SteamNetworkingIPAddr *ptr)
      * }
      */
-    public static void SteamAPI_SteamNetworkingIPAddr_Clear() {
+    public static void SteamAPI_SteamNetworkingIPAddr_Clear(MemorySegment ptr) {
         var mh$ = SteamAPI_SteamNetworkingIPAddr_Clear.HANDLE;
         try {
             if (TRACE_DOWNCALLS) {
-                traceDowncall("SteamAPI_SteamNetworkingIPAddr_Clear");
+                traceDowncall("SteamAPI_SteamNetworkingIPAddr_Clear", ptr);
             }
-            mh$.invokeExact();
+            mh$.invokeExact(ptr);
         } catch (Throwable ex$) {
            throw new AssertionError("should not reach here", ex$);
         }
@@ -4949,7 +4978,9 @@ public class SteamFlat_1 extends SteamFlat_2 {
 
     private static class SteamAPI_SteamNetworkingIPAddr_IsIPv6AllZeros {
         public static final FunctionDescriptor DESC = FunctionDescriptor.of(
-            SteamFlat.C_BOOL    );
+            SteamFlat.C_BOOL,
+            SteamFlat.C_POINTER
+        );
 
         public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(
                     SteamFlat.findOrThrow("SteamAPI_SteamNetworkingIPAddr_IsIPv6AllZeros"),
@@ -4959,7 +4990,7 @@ public class SteamFlat_1 extends SteamFlat_2 {
     /**
      * Function descriptor for:
      * {@snippet lang=c :
-     * bool SteamAPI_SteamNetworkingIPAddr_IsIPv6AllZeros()
+     * bool SteamAPI_SteamNetworkingIPAddr_IsIPv6AllZeros(SteamNetworkingIPAddr *ptr)
      * }
      */
     public static FunctionDescriptor SteamAPI_SteamNetworkingIPAddr_IsIPv6AllZeros$descriptor() {
@@ -4969,7 +5000,7 @@ public class SteamFlat_1 extends SteamFlat_2 {
     /**
      * Downcall method handle for:
      * {@snippet lang=c :
-     * bool SteamAPI_SteamNetworkingIPAddr_IsIPv6AllZeros()
+     * bool SteamAPI_SteamNetworkingIPAddr_IsIPv6AllZeros(SteamNetworkingIPAddr *ptr)
      * }
      */
     public static MethodHandle SteamAPI_SteamNetworkingIPAddr_IsIPv6AllZeros$handle() {
@@ -4977,16 +5008,16 @@ public class SteamFlat_1 extends SteamFlat_2 {
     }
     /**
      * {@snippet lang=c :
-     * bool SteamAPI_SteamNetworkingIPAddr_IsIPv6AllZeros()
+     * bool SteamAPI_SteamNetworkingIPAddr_IsIPv6AllZeros(SteamNetworkingIPAddr *ptr)
      * }
      */
-    public static boolean SteamAPI_SteamNetworkingIPAddr_IsIPv6AllZeros() {
+    public static boolean SteamAPI_SteamNetworkingIPAddr_IsIPv6AllZeros(MemorySegment ptr) {
         var mh$ = SteamAPI_SteamNetworkingIPAddr_IsIPv6AllZeros.HANDLE;
         try {
             if (TRACE_DOWNCALLS) {
-                traceDowncall("SteamAPI_SteamNetworkingIPAddr_IsIPv6AllZeros");
+                traceDowncall("SteamAPI_SteamNetworkingIPAddr_IsIPv6AllZeros", ptr);
             }
-            return (boolean)mh$.invokeExact();
+            return (boolean)mh$.invokeExact(ptr);
         } catch (Throwable ex$) {
            throw new AssertionError("should not reach here", ex$);
         }
@@ -4994,6 +5025,7 @@ public class SteamFlat_1 extends SteamFlat_2 {
 
     private static class SteamAPI_SteamNetworkingIPAddr_SetIPv6 {
         public static final FunctionDescriptor DESC = FunctionDescriptor.ofVoid(
+            SteamFlat.C_POINTER,
             SteamFlat.C_POINTER,
             SteamFlat.C_SHORT
         );
@@ -5006,7 +5038,7 @@ public class SteamFlat_1 extends SteamFlat_2 {
     /**
      * Function descriptor for:
      * {@snippet lang=c :
-     * void SteamAPI_SteamNetworkingIPAddr_SetIPv6(const uint8 *ipv6, uint16 nPort)
+     * void SteamAPI_SteamNetworkingIPAddr_SetIPv6(SteamNetworkingIPAddr *ptr, const uint8 *ipv6, uint16 nPort)
      * }
      */
     public static FunctionDescriptor SteamAPI_SteamNetworkingIPAddr_SetIPv6$descriptor() {
@@ -5016,7 +5048,7 @@ public class SteamFlat_1 extends SteamFlat_2 {
     /**
      * Downcall method handle for:
      * {@snippet lang=c :
-     * void SteamAPI_SteamNetworkingIPAddr_SetIPv6(const uint8 *ipv6, uint16 nPort)
+     * void SteamAPI_SteamNetworkingIPAddr_SetIPv6(SteamNetworkingIPAddr *ptr, const uint8 *ipv6, uint16 nPort)
      * }
      */
     public static MethodHandle SteamAPI_SteamNetworkingIPAddr_SetIPv6$handle() {
@@ -5024,16 +5056,16 @@ public class SteamFlat_1 extends SteamFlat_2 {
     }
     /**
      * {@snippet lang=c :
-     * void SteamAPI_SteamNetworkingIPAddr_SetIPv6(const uint8 *ipv6, uint16 nPort)
+     * void SteamAPI_SteamNetworkingIPAddr_SetIPv6(SteamNetworkingIPAddr *ptr, const uint8 *ipv6, uint16 nPort)
      * }
      */
-    public static void SteamAPI_SteamNetworkingIPAddr_SetIPv6(MemorySegment ipv6, short nPort) {
+    public static void SteamAPI_SteamNetworkingIPAddr_SetIPv6(MemorySegment ptr, MemorySegment ipv6, short nPort) {
         var mh$ = SteamAPI_SteamNetworkingIPAddr_SetIPv6.HANDLE;
         try {
             if (TRACE_DOWNCALLS) {
-                traceDowncall("SteamAPI_SteamNetworkingIPAddr_SetIPv6", ipv6, nPort);
+                traceDowncall("SteamAPI_SteamNetworkingIPAddr_SetIPv6", ptr, ipv6, nPort);
             }
-            mh$.invokeExact(ipv6, nPort);
+            mh$.invokeExact(ptr, ipv6, nPort);
         } catch (Throwable ex$) {
            throw new AssertionError("should not reach here", ex$);
         }
@@ -5041,6 +5073,7 @@ public class SteamFlat_1 extends SteamFlat_2 {
 
     private static class SteamAPI_SteamNetworkingIPAddr_SetIPv4 {
         public static final FunctionDescriptor DESC = FunctionDescriptor.ofVoid(
+            SteamFlat.C_POINTER,
             SteamFlat.C_INT,
             SteamFlat.C_SHORT
         );
@@ -5053,7 +5086,7 @@ public class SteamFlat_1 extends SteamFlat_2 {
     /**
      * Function descriptor for:
      * {@snippet lang=c :
-     * void SteamAPI_SteamNetworkingIPAddr_SetIPv4(uint32 nIP, uint16 nPort)
+     * void SteamAPI_SteamNetworkingIPAddr_SetIPv4(SteamNetworkingIPAddr *ptr, uint32 nIP, uint16 nPort)
      * }
      */
     public static FunctionDescriptor SteamAPI_SteamNetworkingIPAddr_SetIPv4$descriptor() {
@@ -5063,7 +5096,7 @@ public class SteamFlat_1 extends SteamFlat_2 {
     /**
      * Downcall method handle for:
      * {@snippet lang=c :
-     * void SteamAPI_SteamNetworkingIPAddr_SetIPv4(uint32 nIP, uint16 nPort)
+     * void SteamAPI_SteamNetworkingIPAddr_SetIPv4(SteamNetworkingIPAddr *ptr, uint32 nIP, uint16 nPort)
      * }
      */
     public static MethodHandle SteamAPI_SteamNetworkingIPAddr_SetIPv4$handle() {
@@ -5071,16 +5104,16 @@ public class SteamFlat_1 extends SteamFlat_2 {
     }
     /**
      * {@snippet lang=c :
-     * void SteamAPI_SteamNetworkingIPAddr_SetIPv4(uint32 nIP, uint16 nPort)
+     * void SteamAPI_SteamNetworkingIPAddr_SetIPv4(SteamNetworkingIPAddr *ptr, uint32 nIP, uint16 nPort)
      * }
      */
-    public static void SteamAPI_SteamNetworkingIPAddr_SetIPv4(int nIP, short nPort) {
+    public static void SteamAPI_SteamNetworkingIPAddr_SetIPv4(MemorySegment ptr, int nIP, short nPort) {
         var mh$ = SteamAPI_SteamNetworkingIPAddr_SetIPv4.HANDLE;
         try {
             if (TRACE_DOWNCALLS) {
-                traceDowncall("SteamAPI_SteamNetworkingIPAddr_SetIPv4", nIP, nPort);
+                traceDowncall("SteamAPI_SteamNetworkingIPAddr_SetIPv4", ptr, nIP, nPort);
             }
-            mh$.invokeExact(nIP, nPort);
+            mh$.invokeExact(ptr, nIP, nPort);
         } catch (Throwable ex$) {
            throw new AssertionError("should not reach here", ex$);
         }
@@ -5088,7 +5121,9 @@ public class SteamFlat_1 extends SteamFlat_2 {
 
     private static class SteamAPI_SteamNetworkingIPAddr_IsIPv4 {
         public static final FunctionDescriptor DESC = FunctionDescriptor.of(
-            SteamFlat.C_BOOL    );
+            SteamFlat.C_BOOL,
+            SteamFlat.C_POINTER
+        );
 
         public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(
                     SteamFlat.findOrThrow("SteamAPI_SteamNetworkingIPAddr_IsIPv4"),
@@ -5098,7 +5133,7 @@ public class SteamFlat_1 extends SteamFlat_2 {
     /**
      * Function descriptor for:
      * {@snippet lang=c :
-     * bool SteamAPI_SteamNetworkingIPAddr_IsIPv4()
+     * bool SteamAPI_SteamNetworkingIPAddr_IsIPv4(SteamNetworkingIPAddr *ptr)
      * }
      */
     public static FunctionDescriptor SteamAPI_SteamNetworkingIPAddr_IsIPv4$descriptor() {
@@ -5108,7 +5143,7 @@ public class SteamFlat_1 extends SteamFlat_2 {
     /**
      * Downcall method handle for:
      * {@snippet lang=c :
-     * bool SteamAPI_SteamNetworkingIPAddr_IsIPv4()
+     * bool SteamAPI_SteamNetworkingIPAddr_IsIPv4(SteamNetworkingIPAddr *ptr)
      * }
      */
     public static MethodHandle SteamAPI_SteamNetworkingIPAddr_IsIPv4$handle() {
@@ -5116,16 +5151,16 @@ public class SteamFlat_1 extends SteamFlat_2 {
     }
     /**
      * {@snippet lang=c :
-     * bool SteamAPI_SteamNetworkingIPAddr_IsIPv4()
+     * bool SteamAPI_SteamNetworkingIPAddr_IsIPv4(SteamNetworkingIPAddr *ptr)
      * }
      */
-    public static boolean SteamAPI_SteamNetworkingIPAddr_IsIPv4() {
+    public static boolean SteamAPI_SteamNetworkingIPAddr_IsIPv4(MemorySegment ptr) {
         var mh$ = SteamAPI_SteamNetworkingIPAddr_IsIPv4.HANDLE;
         try {
             if (TRACE_DOWNCALLS) {
-                traceDowncall("SteamAPI_SteamNetworkingIPAddr_IsIPv4");
+                traceDowncall("SteamAPI_SteamNetworkingIPAddr_IsIPv4", ptr);
             }
-            return (boolean)mh$.invokeExact();
+            return (boolean)mh$.invokeExact(ptr);
         } catch (Throwable ex$) {
            throw new AssertionError("should not reach here", ex$);
         }
@@ -5133,7 +5168,9 @@ public class SteamFlat_1 extends SteamFlat_2 {
 
     private static class SteamAPI_SteamNetworkingIPAddr_GetIPv4 {
         public static final FunctionDescriptor DESC = FunctionDescriptor.of(
-            SteamFlat.C_INT    );
+            SteamFlat.C_INT,
+            SteamFlat.C_POINTER
+        );
 
         public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(
                     SteamFlat.findOrThrow("SteamAPI_SteamNetworkingIPAddr_GetIPv4"),
@@ -5143,7 +5180,7 @@ public class SteamFlat_1 extends SteamFlat_2 {
     /**
      * Function descriptor for:
      * {@snippet lang=c :
-     * uint32 SteamAPI_SteamNetworkingIPAddr_GetIPv4()
+     * uint32 SteamAPI_SteamNetworkingIPAddr_GetIPv4(SteamNetworkingIPAddr *ptr)
      * }
      */
     public static FunctionDescriptor SteamAPI_SteamNetworkingIPAddr_GetIPv4$descriptor() {
@@ -5153,7 +5190,7 @@ public class SteamFlat_1 extends SteamFlat_2 {
     /**
      * Downcall method handle for:
      * {@snippet lang=c :
-     * uint32 SteamAPI_SteamNetworkingIPAddr_GetIPv4()
+     * uint32 SteamAPI_SteamNetworkingIPAddr_GetIPv4(SteamNetworkingIPAddr *ptr)
      * }
      */
     public static MethodHandle SteamAPI_SteamNetworkingIPAddr_GetIPv4$handle() {
@@ -5161,16 +5198,16 @@ public class SteamFlat_1 extends SteamFlat_2 {
     }
     /**
      * {@snippet lang=c :
-     * uint32 SteamAPI_SteamNetworkingIPAddr_GetIPv4()
+     * uint32 SteamAPI_SteamNetworkingIPAddr_GetIPv4(SteamNetworkingIPAddr *ptr)
      * }
      */
-    public static int SteamAPI_SteamNetworkingIPAddr_GetIPv4() {
+    public static int SteamAPI_SteamNetworkingIPAddr_GetIPv4(MemorySegment ptr) {
         var mh$ = SteamAPI_SteamNetworkingIPAddr_GetIPv4.HANDLE;
         try {
             if (TRACE_DOWNCALLS) {
-                traceDowncall("SteamAPI_SteamNetworkingIPAddr_GetIPv4");
+                traceDowncall("SteamAPI_SteamNetworkingIPAddr_GetIPv4", ptr);
             }
-            return (int)mh$.invokeExact();
+            return (int)mh$.invokeExact(ptr);
         } catch (Throwable ex$) {
            throw new AssertionError("should not reach here", ex$);
         }
@@ -5178,6 +5215,7 @@ public class SteamFlat_1 extends SteamFlat_2 {
 
     private static class SteamAPI_SteamNetworkingIPAddr_SetIPv6LocalHost {
         public static final FunctionDescriptor DESC = FunctionDescriptor.ofVoid(
+            SteamFlat.C_POINTER,
             SteamFlat.C_SHORT
         );
 
@@ -5189,7 +5227,7 @@ public class SteamFlat_1 extends SteamFlat_2 {
     /**
      * Function descriptor for:
      * {@snippet lang=c :
-     * void SteamAPI_SteamNetworkingIPAddr_SetIPv6LocalHost(uint16 nPort)
+     * void SteamAPI_SteamNetworkingIPAddr_SetIPv6LocalHost(SteamNetworkingIPAddr *ptr, uint16 nPort)
      * }
      */
     public static FunctionDescriptor SteamAPI_SteamNetworkingIPAddr_SetIPv6LocalHost$descriptor() {
@@ -5199,7 +5237,7 @@ public class SteamFlat_1 extends SteamFlat_2 {
     /**
      * Downcall method handle for:
      * {@snippet lang=c :
-     * void SteamAPI_SteamNetworkingIPAddr_SetIPv6LocalHost(uint16 nPort)
+     * void SteamAPI_SteamNetworkingIPAddr_SetIPv6LocalHost(SteamNetworkingIPAddr *ptr, uint16 nPort)
      * }
      */
     public static MethodHandle SteamAPI_SteamNetworkingIPAddr_SetIPv6LocalHost$handle() {
@@ -5207,16 +5245,16 @@ public class SteamFlat_1 extends SteamFlat_2 {
     }
     /**
      * {@snippet lang=c :
-     * void SteamAPI_SteamNetworkingIPAddr_SetIPv6LocalHost(uint16 nPort)
+     * void SteamAPI_SteamNetworkingIPAddr_SetIPv6LocalHost(SteamNetworkingIPAddr *ptr, uint16 nPort)
      * }
      */
-    public static void SteamAPI_SteamNetworkingIPAddr_SetIPv6LocalHost(short nPort) {
+    public static void SteamAPI_SteamNetworkingIPAddr_SetIPv6LocalHost(MemorySegment ptr, short nPort) {
         var mh$ = SteamAPI_SteamNetworkingIPAddr_SetIPv6LocalHost.HANDLE;
         try {
             if (TRACE_DOWNCALLS) {
-                traceDowncall("SteamAPI_SteamNetworkingIPAddr_SetIPv6LocalHost", nPort);
+                traceDowncall("SteamAPI_SteamNetworkingIPAddr_SetIPv6LocalHost", ptr, nPort);
             }
-            mh$.invokeExact(nPort);
+            mh$.invokeExact(ptr, nPort);
         } catch (Throwable ex$) {
            throw new AssertionError("should not reach here", ex$);
         }
@@ -5224,7 +5262,9 @@ public class SteamFlat_1 extends SteamFlat_2 {
 
     private static class SteamAPI_SteamNetworkingIPAddr_IsLocalHost {
         public static final FunctionDescriptor DESC = FunctionDescriptor.of(
-            SteamFlat.C_BOOL    );
+            SteamFlat.C_BOOL,
+            SteamFlat.C_POINTER
+        );
 
         public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(
                     SteamFlat.findOrThrow("SteamAPI_SteamNetworkingIPAddr_IsLocalHost"),
@@ -5234,7 +5274,7 @@ public class SteamFlat_1 extends SteamFlat_2 {
     /**
      * Function descriptor for:
      * {@snippet lang=c :
-     * bool SteamAPI_SteamNetworkingIPAddr_IsLocalHost()
+     * bool SteamAPI_SteamNetworkingIPAddr_IsLocalHost(SteamNetworkingIPAddr *ptr)
      * }
      */
     public static FunctionDescriptor SteamAPI_SteamNetworkingIPAddr_IsLocalHost$descriptor() {
@@ -5244,7 +5284,7 @@ public class SteamFlat_1 extends SteamFlat_2 {
     /**
      * Downcall method handle for:
      * {@snippet lang=c :
-     * bool SteamAPI_SteamNetworkingIPAddr_IsLocalHost()
+     * bool SteamAPI_SteamNetworkingIPAddr_IsLocalHost(SteamNetworkingIPAddr *ptr)
      * }
      */
     public static MethodHandle SteamAPI_SteamNetworkingIPAddr_IsLocalHost$handle() {
@@ -5252,16 +5292,16 @@ public class SteamFlat_1 extends SteamFlat_2 {
     }
     /**
      * {@snippet lang=c :
-     * bool SteamAPI_SteamNetworkingIPAddr_IsLocalHost()
+     * bool SteamAPI_SteamNetworkingIPAddr_IsLocalHost(SteamNetworkingIPAddr *ptr)
      * }
      */
-    public static boolean SteamAPI_SteamNetworkingIPAddr_IsLocalHost() {
+    public static boolean SteamAPI_SteamNetworkingIPAddr_IsLocalHost(MemorySegment ptr) {
         var mh$ = SteamAPI_SteamNetworkingIPAddr_IsLocalHost.HANDLE;
         try {
             if (TRACE_DOWNCALLS) {
-                traceDowncall("SteamAPI_SteamNetworkingIPAddr_IsLocalHost");
+                traceDowncall("SteamAPI_SteamNetworkingIPAddr_IsLocalHost", ptr);
             }
-            return (boolean)mh$.invokeExact();
+            return (boolean)mh$.invokeExact(ptr);
         } catch (Throwable ex$) {
            throw new AssertionError("should not reach here", ex$);
         }
@@ -5269,6 +5309,7 @@ public class SteamFlat_1 extends SteamFlat_2 {
 
     private static class SteamAPI_SteamNetworkingIPAddr_ToString {
         public static final FunctionDescriptor DESC = FunctionDescriptor.ofVoid(
+            SteamFlat.C_POINTER,
             SteamFlat.C_POINTER,
             SteamFlat.C_INT,
             SteamFlat.C_BOOL
@@ -5282,7 +5323,7 @@ public class SteamFlat_1 extends SteamFlat_2 {
     /**
      * Function descriptor for:
      * {@snippet lang=c :
-     * void SteamAPI_SteamNetworkingIPAddr_ToString(char *buf, uint32 cbBuf, bool bWithPort)
+     * void SteamAPI_SteamNetworkingIPAddr_ToString(SteamNetworkingIPAddr *ptr, char *buf, uint32 cbBuf, bool bWithPort)
      * }
      */
     public static FunctionDescriptor SteamAPI_SteamNetworkingIPAddr_ToString$descriptor() {
@@ -5292,7 +5333,7 @@ public class SteamFlat_1 extends SteamFlat_2 {
     /**
      * Downcall method handle for:
      * {@snippet lang=c :
-     * void SteamAPI_SteamNetworkingIPAddr_ToString(char *buf, uint32 cbBuf, bool bWithPort)
+     * void SteamAPI_SteamNetworkingIPAddr_ToString(SteamNetworkingIPAddr *ptr, char *buf, uint32 cbBuf, bool bWithPort)
      * }
      */
     public static MethodHandle SteamAPI_SteamNetworkingIPAddr_ToString$handle() {
@@ -5300,16 +5341,16 @@ public class SteamFlat_1 extends SteamFlat_2 {
     }
     /**
      * {@snippet lang=c :
-     * void SteamAPI_SteamNetworkingIPAddr_ToString(char *buf, uint32 cbBuf, bool bWithPort)
+     * void SteamAPI_SteamNetworkingIPAddr_ToString(SteamNetworkingIPAddr *ptr, char *buf, uint32 cbBuf, bool bWithPort)
      * }
      */
-    public static void SteamAPI_SteamNetworkingIPAddr_ToString(MemorySegment buf, int cbBuf, boolean bWithPort) {
+    public static void SteamAPI_SteamNetworkingIPAddr_ToString(MemorySegment ptr, MemorySegment buf, int cbBuf, boolean bWithPort) {
         var mh$ = SteamAPI_SteamNetworkingIPAddr_ToString.HANDLE;
         try {
             if (TRACE_DOWNCALLS) {
-                traceDowncall("SteamAPI_SteamNetworkingIPAddr_ToString", buf, cbBuf, bWithPort);
+                traceDowncall("SteamAPI_SteamNetworkingIPAddr_ToString", ptr, buf, cbBuf, bWithPort);
             }
-            mh$.invokeExact(buf, cbBuf, bWithPort);
+            mh$.invokeExact(ptr, buf, cbBuf, bWithPort);
         } catch (Throwable ex$) {
            throw new AssertionError("should not reach here", ex$);
         }
@@ -5318,6 +5359,7 @@ public class SteamFlat_1 extends SteamFlat_2 {
     private static class SteamAPI_SteamNetworkingIPAddr_ParseString {
         public static final FunctionDescriptor DESC = FunctionDescriptor.of(
             SteamFlat.C_BOOL,
+            SteamFlat.C_POINTER,
             SteamFlat.C_POINTER
         );
 
@@ -5329,7 +5371,7 @@ public class SteamFlat_1 extends SteamFlat_2 {
     /**
      * Function descriptor for:
      * {@snippet lang=c :
-     * bool SteamAPI_SteamNetworkingIPAddr_ParseString(const char *pszStr)
+     * bool SteamAPI_SteamNetworkingIPAddr_ParseString(SteamNetworkingIPAddr *ptr, const char *pszStr)
      * }
      */
     public static FunctionDescriptor SteamAPI_SteamNetworkingIPAddr_ParseString$descriptor() {
@@ -5339,7 +5381,7 @@ public class SteamFlat_1 extends SteamFlat_2 {
     /**
      * Downcall method handle for:
      * {@snippet lang=c :
-     * bool SteamAPI_SteamNetworkingIPAddr_ParseString(const char *pszStr)
+     * bool SteamAPI_SteamNetworkingIPAddr_ParseString(SteamNetworkingIPAddr *ptr, const char *pszStr)
      * }
      */
     public static MethodHandle SteamAPI_SteamNetworkingIPAddr_ParseString$handle() {
@@ -5347,16 +5389,16 @@ public class SteamFlat_1 extends SteamFlat_2 {
     }
     /**
      * {@snippet lang=c :
-     * bool SteamAPI_SteamNetworkingIPAddr_ParseString(const char *pszStr)
+     * bool SteamAPI_SteamNetworkingIPAddr_ParseString(SteamNetworkingIPAddr *ptr, const char *pszStr)
      * }
      */
-    public static boolean SteamAPI_SteamNetworkingIPAddr_ParseString(MemorySegment pszStr) {
+    public static boolean SteamAPI_SteamNetworkingIPAddr_ParseString(MemorySegment ptr, MemorySegment pszStr) {
         var mh$ = SteamAPI_SteamNetworkingIPAddr_ParseString.HANDLE;
         try {
             if (TRACE_DOWNCALLS) {
-                traceDowncall("SteamAPI_SteamNetworkingIPAddr_ParseString", pszStr);
+                traceDowncall("SteamAPI_SteamNetworkingIPAddr_ParseString", ptr, pszStr);
             }
-            return (boolean)mh$.invokeExact(pszStr);
+            return (boolean)mh$.invokeExact(ptr, pszStr);
         } catch (Throwable ex$) {
            throw new AssertionError("should not reach here", ex$);
         }
@@ -5365,6 +5407,7 @@ public class SteamFlat_1 extends SteamFlat_2 {
     private static class SteamAPI_SteamNetworkingIPAddr_IsEqualTo {
         public static final FunctionDescriptor DESC = FunctionDescriptor.of(
             SteamFlat.C_BOOL,
+            SteamFlat.C_POINTER,
             SteamFlat.C_POINTER
         );
 
@@ -5376,7 +5419,7 @@ public class SteamFlat_1 extends SteamFlat_2 {
     /**
      * Function descriptor for:
      * {@snippet lang=c :
-     * bool SteamAPI_SteamNetworkingIPAddr_IsEqualTo(const SteamNetworkingIPAddr *x)
+     * bool SteamAPI_SteamNetworkingIPAddr_IsEqualTo(SteamNetworkingIPAddr *ptr, const SteamNetworkingIPAddr *x)
      * }
      */
     public static FunctionDescriptor SteamAPI_SteamNetworkingIPAddr_IsEqualTo$descriptor() {
@@ -5386,7 +5429,7 @@ public class SteamFlat_1 extends SteamFlat_2 {
     /**
      * Downcall method handle for:
      * {@snippet lang=c :
-     * bool SteamAPI_SteamNetworkingIPAddr_IsEqualTo(const SteamNetworkingIPAddr *x)
+     * bool SteamAPI_SteamNetworkingIPAddr_IsEqualTo(SteamNetworkingIPAddr *ptr, const SteamNetworkingIPAddr *x)
      * }
      */
     public static MethodHandle SteamAPI_SteamNetworkingIPAddr_IsEqualTo$handle() {
@@ -5394,16 +5437,16 @@ public class SteamFlat_1 extends SteamFlat_2 {
     }
     /**
      * {@snippet lang=c :
-     * bool SteamAPI_SteamNetworkingIPAddr_IsEqualTo(const SteamNetworkingIPAddr *x)
+     * bool SteamAPI_SteamNetworkingIPAddr_IsEqualTo(SteamNetworkingIPAddr *ptr, const SteamNetworkingIPAddr *x)
      * }
      */
-    public static boolean SteamAPI_SteamNetworkingIPAddr_IsEqualTo(MemorySegment x) {
+    public static boolean SteamAPI_SteamNetworkingIPAddr_IsEqualTo(MemorySegment ptr, MemorySegment x) {
         var mh$ = SteamAPI_SteamNetworkingIPAddr_IsEqualTo.HANDLE;
         try {
             if (TRACE_DOWNCALLS) {
-                traceDowncall("SteamAPI_SteamNetworkingIPAddr_IsEqualTo", x);
+                traceDowncall("SteamAPI_SteamNetworkingIPAddr_IsEqualTo", ptr, x);
             }
-            return (boolean)mh$.invokeExact(x);
+            return (boolean)mh$.invokeExact(ptr, x);
         } catch (Throwable ex$) {
            throw new AssertionError("should not reach here", ex$);
         }
@@ -5411,7 +5454,9 @@ public class SteamFlat_1 extends SteamFlat_2 {
 
     private static class SteamAPI_SteamNetworkingIPAddr_GetFakeIPType {
         public static final FunctionDescriptor DESC = FunctionDescriptor.of(
-            SteamFlat.C_INT    );
+            SteamFlat.C_INT,
+            SteamFlat.C_POINTER
+        );
 
         public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(
                     SteamFlat.findOrThrow("SteamAPI_SteamNetworkingIPAddr_GetFakeIPType"),
@@ -5421,7 +5466,7 @@ public class SteamFlat_1 extends SteamFlat_2 {
     /**
      * Function descriptor for:
      * {@snippet lang=c :
-     * ESteamNetworkingFakeIPType SteamAPI_SteamNetworkingIPAddr_GetFakeIPType()
+     * ESteamNetworkingFakeIPType SteamAPI_SteamNetworkingIPAddr_GetFakeIPType(SteamNetworkingIPAddr *ptr)
      * }
      */
     public static FunctionDescriptor SteamAPI_SteamNetworkingIPAddr_GetFakeIPType$descriptor() {
@@ -5431,7 +5476,7 @@ public class SteamFlat_1 extends SteamFlat_2 {
     /**
      * Downcall method handle for:
      * {@snippet lang=c :
-     * ESteamNetworkingFakeIPType SteamAPI_SteamNetworkingIPAddr_GetFakeIPType()
+     * ESteamNetworkingFakeIPType SteamAPI_SteamNetworkingIPAddr_GetFakeIPType(SteamNetworkingIPAddr *ptr)
      * }
      */
     public static MethodHandle SteamAPI_SteamNetworkingIPAddr_GetFakeIPType$handle() {
@@ -5439,16 +5484,16 @@ public class SteamFlat_1 extends SteamFlat_2 {
     }
     /**
      * {@snippet lang=c :
-     * ESteamNetworkingFakeIPType SteamAPI_SteamNetworkingIPAddr_GetFakeIPType()
+     * ESteamNetworkingFakeIPType SteamAPI_SteamNetworkingIPAddr_GetFakeIPType(SteamNetworkingIPAddr *ptr)
      * }
      */
-    public static int SteamAPI_SteamNetworkingIPAddr_GetFakeIPType() {
+    public static int SteamAPI_SteamNetworkingIPAddr_GetFakeIPType(MemorySegment ptr) {
         var mh$ = SteamAPI_SteamNetworkingIPAddr_GetFakeIPType.HANDLE;
         try {
             if (TRACE_DOWNCALLS) {
-                traceDowncall("SteamAPI_SteamNetworkingIPAddr_GetFakeIPType");
+                traceDowncall("SteamAPI_SteamNetworkingIPAddr_GetFakeIPType", ptr);
             }
-            return (int)mh$.invokeExact();
+            return (int)mh$.invokeExact(ptr);
         } catch (Throwable ex$) {
            throw new AssertionError("should not reach here", ex$);
         }
@@ -5456,7 +5501,9 @@ public class SteamFlat_1 extends SteamFlat_2 {
 
     private static class SteamAPI_SteamNetworkingIPAddr_IsFakeIP {
         public static final FunctionDescriptor DESC = FunctionDescriptor.of(
-            SteamFlat.C_BOOL    );
+            SteamFlat.C_BOOL,
+            SteamFlat.C_POINTER
+        );
 
         public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(
                     SteamFlat.findOrThrow("SteamAPI_SteamNetworkingIPAddr_IsFakeIP"),
@@ -5466,7 +5513,7 @@ public class SteamFlat_1 extends SteamFlat_2 {
     /**
      * Function descriptor for:
      * {@snippet lang=c :
-     * bool SteamAPI_SteamNetworkingIPAddr_IsFakeIP()
+     * bool SteamAPI_SteamNetworkingIPAddr_IsFakeIP(SteamNetworkingIPAddr *ptr)
      * }
      */
     public static FunctionDescriptor SteamAPI_SteamNetworkingIPAddr_IsFakeIP$descriptor() {
@@ -5476,7 +5523,7 @@ public class SteamFlat_1 extends SteamFlat_2 {
     /**
      * Downcall method handle for:
      * {@snippet lang=c :
-     * bool SteamAPI_SteamNetworkingIPAddr_IsFakeIP()
+     * bool SteamAPI_SteamNetworkingIPAddr_IsFakeIP(SteamNetworkingIPAddr *ptr)
      * }
      */
     public static MethodHandle SteamAPI_SteamNetworkingIPAddr_IsFakeIP$handle() {
@@ -5484,23 +5531,25 @@ public class SteamFlat_1 extends SteamFlat_2 {
     }
     /**
      * {@snippet lang=c :
-     * bool SteamAPI_SteamNetworkingIPAddr_IsFakeIP()
+     * bool SteamAPI_SteamNetworkingIPAddr_IsFakeIP(SteamNetworkingIPAddr *ptr)
      * }
      */
-    public static boolean SteamAPI_SteamNetworkingIPAddr_IsFakeIP() {
+    public static boolean SteamAPI_SteamNetworkingIPAddr_IsFakeIP(MemorySegment ptr) {
         var mh$ = SteamAPI_SteamNetworkingIPAddr_IsFakeIP.HANDLE;
         try {
             if (TRACE_DOWNCALLS) {
-                traceDowncall("SteamAPI_SteamNetworkingIPAddr_IsFakeIP");
+                traceDowncall("SteamAPI_SteamNetworkingIPAddr_IsFakeIP", ptr);
             }
-            return (boolean)mh$.invokeExact();
+            return (boolean)mh$.invokeExact(ptr);
         } catch (Throwable ex$) {
            throw new AssertionError("should not reach here", ex$);
         }
     }
 
     private static class SteamAPI_SteamNetworkingIdentity_Clear {
-        public static final FunctionDescriptor DESC = FunctionDescriptor.ofVoid(    );
+        public static final FunctionDescriptor DESC = FunctionDescriptor.ofVoid(
+            SteamFlat.C_POINTER
+        );
 
         public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(
                     SteamFlat.findOrThrow("SteamAPI_SteamNetworkingIdentity_Clear"),
@@ -5510,7 +5559,7 @@ public class SteamFlat_1 extends SteamFlat_2 {
     /**
      * Function descriptor for:
      * {@snippet lang=c :
-     * void SteamAPI_SteamNetworkingIdentity_Clear()
+     * void SteamAPI_SteamNetworkingIdentity_Clear(SteamNetworkingIdentity *ptr)
      * }
      */
     public static FunctionDescriptor SteamAPI_SteamNetworkingIdentity_Clear$descriptor() {
@@ -5520,7 +5569,7 @@ public class SteamFlat_1 extends SteamFlat_2 {
     /**
      * Downcall method handle for:
      * {@snippet lang=c :
-     * void SteamAPI_SteamNetworkingIdentity_Clear()
+     * void SteamAPI_SteamNetworkingIdentity_Clear(SteamNetworkingIdentity *ptr)
      * }
      */
     public static MethodHandle SteamAPI_SteamNetworkingIdentity_Clear$handle() {
@@ -5528,16 +5577,16 @@ public class SteamFlat_1 extends SteamFlat_2 {
     }
     /**
      * {@snippet lang=c :
-     * void SteamAPI_SteamNetworkingIdentity_Clear()
+     * void SteamAPI_SteamNetworkingIdentity_Clear(SteamNetworkingIdentity *ptr)
      * }
      */
-    public static void SteamAPI_SteamNetworkingIdentity_Clear() {
+    public static void SteamAPI_SteamNetworkingIdentity_Clear(MemorySegment ptr) {
         var mh$ = SteamAPI_SteamNetworkingIdentity_Clear.HANDLE;
         try {
             if (TRACE_DOWNCALLS) {
-                traceDowncall("SteamAPI_SteamNetworkingIdentity_Clear");
+                traceDowncall("SteamAPI_SteamNetworkingIdentity_Clear", ptr);
             }
-            mh$.invokeExact();
+            mh$.invokeExact(ptr);
         } catch (Throwable ex$) {
            throw new AssertionError("should not reach here", ex$);
         }
@@ -5545,7 +5594,9 @@ public class SteamFlat_1 extends SteamFlat_2 {
 
     private static class SteamAPI_SteamNetworkingIdentity_IsInvalid {
         public static final FunctionDescriptor DESC = FunctionDescriptor.of(
-            SteamFlat.C_BOOL    );
+            SteamFlat.C_BOOL,
+            SteamFlat.C_POINTER
+        );
 
         public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(
                     SteamFlat.findOrThrow("SteamAPI_SteamNetworkingIdentity_IsInvalid"),
@@ -5555,7 +5606,7 @@ public class SteamFlat_1 extends SteamFlat_2 {
     /**
      * Function descriptor for:
      * {@snippet lang=c :
-     * bool SteamAPI_SteamNetworkingIdentity_IsInvalid()
+     * bool SteamAPI_SteamNetworkingIdentity_IsInvalid(SteamNetworkingIdentity *ptr)
      * }
      */
     public static FunctionDescriptor SteamAPI_SteamNetworkingIdentity_IsInvalid$descriptor() {
@@ -5565,7 +5616,7 @@ public class SteamFlat_1 extends SteamFlat_2 {
     /**
      * Downcall method handle for:
      * {@snippet lang=c :
-     * bool SteamAPI_SteamNetworkingIdentity_IsInvalid()
+     * bool SteamAPI_SteamNetworkingIdentity_IsInvalid(SteamNetworkingIdentity *ptr)
      * }
      */
     public static MethodHandle SteamAPI_SteamNetworkingIdentity_IsInvalid$handle() {
@@ -5573,16 +5624,16 @@ public class SteamFlat_1 extends SteamFlat_2 {
     }
     /**
      * {@snippet lang=c :
-     * bool SteamAPI_SteamNetworkingIdentity_IsInvalid()
+     * bool SteamAPI_SteamNetworkingIdentity_IsInvalid(SteamNetworkingIdentity *ptr)
      * }
      */
-    public static boolean SteamAPI_SteamNetworkingIdentity_IsInvalid() {
+    public static boolean SteamAPI_SteamNetworkingIdentity_IsInvalid(MemorySegment ptr) {
         var mh$ = SteamAPI_SteamNetworkingIdentity_IsInvalid.HANDLE;
         try {
             if (TRACE_DOWNCALLS) {
-                traceDowncall("SteamAPI_SteamNetworkingIdentity_IsInvalid");
+                traceDowncall("SteamAPI_SteamNetworkingIdentity_IsInvalid", ptr);
             }
-            return (boolean)mh$.invokeExact();
+            return (boolean)mh$.invokeExact(ptr);
         } catch (Throwable ex$) {
            throw new AssertionError("should not reach here", ex$);
         }
@@ -5590,6 +5641,7 @@ public class SteamFlat_1 extends SteamFlat_2 {
 
     private static class SteamAPI_SteamNetworkingIdentity_SetSteamID {
         public static final FunctionDescriptor DESC = FunctionDescriptor.ofVoid(
+            SteamFlat.C_POINTER,
             SteamFlat.C_LONG_LONG
         );
 
@@ -5601,7 +5653,7 @@ public class SteamFlat_1 extends SteamFlat_2 {
     /**
      * Function descriptor for:
      * {@snippet lang=c :
-     * void SteamAPI_SteamNetworkingIdentity_SetSteamID(uint64_steamid steamID)
+     * void SteamAPI_SteamNetworkingIdentity_SetSteamID(SteamNetworkingIdentity *ptr, uint64_steamid steamID)
      * }
      */
     public static FunctionDescriptor SteamAPI_SteamNetworkingIdentity_SetSteamID$descriptor() {
@@ -5611,7 +5663,7 @@ public class SteamFlat_1 extends SteamFlat_2 {
     /**
      * Downcall method handle for:
      * {@snippet lang=c :
-     * void SteamAPI_SteamNetworkingIdentity_SetSteamID(uint64_steamid steamID)
+     * void SteamAPI_SteamNetworkingIdentity_SetSteamID(SteamNetworkingIdentity *ptr, uint64_steamid steamID)
      * }
      */
     public static MethodHandle SteamAPI_SteamNetworkingIdentity_SetSteamID$handle() {
@@ -5619,16 +5671,16 @@ public class SteamFlat_1 extends SteamFlat_2 {
     }
     /**
      * {@snippet lang=c :
-     * void SteamAPI_SteamNetworkingIdentity_SetSteamID(uint64_steamid steamID)
+     * void SteamAPI_SteamNetworkingIdentity_SetSteamID(SteamNetworkingIdentity *ptr, uint64_steamid steamID)
      * }
      */
-    public static void SteamAPI_SteamNetworkingIdentity_SetSteamID(long steamID) {
+    public static void SteamAPI_SteamNetworkingIdentity_SetSteamID(MemorySegment ptr, long steamID) {
         var mh$ = SteamAPI_SteamNetworkingIdentity_SetSteamID.HANDLE;
         try {
             if (TRACE_DOWNCALLS) {
-                traceDowncall("SteamAPI_SteamNetworkingIdentity_SetSteamID", steamID);
+                traceDowncall("SteamAPI_SteamNetworkingIdentity_SetSteamID", ptr, steamID);
             }
-            mh$.invokeExact(steamID);
+            mh$.invokeExact(ptr, steamID);
         } catch (Throwable ex$) {
            throw new AssertionError("should not reach here", ex$);
         }
@@ -5636,7 +5688,9 @@ public class SteamFlat_1 extends SteamFlat_2 {
 
     private static class SteamAPI_SteamNetworkingIdentity_GetSteamID {
         public static final FunctionDescriptor DESC = FunctionDescriptor.of(
-            SteamFlat.C_LONG_LONG    );
+            SteamFlat.C_LONG_LONG,
+            SteamFlat.C_POINTER
+        );
 
         public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(
                     SteamFlat.findOrThrow("SteamAPI_SteamNetworkingIdentity_GetSteamID"),
@@ -5646,7 +5700,7 @@ public class SteamFlat_1 extends SteamFlat_2 {
     /**
      * Function descriptor for:
      * {@snippet lang=c :
-     * uint64_steamid SteamAPI_SteamNetworkingIdentity_GetSteamID()
+     * uint64_steamid SteamAPI_SteamNetworkingIdentity_GetSteamID(SteamNetworkingIdentity *ptr)
      * }
      */
     public static FunctionDescriptor SteamAPI_SteamNetworkingIdentity_GetSteamID$descriptor() {
@@ -5656,7 +5710,7 @@ public class SteamFlat_1 extends SteamFlat_2 {
     /**
      * Downcall method handle for:
      * {@snippet lang=c :
-     * uint64_steamid SteamAPI_SteamNetworkingIdentity_GetSteamID()
+     * uint64_steamid SteamAPI_SteamNetworkingIdentity_GetSteamID(SteamNetworkingIdentity *ptr)
      * }
      */
     public static MethodHandle SteamAPI_SteamNetworkingIdentity_GetSteamID$handle() {
@@ -5664,16 +5718,16 @@ public class SteamFlat_1 extends SteamFlat_2 {
     }
     /**
      * {@snippet lang=c :
-     * uint64_steamid SteamAPI_SteamNetworkingIdentity_GetSteamID()
+     * uint64_steamid SteamAPI_SteamNetworkingIdentity_GetSteamID(SteamNetworkingIdentity *ptr)
      * }
      */
-    public static long SteamAPI_SteamNetworkingIdentity_GetSteamID() {
+    public static long SteamAPI_SteamNetworkingIdentity_GetSteamID(MemorySegment ptr) {
         var mh$ = SteamAPI_SteamNetworkingIdentity_GetSteamID.HANDLE;
         try {
             if (TRACE_DOWNCALLS) {
-                traceDowncall("SteamAPI_SteamNetworkingIdentity_GetSteamID");
+                traceDowncall("SteamAPI_SteamNetworkingIdentity_GetSteamID", ptr);
             }
-            return (long)mh$.invokeExact();
+            return (long)mh$.invokeExact(ptr);
         } catch (Throwable ex$) {
            throw new AssertionError("should not reach here", ex$);
         }
@@ -5681,6 +5735,7 @@ public class SteamFlat_1 extends SteamFlat_2 {
 
     private static class SteamAPI_SteamNetworkingIdentity_SetSteamID64 {
         public static final FunctionDescriptor DESC = FunctionDescriptor.ofVoid(
+            SteamFlat.C_POINTER,
             SteamFlat.C_LONG_LONG
         );
 
@@ -5692,7 +5747,7 @@ public class SteamFlat_1 extends SteamFlat_2 {
     /**
      * Function descriptor for:
      * {@snippet lang=c :
-     * void SteamAPI_SteamNetworkingIdentity_SetSteamID64(uint64 steamID)
+     * void SteamAPI_SteamNetworkingIdentity_SetSteamID64(SteamNetworkingIdentity *ptr, uint64 steamID)
      * }
      */
     public static FunctionDescriptor SteamAPI_SteamNetworkingIdentity_SetSteamID64$descriptor() {
@@ -5702,7 +5757,7 @@ public class SteamFlat_1 extends SteamFlat_2 {
     /**
      * Downcall method handle for:
      * {@snippet lang=c :
-     * void SteamAPI_SteamNetworkingIdentity_SetSteamID64(uint64 steamID)
+     * void SteamAPI_SteamNetworkingIdentity_SetSteamID64(SteamNetworkingIdentity *ptr, uint64 steamID)
      * }
      */
     public static MethodHandle SteamAPI_SteamNetworkingIdentity_SetSteamID64$handle() {
@@ -5710,16 +5765,16 @@ public class SteamFlat_1 extends SteamFlat_2 {
     }
     /**
      * {@snippet lang=c :
-     * void SteamAPI_SteamNetworkingIdentity_SetSteamID64(uint64 steamID)
+     * void SteamAPI_SteamNetworkingIdentity_SetSteamID64(SteamNetworkingIdentity *ptr, uint64 steamID)
      * }
      */
-    public static void SteamAPI_SteamNetworkingIdentity_SetSteamID64(long steamID) {
+    public static void SteamAPI_SteamNetworkingIdentity_SetSteamID64(MemorySegment ptr, long steamID) {
         var mh$ = SteamAPI_SteamNetworkingIdentity_SetSteamID64.HANDLE;
         try {
             if (TRACE_DOWNCALLS) {
-                traceDowncall("SteamAPI_SteamNetworkingIdentity_SetSteamID64", steamID);
+                traceDowncall("SteamAPI_SteamNetworkingIdentity_SetSteamID64", ptr, steamID);
             }
-            mh$.invokeExact(steamID);
+            mh$.invokeExact(ptr, steamID);
         } catch (Throwable ex$) {
            throw new AssertionError("should not reach here", ex$);
         }
@@ -5727,7 +5782,9 @@ public class SteamFlat_1 extends SteamFlat_2 {
 
     private static class SteamAPI_SteamNetworkingIdentity_GetSteamID64 {
         public static final FunctionDescriptor DESC = FunctionDescriptor.of(
-            SteamFlat.C_LONG_LONG    );
+            SteamFlat.C_LONG_LONG,
+            SteamFlat.C_POINTER
+        );
 
         public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(
                     SteamFlat.findOrThrow("SteamAPI_SteamNetworkingIdentity_GetSteamID64"),
@@ -5737,7 +5794,7 @@ public class SteamFlat_1 extends SteamFlat_2 {
     /**
      * Function descriptor for:
      * {@snippet lang=c :
-     * uint64 SteamAPI_SteamNetworkingIdentity_GetSteamID64()
+     * uint64 SteamAPI_SteamNetworkingIdentity_GetSteamID64(SteamNetworkingIdentity *ptr)
      * }
      */
     public static FunctionDescriptor SteamAPI_SteamNetworkingIdentity_GetSteamID64$descriptor() {
@@ -5747,7 +5804,7 @@ public class SteamFlat_1 extends SteamFlat_2 {
     /**
      * Downcall method handle for:
      * {@snippet lang=c :
-     * uint64 SteamAPI_SteamNetworkingIdentity_GetSteamID64()
+     * uint64 SteamAPI_SteamNetworkingIdentity_GetSteamID64(SteamNetworkingIdentity *ptr)
      * }
      */
     public static MethodHandle SteamAPI_SteamNetworkingIdentity_GetSteamID64$handle() {
@@ -5755,16 +5812,16 @@ public class SteamFlat_1 extends SteamFlat_2 {
     }
     /**
      * {@snippet lang=c :
-     * uint64 SteamAPI_SteamNetworkingIdentity_GetSteamID64()
+     * uint64 SteamAPI_SteamNetworkingIdentity_GetSteamID64(SteamNetworkingIdentity *ptr)
      * }
      */
-    public static long SteamAPI_SteamNetworkingIdentity_GetSteamID64() {
+    public static long SteamAPI_SteamNetworkingIdentity_GetSteamID64(MemorySegment ptr) {
         var mh$ = SteamAPI_SteamNetworkingIdentity_GetSteamID64.HANDLE;
         try {
             if (TRACE_DOWNCALLS) {
-                traceDowncall("SteamAPI_SteamNetworkingIdentity_GetSteamID64");
+                traceDowncall("SteamAPI_SteamNetworkingIdentity_GetSteamID64", ptr);
             }
-            return (long)mh$.invokeExact();
+            return (long)mh$.invokeExact(ptr);
         } catch (Throwable ex$) {
            throw new AssertionError("should not reach here", ex$);
         }
@@ -5773,6 +5830,7 @@ public class SteamFlat_1 extends SteamFlat_2 {
     private static class SteamAPI_SteamNetworkingIdentity_SetXboxPairwiseID {
         public static final FunctionDescriptor DESC = FunctionDescriptor.of(
             SteamFlat.C_BOOL,
+            SteamFlat.C_POINTER,
             SteamFlat.C_POINTER
         );
 
@@ -5784,7 +5842,7 @@ public class SteamFlat_1 extends SteamFlat_2 {
     /**
      * Function descriptor for:
      * {@snippet lang=c :
-     * bool SteamAPI_SteamNetworkingIdentity_SetXboxPairwiseID(const char *pszString)
+     * bool SteamAPI_SteamNetworkingIdentity_SetXboxPairwiseID(SteamNetworkingIdentity *ptr, const char *pszString)
      * }
      */
     public static FunctionDescriptor SteamAPI_SteamNetworkingIdentity_SetXboxPairwiseID$descriptor() {
@@ -5794,7 +5852,7 @@ public class SteamFlat_1 extends SteamFlat_2 {
     /**
      * Downcall method handle for:
      * {@snippet lang=c :
-     * bool SteamAPI_SteamNetworkingIdentity_SetXboxPairwiseID(const char *pszString)
+     * bool SteamAPI_SteamNetworkingIdentity_SetXboxPairwiseID(SteamNetworkingIdentity *ptr, const char *pszString)
      * }
      */
     public static MethodHandle SteamAPI_SteamNetworkingIdentity_SetXboxPairwiseID$handle() {
@@ -5802,16 +5860,16 @@ public class SteamFlat_1 extends SteamFlat_2 {
     }
     /**
      * {@snippet lang=c :
-     * bool SteamAPI_SteamNetworkingIdentity_SetXboxPairwiseID(const char *pszString)
+     * bool SteamAPI_SteamNetworkingIdentity_SetXboxPairwiseID(SteamNetworkingIdentity *ptr, const char *pszString)
      * }
      */
-    public static boolean SteamAPI_SteamNetworkingIdentity_SetXboxPairwiseID(MemorySegment pszString) {
+    public static boolean SteamAPI_SteamNetworkingIdentity_SetXboxPairwiseID(MemorySegment ptr, MemorySegment pszString) {
         var mh$ = SteamAPI_SteamNetworkingIdentity_SetXboxPairwiseID.HANDLE;
         try {
             if (TRACE_DOWNCALLS) {
-                traceDowncall("SteamAPI_SteamNetworkingIdentity_SetXboxPairwiseID", pszString);
+                traceDowncall("SteamAPI_SteamNetworkingIdentity_SetXboxPairwiseID", ptr, pszString);
             }
-            return (boolean)mh$.invokeExact(pszString);
+            return (boolean)mh$.invokeExact(ptr, pszString);
         } catch (Throwable ex$) {
            throw new AssertionError("should not reach here", ex$);
         }
@@ -5819,7 +5877,9 @@ public class SteamFlat_1 extends SteamFlat_2 {
 
     private static class SteamAPI_SteamNetworkingIdentity_GetXboxPairwiseID {
         public static final FunctionDescriptor DESC = FunctionDescriptor.of(
-            SteamFlat.C_POINTER    );
+            SteamFlat.C_POINTER,
+            SteamFlat.C_POINTER
+        );
 
         public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(
                     SteamFlat.findOrThrow("SteamAPI_SteamNetworkingIdentity_GetXboxPairwiseID"),
@@ -5829,7 +5889,7 @@ public class SteamFlat_1 extends SteamFlat_2 {
     /**
      * Function descriptor for:
      * {@snippet lang=c :
-     * const char *SteamAPI_SteamNetworkingIdentity_GetXboxPairwiseID()
+     * const char *SteamAPI_SteamNetworkingIdentity_GetXboxPairwiseID(SteamNetworkingIdentity *ptr)
      * }
      */
     public static FunctionDescriptor SteamAPI_SteamNetworkingIdentity_GetXboxPairwiseID$descriptor() {
@@ -5839,7 +5899,7 @@ public class SteamFlat_1 extends SteamFlat_2 {
     /**
      * Downcall method handle for:
      * {@snippet lang=c :
-     * const char *SteamAPI_SteamNetworkingIdentity_GetXboxPairwiseID()
+     * const char *SteamAPI_SteamNetworkingIdentity_GetXboxPairwiseID(SteamNetworkingIdentity *ptr)
      * }
      */
     public static MethodHandle SteamAPI_SteamNetworkingIdentity_GetXboxPairwiseID$handle() {
@@ -5847,16 +5907,16 @@ public class SteamFlat_1 extends SteamFlat_2 {
     }
     /**
      * {@snippet lang=c :
-     * const char *SteamAPI_SteamNetworkingIdentity_GetXboxPairwiseID()
+     * const char *SteamAPI_SteamNetworkingIdentity_GetXboxPairwiseID(SteamNetworkingIdentity *ptr)
      * }
      */
-    public static MemorySegment SteamAPI_SteamNetworkingIdentity_GetXboxPairwiseID() {
+    public static MemorySegment SteamAPI_SteamNetworkingIdentity_GetXboxPairwiseID(MemorySegment ptr) {
         var mh$ = SteamAPI_SteamNetworkingIdentity_GetXboxPairwiseID.HANDLE;
         try {
             if (TRACE_DOWNCALLS) {
-                traceDowncall("SteamAPI_SteamNetworkingIdentity_GetXboxPairwiseID");
+                traceDowncall("SteamAPI_SteamNetworkingIdentity_GetXboxPairwiseID", ptr);
             }
-            return (MemorySegment)mh$.invokeExact();
+            return (MemorySegment)mh$.invokeExact(ptr);
         } catch (Throwable ex$) {
            throw new AssertionError("should not reach here", ex$);
         }
@@ -5864,6 +5924,7 @@ public class SteamFlat_1 extends SteamFlat_2 {
 
     private static class SteamAPI_SteamNetworkingIdentity_SetPSNID {
         public static final FunctionDescriptor DESC = FunctionDescriptor.ofVoid(
+            SteamFlat.C_POINTER,
             SteamFlat.C_LONG_LONG
         );
 
@@ -5875,7 +5936,7 @@ public class SteamFlat_1 extends SteamFlat_2 {
     /**
      * Function descriptor for:
      * {@snippet lang=c :
-     * void SteamAPI_SteamNetworkingIdentity_SetPSNID(uint64 id)
+     * void SteamAPI_SteamNetworkingIdentity_SetPSNID(SteamNetworkingIdentity *ptr, uint64 id)
      * }
      */
     public static FunctionDescriptor SteamAPI_SteamNetworkingIdentity_SetPSNID$descriptor() {
@@ -5885,7 +5946,7 @@ public class SteamFlat_1 extends SteamFlat_2 {
     /**
      * Downcall method handle for:
      * {@snippet lang=c :
-     * void SteamAPI_SteamNetworkingIdentity_SetPSNID(uint64 id)
+     * void SteamAPI_SteamNetworkingIdentity_SetPSNID(SteamNetworkingIdentity *ptr, uint64 id)
      * }
      */
     public static MethodHandle SteamAPI_SteamNetworkingIdentity_SetPSNID$handle() {
@@ -5893,16 +5954,16 @@ public class SteamFlat_1 extends SteamFlat_2 {
     }
     /**
      * {@snippet lang=c :
-     * void SteamAPI_SteamNetworkingIdentity_SetPSNID(uint64 id)
+     * void SteamAPI_SteamNetworkingIdentity_SetPSNID(SteamNetworkingIdentity *ptr, uint64 id)
      * }
      */
-    public static void SteamAPI_SteamNetworkingIdentity_SetPSNID(long id) {
+    public static void SteamAPI_SteamNetworkingIdentity_SetPSNID(MemorySegment ptr, long id) {
         var mh$ = SteamAPI_SteamNetworkingIdentity_SetPSNID.HANDLE;
         try {
             if (TRACE_DOWNCALLS) {
-                traceDowncall("SteamAPI_SteamNetworkingIdentity_SetPSNID", id);
+                traceDowncall("SteamAPI_SteamNetworkingIdentity_SetPSNID", ptr, id);
             }
-            mh$.invokeExact(id);
+            mh$.invokeExact(ptr, id);
         } catch (Throwable ex$) {
            throw new AssertionError("should not reach here", ex$);
         }
@@ -5910,7 +5971,9 @@ public class SteamFlat_1 extends SteamFlat_2 {
 
     private static class SteamAPI_SteamNetworkingIdentity_GetPSNID {
         public static final FunctionDescriptor DESC = FunctionDescriptor.of(
-            SteamFlat.C_LONG_LONG    );
+            SteamFlat.C_LONG_LONG,
+            SteamFlat.C_POINTER
+        );
 
         public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(
                     SteamFlat.findOrThrow("SteamAPI_SteamNetworkingIdentity_GetPSNID"),
@@ -5920,7 +5983,7 @@ public class SteamFlat_1 extends SteamFlat_2 {
     /**
      * Function descriptor for:
      * {@snippet lang=c :
-     * uint64 SteamAPI_SteamNetworkingIdentity_GetPSNID()
+     * uint64 SteamAPI_SteamNetworkingIdentity_GetPSNID(SteamNetworkingIdentity *ptr)
      * }
      */
     public static FunctionDescriptor SteamAPI_SteamNetworkingIdentity_GetPSNID$descriptor() {
@@ -5930,7 +5993,7 @@ public class SteamFlat_1 extends SteamFlat_2 {
     /**
      * Downcall method handle for:
      * {@snippet lang=c :
-     * uint64 SteamAPI_SteamNetworkingIdentity_GetPSNID()
+     * uint64 SteamAPI_SteamNetworkingIdentity_GetPSNID(SteamNetworkingIdentity *ptr)
      * }
      */
     public static MethodHandle SteamAPI_SteamNetworkingIdentity_GetPSNID$handle() {
@@ -5938,16 +6001,16 @@ public class SteamFlat_1 extends SteamFlat_2 {
     }
     /**
      * {@snippet lang=c :
-     * uint64 SteamAPI_SteamNetworkingIdentity_GetPSNID()
+     * uint64 SteamAPI_SteamNetworkingIdentity_GetPSNID(SteamNetworkingIdentity *ptr)
      * }
      */
-    public static long SteamAPI_SteamNetworkingIdentity_GetPSNID() {
+    public static long SteamAPI_SteamNetworkingIdentity_GetPSNID(MemorySegment ptr) {
         var mh$ = SteamAPI_SteamNetworkingIdentity_GetPSNID.HANDLE;
         try {
             if (TRACE_DOWNCALLS) {
-                traceDowncall("SteamAPI_SteamNetworkingIdentity_GetPSNID");
+                traceDowncall("SteamAPI_SteamNetworkingIdentity_GetPSNID", ptr);
             }
-            return (long)mh$.invokeExact();
+            return (long)mh$.invokeExact(ptr);
         } catch (Throwable ex$) {
            throw new AssertionError("should not reach here", ex$);
         }
@@ -5955,6 +6018,7 @@ public class SteamFlat_1 extends SteamFlat_2 {
 
     private static class SteamAPI_SteamNetworkingIdentity_SetStadiaID {
         public static final FunctionDescriptor DESC = FunctionDescriptor.ofVoid(
+            SteamFlat.C_POINTER,
             SteamFlat.C_LONG_LONG
         );
 
@@ -5966,7 +6030,7 @@ public class SteamFlat_1 extends SteamFlat_2 {
     /**
      * Function descriptor for:
      * {@snippet lang=c :
-     * void SteamAPI_SteamNetworkingIdentity_SetStadiaID(uint64 id)
+     * void SteamAPI_SteamNetworkingIdentity_SetStadiaID(SteamNetworkingIdentity *ptr, uint64 id)
      * }
      */
     public static FunctionDescriptor SteamAPI_SteamNetworkingIdentity_SetStadiaID$descriptor() {
@@ -5976,7 +6040,7 @@ public class SteamFlat_1 extends SteamFlat_2 {
     /**
      * Downcall method handle for:
      * {@snippet lang=c :
-     * void SteamAPI_SteamNetworkingIdentity_SetStadiaID(uint64 id)
+     * void SteamAPI_SteamNetworkingIdentity_SetStadiaID(SteamNetworkingIdentity *ptr, uint64 id)
      * }
      */
     public static MethodHandle SteamAPI_SteamNetworkingIdentity_SetStadiaID$handle() {
@@ -5984,16 +6048,16 @@ public class SteamFlat_1 extends SteamFlat_2 {
     }
     /**
      * {@snippet lang=c :
-     * void SteamAPI_SteamNetworkingIdentity_SetStadiaID(uint64 id)
+     * void SteamAPI_SteamNetworkingIdentity_SetStadiaID(SteamNetworkingIdentity *ptr, uint64 id)
      * }
      */
-    public static void SteamAPI_SteamNetworkingIdentity_SetStadiaID(long id) {
+    public static void SteamAPI_SteamNetworkingIdentity_SetStadiaID(MemorySegment ptr, long id) {
         var mh$ = SteamAPI_SteamNetworkingIdentity_SetStadiaID.HANDLE;
         try {
             if (TRACE_DOWNCALLS) {
-                traceDowncall("SteamAPI_SteamNetworkingIdentity_SetStadiaID", id);
+                traceDowncall("SteamAPI_SteamNetworkingIdentity_SetStadiaID", ptr, id);
             }
-            mh$.invokeExact(id);
+            mh$.invokeExact(ptr, id);
         } catch (Throwable ex$) {
            throw new AssertionError("should not reach here", ex$);
         }
@@ -6001,7 +6065,9 @@ public class SteamFlat_1 extends SteamFlat_2 {
 
     private static class SteamAPI_SteamNetworkingIdentity_GetStadiaID {
         public static final FunctionDescriptor DESC = FunctionDescriptor.of(
-            SteamFlat.C_LONG_LONG    );
+            SteamFlat.C_LONG_LONG,
+            SteamFlat.C_POINTER
+        );
 
         public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(
                     SteamFlat.findOrThrow("SteamAPI_SteamNetworkingIdentity_GetStadiaID"),
@@ -6011,7 +6077,7 @@ public class SteamFlat_1 extends SteamFlat_2 {
     /**
      * Function descriptor for:
      * {@snippet lang=c :
-     * uint64 SteamAPI_SteamNetworkingIdentity_GetStadiaID()
+     * uint64 SteamAPI_SteamNetworkingIdentity_GetStadiaID(SteamNetworkingIdentity *ptr)
      * }
      */
     public static FunctionDescriptor SteamAPI_SteamNetworkingIdentity_GetStadiaID$descriptor() {
@@ -6021,7 +6087,7 @@ public class SteamFlat_1 extends SteamFlat_2 {
     /**
      * Downcall method handle for:
      * {@snippet lang=c :
-     * uint64 SteamAPI_SteamNetworkingIdentity_GetStadiaID()
+     * uint64 SteamAPI_SteamNetworkingIdentity_GetStadiaID(SteamNetworkingIdentity *ptr)
      * }
      */
     public static MethodHandle SteamAPI_SteamNetworkingIdentity_GetStadiaID$handle() {
@@ -6029,16 +6095,16 @@ public class SteamFlat_1 extends SteamFlat_2 {
     }
     /**
      * {@snippet lang=c :
-     * uint64 SteamAPI_SteamNetworkingIdentity_GetStadiaID()
+     * uint64 SteamAPI_SteamNetworkingIdentity_GetStadiaID(SteamNetworkingIdentity *ptr)
      * }
      */
-    public static long SteamAPI_SteamNetworkingIdentity_GetStadiaID() {
+    public static long SteamAPI_SteamNetworkingIdentity_GetStadiaID(MemorySegment ptr) {
         var mh$ = SteamAPI_SteamNetworkingIdentity_GetStadiaID.HANDLE;
         try {
             if (TRACE_DOWNCALLS) {
-                traceDowncall("SteamAPI_SteamNetworkingIdentity_GetStadiaID");
+                traceDowncall("SteamAPI_SteamNetworkingIdentity_GetStadiaID", ptr);
             }
-            return (long)mh$.invokeExact();
+            return (long)mh$.invokeExact(ptr);
         } catch (Throwable ex$) {
            throw new AssertionError("should not reach here", ex$);
         }
@@ -6046,6 +6112,7 @@ public class SteamFlat_1 extends SteamFlat_2 {
 
     private static class SteamAPI_SteamNetworkingIdentity_SetIPAddr {
         public static final FunctionDescriptor DESC = FunctionDescriptor.ofVoid(
+            SteamFlat.C_POINTER,
             SteamFlat.C_POINTER
         );
 
@@ -6057,7 +6124,7 @@ public class SteamFlat_1 extends SteamFlat_2 {
     /**
      * Function descriptor for:
      * {@snippet lang=c :
-     * void SteamAPI_SteamNetworkingIdentity_SetIPAddr(const SteamNetworkingIPAddr *addr)
+     * void SteamAPI_SteamNetworkingIdentity_SetIPAddr(SteamNetworkingIdentity *ptr, const SteamNetworkingIPAddr *addr)
      * }
      */
     public static FunctionDescriptor SteamAPI_SteamNetworkingIdentity_SetIPAddr$descriptor() {
@@ -6067,7 +6134,7 @@ public class SteamFlat_1 extends SteamFlat_2 {
     /**
      * Downcall method handle for:
      * {@snippet lang=c :
-     * void SteamAPI_SteamNetworkingIdentity_SetIPAddr(const SteamNetworkingIPAddr *addr)
+     * void SteamAPI_SteamNetworkingIdentity_SetIPAddr(SteamNetworkingIdentity *ptr, const SteamNetworkingIPAddr *addr)
      * }
      */
     public static MethodHandle SteamAPI_SteamNetworkingIdentity_SetIPAddr$handle() {
@@ -6075,16 +6142,16 @@ public class SteamFlat_1 extends SteamFlat_2 {
     }
     /**
      * {@snippet lang=c :
-     * void SteamAPI_SteamNetworkingIdentity_SetIPAddr(const SteamNetworkingIPAddr *addr)
+     * void SteamAPI_SteamNetworkingIdentity_SetIPAddr(SteamNetworkingIdentity *ptr, const SteamNetworkingIPAddr *addr)
      * }
      */
-    public static void SteamAPI_SteamNetworkingIdentity_SetIPAddr(MemorySegment addr) {
+    public static void SteamAPI_SteamNetworkingIdentity_SetIPAddr(MemorySegment ptr, MemorySegment addr) {
         var mh$ = SteamAPI_SteamNetworkingIdentity_SetIPAddr.HANDLE;
         try {
             if (TRACE_DOWNCALLS) {
-                traceDowncall("SteamAPI_SteamNetworkingIdentity_SetIPAddr", addr);
+                traceDowncall("SteamAPI_SteamNetworkingIdentity_SetIPAddr", ptr, addr);
             }
-            mh$.invokeExact(addr);
+            mh$.invokeExact(ptr, addr);
         } catch (Throwable ex$) {
            throw new AssertionError("should not reach here", ex$);
         }
@@ -6092,7 +6159,9 @@ public class SteamFlat_1 extends SteamFlat_2 {
 
     private static class SteamAPI_SteamNetworkingIdentity_GetIPAddr {
         public static final FunctionDescriptor DESC = FunctionDescriptor.of(
-            SteamFlat.C_POINTER    );
+            SteamFlat.C_POINTER,
+            SteamFlat.C_POINTER
+        );
 
         public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(
                     SteamFlat.findOrThrow("SteamAPI_SteamNetworkingIdentity_GetIPAddr"),
@@ -6102,7 +6171,7 @@ public class SteamFlat_1 extends SteamFlat_2 {
     /**
      * Function descriptor for:
      * {@snippet lang=c :
-     * const SteamNetworkingIPAddr *SteamAPI_SteamNetworkingIdentity_GetIPAddr()
+     * const SteamNetworkingIPAddr *SteamAPI_SteamNetworkingIdentity_GetIPAddr(SteamNetworkingIdentity *ptr)
      * }
      */
     public static FunctionDescriptor SteamAPI_SteamNetworkingIdentity_GetIPAddr$descriptor() {
@@ -6112,7 +6181,7 @@ public class SteamFlat_1 extends SteamFlat_2 {
     /**
      * Downcall method handle for:
      * {@snippet lang=c :
-     * const SteamNetworkingIPAddr *SteamAPI_SteamNetworkingIdentity_GetIPAddr()
+     * const SteamNetworkingIPAddr *SteamAPI_SteamNetworkingIdentity_GetIPAddr(SteamNetworkingIdentity *ptr)
      * }
      */
     public static MethodHandle SteamAPI_SteamNetworkingIdentity_GetIPAddr$handle() {
@@ -6120,16 +6189,16 @@ public class SteamFlat_1 extends SteamFlat_2 {
     }
     /**
      * {@snippet lang=c :
-     * const SteamNetworkingIPAddr *SteamAPI_SteamNetworkingIdentity_GetIPAddr()
+     * const SteamNetworkingIPAddr *SteamAPI_SteamNetworkingIdentity_GetIPAddr(SteamNetworkingIdentity *ptr)
      * }
      */
-    public static MemorySegment SteamAPI_SteamNetworkingIdentity_GetIPAddr() {
+    public static MemorySegment SteamAPI_SteamNetworkingIdentity_GetIPAddr(MemorySegment ptr) {
         var mh$ = SteamAPI_SteamNetworkingIdentity_GetIPAddr.HANDLE;
         try {
             if (TRACE_DOWNCALLS) {
-                traceDowncall("SteamAPI_SteamNetworkingIdentity_GetIPAddr");
+                traceDowncall("SteamAPI_SteamNetworkingIdentity_GetIPAddr", ptr);
             }
-            return (MemorySegment)mh$.invokeExact();
+            return (MemorySegment)mh$.invokeExact(ptr);
         } catch (Throwable ex$) {
            throw new AssertionError("should not reach here", ex$);
         }
@@ -6137,6 +6206,7 @@ public class SteamFlat_1 extends SteamFlat_2 {
 
     private static class SteamAPI_SteamNetworkingIdentity_SetIPv4Addr {
         public static final FunctionDescriptor DESC = FunctionDescriptor.ofVoid(
+            SteamFlat.C_POINTER,
             SteamFlat.C_INT,
             SteamFlat.C_SHORT
         );
@@ -6149,7 +6219,7 @@ public class SteamFlat_1 extends SteamFlat_2 {
     /**
      * Function descriptor for:
      * {@snippet lang=c :
-     * void SteamAPI_SteamNetworkingIdentity_SetIPv4Addr(uint32 nIPv4, uint16 nPort)
+     * void SteamAPI_SteamNetworkingIdentity_SetIPv4Addr(SteamNetworkingIdentity *ptr, uint32 nIPv4, uint16 nPort)
      * }
      */
     public static FunctionDescriptor SteamAPI_SteamNetworkingIdentity_SetIPv4Addr$descriptor() {
@@ -6159,7 +6229,7 @@ public class SteamFlat_1 extends SteamFlat_2 {
     /**
      * Downcall method handle for:
      * {@snippet lang=c :
-     * void SteamAPI_SteamNetworkingIdentity_SetIPv4Addr(uint32 nIPv4, uint16 nPort)
+     * void SteamAPI_SteamNetworkingIdentity_SetIPv4Addr(SteamNetworkingIdentity *ptr, uint32 nIPv4, uint16 nPort)
      * }
      */
     public static MethodHandle SteamAPI_SteamNetworkingIdentity_SetIPv4Addr$handle() {
@@ -6167,16 +6237,16 @@ public class SteamFlat_1 extends SteamFlat_2 {
     }
     /**
      * {@snippet lang=c :
-     * void SteamAPI_SteamNetworkingIdentity_SetIPv4Addr(uint32 nIPv4, uint16 nPort)
+     * void SteamAPI_SteamNetworkingIdentity_SetIPv4Addr(SteamNetworkingIdentity *ptr, uint32 nIPv4, uint16 nPort)
      * }
      */
-    public static void SteamAPI_SteamNetworkingIdentity_SetIPv4Addr(int nIPv4, short nPort) {
+    public static void SteamAPI_SteamNetworkingIdentity_SetIPv4Addr(MemorySegment ptr, int nIPv4, short nPort) {
         var mh$ = SteamAPI_SteamNetworkingIdentity_SetIPv4Addr.HANDLE;
         try {
             if (TRACE_DOWNCALLS) {
-                traceDowncall("SteamAPI_SteamNetworkingIdentity_SetIPv4Addr", nIPv4, nPort);
+                traceDowncall("SteamAPI_SteamNetworkingIdentity_SetIPv4Addr", ptr, nIPv4, nPort);
             }
-            mh$.invokeExact(nIPv4, nPort);
+            mh$.invokeExact(ptr, nIPv4, nPort);
         } catch (Throwable ex$) {
            throw new AssertionError("should not reach here", ex$);
         }
@@ -6184,7 +6254,9 @@ public class SteamFlat_1 extends SteamFlat_2 {
 
     private static class SteamAPI_SteamNetworkingIdentity_GetIPv4 {
         public static final FunctionDescriptor DESC = FunctionDescriptor.of(
-            SteamFlat.C_INT    );
+            SteamFlat.C_INT,
+            SteamFlat.C_POINTER
+        );
 
         public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(
                     SteamFlat.findOrThrow("SteamAPI_SteamNetworkingIdentity_GetIPv4"),
@@ -6194,7 +6266,7 @@ public class SteamFlat_1 extends SteamFlat_2 {
     /**
      * Function descriptor for:
      * {@snippet lang=c :
-     * uint32 SteamAPI_SteamNetworkingIdentity_GetIPv4()
+     * uint32 SteamAPI_SteamNetworkingIdentity_GetIPv4(SteamNetworkingIdentity *ptr)
      * }
      */
     public static FunctionDescriptor SteamAPI_SteamNetworkingIdentity_GetIPv4$descriptor() {
@@ -6204,7 +6276,7 @@ public class SteamFlat_1 extends SteamFlat_2 {
     /**
      * Downcall method handle for:
      * {@snippet lang=c :
-     * uint32 SteamAPI_SteamNetworkingIdentity_GetIPv4()
+     * uint32 SteamAPI_SteamNetworkingIdentity_GetIPv4(SteamNetworkingIdentity *ptr)
      * }
      */
     public static MethodHandle SteamAPI_SteamNetworkingIdentity_GetIPv4$handle() {
@@ -6212,16 +6284,16 @@ public class SteamFlat_1 extends SteamFlat_2 {
     }
     /**
      * {@snippet lang=c :
-     * uint32 SteamAPI_SteamNetworkingIdentity_GetIPv4()
+     * uint32 SteamAPI_SteamNetworkingIdentity_GetIPv4(SteamNetworkingIdentity *ptr)
      * }
      */
-    public static int SteamAPI_SteamNetworkingIdentity_GetIPv4() {
+    public static int SteamAPI_SteamNetworkingIdentity_GetIPv4(MemorySegment ptr) {
         var mh$ = SteamAPI_SteamNetworkingIdentity_GetIPv4.HANDLE;
         try {
             if (TRACE_DOWNCALLS) {
-                traceDowncall("SteamAPI_SteamNetworkingIdentity_GetIPv4");
+                traceDowncall("SteamAPI_SteamNetworkingIdentity_GetIPv4", ptr);
             }
-            return (int)mh$.invokeExact();
+            return (int)mh$.invokeExact(ptr);
         } catch (Throwable ex$) {
            throw new AssertionError("should not reach here", ex$);
         }
@@ -6229,7 +6301,9 @@ public class SteamFlat_1 extends SteamFlat_2 {
 
     private static class SteamAPI_SteamNetworkingIdentity_GetFakeIPType {
         public static final FunctionDescriptor DESC = FunctionDescriptor.of(
-            SteamFlat.C_INT    );
+            SteamFlat.C_INT,
+            SteamFlat.C_POINTER
+        );
 
         public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(
                     SteamFlat.findOrThrow("SteamAPI_SteamNetworkingIdentity_GetFakeIPType"),
@@ -6239,7 +6313,7 @@ public class SteamFlat_1 extends SteamFlat_2 {
     /**
      * Function descriptor for:
      * {@snippet lang=c :
-     * ESteamNetworkingFakeIPType SteamAPI_SteamNetworkingIdentity_GetFakeIPType()
+     * ESteamNetworkingFakeIPType SteamAPI_SteamNetworkingIdentity_GetFakeIPType(SteamNetworkingIdentity *ptr)
      * }
      */
     public static FunctionDescriptor SteamAPI_SteamNetworkingIdentity_GetFakeIPType$descriptor() {
@@ -6249,7 +6323,7 @@ public class SteamFlat_1 extends SteamFlat_2 {
     /**
      * Downcall method handle for:
      * {@snippet lang=c :
-     * ESteamNetworkingFakeIPType SteamAPI_SteamNetworkingIdentity_GetFakeIPType()
+     * ESteamNetworkingFakeIPType SteamAPI_SteamNetworkingIdentity_GetFakeIPType(SteamNetworkingIdentity *ptr)
      * }
      */
     public static MethodHandle SteamAPI_SteamNetworkingIdentity_GetFakeIPType$handle() {
@@ -6257,16 +6331,16 @@ public class SteamFlat_1 extends SteamFlat_2 {
     }
     /**
      * {@snippet lang=c :
-     * ESteamNetworkingFakeIPType SteamAPI_SteamNetworkingIdentity_GetFakeIPType()
+     * ESteamNetworkingFakeIPType SteamAPI_SteamNetworkingIdentity_GetFakeIPType(SteamNetworkingIdentity *ptr)
      * }
      */
-    public static int SteamAPI_SteamNetworkingIdentity_GetFakeIPType() {
+    public static int SteamAPI_SteamNetworkingIdentity_GetFakeIPType(MemorySegment ptr) {
         var mh$ = SteamAPI_SteamNetworkingIdentity_GetFakeIPType.HANDLE;
         try {
             if (TRACE_DOWNCALLS) {
-                traceDowncall("SteamAPI_SteamNetworkingIdentity_GetFakeIPType");
+                traceDowncall("SteamAPI_SteamNetworkingIdentity_GetFakeIPType", ptr);
             }
-            return (int)mh$.invokeExact();
+            return (int)mh$.invokeExact(ptr);
         } catch (Throwable ex$) {
            throw new AssertionError("should not reach here", ex$);
         }
@@ -6274,7 +6348,9 @@ public class SteamFlat_1 extends SteamFlat_2 {
 
     private static class SteamAPI_SteamNetworkingIdentity_IsFakeIP {
         public static final FunctionDescriptor DESC = FunctionDescriptor.of(
-            SteamFlat.C_BOOL    );
+            SteamFlat.C_BOOL,
+            SteamFlat.C_POINTER
+        );
 
         public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(
                     SteamFlat.findOrThrow("SteamAPI_SteamNetworkingIdentity_IsFakeIP"),
@@ -6284,7 +6360,7 @@ public class SteamFlat_1 extends SteamFlat_2 {
     /**
      * Function descriptor for:
      * {@snippet lang=c :
-     * bool SteamAPI_SteamNetworkingIdentity_IsFakeIP()
+     * bool SteamAPI_SteamNetworkingIdentity_IsFakeIP(SteamNetworkingIdentity *ptr)
      * }
      */
     public static FunctionDescriptor SteamAPI_SteamNetworkingIdentity_IsFakeIP$descriptor() {
@@ -6294,7 +6370,7 @@ public class SteamFlat_1 extends SteamFlat_2 {
     /**
      * Downcall method handle for:
      * {@snippet lang=c :
-     * bool SteamAPI_SteamNetworkingIdentity_IsFakeIP()
+     * bool SteamAPI_SteamNetworkingIdentity_IsFakeIP(SteamNetworkingIdentity *ptr)
      * }
      */
     public static MethodHandle SteamAPI_SteamNetworkingIdentity_IsFakeIP$handle() {
@@ -6302,23 +6378,25 @@ public class SteamFlat_1 extends SteamFlat_2 {
     }
     /**
      * {@snippet lang=c :
-     * bool SteamAPI_SteamNetworkingIdentity_IsFakeIP()
+     * bool SteamAPI_SteamNetworkingIdentity_IsFakeIP(SteamNetworkingIdentity *ptr)
      * }
      */
-    public static boolean SteamAPI_SteamNetworkingIdentity_IsFakeIP() {
+    public static boolean SteamAPI_SteamNetworkingIdentity_IsFakeIP(MemorySegment ptr) {
         var mh$ = SteamAPI_SteamNetworkingIdentity_IsFakeIP.HANDLE;
         try {
             if (TRACE_DOWNCALLS) {
-                traceDowncall("SteamAPI_SteamNetworkingIdentity_IsFakeIP");
+                traceDowncall("SteamAPI_SteamNetworkingIdentity_IsFakeIP", ptr);
             }
-            return (boolean)mh$.invokeExact();
+            return (boolean)mh$.invokeExact(ptr);
         } catch (Throwable ex$) {
            throw new AssertionError("should not reach here", ex$);
         }
     }
 
     private static class SteamAPI_SteamNetworkingIdentity_SetLocalHost {
-        public static final FunctionDescriptor DESC = FunctionDescriptor.ofVoid(    );
+        public static final FunctionDescriptor DESC = FunctionDescriptor.ofVoid(
+            SteamFlat.C_POINTER
+        );
 
         public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(
                     SteamFlat.findOrThrow("SteamAPI_SteamNetworkingIdentity_SetLocalHost"),
@@ -6328,7 +6406,7 @@ public class SteamFlat_1 extends SteamFlat_2 {
     /**
      * Function descriptor for:
      * {@snippet lang=c :
-     * void SteamAPI_SteamNetworkingIdentity_SetLocalHost()
+     * void SteamAPI_SteamNetworkingIdentity_SetLocalHost(SteamNetworkingIdentity *ptr)
      * }
      */
     public static FunctionDescriptor SteamAPI_SteamNetworkingIdentity_SetLocalHost$descriptor() {
@@ -6338,7 +6416,7 @@ public class SteamFlat_1 extends SteamFlat_2 {
     /**
      * Downcall method handle for:
      * {@snippet lang=c :
-     * void SteamAPI_SteamNetworkingIdentity_SetLocalHost()
+     * void SteamAPI_SteamNetworkingIdentity_SetLocalHost(SteamNetworkingIdentity *ptr)
      * }
      */
     public static MethodHandle SteamAPI_SteamNetworkingIdentity_SetLocalHost$handle() {
@@ -6346,16 +6424,16 @@ public class SteamFlat_1 extends SteamFlat_2 {
     }
     /**
      * {@snippet lang=c :
-     * void SteamAPI_SteamNetworkingIdentity_SetLocalHost()
+     * void SteamAPI_SteamNetworkingIdentity_SetLocalHost(SteamNetworkingIdentity *ptr)
      * }
      */
-    public static void SteamAPI_SteamNetworkingIdentity_SetLocalHost() {
+    public static void SteamAPI_SteamNetworkingIdentity_SetLocalHost(MemorySegment ptr) {
         var mh$ = SteamAPI_SteamNetworkingIdentity_SetLocalHost.HANDLE;
         try {
             if (TRACE_DOWNCALLS) {
-                traceDowncall("SteamAPI_SteamNetworkingIdentity_SetLocalHost");
+                traceDowncall("SteamAPI_SteamNetworkingIdentity_SetLocalHost", ptr);
             }
-            mh$.invokeExact();
+            mh$.invokeExact(ptr);
         } catch (Throwable ex$) {
            throw new AssertionError("should not reach here", ex$);
         }
@@ -6363,7 +6441,9 @@ public class SteamFlat_1 extends SteamFlat_2 {
 
     private static class SteamAPI_SteamNetworkingIdentity_IsLocalHost {
         public static final FunctionDescriptor DESC = FunctionDescriptor.of(
-            SteamFlat.C_BOOL    );
+            SteamFlat.C_BOOL,
+            SteamFlat.C_POINTER
+        );
 
         public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(
                     SteamFlat.findOrThrow("SteamAPI_SteamNetworkingIdentity_IsLocalHost"),
@@ -6373,7 +6453,7 @@ public class SteamFlat_1 extends SteamFlat_2 {
     /**
      * Function descriptor for:
      * {@snippet lang=c :
-     * bool SteamAPI_SteamNetworkingIdentity_IsLocalHost()
+     * bool SteamAPI_SteamNetworkingIdentity_IsLocalHost(SteamNetworkingIdentity *ptr)
      * }
      */
     public static FunctionDescriptor SteamAPI_SteamNetworkingIdentity_IsLocalHost$descriptor() {
@@ -6383,7 +6463,7 @@ public class SteamFlat_1 extends SteamFlat_2 {
     /**
      * Downcall method handle for:
      * {@snippet lang=c :
-     * bool SteamAPI_SteamNetworkingIdentity_IsLocalHost()
+     * bool SteamAPI_SteamNetworkingIdentity_IsLocalHost(SteamNetworkingIdentity *ptr)
      * }
      */
     public static MethodHandle SteamAPI_SteamNetworkingIdentity_IsLocalHost$handle() {
@@ -6391,16 +6471,16 @@ public class SteamFlat_1 extends SteamFlat_2 {
     }
     /**
      * {@snippet lang=c :
-     * bool SteamAPI_SteamNetworkingIdentity_IsLocalHost()
+     * bool SteamAPI_SteamNetworkingIdentity_IsLocalHost(SteamNetworkingIdentity *ptr)
      * }
      */
-    public static boolean SteamAPI_SteamNetworkingIdentity_IsLocalHost() {
+    public static boolean SteamAPI_SteamNetworkingIdentity_IsLocalHost(MemorySegment ptr) {
         var mh$ = SteamAPI_SteamNetworkingIdentity_IsLocalHost.HANDLE;
         try {
             if (TRACE_DOWNCALLS) {
-                traceDowncall("SteamAPI_SteamNetworkingIdentity_IsLocalHost");
+                traceDowncall("SteamAPI_SteamNetworkingIdentity_IsLocalHost", ptr);
             }
-            return (boolean)mh$.invokeExact();
+            return (boolean)mh$.invokeExact(ptr);
         } catch (Throwable ex$) {
            throw new AssertionError("should not reach here", ex$);
         }
@@ -6409,6 +6489,7 @@ public class SteamFlat_1 extends SteamFlat_2 {
     private static class SteamAPI_SteamNetworkingIdentity_SetGenericString {
         public static final FunctionDescriptor DESC = FunctionDescriptor.of(
             SteamFlat.C_BOOL,
+            SteamFlat.C_POINTER,
             SteamFlat.C_POINTER
         );
 
@@ -6420,7 +6501,7 @@ public class SteamFlat_1 extends SteamFlat_2 {
     /**
      * Function descriptor for:
      * {@snippet lang=c :
-     * bool SteamAPI_SteamNetworkingIdentity_SetGenericString(const char *pszString)
+     * bool SteamAPI_SteamNetworkingIdentity_SetGenericString(SteamNetworkingIdentity *ptr, const char *pszString)
      * }
      */
     public static FunctionDescriptor SteamAPI_SteamNetworkingIdentity_SetGenericString$descriptor() {
@@ -6430,7 +6511,7 @@ public class SteamFlat_1 extends SteamFlat_2 {
     /**
      * Downcall method handle for:
      * {@snippet lang=c :
-     * bool SteamAPI_SteamNetworkingIdentity_SetGenericString(const char *pszString)
+     * bool SteamAPI_SteamNetworkingIdentity_SetGenericString(SteamNetworkingIdentity *ptr, const char *pszString)
      * }
      */
     public static MethodHandle SteamAPI_SteamNetworkingIdentity_SetGenericString$handle() {
@@ -6438,16 +6519,16 @@ public class SteamFlat_1 extends SteamFlat_2 {
     }
     /**
      * {@snippet lang=c :
-     * bool SteamAPI_SteamNetworkingIdentity_SetGenericString(const char *pszString)
+     * bool SteamAPI_SteamNetworkingIdentity_SetGenericString(SteamNetworkingIdentity *ptr, const char *pszString)
      * }
      */
-    public static boolean SteamAPI_SteamNetworkingIdentity_SetGenericString(MemorySegment pszString) {
+    public static boolean SteamAPI_SteamNetworkingIdentity_SetGenericString(MemorySegment ptr, MemorySegment pszString) {
         var mh$ = SteamAPI_SteamNetworkingIdentity_SetGenericString.HANDLE;
         try {
             if (TRACE_DOWNCALLS) {
-                traceDowncall("SteamAPI_SteamNetworkingIdentity_SetGenericString", pszString);
+                traceDowncall("SteamAPI_SteamNetworkingIdentity_SetGenericString", ptr, pszString);
             }
-            return (boolean)mh$.invokeExact(pszString);
+            return (boolean)mh$.invokeExact(ptr, pszString);
         } catch (Throwable ex$) {
            throw new AssertionError("should not reach here", ex$);
         }
@@ -6455,7 +6536,9 @@ public class SteamFlat_1 extends SteamFlat_2 {
 
     private static class SteamAPI_SteamNetworkingIdentity_GetGenericString {
         public static final FunctionDescriptor DESC = FunctionDescriptor.of(
-            SteamFlat.C_POINTER    );
+            SteamFlat.C_POINTER,
+            SteamFlat.C_POINTER
+        );
 
         public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(
                     SteamFlat.findOrThrow("SteamAPI_SteamNetworkingIdentity_GetGenericString"),
@@ -6465,7 +6548,7 @@ public class SteamFlat_1 extends SteamFlat_2 {
     /**
      * Function descriptor for:
      * {@snippet lang=c :
-     * const char *SteamAPI_SteamNetworkingIdentity_GetGenericString()
+     * const char *SteamAPI_SteamNetworkingIdentity_GetGenericString(SteamNetworkingIdentity *ptr)
      * }
      */
     public static FunctionDescriptor SteamAPI_SteamNetworkingIdentity_GetGenericString$descriptor() {
@@ -6475,7 +6558,7 @@ public class SteamFlat_1 extends SteamFlat_2 {
     /**
      * Downcall method handle for:
      * {@snippet lang=c :
-     * const char *SteamAPI_SteamNetworkingIdentity_GetGenericString()
+     * const char *SteamAPI_SteamNetworkingIdentity_GetGenericString(SteamNetworkingIdentity *ptr)
      * }
      */
     public static MethodHandle SteamAPI_SteamNetworkingIdentity_GetGenericString$handle() {
@@ -6483,16 +6566,16 @@ public class SteamFlat_1 extends SteamFlat_2 {
     }
     /**
      * {@snippet lang=c :
-     * const char *SteamAPI_SteamNetworkingIdentity_GetGenericString()
+     * const char *SteamAPI_SteamNetworkingIdentity_GetGenericString(SteamNetworkingIdentity *ptr)
      * }
      */
-    public static MemorySegment SteamAPI_SteamNetworkingIdentity_GetGenericString() {
+    public static MemorySegment SteamAPI_SteamNetworkingIdentity_GetGenericString(MemorySegment ptr) {
         var mh$ = SteamAPI_SteamNetworkingIdentity_GetGenericString.HANDLE;
         try {
             if (TRACE_DOWNCALLS) {
-                traceDowncall("SteamAPI_SteamNetworkingIdentity_GetGenericString");
+                traceDowncall("SteamAPI_SteamNetworkingIdentity_GetGenericString", ptr);
             }
-            return (MemorySegment)mh$.invokeExact();
+            return (MemorySegment)mh$.invokeExact(ptr);
         } catch (Throwable ex$) {
            throw new AssertionError("should not reach here", ex$);
         }
@@ -6501,6 +6584,7 @@ public class SteamFlat_1 extends SteamFlat_2 {
     private static class SteamAPI_SteamNetworkingIdentity_SetGenericBytes {
         public static final FunctionDescriptor DESC = FunctionDescriptor.of(
             SteamFlat.C_BOOL,
+            SteamFlat.C_POINTER,
             SteamFlat.C_POINTER,
             SteamFlat.C_INT
         );
@@ -6513,7 +6597,7 @@ public class SteamFlat_1 extends SteamFlat_2 {
     /**
      * Function descriptor for:
      * {@snippet lang=c :
-     * bool SteamAPI_SteamNetworkingIdentity_SetGenericBytes(const void *data, uint32 cbLen)
+     * bool SteamAPI_SteamNetworkingIdentity_SetGenericBytes(SteamNetworkingIdentity *ptr, const void *data, uint32 cbLen)
      * }
      */
     public static FunctionDescriptor SteamAPI_SteamNetworkingIdentity_SetGenericBytes$descriptor() {
@@ -6523,7 +6607,7 @@ public class SteamFlat_1 extends SteamFlat_2 {
     /**
      * Downcall method handle for:
      * {@snippet lang=c :
-     * bool SteamAPI_SteamNetworkingIdentity_SetGenericBytes(const void *data, uint32 cbLen)
+     * bool SteamAPI_SteamNetworkingIdentity_SetGenericBytes(SteamNetworkingIdentity *ptr, const void *data, uint32 cbLen)
      * }
      */
     public static MethodHandle SteamAPI_SteamNetworkingIdentity_SetGenericBytes$handle() {
@@ -6531,16 +6615,16 @@ public class SteamFlat_1 extends SteamFlat_2 {
     }
     /**
      * {@snippet lang=c :
-     * bool SteamAPI_SteamNetworkingIdentity_SetGenericBytes(const void *data, uint32 cbLen)
+     * bool SteamAPI_SteamNetworkingIdentity_SetGenericBytes(SteamNetworkingIdentity *ptr, const void *data, uint32 cbLen)
      * }
      */
-    public static boolean SteamAPI_SteamNetworkingIdentity_SetGenericBytes(MemorySegment data, int cbLen) {
+    public static boolean SteamAPI_SteamNetworkingIdentity_SetGenericBytes(MemorySegment ptr, MemorySegment data, int cbLen) {
         var mh$ = SteamAPI_SteamNetworkingIdentity_SetGenericBytes.HANDLE;
         try {
             if (TRACE_DOWNCALLS) {
-                traceDowncall("SteamAPI_SteamNetworkingIdentity_SetGenericBytes", data, cbLen);
+                traceDowncall("SteamAPI_SteamNetworkingIdentity_SetGenericBytes", ptr, data, cbLen);
             }
-            return (boolean)mh$.invokeExact(data, cbLen);
+            return (boolean)mh$.invokeExact(ptr, data, cbLen);
         } catch (Throwable ex$) {
            throw new AssertionError("should not reach here", ex$);
         }
@@ -6548,6 +6632,7 @@ public class SteamFlat_1 extends SteamFlat_2 {
 
     private static class SteamAPI_SteamNetworkingIdentity_GetGenericBytes {
         public static final FunctionDescriptor DESC = FunctionDescriptor.of(
+            SteamFlat.C_POINTER,
             SteamFlat.C_POINTER,
             SteamFlat.C_POINTER
         );
@@ -6560,7 +6645,7 @@ public class SteamFlat_1 extends SteamFlat_2 {
     /**
      * Function descriptor for:
      * {@snippet lang=c :
-     * const uint8 *SteamAPI_SteamNetworkingIdentity_GetGenericBytes(int *cbLen)
+     * const uint8 *SteamAPI_SteamNetworkingIdentity_GetGenericBytes(SteamNetworkingIdentity *ptr, int *cbLen)
      * }
      */
     public static FunctionDescriptor SteamAPI_SteamNetworkingIdentity_GetGenericBytes$descriptor() {
@@ -6570,7 +6655,7 @@ public class SteamFlat_1 extends SteamFlat_2 {
     /**
      * Downcall method handle for:
      * {@snippet lang=c :
-     * const uint8 *SteamAPI_SteamNetworkingIdentity_GetGenericBytes(int *cbLen)
+     * const uint8 *SteamAPI_SteamNetworkingIdentity_GetGenericBytes(SteamNetworkingIdentity *ptr, int *cbLen)
      * }
      */
     public static MethodHandle SteamAPI_SteamNetworkingIdentity_GetGenericBytes$handle() {
@@ -6578,16 +6663,16 @@ public class SteamFlat_1 extends SteamFlat_2 {
     }
     /**
      * {@snippet lang=c :
-     * const uint8 *SteamAPI_SteamNetworkingIdentity_GetGenericBytes(int *cbLen)
+     * const uint8 *SteamAPI_SteamNetworkingIdentity_GetGenericBytes(SteamNetworkingIdentity *ptr, int *cbLen)
      * }
      */
-    public static MemorySegment SteamAPI_SteamNetworkingIdentity_GetGenericBytes(MemorySegment cbLen) {
+    public static MemorySegment SteamAPI_SteamNetworkingIdentity_GetGenericBytes(MemorySegment ptr, MemorySegment cbLen) {
         var mh$ = SteamAPI_SteamNetworkingIdentity_GetGenericBytes.HANDLE;
         try {
             if (TRACE_DOWNCALLS) {
-                traceDowncall("SteamAPI_SteamNetworkingIdentity_GetGenericBytes", cbLen);
+                traceDowncall("SteamAPI_SteamNetworkingIdentity_GetGenericBytes", ptr, cbLen);
             }
-            return (MemorySegment)mh$.invokeExact(cbLen);
+            return (MemorySegment)mh$.invokeExact(ptr, cbLen);
         } catch (Throwable ex$) {
            throw new AssertionError("should not reach here", ex$);
         }
@@ -6596,6 +6681,7 @@ public class SteamFlat_1 extends SteamFlat_2 {
     private static class SteamAPI_SteamNetworkingIdentity_IsEqualTo {
         public static final FunctionDescriptor DESC = FunctionDescriptor.of(
             SteamFlat.C_BOOL,
+            SteamFlat.C_POINTER,
             SteamFlat.C_POINTER
         );
 
@@ -6607,7 +6693,7 @@ public class SteamFlat_1 extends SteamFlat_2 {
     /**
      * Function descriptor for:
      * {@snippet lang=c :
-     * bool SteamAPI_SteamNetworkingIdentity_IsEqualTo(const SteamNetworkingIdentity *x)
+     * bool SteamAPI_SteamNetworkingIdentity_IsEqualTo(SteamNetworkingIdentity *ptr, const SteamNetworkingIdentity *x)
      * }
      */
     public static FunctionDescriptor SteamAPI_SteamNetworkingIdentity_IsEqualTo$descriptor() {
@@ -6617,7 +6703,7 @@ public class SteamFlat_1 extends SteamFlat_2 {
     /**
      * Downcall method handle for:
      * {@snippet lang=c :
-     * bool SteamAPI_SteamNetworkingIdentity_IsEqualTo(const SteamNetworkingIdentity *x)
+     * bool SteamAPI_SteamNetworkingIdentity_IsEqualTo(SteamNetworkingIdentity *ptr, const SteamNetworkingIdentity *x)
      * }
      */
     public static MethodHandle SteamAPI_SteamNetworkingIdentity_IsEqualTo$handle() {
@@ -6625,16 +6711,16 @@ public class SteamFlat_1 extends SteamFlat_2 {
     }
     /**
      * {@snippet lang=c :
-     * bool SteamAPI_SteamNetworkingIdentity_IsEqualTo(const SteamNetworkingIdentity *x)
+     * bool SteamAPI_SteamNetworkingIdentity_IsEqualTo(SteamNetworkingIdentity *ptr, const SteamNetworkingIdentity *x)
      * }
      */
-    public static boolean SteamAPI_SteamNetworkingIdentity_IsEqualTo(MemorySegment x) {
+    public static boolean SteamAPI_SteamNetworkingIdentity_IsEqualTo(MemorySegment ptr, MemorySegment x) {
         var mh$ = SteamAPI_SteamNetworkingIdentity_IsEqualTo.HANDLE;
         try {
             if (TRACE_DOWNCALLS) {
-                traceDowncall("SteamAPI_SteamNetworkingIdentity_IsEqualTo", x);
+                traceDowncall("SteamAPI_SteamNetworkingIdentity_IsEqualTo", ptr, x);
             }
-            return (boolean)mh$.invokeExact(x);
+            return (boolean)mh$.invokeExact(ptr, x);
         } catch (Throwable ex$) {
            throw new AssertionError("should not reach here", ex$);
         }
@@ -6642,6 +6728,7 @@ public class SteamFlat_1 extends SteamFlat_2 {
 
     private static class SteamAPI_SteamNetworkingIdentity_ToString {
         public static final FunctionDescriptor DESC = FunctionDescriptor.ofVoid(
+            SteamFlat.C_POINTER,
             SteamFlat.C_POINTER,
             SteamFlat.C_INT
         );
@@ -6654,7 +6741,7 @@ public class SteamFlat_1 extends SteamFlat_2 {
     /**
      * Function descriptor for:
      * {@snippet lang=c :
-     * void SteamAPI_SteamNetworkingIdentity_ToString(char *buf, uint32 cbBuf)
+     * void SteamAPI_SteamNetworkingIdentity_ToString(SteamNetworkingIdentity *ptr, char *buf, uint32 cbBuf)
      * }
      */
     public static FunctionDescriptor SteamAPI_SteamNetworkingIdentity_ToString$descriptor() {
@@ -6664,7 +6751,7 @@ public class SteamFlat_1 extends SteamFlat_2 {
     /**
      * Downcall method handle for:
      * {@snippet lang=c :
-     * void SteamAPI_SteamNetworkingIdentity_ToString(char *buf, uint32 cbBuf)
+     * void SteamAPI_SteamNetworkingIdentity_ToString(SteamNetworkingIdentity *ptr, char *buf, uint32 cbBuf)
      * }
      */
     public static MethodHandle SteamAPI_SteamNetworkingIdentity_ToString$handle() {
@@ -6672,16 +6759,16 @@ public class SteamFlat_1 extends SteamFlat_2 {
     }
     /**
      * {@snippet lang=c :
-     * void SteamAPI_SteamNetworkingIdentity_ToString(char *buf, uint32 cbBuf)
+     * void SteamAPI_SteamNetworkingIdentity_ToString(SteamNetworkingIdentity *ptr, char *buf, uint32 cbBuf)
      * }
      */
-    public static void SteamAPI_SteamNetworkingIdentity_ToString(MemorySegment buf, int cbBuf) {
+    public static void SteamAPI_SteamNetworkingIdentity_ToString(MemorySegment ptr, MemorySegment buf, int cbBuf) {
         var mh$ = SteamAPI_SteamNetworkingIdentity_ToString.HANDLE;
         try {
             if (TRACE_DOWNCALLS) {
-                traceDowncall("SteamAPI_SteamNetworkingIdentity_ToString", buf, cbBuf);
+                traceDowncall("SteamAPI_SteamNetworkingIdentity_ToString", ptr, buf, cbBuf);
             }
-            mh$.invokeExact(buf, cbBuf);
+            mh$.invokeExact(ptr, buf, cbBuf);
         } catch (Throwable ex$) {
            throw new AssertionError("should not reach here", ex$);
         }
@@ -6690,6 +6777,7 @@ public class SteamFlat_1 extends SteamFlat_2 {
     private static class SteamAPI_SteamNetworkingIdentity_ParseString {
         public static final FunctionDescriptor DESC = FunctionDescriptor.of(
             SteamFlat.C_BOOL,
+            SteamFlat.C_POINTER,
             SteamFlat.C_POINTER
         );
 
@@ -6701,7 +6789,7 @@ public class SteamFlat_1 extends SteamFlat_2 {
     /**
      * Function descriptor for:
      * {@snippet lang=c :
-     * bool SteamAPI_SteamNetworkingIdentity_ParseString(const char *pszStr)
+     * bool SteamAPI_SteamNetworkingIdentity_ParseString(SteamNetworkingIdentity *ptr, const char *pszStr)
      * }
      */
     public static FunctionDescriptor SteamAPI_SteamNetworkingIdentity_ParseString$descriptor() {
@@ -6711,7 +6799,7 @@ public class SteamFlat_1 extends SteamFlat_2 {
     /**
      * Downcall method handle for:
      * {@snippet lang=c :
-     * bool SteamAPI_SteamNetworkingIdentity_ParseString(const char *pszStr)
+     * bool SteamAPI_SteamNetworkingIdentity_ParseString(SteamNetworkingIdentity *ptr, const char *pszStr)
      * }
      */
     public static MethodHandle SteamAPI_SteamNetworkingIdentity_ParseString$handle() {
@@ -6719,23 +6807,25 @@ public class SteamFlat_1 extends SteamFlat_2 {
     }
     /**
      * {@snippet lang=c :
-     * bool SteamAPI_SteamNetworkingIdentity_ParseString(const char *pszStr)
+     * bool SteamAPI_SteamNetworkingIdentity_ParseString(SteamNetworkingIdentity *ptr, const char *pszStr)
      * }
      */
-    public static boolean SteamAPI_SteamNetworkingIdentity_ParseString(MemorySegment pszStr) {
+    public static boolean SteamAPI_SteamNetworkingIdentity_ParseString(MemorySegment ptr, MemorySegment pszStr) {
         var mh$ = SteamAPI_SteamNetworkingIdentity_ParseString.HANDLE;
         try {
             if (TRACE_DOWNCALLS) {
-                traceDowncall("SteamAPI_SteamNetworkingIdentity_ParseString", pszStr);
+                traceDowncall("SteamAPI_SteamNetworkingIdentity_ParseString", ptr, pszStr);
             }
-            return (boolean)mh$.invokeExact(pszStr);
+            return (boolean)mh$.invokeExact(ptr, pszStr);
         } catch (Throwable ex$) {
            throw new AssertionError("should not reach here", ex$);
         }
     }
 
     private static class SteamAPI_SteamNetworkingMessage_t_Release {
-        public static final FunctionDescriptor DESC = FunctionDescriptor.ofVoid(    );
+        public static final FunctionDescriptor DESC = FunctionDescriptor.ofVoid(
+            SteamFlat.C_POINTER
+        );
 
         public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(
                     SteamFlat.findOrThrow("SteamAPI_SteamNetworkingMessage_t_Release"),
@@ -6745,7 +6835,7 @@ public class SteamFlat_1 extends SteamFlat_2 {
     /**
      * Function descriptor for:
      * {@snippet lang=c :
-     * void SteamAPI_SteamNetworkingMessage_t_Release()
+     * void SteamAPI_SteamNetworkingMessage_t_Release(SteamNetworkingMessage_t *ptr)
      * }
      */
     public static FunctionDescriptor SteamAPI_SteamNetworkingMessage_t_Release$descriptor() {
@@ -6755,7 +6845,7 @@ public class SteamFlat_1 extends SteamFlat_2 {
     /**
      * Downcall method handle for:
      * {@snippet lang=c :
-     * void SteamAPI_SteamNetworkingMessage_t_Release()
+     * void SteamAPI_SteamNetworkingMessage_t_Release(SteamNetworkingMessage_t *ptr)
      * }
      */
     public static MethodHandle SteamAPI_SteamNetworkingMessage_t_Release$handle() {
@@ -6763,16 +6853,16 @@ public class SteamFlat_1 extends SteamFlat_2 {
     }
     /**
      * {@snippet lang=c :
-     * void SteamAPI_SteamNetworkingMessage_t_Release()
+     * void SteamAPI_SteamNetworkingMessage_t_Release(SteamNetworkingMessage_t *ptr)
      * }
      */
-    public static void SteamAPI_SteamNetworkingMessage_t_Release() {
+    public static void SteamAPI_SteamNetworkingMessage_t_Release(MemorySegment ptr) {
         var mh$ = SteamAPI_SteamNetworkingMessage_t_Release.HANDLE;
         try {
             if (TRACE_DOWNCALLS) {
-                traceDowncall("SteamAPI_SteamNetworkingMessage_t_Release");
+                traceDowncall("SteamAPI_SteamNetworkingMessage_t_Release", ptr);
             }
-            mh$.invokeExact();
+            mh$.invokeExact(ptr);
         } catch (Throwable ex$) {
            throw new AssertionError("should not reach here", ex$);
         }
@@ -6780,6 +6870,7 @@ public class SteamFlat_1 extends SteamFlat_2 {
 
     private static class SteamAPI_SteamNetworkingConfigValue_t_SetInt32 {
         public static final FunctionDescriptor DESC = FunctionDescriptor.ofVoid(
+            SteamFlat.C_POINTER,
             SteamFlat.C_INT,
             SteamFlat.C_INT
         );
@@ -6792,7 +6883,7 @@ public class SteamFlat_1 extends SteamFlat_2 {
     /**
      * Function descriptor for:
      * {@snippet lang=c :
-     * void SteamAPI_SteamNetworkingConfigValue_t_SetInt32(ESteamNetworkingConfigValue eVal, int32_t data)
+     * void SteamAPI_SteamNetworkingConfigValue_t_SetInt32(SteamNetworkingConfigValue_t *ptr, ESteamNetworkingConfigValue eVal, int32_t data)
      * }
      */
     public static FunctionDescriptor SteamAPI_SteamNetworkingConfigValue_t_SetInt32$descriptor() {
@@ -6802,7 +6893,7 @@ public class SteamFlat_1 extends SteamFlat_2 {
     /**
      * Downcall method handle for:
      * {@snippet lang=c :
-     * void SteamAPI_SteamNetworkingConfigValue_t_SetInt32(ESteamNetworkingConfigValue eVal, int32_t data)
+     * void SteamAPI_SteamNetworkingConfigValue_t_SetInt32(SteamNetworkingConfigValue_t *ptr, ESteamNetworkingConfigValue eVal, int32_t data)
      * }
      */
     public static MethodHandle SteamAPI_SteamNetworkingConfigValue_t_SetInt32$handle() {
@@ -6810,16 +6901,16 @@ public class SteamFlat_1 extends SteamFlat_2 {
     }
     /**
      * {@snippet lang=c :
-     * void SteamAPI_SteamNetworkingConfigValue_t_SetInt32(ESteamNetworkingConfigValue eVal, int32_t data)
+     * void SteamAPI_SteamNetworkingConfigValue_t_SetInt32(SteamNetworkingConfigValue_t *ptr, ESteamNetworkingConfigValue eVal, int32_t data)
      * }
      */
-    public static void SteamAPI_SteamNetworkingConfigValue_t_SetInt32(int eVal, int data) {
+    public static void SteamAPI_SteamNetworkingConfigValue_t_SetInt32(MemorySegment ptr, int eVal, int data) {
         var mh$ = SteamAPI_SteamNetworkingConfigValue_t_SetInt32.HANDLE;
         try {
             if (TRACE_DOWNCALLS) {
-                traceDowncall("SteamAPI_SteamNetworkingConfigValue_t_SetInt32", eVal, data);
+                traceDowncall("SteamAPI_SteamNetworkingConfigValue_t_SetInt32", ptr, eVal, data);
             }
-            mh$.invokeExact(eVal, data);
+            mh$.invokeExact(ptr, eVal, data);
         } catch (Throwable ex$) {
            throw new AssertionError("should not reach here", ex$);
         }
@@ -6827,6 +6918,7 @@ public class SteamFlat_1 extends SteamFlat_2 {
 
     private static class SteamAPI_SteamNetworkingConfigValue_t_SetInt64 {
         public static final FunctionDescriptor DESC = FunctionDescriptor.ofVoid(
+            SteamFlat.C_POINTER,
             SteamFlat.C_INT,
             SteamFlat.C_LONG_LONG
         );
@@ -6839,7 +6931,7 @@ public class SteamFlat_1 extends SteamFlat_2 {
     /**
      * Function descriptor for:
      * {@snippet lang=c :
-     * void SteamAPI_SteamNetworkingConfigValue_t_SetInt64(ESteamNetworkingConfigValue eVal, int64_t data)
+     * void SteamAPI_SteamNetworkingConfigValue_t_SetInt64(SteamNetworkingConfigValue_t *ptr, ESteamNetworkingConfigValue eVal, int64_t data)
      * }
      */
     public static FunctionDescriptor SteamAPI_SteamNetworkingConfigValue_t_SetInt64$descriptor() {
@@ -6849,7 +6941,7 @@ public class SteamFlat_1 extends SteamFlat_2 {
     /**
      * Downcall method handle for:
      * {@snippet lang=c :
-     * void SteamAPI_SteamNetworkingConfigValue_t_SetInt64(ESteamNetworkingConfigValue eVal, int64_t data)
+     * void SteamAPI_SteamNetworkingConfigValue_t_SetInt64(SteamNetworkingConfigValue_t *ptr, ESteamNetworkingConfigValue eVal, int64_t data)
      * }
      */
     public static MethodHandle SteamAPI_SteamNetworkingConfigValue_t_SetInt64$handle() {
@@ -6857,16 +6949,16 @@ public class SteamFlat_1 extends SteamFlat_2 {
     }
     /**
      * {@snippet lang=c :
-     * void SteamAPI_SteamNetworkingConfigValue_t_SetInt64(ESteamNetworkingConfigValue eVal, int64_t data)
+     * void SteamAPI_SteamNetworkingConfigValue_t_SetInt64(SteamNetworkingConfigValue_t *ptr, ESteamNetworkingConfigValue eVal, int64_t data)
      * }
      */
-    public static void SteamAPI_SteamNetworkingConfigValue_t_SetInt64(int eVal, long data) {
+    public static void SteamAPI_SteamNetworkingConfigValue_t_SetInt64(MemorySegment ptr, int eVal, long data) {
         var mh$ = SteamAPI_SteamNetworkingConfigValue_t_SetInt64.HANDLE;
         try {
             if (TRACE_DOWNCALLS) {
-                traceDowncall("SteamAPI_SteamNetworkingConfigValue_t_SetInt64", eVal, data);
+                traceDowncall("SteamAPI_SteamNetworkingConfigValue_t_SetInt64", ptr, eVal, data);
             }
-            mh$.invokeExact(eVal, data);
+            mh$.invokeExact(ptr, eVal, data);
         } catch (Throwable ex$) {
            throw new AssertionError("should not reach here", ex$);
         }
@@ -6874,6 +6966,7 @@ public class SteamFlat_1 extends SteamFlat_2 {
 
     private static class SteamAPI_SteamNetworkingConfigValue_t_SetFloat {
         public static final FunctionDescriptor DESC = FunctionDescriptor.ofVoid(
+            SteamFlat.C_POINTER,
             SteamFlat.C_INT,
             SteamFlat.C_FLOAT
         );
@@ -6886,7 +6979,7 @@ public class SteamFlat_1 extends SteamFlat_2 {
     /**
      * Function descriptor for:
      * {@snippet lang=c :
-     * void SteamAPI_SteamNetworkingConfigValue_t_SetFloat(ESteamNetworkingConfigValue eVal, float data)
+     * void SteamAPI_SteamNetworkingConfigValue_t_SetFloat(SteamNetworkingConfigValue_t *ptr, ESteamNetworkingConfigValue eVal, float data)
      * }
      */
     public static FunctionDescriptor SteamAPI_SteamNetworkingConfigValue_t_SetFloat$descriptor() {
@@ -6896,7 +6989,7 @@ public class SteamFlat_1 extends SteamFlat_2 {
     /**
      * Downcall method handle for:
      * {@snippet lang=c :
-     * void SteamAPI_SteamNetworkingConfigValue_t_SetFloat(ESteamNetworkingConfigValue eVal, float data)
+     * void SteamAPI_SteamNetworkingConfigValue_t_SetFloat(SteamNetworkingConfigValue_t *ptr, ESteamNetworkingConfigValue eVal, float data)
      * }
      */
     public static MethodHandle SteamAPI_SteamNetworkingConfigValue_t_SetFloat$handle() {
@@ -6904,16 +6997,16 @@ public class SteamFlat_1 extends SteamFlat_2 {
     }
     /**
      * {@snippet lang=c :
-     * void SteamAPI_SteamNetworkingConfigValue_t_SetFloat(ESteamNetworkingConfigValue eVal, float data)
+     * void SteamAPI_SteamNetworkingConfigValue_t_SetFloat(SteamNetworkingConfigValue_t *ptr, ESteamNetworkingConfigValue eVal, float data)
      * }
      */
-    public static void SteamAPI_SteamNetworkingConfigValue_t_SetFloat(int eVal, float data) {
+    public static void SteamAPI_SteamNetworkingConfigValue_t_SetFloat(MemorySegment ptr, int eVal, float data) {
         var mh$ = SteamAPI_SteamNetworkingConfigValue_t_SetFloat.HANDLE;
         try {
             if (TRACE_DOWNCALLS) {
-                traceDowncall("SteamAPI_SteamNetworkingConfigValue_t_SetFloat", eVal, data);
+                traceDowncall("SteamAPI_SteamNetworkingConfigValue_t_SetFloat", ptr, eVal, data);
             }
-            mh$.invokeExact(eVal, data);
+            mh$.invokeExact(ptr, eVal, data);
         } catch (Throwable ex$) {
            throw new AssertionError("should not reach here", ex$);
         }
@@ -6921,6 +7014,7 @@ public class SteamFlat_1 extends SteamFlat_2 {
 
     private static class SteamAPI_SteamNetworkingConfigValue_t_SetPtr {
         public static final FunctionDescriptor DESC = FunctionDescriptor.ofVoid(
+            SteamFlat.C_POINTER,
             SteamFlat.C_INT,
             SteamFlat.C_POINTER
         );
@@ -6933,7 +7027,7 @@ public class SteamFlat_1 extends SteamFlat_2 {
     /**
      * Function descriptor for:
      * {@snippet lang=c :
-     * void SteamAPI_SteamNetworkingConfigValue_t_SetPtr(ESteamNetworkingConfigValue eVal, void *data)
+     * void SteamAPI_SteamNetworkingConfigValue_t_SetPtr(SteamNetworkingConfigValue_t *ptr, ESteamNetworkingConfigValue eVal, void *data)
      * }
      */
     public static FunctionDescriptor SteamAPI_SteamNetworkingConfigValue_t_SetPtr$descriptor() {
@@ -6943,7 +7037,7 @@ public class SteamFlat_1 extends SteamFlat_2 {
     /**
      * Downcall method handle for:
      * {@snippet lang=c :
-     * void SteamAPI_SteamNetworkingConfigValue_t_SetPtr(ESteamNetworkingConfigValue eVal, void *data)
+     * void SteamAPI_SteamNetworkingConfigValue_t_SetPtr(SteamNetworkingConfigValue_t *ptr, ESteamNetworkingConfigValue eVal, void *data)
      * }
      */
     public static MethodHandle SteamAPI_SteamNetworkingConfigValue_t_SetPtr$handle() {
@@ -6951,16 +7045,16 @@ public class SteamFlat_1 extends SteamFlat_2 {
     }
     /**
      * {@snippet lang=c :
-     * void SteamAPI_SteamNetworkingConfigValue_t_SetPtr(ESteamNetworkingConfigValue eVal, void *data)
+     * void SteamAPI_SteamNetworkingConfigValue_t_SetPtr(SteamNetworkingConfigValue_t *ptr, ESteamNetworkingConfigValue eVal, void *data)
      * }
      */
-    public static void SteamAPI_SteamNetworkingConfigValue_t_SetPtr(int eVal, MemorySegment data) {
+    public static void SteamAPI_SteamNetworkingConfigValue_t_SetPtr(MemorySegment ptr, int eVal, MemorySegment data) {
         var mh$ = SteamAPI_SteamNetworkingConfigValue_t_SetPtr.HANDLE;
         try {
             if (TRACE_DOWNCALLS) {
-                traceDowncall("SteamAPI_SteamNetworkingConfigValue_t_SetPtr", eVal, data);
+                traceDowncall("SteamAPI_SteamNetworkingConfigValue_t_SetPtr", ptr, eVal, data);
             }
-            mh$.invokeExact(eVal, data);
+            mh$.invokeExact(ptr, eVal, data);
         } catch (Throwable ex$) {
            throw new AssertionError("should not reach here", ex$);
         }
@@ -6968,6 +7062,7 @@ public class SteamFlat_1 extends SteamFlat_2 {
 
     private static class SteamAPI_SteamNetworkingConfigValue_t_SetString {
         public static final FunctionDescriptor DESC = FunctionDescriptor.ofVoid(
+            SteamFlat.C_POINTER,
             SteamFlat.C_INT,
             SteamFlat.C_POINTER
         );
@@ -6980,7 +7075,7 @@ public class SteamFlat_1 extends SteamFlat_2 {
     /**
      * Function descriptor for:
      * {@snippet lang=c :
-     * void SteamAPI_SteamNetworkingConfigValue_t_SetString(ESteamNetworkingConfigValue eVal, const char *data)
+     * void SteamAPI_SteamNetworkingConfigValue_t_SetString(SteamNetworkingConfigValue_t *ptr, ESteamNetworkingConfigValue eVal, const char *data)
      * }
      */
     public static FunctionDescriptor SteamAPI_SteamNetworkingConfigValue_t_SetString$descriptor() {
@@ -6990,7 +7085,7 @@ public class SteamFlat_1 extends SteamFlat_2 {
     /**
      * Downcall method handle for:
      * {@snippet lang=c :
-     * void SteamAPI_SteamNetworkingConfigValue_t_SetString(ESteamNetworkingConfigValue eVal, const char *data)
+     * void SteamAPI_SteamNetworkingConfigValue_t_SetString(SteamNetworkingConfigValue_t *ptr, ESteamNetworkingConfigValue eVal, const char *data)
      * }
      */
     public static MethodHandle SteamAPI_SteamNetworkingConfigValue_t_SetString$handle() {
@@ -6998,23 +7093,25 @@ public class SteamFlat_1 extends SteamFlat_2 {
     }
     /**
      * {@snippet lang=c :
-     * void SteamAPI_SteamNetworkingConfigValue_t_SetString(ESteamNetworkingConfigValue eVal, const char *data)
+     * void SteamAPI_SteamNetworkingConfigValue_t_SetString(SteamNetworkingConfigValue_t *ptr, ESteamNetworkingConfigValue eVal, const char *data)
      * }
      */
-    public static void SteamAPI_SteamNetworkingConfigValue_t_SetString(int eVal, MemorySegment data) {
+    public static void SteamAPI_SteamNetworkingConfigValue_t_SetString(MemorySegment ptr, int eVal, MemorySegment data) {
         var mh$ = SteamAPI_SteamNetworkingConfigValue_t_SetString.HANDLE;
         try {
             if (TRACE_DOWNCALLS) {
-                traceDowncall("SteamAPI_SteamNetworkingConfigValue_t_SetString", eVal, data);
+                traceDowncall("SteamAPI_SteamNetworkingConfigValue_t_SetString", ptr, eVal, data);
             }
-            mh$.invokeExact(eVal, data);
+            mh$.invokeExact(ptr, eVal, data);
         } catch (Throwable ex$) {
            throw new AssertionError("should not reach here", ex$);
         }
     }
 
     private static class SteamAPI_SteamDatagramHostedAddress_Clear {
-        public static final FunctionDescriptor DESC = FunctionDescriptor.ofVoid(    );
+        public static final FunctionDescriptor DESC = FunctionDescriptor.ofVoid(
+            SteamFlat.C_POINTER
+        );
 
         public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(
                     SteamFlat.findOrThrow("SteamAPI_SteamDatagramHostedAddress_Clear"),
@@ -7024,7 +7121,7 @@ public class SteamFlat_1 extends SteamFlat_2 {
     /**
      * Function descriptor for:
      * {@snippet lang=c :
-     * void SteamAPI_SteamDatagramHostedAddress_Clear()
+     * void SteamAPI_SteamDatagramHostedAddress_Clear(SteamDatagramHostedAddress *ptr)
      * }
      */
     public static FunctionDescriptor SteamAPI_SteamDatagramHostedAddress_Clear$descriptor() {
@@ -7034,7 +7131,7 @@ public class SteamFlat_1 extends SteamFlat_2 {
     /**
      * Downcall method handle for:
      * {@snippet lang=c :
-     * void SteamAPI_SteamDatagramHostedAddress_Clear()
+     * void SteamAPI_SteamDatagramHostedAddress_Clear(SteamDatagramHostedAddress *ptr)
      * }
      */
     public static MethodHandle SteamAPI_SteamDatagramHostedAddress_Clear$handle() {
@@ -7042,16 +7139,16 @@ public class SteamFlat_1 extends SteamFlat_2 {
     }
     /**
      * {@snippet lang=c :
-     * void SteamAPI_SteamDatagramHostedAddress_Clear()
+     * void SteamAPI_SteamDatagramHostedAddress_Clear(SteamDatagramHostedAddress *ptr)
      * }
      */
-    public static void SteamAPI_SteamDatagramHostedAddress_Clear() {
+    public static void SteamAPI_SteamDatagramHostedAddress_Clear(MemorySegment ptr) {
         var mh$ = SteamAPI_SteamDatagramHostedAddress_Clear.HANDLE;
         try {
             if (TRACE_DOWNCALLS) {
-                traceDowncall("SteamAPI_SteamDatagramHostedAddress_Clear");
+                traceDowncall("SteamAPI_SteamDatagramHostedAddress_Clear", ptr);
             }
-            mh$.invokeExact();
+            mh$.invokeExact(ptr);
         } catch (Throwable ex$) {
            throw new AssertionError("should not reach here", ex$);
         }
@@ -7059,7 +7156,9 @@ public class SteamFlat_1 extends SteamFlat_2 {
 
     private static class SteamAPI_SteamDatagramHostedAddress_GetPopID {
         public static final FunctionDescriptor DESC = FunctionDescriptor.of(
-            SteamFlat.C_INT    );
+            SteamFlat.C_INT,
+            SteamFlat.C_POINTER
+        );
 
         public static final MethodHandle HANDLE = Linker.nativeLinker().downcallHandle(
                     SteamFlat.findOrThrow("SteamAPI_SteamDatagramHostedAddress_GetPopID"),
@@ -7069,7 +7168,7 @@ public class SteamFlat_1 extends SteamFlat_2 {
     /**
      * Function descriptor for:
      * {@snippet lang=c :
-     * SteamNetworkingPOPID SteamAPI_SteamDatagramHostedAddress_GetPopID()
+     * SteamNetworkingPOPID SteamAPI_SteamDatagramHostedAddress_GetPopID(SteamDatagramHostedAddress *ptr)
      * }
      */
     public static FunctionDescriptor SteamAPI_SteamDatagramHostedAddress_GetPopID$descriptor() {
@@ -7079,7 +7178,7 @@ public class SteamFlat_1 extends SteamFlat_2 {
     /**
      * Downcall method handle for:
      * {@snippet lang=c :
-     * SteamNetworkingPOPID SteamAPI_SteamDatagramHostedAddress_GetPopID()
+     * SteamNetworkingPOPID SteamAPI_SteamDatagramHostedAddress_GetPopID(SteamDatagramHostedAddress *ptr)
      * }
      */
     public static MethodHandle SteamAPI_SteamDatagramHostedAddress_GetPopID$handle() {
@@ -7087,16 +7186,16 @@ public class SteamFlat_1 extends SteamFlat_2 {
     }
     /**
      * {@snippet lang=c :
-     * SteamNetworkingPOPID SteamAPI_SteamDatagramHostedAddress_GetPopID()
+     * SteamNetworkingPOPID SteamAPI_SteamDatagramHostedAddress_GetPopID(SteamDatagramHostedAddress *ptr)
      * }
      */
-    public static int SteamAPI_SteamDatagramHostedAddress_GetPopID() {
+    public static int SteamAPI_SteamDatagramHostedAddress_GetPopID(MemorySegment ptr) {
         var mh$ = SteamAPI_SteamDatagramHostedAddress_GetPopID.HANDLE;
         try {
             if (TRACE_DOWNCALLS) {
-                traceDowncall("SteamAPI_SteamDatagramHostedAddress_GetPopID");
+                traceDowncall("SteamAPI_SteamDatagramHostedAddress_GetPopID", ptr);
             }
-            return (int)mh$.invokeExact();
+            return (int)mh$.invokeExact(ptr);
         } catch (Throwable ex$) {
            throw new AssertionError("should not reach here", ex$);
         }
@@ -7104,6 +7203,7 @@ public class SteamFlat_1 extends SteamFlat_2 {
 
     private static class SteamAPI_SteamDatagramHostedAddress_SetDevAddress {
         public static final FunctionDescriptor DESC = FunctionDescriptor.ofVoid(
+            SteamFlat.C_POINTER,
             SteamFlat.C_INT,
             SteamFlat.C_SHORT,
             SteamFlat.C_INT
@@ -7117,7 +7217,7 @@ public class SteamFlat_1 extends SteamFlat_2 {
     /**
      * Function descriptor for:
      * {@snippet lang=c :
-     * void SteamAPI_SteamDatagramHostedAddress_SetDevAddress(uint32 nIP, uint16 nPort, SteamNetworkingPOPID popid)
+     * void SteamAPI_SteamDatagramHostedAddress_SetDevAddress(SteamDatagramHostedAddress *ptr, uint32 nIP, uint16 nPort, SteamNetworkingPOPID popid)
      * }
      */
     public static FunctionDescriptor SteamAPI_SteamDatagramHostedAddress_SetDevAddress$descriptor() {
@@ -7127,7 +7227,7 @@ public class SteamFlat_1 extends SteamFlat_2 {
     /**
      * Downcall method handle for:
      * {@snippet lang=c :
-     * void SteamAPI_SteamDatagramHostedAddress_SetDevAddress(uint32 nIP, uint16 nPort, SteamNetworkingPOPID popid)
+     * void SteamAPI_SteamDatagramHostedAddress_SetDevAddress(SteamDatagramHostedAddress *ptr, uint32 nIP, uint16 nPort, SteamNetworkingPOPID popid)
      * }
      */
     public static MethodHandle SteamAPI_SteamDatagramHostedAddress_SetDevAddress$handle() {
@@ -7135,16 +7235,16 @@ public class SteamFlat_1 extends SteamFlat_2 {
     }
     /**
      * {@snippet lang=c :
-     * void SteamAPI_SteamDatagramHostedAddress_SetDevAddress(uint32 nIP, uint16 nPort, SteamNetworkingPOPID popid)
+     * void SteamAPI_SteamDatagramHostedAddress_SetDevAddress(SteamDatagramHostedAddress *ptr, uint32 nIP, uint16 nPort, SteamNetworkingPOPID popid)
      * }
      */
-    public static void SteamAPI_SteamDatagramHostedAddress_SetDevAddress(int nIP, short nPort, int popid) {
+    public static void SteamAPI_SteamDatagramHostedAddress_SetDevAddress(MemorySegment ptr, int nIP, short nPort, int popid) {
         var mh$ = SteamAPI_SteamDatagramHostedAddress_SetDevAddress.HANDLE;
         try {
             if (TRACE_DOWNCALLS) {
-                traceDowncall("SteamAPI_SteamDatagramHostedAddress_SetDevAddress", nIP, nPort, popid);
+                traceDowncall("SteamAPI_SteamDatagramHostedAddress_SetDevAddress", ptr, nIP, nPort, popid);
             }
-            mh$.invokeExact(nIP, nPort, popid);
+            mh$.invokeExact(ptr, nIP, nPort, popid);
         } catch (Throwable ex$) {
            throw new AssertionError("should not reach here", ex$);
         }
