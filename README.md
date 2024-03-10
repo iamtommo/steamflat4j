@@ -2,10 +2,17 @@
 [Jextract](https://jdk.java.net/jextract/) generated [Panama](https://openjdk.org/projects/panama/) bindings for the Steamworks sdk (flat)
 
 ## Usage
-First load the Steam dll
+First load the Steam dll (found in Steamworks SDK redistributable_bin)
 ```java
 static {
-    System.load(Path.of("path/to/steam_api64.dll").toAbsolutePath().toString());
+    var os = System.getProperty("os.name");
+    if (os.contains("Windows")) {
+        System.load(Path.of("path/to/steam_api64.dll").toAbsolutePath().toString());
+    } else if (os.startsWith("Mac OS") || os.startsWith("Darwin")) {
+        System.load(Path.of("path/to/libsteam_api.dylib").toAbsolutePath().toString());
+    } else {
+        System.load(Path.of("path/to/libsteam_api.so").toAbsolutePath().toString());
+    }
 }
 ```
 
@@ -60,7 +67,7 @@ We don't use the callback here, instead just check the status of the call:
 if (SteamAPI_ISteamMatchmakingServers_IsRefreshing(steamMatchmakingServers, steamServerListRequestHandle)) {
     var serverCount = SteamAPI_ISteamMatchmakingServers_GetServerCount(steamMatchmakingServers, steamServerListRequestHandle);
     for (var i = 0; i < serverCount; i++) {
-        var details = SteamAPI_ISteamMatchmakingServers_GetServerDetails(Cl.steamMatchmakingServers, steamServerListRequestHandle, i);
+        var details = SteamAPI_ISteamMatchmakingServers_GetServerDetails(steamMatchmakingServers, steamServerListRequestHandle, i);
         var serverName = gameserveritem_t.m_szServerName(details).getString(0);
         var netAddr = gameserveritem_t.m_NetAdr(details);
         var connectionPort = SteamAPI_servernetadr_t_GetConnectionPort(netAddr);
